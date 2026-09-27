@@ -62,7 +62,7 @@ const el = {
 const kart = L.map('kart', { zoomControl: true, attributionControl: true })
   .setView([51.5105, -0.1235], 12);
 
-const CARTO_URL = 'https://basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png'
+const CARTO_URL = 'https://basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png'
   + (CARTO_KEY ? '?key=' + CARTO_KEY : '');
 
 L.tileLayer(CARTO_URL, {
