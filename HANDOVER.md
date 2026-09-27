@@ -50,14 +50,15 @@ byguider/
 ├── index.html              forside: lista over byer, bygges fra byer.json
 ├── app.js                  all logikk — én kopi for alle byer
 ├── style.css               all styling — én kopi
-├── byer.json               manifest: id, navn, land, datafil, beskrivelse
+├── byer.json               manifest: id, navn, land, data (md), geometri, beskrivelse
 ├── london/index.html       stubb: <script src="../app.js" data-by="london">
 ├── nice/index.html
 ├── oslo/index.html
 ├── data/
-│   ├── london.geojson
-│   ├── nice.geojson        tom, metadata utfylt
-│   └── oslo.geojson        tom, metadata utfylt
+│   ├── london.md                 kilden: steder, notater, soner, metadata
+│   ├── london-geometri.geojson   områder, gater, gåturer (koblet på navn)
+│   ├── nice.md / nice-geometri.geojson   tomme, metadata utfylt
+│   └── oslo.md / oslo-geometri.geojson   tomme, metadata utfylt
 ├── arkiv/
 │   └── london-map_1.html   gammel prototype, ikke i bruk
 ├── Tips til nabolag i London.md   råmateriale, kilden til London-dataene
@@ -65,7 +66,7 @@ byguider/
 └── HANDOVER.md             dette dokumentet
 ```
 
-Ny by = én linje i `byer.json`, én GeoJSON-fil med `metadata`, én stubbmappe
+Ny by = én linje i `byer.json`, én md-fil (+ tom geometri-fil), én stubbmappe
 (kopier `london/index.html` og bytt `data-by`).
 
 Designretningene ligger som artboards her:
@@ -76,46 +77,50 @@ https://claude.ai/artifact/StKKz6su1kLPBVyy4bZ9NN
 
 ## 4. Datamodellen
 
-Hver by er én GeoJSON `FeatureCollection` i `data/<by>.geojson`. Punkter er steder,
-`LineString` er gater og gåturer.
+**Kilden er én markdown-fil per by: `data/<by>.md`.** Appen leser den direkte (ingen
+byggesteg), så en commit — også fra GitHub i nettleseren — oppdaterer kartet.
+Instruksjonene står som kommentar øverst i hver fil.
 
-Koordinatrekkefølge er `[lengdegrad, breddegrad]` — motsatt av Google Maps.
-Dette er den vanligste feilkilden ved manuell redigering.
-
-`properties` per feature:
-
-| felt | verdi |
-|---|---|
-| `navn` | visningsnavn |
-| `kategori` | nabolag, cafe, bakeri, restaurant, bar, butikk, marked, park, galleri, gate, gaatur |
-| `sone` | byens soner, f.eks. Central/North/South/East/West i London (valgfritt) |
-| `favoritt` | true / false |
-| `besokt` | true / false |
-| `notat` | fritekst |
-| `place_id` | Google Place ID, valgfritt |
-| `lengde_km`, `varighet_min` | kun gåturer |
-
-`metadata` per fil styrer det byspesifikke:
-
-| felt | verdi |
-|---|---|
-| `tittel`, `kicker`, `undertittel` | tekstene øverst i sidebaren; `tittel` blir også sidetittel |
-| `senter` | startkoordinat, `[lengdegrad, breddegrad]` |
-| `zoom` | startzoom i MapLibre-skala (én lavere enn Leaflet/Google for samme utsnitt) |
-| `soner` | rekkefølgen på sonefiltrene; tom liste = ingen sonefilter |
-| `oppdatert` | vises nederst i sidebaren |
-
-Har byen steder, zoomes kartet uansett til å vise alle ved oppstart; `senter`/`zoom`
-brukes når fila er tom.
-
-Prinsippet: data og presentasjon er adskilt. Nye steder legges inn i GeoJSON-filen
-uten at koden røres; nytt design endres i CSS uten at dataene røres. Ny kategori
-krever ett oppslag i fargetabellen i `app.js` pluss en filterknapp.
-
-Gater og gåturer tegnes enklest i [geojson.io](https://geojson.io): dra inn filen,
-tegn med linjeverktøyet langs gatenettet, fyll ut `properties` i tabellen, last ned.
-
+```
 ---
+tittel: Påls London                 frontmatter: tittel, kicker, undertittel,
+senter: 51.5105, -0.1235            senter (breddegrad, lengdegrad), zoom, oppdatert
+---
+# Central                           sone — rekkefølgen her er rekkefølgen i appen
+## Nabolag og gater                 kategori
+### Marylebone Village ★            sted; ★ = favoritt
+- sted: 51.5207, -0.1519            breddegrad, lengdegrad (som Google Maps)
+- gater: Marylebone High Street, Chiltern Street
+- besøkt: ja
+- google: <Place ID eller lenke>
+Fri tekst = notat. Første avsnitt i lista, alt i popupen.
+```
+
+Kategorier (`##`): Nabolag og gater · Restauranter · Caféer · Barer · Muséer og gallerier ·
+Butikker · Verdt en omvei · Gåturer. Overskriftene matches mot `KATEGORIER` i `app.js`
+(navn, nøkkel og alias, uten hensyn til aksenter/store bokstaver). Ukjent kategori vises
+med overskriften som navn og grå prikk.
+
+Gåturer har `lengde:` og `varighet:` som fritekst, og kan mangle tegnet rute
+(rutekortet sier da «rute ikke tegnet»).
+
+**Geometri: `data/<by>-geometri.geojson`**, redigeres i geojson.io. Hver feature har
+`navn` (samme som `###` i md-fila) og `type`:
+
+| type | geometri | vises |
+|---|---|---|
+| `område` | Polygon | lys flate med stiplet kant når nabolaget er valgt |
+| `gate` | LineString | uthevet gate når nabolaget er valgt |
+| `rute` | LineString | gåturens stiplede rute, alltid synlig |
+
+Et nabolag uten `sted:` men med `område` får punkt midt i området. Klikk på nabolaget
+(i lista eller kartet) viser område og gater og zoomer dit; klikk på tomt kart opphever.
+Gategeometri kan hentes fra OpenStreetMap (Overpass) — Claude kan gjøre det på forespørsel.
+
+Koordinatrekkefølge: **md-fila bruker breddegrad, lengdegrad** (Google-rekkefølge);
+GeoJSON-fila bruker lengdegrad, breddegrad. Parseren snur md-koordinatene.
+
+`Tips til nabolag i London.md` er råmaterialet London-fila ble bygd fra.
 
 ## 5. Valgt designretning: A — redaksjonell
 
@@ -327,5 +332,7 @@ Hvert trinn skal kunne committes for seg og fungere alene.
 - ~~Tilpass kartstilen til papirpaletten.~~ Gjort (grenen `kartstil`).
 - ~~Egne ikoner per kategori, klynging.~~ Gjort (grenen `kartstil`).
 - Avkryssing av besøkte steder: valgt bort foreløpig — `besokt` redigeres i dataene.
-- Neste: Pål kommer med forslag til kategorier. Deretter data, inkl. å rette opp de to
-  eksempel-linjene.
+- ~~Kategorier og md som kilde.~~ Gjort (grenen `md-kilde`): sju kategorier + gåturer,
+  md-fila er kilden, nabolag vises med områdeskisse + gater, klikk i kartet blar ikke i lista.
+- Neste: data. Pål kommer med navneendringer (som Marylebone High Street → Marylebone Village)
+  og nye steder; områdeskisser tegnes etter hvert. Eksempelstedene er merket EKSEMPEL.

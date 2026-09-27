@@ -9,56 +9,44 @@ Publisert: https://paalstampe.github.io/byguider/
 ```
 byguider/
 ├── index.html          forside: lista over byer (fra byer.json)
-├── app.js              all logikk: laster byens GeoJSON, tegner på MapLibre, filtrerer
+├── app.js              all logikk: leser byens md-fil, tegner på MapLibre, filtrerer
 ├── style.css           alt visuelt: farger, typografi, kort
 ├── byer.json           manifest over byene
 ├── london/index.html   stubb per by — laster ../app.js med data-by="london"
 ├── nice/index.html
 ├── oslo/index.html
 ├── data/
-│   ├── london.geojson  dataene — dette er "databasen", én fil per by
-│   ├── nice.geojson
-│   └── oslo.geojson
+│   ├── london.md                 dataene — én md-fil per by
+│   ├── london-geometri.geojson   områder, gater, gåturer
+│   └── …                         nice, oslo
 ├── arkiv/              tidligere versjoner, ikke i bruk
 ├── HANDOVER.md         statusdokument
 └── README.md
 ```
 
-## Datamodell
+## Data
 
-Hvert sted er en GeoJSON-`Feature`:
+Hver by er én markdown-fil, `data/<by>.md`, som kartet leser direkte. Instruksjonene
+står øverst i fila. Kort:
 
-- `geometry.type: "Point"` for steder — `coordinates: [lengdegrad, breddegrad]` (merk rekkefølgen)
-- `geometry.type: "LineString"` for gater og gåturer — liste av koordinatpar i rekkefølge
+```
+# Sone
+## Kategori
+### Navn ★
+- sted: breddegrad, lengdegrad
+- gater: …
+Notat.
+```
 
-`properties`:
-
-| felt | verdi |
-|---|---|
-| `navn` | visningsnavn |
-| `kategori` | nabolag, cafe, bakeri, restaurant, bar, butikk, marked, park, galleri, gate, gaatur |
-| `sone` | byens soner (valgfritt), f.eks. Central, North, South, East, West i London |
-| `favoritt` | true / false |
-| `besokt` | true / false |
-| `notat` | fritekst |
-| `place_id` | Google Place ID (valgfritt, for dyplenking) |
-| `lengde_km`, `varighet_min` | kun for gåturer |
-
-`metadata` i hver fil: `tittel`, `kicker`, `undertittel`, `senter` (`[lengdegrad, breddegrad]`),
-`zoom` (MapLibre-skala), `soner` (rekkefølge; tom = ingen sonefilter), `oppdatert`.
-
-Nye felter kan legges til fritt — koden ignorerer det den ikke kjenner.
+Områdeskisser, gater og gåturer tegnes i `data/<by>-geometri.geojson` (f.eks. i
+[geojson.io](https://geojson.io)) med `navn` lik stedets navn og `type` = `område`,
+`gate` eller `rute`. Se HANDOVER.md punkt 4 for detaljer.
 
 ## Ny by
 
 1. Legg til en linje i `byer.json`.
-2. Lag `data/<by>.geojson` med `metadata` utfylt (kopier `data/oslo.geojson`).
+2. Kopier `data/oslo.md` og `data/oslo-geometri.geojson` og fyll ut frontmatter.
 3. Kopier `london/index.html` til `<by>/index.html` og bytt `data-by`.
-
-## Redigering
-
-- **Punkter og tekst:** rediger `data/<by>.geojson` direkte, eller på GitHub i nettleseren.
-- **Gater og gåturer:** bruk [geojson.io](https://geojson.io) — dra inn filen, tegn med linjeverktøyet, last ned igjen.
 
 ## Lokal kjøring
 

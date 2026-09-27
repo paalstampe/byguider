@@ -444,7 +444,14 @@ html, body {
   color: var(--dempet);
 }
 
-.pop-notat { margin: 8px 0 0; font-size: 13px; line-height: 1.45; }
+.pop-gater {
+  margin: 6px 0 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--aksent);
+}
+
+.pop-notat { margin: 8px 0 0; font-size: 13px; line-height: 1.45; white-space: pre-line; max-height: 220px; overflow-y: auto; }
 
 .pop-lenke {
   display: inline-block;
@@ -514,7 +521,7 @@ html, body {
   color: var(--dempet);
 }
 
-.rute-notat { margin: 8px 0 0; font-size: 13px; line-height: 1.45; }
+.rute-notat { margin: 8px 0 0; font-size: 13px; line-height: 1.45; white-space: pre-line; max-height: 40vh; overflow-y: auto; }
 .rute-notat:empty, .rute-meta:empty { display: none; }
 
 /* ---------- Mobil ---------- */
