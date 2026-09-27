@@ -15,20 +15,26 @@
    Ny kategori krever ett oppslag i KATEGORIER under, pluss ingenting annet —
    filterknappen lages automatisk. */
 
-/* Hver kategori har navn, farge og ikon (nøkkel i IKONER). Farger og ikoner
-   er felles for alle byer: en café ser lik ut i London og Nice. */
+/* Hver kategori har navn, farge, ikon (nøkkel i IKONER) og alias. Overskriftene
+   (##) i by-fila matches mot navn, nøkkel og alias uten hensyn til store/små
+   bokstaver og aksenter. Farger og ikoner er felles for alle byer. */
 const KATEGORIER = {
-  nabolag:    { navn: 'Nabolag',    farge: '#8A5A2B', ikon: 'hus' },
-  cafe:       { navn: 'Café',       farge: '#A9713F', ikon: 'kopp' },
-  bakeri:     { navn: 'Bakeri',     farge: '#C08A4E', ikon: 'brod' },
-  restaurant: { navn: 'Restaurant', farge: '#9E4A3C', ikon: 'bestikk' },
-  bar:        { navn: 'Bar',        farge: '#6E4A6B', ikon: 'glass' },
-  butikk:     { navn: 'Butikk',     farge: '#4F6B7A', ikon: 'pose' },
-  marked:     { navn: 'Marked',     farge: '#7A6A2B', ikon: 'bod' },
-  park:       { navn: 'Park',       farge: '#5C7A4F', ikon: 'tre' },
-  galleri:    { navn: 'Galleri',    farge: '#3F5A6B', ikon: 'ramme' },
-  gate:       { navn: 'Gate',       farge: '#8A5A2B' },
-  gaatur:     { navn: 'Gåtur',      farge: '#9E4A3C' }
+  nabolag:    { navn: 'Nabolag og gater',    farge: '#8A5A2B', ikon: 'hus',
+                alias: ['Nabolag', 'Gater', 'Gate', 'Strøk'] },
+  restaurant: { navn: 'Restauranter',        farge: '#9E4A3C', ikon: 'bestikk',
+                alias: ['Restaurant', 'Spisesteder'] },
+  cafe:       { navn: 'Caféer',              farge: '#A9713F', ikon: 'kopp',
+                alias: ['Café', 'Kafé', 'Kafeer', 'Bakeri', 'Bakerier'] },
+  bar:        { navn: 'Barer',               farge: '#6E4A6B', ikon: 'glass',
+                alias: ['Bar', 'Puber', 'Pub'] },
+  museum:     { navn: 'Muséer og gallerier', farge: '#3F5A6B', ikon: 'ramme',
+                alias: ['Museum', 'Museer', 'Galleri', 'Gallerier'] },
+  butikk:     { navn: 'Butikker',            farge: '#4F6B7A', ikon: 'pose',
+                alias: ['Butikk', 'Shopping', 'Marked', 'Markeder'] },
+  omvei:      { navn: 'Verdt en omvei',      farge: '#5C7A4F', ikon: 'flagg',
+                alias: ['Annet', 'Point of interest', 'Severdigheter', 'Park', 'Parker'] },
+  gaatur:     { navn: 'Gåturer',             farge: '#7A6A2B',
+                alias: ['Gåtur', 'Ruter', 'Rute'] }
 };
 
 /* Ikonglyfer: SVG-stier i et 24×24-rutenett, tegnet som hvite streker i en farget
@@ -43,6 +49,7 @@ const IKONER = {
   bod:     'M4 9.5 5.5 5h13L20 9.5 M4 9.5a2.67 2.2 0 0 0 5.33 0 2.67 2.2 0 0 0 5.34 0 2.67 2.2 0 0 0 5.33 0 M5.5 12v7.5h13V12',
   tre:     'M12 21v-5 M12 3l5.5 7H15l3.5 5.5h-13L9 10H6.5z',
   ramme:   'M4.5 5.5h15v13h-15z M4.5 15.5l4.5-4.5 4 4 2.5-2.5 4 4 M15 8.5a1.2 1.2 0 1 0 0.01 0',
+  flagg:   'M7 21V4 M7 4.5h10l-2.2 3.75L17 12H7',
   prikk:   'M9 12a3 3 0 1 0 6 0a3 3 0 1 0-6 0'
 };
 
@@ -115,6 +122,153 @@ const KARTSTIL = 'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json'
   + (CARTO_KEY ? '?key=' + CARTO_KEY : '');
 
 const UKJENT_FARGE = '#6B5D4A';
+
+/* ---------- by-fila (markdown) ----------
+
+   Hver by er én markdown-fil (data/<by>.md) som er kilden for alt innhold:
+
+     ---                              frontmatter: tittel, kicker, undertittel,
+     tittel: Påls London              senter (breddegrad, lengdegrad), zoom, oppdatert
+     ---
+     # Central                        sone (rekkefølgen her = rekkefølgen i appen)
+     ## Nabolag og gater              kategori (matches mot KATEGORIER)
+     ### Marylebone Village ★         sted; ★ = favoritt
+     - sted: 51.5207, -0.1519         breddegrad, lengdegrad — som Google Maps
+     - gater: Marylebone High Street, Chiltern Street
+     Fri tekst blir notatet.
+
+   Områder, gater og gåturer tegnes i data/<by>-geometri.geojson og kobles på navn.
+   Koordinater i markdown er i Google-rekkefølge (breddegrad først); GeoJSON bruker
+   motsatt rekkefølge. Parseren snur dem, så resten av koden ser bare GeoJSON. */
+
+function normaliser(s) {
+  return String(s || '').toLowerCase()
+    .replace(/ø/g, 'o').replace(/æ/g, 'ae')
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/\s+/g, ' ').trim();
+}
+
+function finnKategori(tekst) {
+  const n = normaliser(tekst);
+  const k = Object.keys(KATEGORIER).find(k =>
+    [k, KATEGORIER[k].navn].concat(KATEGORIER[k].alias || []).some(x => normaliser(x) === n));
+  return k || n.replace(/[^a-z0-9]+/g, '-');
+}
+
+/* "51.5207, -0.1519" (breddegrad, lengdegrad) -> [-0.1519, 51.5207] */
+function lesKoordinat(tekst) {
+  const m = String(tekst || '').match(/(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)/);
+  return m ? [parseFloat(m[2]), parseFloat(m[1])] : null;
+}
+
+const FELT = ['sted', 'besokt', 'google', 'gater', 'lengde', 'varighet'];
+
+function lesMarkdown(tekst) {
+  const linjer = String(tekst).replace(/\r/g, '').replace(/<!--[\s\S]*?-->/g, '').split('\n');
+  const meta = {};
+  const steder = [];
+  const soner = [];
+  const kategoriNavn = {};
+  let i = 0;
+
+  if ((linjer[0] || '').trim() === '---') {
+    for (i = 1; i < linjer.length && linjer[i].trim() !== '---'; i++) {
+      const m = linjer[i].match(/^\s*([^:]+):\s*(.*)$/);
+      if (m) meta[normaliser(m[1])] = m[2].trim();
+    }
+    i++;
+  }
+
+  let sone = '', kategori = '', sted = null;
+  for (; i < linjer.length; i++) {
+    const l = linjer[i];
+    let m;
+    if ((m = l.match(/^#\s+(.+)$/))) {
+      sone = m[1].trim();
+      if (!soner.includes(sone)) soner.push(sone);
+      sted = null;
+    } else if ((m = l.match(/^##\s+(.+)$/))) {
+      kategori = finnKategori(m[1]);
+      kategoriNavn[kategori] = m[1].trim();
+      sted = null;
+    } else if ((m = l.match(/^###\s+(.+)$/))) {
+      const tittel = m[1].trim();
+      sted = {
+        navn: tittel.replace(/\s*[★*]+\s*$/, ''),
+        favoritt: /[★*]\s*$/.test(tittel),
+        sone: sone, kategori: kategori, felt: {}, notat: []
+      };
+      steder.push(sted);
+    } else if (sted) {
+      const f = l.match(/^\s*[-*]\s+([^:]+):\s*(.*)$/);
+      if (f && FELT.includes(normaliser(f[1]))) sted.felt[normaliser(f[1])] = f[2].trim();
+      else sted.notat.push(l);
+    }
+  }
+
+  steder.forEach(st => {
+    st.notat = st.notat.join('\n').replace(/\n{3,}/g, '\n\n').trim();
+  });
+
+  return { meta: meta, soner: soner, steder: steder, kategoriNavn: kategoriNavn };
+}
+
+/* Gjør markdown-oppføringene om til GeoJSON-features. Geometri-fila gir
+   områder (type: område), gater (type: gate) og ruter (type: rute), koblet på navn. */
+function byggFeatures(md, geo) {
+  const geoFeat = (geo && geo.features) || [];
+  const finnGeo = (navn, type) => geoFeat.filter(f =>
+    normaliser((f.properties || {}).navn) === normaliser(navn) &&
+    normaliser((f.properties || {}).type) === type);
+
+  return md.steder.map(st => {
+    const b = normaliser(st.felt.besokt);
+    const google = st.felt.google || '';
+    const p = {
+      navn: st.navn,
+      kategori: st.kategori,
+      sone: st.sone,
+      favoritt: st.favoritt,
+      besokt: b ? /^(ja|j|yes|x)$/.test(b) : undefined,
+      notat: st.notat,
+      place_id: /^https?:/.test(google) ? '' : google,
+      google_url: /^https?:/.test(google) ? google : '',
+      gater: (st.felt.gater || '').split(',').map(x => x.trim()).filter(Boolean),
+      lengde: st.felt.lengde || '',
+      varighet: st.felt.varighet || ''
+    };
+
+    const omrade = finnGeo(st.navn, 'omrade').map(f => ({ type: 'Feature', geometry: f.geometry, properties: { rolle: 'omrade' } }));
+    const gater = finnGeo(st.navn, 'gate').map(f => ({ type: 'Feature', geometry: f.geometry, properties: { rolle: 'gate' } }));
+    const rute = finnGeo(st.navn, 'rute')[0];
+
+    let geometry = null;
+    const pkt = lesKoordinat(st.felt.sted);
+    if (pkt) geometry = { type: 'Point', coordinates: pkt };
+    else if (rute) geometry = rute.geometry;
+    else if (omrade.length) {
+      const c = [].concat.apply([], omrade[0].geometry.coordinates);
+      const x = c.map(k => k[0]), y = c.map(k => k[1]);
+      geometry = { type: 'Point', coordinates: [(Math.min.apply(null, x) + Math.max.apply(null, x)) / 2,
+                                                (Math.min.apply(null, y) + Math.max.apply(null, y)) / 2] };
+    }
+
+    return { type: 'Feature', geometry: geometry, properties: p, fokus: omrade.concat(gater) };
+  });
+}
+
+/* Metadata fra frontmatter; soner fra rekkefølgen på #-overskriftene. */
+function byggMeta(md) {
+  const m = md.meta;
+  const s = lesKoordinat(m.senter);
+  return {
+    tittel: m.tittel || '', kicker: m.kicker || '', undertittel: m.undertittel || '',
+    senter: s || undefined,
+    zoom: m.zoom ? parseFloat(m.zoom) : undefined,
+    oppdatert: m.oppdatert || '',
+    soner: md.soner
+  };
+}
 
 /* ---------- oppstart ---------- */
 
@@ -214,8 +368,9 @@ async function finnBy(id) {
 
   try {
     const [b] = await Promise.all([by, js]);
-    const dataSti = b.data || ('data/' + b.id + '.geojson');
-    start(dataSti, new URL(dataSti, BASE).href);
+    const dataSti = b.data || ('data/' + b.id + '.md');
+    const geoSti = b.geometri || null;
+    start(dataSti, new URL(dataSti, BASE).href, geoSti ? new URL(geoSti, BASE).href : null);
   } catch (err) {
     document.getElementById('liste').innerHTML = '<p class="tomt">' + String(err.message)
       .replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c])) + '</p>';
@@ -224,7 +379,7 @@ async function finnBy(id) {
 
 /* ---------- appen ---------- */
 
-function start(DATA_NAVN, DATA_URL) {
+function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
   /* ---------- tilstand ---------- */
 
@@ -237,7 +392,8 @@ function start(DATA_NAVN, DATA_URL) {
     valgtId: null,
     soneRekkefolge: [],          // fra metadata.soner, ellers rekkefølgen i dataene
     brukteSoner: new Set(),
-    brukteKategorier: []
+    brukteKategorier: [],
+    ukjenteKategorier: {}        // ##-overskrifter som ikke matcher KATEGORIER
   };
 
   const el = {
@@ -347,6 +503,28 @@ function start(DATA_NAVN, DATA_URL) {
 
   const KLIKKBARE = ['gater', 'gaaturer', 'punkter'];
 
+  /* Valgt nabolag: skisse av området (lys flate, stiplet kant) og de viktigste
+     gatene uthevet. Tegnes under ruter og ikoner, og bare mens nabolaget er valgt. */
+  const FOKUSLAG = {
+    'fokus-flate': {
+      source: 'fokus', type: 'fill',
+      filter: ['==', ['get', 'rolle'], 'omrade'],
+      paint: { 'fill-color': '#8A5A2B', 'fill-opacity': 0.08 }
+    },
+    'fokus-kant': {
+      source: 'fokus', type: 'line',
+      filter: ['==', ['get', 'rolle'], 'omrade'],
+      layout: { 'line-join': 'round' },
+      paint: { 'line-color': '#8A5A2B', 'line-width': 1.5, 'line-opacity': 0.8, 'line-dasharray': [3, 2] }
+    },
+    'fokus-gater': {
+      source: 'fokus', type: 'line',
+      filter: ['==', ['get', 'rolle'], 'gate'],
+      layout: { 'line-cap': 'round', 'line-join': 'round' },
+      paint: { 'line-color': '#8A5A2B', 'line-width': ['interpolate', ['linear'], ['zoom'], 12, 3, 16, 6], 'line-opacity': 0.7 }
+    }
+  };
+
   /* Tegner ett ikon per kategori til et lerret: farget sirkel, papirkant, hvit glyf. */
   function lagIkon(farge, glyf) {
     const R = 2, D = 26 * R;
@@ -400,6 +578,7 @@ function start(DATA_NAVN, DATA_URL) {
     tilpassKartstil();
     registrerIkoner();
 
+    kart.addSource('fokus', { type: 'geojson', data: tomSamling() });
     kart.addSource('ruter', { type: 'geojson', data: tomSamling() });
     kart.addSource('steder', {
       type: 'geojson',
@@ -409,8 +588,13 @@ function start(DATA_NAVN, DATA_URL) {
       clusterRadius: 14      // klynger bare der ikonene ellers ville overlappe
     });
 
-    Object.keys(KARTLAG).forEach(id => {
-      kart.addLayer(Object.assign({ id: id }, KARTLAG[id]));
+    Object.keys(FOKUSLAG).concat(Object.keys(KARTLAG)).forEach(id => {
+      kart.addLayer(Object.assign({ id: id }, FOKUSLAG[id] || KARTLAG[id]));
+    });
+
+    // Klikk på tomt kart opphever valget.
+    kart.on('click', e => {
+      if (!kart.queryRenderedFeatures(e.point, { layers: KLIKKBARE.concat('klynger') }).length) nullstillValg();
     });
 
     KLIKKBARE.concat('klynger').forEach(id => {
@@ -445,10 +629,16 @@ function start(DATA_NAVN, DATA_URL) {
   /* Filtrering bytter ut dataene, slik at klyngene regnes ut fra det som vises. */
   function filtrerKart(vis) {
     if (!kart.getSource('steder')) return;
-    const punkter = vis.filter(o => !o.erLinje).map(o => o.f);
-    const linjer = vis.filter(o => o.erLinje).map(o => o.f);
+    const medGeo = vis.filter(o => o.f.geometry);
+    const punkter = medGeo.filter(o => !o.erLinje).map(o => o.f);
+    const linjer = medGeo.filter(o => o.erLinje).map(o => o.f);
     kart.getSource('steder').setData({ type: 'FeatureCollection', features: punkter });
     kart.getSource('ruter').setData({ type: 'FeatureCollection', features: linjer });
+  }
+
+  function visFokus(o) {
+    if (!kart.getSource('fokus')) return;
+    kart.getSource('fokus').setData({ type: 'FeatureCollection', features: (o && o.fokus) || [] });
   }
 
   function aapnePopup(o, lngLat) {
@@ -457,8 +647,8 @@ function start(DATA_NAVN, DATA_URL) {
 
   /* ---------- hjelpere ---------- */
 
-  const katInfo = k => KATEGORIER[k] || { navn: k || 'Ukjent', farge: '#6B5D4A' };
-  const erLinjekategori = k => k === 'gate' || k === 'gaatur';
+  const katInfo = k => KATEGORIER[k] || { navn: state.ukjenteKategorier[k] || k || 'Ukjent', farge: UKJENT_FARGE };
+  const erLinjekategori = k => k === 'gaatur';
 
   function esc(s) {
     return String(s == null ? '' : s).replace(/[&<>"']/g, c =>
@@ -476,14 +666,17 @@ function start(DATA_NAVN, DATA_URL) {
   }
 
   function ruteMeta(p) {
-    const d = [];
-    if (p.lengde_km) d.push(p.lengde_km.toString().replace('.', ',') + ' km');
-    if (p.varighet_min) d.push('ca. ' + p.varighet_min + ' min');
-    if (p.sone) d.push(p.sone);
-    return d.join(' · ');
+    return [p.lengde, p.varighet, p.sone].filter(Boolean).join(' · ');
+  }
+
+  /* Første avsnitt av notatet, forkortet — brukes i lista. Hele notatet vises i popup/rutekort. */
+  function kortNotat(t) {
+    const a = String(t || '').split(/\n\s*\n/)[0].replace(/\s*\n\s*/g, ' ');
+    return a.length > 160 ? a.slice(0, 157).replace(/\s+\S*$/, '') + ' …' : a;
   }
 
   function mapsLenke(p, latlng) {
+    if (p.google_url) return p.google_url;
     if (p.place_id) {
       return 'https://www.google.com/maps/search/?api=1&query=' +
         encodeURIComponent(p.navn) + '&query_place_id=' + encodeURIComponent(p.place_id);
@@ -498,6 +691,7 @@ function start(DATA_NAVN, DATA_URL) {
     const lenke = mapsLenke(p, latlng);
     return '<h3 class="pop-navn">' + esc(p.navn) + '</h3>' +
       '<p class="pop-meta">' + esc(metaLinje(p) || ruteMeta(p)) + '</p>' +
+      (p.gater && p.gater.length ? '<p class="pop-gater">' + esc(p.gater.join(' · ')) + '</p>' : '') +
       (p.notat ? '<p class="pop-notat">' + esc(p.notat) + '</p>' : '') +
       (lenke ? '<a class="pop-lenke" href="' + lenke + '" target="_blank" rel="noopener">Åpne i Google Maps</a>' : '');
   }
@@ -515,16 +709,22 @@ function start(DATA_NAVN, DATA_URL) {
 
   function lagOppslag(f, i) {
     const id = 'f' + i;
+    const fokus = f.fokus || [];
+    delete f.fokus;
     f.properties = Object.assign({}, f.properties, { _id: id });
     const p = f.properties;
     const g = f.geometry;
-    const erLinje = g.type === 'LineString' || erLinjekategori(p.kategori);
-    const coords = g.type === 'LineString' ? g.coordinates : [g.coordinates];
+    const erLinje = (g && g.type === 'LineString') || erLinjekategori(p.kategori);
+    const coords = !g ? [] : g.type === 'LineString' ? g.coordinates : [g.coordinates];
+    const fokusCoords = [].concat.apply([], fokus.map(x =>
+      x.geometry.type === 'Polygon' ? x.geometry.coordinates[0] :
+      x.geometry.type === 'LineString' ? x.geometry.coordinates : []));
 
     return {
-      id: id, f: f, p: p, erLinje: erLinje,
-      punkt: g.type === 'Point' ? { lng: g.coordinates[0], lat: g.coordinates[1] } : null,
-      bbox: bbox(coords)
+      id: id, f: f, p: p, erLinje: erLinje, fokus: fokus,
+      punkt: g && g.type === 'Point' ? { lng: g.coordinates[0], lat: g.coordinates[1] } : null,
+      bbox: coords.length ? bbox(coords) : null,
+      fokusBbox: fokusCoords.length ? bbox(fokusCoords.concat(coords)) : null
     };
   }
 
@@ -542,7 +742,7 @@ function start(DATA_NAVN, DATA_URL) {
       if (state.kategorier.size && !state.kategorier.has(p.kategori)) return false;
       if (state.kunFavoritter && !p.favoritt) return false;
       if (q) {
-        const hay = [p.navn, p.notat, p.sone, katInfo(p.kategori).navn].join(' ').toLowerCase();
+        const hay = [p.navn, p.notat, p.sone, katInfo(p.kategori).navn].concat(p.gater || []).join(' ').toLowerCase();
         if (!hay.includes(q)) return false;
       }
       return true;
@@ -571,6 +771,7 @@ function start(DATA_NAVN, DATA_URL) {
       state.valgtId = null;
       el.ruteKort.hidden = true;
       popup.remove();
+      visFokus(null);
     }
   }
 
@@ -625,7 +826,7 @@ function start(DATA_NAVN, DATA_URL) {
         '<span class="prikk" style="background:' + info.farge + '"></span>' +
         esc(metaLinje(p) || ruteMeta(p)) +
       '</p>' +
-      (p.notat ? '<p class="oppslag-notat">' + esc(p.notat) + '</p>' : '');
+      (p.notat ? '<p class="oppslag-notat">' + esc(kortNotat(p.notat)) + '</p>' : '');
 
     div.addEventListener('click', () => velg(o.id, true));
     div.addEventListener('keydown', e => {
@@ -641,39 +842,44 @@ function start(DATA_NAVN, DATA_URL) {
     const o = oppslagFraId(id);
     if (!o) return;
     state.valgtId = id;
+    visFokus(o);
 
     if (o.erLinje) {
       popup.remove();
-      if (flyTil) kart.fitBounds(o.bbox, { padding: 70, maxZoom: 15, duration: 600 });
+      if (flyTil && o.bbox) kart.fitBounds(o.bbox, { padding: 70, maxZoom: 15, duration: 600 });
       visRuteKort(o);
     } else {
       el.ruteKort.hidden = true;
-      if (flyTil && o.punkt) {
+      if (flyTil && o.fokusBbox) {
+        kart.fitBounds(o.fokusBbox, { padding: 90, maxZoom: 16, duration: 600 });
+      } else if (flyTil && o.punkt) {
         kart.flyTo({ center: o.punkt, zoom: Math.max(kart.getZoom(), 13), duration: 600 });
       }
       if (o.punkt) aapnePopup(o, o.punkt);
     }
 
+    // Lista markerer valget, men blar ikke — man blir værende i kartet.
     tegnListe(synlige());
+  }
 
-    const valgtNode = el.liste.querySelector('.oppslag.er-valgt');
-    if (valgtNode) valgtNode.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  function nullstillValg() {
+    if (!state.valgtId) return;
+    state.valgtId = null;
+    el.ruteKort.hidden = true;
+    visFokus(null);
+    tegnListe(synlige());
   }
 
   function visRuteKort(o) {
     const p = o.p;
-    el.ruteKicker.textContent = p.kategori === 'gaatur' ? 'Gåtur' : 'Gate';
+    el.ruteKicker.textContent = 'Gåtur' + (o.f.geometry ? '' : ' · rute ikke tegnet');
     el.ruteNavn.textContent = p.navn || '';
     el.ruteMeta.textContent = ruteMeta(p);
     el.ruteNotat.textContent = p.notat || '';
     el.ruteKort.hidden = false;
   }
 
-  el.ruteLukk.addEventListener('click', () => {
-    el.ruteKort.hidden = true;
-    state.valgtId = null;
-    tegnListe(synlige());
-  });
+  el.ruteLukk.addEventListener('click', nullstillValg);
 
   /* ---------- filterknapper ---------- */
 
@@ -757,16 +963,26 @@ function start(DATA_NAVN, DATA_URL) {
 
   /* ---------- last data ---------- */
 
-  fetch(DATA_URL)
-    .then(r => {
+  const hentGeometri = GEO_URL
+    ? fetch(GEO_URL).then(r => r.ok ? r.json() : null).catch(() => null)
+    : Promise.resolve(null);
+
+  Promise.all([
+    fetch(DATA_URL).then(r => {
       if (!r.ok) throw new Error('HTTP ' + r.status);
-      return r.json();
-    })
-    .then(gj => {
-      const meta = gj.metadata || {};
+      return r.text();
+    }),
+    hentGeometri
+  ])
+    .then(([tekst, geo]) => {
+      const md = lesMarkdown(tekst);
+      const meta = byggMeta(md);
       settOppSide(meta);
 
-      state.oppslag = (gj.features || []).map(lagOppslag);
+      state.oppslag = byggFeatures(md, geo).map(lagOppslag);
+      Object.keys(md.kategoriNavn).forEach(k => {
+        if (!KATEGORIER[k]) state.ukjenteKategorier[k] = md.kategoriNavn[k];
+      });
 
       state.brukteSoner = new Set(state.oppslag.map(o => o.p.sone).filter(Boolean));
       state.soneRekkefolge = (meta.soner || []).slice();
@@ -784,8 +1000,9 @@ function start(DATA_NAVN, DATA_URL) {
       byggFiltre();
       tegn();
 
-      if (state.oppslag.length) {
-        kart.fitBounds(bbox(state.oppslag.flatMap(o => [o.bbox.slice(0, 2), o.bbox.slice(2)])),
+      const medBbox = state.oppslag.filter(o => o.bbox);
+      if (medBbox.length) {
+        kart.fitBounds(bbox(medBbox.flatMap(o => [o.bbox.slice(0, 2), o.bbox.slice(2)])),
           { padding: 50, duration: 0 });
       }
 

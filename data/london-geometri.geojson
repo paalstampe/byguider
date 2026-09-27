@@ -1,0 +1,10 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {"type": "Feature", "properties": {"navn": "Marylebone Village", "type": "område", "notat": "Grov skisse"}, "geometry": {"type": "Polygon", "coordinates": [[[-0.1582, 51.523], [-0.1488, 51.5233], [-0.1478, 51.518], [-0.1562, 51.517], [-0.1582, 51.523]]]}},
+    {"type": "Feature", "properties": {"navn": "Marylebone Village", "type": "gate", "gate": "Marylebone High Street", "kilde": "OpenStreetMap"}, "geometry": {"type": "LineString", "coordinates": [[-0.15153, 51.51818], [-0.15154, 51.51823], [-0.15157, 51.51838], [-0.15161, 51.5186], [-0.15169, 51.51922], [-0.15177, 51.51985], [-0.1518, 51.52005], [-0.15189, 51.52065], [-0.15191, 51.5208], [-0.15193, 51.52103], [-0.15193, 51.5213], [-0.15188, 51.52145], [-0.15167, 51.5218], [-0.15151, 51.52207], [-0.15132, 51.52241], [-0.15114, 51.52273], [-0.15113, 51.52292], [-0.15114, 51.52307]]}},
+    {"type": "Feature", "properties": {"navn": "Marylebone Village", "type": "gate", "gate": "Chiltern Street", "kilde": "OpenStreetMap"}, "geometry": {"type": "LineString", "coordinates": [[-0.15452, 51.51833], [-0.15487, 51.519], [-0.15519, 51.51963], [-0.15551, 51.52019], [-0.15564, 51.52049], [-0.15575, 51.52072], [-0.15595, 51.5211], [-0.15617, 51.52155], [-0.15647, 51.52218], [-0.1565, 51.52225]]}},
+    {"type": "Feature", "properties": {"navn": "Bermondsey Street", "type": "gate", "gate": "Bermondsey Street", "notat": "EKSEMPEL — grov skisse"}, "geometry": {"type": "LineString", "coordinates": [[-0.0813, 51.4975], [-0.0818, 51.4998], [-0.0822, 51.5018], [-0.0827, 51.5035]]}},
+    {"type": "Feature", "properties": {"navn": "London Fields → Spitalfields", "type": "rute", "notat": "EKSEMPEL — grov skisse"}, "geometry": {"type": "LineString", "coordinates": [[-0.0698, 51.5291], [-0.0672, 51.531], [-0.0645, 51.5332], [-0.0617, 51.5367], [-0.0602, 51.5418]]}}
+  ]
+}
