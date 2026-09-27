@@ -1,5 +1,6 @@
-/* Påls London — henter GeoJSON, tegner på Leaflet, filtrerer.
-   Data og presentasjon er adskilt: nye steder legges inn i data/nabolag-london.geojson.
+/* Byguide — henter GeoJSON, tegner på Leaflet, filtrerer.
+   Data og presentasjon er adskilt: steder, soner, startvisning og titler ligger
+   i GeoJSON-filen (features + metadata). Koden inneholder ingenting byspesifikt.
    Ny kategori krever ett oppslag i KATEGORIER under, pluss ingenting annet —
    filterknappen lages automatisk. */
 
@@ -19,8 +20,6 @@ const KATEGORIER = {
   gaatur:     { navn: 'Gåtur',      farge: '#9E4A3C' }
 };
 
-const SONER = ['Central', 'North', 'South', 'East', 'West'];
-
 const PAPIR = '#F7F4EE';
 
 /* CARTO krever API-nøkkel på rasterkartene siden august 2026. Nøkkelen er gratis
@@ -36,7 +35,10 @@ const state = {
   kategorier: new Set(),       // tom = alle
   kunFavoritter: false,
   sok: '',
-  valgtId: null
+  valgtId: null,
+  soneRekkefolge: [],          // fra metadata.soner, ellers rekkefølgen i dataene
+  brukteSoner: new Set(),
+  brukteKategorier: []
 };
 
 const el = {
@@ -49,6 +51,9 @@ const el = {
   fKategori:  document.getElementById('filter-kategori'),
   fStatus:    document.getElementById('filter-status'),
   fotTekst:   document.getElementById('fot-tekst'),
+  kicker:     document.getElementById('kicker'),
+  tittel:     document.getElementById('tittel'),
+  ingress:    document.getElementById('ingress'),
   ruteKort:   document.getElementById('rute-kort'),
   ruteKicker: document.getElementById('rute-kicker'),
   ruteNavn:   document.getElementById('rute-navn'),
@@ -59,8 +64,8 @@ const el = {
 
 /* ---------- kart ---------- */
 
-const kart = L.map('kart', { zoomControl: true, attributionControl: true })
-  .setView([51.5105, -0.1235], 12);
+/* Startvisningen settes fra metadata når dataene er lastet. */
+const kart = L.map('kart', { zoomControl: true, attributionControl: true });
 
 const CARTO_URL = 'https://basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png'
   + (CARTO_KEY ? '?key=' + CARTO_KEY : '');
@@ -213,7 +218,8 @@ function tegnListe(vis) {
     return;
   }
 
-  const rekkefolge = SONER.slice();
+  const rekkefolge = state.soneRekkefolge;
+  const medSoner = state.brukteSoner.size > 0;
   vis.slice()
     .sort((a, b) => {
       const sa = rekkefolge.indexOf(a.p.sone), sb = rekkefolge.indexOf(b.p.sone);
@@ -222,7 +228,7 @@ function tegnListe(vis) {
       return (a.p.navn || '').localeCompare(b.p.navn || '', 'nb');
     })
     .forEach((o, i, arr) => {
-      if (i === 0 || arr[i - 1].p.sone !== o.p.sone) {
+      if (medSoner && (i === 0 || arr[i - 1].p.sone !== o.p.sone)) {
         const h = document.createElement('p');
         h.className = 'sone-hode';
         h.textContent = o.p.sone || 'Uten sone';
@@ -326,9 +332,10 @@ function toggle(set, verdi) {
 function byggFiltre() {
   // soner
   el.fSone.innerHTML = '';
-  SONER.filter(s => state.brukteSoner.has(s)).forEach(s => {
+  state.soneRekkefolge.filter(s => state.brukteSoner.has(s)).forEach(s => {
     el.fSone.appendChild(lagChip(s, null, state.soner.has(s), () => toggle(state.soner, s)));
   });
+  el.fSone.hidden = el.fSone.childElementCount === 0;
 
   // kategorier — kun de som faktisk finnes i datasettet
   el.fKategori.innerHTML = '';
@@ -362,6 +369,21 @@ el.sok.addEventListener('input', e => {
   tegn();
 });
 
+/* ---------- side fra metadata ---------- */
+
+function settOppSide(meta) {
+  if (meta.tittel) document.title = meta.tittel;
+  el.kicker.textContent  = meta.kicker || '';
+  el.tittel.textContent  = meta.tittel || '';
+  el.ingress.textContent = meta.undertittel || '';
+  el.kicker.hidden  = !meta.kicker;
+  el.ingress.hidden = !meta.undertittel;
+
+  // senter er [lengdegrad, breddegrad], som i resten av GeoJSON
+  const senter = Array.isArray(meta.senter) && meta.senter.length === 2 ? meta.senter : [0, 20];
+  kart.setView([senter[1], senter[0]], typeof meta.zoom === 'number' ? meta.zoom : 12);
+}
+
 /* ---------- last data ---------- */
 
 fetch(DATA_URL)
@@ -370,9 +392,16 @@ fetch(DATA_URL)
     return r.json();
   })
   .then(gj => {
+    const meta = gj.metadata || {};
+    settOppSide(meta);
+
     state.oppslag = (gj.features || []).map(lagOppslag);
 
     state.brukteSoner = new Set(state.oppslag.map(o => o.p.sone).filter(Boolean));
+    state.soneRekkefolge = (meta.soner || []).slice();
+    state.brukteSoner.forEach(s => {
+      if (!state.soneRekkefolge.includes(s)) state.soneRekkefolge.push(s);
+    });
     const rekkefolge = Object.keys(KATEGORIER);
     state.brukteKategorier = rekkefolge.filter(k => state.oppslag.some(o => o.p.kategori === k));
     state.oppslag.forEach(o => {
@@ -387,9 +416,8 @@ fetch(DATA_URL)
     const alle = L.featureGroup(state.oppslag.map(o => o.layer));
     if (state.oppslag.length) kart.fitBounds(alle.getBounds(), { padding: [50, 50] });
 
-    const oppdatert = (gj.metadata && gj.metadata.oppdatert) ? gj.metadata.oppdatert : null;
-    el.fotTekst.innerHTML = 'Rediger <code>data/nabolag-london.geojson</code> for å legge til steder.' +
-      (oppdatert ? ' Sist oppdatert ' + esc(oppdatert) + '.' : '');
+    el.fotTekst.innerHTML = 'Rediger <code>' + esc(DATA_URL) + '</code> for å legge til steder.' +
+      (meta.oppdatert ? ' Sist oppdatert ' + esc(meta.oppdatert) + '.' : '');
   })
   .catch(err => {
     el.liste.innerHTML = '<p class="tomt">Fant ikke <code>' + DATA_URL + '</code> (' + esc(err.message) +
