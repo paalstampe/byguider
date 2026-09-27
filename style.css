@@ -63,6 +63,28 @@ html, body {
   color: var(--dempet);
 }
 
+/* Brødsmuler: stam.pe / Påls byguider / London */
+.smuler {
+  margin: 0 0 12px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dempet);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.smuler a {
+  color: var(--dempet);
+  text-decoration: none;
+}
+
+.smuler a:hover { color: var(--aksent); }
+.smuler [aria-current] { color: var(--tekst); }
+.smule-skille { margin: 0 8px; color: var(--kant); font-weight: 400; }
+
 .tittel {
   margin: 0;
   font-family: 'Playfair Display', Georgia, serif;
@@ -344,6 +366,12 @@ html, body {
 
 .by-lenke:hover .by-navn { color: var(--aksent); }
 
+/* By som ikke er klar ennå: dempet og ikke klikkbar */
+.by-lenke.er-inaktiv { cursor: default; }
+.by-lenke.er-inaktiv .by-navn,
+.by-lenke.er-inaktiv:hover .by-navn { color: var(--kant); }
+.by-lenke.er-inaktiv .by-meta { color: var(--kant); }
+
 /* ---------- Kart ---------- */
 
 .kartflate {
@@ -453,9 +481,25 @@ html, body {
 
 .pop-notat { margin: 8px 0 0; font-size: 13px; line-height: 1.45; white-space: pre-line; max-height: 220px; overflow-y: auto; }
 
+.pop-lenker {
+  margin: 10px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.pop-skille { margin: 0 8px; color: var(--kant); }
+
+button.pop-lenke {
+  border: 0;
+  padding: 0;
+  background: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
 .pop-lenke {
   display: inline-block;
-  margin-top: 10px;
   font-size: 12px;
   font-weight: 500;
   color: var(--aksent);

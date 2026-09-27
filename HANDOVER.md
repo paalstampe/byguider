@@ -83,7 +83,7 @@ Instruksjonene står som kommentar øverst i hver fil.
 
 ```
 ---
-tittel: Påls London                 frontmatter: tittel, kicker, undertittel,
+tittel: Påls London                 frontmatter: tittel, undertittel,
 senter: 51.5105, -0.1235            senter (breddegrad, lengdegrad), zoom, oppdatert
 ---
 # Central                           sone — rekkefølgen her er rekkefølgen i appen
@@ -91,7 +91,6 @@ senter: 51.5105, -0.1235            senter (breddegrad, lengdegrad), zoom, oppda
 ### Marylebone Village ★            sted; ★ = favoritt
 - sted: 51.5207, -0.1519            breddegrad, lengdegrad (som Google Maps)
 - gater: Marylebone High Street, Chiltern Street
-- besøkt: ja
 - google: <Place ID eller lenke>
 Fri tekst = notat. Første avsnitt i lista, alt i popupen.
 ```
@@ -334,5 +333,10 @@ Hvert trinn skal kunne committes for seg og fungere alene.
 - Avkryssing av besøkte steder: valgt bort foreløpig — `besokt` redigeres i dataene.
 - ~~Kategorier og md som kilde.~~ Gjort (grenen `md-kilde`): sju kategorier + gåturer,
   md-fila er kilden, nabolag vises med områdeskisse + gater, klikk i kartet blar ikke i lista.
+- ~~Navigasjon og filtre.~~ Gjort (grenen `navigasjon`): brødsmuler (stam.pe / Påls byguider /
+  By) øverst i sidebaren og på forsiden; «Alle» først i sone- og kategorifiltrene, ett valg om
+  gangen (trykk igjen = Alle), «Nullstill» fjernet; «besøkt» fjernet fra visning og data;
+  «Zoom inn» i popupen (til området om det er tegnet, ellers bydelsnivå for nabolag og gatenivå
+  for steder); byer med `"status": "kommer"` i byer.json vises dempet uten lenke (Oslo).
 - Neste: data. Pål kommer med navneendringer (som Marylebone High Street → Marylebone Village)
   og nye steder; områdeskisser tegnes etter hvert. Eksempelstedene er merket EKSEMPEL.

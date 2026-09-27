@@ -1,6 +1,5 @@
 ---
 tittel: Påls Nice
-kicker: Nabolag & steder
 undertittel: 
 senter: 43.6990, 7.2620
 zoom: 13
@@ -17,7 +16,6 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
   ### Navn ★        ett sted. ★ bak navnet = favoritt.
   - sted: 51.5207, -0.1519      breddegrad, lengdegrad — som Google Maps viser det
                                 (høyreklikk i Google Maps og klikk på tallene for å kopiere)
-  - besøkt: ja / nei            valgfritt
   - google: <Place ID eller lenke fra Google Maps>   valgfritt
   - gater: Gate 1, Gate 2       nabolag: de viktigste gatene
   - lengde: 2,5 km              gåturer

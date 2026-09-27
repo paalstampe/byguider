@@ -1,6 +1,5 @@
 ---
 tittel: Påls London
-kicker: Nabolag & steder
 undertittel: Gater, torg og strøk verdt en omvei — med noen ruter å gå dem på.
 senter: 51.5105, -0.1235
 zoom: 11
@@ -17,7 +16,6 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
   ### Navn ★        ett sted. ★ bak navnet = favoritt.
   - sted: 51.5207, -0.1519      breddegrad, lengdegrad — som Google Maps viser det
                                 (høyreklikk i Google Maps og klikk på tallene for å kopiere)
-  - besøkt: ja / nei            valgfritt
   - google: <Place ID eller lenke fra Google Maps>   valgfritt
   - gater: Gate 1, Gate 2       nabolag: de viktigste gatene
   - lengde: 2,5 km              gåturer
@@ -34,46 +32,38 @@ og kobles hit på navn: type "område", "gate" eller "rute".
 
 ### Elizabeth Street ★
 - sted: 51.4938, -0.1511
-- besøkt: ja
 Lower Belgravia
 
 ### Lamb's Conduit Street ★
 - sted: 51.5216, -0.1183
-- besøkt: ja
 - google: ChIJjeX5PDYbdkgR-phoN6uICkI
 East Bloomsbury
 
 ### Marylebone Village ★
 - sted: 51.5207, -0.1519
 - gater: Marylebone High Street, Chiltern Street
-- besøkt: ja
 - google: ChIJ8fPDaNIadkgRLjwLg3Njj9g
 
 ### Motcomb Street ★
 - sted: 51.4995, -0.1564
-- besøkt: ja
 - google: ChIJQ1U0ijsFdkgRoPb1VGDhzGY
 Belgravia
 
 ### Mount Street ★
 - sted: 51.5097, -0.1508
-- besøkt: ja
 - google: ChIJTXRT3i0FdkgR91IToAbIt44
 Mayfair
 
 ### Connaught Village
 - sted: 51.5146, -0.1651
-- besøkt: nei
 Tyburnia
 
 ### Exmouth Market
 - sted: 51.5258, -0.1093
-- besøkt: nei
 - google: ChIJ03enhkUbdkgRCm2WVIqordU
 
 ### Shepherd Market
 - sted: 51.5066, -0.1469
-- besøkt: nei
 - google: ChIJpfHK0igFdkgR66lvlSSEvWM
 
 # North
@@ -82,47 +72,38 @@ Tyburnia
 
 ### Stoke Newington Church Street ★
 - sted: 51.5613, -0.0828
-- besøkt: ja
 - google: ChIJdYATLGMcdkgReU8cDcdqaU0
 
 ### Upper Street, Islington ★
 - sted: 51.5383, -0.1024
-- besøkt: ja
 
 ### Camden Passage
 - sted: 51.5347, -0.1040
-- besøkt: nei
 - google: ChIJS2-WPs4EdkgRT5bUdYdl1Os
 Antikk
 
 ### Crouch End
 - sted: 51.5796, -0.1234
-- besøkt: nei
 - google: ChIJiTYKy8AbdkgRM_8p51pSGqQ
 
 ### Hampstead Village
 - sted: 51.5608, -0.1629
-- besøkt: nei
 - google: ChIJIzJDyggadkgROFAV19Ti070
 
 ### Highgate Village
 - sted: 51.5714, -0.1500
-- besøkt: nei
 - google: ChIJF2lcJk8adkgRpjwgNQWd0-Q
 
 ### Muswell Hill
 - sted: 51.5914, -0.1427
-- besøkt: nei
 - google: ChIJ7WhD4iwadkgRTwEDFT2KkvE
 
 ### Primrose Hill
 - sted: 51.5413, -0.1533
-- besøkt: nei
 - google: ChIJ6V7jzO4adkgRmRjI9lMi07M
 
 ### Walthamstow Village
 - sted: 51.5834, -0.0176
-- besøkt: nei
 - google: ChIJ0ckah1Gn2EcRB3mcysWWvGM
 
 # South
@@ -131,56 +112,46 @@ Antikk
 
 ### Abbeville Village ★
 - sted: 51.4561, -0.1381
-- besøkt: ja
 Clapham
 
 ### Bermondsey Street ★
 - sted: 51.5008, -0.0818
 - gater: Bermondsey Street
-- besøkt: ja
 White Cube, Fashion and Textile Museum
 
 ### Bellenden Road
 - sted: 51.4697, -0.0729
-- besøkt: nei
 Peckham
 
 ### Brixton Village
 - sted: 51.4625, -0.1122
-- besøkt: nei
 - google: ChIJx9r5NWUEdkgRJY0mTciVn-k
 
 ### Crystal Palace Triangle
 - sted: 51.4195, -0.0839
-- besøkt: nei
 - google: ChIJ79E0xE8BdkgRh0mDf0w1zco
 Ønskeliste
 
 ### Dulwich Village
 - sted: 51.4506, -0.0855
-- besøkt: nei
 - google: ChIJdXaCE_MDdkgRNbsLxUq87W8
 Ønskeliste
 
 ### East Dulwich
 - sted: 51.4617, -0.0800
-- besøkt: nei
 - google: ChIJS2-tbJADdkgR2H2ywPwoxTY
 
 ### Herne Hill
 - sted: 51.4545, -0.0967
-- besøkt: nei
 - google: ChIJ1QO9jYcDdkgRHAlfXDX_ugA
 Ønskeliste
 
 ### Northcote Road
 - sted: 51.4572, -0.1656
-- besøkt: nei
 - google: ChIJreaLCpYFdkgRlfk2KgbW-Lg
 
 ### Nunhead
 - sted: 51.4655, -0.0587
-- besøkt: nei
 - google: ChIJDWdRh6UDdkgRIZme5IYIHaE
 Ønskeliste
 
@@ -188,7 +159,6 @@ Peckham
 
 ### White Cube Bermondsey
 - sted: 51.4989, -0.0806
-- besøkt: ja
 EKSEMPEL — galleri
 
 ## Gåturer
@@ -208,38 +178,31 @@ Ta Jubilee fra Baker Street til London Bridge.
 
 ### Broadway Market ★
 - sted: 51.5367, -0.0617
-- besøkt: ja
 - google: ChIJaZN7MugcdkgRdBDt4u41D4A
 Marked lørdager
 
 ### Columbia Road ★
 - sted: 51.5291, -0.0698
-- besøkt: ja
 - google: ChIJUe_EX7McdkgRUyuFGZPputs
 Blomstermarked søndager
 
 ### London Fields ★
 - sted: 51.5418, -0.0602
-- besøkt: ja
 - google: ChIJH7vcjOYddkgRQAmHYvUaK-U
 
 ### Shoreditch ★
 - sted: 51.5243, -0.0773
-- besøkt: ja
 
 ### Hackney Wick
 - sted: 51.5446, -0.0257
-- besøkt: nei
 - google: ChIJxzjMzQwddkgR_xrh8DI6Ao8
 
 ### Victoria Park Village
 - sted: 51.5383, -0.0438
-- besøkt: nei
 - google: ChIJVV7kax4ddkgRQHrksg4N0oY
 
 ### Whitecross Street
 - sted: 51.5230, -0.0929
-- besøkt: nei
 - google: ChIJlfVTzakcdkgRDkdY8jAouVk
 
 ## Gåturer
@@ -255,70 +218,58 @@ Start i London Fields. Gå ned Broadway Market, så bort til og ned Columbia Roa
 
 ### Chelsea Green ★
 - sted: 51.4907, -0.1660
-- besøkt: ja
 - google: ChIJASFhcWsFdkgRKfayV46TGxs
 
 ### Clarendon Cross ★
 - sted: 51.5104, -0.2102
-- besøkt: ja
 - google: ChIJtaV0x-APdkgRps-xtDCnlUo
 Holland Park
 
 ### Golborne Road ★
 - sted: 51.5226, -0.2075
-- besøkt: ja
 - google: ChIJGSXeoBkQdkgRU50dAgixBfk
 
 ### Queen's Park ★
 - sted: 51.5369, -0.2041
-- besøkt: ja
 - google: ChIJX2jOw2wQdkgR0P335wB7pI4
 Lonsdale / Salusbury Road
 
 ### Westbourne Grove ★
 - sted: 51.5152, -0.1939
-- besøkt: ja
 
 ### Barnes Village
 - sted: 51.4738, -0.2492
-- besøkt: nei
 - google: ChIJG6sdYVgOdkgRrgKNBvsQTyo
 Farmers market lørdag
 
 ### Chiswick High Road / Turnham Green
 - sted: 51.4920, -0.2663
-- besøkt: ja
 - google: ChIJ38-tk2wOdkgRGDMU_F4xZCQ
 Devonshire Road
 
 ### Kew Green
 - sted: 51.4852, -0.2880
-- besøkt: nei
 - google: ChIJMevjjNkNdkgRtEdyVHdNdko
 Ønskeliste — kombiner med Kew Gardens
 
 ### Little Venice
 - sted: 51.5233, -0.1838
-- besøkt: nei
 - google: ChIJMdwfuqYadkgRm3PVLSkYM5I
 
 ### Richmond
 - sted: 51.4673, -0.2995
-- besøkt: ja
 - google: ChIJ9aBQEyUMdkgRCZSWDFJ3LAw
 
 ## Caféer
 
 ### Hermanos Coffee Roasters
 - sted: 51.4746, -0.2498
-- besøkt: nei
 EKSEMPEL — Barnes. Koordinat er omtrentlig
 
 ## Verdt en omvei
 
 ### WWT London Wetland Centre
 - sted: 51.4856, -0.2412
-- besøkt: nei
 EKSEMPEL — viser hvordan en park legges inn
 
 ## Gåturer

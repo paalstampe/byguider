@@ -161,7 +161,7 @@ function lesKoordinat(tekst) {
   return m ? [parseFloat(m[2]), parseFloat(m[1])] : null;
 }
 
-const FELT = ['sted', 'besokt', 'google', 'gater', 'lengde', 'varighet'];
+const FELT = ['sted', 'besokt', 'google', 'gater', 'lengde', 'varighet'];  // besokt leses, men vises ikke
 
 function lesMarkdown(tekst) {
   const linjer = String(tekst).replace(/\r/g, '').replace(/<!--[\s\S]*?-->/g, '').split('\n');
@@ -286,7 +286,9 @@ const SKALL = `
 <div class="app">
   <aside class="sidebar">
     <header class="sidebar-head">
-      <p class="kicker" id="kicker"></p>
+      <nav class="smuler" aria-label="Du er her">
+        <a href="${new URL('../', BASE).href}">stam.pe</a><span class="smule-skille">/</span><a href="${new URL('./', BASE).href}">Påls byguider</a><span class="smule-skille">/</span><span id="smule-by" aria-current="page"></span>
+      </nav>
       <h1 class="tittel" id="tittel"></h1>
       <p class="ingress" id="ingress"></p>
     </header>
@@ -300,11 +302,9 @@ const SKALL = `
     </div>
     <div class="teller-rad">
       <span id="teller" class="teller"></span>
-      <button type="button" id="nullstill" class="nullstill" hidden>Nullstill</button>
     </div>
     <div class="liste" id="liste" role="list"></div>
     <footer class="sidebar-fot">
-      <a class="til-byer" href="${new URL('./', BASE).href}">Alle byer</a>
       <span id="fot-tekst"></span>
     </footer>
   </aside>
@@ -370,6 +370,7 @@ async function finnBy(id) {
     const [b] = await Promise.all([by, js]);
     const dataSti = b.data || ('data/' + b.id + '.md');
     const geoSti = b.geometri || null;
+    document.getElementById('smule-by').textContent = b.navn || b.id;
     start(dataSti, new URL(dataSti, BASE).href, geoSti ? new URL(geoSti, BASE).href : null);
   } catch (err) {
     document.getElementById('liste').innerHTML = '<p class="tomt">' + String(err.message)
@@ -401,12 +402,11 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     liste:      document.getElementById('liste'),
     sok:        document.getElementById('sok'),
     teller:     document.getElementById('teller'),
-    nullstill:  document.getElementById('nullstill'),
     fSone:      document.getElementById('filter-sone'),
     fKategori:  document.getElementById('filter-kategori'),
     fStatus:    document.getElementById('filter-status'),
     fotTekst:   document.getElementById('fot-tekst'),
-    kicker:     document.getElementById('kicker'),
+    smuleBy:    document.getElementById('smule-by'),
     tittel:     document.getElementById('tittel'),
     ingress:    document.getElementById('ingress'),
     ruteKort:   document.getElementById('rute-kort'),
@@ -642,8 +642,26 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
   }
 
   function aapnePopup(o, lngLat) {
-    popup.setLngLat(lngLat).setHTML(popupHtml(o.p, o.punkt)).addTo(kart);
+    popup.setLngLat(lngLat).setHTML(popupHtml(o.p, o.punkt, o.id)).addTo(kart);
   }
+
+  /* «Zoom inn» i popupen: til området når det er tegnet, ellers et godt stykke inn —
+     nabolag til bydelsnivå, enkeltsteder til gatenivå. */
+  function zoomInn(o) {
+    if (o.fokusBbox) kart.fitBounds(o.fokusBbox, { padding: 90, maxZoom: 16, duration: 700 });
+    else if (o.erLinje && o.bbox) kart.fitBounds(o.bbox, { padding: 70, maxZoom: 15, duration: 700 });
+    else if (o.punkt) {
+      const mal = o.p.kategori === 'nabolag' ? 14.5 : 16;
+      kart.flyTo({ center: o.punkt, zoom: Math.max(kart.getZoom(), mal), duration: 700 });
+    }
+  }
+
+  document.addEventListener('click', e => {
+    const knapp = e.target.closest && e.target.closest('.pop-zoom');
+    if (!knapp) return;
+    const o = oppslagFraId(knapp.dataset.id);
+    if (o) zoomInn(o);
+  });
 
   /* ---------- hjelpere ---------- */
 
@@ -655,14 +673,8 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   }
 
-  function statusTekst(p) {
-    if (p.besokt === true) return 'Besøkt';
-    if (p.besokt === false) return 'Ikke besøkt';
-    return '';
-  }
-
   function metaLinje(p) {
-    return [p.sone, katInfo(p.kategori).navn, statusTekst(p)].filter(Boolean).join(' · ');
+    return [p.sone, katInfo(p.kategori).navn].filter(Boolean).join(' · ');
   }
 
   function ruteMeta(p) {
@@ -687,13 +699,17 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     return null;
   }
 
-  function popupHtml(p, latlng) {
+  function popupHtml(p, latlng, id) {
     const lenke = mapsLenke(p, latlng);
+    const lenker = [
+      id ? '<button type="button" class="pop-lenke pop-zoom" data-id="' + esc(id) + '">Zoom inn</button>' : '',
+      lenke ? '<a class="pop-lenke" href="' + lenke + '" target="_blank" rel="noopener">Åpne i Google Maps</a>' : ''
+    ].filter(Boolean);
     return '<h3 class="pop-navn">' + esc(p.navn) + '</h3>' +
       '<p class="pop-meta">' + esc(metaLinje(p) || ruteMeta(p)) + '</p>' +
       (p.gater && p.gater.length ? '<p class="pop-gater">' + esc(p.gater.join(' · ')) + '</p>' : '') +
       (p.notat ? '<p class="pop-notat">' + esc(p.notat) + '</p>' : '') +
-      (lenke ? '<a class="pop-lenke" href="' + lenke + '" target="_blank" rel="noopener">Åpne i Google Maps</a>' : '');
+      (lenker.length ? '<p class="pop-lenker">' + lenker.join('<span class="pop-skille">·</span>') + '</p>' : '');
   }
 
   /* ---------- oppslag fra data ---------- */
@@ -761,9 +777,6 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     const deler = [antSteder + (antSteder === 1 ? ' sted' : ' steder')];
     if (antLinjer) deler.push(antLinjer + (antLinjer === 1 ? ' rute' : ' ruter'));
     el.teller.textContent = deler.join(' · ');
-
-    const aktivtFilter = state.soner.size || state.kategorier.size || state.kunFavoritter || state.sok;
-    el.nullstill.hidden = !aktivtFilter;
 
     tegnListe(vis);
 
@@ -899,27 +912,31 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     return b;
   }
 
-  function toggle(set, verdi) {
-    if (set.has(verdi)) set.delete(verdi); else set.add(verdi);
+  /* Én verdi om gangen per filtergruppe. «Alle» (tom mengde) viser alt;
+     trykk på den aktive knappen igjen går tilbake til «Alle». */
+  function velgEn(set, verdi) {
+    const var_valgt = verdi != null && set.has(verdi);
+    set.clear();
+    if (verdi != null && !var_valgt) set.add(verdi);
     byggFiltre();
     tegn();
   }
 
-  function byggFiltre() {
-    // soner
-    el.fSone.innerHTML = '';
-    state.soneRekkefolge.filter(s => state.brukteSoner.has(s)).forEach(s => {
-      el.fSone.appendChild(lagChip(s, null, state.soner.has(s), () => toggle(state.soner, s)));
+  function byggGruppe(beholder, verdier, set, navnFor, fargeFor) {
+    beholder.innerHTML = '';
+    if (verdier.length < 2) { beholder.hidden = true; return; }
+    beholder.hidden = false;
+    beholder.appendChild(lagChip('Alle', null, set.size === 0, () => velgEn(set, null)));
+    verdier.forEach(v => {
+      beholder.appendChild(lagChip(navnFor(v), fargeFor ? fargeFor(v) : null, set.has(v), () => velgEn(set, v)));
     });
-    el.fSone.hidden = el.fSone.childElementCount === 0;
+  }
 
-    // kategorier — kun de som faktisk finnes i datasettet
-    el.fKategori.innerHTML = '';
-    state.brukteKategorier.forEach(k => {
-      el.fKategori.appendChild(
-        lagChip(katInfo(k).navn, katInfo(k).farge, state.kategorier.has(k), () => toggle(state.kategorier, k))
-      );
-    });
+  function byggFiltre() {
+    // soner og kategorier — kun de som faktisk finnes i datasettet
+    byggGruppe(el.fSone, state.soneRekkefolge.filter(s => state.brukteSoner.has(s)), state.soner, s => s);
+    byggGruppe(el.fKategori, state.brukteKategorier, state.kategorier,
+      k => katInfo(k).navn, k => katInfo(k).farge);
 
     // status
     el.fStatus.innerHTML = '';
@@ -931,16 +948,6 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     }));
   }
 
-  el.nullstill.addEventListener('click', () => {
-    state.soner.clear();
-    state.kategorier.clear();
-    state.kunFavoritter = false;
-    state.sok = '';
-    el.sok.value = '';
-    byggFiltre();
-    tegn();
-  });
-
   el.sok.addEventListener('input', e => {
     state.sok = e.target.value;
     tegn();
@@ -950,10 +957,8 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
   function settOppSide(meta) {
     if (meta.tittel) document.title = meta.tittel;
-    el.kicker.textContent  = meta.kicker || '';
     el.tittel.textContent  = meta.tittel || '';
     el.ingress.textContent = meta.undertittel || '';
-    el.kicker.hidden  = !meta.kicker;
     el.ingress.hidden = !meta.undertittel;
 
     // senter er [lengdegrad, breddegrad], som i resten av GeoJSON
