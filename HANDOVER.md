@@ -177,15 +177,15 @@ Live etter cirka 30 sekunder.
 
 ---
 
-## 8. Neste steg i Cowork
+## 8. Neste steg
 
 1. ~~Flytt mappen inn i prosjektmappen.~~ Gjort.
 2. ~~Bygg `index.html`, `style.css` og `app.js`.~~ Gjort.
-3. Kjør lokalt og se over: `cd ~/Documents/GitHub/nabolag-london && python3 -m http.server`,
-   så `http://localhost:8000`.
-4. Rett opp koordinatene i de to eksempel-linjene i geojson.io.
-5. Opprett repo og publiser.
-6. Vurder KML-eksport for My Maps-sporet.
+3. ~~Opprett repo og publiser.~~ Gjort — `paalstampe/nabolag-london`, live på `stam.pe/nabolag-london/`.
+4. **Konverter til flerbys-arkitektur og MapLibre.** Se punkt 10. Dette er nå hovedoppgaven.
+5. Rett opp koordinatene i de to eksempel-linjene i geojson.io.
+6. Fyll på data: caféer, bakerier, parker, butikker, markeder, gallerier.
+7. Vurder KML-eksport for My Maps-sporet.
 
 ## 9. Notater om implementasjonen
 
@@ -196,3 +196,113 @@ Live etter cirka 30 sekunder.
 - Popup lenker videre til Google Maps — på `place_id` når det finnes, ellers på koordinat.
 - Kartfliser: CARTO Voyager. Bytt URL-en i `app.js` til `.../light_all/...` for Positron.
 - Leaflet lastes fra unpkg. Ingen API-nøkkel, ingen byggesteg.
+- CARTO-nøkkelen ligger som `CARTO_KEY` øverst i `app.js`. Domenerestriksjonen i
+  CARTOs dashbord er **midlertidig slått av** under arbeidet med `byguider`, fordi
+  `localhost` ikke godtas som tillatt opphav (feltet krever et vertsnavn med punktum).
+  **Slå den på igjen når konverteringen er landet**, med `stam.pe`, `*.stam.pe` og
+  `paalstampe.github.io`. Uten tillatt opphav svarer CARTO 403 på hver tile og kartet
+  blir blankt — det er ikke en kodefeil.
+- `{r}` i tile-URL-en gir `@2x`-fliser på retina. Fjernes den, blir stedsnavn uskarpe.
+
+---
+
+## 10. Spesifikasjon: flerbys-arkitektur og MapLibre
+
+Besluttet 27. september 2026. Utføres på grenen `multi-by`.
+
+Bakgrunn: oppsettet skal gjenbrukes for Nice og Oslo. Sluttbildet er at `stam.pe`
+lenker til en samleside for byguidene, og at hver by ligger under den. Tre kopier
+av samme kode er utelukket — feilretting og nye funksjoner må gjøres én gang.
+
+CARTO har varslet at rasterkartene fases ut uten å sette dato. Siden det uansett
+kommer kartfunksjoner (avkryssing av besøkte steder, egne ikoner, klynging,
+rikere popups), tas MapLibre-byttet nå mens `app.js` er liten.
+
+### 10.1 Målstruktur
+
+Repoet døpes om fra `nabolag-london` til `byguider`. Gjøres før adressen er delt
+bredt; GitHub setter opp videresending fra det gamle navnet.
+
+```
+byguider/
+├── index.html              landingsside: London, Nice, Oslo
+├── app.js                  all logikk — én kopi
+├── style.css               all styling — én kopi
+├── byer.json               manifest over byene
+├── london/index.html       stubb: setter by-id, laster ../app.js
+├── nice/index.html
+├── oslo/index.html
+└── data/
+    ├── london.geojson
+    ├── nice.geojson
+    └── oslo.geojson
+```
+
+Mappene framfor `?by=london` gir delbare, bokmerkbare adresser
+(`stam.pe/byguider/london/`). Prisen er en firelinjers stubb per by.
+
+Ny by = én linje i `byer.json`, én GeoJSON-fil, én stubbmappe.
+
+### 10.2 Gjør appen datadrevet — gjøres først
+
+Dette er verdifullt uavhengig av hvilket bibliotek som tegner kartet, og gjør
+MapLibre-byttet enklere fordi det da bare finnes étt sted å endre.
+
+Ut av koden, inn i `metadata` i hver bys GeoJSON-fil:
+
+- `soner` — i dag hardkodet som Central/North/South/East/West i `SONER`.
+  London-spesifikt. Oslo har ikke soner; Nice har kanskje arrondissementer.
+  Filteret skal bygges fra dataene, og skjules helt når lista er tom.
+- `senter` — startkoordinat, i dag `[51.5105, -0.1235]` i `setView`.
+- `zoom` — startzoom, i dag 12.
+- `tittel` og `undertittel` — i dag hardkodet i `index.html`.
+
+Blir liggende felles i `app.js`:
+
+- `KATEGORIER` med farger. En café skal se lik ut i alle byer.
+- All listelogikk, søk, sortering og sidebar. Denne delen rører aldri kartet
+  og skal ikke endres av MapLibre-byttet.
+
+Etter dette skal `app.js` ikke inneholde ordet London.
+
+### 10.3 Leaflet → MapLibre GL JS
+
+Må skrives om: kartinitialisering, tile-laget, markører, polylinjer, popups,
+`fitBounds`, filtrering. Grovt 40 % av `app.js`.
+
+Uberørt: datalasting, søk, listebygging, sidebar — den snakker aldri med Leaflet.
+
+Tankegangen endres: i dag holdes ett Leaflet-lagobjekt per feature i `oppslag`,
+og filtrering skjer ved å legge til og fjerne lag. I MapLibre pekes hele
+GeoJSON-filen inn som én kilde, med ett `circle`-lag for punkter og ett `line`-lag
+for ruter. Filtrering blir `setFilter` — ett kall, ingen objekthåndtering.
+Kategorifargene flyttes fra `KATEGORIER`-oppslaget inn i et `match`-uttrykk
+i lagdefinisjonen, men skal fortsatt ha `KATEGORIER` som kilde slik at farger
+defineres étt sted.
+
+Stil: `https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json?key=...`
+Samme nøkkel, samme domenerestriksjon. Nøkkelkravet er ennå ikke aktivt på vektor,
+men nøkkelen skal ligge der uansett.
+
+**Omfang: rent teknisk bytte.** Kartet skal se ut som i dag når jobben er ferdig.
+Det er ferdigkriteriet. Tilpasning av kartstilen mot papirpaletten `#F7F4EE`
+— dempede veifarger, bakgrunn mot papir — er en separat jobb etterpå, og er
+den egentlige gevinsten ved vektor. Ikke bland de to.
+
+Merk: MapLibre er rundt fem ganger større enn Leaflet og krever WebGL.
+Uproblematisk på moderne maskiner.
+
+### 10.4 Rekkefølge
+
+1. Datadrevet app (10.2) — fortsatt Leaflet, fortsatt én by. Test.
+2. Restrukturer til `byguider` med manifest og stubber (10.1). Test med London alene.
+3. Bytt til MapLibre (10.3). Test.
+4. Legg inn Nice og Oslo som tomme GeoJSON-filer med `metadata` utfylt.
+
+Hvert trinn skal kunne committes for seg og fungere alene.
+
+### 10.5 Etterpå
+
+- Landingsside på `stam.pe` som lenker til byguidene.
+- Tilpass kartstilen til papirpaletten.
+- Kartfunksjoner: avkryssing av besøkte steder, egne ikoner per kategori, klynging.
