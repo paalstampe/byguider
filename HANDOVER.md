@@ -191,7 +191,7 @@ Cloudflare Pages er et alternativ hvis CDN-hastighet blir viktig.
 
 1. ~~Verifiser `multi-by` visuelt.~~ Gjort.
 2. ~~Flett `multi-by` inn i `main`.~~ Gjort — PR #1, live på `stam.pe/byguider/`.
-3. **Slå på domenerestriksjonen i CARTO igjen**: `stam.pe`, `*.stam.pe`, `paalstampe.github.io`.
+3. ~~Domenerestriksjon i CARTO.~~ Har vært på hele tiden: `stam.pe`, `*.stam.pe`, `paalstampe.github.io`.
 4. Rett opp koordinatene i de to eksempel-linjene i geojson.io.
 5. Fyll på data: London, Nice, Oslo.
 6. Punkt 10.5: landingsside på `stam.pe`, kartstil mot papirpaletten, kartfunksjoner.
@@ -209,12 +209,11 @@ Cloudflare Pages er et alternativ hvis CDN-hastighet blir viktig.
 - Popup lenker videre til Google Maps — på `place_id` når det finnes, ellers på koordinat.
 - Lista virker selv om kartet ikke laster (f.eks. CARTO 403); lagene legges på når stilen er klar.
 - Zoom i MapLibre er én lavere enn Leaflet for samme utsnitt. `metadata.zoom` for London er 11.
-- CARTO-nøkkelen ligger som `CARTO_KEY` øverst i `app.js`, men sendes **ikke** med på
-  stil-URL-en: `style.json?key=…` feiler i dag (svar uten CORS-header → blankt kart), mens
-  URL-en uten nøkkel svarer 200. Når CARTO aktiverer nøkkelkravet på vektor, må dette testes på nytt.
-  Domenerestriksjonen i CARTOs dashbord er **midlertidig slått av**, fordi `localhost`
-  ikke godtas som tillatt opphav. Slå den på igjen (punkt 8, steg 3). Uten tillatt opphav
-  svarer CARTO 403 og kartet blir blankt — det er ikke en kodefeil.
+- CARTO-nøkkelen ligger som `CARTO_KEY` øverst i `app.js` og sendes med på stil-URL-en.
+  Domenerestriksjonen er på: `stam.pe`, `*.stam.pe`, `paalstampe.github.io`. Fra andre opphav
+  (`localhost`, raw.githack.com) svarer CARTO uten CORS-header og kartet blir blankt — ikke en
+  kodefeil. For lokal testing: fjern nøkkelen midlertidig i `app.js` (stilen svarer 200 uten nøkkel),
+  og ikke commit det.
 
 ---
 

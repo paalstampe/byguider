@@ -30,12 +30,14 @@ const KATEGORIER = {
 const PAPIR = '#F7F4EE';
 
 /* CARTO-nøkkel (gratis, https://carto.com/basemaps/apikey). Kravet gjelder foreløpig
-   bare rasterkartene. Vektorstilen avviser i dag forespørsler MED ?key= (svaret mangler
-   CORS-header, og kartet blir blankt), så nøkkelen sendes ikke med på stilen ennå.
-   Den ligger her til CARTO slår på nøkkelkravet for vektor — da legges den på KARTSTIL. */
+   rasterkartene, men nøkkelen sendes med på vektorstilen også.
+   Nøkkelen er låst til stam.pe, *.stam.pe og paalstampe.github.io i CARTOs dashbord.
+   Fra andre opphav (localhost, raw.githack.com) svarer CARTO uten CORS-header og
+   kartet blir blankt — det er ikke en kodefeil. Test lokalt ved å fjerne nøkkelen midlertidig. */
 const CARTO_KEY = 'cb1_400i_1_fd049a8bd96268b9a1be2213';
 
-const KARTSTIL = 'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json';
+const KARTSTIL = 'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json'
+  + (CARTO_KEY ? '?key=' + CARTO_KEY : '');
 
 const UKJENT_FARGE = '#6B5D4A';
 
