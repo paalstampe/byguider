@@ -1,0 +1,67 @@
+# Publiserer siden på GitHub Pages:
+#   main                -> stam.pe/byguider/
+#   alle andre grener   -> stam.pe/byguider/forhandsvisning/<gren>/
+#
+# Krever Settings -> Pages -> Source: «GitHub Actions».
+#
+# GitHub lar bare main publisere til Pages. En push til en annen gren
+# publiserer derfor ikke selv, men starter denne arbeidsflyten på main,
+# som så samler main og alle grener og publiserer alt samlet.
+
+name: Publiser
+
+on:
+  push:
+  delete:
+  workflow_dispatch:
+
+jobs:
+  utlos:
+    if: github.ref != 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - name: Start publisering fra main
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run pages.yml --repo "${{ github.repository }}" --ref main
+
+  publiser:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    concurrency:
+      group: pages
+      cancel-in-progress: true
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Sett sammen main og forhåndsvisninger
+        run: |
+          mkdir -p _site
+          git archive origin/main | tar -x -C _site
+          for ref in $(git for-each-ref --format='%(refname:short)' refs/remotes/origin/); do
+            gren="${ref#origin/}"
+            case "$gren" in main|HEAD|origin) continue ;; esac
+            mkdir -p "_site/forhandsvisning/$gren"
+            git archive "$ref" | tar -x -C "_site/forhandsvisning/$gren"
+            echo "Forhåndsvisning: $gren"
+          done
+          rm -rf _site/.github
+          touch _site/.nojekyll
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deploy
+        uses: actions/deploy-pages@v4

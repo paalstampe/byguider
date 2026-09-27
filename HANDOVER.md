@@ -197,6 +197,16 @@ Cloudflare Pages er et alternativ hvis CDN-hastighet blir viktig.
 
 ---
 
+### Forhåndsvisning av grener
+
+`.github/workflows/pages.yml` publiserer `main` på `stam.pe/byguider/` og hver annen gren på
+`stam.pe/byguider/forhandsvisning/<gren>/` (f.eks. `…/forhandsvisning/kartstil/london/`), ett–to
+minutter etter push. Slettede grener forsvinner ved neste publisering. Pages-kilden er
+«GitHub Actions». Arbeidsflyt: data rett i `main`; kode på egen gren, sjekk forhåndsvisningen,
+flett.
+
+---
+
 ## 8. Neste steg
 
 1. ~~Verifiser `multi-by` visuelt.~~ Gjort.

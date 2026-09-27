@@ -287,7 +287,7 @@ const SKALL = `
   <aside class="sidebar">
     <header class="sidebar-head">
       <nav class="smuler" aria-label="Du er her">
-        <a href="${new URL('../', BASE).href}">stam.pe</a><span class="smule-skille">/</span><a href="${new URL('./', BASE).href}">Påls byguider</a><span class="smule-skille">/</span><span id="smule-by" aria-current="page"></span>
+        <a href="/">stam.pe</a><span class="smule-skille">/</span><a href="${new URL('./', BASE).href}">Påls byguider</a><span class="smule-skille">/</span><span id="smule-by" aria-current="page"></span>
       </nav>
       <h1 class="tittel" id="tittel"></h1>
       <p class="ingress" id="ingress"></p>
@@ -371,6 +371,8 @@ async function finnBy(id) {
     const dataSti = b.data || ('data/' + b.id + '.md');
     const geoSti = b.geometri || null;
     document.getElementById('smule-by').textContent = b.navn || b.id;
+    const fv = location.pathname.match(/\/forhandsvisning\/(.+?)\/[^/]+\/?$/);
+    if (fv) document.getElementById('smule-by').textContent += ' · forhåndsvisning: ' + decodeURIComponent(fv[1]);
     start(dataSti, new URL(dataSti, BASE).href, geoSti ? new URL(geoSti, BASE).href : null);
   } catch (err) {
     document.getElementById('liste').innerHTML = '<p class="tomt">' + String(err.message)
