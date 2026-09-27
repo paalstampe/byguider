@@ -1,7 +1,7 @@
 # Byguider — overlevering
 
 Statusdokument for å ta prosjektet videre i en Cowork-økt.
-Sist oppdatert: 27. september 2026 (flerbys-arkitektur og MapLibre ferdig på grenen `multi-by`).
+Sist oppdatert: 27. september 2026 (flerbys-arkitektur og MapLibre flettet inn i `main` og live).
 
 ---
 
@@ -21,11 +21,7 @@ Todelt strategi:
 
 ## 2. Hvor prosjektet står
 
-Ferdig på `main` (publisert):
-
-- London-appen i retning A med Leaflet og CARTO-rasterfliser.
-
-Ferdig på `multi-by` (4 commits, ikke flettet inn i `main` ennå), jf. punkt 10:
+Ferdig og live på `https://stam.pe/byguider/` (PR #1 fra `multi-by`, flettet 27.9.), jf. punkt 10:
 
 1. `71cdfdd` Datadrevet app — soner, senter, zoom og titler fra `metadata`.
 2. `055dfef` Flerbys-struktur — `byer.json`, forside, stubber, `data/london.geojson`.
@@ -193,10 +189,8 @@ Cloudflare Pages er et alternativ hvis CDN-hastighet blir viktig.
 
 ## 8. Neste steg
 
-1. **Verifiser `multi-by` visuelt** i nettleser: forsiden, London (markører, gater,
-   gåturer, popup, hover-navn, rutekort, filtre), Nice og Oslo (tomme, riktig utsnitt).
-   Ferdigkriteriet for MapLibre-byttet er at kartet ser ut som før.
-2. Flett `multi-by` inn i `main`.
+1. ~~Verifiser `multi-by` visuelt.~~ Gjort.
+2. ~~Flett `multi-by` inn i `main`.~~ Gjort — PR #1, live på `stam.pe/byguider/`.
 3. **Slå på domenerestriksjonen i CARTO igjen**: `stam.pe`, `*.stam.pe`, `paalstampe.github.io`.
 4. Rett opp koordinatene i de to eksempel-linjene i geojson.io.
 5. Fyll på data: London, Nice, Oslo.
@@ -219,7 +213,7 @@ Cloudflare Pages er et alternativ hvis CDN-hastighet blir viktig.
   stil-URL-en: `style.json?key=…` feiler i dag (svar uten CORS-header → blankt kart), mens
   URL-en uten nøkkel svarer 200. Når CARTO aktiverer nøkkelkravet på vektor, må dette testes på nytt.
   Domenerestriksjonen i CARTOs dashbord er **midlertidig slått av**, fordi `localhost`
-  ikke godtas som tillatt opphav. Slå den på igjen (punkt 8.3). Uten tillatt opphav
+  ikke godtas som tillatt opphav. Slå den på igjen (punkt 8, steg 3). Uten tillatt opphav
   svarer CARTO 403 og kartet blir blankt — det er ikke en kodefeil.
 
 ---
@@ -228,7 +222,7 @@ Cloudflare Pages er et alternativ hvis CDN-hastighet blir viktig.
 
 Besluttet 27. september 2026. Utføres på grenen `multi-by`.
 
-**Status: trinn 1–4 er utført og committet (se punkt 2). Gjenstår visuell verifisering og fletting.**
+**Status: trinn 1–4 er utført, verifisert og flettet inn i `main` (se punkt 2).**
 
 Bakgrunn: oppsettet skal gjenbrukes for Nice og Oslo. Sluttbildet er at `stam.pe`
 lenker til en samleside for byguidene, og at hver by ligger under den. Tre kopier
