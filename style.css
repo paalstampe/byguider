@@ -19,6 +19,9 @@
 
 * { box-sizing: border-box; }
 
+/* hidden-attributtet skal vinne over display: flex o.l. */
+[hidden] { display: none !important; }
+
 html, body {
   margin: 0;
   height: 100%;
