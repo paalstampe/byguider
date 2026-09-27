@@ -1,0 +1,6 @@
+{
+  "byer": [
+    { "id": "london", "navn": "London", "land": "Storbritannia", "data": "data/london.geojson",
+      "beskrivelse": "Gater, torg og strøk verdt en omvei — med noen ruter å gå dem på." }
+  ]
+}

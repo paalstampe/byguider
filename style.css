@@ -1,4 +1,4 @@
-/* Påls London — retning A: redaksjonell
+/* Byguider — retning A: redaksjonell
    Papirflate, serif kun til navn og titler, ingen skygger, ingen avrundede kort. */
 
 :root {
@@ -292,6 +292,55 @@ html, body {
   font-size: 11px;
 }
 
+.til-byer {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--aksent);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.til-byer::before { content: '← '; }
+.til-byer:hover { color: var(--aksent-hover); }
+
+/* ---------- Forside: liste over byer ---------- */
+
+.forside { height: auto; }
+
+.forside-innhold {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 72px 32px 64px;
+}
+
+.forside-head { padding: 0 0 28px; border-bottom: 1px solid var(--kant); }
+
+.by-lenke {
+  display: block;
+  padding: 20px 0 21px;
+  border-bottom: 1px solid var(--kant-lys);
+  color: var(--tekst);
+  text-decoration: none;
+}
+
+.by-navn {
+  display: block;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 1.15;
+  transition: color 0.12s;
+}
+
+.by-meta {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--dempet);
+}
+
+.by-lenke:hover .by-navn { color: var(--aksent); }
+
 /* ---------- Kart ---------- */
 
 .kartflate {
@@ -446,4 +495,6 @@ html, body {
   .teller-rad { margin-left: 20px; margin-right: 20px; }
   .sidebar-fot { padding-left: 20px; padding-right: 20px; }
   .rute-kort { left: 12px; right: 12px; width: auto; bottom: 12px; }
+  .forside-innhold { padding: 40px 20px 48px; }
+  .by-navn { font-size: 26px; }
 }

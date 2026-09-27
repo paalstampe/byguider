@@ -3,62 +3,43 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Byguide</title>
+<title>Påls byguider</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="forside">
 
-<div class="app">
+<main class="forside-innhold">
+  <header class="sidebar-head forside-head">
+    <p class="kicker">Byguider</p>
+    <h1 class="tittel">Påls byer</h1>
+    <p class="ingress">Nabolag, gater og steder verdt en omvei.</p>
+  </header>
+  <nav class="by-liste" id="by-liste" aria-label="Byer"></nav>
+</main>
 
-  <aside class="sidebar">
-
-    <header class="sidebar-head">
-      <p class="kicker" id="kicker"></p>
-      <h1 class="tittel" id="tittel"></h1>
-      <p class="ingress" id="ingress"></p>
-    </header>
-
-    <div class="sok-rad">
-      <input type="search" id="sok" class="sok" placeholder="Søk etter navn eller notat" autocomplete="off" aria-label="Søk">
-    </div>
-
-    <div class="filtre">
-      <div class="filtergruppe" id="filter-sone" aria-label="Filtrer på sone"></div>
-      <div class="filtergruppe" id="filter-kategori" aria-label="Filtrer på kategori"></div>
-      <div class="filtergruppe filtergruppe--smal" id="filter-status"></div>
-    </div>
-
-    <div class="teller-rad">
-      <span id="teller" class="teller"></span>
-      <button type="button" id="nullstill" class="nullstill" hidden>Nullstill</button>
-    </div>
-
-    <div class="liste" id="liste" role="list"></div>
-
-    <footer class="sidebar-fot">
-      <span id="fot-tekst"></span>
-    </footer>
-
-  </aside>
-
-  <main class="kartflate">
-    <div id="kart"></div>
-    <div class="rute-kort" id="rute-kort" hidden>
-      <button type="button" class="rute-lukk" id="rute-lukk" aria-label="Lukk">&times;</button>
-      <p class="rute-kicker" id="rute-kicker">Gåtur</p>
-      <h2 class="rute-navn" id="rute-navn"></h2>
-      <p class="rute-meta" id="rute-meta"></p>
-      <p class="rute-notat" id="rute-notat"></p>
-    </div>
-  </main>
-
-</div>
-
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="app.js"></script>
+<script>
+/* Lista bygges fra byer.json — ny by vises her automatisk. */
+fetch('byer.json')
+  .then(r => r.json())
+  .then(m => {
+    const nav = document.getElementById('by-liste');
+    (m.byer || []).forEach(b => {
+      const a = document.createElement('a');
+      a.className = 'by-lenke';
+      a.href = b.id + '/';
+      const navn = document.createElement('span');
+      navn.className = 'by-navn';
+      navn.textContent = b.navn;
+      const meta = document.createElement('span');
+      meta.className = 'by-meta';
+      meta.textContent = [b.land, b.beskrivelse].filter(Boolean).join(' · ');
+      a.append(navn, meta);
+      nav.appendChild(a);
+    });
+  });
+</script>
 </body>
 </html>
