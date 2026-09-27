@@ -2,8 +2,13 @@
   "type": "FeatureCollection",
   "name": "Paal's London",
   "metadata": {
-    "versjon": "1.0",
-    "oppdatert": "2026-09-20",
+    "versjon": "1.1",
+    "oppdatert": "2026-09-27",
+    "tittel": "Påls London",
+    "kicker": "Nabolag & gåturer",
+    "undertittel": "Gater, torg og strøk verdt en omvei — med noen ruter å gå dem på.",
+    "senter": [-0.1235, 51.5105],
+    "zoom": 11,
     "kategorier": ["nabolag", "cafe", "bakeri", "restaurant", "bar", "butikk", "marked", "park", "galleri"],
     "linjetyper": ["gate", "gaatur"],
     "soner": ["Central", "North", "South", "East", "West"]
