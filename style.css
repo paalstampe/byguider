@@ -355,23 +355,24 @@ html, body {
   background: var(--kartflate);
 }
 
-.leaflet-container {
+.maplibregl-map {
   font-family: 'Work Sans', system-ui, sans-serif;
   background: var(--kartflate);
 }
 
-.leaflet-control-zoom a {
+/* Zoomknapper */
+.maplibregl-ctrl-group {
   background: var(--kort);
-  border-color: var(--kant) !important;
-  color: var(--tekst);
-  border-radius: 0 !important;
+  border: 1px solid var(--kant);
+  border-radius: 0;
+  box-shadow: none !important;
 }
 
-.leaflet-control-zoom a:hover { background: var(--papir); color: var(--aksent); }
+.maplibregl-ctrl-group button { width: 30px; height: 30px; }
+.maplibregl-ctrl-group button + button { border-top: 1px solid var(--kant); }
+.maplibregl-ctrl-group button:hover { background-color: var(--papir) !important; }
 
-.leaflet-bar { border: 1px solid var(--kant); box-shadow: none; border-radius: 0; }
-
-.leaflet-control-attribution {
+.maplibregl-ctrl-attrib {
   background: rgba(255,253,248,0.88) !important;
   border-top: 1px solid var(--kant-lys);
   border-left: 1px solid var(--kant-lys);
@@ -379,20 +380,51 @@ html, body {
   font-size: 10px;
 }
 
-.leaflet-control-attribution a { color: var(--dempet); }
+.maplibregl-ctrl-attrib a { color: var(--dempet); }
 
 /* Popup i papirstil */
-.leaflet-popup-content-wrapper {
+.pop .maplibregl-popup-content {
+  padding: 14px 16px;
+  min-width: 180px;
   background: var(--kort);
   border: 1px solid var(--kant);
   border-radius: 2px;
   box-shadow: none;
   color: var(--tekst);
+  font-family: 'Work Sans', system-ui, sans-serif;
 }
 
-.leaflet-popup-content { margin: 14px 16px; min-width: 180px; }
-.leaflet-popup-tip { background: var(--kort); border: 1px solid var(--kant); box-shadow: none; }
-.leaflet-popup-close-button { color: var(--dempet) !important; }
+.pop.maplibregl-popup-anchor-bottom .maplibregl-popup-tip,
+.pop.maplibregl-popup-anchor-bottom-left .maplibregl-popup-tip,
+.pop.maplibregl-popup-anchor-bottom-right .maplibregl-popup-tip { border-top-color: var(--kort); }
+.pop.maplibregl-popup-anchor-top .maplibregl-popup-tip,
+.pop.maplibregl-popup-anchor-top-left .maplibregl-popup-tip,
+.pop.maplibregl-popup-anchor-top-right .maplibregl-popup-tip { border-bottom-color: var(--kort); }
+.pop.maplibregl-popup-anchor-left .maplibregl-popup-tip { border-right-color: var(--kort); }
+.pop.maplibregl-popup-anchor-right .maplibregl-popup-tip { border-left-color: var(--kort); }
+
+.pop .maplibregl-popup-close-button {
+  top: 2px;
+  right: 4px;
+  font-size: 18px;
+  color: var(--dempet);
+  background: none;
+}
+
+.pop .maplibregl-popup-close-button:hover { color: var(--aksent); }
+
+/* Navnelapp ved hover */
+.tips { pointer-events: none; }
+.tips .maplibregl-popup-content {
+  padding: 5px 8px;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  color: #222;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.tips .maplibregl-popup-tip { display: none; }
 
 .pop-navn {
   margin: 0;

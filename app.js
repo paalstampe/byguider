@@ -4,6 +4,10 @@
    data-by="<id>". Filen henter selv inn fonter, stilark og kartbibliotek,
    bygger siden, slår opp byen i byer.json og laster byens GeoJSON.
 
+   Kartet tegnes med MapLibre GL JS. Hele GeoJSON-filen er én kilde med ett
+   circle-lag for punkter og to line-lag for gater og gåturer; filtrering er
+   setFilter på lagene. Sidebar, søk og liste snakker aldri med kartet direkte.
+
    Data og presentasjon er adskilt: steder, soner, startvisning og titler ligger
    i GeoJSON-filen (features + metadata). Koden inneholder ingenting byspesifikt.
    Ny kategori krever ett oppslag i KATEGORIER under, pluss ingenting annet —
@@ -25,10 +29,15 @@ const KATEGORIER = {
 
 const PAPIR = '#F7F4EE';
 
-/* CARTO krever API-nøkkel på rasterkartene siden august 2026. Nøkkelen er gratis
-   og hentes på https://carto.com/basemaps/apikey — lim den inn her.
-   Står den tom, tegnes kartet fortsatt, men med "API KEY REQUIRED"-vannmerke. */
+/* CARTO-nøkkel (gratis, https://carto.com/basemaps/apikey). Kravet gjelder foreløpig
+   rasterkartene, men nøkkelen sendes med på vektorstilen også. Domenerestriksjonen
+   styres i CARTOs dashbord: uten tillatt opphav svarer CARTO 403 og kartet blir blankt. */
 const CARTO_KEY = 'cb1_400i_1_fd049a8bd96268b9a1be2213';
+
+const KARTSTIL = 'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json'
+  + (CARTO_KEY ? '?key=' + CARTO_KEY : '');
+
+const UKJENT_FARGE = '#6B5D4A';
 
 /* ---------- oppstart ---------- */
 
@@ -38,8 +47,8 @@ const BY = SKRIPT.dataset.by;
 
 const RESSURSER = {
   fonter:  'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Work+Sans:wght@400;500;600&display=swap',
-  kartCss: 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css',
-  kartJs:  'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js'
+  kartCss: 'https://unpkg.com/maplibre-gl@5/dist/maplibre-gl.css',
+  kartJs:  'https://unpkg.com/maplibre-gl@5/dist/maplibre-gl.js'
 };
 
 const SKALL = `
@@ -143,7 +152,7 @@ function start(DATA_NAVN, DATA_URL) {
   /* ---------- tilstand ---------- */
 
   const state = {
-    oppslag: [],                 // { id, f, p, layer, erLinje }
+    oppslag: [],                 // { id, f, p, erLinje, punkt, bbox }
     soner: new Set(),            // tom = alle
     kategorier: new Set(),       // tom = alle
     kunFavoritter: false,
@@ -177,18 +186,92 @@ function start(DATA_NAVN, DATA_URL) {
 
   /* ---------- kart ---------- */
 
-  /* Startvisningen settes fra metadata når dataene er lastet. */
-  const kart = L.map('kart', { zoomControl: true, attributionControl: true });
+  /* Startvisningen settes fra metadata når dataene er lastet.
+     Zoom er i MapLibre-skala: én lavere enn Leaflet for samme målestokk. */
+  const kart = new maplibregl.Map({
+    container: 'kart',
+    style: KARTSTIL,
+    center: [0, 20],
+    zoom: 1,
+    maxZoom: 18,
+    dragRotate: false,
+    pitchWithRotate: false,
+    touchPitch: false,
+    attributionControl: { compact: false }
+  });
+  kart.touchZoomRotate.disableRotation();
+  kart.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-left');
 
-  const CARTO_URL = 'https://basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png'
-    + (CARTO_KEY ? '?key=' + CARTO_KEY : '');
+  const kartKlar = new Promise(res => kart.once('load', res));
 
-  L.tileLayer(CARTO_URL, {
-    maxZoom: 19,
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &middot; &copy; <a href="https://carto.com/attributions">CARTO</a>'
-  }).addTo(kart);
+  const popup = new maplibregl.Popup({ closeButton: true, maxWidth: '300px', offset: 10, className: 'pop' });
+  const tips = new maplibregl.Popup({ closeButton: false, closeOnClick: false, offset: 10, className: 'tips' });
 
-  const lag = L.layerGroup().addTo(kart);
+  /* Farger defineres étt sted — KATEGORIER — og oversettes til et match-uttrykk. */
+  const FARGE = ['match', ['get', 'kategori']]
+    .concat(Object.keys(KATEGORIER).flatMap(k => [k, KATEGORIER[k].farge]))
+    .concat([UKJENT_FARGE]);
+
+  const FAV = ['==', ['get', 'favoritt'], true];
+
+  const KARTLAG = {
+    gater: {
+      type: 'line',
+      filter: ['all', ['==', ['geometry-type'], 'LineString'], ['!=', ['get', 'kategori'], 'gaatur']],
+      layout: { 'line-cap': 'round', 'line-join': 'round' },
+      paint: { 'line-color': FARGE, 'line-width': 4, 'line-opacity': 0.85 }
+    },
+    gaaturer: {
+      type: 'line',
+      filter: ['all', ['==', ['geometry-type'], 'LineString'], ['==', ['get', 'kategori'], 'gaatur']],
+      layout: { 'line-cap': 'round', 'line-join': 'round' },
+      paint: { 'line-color': FARGE, 'line-width': 5, 'line-opacity': 0.85, 'line-dasharray': [0.2, 1.8] }
+    },
+    punkter: {
+      type: 'circle',
+      filter: ['==', ['geometry-type'], 'Point'],
+      paint: {
+        'circle-color': FARGE,
+        'circle-radius': ['case', FAV, 7, 5.25],
+        'circle-opacity': ['case', FAV, 1, 0.78],
+        'circle-stroke-color': PAPIR,
+        'circle-stroke-width': ['case', FAV, 2, 1.5]
+      }
+    }
+  };
+
+  function leggTilKartlag(gj) {
+    kart.addSource('steder', { type: 'geojson', data: gj });
+    Object.keys(KARTLAG).forEach(id => {
+      kart.addLayer(Object.assign({ id: id, source: 'steder' }, KARTLAG[id]));
+      kart.on('mouseenter', id, () => { kart.getCanvas().style.cursor = 'pointer'; });
+      kart.on('mouseleave', id, () => { kart.getCanvas().style.cursor = ''; });
+      kart.on('click', id, e => {
+        // Punkter ligger over linjer: klikk på et punkt skal ikke også velge linjen under.
+        if (id !== 'punkter' && kart.queryRenderedFeatures(e.point, { layers: ['punkter'] }).length) return;
+        const o = oppslagFraId(e.features[0].properties._id);
+        if (!o) return;
+        velg(o.id, false);
+        if (o.erLinje) aapnePopup(o, e.lngLat);
+      });
+    });
+
+    kart.on('mousemove', 'punkter', e => {
+      const f = e.features[0];
+      tips.setLngLat(f.geometry.coordinates).setText(f.properties.navn || '').addTo(kart);
+    });
+    kart.on('mouseleave', 'punkter', () => tips.remove());
+  }
+
+  function filtrerKart(vis) {
+    if (!kart.getLayer('punkter')) return;
+    const ider = ['in', ['get', '_id'], ['literal', vis.map(o => o.id)]];
+    Object.keys(KARTLAG).forEach(id => kart.setFilter(id, ['all', KARTLAG[id].filter, ider]));
+  }
+
+  function aapnePopup(o, lngLat) {
+    popup.setLngLat(lngLat).setHTML(popupHtml(o.p, o.punkt)).addTo(kart);
+  }
 
   /* ---------- hjelpere ---------- */
 
@@ -237,45 +320,34 @@ function start(DATA_NAVN, DATA_URL) {
       (lenke ? '<a class="pop-lenke" href="' + lenke + '" target="_blank" rel="noopener">Åpne i Google Maps</a>' : '');
   }
 
-  /* ---------- bygg lag fra data ---------- */
+  /* ---------- oppslag fra data ---------- */
+
+  function bbox(coords) {
+    const b = [Infinity, Infinity, -Infinity, -Infinity];
+    coords.forEach(c => {
+      b[0] = Math.min(b[0], c[0]); b[1] = Math.min(b[1], c[1]);
+      b[2] = Math.max(b[2], c[0]); b[3] = Math.max(b[3], c[1]);
+    });
+    return b;
+  }
 
   function lagOppslag(f, i) {
-    const p = f.properties || {};
-    const info = katInfo(p.kategori);
-    const erLinje = f.geometry.type === 'LineString' || erLinjekategori(p.kategori);
-    let layer;
+    const id = 'f' + i;
+    f.properties = Object.assign({}, f.properties, { _id: id });
+    const p = f.properties;
+    const g = f.geometry;
+    const erLinje = g.type === 'LineString' || erLinjekategori(p.kategori);
+    const coords = g.type === 'LineString' ? g.coordinates : [g.coordinates];
 
-    if (f.geometry.type === 'LineString') {
-      layer = L.polyline(f.geometry.coordinates.map(c => [c[1], c[0]]), {
-        color: info.farge,
-        weight: p.kategori === 'gaatur' ? 5 : 4,
-        opacity: 0.85,
-        dashArray: p.kategori === 'gaatur' ? '1 9' : null,
-        lineCap: 'round',
-        lineJoin: 'round'
-      });
-    } else {
-      const latlng = [f.geometry.coordinates[1], f.geometry.coordinates[0]];
-      layer = L.circleMarker(latlng, {
-        radius: p.favoritt ? 8 : 6,
-        color: PAPIR,
-        weight: p.favoritt ? 2 : 1.5,
-        fillColor: info.farge,
-        fillOpacity: p.favoritt ? 1 : 0.78
-      });
-    }
+    return {
+      id: id, f: f, p: p, erLinje: erLinje,
+      punkt: g.type === 'Point' ? { lng: g.coordinates[0], lat: g.coordinates[1] } : null,
+      bbox: bbox(coords)
+    };
+  }
 
-    const o = { id: 'f' + i, f: f, p: p, layer: layer, erLinje: erLinje };
-
-    layer.bindPopup(popupHtml(p, layer.getLatLng ? layer.getLatLng() : null), {
-      closeButton: true, autoPanPadding: [30, 30]
-    });
-    layer.on('click', () => velg(o.id, false));
-    if (layer.bindTooltip && !erLinje) {
-      layer.bindTooltip(p.navn, { direction: 'top', offset: [0, -8], opacity: 0.95 });
-    }
-
-    return o;
+  function oppslagFraId(id) {
+    return state.oppslag.find(x => x.id === id);
   }
 
   /* ---------- filtrering ---------- */
@@ -300,8 +372,7 @@ function start(DATA_NAVN, DATA_URL) {
   function tegn() {
     const vis = synlige();
 
-    lag.clearLayers();
-    vis.forEach(o => lag.addLayer(o.layer));
+    filtrerKart(vis);
 
     const antSteder = vis.filter(o => !o.erLinje).length;
     const antLinjer = vis.length - antSteder;
@@ -317,6 +388,7 @@ function start(DATA_NAVN, DATA_URL) {
     if (state.valgtId && !vis.some(o => o.id === state.valgtId)) {
       state.valgtId = null;
       el.ruteKort.hidden = true;
+      popup.remove();
     }
   }
 
@@ -382,19 +454,20 @@ function start(DATA_NAVN, DATA_URL) {
   /* ---------- valg ---------- */
 
   function velg(id, flyTil) {
-    const o = state.oppslag.find(x => x.id === id);
+    const o = oppslagFraId(id);
     if (!o) return;
     state.valgtId = id;
 
-    if (o.erLinje && o.layer.getBounds) {
-      if (flyTil) kart.flyToBounds(o.layer.getBounds(), { padding: [70, 70], maxZoom: 16, duration: 0.6 });
+    if (o.erLinje) {
+      popup.remove();
+      if (flyTil) kart.fitBounds(o.bbox, { padding: 70, maxZoom: 15, duration: 600 });
       visRuteKort(o);
     } else {
       el.ruteKort.hidden = true;
-      if (flyTil && o.layer.getLatLng) {
-        kart.flyTo(o.layer.getLatLng(), Math.max(kart.getZoom(), 14), { duration: 0.6 });
+      if (flyTil && o.punkt) {
+        kart.flyTo({ center: o.punkt, zoom: Math.max(kart.getZoom(), 13), duration: 600 });
       }
-      o.layer.openPopup();
+      if (o.punkt) aapnePopup(o, o.punkt);
     }
 
     tegnListe(synlige());
@@ -494,7 +567,7 @@ function start(DATA_NAVN, DATA_URL) {
 
     // senter er [lengdegrad, breddegrad], som i resten av GeoJSON
     const senter = Array.isArray(meta.senter) && meta.senter.length === 2 ? meta.senter : [0, 20];
-    kart.setView([senter[1], senter[0]], typeof meta.zoom === 'number' ? meta.zoom : 12);
+    kart.jumpTo({ center: senter, zoom: typeof meta.zoom === 'number' ? meta.zoom : 11 });
   }
 
   /* ---------- last data ---------- */
@@ -526,8 +599,16 @@ function start(DATA_NAVN, DATA_URL) {
       byggFiltre();
       tegn();
 
-      const alle = L.featureGroup(state.oppslag.map(o => o.layer));
-      if (state.oppslag.length) kart.fitBounds(alle.getBounds(), { padding: [50, 50] });
+      if (state.oppslag.length) {
+        kart.fitBounds(bbox(state.oppslag.flatMap(o => [o.bbox.slice(0, 2), o.bbox.slice(2)])),
+          { padding: 50, duration: 0 });
+      }
+
+      // Lista virker uavhengig av kartet; lagene legges på når stilen er lastet.
+      kartKlar.then(() => {
+        leggTilKartlag(gj);
+        filtrerKart(synlige());
+      });
 
       el.fotTekst.innerHTML = 'Rediger <code>' + esc(DATA_NAVN) + '</code> for å legge til steder.' +
         (meta.oppdatert ? ' Sist oppdatert ' + esc(meta.oppdatert) + '.' : '');
