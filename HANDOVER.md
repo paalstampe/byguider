@@ -160,12 +160,18 @@ jobben. Nærmer seg en guidebok.
 ## 6. Teknisk retning
 
 - **MapLibre GL JS** (v5, fra unpkg) for kartet. Krever WebGL.
-- Kartstil: **CARTO Voyager** vektor (`basemaps.cartocdn.com/gl/voyager-gl-style/style.json`).
-  Attribusjonen kommer fra stilen.
-- Hele byens GeoJSON er én kilde (`steder`) med tre lag: `punkter` (circle),
-  `gater` og `gaaturer` (line). Filtrering er `setFilter` på en liste med synlige id-er.
+- Kartstil: **CARTO Voyager** vektor (`basemaps.cartocdn.com/gl/voyager-gl-style/style.json`),
+  omfarget ved lasting til papirpaletten (`KARTPALETT` + `STILREGLER` i `app.js`; reglene matcher
+  Voyagers lag-id-er med regex, første treff vinner). `building-top` er slått av (ga mørk
+  skyggekant på høy zoom). Attribusjonen kommer fra stilen.
+- To kilder: `steder` (punkter, klynger t.o.m. zoom 12, radius 14 px) med lagene `klynger`,
+  `klyngetall` og `punkter` (symbol med kategoriikon), og `ruter` med `gater` og `gaaturer`.
+  Filtrering bytter ut kildedataene (`setData`), slik at klyngene følger filtrene.
+- Kategoriikonene tegnes på lerret ved oppstart: farget sirkel, papirkant, hvit glyf fra `IKONER`
+  (SVG-stier i 24×24). Favoritter vises større.
 - Kategorifargene ligger i `KATEGORIER` og oversettes til et `match`-uttrykk.
-- Clustering vurderes først når punktantallet vokser.
+- Klyngetallet bruker CARTOs egen skriftstabel (`KARTSKRIFT`); andre skrifter finnes ikke
+  på glyph-serveren.
 - Ingen byggesteg, ingen rammeverk. Statiske filer.
 
 Praktisk: `fetch()` blokkeres når sidene åpnes fra `file://`.
@@ -202,8 +208,9 @@ Cloudflare Pages er et alternativ hvis CDN-hastighet blir viktig.
 - `app.js` starter seg selv: stubben laster den med `data-by="<id>"`; den henter fonter,
   `style.css` og MapLibre, bygger sidebaren (malen `SKALL`), slår opp byen i `byer.json`
   og laster datafila. Stier regnes relativt til `app.js`, så appen tåler å ligge i en undermappe.
-- Kategorifargene ligger i `KATEGORIER` øverst i `app.js`. Ny kategori = én linje der;
-  filterknappen lages automatisk, og bare kategorier som finnes i dataene vises.
+- Kategoriene ligger i `KATEGORIER` øverst i `app.js`: navn, farge og ikon (nøkkel i `IKONER`).
+  Ny kategori = én linje der (pluss evt. ny glyf i `IKONER`); filterknappen lages automatisk,
+  og bare kategorier som finnes i dataene vises. Ukjent kategori får grå prikk-ikon.
 - Sonefiltrene bygges fra `metadata.soner` + sonene i dataene, og skjules når byen ikke har soner.
 - Lista grupperes på sone (når byen har soner), favoritter først, så alfabetisk.
 - Popup lenker videre til Google Maps — på `place_id` når det finnes, ellers på koordinat.
@@ -316,6 +323,9 @@ Hvert trinn skal kunne committes for seg og fungere alene.
 
 ### 10.5 Etterpå
 
-- Landingsside på `stam.pe` som lenker til byguidene.
-- Tilpass kartstilen til papirpaletten.
-- Kartfunksjoner: avkryssing av besøkte steder, egne ikoner per kategori, klynging.
+- ~~Landingsside på `stam.pe` som lenker til byguidene.~~ Finnes allerede i `paalstampe.github.io`.
+- ~~Tilpass kartstilen til papirpaletten.~~ Gjort (grenen `kartstil`).
+- ~~Egne ikoner per kategori, klynging.~~ Gjort (grenen `kartstil`).
+- Avkryssing av besøkte steder: valgt bort foreløpig — `besokt` redigeres i dataene.
+- Neste: Pål kommer med forslag til kategorier. Deretter data, inkl. å rette opp de to
+  eksempel-linjene.

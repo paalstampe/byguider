@@ -4,28 +4,103 @@
    data-by="<id>". Filen henter selv inn fonter, stilark og kartbibliotek,
    bygger siden, slår opp byen i byer.json og laster byens GeoJSON.
 
-   Kartet tegnes med MapLibre GL JS. Hele GeoJSON-filen er én kilde med ett
-   circle-lag for punkter og to line-lag for gater og gåturer; filtrering er
-   setFilter på lagene. Sidebar, søk og liste snakker aldri med kartet direkte.
+   Kartet tegnes med MapLibre GL JS på CARTO Voyager, omfarget til papirpaletten
+   (KARTPALETT). Steder ligger i en klyngende kilde (steder) med kategoriikoner,
+   gater og gåturer i en egen kilde (ruter). Filtrering bytter ut dataene i begge
+   kildene, slik at klyngene regnes ut på nytt. Sidebar, søk og liste snakker aldri
+   med kartet direkte.
 
    Data og presentasjon er adskilt: steder, soner, startvisning og titler ligger
    i GeoJSON-filen (features + metadata). Koden inneholder ingenting byspesifikt.
    Ny kategori krever ett oppslag i KATEGORIER under, pluss ingenting annet —
    filterknappen lages automatisk. */
 
+/* Hver kategori har navn, farge og ikon (nøkkel i IKONER). Farger og ikoner
+   er felles for alle byer: en café ser lik ut i London og Nice. */
 const KATEGORIER = {
-  nabolag:    { navn: 'Nabolag',    farge: '#8A5A2B' },
-  cafe:       { navn: 'Café',       farge: '#A9713F' },
-  bakeri:     { navn: 'Bakeri',     farge: '#C08A4E' },
-  restaurant: { navn: 'Restaurant', farge: '#9E4A3C' },
-  bar:        { navn: 'Bar',        farge: '#6E4A6B' },
-  butikk:     { navn: 'Butikk',     farge: '#4F6B7A' },
-  marked:     { navn: 'Marked',     farge: '#7A6A2B' },
-  park:       { navn: 'Park',       farge: '#5C7A4F' },
-  galleri:    { navn: 'Galleri',    farge: '#3F5A6B' },
+  nabolag:    { navn: 'Nabolag',    farge: '#8A5A2B', ikon: 'hus' },
+  cafe:       { navn: 'Café',       farge: '#A9713F', ikon: 'kopp' },
+  bakeri:     { navn: 'Bakeri',     farge: '#C08A4E', ikon: 'brod' },
+  restaurant: { navn: 'Restaurant', farge: '#9E4A3C', ikon: 'bestikk' },
+  bar:        { navn: 'Bar',        farge: '#6E4A6B', ikon: 'glass' },
+  butikk:     { navn: 'Butikk',     farge: '#4F6B7A', ikon: 'pose' },
+  marked:     { navn: 'Marked',     farge: '#7A6A2B', ikon: 'bod' },
+  park:       { navn: 'Park',       farge: '#5C7A4F', ikon: 'tre' },
+  galleri:    { navn: 'Galleri',    farge: '#3F5A6B', ikon: 'ramme' },
   gate:       { navn: 'Gate',       farge: '#8A5A2B' },
   gaatur:     { navn: 'Gåtur',      farge: '#9E4A3C' }
 };
+
+/* Ikonglyfer: SVG-stier i et 24×24-rutenett, tegnet som hvite streker i en farget
+   sirkel. Ny glyf = én linje her + ikon-nøkkelen på kategorien. */
+const IKONER = {
+  hus:     'M4 11.5 12 5l8 6.5 M6.5 10v8.5h11V10 M10.5 18.5V14h3v4.5',
+  kopp:    'M5 10h11v4a4.5 4.5 0 0 1-4.5 4.5h-2A4.5 4.5 0 0 1 5 14z M16 11h1.5a2.2 2.2 0 0 1 0 4.4H16 M8.5 4.5v2.5 M12.5 4.5v2.5',
+  brod:    'M4 17v-3.5a8 5.5 0 0 1 16 0V17z M9 10.5l1 2.5 M12 9.5v3 M15 10.5l-1 2.5',
+  bestikk: 'M6.5 4v5 M9 4v5 M11.5 4v5 M6.5 9a2.5 2.5 0 0 0 5 0 M9 11.5V20 M17.5 20V4c-2 1.5-3 4-3 8h3',
+  glass:   'M5 5h14l-7 8z M12 13v6.5 M8.5 19.5h7',
+  pose:    'M5.5 8.5h13l-1 11.5h-11z M9 11V7.5a3 3 0 0 1 6 0V11',
+  bod:     'M4 9.5 5.5 5h13L20 9.5 M4 9.5a2.67 2.2 0 0 0 5.33 0 2.67 2.2 0 0 0 5.34 0 2.67 2.2 0 0 0 5.33 0 M5.5 12v7.5h13V12',
+  tre:     'M12 21v-5 M12 3l5.5 7H15l3.5 5.5h-13L9 10H6.5z',
+  ramme:   'M4.5 5.5h15v13h-15z M4.5 15.5l4.5-4.5 4 4 2.5-2.5 4 4 M15 8.5a1.2 1.2 0 1 0 0.01 0',
+  prikk:   'M9 12a3 3 0 1 0 6 0a3 3 0 1 0-6 0'
+};
+
+/* Kartstilen: CARTO Voyager omfarget til papirpaletten fra style.css.
+   Reglene matcher lag-id-er i Voyager-stilen; første treff vinner. */
+const KARTPALETT = {
+  bakgrunn:    '#EFEADF',
+  park:        '#D6DFCB',
+  vann:        '#B9C9CE',
+  bygg:        '#EAE3D5',
+  byggKant:    '#DCD2C0',
+  vei:         '#FFFDF8',
+  veiKant:     '#DCD2C0',
+  storVei:     '#FAF3E3',
+  storVeiKant: '#D4C4A8',
+  sti:         '#CDBFA8',
+  bane:        '#D3C9B8',
+  grense:      '#D3C5B0',
+  tekst:       '#4A3F33',
+  tekstDempet: '#6B5D4A',
+  veinavn:     '#8A7B66',
+  vannTekst:   '#5E7A82',
+  husnummer:   '#B3A38A'
+};
+
+const STILREGLER = (P => [
+  [/^background$/,            { 'background-color': P.bakgrunn }],
+  [/^landuse_residential$/,   { 'fill-opacity': 0 }],
+  [/^(landcover|landuse|park_)/, { 'fill-color': P.park,
+                                'fill-opacity': ['interpolate', ['linear'], ['zoom'], 8, 0.35, 12, 0.8, 15, 1] }],
+  [/^water(_shadow)?$/,       { 'fill-color': P.vann }],
+  [/^waterway$/,              { 'line-color': P.vann }],
+  [/^building$/,              { 'fill-color': P.bygg, 'fill-outline-color': P.byggKant }],
+  [/^aeroway/,                { 'line-color': P.veiKant }],
+  [/^boundary/,               { 'line-color': P.grense }],
+  [/(mot|trunk)_case/,        { 'line-color': P.storVeiKant }],
+  [/(mot|trunk)_fill/,        { 'line-color': P.storVei }],
+  [/_case/,                   { 'line-color': P.veiKant }],
+  [/_fill/,                   { 'line-color': P.vei }],
+  [/_path$/,                  { 'line-color': P.sti }],
+  [/rail$/,                   { 'line-color': P.bane }],
+  [/rail_dash$/,              { 'line-color': P.bakgrunn }],
+  [/^water(name|way_label)/,  { 'text-color': P.vannTekst, 'text-halo-color': P.bakgrunn }],
+  [/^place_(city|capital|town|continent|country)/,
+                              { 'text-color': P.tekst, 'text-halo-color': P.bakgrunn, 'icon-color': P.tekst }],
+  [/^place_/,                 { 'text-color': P.tekstDempet, 'text-halo-color': P.bakgrunn, 'icon-color': P.tekstDempet }],
+  [/^poi_/,                   { 'text-color': P.tekstDempet, 'text-halo-color': P.bakgrunn }],
+  [/^roadname/,               { 'text-color': P.veinavn, 'text-halo-color': P.vei }],
+  [/^housenumber$/,           { 'text-color': P.husnummer, 'text-halo-color': P.bakgrunn }]
+])(KARTPALETT);
+
+/* Lag i Voyager som slås av. building-top er en forskjøvet kopi av bygningene
+   som gir en mørk «skyggekant» på høy zoom. */
+const SKJULTE_LAG = [/^building-top$/];
+
+/* Skriften CARTO-stilen selv bruker til bynavn — kun disse finnes på glyph-serveren. */
+const KARTSKRIFT = ['Montserrat Medium', 'Open Sans Bold', 'Noto Sans Regular',
+  'HanWangHeiLight Regular', 'NanumBarunGothic Regular'];
 
 const PAPIR = '#F7F4EE';
 
@@ -206,8 +281,8 @@ function start(DATA_NAVN, DATA_URL) {
 
   const kartKlar = new Promise(res => kart.once('load', res));
 
-  const popup = new maplibregl.Popup({ closeButton: true, focusAfterOpen: false, maxWidth: '300px', offset: 10, className: 'pop' });
-  const tips = new maplibregl.Popup({ closeButton: false, closeOnClick: false, offset: 10, className: 'tips' });
+  const popup = new maplibregl.Popup({ closeButton: true, focusAfterOpen: false, maxWidth: '300px', offset: 15, className: 'pop' });
+  const tips = new maplibregl.Popup({ closeButton: false, closeOnClick: false, offset: 15, className: 'tips' });
 
   /* Farger defineres étt sted — KATEGORIER — og oversettes til et match-uttrykk. */
   const FARGE = ['match', ['get', 'kategori']]
@@ -218,44 +293,146 @@ function start(DATA_NAVN, DATA_URL) {
 
   const KARTLAG = {
     gater: {
+      source: 'ruter',
       type: 'line',
-      filter: ['all', ['==', ['geometry-type'], 'LineString'], ['!=', ['get', 'kategori'], 'gaatur']],
+      filter: ['!=', ['get', 'kategori'], 'gaatur'],
       layout: { 'line-cap': 'round', 'line-join': 'round' },
       paint: { 'line-color': FARGE, 'line-width': 4, 'line-opacity': 0.85 }
     },
     gaaturer: {
+      source: 'ruter',
       type: 'line',
-      filter: ['all', ['==', ['geometry-type'], 'LineString'], ['==', ['get', 'kategori'], 'gaatur']],
+      filter: ['==', ['get', 'kategori'], 'gaatur'],
       layout: { 'line-cap': 'round', 'line-join': 'round' },
       paint: { 'line-color': FARGE, 'line-width': 5, 'line-opacity': 0.85, 'line-dasharray': [0.2, 1.8] }
     },
-    punkter: {
+    klynger: {
+      source: 'steder',
       type: 'circle',
-      filter: ['==', ['geometry-type'], 'Point'],
+      filter: ['has', 'point_count'],
       paint: {
-        'circle-color': FARGE,
-        'circle-radius': ['case', FAV, 7, 5.25],
-        'circle-opacity': ['case', FAV, 1, 0.78],
-        'circle-stroke-color': PAPIR,
-        'circle-stroke-width': ['case', FAV, 2, 1.5]
+        'circle-color': KARTPALETT.vei,
+        'circle-radius': ['step', ['get', 'point_count'], 14, 10, 17, 25, 20],
+        'circle-stroke-color': '#8A5A2B',
+        'circle-stroke-width': 1.5
+      }
+    },
+    klyngetall: {
+      source: 'steder',
+      type: 'symbol',
+      filter: ['has', 'point_count'],
+      layout: {
+        'text-field': ['get', 'point_count_abbreviated'],
+        'text-font': KARTSKRIFT,
+        'text-size': 12,
+        'text-allow-overlap': true
+      },
+      paint: { 'text-color': '#241F19' }
+    },
+    punkter: {
+      source: 'steder',
+      type: 'symbol',
+      filter: ['!', ['has', 'point_count']],
+      layout: {
+        'icon-image': ['coalesce', ['image', ['concat', 'ikon-', ['get', 'kategori']]], ['image', 'ikon-ukjent']],
+        'icon-size': ['interpolate', ['linear'], ['zoom'],
+          10, ['case', FAV, 0.95, 0.8],
+          14, ['case', FAV, 1.15, 0.95]],
+        'icon-allow-overlap': true,
+        'icon-ignore-placement': true,
+        'symbol-sort-key': ['case', FAV, 1, 0]
       }
     }
   };
 
-  function leggTilKartlag(gj) {
-    kart.addSource('steder', { type: 'geojson', data: gj });
+  const KLIKKBARE = ['gater', 'gaaturer', 'punkter'];
+
+  /* Tegner ett ikon per kategori til et lerret: farget sirkel, papirkant, hvit glyf. */
+  function lagIkon(farge, glyf) {
+    const R = 2, D = 26 * R;
+    const c = document.createElement('canvas');
+    c.width = c.height = D;
+    const x = c.getContext('2d');
+    x.beginPath();
+    x.arc(D / 2, D / 2, D / 2 - 1.5 * R, 0, 2 * Math.PI);
+    x.fillStyle = farge;
+    x.fill();
+    x.lineWidth = 1.5 * R;
+    x.strokeStyle = PAPIR;
+    x.stroke();
+    const s = (15 * R) / 24;
+    x.translate(D / 2 - 12 * s, D / 2 - 12 * s);
+    x.scale(s, s);
+    x.lineWidth = 2.2;
+    x.lineCap = 'round';
+    x.lineJoin = 'round';
+    x.strokeStyle = '#FFFDF8';
+    x.stroke(new Path2D(glyf));
+    return x.getImageData(0, 0, D, D);
+  }
+
+  function registrerIkoner() {
+    Object.keys(KATEGORIER).forEach(k => {
+      const kat = KATEGORIER[k];
+      if (kat.ikon) kart.addImage('ikon-' + k, lagIkon(kat.farge, IKONER[kat.ikon] || IKONER.prikk), { pixelRatio: 2 });
+    });
+    kart.addImage('ikon-ukjent', lagIkon(UKJENT_FARGE, IKONER.prikk), { pixelRatio: 2 });
+  }
+
+  function tilpassKartstil() {
+    kart.getStyle().layers.forEach(l => {
+      if (SKJULTE_LAG.some(r => r.test(l.id))) {
+        kart.setLayoutProperty(l.id, 'visibility', 'none');
+        return;
+      }
+      const regel = STILREGLER.find(([r]) => r.test(l.id));
+      if (!regel) return;
+      Object.keys(regel[1]).forEach(egenskap => {
+        try { kart.setPaintProperty(l.id, egenskap, regel[1][egenskap]); }
+        catch (e) { /* egenskapen finnes ikke for denne lagtypen — hopp over */ }
+      });
+    });
+  }
+
+  const tomSamling = () => ({ type: 'FeatureCollection', features: [] });
+
+  function leggTilKartlag() {
+    tilpassKartstil();
+    registrerIkoner();
+
+    kart.addSource('ruter', { type: 'geojson', data: tomSamling() });
+    kart.addSource('steder', {
+      type: 'geojson',
+      data: tomSamling(),
+      cluster: true,
+      clusterMaxZoom: 12,
+      clusterRadius: 14      // klynger bare der ikonene ellers ville overlappe
+    });
+
     Object.keys(KARTLAG).forEach(id => {
-      kart.addLayer(Object.assign({ id: id, source: 'steder' }, KARTLAG[id]));
+      kart.addLayer(Object.assign({ id: id }, KARTLAG[id]));
+    });
+
+    KLIKKBARE.concat('klynger').forEach(id => {
       kart.on('mouseenter', id, () => { kart.getCanvas().style.cursor = 'pointer'; });
       kart.on('mouseleave', id, () => { kart.getCanvas().style.cursor = ''; });
+    });
+
+    KLIKKBARE.forEach(id => {
       kart.on('click', id, e => {
         // Punkter ligger over linjer: klikk på et punkt skal ikke også velge linjen under.
-        if (id !== 'punkter' && kart.queryRenderedFeatures(e.point, { layers: ['punkter'] }).length) return;
+        if (id !== 'punkter' && kart.queryRenderedFeatures(e.point, { layers: ['punkter', 'klynger'] }).length) return;
         const o = oppslagFraId(e.features[0].properties._id);
         if (!o) return;
         velg(o.id, false);
         if (o.erLinje) aapnePopup(o, e.lngLat);
       });
+    });
+
+    kart.on('click', 'klynger', async e => {
+      const f = e.features[0];
+      const zoom = await kart.getSource('steder').getClusterExpansionZoom(f.properties.cluster_id);
+      kart.easeTo({ center: f.geometry.coordinates, zoom: zoom + 0.5, duration: 500 });
     });
 
     kart.on('mousemove', 'punkter', e => {
@@ -265,10 +442,13 @@ function start(DATA_NAVN, DATA_URL) {
     kart.on('mouseleave', 'punkter', () => tips.remove());
   }
 
+  /* Filtrering bytter ut dataene, slik at klyngene regnes ut fra det som vises. */
   function filtrerKart(vis) {
-    if (!kart.getLayer('punkter')) return;
-    const ider = ['in', ['get', '_id'], ['literal', vis.map(o => o.id)]];
-    Object.keys(KARTLAG).forEach(id => kart.setFilter(id, ['all', KARTLAG[id].filter, ider]));
+    if (!kart.getSource('steder')) return;
+    const punkter = vis.filter(o => !o.erLinje).map(o => o.f);
+    const linjer = vis.filter(o => o.erLinje).map(o => o.f);
+    kart.getSource('steder').setData({ type: 'FeatureCollection', features: punkter });
+    kart.getSource('ruter').setData({ type: 'FeatureCollection', features: linjer });
   }
 
   function aapnePopup(o, lngLat) {
@@ -611,7 +791,7 @@ function start(DATA_NAVN, DATA_URL) {
 
       // Lista virker uavhengig av kartet; lagene legges på når stilen er lastet.
       kartKlar.then(() => {
-        leggTilKartlag(gj);
+        leggTilKartlag();
         filtrerKart(synlige());
       });
 
