@@ -100,9 +100,11 @@ Fine dining
 ### Bistrot d'Antoine
 - sted: 43.69639, 7.27618
 
-### Peixes / Cave de Peixes
+### Peixes
 - sted: 43.69602, 7.27105
-Cave de Peixes ligger i Rue Catherine Ségurane.
+
+### Cave de Peixes
+- sted: 43.69975, 7.28114
 
 ### Olive & Artichaut
 - sted: 43.69650, 7.27600
@@ -121,8 +123,16 @@ Cave de Peixes ligger i Rue Catherine Ségurane.
 
 ## Caféer
 
-### La Popote d'Ondine
+### La Popote d'Ondine – Rue Blacas
 - sted: 43.69962, 7.27091
+Lunsj
+
+### La Popote d'Ondine – Rue Gioffredo
+- sted: 43.70148, 7.27591
+Lunsj
+
+### La Popote d'Ondine – Passage Émile Négrin
+- sted: 43.69851, 7.26866
 Lunsj
 
 ### Pinpin
@@ -137,17 +147,30 @@ Lunsj
 - sted: 43.69723, 7.27784
 Lunsj
 
-### Gray
+### Clay – Rue Bonaparte
+- sted: 43.70062, 7.28169
+Lunsj
+
+### Clay – Rue Gioffredo
+- sted: 43.69862, 7.27168
 Lunsj
 
 ### Maranna
 - sted: 43.69665, 7.27716
 Lunsj
 
-### Ginette
+### Ginette – Rue Pastorelli
 - sted: 43.70017, 7.26917
 Lunsj
 
-### Le Country Store
+### Ginette – Rue Meyerbeer
+- sted: 43.69608, 7.26062
+Lunsj
+
+### Le Country Store – Rue de l'Hôtel des Postes
 - sted: 43.69935, 7.27119
+Kaffe
+
+### Le Country Store – Rue du Maréchal Joffre
+- sted: 43.69793, 7.26173
 Kaffe
