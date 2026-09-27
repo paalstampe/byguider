@@ -296,8 +296,14 @@ const SKALL = `
       <input type="search" id="sok" class="sok" placeholder="Søk etter navn eller notat" autocomplete="off" aria-label="Søk">
     </div>
     <div class="filtre">
-      <div class="filtergruppe" id="filter-sone" aria-label="Filtrer på sone"></div>
-      <div class="filtergruppe" id="filter-kategori" aria-label="Filtrer på kategori"></div>
+      <div class="filterblokk">
+        <p class="filter-etikett" id="etikett-sone">Område</p>
+        <div class="filtergruppe" id="filter-sone" aria-labelledby="etikett-sone"></div>
+      </div>
+      <div class="filterblokk">
+        <p class="filter-etikett" id="etikett-kategori">Kategori</p>
+        <div class="filtergruppe" id="filter-kategori" aria-labelledby="etikett-kategori"></div>
+      </div>
       <div class="filtergruppe filtergruppe--smal" id="filter-status"></div>
     </div>
     <div class="teller-rad">
@@ -926,8 +932,9 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
   function byggGruppe(beholder, verdier, set, navnFor, fargeFor) {
     beholder.innerHTML = '';
-    if (verdier.length < 2) { beholder.hidden = true; return; }
-    beholder.hidden = false;
+    const blokk = beholder.closest('.filterblokk') || beholder;
+    blokk.hidden = verdier.length < 2;
+    if (blokk.hidden) return;
     beholder.appendChild(lagChip('Alle', null, set.size === 0, () => velgEn(set, null)));
     verdier.forEach(v => {
       beholder.appendChild(lagChip(navnFor(v), fargeFor ? fargeFor(v) : null, set.has(v), () => velgEn(set, v)));
