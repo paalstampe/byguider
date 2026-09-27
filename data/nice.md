@@ -123,7 +123,7 @@ Fine dining
 
 ## Caféer
 
-### La Popote d'Ondine – Rue Blacas
+### La Popote d'Ondine – Rue Blacas ★
 - sted: 43.69962, 7.27091
 Lunsj
 
@@ -143,8 +143,9 @@ Lunsj
 - sted: 43.69910, 7.27316
 Lunsj
 
-### Banh Mei
-- sted: 43.69723, 7.27784
+### Deli Banh Mi ★
+- sted: 43.69968, 7.27109
+- google: https://maps.app.goo.gl/zydAnmCh2w2fdMh97
 Lunsj
 
 ### Clay – Rue Bonaparte
