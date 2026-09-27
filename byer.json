@@ -1,6 +1,10 @@
 {
   "byer": [
     { "id": "london", "navn": "London", "land": "Storbritannia", "data": "data/london.geojson",
-      "beskrivelse": "Gater, torg og strøk verdt en omvei — med noen ruter å gå dem på." }
+      "beskrivelse": "Gater, torg og strøk verdt en omvei — med noen ruter å gå dem på." },
+    { "id": "nice", "navn": "Nice", "land": "Frankrike", "data": "data/nice.geojson",
+      "beskrivelse": "Under arbeid." },
+    { "id": "oslo", "navn": "Oslo", "land": "Norge", "data": "data/oslo.geojson",
+      "beskrivelse": "Under arbeid." }
   ]
 }

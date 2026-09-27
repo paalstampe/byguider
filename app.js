@@ -398,7 +398,9 @@ function start(DATA_NAVN, DATA_URL) {
     if (!vis.length) {
       const t = document.createElement('p');
       t.className = 'tomt';
-      t.textContent = 'Ingen treff. Juster filtrene eller søket.';
+      t.textContent = state.oppslag.length
+        ? 'Ingen treff. Juster filtrene eller søket.'
+        : 'Ingen steder lagt inn ennå.';
       el.liste.appendChild(t);
       return;
     }
@@ -533,6 +535,7 @@ function start(DATA_NAVN, DATA_URL) {
 
     // status
     el.fStatus.innerHTML = '';
+    el.fStatus.hidden = !state.oppslag.length;
     el.fStatus.appendChild(lagChip('Kun favoritter', null, state.kunFavoritter, () => {
       state.kunFavoritter = !state.kunFavoritter;
       byggFiltre();
