@@ -30,12 +30,12 @@ const KATEGORIER = {
 const PAPIR = '#F7F4EE';
 
 /* CARTO-nøkkel (gratis, https://carto.com/basemaps/apikey). Kravet gjelder foreløpig
-   rasterkartene, men nøkkelen sendes med på vektorstilen også. Domenerestriksjonen
-   styres i CARTOs dashbord: uten tillatt opphav svarer CARTO 403 og kartet blir blankt. */
+   bare rasterkartene. Vektorstilen avviser i dag forespørsler MED ?key= (svaret mangler
+   CORS-header, og kartet blir blankt), så nøkkelen sendes ikke med på stilen ennå.
+   Den ligger her til CARTO slår på nøkkelkravet for vektor — da legges den på KARTSTIL. */
 const CARTO_KEY = 'cb1_400i_1_fd049a8bd96268b9a1be2213';
 
-const KARTSTIL = 'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json'
-  + (CARTO_KEY ? '?key=' + CARTO_KEY : '');
+const KARTSTIL = 'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json';
 
 const UKJENT_FARGE = '#6B5D4A';
 
@@ -204,7 +204,7 @@ function start(DATA_NAVN, DATA_URL) {
 
   const kartKlar = new Promise(res => kart.once('load', res));
 
-  const popup = new maplibregl.Popup({ closeButton: true, maxWidth: '300px', offset: 10, className: 'pop' });
+  const popup = new maplibregl.Popup({ closeButton: true, focusAfterOpen: false, maxWidth: '300px', offset: 10, className: 'pop' });
   const tips = new maplibregl.Popup({ closeButton: false, closeOnClick: false, offset: 10, className: 'tips' });
 
   /* Farger defineres étt sted — KATEGORIER — og oversettes til et match-uttrykk. */

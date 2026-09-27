@@ -34,8 +34,8 @@ Ferdig på `multi-by` (4 commits, ikke flettet inn i `main` ennå), jf. punkt 10
 
 Testet i headless Chromium mot attrapper av kartbibliotekene (CDN-ene var ikke
 nåbare fra testmiljøet): lasting, filtre, søk, valg fra liste og kart, popup,
-rutekort, tomme byer og forsiden. **Ikke visuelt verifisert mot ekte MapLibre og
-CARTO-stil ennå** — gjøres i nettleser før fletting (se punkt 8).
+rutekort, tomme byer og forsiden. Visuelt verifisert 27.9. mot ekte MapLibre og CARTO via
+raw.githack.com: London med markører, gåtur, rutekort og popup ser ut som før.
 
 Gjenstår ellers:
 
@@ -215,7 +215,9 @@ Cloudflare Pages er et alternativ hvis CDN-hastighet blir viktig.
 - Popup lenker videre til Google Maps — på `place_id` når det finnes, ellers på koordinat.
 - Lista virker selv om kartet ikke laster (f.eks. CARTO 403); lagene legges på når stilen er klar.
 - Zoom i MapLibre er én lavere enn Leaflet for samme utsnitt. `metadata.zoom` for London er 11.
-- CARTO-nøkkelen ligger som `CARTO_KEY` øverst i `app.js` og sendes med på stil-URL-en.
+- CARTO-nøkkelen ligger som `CARTO_KEY` øverst i `app.js`, men sendes **ikke** med på
+  stil-URL-en: `style.json?key=…` feiler i dag (svar uten CORS-header → blankt kart), mens
+  URL-en uten nøkkel svarer 200. Når CARTO aktiverer nøkkelkravet på vektor, må dette testes på nytt.
   Domenerestriksjonen i CARTOs dashbord er **midlertidig slått av**, fordi `localhost`
   ikke godtas som tillatt opphav. Slå den på igjen (punkt 8.3). Uten tillatt opphav
   svarer CARTO 403 og kartet blir blankt — det er ikke en kodefeil.
