@@ -26,7 +26,7 @@ const PAPIR = '#F7F4EE';
 /* CARTO krever API-nøkkel på rasterkartene siden august 2026. Nøkkelen er gratis
    og hentes på https://carto.com/basemaps/apikey — lim den inn her.
    Står den tom, tegnes kartet fortsatt, men med "API KEY REQUIRED"-vannmerke. */
-const CARTO_KEY = '';
+const CARTO_KEY = 'cb1_400i_1_fd049a8bd96268b9a1be2213';
 
 /* ---------- tilstand ---------- */
 
@@ -62,12 +62,11 @@ const el = {
 const kart = L.map('kart', { zoomControl: true, attributionControl: true })
   .setView([51.5105, -0.1235], 12);
 
-const CARTO_URL = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png'
+const CARTO_URL = 'https://basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png'
   + (CARTO_KEY ? '?key=' + CARTO_KEY : '');
 
 L.tileLayer(CARTO_URL, {
   maxZoom: 19,
-  subdomains: 'abcd',
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &middot; &copy; <a href="https://carto.com/attributions">CARTO</a>'
 }).addTo(kart);
 
