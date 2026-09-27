@@ -1,18 +1,24 @@
-# Påls London
+# Påls byguider
 
-Interaktivt kart over nabolag, gater, gåturer og steder i London.
+Interaktive kart over nabolag, gater, gåturer og steder — London, Nice og Oslo.
 
-Publisert: https://paalstampe.github.io/nabolag-london/
+Publisert: https://paalstampe.github.io/byguider/
 
 ## Struktur
 
 ```
-nabolag-london/
-├── index.html          struktur: kartcontainer, sidebar, filtre
+byguider/
+├── index.html          forside: lista over byer (fra byer.json)
+├── app.js              all logikk: laster byens GeoJSON, tegner på MapLibre, filtrerer
 ├── style.css           alt visuelt: farger, typografi, kort
-├── app.js              logikk: henter GeoJSON, tegner på Leaflet, filtrerer
+├── byer.json           manifest over byene
+├── london/index.html   stubb per by — laster ../app.js med data-by="london"
+├── nice/index.html
+├── oslo/index.html
 ├── data/
-│   └── nabolag-london.geojson  dataene — dette er "databasen"
+│   ├── london.geojson  dataene — dette er "databasen", én fil per by
+│   ├── nice.geojson
+│   └── oslo.geojson
 ├── arkiv/              tidligere versjoner, ikke i bruk
 ├── HANDOVER.md         statusdokument
 └── README.md
@@ -31,18 +37,27 @@ Hvert sted er en GeoJSON-`Feature`:
 |---|---|
 | `navn` | visningsnavn |
 | `kategori` | nabolag, cafe, bakeri, restaurant, bar, butikk, marked, park, galleri, gate, gaatur |
-| `sone` | Central, North, South, East, West |
+| `sone` | byens soner (valgfritt), f.eks. Central, North, South, East, West i London |
 | `favoritt` | true / false |
 | `besokt` | true / false |
 | `notat` | fritekst |
 | `place_id` | Google Place ID (valgfritt, for dyplenking) |
 | `lengde_km`, `varighet_min` | kun for gåturer |
 
+`metadata` i hver fil: `tittel`, `kicker`, `undertittel`, `senter` (`[lengdegrad, breddegrad]`),
+`zoom` (MapLibre-skala), `soner` (rekkefølge; tom = ingen sonefilter), `oppdatert`.
+
 Nye felter kan legges til fritt — koden ignorerer det den ikke kjenner.
+
+## Ny by
+
+1. Legg til en linje i `byer.json`.
+2. Lag `data/<by>.geojson` med `metadata` utfylt (kopier `data/oslo.geojson`).
+3. Kopier `london/index.html` til `<by>/index.html` og bytt `data-by`.
 
 ## Redigering
 
-- **Punkter og tekst:** rediger `data/nabolag-london.geojson` direkte, eller på GitHub i nettleseren.
+- **Punkter og tekst:** rediger `data/<by>.geojson` direkte, eller på GitHub i nettleseren.
 - **Gater og gåturer:** bruk [geojson.io](https://geojson.io) — dra inn filen, tegn med linjeverktøyet, last ned igjen.
 
 ## Lokal kjøring
@@ -50,11 +65,11 @@ Nye felter kan legges til fritt — koden ignorerer det den ikke kjenner.
 `fetch()` blokkeres ved åpning fra `file://`. Kjør i stedet:
 
 ```
-cd nabolag-london
+cd byguider
 python3 -m http.server
 ```
 
-og åpne `http://localhost:8000`.
+og åpne `http://localhost:8000` (forside) eller `http://localhost:8000/london/`.
 
 ## Publisering
 

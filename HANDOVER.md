@@ -1,15 +1,15 @@
-# Nabolag London — overlevering
+# Byguider — overlevering
 
 Statusdokument for å ta prosjektet videre i en Cowork-økt.
-Sist oppdatert: 20. september 2026 (appen er bygget og publisert).
+Sist oppdatert: 27. september 2026 (flerbys-arkitektur og MapLibre ferdig på grenen `multi-by`).
 
 ---
 
 ## 1. Målet
 
-En enkel nettbasert app som viser Påls London-nabolag på kart, med flere kategorier
-(caféer, parker, butikker, markeder, gallerier) og markerte gater og gåturer.
-Skal kunne deles med andre via lenke, uten at mottaker må logge inn noe sted.
+En enkel nettbasert app som viser Påls byer — London først, så Nice og Oslo — på kart,
+med nabolag, steder i flere kategorier (caféer, parker, butikker, markeder, gallerier)
+og markerte gater og gåturer. Skal kunne deles via lenke uten innlogging.
 
 Todelt strategi:
 
@@ -21,25 +21,23 @@ Todelt strategi:
 
 ## 2. Hvor prosjektet står
 
-Ferdig:
+Ferdig på `main` (publisert):
 
-- Datamodellen er definert og `data/nabolag-london.geojson` er fylt med 44 nabolag,
-  pluss tre eksempelpunkter (park, café, galleri) og to eksempel-linjer
-  (én gate, én gåtur). Eksemplene er merket `EKSEMPEL` i `notat`-feltet.
-- `README.md` dokumenterer datamodellen.
-- Tre visuelle retninger er tegnet som artboards. **Retning A er valgt.**
+- London-appen i retning A med Leaflet og CARTO-rasterfliser.
 
-- `index.html`, `style.css` og `app.js` er bygget i retning A og testet:
-  49 features tegnes, filtre på sone/kategori/favoritt virker, søk virker,
-  gåtur-kortet virker, ingen konsollfeil, ingen horisontal scroll på mobil.
-- Gammel prototype `london-map_1.html` er flyttet til `arkiv/`.
-  Duplikatet `london.geojson` i rotmappen er slettet — `data/nabolag-london.geojson` er fasit.
+Ferdig på `multi-by` (4 commits, ikke flettet inn i `main` ennå), jf. punkt 10:
 
-- Repoet `paalstampe/nabolag-london` (omdøpt fra `London` i september 2026) er publisert via GitHub Pages:
-  https://paalstampe.github.io/nabolag-london/ (Deploy from a branch, `main` / `(root)`).
-  Den gamle adressen `…github.io/London/` virker ikke lenger.
+1. `71cdfdd` Datadrevet app — soner, senter, zoom og titler fra `metadata`.
+2. `055dfef` Flerbys-struktur — `byer.json`, forside, stubber, `data/london.geojson`.
+3. `4eb6b97` Leaflet → MapLibre GL JS med CARTO Voyager vektorstil.
+4. `852089e` Nice og Oslo som tomme byer.
 
-Gjenstår:
+Testet i headless Chromium mot attrapper av kartbibliotekene (CDN-ene var ikke
+nåbare fra testmiljøet): lasting, filtre, søk, valg fra liste og kart, popup,
+rutekort, tomme byer og forsiden. **Ikke visuelt verifisert mot ekte MapLibre og
+CARTO-stil ennå** — gjøres i nettleser før fletting (se punkt 8).
+
+Gjenstår ellers:
 
 - Finjustering av koordinatene i de to eksempel-linjene (grove skisser).
 - Eventuelt KML-eksport for My Maps-sporet.
@@ -48,25 +46,31 @@ Gjenstår:
 
 ## 3. Filer
 
-Arbeidskatalogen er den lokale klonen av repoet:
-`/Users/palstampe/Documents/GitHub/nabolag-london/`.
-Dette er eneste gjeldende kopi. Tidligere kopier i `~/Downloads/london-nabolag/`
-og `Documents/Privat/Prosjekter/Nabolag London/` er utgått.
+Arbeidskatalogen er den lokale klonen av repoet `paalstampe/byguider`:
+`/Users/palstampe/Documents/GitHub/byguider/`. Dette er eneste gjeldende kopi.
 
 ```
-nabolag-london/
-├── index.html                      ← ferdig, retning A
-├── style.css                       ← ferdig
-├── app.js                          ← ferdig
+byguider/
+├── index.html              forside: lista over byer, bygges fra byer.json
+├── app.js                  all logikk — én kopi for alle byer
+├── style.css               all styling — én kopi
+├── byer.json               manifest: id, navn, land, datafil, beskrivelse
+├── london/index.html       stubb: <script src="../app.js" data-by="london">
+├── nice/index.html
+├── oslo/index.html
 ├── data/
-│   └── nabolag-london.geojson      ← ferdig
+│   ├── london.geojson
+│   ├── nice.geojson        tom, metadata utfylt
+│   └── oslo.geojson        tom, metadata utfylt
 ├── arkiv/
-│   └── london-map_1.html           ← gammel prototype, ikke i bruk
-├── Tips til nabolag i London.md    ← råmateriale, kilden til dataene
-├── .gitignore
+│   └── london-map_1.html   gammel prototype, ikke i bruk
+├── Tips til nabolag i London.md   råmateriale, kilden til London-dataene
 ├── README.md
-└── HANDOVER.md                     ← dette dokumentet
+└── HANDOVER.md             dette dokumentet
 ```
+
+Ny by = én linje i `byer.json`, én GeoJSON-fil med `metadata`, én stubbmappe
+(kopier `london/index.html` og bytt `data-by`).
 
 Designretningene ligger som artboards her:
 https://claude.ai/artifact/StKKz6su1kLPBVyy4bZ9NN
@@ -76,7 +80,7 @@ https://claude.ai/artifact/StKKz6su1kLPBVyy4bZ9NN
 
 ## 4. Datamodellen
 
-Hele datasettet er én GeoJSON `FeatureCollection`. Punkter er steder,
+Hver by er én GeoJSON `FeatureCollection` i `data/<by>.geojson`. Punkter er steder,
 `LineString` er gater og gåturer.
 
 Koordinatrekkefølge er `[lengdegrad, breddegrad]` — motsatt av Google Maps.
@@ -88,12 +92,25 @@ Dette er den vanligste feilkilden ved manuell redigering.
 |---|---|
 | `navn` | visningsnavn |
 | `kategori` | nabolag, cafe, bakeri, restaurant, bar, butikk, marked, park, galleri, gate, gaatur |
-| `sone` | Central, North, South, East, West |
+| `sone` | byens soner, f.eks. Central/North/South/East/West i London (valgfritt) |
 | `favoritt` | true / false |
 | `besokt` | true / false |
 | `notat` | fritekst |
 | `place_id` | Google Place ID, valgfritt |
 | `lengde_km`, `varighet_min` | kun gåturer |
+
+`metadata` per fil styrer det byspesifikke:
+
+| felt | verdi |
+|---|---|
+| `tittel`, `kicker`, `undertittel` | tekstene øverst i sidebaren; `tittel` blir også sidetittel |
+| `senter` | startkoordinat, `[lengdegrad, breddegrad]` |
+| `zoom` | startzoom i MapLibre-skala (én lavere enn Leaflet/Google for samme utsnitt) |
+| `soner` | rekkefølgen på sonefiltrene; tom liste = ingen sonefilter |
+| `oppdatert` | vises nederst i sidebaren |
+
+Har byen steder, zoomes kartet uansett til å vise alle ved oppstart; `senter`/`zoom`
+brukes når fila er tom.
 
 Prinsippet: data og presentasjon er adskilt. Nye steder legges inn i GeoJSON-filen
 uten at koden røres; nytt design endres i CSS uten at dataene røres. Ny kategori
@@ -146,69 +163,70 @@ jobben. Nærmer seg en guidebok.
 
 ## 6. Teknisk retning
 
-- **Leaflet** for kartet. Gratis, ingen API-nøkkel.
-- Kartfliser: **CARTO Positron** eller **Voyager** — vesentlig penere enn standard
-  OSM og lar papirpaletten dominere. Husk attribusjonskravet.
-- Kategorier styrer markørfarge og -ikon. Gåturer som polyline med popup.
+- **MapLibre GL JS** (v5, fra unpkg) for kartet. Krever WebGL.
+- Kartstil: **CARTO Voyager** vektor (`basemaps.cartocdn.com/gl/voyager-gl-style/style.json`).
+  Attribusjonen kommer fra stilen.
+- Hele byens GeoJSON er én kilde (`steder`) med tre lag: `punkter` (circle),
+  `gater` og `gaaturer` (line). Filtrering er `setFilter` på en liste med synlige id-er.
+- Kategorifargene ligger i `KATEGORIER` og oversettes til et `match`-uttrykk.
 - Clustering vurderes først når punktantallet vokser.
-- Ingen byggesteg, ingen rammeverk. Fire statiske filer.
+- Ingen byggesteg, ingen rammeverk. Statiske filer.
 
-Praktisk: `fetch()` blokkeres når `index.html` åpnes fra `file://`.
-Kjør `python3 -m http.server` i mappen og åpne `localhost:8000`.
+Praktisk: `fetch()` blokkeres når sidene åpnes fra `file://`.
+Kjør `python3 -m http.server` i `byguider/` og åpne `localhost:8000/london/`.
 
 ---
 
 ## 7. Publisering — GitHub Pages
 
-Netlify har fortsatt gratisplan, men den er lagt om til kreditter (300/mnd,
-nettstedet pauses når de er brukt opp). GitHub Pages har ingen slik måler og
-er valgt. Cloudflare Pages er et godt alternativ hvis CDN-hastighet blir viktig.
+Repoet `paalstampe/byguider` publiseres med Settings → Pages → Deploy from a branch →
+`main` / `(root)`. Adresser:
 
-1. Opprett konto på github.com. Brukernavnet inngår i URL-en.
-2. New repository → `nabolag-london` → **Public** (Pages på privat repo krever betalt plan).
-3. Add file → Upload files. GeoJSON legges på `data/nabolag-london.geojson` — skriv stien
-   i filnavnfeltet, så lages mappen.
-4. Settings → Pages → Deploy from a branch → `main` / `(root)` → Save.
-5. Live etter ett–to minutter på `https://paalstampe.github.io/nabolag-london/`.
-6. Egen adresse: CNAME-record i DNS + domenet under Settings → Pages.
+- `https://paalstampe.github.io/byguider/` (forside) — evt. `stam.pe/byguider/`
+- `…/byguider/london/`, `…/byguider/nice/`, `…/byguider/oslo/`
 
-Senere endringer gjøres i nettleseren: klikk filen, blyantikon, rediger, commit.
-Live etter cirka 30 sekunder.
+GitHub videresender git-trafikk fra det gamle repo-navnet, men **ikke** Pages-adressen:
+`…/nabolag-london/` slutter å virke. Netlify er vurdert og valgt bort (kredittmåler).
+Cloudflare Pages er et alternativ hvis CDN-hastighet blir viktig.
 
 ---
 
 ## 8. Neste steg
 
-1. ~~Flytt mappen inn i prosjektmappen.~~ Gjort.
-2. ~~Bygg `index.html`, `style.css` og `app.js`.~~ Gjort.
-3. ~~Opprett repo og publiser.~~ Gjort — `paalstampe/nabolag-london`, live på `stam.pe/nabolag-london/`.
-4. **Konverter til flerbys-arkitektur og MapLibre.** Se punkt 10. Dette er nå hovedoppgaven.
-5. Rett opp koordinatene i de to eksempel-linjene i geojson.io.
-6. Fyll på data: caféer, bakerier, parker, butikker, markeder, gallerier.
+1. **Verifiser `multi-by` visuelt** i nettleser: forsiden, London (markører, gater,
+   gåturer, popup, hover-navn, rutekort, filtre), Nice og Oslo (tomme, riktig utsnitt).
+   Ferdigkriteriet for MapLibre-byttet er at kartet ser ut som før.
+2. Flett `multi-by` inn i `main`.
+3. **Slå på domenerestriksjonen i CARTO igjen**: `stam.pe`, `*.stam.pe`, `paalstampe.github.io`.
+4. Rett opp koordinatene i de to eksempel-linjene i geojson.io.
+5. Fyll på data: London, Nice, Oslo.
+6. Punkt 10.5: landingsside på `stam.pe`, kartstil mot papirpaletten, kartfunksjoner.
 7. Vurder KML-eksport for My Maps-sporet.
 
 ## 9. Notater om implementasjonen
 
+- `app.js` starter seg selv: stubben laster den med `data-by="<id>"`; den henter fonter,
+  `style.css` og MapLibre, bygger sidebaren (malen `SKALL`), slår opp byen i `byer.json`
+  og laster datafila. Stier regnes relativt til `app.js`, så appen tåler å ligge i en undermappe.
 - Kategorifargene ligger i `KATEGORIER` øverst i `app.js`. Ny kategori = én linje der;
-  filterknappen lages automatisk, og bare kategorier som faktisk finnes i dataene vises.
-- Sonefiltrene leses også ut av dataene, så listen holder seg selv i synk.
-- Listen grupperes på sone, favoritter først, så alfabetisk.
+  filterknappen lages automatisk, og bare kategorier som finnes i dataene vises.
+- Sonefiltrene bygges fra `metadata.soner` + sonene i dataene, og skjules når byen ikke har soner.
+- Lista grupperes på sone (når byen har soner), favoritter først, så alfabetisk.
 - Popup lenker videre til Google Maps — på `place_id` når det finnes, ellers på koordinat.
-- Kartfliser: CARTO Voyager. Bytt URL-en i `app.js` til `.../light_all/...` for Positron.
-- Leaflet lastes fra unpkg. Ingen API-nøkkel, ingen byggesteg.
-- CARTO-nøkkelen ligger som `CARTO_KEY` øverst i `app.js`. Domenerestriksjonen i
-  CARTOs dashbord er **midlertidig slått av** under arbeidet med `byguider`, fordi
-  `localhost` ikke godtas som tillatt opphav (feltet krever et vertsnavn med punktum).
-  **Slå den på igjen når konverteringen er landet**, med `stam.pe`, `*.stam.pe` og
-  `paalstampe.github.io`. Uten tillatt opphav svarer CARTO 403 på hver tile og kartet
-  blir blankt — det er ikke en kodefeil.
-- `{r}` i tile-URL-en gir `@2x`-fliser på retina. Fjernes den, blir stedsnavn uskarpe.
+- Lista virker selv om kartet ikke laster (f.eks. CARTO 403); lagene legges på når stilen er klar.
+- Zoom i MapLibre er én lavere enn Leaflet for samme utsnitt. `metadata.zoom` for London er 11.
+- CARTO-nøkkelen ligger som `CARTO_KEY` øverst i `app.js` og sendes med på stil-URL-en.
+  Domenerestriksjonen i CARTOs dashbord er **midlertidig slått av**, fordi `localhost`
+  ikke godtas som tillatt opphav. Slå den på igjen (punkt 8.3). Uten tillatt opphav
+  svarer CARTO 403 og kartet blir blankt — det er ikke en kodefeil.
 
 ---
 
 ## 10. Spesifikasjon: flerbys-arkitektur og MapLibre
 
 Besluttet 27. september 2026. Utføres på grenen `multi-by`.
+
+**Status: trinn 1–4 er utført og committet (se punkt 2). Gjenstår visuell verifisering og fletting.**
 
 Bakgrunn: oppsettet skal gjenbrukes for Nice og Oslo. Sluttbildet er at `stam.pe`
 lenker til en samleside for byguidene, og at hver by ligger under den. Tre kopier
