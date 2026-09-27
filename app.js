@@ -336,7 +336,7 @@ function start(DATA_NAVN, DATA_URL) {
       layout: {
         'icon-image': ['coalesce', ['image', ['concat', 'ikon-', ['get', 'kategori']]], ['image', 'ikon-ukjent']],
         'icon-size': ['interpolate', ['linear'], ['zoom'],
-          10, ['case', FAV, 0.85, 0.7],
+          10, ['case', FAV, 0.95, 0.8],
           14, ['case', FAV, 1.15, 0.95]],
         'icon-allow-overlap': true,
         'icon-ignore-placement': true,
@@ -406,7 +406,7 @@ function start(DATA_NAVN, DATA_URL) {
       data: tomSamling(),
       cluster: true,
       clusterMaxZoom: 12,
-      clusterRadius: 36
+      clusterRadius: 14      // klynger bare der ikonene ellers ville overlappe
     });
 
     Object.keys(KARTLAG).forEach(id => {
