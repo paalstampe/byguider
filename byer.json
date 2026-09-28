@@ -2,6 +2,6 @@
   "byer": [
     {"id": "london", "navn": "London", "land": "Storbritannia", "data": "data/london.md", "geometri": "data/london-geometri.geojson", "beskrivelse": "Gater, torg og strøk verdt en omvei — med noen ruter å gå dem på."},
     {"id": "nice", "navn": "Nice", "land": "Frankrike", "data": "data/nice.md", "geometri": "data/nice-geometri.geojson", "beskrivelse": "Under arbeid."},
-    {"id": "oslo", "navn": "Oslo", "land": "Norge", "data": "data/oslo.md", "geometri": "data/oslo-geometri.geojson", "beskrivelse": "Kommer.", "status": "kommer"}
+    {"id": "oslo", "navn": "Oslo", "land": "Norge", "data": "data/oslo.md", "geometri": "data/oslo-geometri.geojson", "beskrivelse": "Restauranter — flere kategorier kommer."}
   ]
 }
