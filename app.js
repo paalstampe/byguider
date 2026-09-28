@@ -701,6 +701,12 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       return 'https://www.google.com/maps/search/?api=1&query=' +
         encodeURIComponent(p.navn) + '&query_place_id=' + encodeURIComponent(p.place_id);
     }
+    // Steder uten Place ID: søk på navnet ved koordinaten, så Google viser stedets side.
+    // Nabolag og gåturer er ikke steder i Googles forstand — der brukes koordinaten.
+    if (latlng && p.kategori !== 'nabolag' && p.kategori !== 'gaatur') {
+      return 'https://www.google.com/maps/search/' + encodeURIComponent(p.navn.split(' – ')[0]) +
+        '/@' + latlng.lat + ',' + latlng.lng + ',18z';
+    }
     if (latlng) {
       return 'https://www.google.com/maps/search/?api=1&query=' + latlng.lat + ',' + latlng.lng;
     }
