@@ -16,7 +16,8 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
   ### Navn ★        ett sted. ★ bak navnet = favoritt.
   - sted: 51.5207, -0.1519      breddegrad, lengdegrad — som Google Maps viser det
                                 (høyreklikk i Google Maps og klikk på tallene for å kopiere)
-  - google: <Place ID eller lenke fra Google Maps>   valgfritt
+  - google: <Place ID eller lenke fra Google Maps>   gjør at «Åpne i Google Maps» viser stedets side
+                                (uten: søk på navnet ved koordinaten). Claude kan hente Place ID-er.
   - gater: Gate 1, Gate 2       nabolag: de viktigste gatene
   - lengde: 2,5 km              gåturer
   - varighet: ca. 1 t           gåturer
@@ -158,7 +159,8 @@ Peckham
 ## Muséer og gallerier
 
 ### White Cube Bermondsey
-- sted: 51.4989, -0.0806
+- sted: 51.49938, -0.08232
+- google: ChIJ2SOnxbocdkgRxmoRKRwc49M
 EKSEMPEL — galleri
 
 ## Gåturer
@@ -263,13 +265,15 @@ Devonshire Road
 ## Caféer
 
 ### Hermanos Coffee Roasters
-- sted: 51.4746, -0.2498
+- sted: 51.47348, -0.24855
+- google: ChIJVRbdmE0PdkgRh_lJOXrBqeM
 EKSEMPEL — Barnes. Koordinat er omtrentlig
 
 ## Verdt en omvei
 
 ### WWT London Wetland Centre
-- sted: 51.4856, -0.2412
+- sted: 51.47614, -0.23466
+- google: ChIJnfoSY6wPdkgR69kRGIFCCUU
 EKSEMPEL — viser hvordan en park legges inn
 
 ## Gåturer
