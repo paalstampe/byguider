@@ -33,14 +33,17 @@ og kobles hit på navn: type "område", "gate" eller "rute".
 ### Nespo ★
 - sted: 43.69865, 7.26037
 - google: ChIJh0j648HRzRIR2O7JLHWH22g
+- nettside: https://www.nespo-restaurant.com/
 
 ### Le Bistrot de Jan ★
 - sted: 43.69980, 7.28484
 - google: ChIJ4z-TInPbzRIRTk5V0X5EZ8k
+- nettside: https://janonline.com/
 
 ### Pirouette ★
 - sted: 43.70042, 7.28501
 - google: ChIJB7NnzyHbzRIRtO8fkFwdBl0
+- nettside: http://lesagitateurs.com/pirouette
 
 ### Lavomatique ★
 - sted: 43.69756, 7.27619
@@ -49,41 +52,50 @@ og kobles hit på navn: type "område", "gate" eller "rute".
 ### Jan ★
 - sted: 43.69986, 7.28490
 - google: ChIJ7cguWLjazRIR0sVOtnZhvUM
+- nettside: http://www.restaurantjan.com/
 Fine dining
 
 ### Les Agitateurs ★
 - sted: 43.70052, 7.28435
 - google: ChIJk76xaCnbzRIRZRqji8u5qxc
+- nettside: https://www.lesagitateurs.com/
 Fine dining
 
 ### Épicentre ★
 - sted: 43.69904, 7.28570
 - google: ChIJC-GpTdnbzRIRyzHwhjXfYuU
+- nettside: https://restaurant-epicentre.com/
 Fine dining
 
 ### Tina Trattoria
 - sted: 43.69979, 7.28439
 - google: ChIJRfplVQjbzRIRpBldOM3IXjE
+- nettside: https://tinatrattoria.com/tina-trattoria
 
 ### Noto
 - sted: 43.69562, 7.27049
 - google: ChIJv78aqqrbzRIRv43Z2SPIznE
+- nettside: https://noto-nice.com/
 
 ### Zenirō
 - sted: 43.70151, 7.27940
 - google: ChIJj0UwwrXbzRIR-tCPIbLPlYY
+- nettside: https://www.zenirorestaurants.com/
 
 ### Cagnard
 - sted: 43.70008, 7.28428
 - google: ChIJ6W_m91HbzRIRKRypInZwg5k
+- nettside: https://lesagitateurs.com/cagnard
 
 ### Fine Gueule
 - sted: 43.69605, 7.27188
 - google: ChIJEzRKyqPazRIRJGVgSPuxt5g
+- nettside: http://www.finegueule.fr/
 
 ### La Petite Maison
 - sted: 43.69584, 7.27093
 - google: ChIJU7N6KqLazRIRY837PEcbJAs
+- nettside: https://www.instagram.com/lapetitemaison_nice/
 
 ### Le Bistrot des Serruriers
 - sted: 43.69746, 7.27838
@@ -92,39 +104,48 @@ Fine dining
 ### Apopino
 - sted: 43.69908, 7.26488
 - google: ChIJjW6jy23RzRIR4RXJ6suyNmI
+- nettside: https://www.apopinorestaurant.com/
 
 
 ### Le Séjour
 - sted: 43.69895, 7.26495
 - google: ChIJOWwC_AnQzRIRIC5eAiqAv3k
+- nettside: https://www.sejourcafe.fr/
 
 ### L'antidote
 - sted: 43.69649, 7.26166
 - google: ChIJPUu6AgDRzRIROxpWab1RRxM
+- nettside: https://lantidotenice.fr/
 
 ### Salette
 - sted: 43.70068, 7.28469
 - google: ChIJn3fG3QDbzRIR_18otd8PNn4
+- nettside: https://www.salette-restaurant.fr/
 
 ### Franchin
 - sted: 43.69643, 7.26413
 - google: ChIJE51pigrQzRIR_x_PzrQ_He0
+- nettside: https://www.franchin.net/
 
 ### Bar des Oiseaux
 - sted: 43.69693, 7.27487
 - google: ChIJPbZSQaPazRIRJJ75fBP1XE8
+- nettside: https://www.instagram.com/bar_des_oiseaux_nice
 
 ### Le Comptoir du Marché
 - sted: 43.69748, 7.27497
 - google: ChIJR2xXXaPazRIRkzg4n7-k-sY
+- nettside: http://www.comptoirdumarche.fr/
 
 ### Bistrot d'Antoine
 - sted: 43.69638, 7.27631
 - google: ChIJaSzDzLzazRIRCRtNrjEbXvk
+- nettside: https://www.facebook.com/pages/Le-Bistro-D-Antoine/174404542628277
 
 ### Peixes
 - sted: 43.69603, 7.27102
 - google: ChIJcypl1KPazRIRiHefCSt4GJQ
+- nettside: https://www.peixes.fr/
 
 ### Cave de Peixes
 - sted: 43.69980, 7.28109
@@ -133,48 +154,58 @@ Fine dining
 ### Olive & Artichaut
 - sted: 43.69649, 7.27599
 - google: ChIJpU2cM6PazRIRqHWfuvZTVkI
+- nettside: http://www.oliveartichaut.com/
 
 ### Epiro
 - sted: 43.69479, 7.28668
 - google: ChIJnSboIffbzRIRGRTqpShDsf8
+- nettside: http://www.epironice.com/
 
 ### L'eau de vie
 - sted: 43.70168, 7.27569
 - google: ChIJ8V2bSaXazRIRQW52wdexwdY
+- nettside: https://restaurant-eau-de-vie-nice.fr/
 
 ### Chez Davia
 - sted: 43.69905, 7.26483
 - google: ChIJqTIC_AnQzRIR96POL-9UfMc
+- nettside: https://www.chezdavia.com/
 
 ### Magma
 - sted: 43.70071, 7.28409
 - google: ChIJi8Q6NtnbzRIRU8p6NkexOrk
+- nettside: https://lesagitateurs.com/magma
 
 ## Caféer
 
 ### La Popote d'Ondine – Rue Blacas ★
 - sted: 43.69979, 7.27089
 - google: ChIJabINg9HbzRIRROD1oaTT7vA
+- nettside: https://lapopotedondine.com/
 Lunsj
 
 ### La Popote d'Ondine – Rue Gioffredo
 - sted: 43.70153, 7.27591
 - google: ChIJwxJ4SqXazRIRd0c4_plzmS0
+- nettside: https://lapopotedondine.com/
 Lunsj
 
 ### La Popote d'Ondine – Passage Émile Négrin
 - sted: 43.69845, 7.26870
 - google: ChIJx8vezqTbzRIR5ND4FN-EXSY
+- nettside: https://lapopotedondine.com/
 Lunsj
 
 ### Pinpin
 - sted: 43.70058, 7.28261
 - google: ChIJl9k1H6fbzRIRZbF1UAi8LnM
+- nettside: http://www.pin-pin.fr/
 Lunsj
 
 ### Fino
 - sted: 43.69908, 7.27307
 - google: ChIJN9o6by3bzRIRH5WEZiJf7rk
+- nettside: https://cafefino.fr/
 Lunsj
 
 ### Deli Banh Mi ★
@@ -185,36 +216,43 @@ Lunsj
 ### Clay – Rue Bonaparte
 - sted: 43.70060, 7.28177
 - google: ChIJHfz3ZK7bzRIR0Ymt-Btfx2k
+- nettside: https://leclay.fr/
 Lunsj
 
 ### Clay – Rue Gioffredo
 - sted: 43.69857, 7.27157
 - google: ChIJlTxwUwDbzRIR9Uj9_nHeiGs
+- nettside: https://leclay.fr/
 Lunsj
 
 ### Maranna
 - sted: 43.69637, 7.27671
 - google: ChIJ22rwonPbzRIR_iWefjIZCzI
+- nettside: http://www.maranna.fr/
 Lunsj
 
 ### Ginette – Rue Pastorelli
 - sted: 43.70015, 7.26904
 - google: ChIJ-4rD-9rbzRIRnI_Afje3FGs
+- nettside: https://ginette-cafe-cantine.com/
 Lunsj
 
 ### Ginette – Rue Meyerbeer
 - sted: 43.69600, 7.26057
 - google: ChIJqy2U3F7RzRIRSgGZdc1CqDQ
+- nettside: https://ginette-cafe-cantine.com/
 Lunsj
 
 ### Le Country Store – Rue de l'Hôtel des Postes
 - sted: 43.69931, 7.27110
 - google: ChIJP7LF4bDbzRIRgqpxBoU3f2c
+- nettside: https://www.lecountrystore.com/
 Kaffe
 
 ### Le Country Store – Rue du Maréchal Joffre
 - sted: 43.69790, 7.26174
 - google: ChIJy777N6TRzRIRpCZSiC01waw
+- nettside: https://www.lecountrystore.com/
 Kaffe
 
 ## Barer
@@ -222,4 +260,5 @@ Kaffe
 ### Vibes
 - sted: 43.69924, 7.28381
 - google: ChIJb5hW0yfbzRIRc9OxuKFcR9c
+- nettside: https://www.instagram.com/vibes.bar.nice/
 Cocktailbar
