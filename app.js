@@ -444,8 +444,13 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
   kart.touchZoomRotate.disableRotation();
   kart.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-left');
 
-  /* Tilbake til startvisningen (senter og zoom fra metadata). */
-  let startvisning = null;
+  /* Tilbake til startvisningen: utsnittet med alle stedene, slik siden åpnes
+     (senter og zoom fra metadata når byen ikke har steder ennå). */
+  let startvisning = null, startutsnitt = null;
+  const tilStart = () => {
+    if (startutsnitt) kart.fitBounds(startutsnitt, { padding: 50, duration: 800 });
+    else if (startvisning) kart.flyTo(Object.assign({ duration: 800 }, startvisning));
+  };
   kart.addControl({
     onAdd() {
       const div = document.createElement('div');
@@ -456,7 +461,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       b.title = 'Vis hele byen';
       b.setAttribute('aria-label', 'Vis hele byen');
       b.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/></svg>';
-      b.addEventListener('click', () => { if (startvisning) kart.flyTo(Object.assign({ duration: 800 }, startvisning)); });
+      b.addEventListener('click', tilStart);
       div.appendChild(b);
       return div;
     },
@@ -1048,8 +1053,8 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
       const medBbox = state.oppslag.filter(o => o.bbox);
       if (medBbox.length) {
-        kart.fitBounds(bbox(medBbox.flatMap(o => [o.bbox.slice(0, 2), o.bbox.slice(2)])),
-          { padding: 50, duration: 0 });
+        startutsnitt = bbox(medBbox.flatMap(o => [o.bbox.slice(0, 2), o.bbox.slice(2)]));
+        kart.fitBounds(startutsnitt, { padding: 50, duration: 0 });
       }
 
       // Lista virker uavhengig av kartet; lagene legges på når stilen er lastet.
