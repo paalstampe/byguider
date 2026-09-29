@@ -418,6 +418,14 @@ html, body {
 .maplibregl-ctrl-group button + button { border-top: 1px solid var(--kant); }
 .maplibregl-ctrl-group button:hover { background-color: var(--papir) !important; }
 
+.ktrl-hjem { display: flex; align-items: center; justify-content: center; color: var(--dempet); }
+.ktrl-hjem:hover { color: var(--tekst); }
+
+/* Egen posisjon i aksentfargen */
+.maplibregl-user-location-dot,
+.maplibregl-user-location-dot::before { background-color: var(--aksent); }
+.maplibregl-user-location-accuracy-circle { background-color: rgba(138, 90, 43, 0.12); }
+
 .maplibregl-ctrl-attrib {
   background: rgba(255,253,248,0.88) !important;
   border-top: 1px solid var(--kant-lys);
