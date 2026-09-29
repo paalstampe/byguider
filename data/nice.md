@@ -18,6 +18,7 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
                                 (høyreklikk i Google Maps og klikk på tallene for å kopiere)
   - google: <Place ID eller lenke fra Google Maps>   gjør at «Åpne i Google Maps» viser stedets side
                                 (uten: søk på navnet ved koordinaten). Claude kan hente Place ID-er.
+  - nettside: https://…          stedets egen side — gir lenken «Nettside» i infoboksen
   - gater: Gate 1, Gate 2       nabolag: de viktigste gatene
   - lengde: 2,5 km              gåturer
   - varighet: ca. 1 t           gåturer
@@ -92,9 +93,6 @@ Fine dining
 - sted: 43.69908, 7.26488
 - google: ChIJjW6jy23RzRIR4RXJ6suyNmI
 
-### Pure & V
-- sted: 43.69659, 7.25486
-- google: ChIJbUiThBLQzRIRS_1yfGa4r64
 
 ### Le Séjour
 - sted: 43.69895, 7.26495
@@ -218,3 +216,10 @@ Kaffe
 - sted: 43.69790, 7.26174
 - google: ChIJy777N6TRzRIRpCZSiC01waw
 Kaffe
+
+## Barer
+
+### Vibes
+- sted: 43.69924, 7.28381
+- google: ChIJb5hW0yfbzRIRc9OxuKFcR9c
+Cocktailbar

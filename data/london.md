@@ -18,6 +18,7 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
                                 (høyreklikk i Google Maps og klikk på tallene for å kopiere)
   - google: <Place ID eller lenke fra Google Maps>   gjør at «Åpne i Google Maps» viser stedets side
                                 (uten: søk på navnet ved koordinaten). Claude kan hente Place ID-er.
+  - nettside: https://…          stedets egen side — gir lenken «Nettside» i infoboksen
   - gater: Gate 1, Gate 2       nabolag: de viktigste gatene
   - lengde: 2,5 km              gåturer
   - varighet: ca. 1 t           gåturer
