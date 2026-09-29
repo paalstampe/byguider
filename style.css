@@ -421,10 +421,38 @@ html, body {
 .ktrl-hjem { display: flex; align-items: center; justify-content: center; color: var(--dempet); }
 .ktrl-hjem:hover { color: var(--tekst); }
 
-/* Egen posisjon i aksentfargen */
-.maplibregl-user-location-dot,
-.maplibregl-user-location-dot::before { background-color: var(--aksent); }
-.maplibregl-user-location-accuracy-circle { background-color: rgba(138, 90, 43, 0.12); }
+/* Egen posisjon: blå, som i kartapper ellers — ingen kategori bruker blått,
+   så prikken skiller seg fra stedene. Større enn standard, med hvit kant,
+   skygge og en rolig puls (3,5 s). */
+.maplibregl-user-location-dot.maplibregl-user-location-dot {
+  width: 18px;
+  height: 18px;
+  background-color: #2F6FD0;
+}
+.maplibregl-user-location-dot.maplibregl-user-location-dot::after {
+  width: 24px;
+  height: 24px;
+  border-width: 3px;
+  top: -3px;
+  left: -3px;
+}
+.maplibregl-user-location-dot.maplibregl-user-location-dot::before {
+  width: 18px;
+  height: 18px;
+  background-color: #2F6FD0;
+  animation: egen-posisjon-puls 3.5s ease-out infinite;
+}
+@keyframes egen-posisjon-puls {
+  0%   { transform: scale(1);   opacity: 0.55; }
+  70%  { transform: scale(3.2); opacity: 0; }
+  100% { transform: scale(3.2); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .maplibregl-user-location-dot.maplibregl-user-location-dot::before { animation: none; opacity: 0; }
+}
+.maplibregl-user-location-dot.maplibregl-user-location-dot-stale { background-color: #8A96A8; }
+.maplibregl-user-location-dot.maplibregl-user-location-dot-stale::before { display: none; }
+.maplibregl-user-location-accuracy-circle { background-color: rgba(47, 111, 208, 0.10); }
 
 .maplibregl-ctrl-attrib {
   background: rgba(255,253,248,0.88) !important;
