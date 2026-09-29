@@ -162,6 +162,7 @@ Peckham
 ### White Cube Bermondsey
 - sted: 51.49938, -0.08232
 - google: ChIJ2SOnxbocdkgRxmoRKRwc49M
+- nettside: https://whitecube.com/
 EKSEMPEL — galleri
 
 ## Gåturer
@@ -268,6 +269,7 @@ Devonshire Road
 ### Hermanos Coffee Roasters
 - sted: 51.47348, -0.24855
 - google: ChIJVRbdmE0PdkgRh_lJOXrBqeM
+- nettside: http://www.hermanoscoffeeroasters.com/
 EKSEMPEL — Barnes. Koordinat er omtrentlig
 
 ## Verdt en omvei
@@ -275,6 +277,7 @@ EKSEMPEL — Barnes. Koordinat er omtrentlig
 ### WWT London Wetland Centre
 - sted: 51.47614, -0.23466
 - google: ChIJnfoSY6wPdkgR69kRGIFCCUU
+- nettside: https://www.wwt.org.uk/wetland-centres/london/
 EKSEMPEL — viser hvordan en park legges inn
 
 ## Gåturer

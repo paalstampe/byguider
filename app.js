@@ -161,7 +161,7 @@ function lesKoordinat(tekst) {
   return m ? [parseFloat(m[2]), parseFloat(m[1])] : null;
 }
 
-const FELT = ['sted', 'besokt', 'google', 'gater', 'lengde', 'varighet'];  // besokt leses, men vises ikke
+const FELT = ['sted', 'besokt', 'google', 'nettside', 'gater', 'lengde', 'varighet'];  // besokt leses, men vises ikke
 
 function lesMarkdown(tekst) {
   const linjer = String(tekst).replace(/\r/g, '').replace(/<!--[\s\S]*?-->/g, '').split('\n');
@@ -233,6 +233,7 @@ function byggFeatures(md, geo) {
       notat: st.notat,
       place_id: /^https?:/.test(google) ? '' : google,
       google_url: /^https?:/.test(google) ? google : '',
+      nettside: /^https?:\/\//.test(st.felt.nettside || '') ? st.felt.nettside : '',
       gater: (st.felt.gater || '').split(',').map(x => x.trim()).filter(Boolean),
       lengde: st.felt.lengde || '',
       varighet: st.felt.varighet || ''
@@ -442,6 +443,40 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
   });
   kart.touchZoomRotate.disableRotation();
   kart.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-left');
+
+  /* Tilbake til startvisningen: utsnittet med alle stedene, slik siden åpnes
+     (senter og zoom fra metadata når byen ikke har steder ennå). */
+  let startvisning = null, startutsnitt = null;
+  const tilStart = () => {
+    if (startutsnitt) kart.fitBounds(startutsnitt, { padding: 50, duration: 800 });
+    else if (startvisning) kart.flyTo(Object.assign({ duration: 800 }, startvisning));
+  };
+  kart.addControl({
+    onAdd() {
+      const div = document.createElement('div');
+      div.className = 'maplibregl-ctrl maplibregl-ctrl-group';
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'ktrl-hjem';
+      b.title = 'Vis hele byen';
+      b.setAttribute('aria-label', 'Vis hele byen');
+      b.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/></svg>';
+      b.addEventListener('click', tilStart);
+      div.appendChild(b);
+      return div;
+    },
+    onRemove() {}
+  }, 'top-left');
+
+  /* Egen posisjon: sentrerer kartet og følger posisjonen til knappen trykkes igjen. */
+  if ('geolocation' in navigator) {
+    kart.addControl(new maplibregl.GeolocateControl({
+      positionOptions: { enableHighAccuracy: true },
+      fitBoundsOptions: { maxZoom: 16 },
+      trackUserLocation: true,
+      showAccuracyCircle: true
+    }), 'top-left');
+  }
 
   const kartKlar = new Promise(res => kart.once('load', res));
 
@@ -711,7 +746,8 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     const lenke = mapsLenke(p, latlng);
     const lenker = [
       id ? '<button type="button" class="pop-lenke pop-zoom" data-id="' + esc(id) + '">Zoom inn</button>' : '',
-      lenke ? '<a class="pop-lenke" href="' + lenke + '" target="_blank" rel="noopener">Åpne i Google Maps</a>' : ''
+      lenke ? '<a class="pop-lenke" href="' + lenke + '" target="_blank" rel="noopener">Åpne i Google Maps</a>' : '',
+      p.nettside ? '<a class="pop-lenke" href="' + esc(p.nettside) + '" target="_blank" rel="noopener">Nettside</a>' : ''
     ].filter(Boolean);
     return '<h3 class="pop-navn">' + esc(p.navn) + '</h3>' +
       '<p class="pop-meta">' + esc(metaLinje(p) || ruteMeta(p)) + '</p>' +
@@ -972,7 +1008,8 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
     // senter er [lengdegrad, breddegrad], som i resten av GeoJSON
     const senter = Array.isArray(meta.senter) && meta.senter.length === 2 ? meta.senter : [0, 20];
-    kart.jumpTo({ center: senter, zoom: typeof meta.zoom === 'number' ? meta.zoom : 11 });
+    startvisning = { center: senter, zoom: typeof meta.zoom === 'number' ? meta.zoom : 11 };
+    kart.jumpTo(startvisning);
   }
 
   /* ---------- last data ---------- */
@@ -1016,8 +1053,8 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
       const medBbox = state.oppslag.filter(o => o.bbox);
       if (medBbox.length) {
-        kart.fitBounds(bbox(medBbox.flatMap(o => [o.bbox.slice(0, 2), o.bbox.slice(2)])),
-          { padding: 50, duration: 0 });
+        startutsnitt = bbox(medBbox.flatMap(o => [o.bbox.slice(0, 2), o.bbox.slice(2)]));
+        kart.fitBounds(startutsnitt, { padding: 50, duration: 0 });
       }
 
       // Lista virker uavhengig av kartet; lagene legges på når stilen er lastet.
