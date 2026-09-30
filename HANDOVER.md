@@ -378,5 +378,7 @@ Hvert trinn skal kunne committes for seg og fungere alene.
   lapp på første trykk, iOS svelget klikket, og popupen kom på andre trykk oppå lappen. Popupen
   fjerner alltid lappen. Egen posisjon: med «Reduser bevegelse» slått på (vanlig på mobil) var
   pulsen helt av; nå en stillestående glorie som toner inn og ut.
+- Liste → kart på mobil (grenen `liste-til-kart`, 30.9.): trykk i lista (≤ 900 px) blar opp til
+  kartet med infoboksen/rutekortet åpen, som i Reiseplanlegging.
 - Neste: data. Pål kommer med navneendringer (som Marylebone High Street → Marylebone Village)
   og nye steder; områdeskisser tegnes etter hvert. Eksempelstedene er merket EKSEMPEL.
