@@ -16,6 +16,8 @@ Hold HANDOVER.md oppdatert når noe vesentlig endres (punkt 2, 8 og 10.5).
 - Kodeendringer (app.js, style.css, index.html, stubber) på egen gren. Push grenen, og oppgi
   forhåndsvisningen: https://stam.pe/byguider/forhandsvisning/<gren>/london/ (klar 1–2 min etter push,
   bygges av .github/workflows/pages.yml). Pål sjekker den på mobil og desktop før fletting.
+- Sjekk designet selv før du oppgir forhåndsvisningen: .claude/skjermbilde.sh <url> <fil.png> 390 844
+  (mobil) og 1300 900 (desktop); legg til «hel» for hele siden. Bare https://stam.pe/... er tillatt.
 - Åpne PR mot main når Pål er fornøyd, eller når han ber om det. Flett bare når han sier det.
 - GitHub sletter grenen automatisk ved fletting. Sjekk bare at den er borte (git ls-remote --heads origin);
   slett den selv bare hvis den likevel ligger igjen.
