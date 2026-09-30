@@ -652,6 +652,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
   const popup = new maplibregl.Popup({ closeButton: true, focusAfterOpen: false, maxWidth: '300px', offset: 15, className: 'pop' });
   const tips = new maplibregl.Popup({ closeButton: false, closeOnClick: false, offset: 15, className: 'tips' });
   const ekteHover = window.matchMedia('(hover: hover) and (pointer: fine)');
+  const smalSkjerm = window.matchMedia('(max-width: 900px)');   // samme brytepunkt som i style.css
   popup.on('open', () => tips.remove());   // aldri navnelapp og popup oppå hverandre
 
   /* Farger defineres étt sted — KATEGORIER — og oversettes til et match-uttrykk. */
@@ -1102,6 +1103,12 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
     // Lista markerer valget, men blar ikke — man blir værende i kartet.
     tegnListe(synlige());
+
+    // Mobil: kartet ligger over lista. Valg fra lista hopper opp til kartet, med infoboksen
+    // (eller rutekortet) åpen — som i Reiseplanlegging.
+    if (flyTil && smalSkjerm.matches) {
+      document.querySelector('.kartflate').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 
   function nullstillValg() {
