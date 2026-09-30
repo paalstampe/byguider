@@ -3,7 +3,7 @@ tittel: Påls Nice
 undertittel: Restauranter, caféer og steder verdt en omvei.
 senter: 43.6990, 7.2620
 zoom: 13
-oppdatert: 2026-09-27
+oppdatert: 2026-09-30
 ---
 
 <!--
@@ -12,7 +12,7 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
   # Sone            overskrift 1: Central, North … Rekkefølgen her blir rekkefølgen i appen.
                     Byer uten soner: dropp #-overskriftene.
   ## Kategori       Nabolag og gater · Restauranter · Caféer · Barer · Muséer og gallerier ·
-                    Butikker · Verdt en omvei · Gåturer
+                    Butikker · Hoteller · Strender og beach clubs · Verdt en omvei · Gåturer
   ### Navn ★        ett sted. ★ bak navnet = favoritt.
   - sted: 51.5207, -0.1519      breddegrad, lengdegrad — som Google Maps viser det
                                 (høyreklikk i Google Maps og klikk på tallene for å kopiere)
@@ -22,6 +22,7 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
   - gater: Gate 1, Gate 2       nabolag: de viktigste gatene
   - lengde: 2,5 km              gåturer
   - varighet: ca. 1 t           gåturer
+  - utenfor: ja                 holder stedet utenfor utsnittet kartet åpner med (og «Vis hele byen»)
   Fri tekst under feltene blir notatet. Første avsnitt vises i lista, alt i popupen.
 
 Områdeskisser, gater og gåturer tegnes i nice-geometri.geojson (f.eks. i geojson.io)
@@ -38,7 +39,7 @@ og kobles hit på navn: type "område", "gate" eller "rute".
 ### Le Bistrot de Jan ★
 - sted: 43.69980, 7.28484
 - google: ChIJ4z-TInPbzRIRTk5V0X5EZ8k
-- nettside: https://janonline.com/
+- nettside: https://janonline.com/le-bistrot-de-jan/
 
 ### Pirouette ★
 - sted: 43.70042, 7.28501
@@ -156,11 +157,6 @@ Fine dining
 - google: ChIJpU2cM6PazRIRqHWfuvZTVkI
 - nettside: http://www.oliveartichaut.com/
 
-### Epiro
-- sted: 43.69479, 7.28668
-- google: ChIJnSboIffbzRIRGRTqpShDsf8
-- nettside: http://www.epironice.com/
-
 ### L'eau de vie
 - sted: 43.70168, 7.27569
 - google: ChIJ8V2bSaXazRIRQW52wdexwdY
@@ -211,6 +207,7 @@ Lunsj
 ### Deli Banh Mi ★
 - sted: 43.69967, 7.27109
 - google: ChIJTdc4QRPbzRIRH8b-ttMUugw
+- nettside: https://delicity.com/deli-banh-mi-nice
 Lunsj
 
 ### Clay – Rue Bonaparte
@@ -262,3 +259,89 @@ Kaffe
 - google: ChIJb5hW0yfbzRIRc9OxuKFcR9c
 - nettside: https://www.instagram.com/vibes.bar.nice/
 Cocktailbar
+
+## Muséer og gallerier
+
+### Musée Matisse
+- sted: 43.71952, 7.27588
+- google: ChIJnz74K1DFzRIRiRaLt2c5MhA
+- nettside: https://www.musee-matisse-nice.org/en/
+- utenfor: ja
+
+## Butikker
+
+### Café du Cycliste
+- sted: 43.69639, 7.28621
+- google: ChIJe7daQ7_azRIRisFL66Jl5u8
+- nettside: https://www.cafeducycliste.com/
+Sykkelklær og café
+
+### Trésors Publics
+- sted: 43.69633, 7.27601
+- google: ChIJpShtU6PazRIRHyPKaG4RDEk
+- nettside: http://www.tresorspublics.com/
+
+## Hoteller
+
+### Hôtel du Couvent
+- sted: 43.69718, 7.27884
+- google: ChIJfUqOdgXPzRIR-8aYHCo-Qxw
+- nettside: https://www.marriott.com/en-us/hotels/ncehc-hotel-du-couvent-a-luxury-collection-hotel-nice-france/overview/
+
+### Hôtel Amour
+- sted: 43.69740, 7.25537
+- google: ChIJ7SvucQDRzRIRzEKI0M7xHss
+- nettside: https://hotelamourparis.fr/hotel-amour-nice/
+
+### Le Negresco
+- sted: 43.69455, 7.25833
+- google: ChIJtzA17YPRzRIR5Lu8Yh7BihA
+- nettside: https://www.lenegresco.com/
+
+## Strender og beach clubs
+
+### Negresco Beach Club
+- sted: 43.69389, 7.25850
+- google: ChIJz3DOU-nRzRIRjvVHAYgygds
+- nettside: https://www.lenegresco.com/la-plage
+Beach club
+
+### Hôtel Amour Plage
+- sted: 43.69332, 7.25600
+- google: ChIJwcsVMIjRzRIRVB11QajIGEw
+- nettside: https://hotelamourparis.fr/hotel-amour-plage/
+Beach club
+
+### Plage de la Fosse
+- sted: 43.68671, 7.33612
+- google: ChIJ4SY2c2nbzRIRV_-gwV4myCE
+- utenfor: ja
+Strand, Saint-Jean-Cap-Ferrat
+
+### Anjuna Beach
+- sted: 43.71941, 7.35279
+- google: ChIJVVWumljDzRIRWb_ka6he5QA
+- nettside: https://www.anjuna-beach.com/
+- utenfor: ja
+Beach club, Èze-sur-Mer
+
+## Verdt en omvei
+
+### Marché de la Libération
+- sted: 43.70958, 7.26198
+- google: ChIJHwn6DwHQzRIRZSeaT5GiGks
+Matmarked
+
+## Gåturer
+
+### Kyststien fra Coco Beach til Villefranche-sur-Mer
+- lengde: ca. 5 km
+- varighet: ca. 1 t 45 min
+- utenfor: ja
+Sentier du Littoral langs vannet til Plage de la Plateforme. Tilbake samme vei, opp Sentier du Littoral og Av. du Cap-de-Nice til Bd Maurice Maeterlinck, ned igjen til vannet og langs kysten rundt Cap de Nice og inn til gamlebyen i Villefranche.
+
+### Rundt Saint-Jean-Cap-Ferrat
+- lengde: ca. 6 km
+- varighet: ca. 2 t
+- utenfor: ja
+Chemin des Douaniers, kyststien rundt hele kappen.

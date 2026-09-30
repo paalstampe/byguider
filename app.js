@@ -31,6 +31,10 @@ const KATEGORIER = {
                 alias: ['Museum', 'Museer', 'Galleri', 'Gallerier'] },
   butikk:     { navn: 'Butikker',            farge: '#4F6B7A', ikon: 'pose',
                 alias: ['Butikk', 'Shopping', 'Marked', 'Markeder'] },
+  hotell:     { navn: 'Hoteller',            farge: '#4A5896', ikon: 'seng',
+                alias: ['Hotell', 'Hotel', 'Hotels', 'Overnatting'] },
+  strand:     { navn: 'Strender og beach clubs', farge: '#2F8A8A', ikon: 'parasoll',
+                alias: ['Strand', 'Strender', 'Beach club', 'Beach clubs', 'Badeplasser', 'Bading'] },
   omvei:      { navn: 'Verdt en omvei',      farge: '#5C7A4F', ikon: 'flagg',
                 alias: ['Annet', 'Point of interest', 'Severdigheter', 'Park', 'Parker'] },
   gaatur:     { navn: 'Gåturer',             farge: '#7A6A2B',
@@ -50,6 +54,8 @@ const IKONER = {
   tre:     'M12 21v-5 M12 3l5.5 7H15l3.5 5.5h-13L9 10H6.5z',
   ramme:   'M4.5 5.5h15v13h-15z M4.5 15.5l4.5-4.5 4 4 2.5-2.5 4 4 M15 8.5a1.2 1.2 0 1 0 0.01 0',
   flagg:   'M7 21V4 M7 4.5h10l-2.2 3.75L17 12H7',
+  seng:    'M4 6v13 M4 15h16v4 M4 11.5h6V15 M10 11.5h6.5A3.5 3.5 0 0 1 20 15 M7 9.5a1.3 1.3 0 1 0 0.01 0',
+  parasoll:'M4 11.5a8 6.5 0 0 1 16 0z M12 11.5v8 M5 19.5h14',
   prikk:   'M9 12a3 3 0 1 0 6 0a3 3 0 1 0-6 0'
 };
 
@@ -161,7 +167,7 @@ function lesKoordinat(tekst) {
   return m ? [parseFloat(m[2]), parseFloat(m[1])] : null;
 }
 
-const FELT = ['sted', 'besokt', 'google', 'nettside', 'gater', 'lengde', 'varighet'];  // besokt leses, men vises ikke
+const FELT = ['sted', 'besokt', 'google', 'nettside', 'gater', 'lengde', 'varighet', 'utenfor'];  // besokt leses, men vises ikke
 
 function lesMarkdown(tekst) {
   const linjer = String(tekst).replace(/\r/g, '').replace(/<!--[\s\S]*?-->/g, '').split('\n');
@@ -236,7 +242,9 @@ function byggFeatures(md, geo) {
       nettside: /^https?:\/\//.test(st.felt.nettside || '') ? st.felt.nettside : '',
       gater: (st.felt.gater || '').split(',').map(x => x.trim()).filter(Boolean),
       lengde: st.felt.lengde || '',
-      varighet: st.felt.varighet || ''
+      varighet: st.felt.varighet || '',
+      // utenfor: ja — stedet holdes utenfor startutsnittet (og «Vis hele byen»)
+      utenfor: /^(ja|j|yes|x|true)$/.test(normaliser(st.felt.utenfor))
     };
 
     const omrade = finnGeo(st.navn, 'omrade').map(f => ({ type: 'Feature', geometry: f.geometry, properties: { rolle: 'omrade' } }));
@@ -323,6 +331,7 @@ const SKALL = `
       <h2 class="rute-navn" id="rute-navn"></h2>
       <p class="rute-meta" id="rute-meta"></p>
       <p class="rute-notat" id="rute-notat"></p>
+      <p class="pop-lenker"><button type="button" class="pop-lenke pop-zoom" id="rute-zoom">Zoom inn</button></p>
     </div>
   </main>
 </div>`;
@@ -423,7 +432,8 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     ruteNavn:   document.getElementById('rute-navn'),
     ruteMeta:   document.getElementById('rute-meta'),
     ruteNotat:  document.getElementById('rute-notat'),
-    ruteLukk:   document.getElementById('rute-lukk')
+    ruteLukk:   document.getElementById('rute-lukk'),
+    ruteZoom:   document.getElementById('rute-zoom')
   };
 
   /* ---------- kart ---------- */
@@ -444,7 +454,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
   kart.touchZoomRotate.disableRotation();
   kart.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-left');
 
-  /* Tilbake til startvisningen: utsnittet med alle stedene, slik siden åpnes
+  /* Tilbake til startvisningen: utsnittet med stedene (unntatt «utenfor: ja»), slik siden åpnes
      (senter og zoom fra metadata når byen ikke har steder ennå). */
   let startvisning = null, startutsnitt = null;
   const tilStart = () => {
@@ -651,8 +661,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
         if (id !== 'punkter' && kart.queryRenderedFeatures(e.point, { layers: ['punkter', 'klynger'] }).length) return;
         const o = oppslagFraId(e.features[0].properties._id);
         if (!o) return;
-        velg(o.id, false);
-        if (o.erLinje) aapnePopup(o, e.lngLat);
+        velg(o.id, false);   // gåturer vises i rutekortet, ikke i popup
       });
     });
 
@@ -933,6 +942,8 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     el.ruteNavn.textContent = p.navn || '';
     el.ruteMeta.textContent = ruteMeta(p);
     el.ruteNotat.textContent = p.notat || '';
+    el.ruteZoom.dataset.id = o.id;
+    el.ruteZoom.parentNode.style.display = o.bbox ? '' : 'none';
     el.ruteKort.hidden = false;
   }
 
@@ -1051,7 +1062,11 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       byggFiltre();
       tegn();
 
-      const medBbox = state.oppslag.filter(o => o.bbox);
+      /* Startutsnittet omfatter alle steder unntatt dem merket «utenfor: ja»
+         (strender, turer o.l. et stykke utenfor byen). */
+      const alleMedBbox = state.oppslag.filter(o => o.bbox);
+      const innenfor = alleMedBbox.filter(o => !o.p.utenfor);
+      const medBbox = innenfor.length ? innenfor : alleMedBbox;
       if (medBbox.length) {
         startutsnitt = bbox(medBbox.flatMap(o => [o.bbox.slice(0, 2), o.bbox.slice(2)]));
         kart.fitBounds(startutsnitt, { padding: 50, duration: 0 });
