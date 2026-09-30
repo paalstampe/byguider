@@ -197,7 +197,8 @@ jobben. Nærmer seg en guidebok.
   `klyngetall` og `punkter` (symbol med kategoriikon), og `ruter` med `gater` og `gaaturer`.
   Filtrering bytter ut kildedataene (`setData`), slik at klyngene følger filtrene.
 - Kategoriikonene tegnes på lerret ved oppstart: farget sirkel, papirkant, hvit glyf fra `IKONER`
-  (SVG-stier i 24×24). Favoritter vises større.
+  (SVG-stier i 24×24). Favoritter har samme størrelse, men en kobberring utenfor papirkanten
+  (egne bilder `ikon-fav-<kategori>`).
 - Kategorifargene ligger i `KATEGORIER` og oversettes til et `match`-uttrykk.
 - Klyngetallet bruker CARTOs egen skriftstabel (`KARTSKRIFT`); andre skrifter finnes ikke
   på glyph-serveren.
