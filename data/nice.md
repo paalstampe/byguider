@@ -305,6 +305,12 @@ Sykkelklær og café
 - nettside: https://www.lenegresco.com/la-plage
 Beach club
 
+### Hotel Amour Plage
+- sted: 43.69332, 7.25600
+- google: ChIJwcsVMIjRzRIRVB11QajIGEw
+- nettside: https://hotelamourparis.fr/hotel-amour-plage/
+Beach club
+
 ### Plage de la Fosse
 - sted: 43.68671, 7.33612
 - google: ChIJ4SY2c2nbzRIRV_-gwV4myCE
