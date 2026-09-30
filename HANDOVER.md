@@ -96,7 +96,7 @@ Fri tekst = notat. Første avsnitt i lista, alt i popupen.
 ```
 
 Kategorier (`##`): Nabolag og gater · Restauranter · Caféer · Barer · Muséer og gallerier ·
-Butikker · Verdt en omvei · Gåturer. Overskriftene matches mot `KATEGORIER` i `app.js`
+Butikker · Hoteller · Strender og beach clubs · Verdt en omvei · Gåturer. Overskriftene matches mot `KATEGORIER` i `app.js`
 (navn, nøkkel og alias, uten hensyn til aksenter/store bokstaver). Ukjent kategori vises
 med overskriften som navn og grå prikk.
 

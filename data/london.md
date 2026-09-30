@@ -12,7 +12,7 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
   # Sone            overskrift 1: Central, North … Rekkefølgen her blir rekkefølgen i appen.
                     Byer uten soner: dropp #-overskriftene.
   ## Kategori       Nabolag og gater · Restauranter · Caféer · Barer · Muséer og gallerier ·
-                    Butikker · Verdt en omvei · Gåturer
+                    Butikker · Hoteller · Strender og beach clubs · Verdt en omvei · Gåturer
   ### Navn ★        ett sted. ★ bak navnet = favoritt.
   - sted: 51.5207, -0.1519      breddegrad, lengdegrad — som Google Maps viser det
                                 (høyreklikk i Google Maps og klikk på tallene for å kopiere)

@@ -12,7 +12,7 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
   # Sone            overskrift 1: Central, North … Rekkefølgen her blir rekkefølgen i appen.
                     Byer uten soner: dropp #-overskriftene.
   ## Kategori       Nabolag og gater · Restauranter · Caféer · Barer · Muséer og gallerier ·
-                    Butikker · Verdt en omvei · Gåturer
+                    Butikker · Hoteller · Strender og beach clubs · Verdt en omvei · Gåturer
   ### Navn ★        ett sted. ★ bak navnet = favoritt.
   - sted: 51.5207, -0.1519      breddegrad, lengdegrad — som Google Maps viser det
                                 (høyreklikk i Google Maps og klikk på tallene for å kopiere)
@@ -280,12 +280,24 @@ Sykkelklær og café
 - google: ChIJpShtU6PazRIRHyPKaG4RDEk
 - nettside: http://www.tresorspublics.com/
 
-## Verdt en omvei
+## Hoteller
 
-### Marché de la Libération
-- sted: 43.70958, 7.26198
-- google: ChIJHwn6DwHQzRIRZSeaT5GiGks
-Matmarked
+### Hôtel du Couvent
+- sted: 43.69718, 7.27884
+- google: ChIJfUqOdgXPzRIR-8aYHCo-Qxw
+- nettside: https://www.marriott.com/en-us/hotels/ncehc-hotel-du-couvent-a-luxury-collection-hotel-nice-france/overview/
+
+### Hotel Amour
+- sted: 43.69740, 7.25537
+- google: ChIJ7SvucQDRzRIRzEKI0M7xHss
+- nettside: https://hotelamourparis.fr/hotel-amour-nice/
+
+### Le Negresco
+- sted: 43.69455, 7.25833
+- google: ChIJtzA17YPRzRIR5Lu8Yh7BihA
+- nettside: https://www.lenegresco.com/
+
+## Strender og beach clubs
 
 ### Negresco Beach Club
 - sted: 43.69389, 7.25850
@@ -306,13 +318,20 @@ Strand, Saint-Jean-Cap-Ferrat
 - utenfor: ja
 Beach club, Èze-sur-Mer
 
+## Verdt en omvei
+
+### Marché de la Libération
+- sted: 43.70958, 7.26198
+- google: ChIJHwn6DwHQzRIRZSeaT5GiGks
+Matmarked
+
 ## Gåturer
 
 ### Kyststien fra Coco Beach til Villefranche-sur-Mer
-- lengde: ca. 4,3 km
-- varighet: ca. 1,5 t
+- lengde: ca. 5 km
+- varighet: ca. 1 t 45 min
 - utenfor: ja
-Sentier du Littoral rundt Cap de Nice, videre langs bukta inn til gamlebyen i Villefranche.
+Sentier du Littoral langs vannet til Plage de la Plateforme. Tilbake samme vei, opp Sentier du Littoral og Av. du Cap-de-Nice til Bd Maurice Maeterlinck, ned igjen til vannet og langs kysten rundt Cap de Nice og inn til gamlebyen i Villefranche.
 
 ### Rundt Saint-Jean-Cap-Ferrat
 - lengde: ca. 6 km

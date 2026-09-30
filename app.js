@@ -31,6 +31,10 @@ const KATEGORIER = {
                 alias: ['Museum', 'Museer', 'Galleri', 'Gallerier'] },
   butikk:     { navn: 'Butikker',            farge: '#4F6B7A', ikon: 'pose',
                 alias: ['Butikk', 'Shopping', 'Marked', 'Markeder'] },
+  hotell:     { navn: 'Hoteller',            farge: '#4A5896', ikon: 'seng',
+                alias: ['Hotell', 'Hotel', 'Hotels', 'Overnatting'] },
+  strand:     { navn: 'Strender og beach clubs', farge: '#2F8A8A', ikon: 'parasoll',
+                alias: ['Strand', 'Strender', 'Beach club', 'Beach clubs', 'Badeplasser', 'Bading'] },
   omvei:      { navn: 'Verdt en omvei',      farge: '#5C7A4F', ikon: 'flagg',
                 alias: ['Annet', 'Point of interest', 'Severdigheter', 'Park', 'Parker'] },
   gaatur:     { navn: 'Gåturer',             farge: '#7A6A2B',
@@ -50,6 +54,8 @@ const IKONER = {
   tre:     'M12 21v-5 M12 3l5.5 7H15l3.5 5.5h-13L9 10H6.5z',
   ramme:   'M4.5 5.5h15v13h-15z M4.5 15.5l4.5-4.5 4 4 2.5-2.5 4 4 M15 8.5a1.2 1.2 0 1 0 0.01 0',
   flagg:   'M7 21V4 M7 4.5h10l-2.2 3.75L17 12H7',
+  seng:    'M4 6v13 M4 15h16v4 M4 11.5h6V15 M10 11.5h6.5A3.5 3.5 0 0 1 20 15 M7 9.5a1.3 1.3 0 1 0 0.01 0',
+  parasoll:'M4 11.5a8 6.5 0 0 1 16 0z M12 11.5v8 M5 19.5h14',
   prikk:   'M9 12a3 3 0 1 0 6 0a3 3 0 1 0-6 0'
 };
 
