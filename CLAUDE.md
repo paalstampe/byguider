@@ -16,6 +16,7 @@ Hold HANDOVER.md oppdatert når noe vesentlig endres (punkt 2, 8 og 10.5).
   forhåndsvisningen: https://stam.pe/byguider/forhandsvisning/<gren>/london/ (klar 1–2 min etter push,
   bygges av .github/workflows/pages.yml). Pål sjekker den på mobil og desktop før fletting.
 - Åpne PR mot main når Pål er fornøyd, eller når han ber om det. Flett bare når han sier det.
+- Slett grenen på origin rett etter fletting.
 - Én endring per gren. Små, selvstendige commits.
 
 ## Teknikk (kort — detaljer i HANDOVER.md)
@@ -45,4 +46,4 @@ Hold HANDOVER.md oppdatert når noe vesentlig endres (punkt 2, 8 og 10.5).
 ## Ikke gjør
 - Ikke rør arkiv/ eller «Tips til nabolag i London.md» (råmateriale).
 - Ikke legg inn avhengigheter, byggeverktøy eller rammeverk.
-- Ikke slett grener eller force-push uten at Pål ber om det.
+- Ikke slett uflettede grener eller force-push uten at Pål ber om det.
