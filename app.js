@@ -651,6 +651,8 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
   const popup = new maplibregl.Popup({ closeButton: true, focusAfterOpen: false, maxWidth: '300px', offset: 15, className: 'pop' });
   const tips = new maplibregl.Popup({ closeButton: false, closeOnClick: false, offset: 15, className: 'tips' });
+  const ekteHover = window.matchMedia('(hover: hover) and (pointer: fine)');
+  popup.on('open', () => tips.remove());   // aldri navnelapp og popup oppå hverandre
 
   /* Farger defineres étt sted — KATEGORIER — og oversettes til et match-uttrykk. */
   const FARGE = ['match', ['get', 'kategori']]
@@ -820,6 +822,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
         if (id !== 'punkter' && kart.queryRenderedFeatures(e.point, { layers: ['punkter', 'klynger'] }).length) return;
         const o = oppslagFraId(e.features[0].properties._id);
         if (!o) return;
+        tips.remove();
         velg(o.id, false);   // gåturer vises i rutekortet, ikke i popup
       });
     });
@@ -830,11 +833,16 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       kart.easeTo({ center: f.geometry.coordinates, zoom: zoom + 0.5, duration: 500 });
     });
 
-    kart.on('mousemove', 'punkter', e => {
-      const f = e.features[0];
-      tips.setLngLat(f.geometry.coordinates).setText(visNavn(f.properties)).addTo(kart);
-    });
-    kart.on('mouseleave', 'punkter', () => tips.remove());
+    /* Navnelapp bare der det finnes ekte hover (mus/styreflate). På berøringsskjerm sender nettleseren
+       en etterlignet mousemove ved trykk: lappen dukket opp, iOS svelget klikket, og popupen kom først
+       ved andre trykk — oppå lappen. Der er popupen nok alene. */
+    if (ekteHover.matches) {
+      kart.on('mousemove', 'punkter', e => {
+        const f = e.features[0];
+        tips.setLngLat(f.geometry.coordinates).setText(visNavn(f.properties)).addTo(kart);
+      });
+      kart.on('mouseleave', 'punkter', () => tips.remove());
+    }
   }
 
   /* Filtrering bytter ut dataene, slik at klyngene regnes ut fra det som vises. */
