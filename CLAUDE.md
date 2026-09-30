@@ -11,7 +11,8 @@ Hold HANDOVER.md oppdatert når noe vesentlig endres (punkt 2, 8 og 10.5).
 - Kode: norske navn på variabler og funksjoner, som i resten av app.js.
 
 ## Arbeidsflyt
-- Dataendringer (data/*.md, data/*-geometri.geojson, byer.json) kan gå rett i main når Pål ber om det.
+- Endringer som ikke trenger forhåndsvisning — data (data/*.md, data/*-geometri.geojson, byer.json)
+  og dokumentasjon (CLAUDE.md, HANDOVER.md) — pushes rett til main, uten gren og PR.
 - Kodeendringer (app.js, style.css, index.html, stubber) på egen gren. Push grenen, og oppgi
   forhåndsvisningen: https://stam.pe/byguider/forhandsvisning/<gren>/london/ (klar 1–2 min etter push,
   bygges av .github/workflows/pages.yml). Pål sjekker den på mobil og desktop før fletting.
