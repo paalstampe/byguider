@@ -92,7 +92,7 @@ Fine dining
 Ramen
 
 ### Norum Grill ★
-- sted: 59.91831, 10.70612
+- sted: 59.91831, 10.70585
 - google: ChIJ2_gDbABtQUYRyni5yytLnlA
 - nettside: https://norumgrill.no/
 
