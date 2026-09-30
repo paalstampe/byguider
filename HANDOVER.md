@@ -100,6 +100,9 @@ Butikker · Verdt en omvei · Gåturer. Overskriftene matches mot `KATEGORIER` i
 (navn, nøkkel og alias, uten hensyn til aksenter/store bokstaver). Ukjent kategori vises
 med overskriften som navn og grå prikk.
 
+`- utenfor: ja` holder et sted (eller en gåtur) utenfor utsnittet kartet åpner med og som
+«Vis hele byen» går til — for strender, beach clubs og turer et stykke utenfor byen.
+
 Gåturer har `lengde:` og `varighet:` som fritekst, og kan mangle tegnet rute
 (rutekortet sier da «rute ikke tegnet»).
 

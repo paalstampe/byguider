@@ -161,7 +161,7 @@ function lesKoordinat(tekst) {
   return m ? [parseFloat(m[2]), parseFloat(m[1])] : null;
 }
 
-const FELT = ['sted', 'besokt', 'google', 'nettside', 'gater', 'lengde', 'varighet'];  // besokt leses, men vises ikke
+const FELT = ['sted', 'besokt', 'google', 'nettside', 'gater', 'lengde', 'varighet', 'utenfor'];  // besokt leses, men vises ikke
 
 function lesMarkdown(tekst) {
   const linjer = String(tekst).replace(/\r/g, '').replace(/<!--[\s\S]*?-->/g, '').split('\n');
@@ -236,7 +236,9 @@ function byggFeatures(md, geo) {
       nettside: /^https?:\/\//.test(st.felt.nettside || '') ? st.felt.nettside : '',
       gater: (st.felt.gater || '').split(',').map(x => x.trim()).filter(Boolean),
       lengde: st.felt.lengde || '',
-      varighet: st.felt.varighet || ''
+      varighet: st.felt.varighet || '',
+      // utenfor: ja — stedet holdes utenfor startutsnittet (og «Vis hele byen»)
+      utenfor: /^(ja|j|yes|x|true)$/.test(normaliser(st.felt.utenfor))
     };
 
     const omrade = finnGeo(st.navn, 'omrade').map(f => ({ type: 'Feature', geometry: f.geometry, properties: { rolle: 'omrade' } }));
@@ -444,7 +446,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
   kart.touchZoomRotate.disableRotation();
   kart.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-left');
 
-  /* Tilbake til startvisningen: utsnittet med alle stedene, slik siden åpnes
+  /* Tilbake til startvisningen: utsnittet med stedene (unntatt «utenfor: ja»), slik siden åpnes
      (senter og zoom fra metadata når byen ikke har steder ennå). */
   let startvisning = null, startutsnitt = null;
   const tilStart = () => {
@@ -1051,7 +1053,11 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       byggFiltre();
       tegn();
 
-      const medBbox = state.oppslag.filter(o => o.bbox);
+      /* Startutsnittet omfatter alle steder unntatt dem merket «utenfor: ja»
+         (strender, turer o.l. et stykke utenfor byen). */
+      const alleMedBbox = state.oppslag.filter(o => o.bbox);
+      const innenfor = alleMedBbox.filter(o => !o.p.utenfor);
+      const medBbox = innenfor.length ? innenfor : alleMedBbox;
       if (medBbox.length) {
         startutsnitt = bbox(medBbox.flatMap(o => [o.bbox.slice(0, 2), o.bbox.slice(2)]));
         kart.fitBounds(startutsnitt, { padding: 50, duration: 0 });
