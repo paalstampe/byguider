@@ -288,7 +288,7 @@ Sykkelklær og café
 - google: ChIJfUqOdgXPzRIR-8aYHCo-Qxw
 - nettside: https://www.marriott.com/en-us/hotels/ncehc-hotel-du-couvent-a-luxury-collection-hotel-nice-france/overview/
 
-### Hotel Amour
+### Hôtel Amour
 - sted: 43.69740, 7.25537
 - google: ChIJ7SvucQDRzRIRzEKI0M7xHss
 - nettside: https://hotelamourparis.fr/hotel-amour-nice/
@@ -306,7 +306,7 @@ Sykkelklær og café
 - nettside: https://www.lenegresco.com/la-plage
 Beach club
 
-### Hotel Amour Plage
+### Hôtel Amour Plage
 - sted: 43.69332, 7.25600
 - google: ChIJwcsVMIjRzRIRVB11QajIGEw
 - nettside: https://hotelamourparis.fr/hotel-amour-plage/

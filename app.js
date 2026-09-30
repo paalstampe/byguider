@@ -331,6 +331,7 @@ const SKALL = `
       <h2 class="rute-navn" id="rute-navn"></h2>
       <p class="rute-meta" id="rute-meta"></p>
       <p class="rute-notat" id="rute-notat"></p>
+      <p class="pop-lenker"><button type="button" class="pop-lenke pop-zoom" id="rute-zoom">Zoom inn</button></p>
     </div>
   </main>
 </div>`;
@@ -431,7 +432,8 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     ruteNavn:   document.getElementById('rute-navn'),
     ruteMeta:   document.getElementById('rute-meta'),
     ruteNotat:  document.getElementById('rute-notat'),
-    ruteLukk:   document.getElementById('rute-lukk')
+    ruteLukk:   document.getElementById('rute-lukk'),
+    ruteZoom:   document.getElementById('rute-zoom')
   };
 
   /* ---------- kart ---------- */
@@ -659,8 +661,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
         if (id !== 'punkter' && kart.queryRenderedFeatures(e.point, { layers: ['punkter', 'klynger'] }).length) return;
         const o = oppslagFraId(e.features[0].properties._id);
         if (!o) return;
-        velg(o.id, false);
-        if (o.erLinje) aapnePopup(o, e.lngLat);
+        velg(o.id, false);   // gåturer vises i rutekortet, ikke i popup
       });
     });
 
@@ -941,6 +942,8 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     el.ruteNavn.textContent = p.navn || '';
     el.ruteMeta.textContent = ruteMeta(p);
     el.ruteNotat.textContent = p.notat || '';
+    el.ruteZoom.dataset.id = o.id;
+    el.ruteZoom.parentNode.style.display = o.bbox ? '' : 'none';
     el.ruteKort.hidden = false;
   }
 
