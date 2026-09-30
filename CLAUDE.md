@@ -16,7 +16,8 @@ Hold HANDOVER.md oppdatert når noe vesentlig endres (punkt 2, 8 og 10.5).
   forhåndsvisningen: https://stam.pe/byguider/forhandsvisning/<gren>/london/ (klar 1–2 min etter push,
   bygges av .github/workflows/pages.yml). Pål sjekker den på mobil og desktop før fletting.
 - Åpne PR mot main når Pål er fornøyd, eller når han ber om det. Flett bare når han sier det.
-- Slett grenen på origin rett etter fletting.
+- GitHub sletter grenen automatisk ved fletting. Sjekk bare at den er borte (git ls-remote --heads origin);
+  slett den selv bare hvis den likevel ligger igjen.
 - Én endring per gren. Små, selvstendige commits.
 
 ## Teknikk (kort — detaljer i HANDOVER.md)
