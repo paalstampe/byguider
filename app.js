@@ -705,10 +705,10 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       type: 'symbol',
       filter: ['!', ['has', 'point_count']],
       layout: {
-        'icon-image': ['coalesce', ['image', ['concat', 'ikon-', ['get', 'kategori']]], ['image', 'ikon-ukjent']],
-        'icon-size': ['interpolate', ['linear'], ['zoom'],
-          10, ['case', FAV, 0.95, 0.8],
-          14, ['case', FAV, 1.15, 0.95]],
+        'icon-image': ['coalesce',
+          ['image', ['concat', 'ikon-', ['case', FAV, 'fav-', ''], ['get', 'kategori']]],
+          ['image', ['case', FAV, 'ikon-fav-ukjent', 'ikon-ukjent']]],
+        'icon-size': ['interpolate', ['linear'], ['zoom'], 10, 0.8, 14, 0.95],
         'icon-allow-overlap': true,
         'icon-ignore-placement': true,
         'symbol-sort-key': ['case', FAV, 1, 0]
@@ -740,19 +740,28 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     }
   };
 
-  /* Tegner ett ikon per kategori til et lerret: farget sirkel, papirkant, hvit glyf. */
-  function lagIkon(farge, glyf) {
-    const R = 2, D = 26 * R;
+  /* Tegner ett ikon per kategori til et lerret: farget sirkel, papirkant, hvit glyf.
+     Favoritter får i tillegg en kobberring utenfor papirkanten — samme størrelse ellers.
+     Lerretet har luft til ringen også for vanlige ikoner, så alle skaleres likt. */
+  function lagIkon(farge, glyf, favoritt) {
+    const R = 2, D = 30 * R;
     const c = document.createElement('canvas');
     c.width = c.height = D;
     const x = c.getContext('2d');
     x.beginPath();
-    x.arc(D / 2, D / 2, D / 2 - 1.5 * R, 0, 2 * Math.PI);
+    x.arc(D / 2, D / 2, 11.5 * R, 0, 2 * Math.PI);
     x.fillStyle = farge;
     x.fill();
     x.lineWidth = 1.5 * R;
     x.strokeStyle = PAPIR;
     x.stroke();
+    if (favoritt) {
+      x.beginPath();
+      x.arc(D / 2, D / 2, 13.25 * R, 0, 2 * Math.PI);
+      x.lineWidth = 1.5 * R;
+      x.strokeStyle = '#8A5A2B';
+      x.stroke();
+    }
     const s = (15 * R) / 24;
     x.translate(D / 2 - 12 * s, D / 2 - 12 * s);
     x.scale(s, s);
@@ -767,9 +776,13 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
   function registrerIkoner() {
     Object.keys(KATEGORIER).forEach(k => {
       const kat = KATEGORIER[k];
-      if (kat.ikon) kart.addImage('ikon-' + k, lagIkon(kat.farge, IKONER[kat.ikon] || IKONER.prikk), { pixelRatio: 2 });
+      if (!kat.ikon) return;
+      const glyf = IKONER[kat.ikon] || IKONER.prikk;
+      kart.addImage('ikon-' + k, lagIkon(kat.farge, glyf), { pixelRatio: 2 });
+      kart.addImage('ikon-fav-' + k, lagIkon(kat.farge, glyf, true), { pixelRatio: 2 });
     });
     kart.addImage('ikon-ukjent', lagIkon(UKJENT_FARGE, IKONER.prikk), { pixelRatio: 2 });
+    kart.addImage('ikon-fav-ukjent', lagIkon(UKJENT_FARGE, IKONER.prikk, true), { pixelRatio: 2 });
   }
 
   function tilpassKartstil() {
