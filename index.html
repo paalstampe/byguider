@@ -13,38 +13,90 @@
 
 <main class="forside-innhold">
   <header class="sidebar-head forside-head">
-    <nav class="smuler" aria-label="Du er her">
-      <a href="/">stam.pe</a><span class="smule-skille">/</span><span aria-current="page">Påls byguider</span>
+    <nav class="smuler" data-t-aria="duErHer">
+      <a href="/">stam.pe</a><span class="smule-skille">/</span><span aria-current="page" data-t="byguider">Påls byguider</span>
+      <span class="sprakvalg" role="group" data-t-aria="sprak"><button type="button" data-sprak="no" lang="no">NO</button><span class="smule-skille">/</span><button type="button" data-sprak="en" lang="en">EN</button></span>
     </nav>
-    <h1 class="tittel">Påls byer</h1>
-    <p class="ingress">Nabolag, gater og steder verdt en omvei.</p>
+    <h1 class="tittel" data-t="tittel">Påls byer</h1>
+    <p class="ingress" data-t="ingress">Nabolag, gater og steder verdt en omvei.</p>
   </header>
-  <nav class="by-liste" id="by-liste" aria-label="Byer"></nav>
+  <nav class="by-liste" id="by-liste" data-t-aria="byer"></nav>
 </main>
 
 <script>
-/* Lista bygges fra byer.json — ny by vises her automatisk. */
+/* Språk: samme valg og lagring som i app.js (NO / EN, ?lang=en, husket i nettleseren).
+   Lista bygges fra byer.json — ny by vises her automatisk. Engelske tekster fra
+   feltene land_en, beskrivelse_en og evt. navn_en; mangler de, vises norsk. */
+const NOKKEL = 'byguider-sprak';
+const TEKST = {
+  no: { duErHer: 'Du er her', byguider: 'Påls byguider', tittel: 'Påls byer',
+        ingress: 'Nabolag, gater og steder verdt en omvei.', byer: 'Byer', sprak: 'Språk' },
+  en: { duErHer: 'You are here', byguider: 'Pål’s city guides', tittel: 'Pål’s cities',
+        ingress: 'Neighbourhoods, streets and places worth a detour.', byer: 'Cities', sprak: 'Language' }
+};
+
+let sprak = (() => {
+  const q = new URLSearchParams(location.search).get('lang');
+  if (q === 'en' || q === 'no') {
+    try { localStorage.setItem(NOKKEL, q); } catch (e) {}
+    return q;
+  }
+  try {
+    const l = localStorage.getItem(NOKKEL);
+    if (l === 'en' || l === 'no') return l;
+  } catch (e) {}
+  return 'no';
+})();
+
+let byer = [];
+
+function tegn() {
+  const T = TEKST[sprak];
+  const en = sprak === 'en';
+  document.documentElement.lang = sprak;
+  document.title = T.byguider;
+  document.querySelectorAll('[data-t]').forEach(e => { e.textContent = T[e.dataset.t]; });
+  document.querySelectorAll('[data-t-aria]').forEach(e => { e.setAttribute('aria-label', T[e.dataset.tAria]); });
+  document.querySelectorAll('.sprakvalg [data-sprak]').forEach(b => {
+    b.setAttribute('aria-pressed', b.dataset.sprak === sprak ? 'true' : 'false');
+  });
+
+  const nav = document.getElementById('by-liste');
+  nav.innerHTML = '';
+  byer.forEach(b => {
+    // status: "kommer" = vises dempet og uten lenke
+    const klar = b.status !== 'kommer';
+    const a = document.createElement(klar ? 'a' : 'div');
+    a.className = 'by-lenke' + (klar ? '' : ' er-inaktiv');
+    if (klar) a.href = b.id + '/' + (en ? '?lang=en' : '');
+    else a.setAttribute('aria-disabled', 'true');
+    const navn = document.createElement('span');
+    navn.className = 'by-navn';
+    navn.textContent = (en && b.navn_en) || b.navn;
+    const meta = document.createElement('span');
+    meta.className = 'by-meta';
+    meta.textContent = [(en && b.land_en) || b.land, (en && b.beskrivelse_en) || b.beskrivelse]
+      .filter(Boolean).join(' · ');
+    a.append(navn, meta);
+    nav.appendChild(a);
+  });
+}
+
+document.addEventListener('click', e => {
+  const b = e.target.closest('.sprakvalg [data-sprak]');
+  if (!b || b.dataset.sprak === sprak) return;
+  sprak = b.dataset.sprak;
+  try { localStorage.setItem(NOKKEL, sprak); } catch (err) {}
+  const u = new URL(location.href);
+  if (sprak === 'en') u.searchParams.set('lang', 'en'); else u.searchParams.delete('lang');
+  history.replaceState(history.state, '', u);
+  tegn();
+});
+
+tegn();
 fetch('byer.json')
   .then(r => r.json())
-  .then(m => {
-    const nav = document.getElementById('by-liste');
-    (m.byer || []).forEach(b => {
-      // status: "kommer" = vises dempet og uten lenke
-      const klar = b.status !== 'kommer';
-      const a = document.createElement(klar ? 'a' : 'div');
-      a.className = 'by-lenke' + (klar ? '' : ' er-inaktiv');
-      if (klar) a.href = b.id + '/';
-      else a.setAttribute('aria-disabled', 'true');
-      const navn = document.createElement('span');
-      navn.className = 'by-navn';
-      navn.textContent = b.navn;
-      const meta = document.createElement('span');
-      meta.className = 'by-meta';
-      meta.textContent = [b.land, b.beskrivelse].filter(Boolean).join(' · ');
-      a.append(navn, meta);
-      nav.appendChild(a);
-    });
-  });
+  .then(m => { byer = m.byer || []; tegn(); });
 </script>
 </body>
 </html>

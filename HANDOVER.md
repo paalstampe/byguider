@@ -1,7 +1,7 @@
 # Byguider — overlevering
 
 Statusdokument for å ta prosjektet videre i en Cowork-økt.
-Sist oppdatert: 27. september 2026 (flerbys-arkitektur og MapLibre flettet inn i `main` og live).
+Sist oppdatert: 30. september 2026 (språkbryter norsk/engelsk på grenen `sprak`).
 
 ---
 
@@ -123,6 +123,28 @@ Koordinatrekkefølge: **md-fila bruker breddegrad, lengdegrad** (Google-rekkefø
 GeoJSON-fila bruker lengdegrad, breddegrad. Parseren snur md-koordinatene.
 
 `Tips til nabolag i London.md` er råmaterialet London-fila ble bygd fra.
+
+### Språk: norsk og engelsk
+
+Bryteren `NO / EN` står øverst til høyre i sidebaren og på forsiden. Valget huskes i
+nettleseren (`localStorage`, nøkkel `byguider-sprak`) og speiles i adressen som `?lang=en`,
+så en engelsk lenke kan deles direkte (`stam.pe/byguider/london/?lang=en`). Standard er norsk.
+
+- Faste tekster: `TEKST` øverst i `app.js` (norsk og engelsk side om side). Elementer i `SKALL`
+  merkes med `data-t`, `data-t-aria`, `data-t-title` eller `data-t-placeholder` og fylles av
+  `oversettDom()`. Forsiden har sin egen lille `TEKST` i `index.html`.
+- Kategorier: `en:` på hver kategori i `KATEGORIER`. Engelske overskrifter (`## Restaurants`)
+  gjenkjennes også.
+- Innhold i md-fila, alt valgfritt (mangler det, vises norsk):
+  `tittel-en:` og `undertittel-en:` i frontmatter; `- navn-en:` for et engelsk navn;
+  `- en:` for engelsk notat. `- en:` settes sist i oppføringen, og fri tekst etter den linja
+  hører også til det engelske notatet (flere avsnitt og punktlister går fint).
+- `byer.json`: `land_en`, `beskrivelse_en` og evt. `navn_en`.
+- `lengde`/`varighet` oversettes automatisk på engelsk (`ca. 1 t 45 min` → `approx. 1 h 45 min`,
+  desimalkomma → punktum).
+- Søket treffer både norsk og engelsk tekst uansett språk. Stedsnavn i bakgrunnskartet
+  (CARTO) står på lokalspråket.
+- Byttet tegner lista, filtrene, åpen popup og rutekortet på nytt uten å laste siden.
 
 ## 5. Valgt designretning: A — redaksjonell
 

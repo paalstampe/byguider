@@ -19,27 +19,167 @@
    (##) i by-fila matches mot navn, nøkkel og alias uten hensyn til store/små
    bokstaver og aksenter. Farger og ikoner er felles for alle byer. */
 const KATEGORIER = {
-  nabolag:    { navn: 'Nabolag og gater',    farge: '#8A5A2B', ikon: 'hus',
+  nabolag:    { navn: 'Nabolag og gater',    en: 'Neighbourhoods and streets', farge: '#8A5A2B', ikon: 'hus',
                 alias: ['Nabolag', 'Gater', 'Gate', 'Strøk'] },
-  restaurant: { navn: 'Restauranter',        farge: '#9E4A3C', ikon: 'bestikk',
+  restaurant: { navn: 'Restauranter',        en: 'Restaurants',            farge: '#9E4A3C', ikon: 'bestikk',
                 alias: ['Restaurant', 'Spisesteder'] },
-  cafe:       { navn: 'Caféer',              farge: '#A9713F', ikon: 'kopp',
+  cafe:       { navn: 'Caféer',              en: 'Cafés',                  farge: '#A9713F', ikon: 'kopp',
                 alias: ['Café', 'Kafé', 'Kafeer', 'Bakeri', 'Bakerier'] },
-  bar:        { navn: 'Barer',               farge: '#6E4A6B', ikon: 'glass',
+  bar:        { navn: 'Barer',               en: 'Bars',                   farge: '#6E4A6B', ikon: 'glass',
                 alias: ['Bar', 'Puber', 'Pub'] },
-  museum:     { navn: 'Muséer og gallerier', farge: '#3F5A6B', ikon: 'ramme',
+  museum:     { navn: 'Muséer og gallerier', en: 'Museums and galleries',  farge: '#3F5A6B', ikon: 'ramme',
                 alias: ['Museum', 'Museer', 'Galleri', 'Gallerier'] },
-  butikk:     { navn: 'Butikker',            farge: '#4F6B7A', ikon: 'pose',
+  butikk:     { navn: 'Butikker',            en: 'Shops',                  farge: '#4F6B7A', ikon: 'pose',
                 alias: ['Butikk', 'Shopping', 'Marked', 'Markeder'] },
-  hotell:     { navn: 'Hoteller',            farge: '#4A5896', ikon: 'seng',
+  hotell:     { navn: 'Hoteller',            en: 'Hotels',                 farge: '#4A5896', ikon: 'seng',
                 alias: ['Hotell', 'Hotel', 'Hotels', 'Overnatting'] },
-  strand:     { navn: 'Strender og beach clubs', farge: '#2F8A8A', ikon: 'parasoll',
+  strand:     { navn: 'Strender og beach clubs', en: 'Beaches and beach clubs', farge: '#2F8A8A', ikon: 'parasoll',
                 alias: ['Strand', 'Strender', 'Beach club', 'Beach clubs', 'Badeplasser', 'Bading'] },
-  omvei:      { navn: 'Verdt en omvei',      farge: '#5C7A4F', ikon: 'flagg',
+  omvei:      { navn: 'Verdt en omvei',      en: 'Worth a detour',         farge: '#5C7A4F', ikon: 'flagg',
                 alias: ['Annet', 'Point of interest', 'Severdigheter', 'Park', 'Parker'] },
-  gaatur:     { navn: 'Gåturer',             farge: '#7A6A2B',
+  gaatur:     { navn: 'Gåturer',             en: 'Walks',                  farge: '#7A6A2B',
                 alias: ['Gåtur', 'Ruter', 'Rute'] }
 };
+
+/* ---------- språk ----------
+
+   Norsk er standard. Språket velges med bryteren NO / EN øverst i sidebaren, eller med
+   ?lang=en i adressen (for å dele en engelsk lenke). Valget huskes i nettleseren.
+   Faste tekster ligger i TEKST; innholdet har valgfrie engelske felt i by-fila
+   (- en:, - navn-en:, tittel-en:, undertittel-en:). Mangler engelsk, vises norsk. */
+
+const SPRAK_NOKKEL = 'byguider-sprak';
+
+function lesSprak() {
+  const q = new URLSearchParams(location.search).get('lang');
+  if (q === 'en' || q === 'no') {
+    try { localStorage.setItem(SPRAK_NOKKEL, q); } catch (e) { /* privat modus o.l. */ }
+    return q;
+  }
+  try {
+    const lagret = localStorage.getItem(SPRAK_NOKKEL);
+    if (lagret === 'en' || lagret === 'no') return lagret;
+  } catch (e) { /* ingen lagring — bruk standard */ }
+  return 'no';
+}
+
+let SPRAK = lesSprak();
+
+const TEKST = {
+  no: {
+    sprak: 'Språk',
+    duErHer: 'Du er her',
+    byguider: 'Påls byguider',
+    sok: 'Søk etter navn eller notat',
+    sokEtikett: 'Søk',
+    omrade: 'Område',
+    kategori: 'Kategori',
+    alle: 'Alle',
+    kunFavoritter: 'Kun favoritter',
+    favoritt: 'Favoritt',
+    utenSone: 'Uten sone',
+    ukjent: 'Ukjent',
+    lukk: 'Lukk',
+    gatur: 'Gåtur',
+    ruteIkkeTegnet: 'rute ikke tegnet',
+    zoomInn: 'Zoom inn',
+    aapneMaps: 'Åpne i Google Maps',
+    nettside: 'Nettside',
+    visHeleByen: 'Vis hele byen',
+    forhandsvisning: 'forhåndsvisning',
+    ingenTreff: 'Ingen treff. Juster filtrene eller søket.',
+    ingenSteder: 'Ingen steder lagt inn ennå.',
+    ingenData: 'Ingen data',
+    steder: n => n + (n === 1 ? ' sted' : ' steder'),
+    ruter: n => n + (n === 1 ? ' rute' : ' ruter'),
+    fot: (fil, dato) => 'Rediger ' + fil + ' for å legge til steder.' + (dato ? ' Sist oppdatert ' + dato + '.' : ''),
+    fantIkke: (fil, feil) => 'Fant ikke ' + fil + ' (' + feil + ').',
+    lokalt: 'Åpnes siden fra <code>file://</code>? Kjør <code>python3 -m http.server</code> i mappen og åpne <code>localhost:8000</code>.'
+  },
+  en: {
+    sprak: 'Language',
+    duErHer: 'You are here',
+    byguider: 'Pål’s city guides',
+    sok: 'Search names and notes',
+    sokEtikett: 'Search',
+    omrade: 'Area',
+    kategori: 'Category',
+    alle: 'All',
+    kunFavoritter: 'Favourites only',
+    favoritt: 'Favourite',
+    utenSone: 'No area',
+    ukjent: 'Unknown',
+    lukk: 'Close',
+    gatur: 'Walk',
+    ruteIkkeTegnet: 'route not drawn',
+    zoomInn: 'Zoom in',
+    aapneMaps: 'Open in Google Maps',
+    nettside: 'Website',
+    visHeleByen: 'Show the whole city',
+    forhandsvisning: 'preview',
+    ingenTreff: 'No matches. Adjust the filters or the search.',
+    ingenSteder: 'No places added yet.',
+    ingenData: 'No data',
+    steder: n => n + (n === 1 ? ' place' : ' places'),
+    ruter: n => n + (n === 1 ? ' walk' : ' walks'),
+    fot: (fil, dato) => 'Edit ' + fil + ' to add places.' + (dato ? ' Last updated ' + dato + '.' : ''),
+    fantIkke: (fil, feil) => 'Could not find ' + fil + ' (' + feil + ').',
+    lokalt: 'Opened from <code>file://</code>? Run <code>python3 -m http.server</code> in the folder and open <code>localhost:8000</code>.'
+  }
+};
+
+function t(nokkel, ...arg) {
+  const v = nokkel in TEKST[SPRAK] ? TEKST[SPRAK][nokkel] : TEKST.no[nokkel];
+  return typeof v === 'function' ? v(...arg) : (v == null ? nokkel : v);
+}
+
+/* «ca. 1 t 45 min», «2,5 km» -> «approx. 1 h 45 min», «2.5 km» på engelsk. */
+function maal(s) {
+  if (SPRAK !== 'en' || !s) return s || '';
+  return String(s)
+    .replace(/\bca\.\s*/gi, 'approx. ')
+    .replace(/(\d),(\d)/g, '$1.$2')
+    .replace(/(\d)\s*timer?\b/g, '$1 hours')
+    .replace(/(\d)\s*t\b/g, '$1 h');
+}
+
+const SPRAKVALG =
+  '<span class="sprakvalg" role="group" data-t-aria="sprak">' +
+    '<button type="button" data-sprak="no" lang="no">NO</button>' +
+    '<span class="smule-skille">/</span>' +
+    '<button type="button" data-sprak="en" lang="en">EN</button>' +
+  '</span>';
+
+/* Faste tekster i siden er merket med data-t (tekst), data-t-aria, data-t-title og
+   data-t-placeholder, og fylles herfra — ved oppstart og ved hvert språkbytte. */
+function oversettDom() {
+  document.documentElement.lang = SPRAK;
+  document.querySelectorAll('[data-t]').forEach(e => { e.textContent = t(e.dataset.t); });
+  document.querySelectorAll('[data-t-aria]').forEach(e => { e.setAttribute('aria-label', t(e.dataset.tAria)); });
+  document.querySelectorAll('[data-t-title]').forEach(e => { e.title = t(e.dataset.tTitle); });
+  document.querySelectorAll('[data-t-placeholder]').forEach(e => { e.placeholder = t(e.dataset.tPlaceholder); });
+  document.querySelectorAll('.sprakvalg [data-sprak]').forEach(b => {
+    b.setAttribute('aria-pressed', b.dataset.sprak === SPRAK ? 'true' : 'false');
+  });
+}
+
+const sprakLyttere = [];
+
+function byttSprak(ny) {
+  if ((ny !== 'no' && ny !== 'en') || ny === SPRAK) return;
+  SPRAK = ny;
+  try { localStorage.setItem(SPRAK_NOKKEL, ny); } catch (e) { /* ingen lagring */ }
+  const u = new URL(location.href);
+  if (ny === 'en') u.searchParams.set('lang', 'en'); else u.searchParams.delete('lang');
+  history.replaceState(history.state, '', u);
+  oversettDom();
+  sprakLyttere.forEach(f => f());
+}
+
+document.addEventListener('click', e => {
+  const b = e.target.closest && e.target.closest('.sprakvalg [data-sprak]');
+  if (b) byttSprak(b.dataset.sprak);
+});
 
 /* Ikonglyfer: SVG-stier i et 24×24-rutenett, tegnet som hvite streker i en farget
    sirkel. Ny glyf = én linje her + ikon-nøkkelen på kategorien. */
@@ -157,7 +297,7 @@ function normaliser(s) {
 function finnKategori(tekst) {
   const n = normaliser(tekst);
   const k = Object.keys(KATEGORIER).find(k =>
-    [k, KATEGORIER[k].navn].concat(KATEGORIER[k].alias || []).some(x => normaliser(x) === n));
+    [k, KATEGORIER[k].navn, KATEGORIER[k].en].concat(KATEGORIER[k].alias || []).some(x => normaliser(x) === n));
   return k || n.replace(/[^a-z0-9]+/g, '-');
 }
 
@@ -167,7 +307,7 @@ function lesKoordinat(tekst) {
   return m ? [parseFloat(m[2]), parseFloat(m[1])] : null;
 }
 
-const FELT = ['sted', 'besokt', 'google', 'nettside', 'gater', 'lengde', 'varighet', 'utenfor'];  // besokt leses, men vises ikke
+const FELT = ['sted', 'besokt', 'google', 'nettside', 'gater', 'lengde', 'varighet', 'utenfor', 'en', 'navn-en'];  // besokt leses, men vises ikke
 
 function lesMarkdown(tekst) {
   const linjer = String(tekst).replace(/\r/g, '').replace(/<!--[\s\S]*?-->/g, '').split('\n');
@@ -202,18 +342,24 @@ function lesMarkdown(tekst) {
       sted = {
         navn: tittel.replace(/\s*[★*]+\s*$/, ''),
         favoritt: /[★*]\s*$/.test(tittel),
-        sone: sone, kategori: kategori, felt: {}, notat: []
+        sone: sone, kategori: kategori, felt: {}, notat: [], notatEn: [], iEngelsk: false
       };
       steder.push(sted);
     } else if (sted) {
       const f = l.match(/^\s*[-*]\s+([^:]+):\s*(.*)$/);
-      if (f && FELT.includes(normaliser(f[1]))) sted.felt[normaliser(f[1])] = f[2].trim();
-      else sted.notat.push(l);
+      const felt = f && normaliser(f[1]);
+      if (felt === 'en') {
+        // - en: starter det engelske notatet; fri tekst etter denne linjen hører også til det
+        sted.iEngelsk = true;
+        sted.notatEn.push(f[2]);
+      } else if (f && FELT.includes(felt)) sted.felt[felt] = f[2].trim();
+      else (sted.iEngelsk ? sted.notatEn : sted.notat).push(l);
     }
   }
 
   steder.forEach(st => {
     st.notat = st.notat.join('\n').replace(/\n{3,}/g, '\n\n').trim();
+    st.notatEn = st.notatEn.join('\n').replace(/\n{3,}/g, '\n\n').trim();
   });
 
   return { meta: meta, soner: soner, steder: steder, kategoriNavn: kategoriNavn };
@@ -232,11 +378,13 @@ function byggFeatures(md, geo) {
     const google = st.felt.google || '';
     const p = {
       navn: st.navn,
+      navn_en: st.felt['navn-en'] || '',
       kategori: st.kategori,
       sone: st.sone,
       favoritt: st.favoritt,
       besokt: b ? /^(ja|j|yes|x)$/.test(b) : undefined,
       notat: st.notat,
+      notat_en: st.notatEn,
       place_id: /^https?:/.test(google) ? '' : google,
       google_url: /^https?:/.test(google) ? google : '',
       nettside: /^https?:\/\//.test(st.felt.nettside || '') ? st.felt.nettside : '',
@@ -272,6 +420,7 @@ function byggMeta(md) {
   const s = lesKoordinat(m.senter);
   return {
     tittel: m.tittel || '', kicker: m.kicker || '', undertittel: m.undertittel || '',
+    tittelEn: m['tittel-en'] || '', undertittelEn: m['undertittel-en'] || '',
     senter: s || undefined,
     zoom: m.zoom ? parseFloat(m.zoom) : undefined,
     oppdatert: m.oppdatert || '',
@@ -295,22 +444,22 @@ const SKALL = `
 <div class="app">
   <aside class="sidebar">
     <header class="sidebar-head">
-      <nav class="smuler" aria-label="Du er her">
-        <a href="/">stam.pe</a><span class="smule-skille">/</span><a href="${new URL('./', BASE).href}">Påls byguider</a><span class="smule-skille">/</span><span id="smule-by" aria-current="page"></span>
+      <nav class="smuler" data-t-aria="duErHer">
+        <a href="/">stam.pe</a><span class="smule-skille">/</span><a href="${new URL('./', BASE).href}" data-t="byguider"></a><span class="smule-skille">/</span><span id="smule-by" aria-current="page"></span>${SPRAKVALG}
       </nav>
       <h1 class="tittel" id="tittel"></h1>
       <p class="ingress" id="ingress"></p>
     </header>
     <div class="sok-rad">
-      <input type="search" id="sok" class="sok" placeholder="Søk etter navn eller notat" autocomplete="off" aria-label="Søk">
+      <input type="search" id="sok" class="sok" data-t-placeholder="sok" data-t-aria="sokEtikett" autocomplete="off">
     </div>
     <div class="filtre">
       <div class="filterblokk">
-        <p class="filter-etikett" id="etikett-sone">Område</p>
+        <p class="filter-etikett" id="etikett-sone" data-t="omrade"></p>
         <div class="filtergruppe" id="filter-sone" aria-labelledby="etikett-sone"></div>
       </div>
       <div class="filterblokk">
-        <p class="filter-etikett" id="etikett-kategori">Kategori</p>
+        <p class="filter-etikett" id="etikett-kategori" data-t="kategori"></p>
         <div class="filtergruppe" id="filter-kategori" aria-labelledby="etikett-kategori"></div>
       </div>
       <div class="filtergruppe filtergruppe--smal" id="filter-status"></div>
@@ -326,12 +475,12 @@ const SKALL = `
   <main class="kartflate">
     <div id="kart"></div>
     <div class="rute-kort" id="rute-kort" hidden>
-      <button type="button" class="rute-lukk" id="rute-lukk" aria-label="Lukk">&times;</button>
-      <p class="rute-kicker" id="rute-kicker">Gåtur</p>
+      <button type="button" class="rute-lukk" id="rute-lukk" data-t-aria="lukk">&times;</button>
+      <p class="rute-kicker" id="rute-kicker"></p>
       <h2 class="rute-navn" id="rute-navn"></h2>
       <p class="rute-meta" id="rute-meta"></p>
       <p class="rute-notat" id="rute-notat"></p>
-      <p class="pop-lenker"><button type="button" class="pop-lenke pop-zoom" id="rute-zoom">Zoom inn</button></p>
+      <p class="pop-lenker"><button type="button" class="pop-lenke pop-zoom" id="rute-zoom" data-t="zoomInn"></button></p>
     </div>
   </main>
 </div>`;
@@ -381,14 +530,23 @@ async function finnBy(id) {
 
   await Promise.all([css, domKlar]);
   document.body.innerHTML = SKALL;
+  oversettDom();
 
   try {
     const [b] = await Promise.all([by, js]);
     const dataSti = b.data || ('data/' + b.id + '.md');
     const geoSti = b.geometri || null;
-    document.getElementById('smule-by').textContent = b.navn || b.id;
+    const smule = document.getElementById('smule-by');
+    const byNavn = () => (SPRAK === 'en' && b.navn_en) || b.navn || b.id;
+    smule.innerHTML = '<span class="smule-bynavn"></span>';
     const fv = location.pathname.match(/\/forhandsvisning\/(.+?)\/[^/]+\/?$/);
-    if (fv) document.getElementById('smule-by').textContent += ' · forhåndsvisning: ' + decodeURIComponent(fv[1]);
+    if (fv) {
+      smule.insertAdjacentHTML('beforeend', ' · <span data-t="forhandsvisning"></span>: ');
+      smule.appendChild(document.createTextNode(decodeURIComponent(fv[1])));
+    }
+    smule.firstChild.textContent = byNavn();
+    sprakLyttere.push(() => { smule.firstChild.textContent = byNavn(); });
+    oversettDom();
     start(dataSti, new URL(dataSti, BASE).href, geoSti ? new URL(geoSti, BASE).href : null);
   } catch (err) {
     document.getElementById('liste').innerHTML = '<p class="tomt">' + String(err.message)
@@ -468,8 +626,9 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       const b = document.createElement('button');
       b.type = 'button';
       b.className = 'ktrl-hjem';
-      b.title = 'Vis hele byen';
-      b.setAttribute('aria-label', 'Vis hele byen');
+      b.dataset.tTitle = b.dataset.tAria = 'visHeleByen';
+      b.title = t('visHeleByen');
+      b.setAttribute('aria-label', t('visHeleByen'));
       b.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/></svg>';
       b.addEventListener('click', tilStart);
       div.appendChild(b);
@@ -673,7 +832,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
     kart.on('mousemove', 'punkter', e => {
       const f = e.features[0];
-      tips.setLngLat(f.geometry.coordinates).setText(f.properties.navn || '').addTo(kart);
+      tips.setLngLat(f.geometry.coordinates).setText(visNavn(f.properties)).addTo(kart);
     });
     kart.on('mouseleave', 'punkter', () => tips.remove());
   }
@@ -717,7 +876,13 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
   /* ---------- hjelpere ---------- */
 
-  const katInfo = k => KATEGORIER[k] || { navn: state.ukjenteKategorier[k] || k || 'Ukjent', farge: UKJENT_FARGE };
+  const katInfo = k => KATEGORIER[k]
+    ? { navn: (SPRAK === 'en' && KATEGORIER[k].en) || KATEGORIER[k].navn, farge: KATEGORIER[k].farge }
+    : { navn: state.ukjenteKategorier[k] || k || t('ukjent'), farge: UKJENT_FARGE };
+
+  /* Engelsk navn og notat når det finnes og språket er engelsk, ellers norsk. */
+  const visNavn = p => (SPRAK === 'en' && p.navn_en) || p.navn || '';
+  const visNotat = p => (SPRAK === 'en' && p.notat_en) || p.notat || '';
   const erLinjekategori = k => k === 'gaatur';
 
   function esc(s) {
@@ -730,12 +895,12 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
   }
 
   function ruteMeta(p) {
-    return [p.lengde, p.varighet, p.sone].filter(Boolean).join(' · ');
+    return [maal(p.lengde), maal(p.varighet), p.sone].filter(Boolean).join(' · ');
   }
 
   /* Første avsnitt av notatet, forkortet — brukes i lista. Hele notatet vises i popup/rutekort. */
-  function kortNotat(t) {
-    const a = String(t || '').split(/\n\s*\n/)[0].replace(/\s*\n\s*/g, ' ');
+  function kortNotat(tekst) {
+    const a = String(tekst || '').split(/\n\s*\n/)[0].replace(/\s*\n\s*/g, ' ');
     return a.length > 160 ? a.slice(0, 157).replace(/\s+\S*$/, '') + ' …' : a;
   }
 
@@ -754,14 +919,15 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
   function popupHtml(p, latlng, id) {
     const lenke = mapsLenke(p, latlng);
     const lenker = [
-      id ? '<button type="button" class="pop-lenke pop-zoom" data-id="' + esc(id) + '">Zoom inn</button>' : '',
-      lenke ? '<a class="pop-lenke" href="' + lenke + '" target="_blank" rel="noopener">Åpne i Google Maps</a>' : '',
-      p.nettside ? '<a class="pop-lenke" href="' + esc(p.nettside) + '" target="_blank" rel="noopener">Nettside</a>' : ''
+      id ? '<button type="button" class="pop-lenke pop-zoom" data-id="' + esc(id) + '">' + t('zoomInn') + '</button>' : '',
+      lenke ? '<a class="pop-lenke" href="' + lenke + '" target="_blank" rel="noopener">' + t('aapneMaps') + '</a>' : '',
+      p.nettside ? '<a class="pop-lenke" href="' + esc(p.nettside) + '" target="_blank" rel="noopener">' + t('nettside') + '</a>' : ''
     ].filter(Boolean);
-    return '<h3 class="pop-navn">' + esc(p.navn) + '</h3>' +
+    const notat = visNotat(p);
+    return '<h3 class="pop-navn">' + esc(visNavn(p)) + '</h3>' +
       '<p class="pop-meta">' + esc(metaLinje(p) || ruteMeta(p)) + '</p>' +
       (p.gater && p.gater.length ? '<p class="pop-gater">' + esc(p.gater.join(' · ')) + '</p>' : '') +
-      (p.notat ? '<p class="pop-notat">' + esc(p.notat) + '</p>' : '') +
+      (notat ? '<p class="pop-notat">' + esc(notat) + '</p>' : '') +
       (lenker.length ? '<p class="pop-lenker">' + lenker.join('<span class="pop-skille">·</span>') + '</p>' : '');
   }
 
@@ -811,7 +977,9 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       if (state.kategorier.size && !state.kategorier.has(p.kategori)) return false;
       if (state.kunFavoritter && !p.favoritt) return false;
       if (q) {
-        const hay = [p.navn, p.notat, p.sone, katInfo(p.kategori).navn].concat(p.gater || []).join(' ').toLowerCase();
+        const kat = KATEGORIER[p.kategori] || {};
+        const hay = [p.navn, p.navn_en, p.notat, p.notat_en, p.sone, katInfo(p.kategori).navn, kat.navn, kat.en]
+          .concat(p.gater || []).join(' ').toLowerCase();
         if (!hay.includes(q)) return false;
       }
       return true;
@@ -827,8 +995,8 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
     const antSteder = vis.filter(o => !o.erLinje).length;
     const antLinjer = vis.length - antSteder;
-    const deler = [antSteder + (antSteder === 1 ? ' sted' : ' steder')];
-    if (antLinjer) deler.push(antLinjer + (antLinjer === 1 ? ' rute' : ' ruter'));
+    const deler = [t('steder', antSteder)];
+    if (antLinjer) deler.push(t('ruter', antLinjer));
     el.teller.textContent = deler.join(' · ');
 
     tegnListe(vis);
@@ -845,12 +1013,12 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     el.liste.innerHTML = '';
 
     if (!vis.length) {
-      const t = document.createElement('p');
-      t.className = 'tomt';
-      t.textContent = state.oppslag.length
-        ? 'Ingen treff. Juster filtrene eller søket.'
-        : 'Ingen steder lagt inn ennå.';
-      el.liste.appendChild(t);
+      const tomt = document.createElement('p');
+      tomt.className = 'tomt';
+      tomt.textContent = state.oppslag.length
+        ? t('ingenTreff')
+        : t('ingenSteder');
+      el.liste.appendChild(tomt);
       return;
     }
 
@@ -861,13 +1029,13 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
         const sa = rekkefolge.indexOf(a.p.sone), sb = rekkefolge.indexOf(b.p.sone);
         if (sa !== sb) return (sa < 0 ? 99 : sa) - (sb < 0 ? 99 : sb);
         if (!!b.p.favoritt !== !!a.p.favoritt) return b.p.favoritt ? 1 : -1;
-        return (a.p.navn || '').localeCompare(b.p.navn || '', 'nb');
+        return visNavn(a.p).localeCompare(visNavn(b.p), SPRAK === 'en' ? 'en' : 'nb');
       })
       .forEach((o, i, arr) => {
         if (medSoner && (i === 0 || arr[i - 1].p.sone !== o.p.sone)) {
           const h = document.createElement('p');
           h.className = 'sone-hode';
-          h.textContent = o.p.sone || 'Uten sone';
+          h.textContent = o.p.sone || t('utenSone');
           el.liste.appendChild(h);
         }
         el.liste.appendChild(oppslagEl(o));
@@ -885,14 +1053,14 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
     div.innerHTML =
       '<div class="oppslag-topp">' +
-        '<h2 class="oppslag-navn">' + esc(p.navn) + '</h2>' +
-        (p.favoritt ? '<span class="favoritt-merke">Favoritt</span>' : '') +
+        '<h2 class="oppslag-navn">' + esc(visNavn(p)) + '</h2>' +
+        (p.favoritt ? '<span class="favoritt-merke">' + t('favoritt') + '</span>' : '') +
       '</div>' +
       '<p class="oppslag-meta">' +
         '<span class="prikk" style="background:' + info.farge + '"></span>' +
         esc(metaLinje(p) || ruteMeta(p)) +
       '</p>' +
-      (p.notat ? '<p class="oppslag-notat">' + esc(kortNotat(p.notat)) + '</p>' : '');
+      (visNotat(p) ? '<p class="oppslag-notat">' + esc(kortNotat(visNotat(p))) + '</p>' : '');
 
     div.addEventListener('click', () => velg(o.id, true));
     div.addEventListener('keydown', e => {
@@ -938,10 +1106,10 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
   function visRuteKort(o) {
     const p = o.p;
-    el.ruteKicker.textContent = 'Gåtur' + (o.f.geometry ? '' : ' · rute ikke tegnet');
-    el.ruteNavn.textContent = p.navn || '';
+    el.ruteKicker.textContent = t('gatur') + (o.f.geometry ? '' : ' · ' + t('ruteIkkeTegnet'));
+    el.ruteNavn.textContent = visNavn(p);
     el.ruteMeta.textContent = ruteMeta(p);
-    el.ruteNotat.textContent = p.notat || '';
+    el.ruteNotat.textContent = visNotat(p);
     el.ruteZoom.dataset.id = o.id;
     el.ruteZoom.parentNode.style.display = o.bbox ? '' : 'none';
     el.ruteKort.hidden = false;
@@ -982,7 +1150,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     const blokk = beholder.closest('.filterblokk') || beholder;
     blokk.hidden = verdier.length < 2;
     if (blokk.hidden) return;
-    beholder.appendChild(lagChip('Alle', null, set.size === 0, () => velgEn(set, null)));
+    beholder.appendChild(lagChip(t('alle'), null, set.size === 0, () => velgEn(set, null)));
     verdier.forEach(v => {
       beholder.appendChild(lagChip(navnFor(v), fargeFor ? fargeFor(v) : null, set.has(v), () => velgEn(set, v)));
     });
@@ -997,7 +1165,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     // status
     el.fStatus.innerHTML = '';
     el.fStatus.hidden = !state.oppslag.length;
-    el.fStatus.appendChild(lagChip('Kun favoritter', null, state.kunFavoritter, () => {
+    el.fStatus.appendChild(lagChip(t('kunFavoritter'), null, state.kunFavoritter, () => {
       state.kunFavoritter = !state.kunFavoritter;
       byggFiltre();
       tegn();
@@ -1011,17 +1179,43 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
   /* ---------- side fra metadata ---------- */
 
+  let sideMeta = null;
+
+  function settTekster(meta) {
+    const en = SPRAK === 'en';
+    const tittel = (en && meta.tittelEn) || meta.tittel || '';
+    const undertittel = (en && meta.undertittelEn) || meta.undertittel || '';
+    if (tittel) document.title = tittel;
+    el.tittel.textContent  = tittel;
+    el.ingress.textContent = undertittel;
+    el.ingress.hidden = !undertittel;
+  }
+
   function settOppSide(meta) {
-    if (meta.tittel) document.title = meta.tittel;
-    el.tittel.textContent  = meta.tittel || '';
-    el.ingress.textContent = meta.undertittel || '';
-    el.ingress.hidden = !meta.undertittel;
+    sideMeta = meta;
+    settTekster(meta);
 
     // senter er [lengdegrad, breddegrad], som i resten av GeoJSON
     const senter = Array.isArray(meta.senter) && meta.senter.length === 2 ? meta.senter : [0, 20];
     startvisning = { center: senter, zoom: typeof meta.zoom === 'number' ? meta.zoom : 11 };
     kart.jumpTo(startvisning);
   }
+
+  /* ---------- språkbytte ----------
+     Faste tekster byttes av oversettDom(); her tegnes det som bygges fra dataene. */
+
+  let fot = null, feil = null;
+
+  sprakLyttere.push(() => {
+    if (feil) { feil(); return; }
+    if (sideMeta) settTekster(sideMeta);
+    if (fot) el.fotTekst.innerHTML = fot();
+    byggFiltre();
+    tegn();
+    const o = state.valgtId && oppslagFraId(state.valgtId);
+    if (o && o.erLinje) visRuteKort(o);
+    else if (o && o.punkt && popup.isOpen()) aapnePopup(o, o.punkt);
+  });
 
   /* ---------- last data ---------- */
 
@@ -1078,14 +1272,16 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
         filtrerKart(synlige());
       });
 
-      el.fotTekst.innerHTML = 'Rediger <code>' + esc(DATA_NAVN) + '</code> for å legge til steder.' +
-        (meta.oppdatert ? ' Sist oppdatert ' + esc(meta.oppdatert) + '.' : '');
+      fot = () => t('fot', '<code>' + esc(DATA_NAVN) + '</code>', esc(meta.oppdatert || ''));
+      el.fotTekst.innerHTML = fot();
     })
     .catch(err => {
-      el.liste.innerHTML = '<p class="tomt">Fant ikke <code>' + esc(DATA_NAVN) + '</code> (' + esc(err.message) +
-        ').<br><br>Åpnes siden fra <code>file://</code>? Kjør <code>python3 -m http.server</code> i mappen ' +
-        'og åpne <code>localhost:8000</code>.</p>';
-      el.teller.textContent = 'Ingen data';
+      feil = () => {
+        el.liste.innerHTML = '<p class="tomt">' + t('fantIkke', '<code>' + esc(DATA_NAVN) + '</code>', esc(err.message)) +
+          '<br><br>' + t('lokalt') + '</p>';
+        el.teller.textContent = t('ingenData');
+      };
+      feil();
     });
 
 }
