@@ -473,8 +473,17 @@ html, body {
   70%  { transform: scale(3.2); opacity: 0; }
   100% { transform: scale(3.2); opacity: 0; }
 }
+/* «Reduser bevegelse» (iOS) / «Fjern animasjoner» (Android) er ofte slått på på mobil.
+   Da slo pulsen seg helt av. I stedet: en glorie som står stille og bare toner inn og ut. */
+@keyframes egen-posisjon-glorie {
+  0%, 100% { opacity: 0.1; }
+  50%      { opacity: 0.4; }
+}
 @media (prefers-reduced-motion: reduce) {
-  .maplibregl-user-location-dot.maplibregl-user-location-dot::before { animation: none; opacity: 0; }
+  .maplibregl-user-location-dot.maplibregl-user-location-dot::before {
+    transform: scale(2.4);
+    animation: egen-posisjon-glorie 3.5s ease-in-out infinite;
+  }
 }
 .maplibregl-user-location-dot.maplibregl-user-location-dot-stale { background-color: #8A96A8; }
 .maplibregl-user-location-dot.maplibregl-user-location-dot-stale::before { display: none; }

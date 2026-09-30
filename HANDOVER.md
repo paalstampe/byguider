@@ -1,7 +1,7 @@
 # Byguider — overlevering
 
 Statusdokument for å ta prosjektet videre i en Cowork-økt.
-Sist oppdatert: 30. september 2026 (språkbryter norsk/engelsk på grenen `sprak`).
+Sist oppdatert: 30. september 2026 (mobilretting på grenen `mobil`).
 
 ---
 
@@ -373,5 +373,10 @@ Hvert trinn skal kunne committes for seg og fungere alene.
   gangen (trykk igjen = Alle), «Nullstill» fjernet; «besøkt» fjernet fra visning og data;
   «Zoom inn» i popupen (til området om det er tegnet, ellers bydelsnivå for nabolag og gatenivå
   for steder); byer med `"status": "kommer"` i byer.json vises dempet uten lenke (Oslo).
+- Mobil (grenen `mobil`, 30.9.): navnelappen ved hover vises bare med ekte hover
+  (`(hover: hover) and (pointer: fine)`) — på berøringsskjerm ga den etterlignede mousemove-en
+  lapp på første trykk, iOS svelget klikket, og popupen kom på andre trykk oppå lappen. Popupen
+  fjerner alltid lappen. Egen posisjon: med «Reduser bevegelse» slått på (vanlig på mobil) var
+  pulsen helt av; nå en stillestående glorie som toner inn og ut.
 - Neste: data. Pål kommer med navneendringer (som Marylebone High Street → Marylebone Village)
   og nye steder; områdeskisser tegnes etter hvert. Eksempelstedene er merket EKSEMPEL.
