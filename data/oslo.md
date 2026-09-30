@@ -1,6 +1,8 @@
 ---
 tittel: Påls Oslo
 undertittel: Restauranter — mine go-to-steder og andre jeg liker.
+tittel-en: Pål’s Oslo
+undertittel-en: Restaurants — my go-to places and others I like.
 senter: 59.9180, 10.7400
 zoom: 13
 oppdatert: 2026-09-28
@@ -23,6 +25,12 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
   - lengde: 2,5 km              gåturer
   - varighet: ca. 1 t           gåturer
   Fri tekst under feltene blir notatet. Første avsnitt vises i lista, alt i popupen.
+
+  Engelsk (språkbryteren NO / EN) — valgfritt; mangler det, vises norsk:
+  - navn-en: Coastal path       engelsk navn, bare når det skiller seg fra det norske
+  - en: English note …          engelsk notat, sist i oppføringen. Fri tekst etter denne
+                                linjen hører også til det engelske notatet.
+  tittel-en: / undertittel-en:  i frontmatter øverst: engelsk tittel og undertittel.
 
 Områdeskisser, gater og gåturer tegnes i oslo-geometri.geojson (f.eks. i geojson.io)
 og kobles hit på navn: type "område", "gate" eller "rute".

@@ -85,6 +85,32 @@ html, body {
 .smuler [aria-current] { color: var(--tekst); }
 .smule-skille { margin: 0 8px; color: var(--kant); font-weight: 400; }
 
+/* Språkbryter NO / EN — fast øverst til høyre; brødsmulene brytes innenfor plassen til venstre */
+.smuler:has(.sprakvalg) { position: relative; padding-right: 72px; row-gap: 6px; }
+.sprakvalg {
+  position: absolute;
+  top: -3px;
+  right: 0;
+  display: inline-flex;
+  align-items: baseline;
+  white-space: nowrap;
+}
+.sprakvalg .smule-skille { margin: 0 2px; }
+.sprakvalg button {
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: var(--dempet);
+  background: none;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  padding: 2px 3px 1px;
+  cursor: pointer;
+}
+.sprakvalg button:hover { color: var(--aksent); }
+.sprakvalg button[aria-pressed="true"] { color: var(--tekst); border-bottom-color: var(--aksent); }
+.sprakvalg button:focus-visible { outline: 1px solid var(--aksent); outline-offset: 2px; }
+
 .tittel {
   margin: 0;
   font-family: 'Playfair Display', Georgia, serif;
@@ -634,5 +660,7 @@ button.pop-lenke {
   .sidebar-fot { padding-left: 20px; padding-right: 20px; }
   .rute-kort { left: 12px; right: 12px; width: auto; bottom: 12px; }
   .forside-innhold { padding: 40px 20px 48px; }
+  .sprakvalg { top: -7px; }
+  .sprakvalg button { padding: 6px 5px 3px; }   /* større trykkflate på mobil */
   .by-navn { font-size: 26px; }
 }

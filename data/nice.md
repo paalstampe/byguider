@@ -1,6 +1,8 @@
 ---
 tittel: Påls Nice
 undertittel: Restauranter, caféer og steder verdt en omvei.
+tittel-en: Pål’s Nice
+undertittel-en: Restaurants, cafés and places worth a detour.
 senter: 43.6990, 7.2620
 zoom: 13
 oppdatert: 2026-09-30
@@ -24,6 +26,12 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
   - varighet: ca. 1 t           gåturer
   - utenfor: ja                 holder stedet utenfor utsnittet kartet åpner med (og «Vis hele byen»)
   Fri tekst under feltene blir notatet. Første avsnitt vises i lista, alt i popupen.
+
+  Engelsk (språkbryteren NO / EN) — valgfritt; mangler det, vises norsk:
+  - navn-en: Coastal path       engelsk navn, bare når det skiller seg fra det norske
+  - en: English note …          engelsk notat, sist i oppføringen. Fri tekst etter denne
+                                linjen hører også til det engelske notatet.
+  tittel-en: / undertittel-en:  i frontmatter øverst: engelsk tittel og undertittel.
 
 Områdeskisser, gater og gåturer tegnes i nice-geometri.geojson (f.eks. i geojson.io)
 og kobles hit på navn: type "område", "gate" eller "rute".
@@ -179,78 +187,91 @@ Fine dining
 - google: ChIJabINg9HbzRIRROD1oaTT7vA
 - nettside: https://lapopotedondine.com/
 Lunsj
+- en: Lunch
 
 ### La Popote d'Ondine – Rue Gioffredo
 - sted: 43.70153, 7.27591
 - google: ChIJwxJ4SqXazRIRd0c4_plzmS0
 - nettside: https://lapopotedondine.com/
 Lunsj
+- en: Lunch
 
 ### La Popote d'Ondine – Passage Émile Négrin
 - sted: 43.69845, 7.26870
 - google: ChIJx8vezqTbzRIR5ND4FN-EXSY
 - nettside: https://lapopotedondine.com/
 Lunsj
+- en: Lunch
 
 ### Pinpin
 - sted: 43.70058, 7.28261
 - google: ChIJl9k1H6fbzRIRZbF1UAi8LnM
 - nettside: http://www.pin-pin.fr/
 Lunsj
+- en: Lunch
 
 ### Fino
 - sted: 43.69908, 7.27307
 - google: ChIJN9o6by3bzRIRH5WEZiJf7rk
 - nettside: https://cafefino.fr/
 Lunsj
+- en: Lunch
 
 ### Deli Banh Mi ★
 - sted: 43.69967, 7.27109
 - google: ChIJTdc4QRPbzRIRH8b-ttMUugw
 - nettside: https://delicity.com/deli-banh-mi-nice
 Lunsj
+- en: Lunch
 
 ### Clay – Rue Bonaparte
 - sted: 43.70060, 7.28177
 - google: ChIJHfz3ZK7bzRIR0Ymt-Btfx2k
 - nettside: https://leclay.fr/
 Lunsj
+- en: Lunch
 
 ### Clay – Rue Gioffredo
 - sted: 43.69857, 7.27157
 - google: ChIJlTxwUwDbzRIR9Uj9_nHeiGs
 - nettside: https://leclay.fr/
 Lunsj
+- en: Lunch
 
 ### Maranna
 - sted: 43.69637, 7.27671
 - google: ChIJ22rwonPbzRIR_iWefjIZCzI
 - nettside: http://www.maranna.fr/
 Lunsj
+- en: Lunch
 
 ### Ginette – Rue Pastorelli
 - sted: 43.70015, 7.26904
 - google: ChIJ-4rD-9rbzRIRnI_Afje3FGs
 - nettside: https://ginette-cafe-cantine.com/
 Lunsj
+- en: Lunch
 
 ### Ginette – Rue Meyerbeer
 - sted: 43.69600, 7.26057
 - google: ChIJqy2U3F7RzRIRSgGZdc1CqDQ
 - nettside: https://ginette-cafe-cantine.com/
 Lunsj
+- en: Lunch
 
 ### Le Country Store – Rue de l'Hôtel des Postes
 - sted: 43.69931, 7.27110
 - google: ChIJP7LF4bDbzRIRgqpxBoU3f2c
 - nettside: https://www.lecountrystore.com/
 Kaffe
+- en: Coffee
 
 ### Le Country Store – Rue du Maréchal Joffre
 - sted: 43.69790, 7.26174
 - google: ChIJy777N6TRzRIRpCZSiC01waw
 - nettside: https://www.lecountrystore.com/
 Kaffe
+- en: Coffee
 
 ## Barer
 
@@ -259,6 +280,7 @@ Kaffe
 - google: ChIJb5hW0yfbzRIRc9OxuKFcR9c
 - nettside: https://www.instagram.com/vibes.bar.nice/
 Cocktailbar
+- en: Cocktail bar
 
 ## Muséer og gallerier
 
@@ -275,6 +297,7 @@ Cocktailbar
 - google: ChIJe7daQ7_azRIRisFL66Jl5u8
 - nettside: https://www.cafeducycliste.com/
 Sykkelklær og café
+- en: Cycling apparel and café
 
 ### Trésors Publics
 - sted: 43.69633, 7.27601
@@ -317,6 +340,7 @@ Beach club
 - google: ChIJ4SY2c2nbzRIRV_-gwV4myCE
 - utenfor: ja
 Strand, Saint-Jean-Cap-Ferrat
+- en: Beach, Saint-Jean-Cap-Ferrat
 
 ### Anjuna Beach
 - sted: 43.71941, 7.35279
@@ -331,17 +355,24 @@ Beach club, Èze-sur-Mer
 - sted: 43.70958, 7.26198
 - google: ChIJHwn6DwHQzRIRZSeaT5GiGks
 Matmarked
+- en: Food market
 
 ## Gåturer
 
 ### Kyststien fra Coco Beach til Villefranche-sur-Mer
+- navn-en: Coastal path from Coco Beach to Villefranche-sur-Mer
 - lengde: ca. 5 km
 - varighet: ca. 1 t 45 min
 - utenfor: ja
 Sentier du Littoral langs vannet til Plage de la Plateforme. Tilbake samme vei, opp Sentier du Littoral og Av. du Cap-de-Nice til Bd Maurice Maeterlinck, ned igjen til vannet og langs kysten rundt Cap de Nice og inn til gamlebyen i Villefranche.
 
+- en: The Sentier du Littoral along the water to Plage de la Plateforme. Back the same way, up the Sentier du Littoral and Av. du Cap-de-Nice to Bd Maurice Maeterlinck, down to the water again and along the coast around Cap de Nice into the old town of Villefranche.
+
 ### Rundt Saint-Jean-Cap-Ferrat
+- navn-en: Around Saint-Jean-Cap-Ferrat
 - lengde: ca. 6 km
 - varighet: ca. 2 t
 - utenfor: ja
 Chemin des Douaniers, kyststien rundt hele kappen.
+
+- en: Chemin des Douaniers, the coastal path around the whole cape.

@@ -1,6 +1,8 @@
 ---
 tittel: Påls London
 undertittel: Gater, torg og strøk verdt en omvei — med noen ruter å gå dem på.
+tittel-en: Pål’s London
+undertittel-en: Streets, squares and neighbourhoods worth a detour — with a few walks to take them in.
 senter: 51.5105, -0.1235
 zoom: 11
 oppdatert: 2026-09-27
@@ -23,6 +25,12 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
   - lengde: 2,5 km              gåturer
   - varighet: ca. 1 t           gåturer
   Fri tekst under feltene blir notatet. Første avsnitt vises i lista, alt i popupen.
+
+  Engelsk (språkbryteren NO / EN) — valgfritt; mangler det, vises norsk:
+  - navn-en: Coastal path       engelsk navn, bare når det skiller seg fra det norske
+  - en: English note …          engelsk notat, sist i oppføringen. Fri tekst etter denne
+                                linjen hører også til det engelske notatet.
+  tittel-en: / undertittel-en:  i frontmatter øverst: engelsk tittel og undertittel.
 
 Områdeskisser, gater og gåturer tegnes i london-geometri.geojson (f.eks. i geojson.io)
 og kobles hit på navn: type "område", "gate" eller "rute".
@@ -83,6 +91,7 @@ Tyburnia
 - sted: 51.5347, -0.1040
 - google: ChIJS2-WPs4EdkgRT5bUdYdl1Os
 Antikk
+- en: Antiques
 
 ### Crouch End
 - sted: 51.5796, -0.1234
@@ -133,11 +142,13 @@ Peckham
 - sted: 51.4195, -0.0839
 - google: ChIJ79E0xE8BdkgRh0mDf0w1zco
 Ønskeliste
+- en: Wish list
 
 ### Dulwich Village
 - sted: 51.4506, -0.0855
 - google: ChIJdXaCE_MDdkgRNbsLxUq87W8
 Ønskeliste
+- en: Wish list
 
 ### East Dulwich
 - sted: 51.4617, -0.0800
@@ -147,6 +158,7 @@ Peckham
 - sted: 51.4545, -0.0967
 - google: ChIJ1QO9jYcDdkgRHAlfXDX_ugA
 Ønskeliste
+- en: Wish list
 
 ### Northcote Road
 - sted: 51.4572, -0.1656
@@ -156,6 +168,7 @@ Peckham
 - sted: 51.4655, -0.0587
 - google: ChIJDWdRh6UDdkgRIZme5IYIHaE
 Ønskeliste
+- en: Wish list
 
 ## Muséer og gallerier
 
@@ -164,10 +177,12 @@ Peckham
 - google: ChIJ2SOnxbocdkgRxmoRKRwc49M
 - nettside: https://whitecube.com/
 EKSEMPEL — galleri
+- en: EXAMPLE — gallery
 
 ## Gåturer
 
 ### Bermondsey-runden ★
+- navn-en: Bermondsey loop
 Ta Jubilee fra Baker Street til London Bridge.
 - Gå innom Borough Market.
 - Gå så til Shad Thames ved Tower Bridge (f.eks. langs Thames på The Queen's Walk) — bevart (men gentrifisert) lagerområde slik det så ut langs Thames før i tiden.
@@ -175,6 +190,14 @@ Ta Jubilee fra Baker Street til London Bridge.
 - Mange barer, enkle spisesteder og noen småbutikker under jernbanebuene på begge sider sørøst for Maltby Street (Druid St og Enid St f.eks.).
 - Gå så til Bermondsey Street (f.eks. Abbey St til The Bermondsey Square Hotel, og Bermondsey St nordover mot Thames). Merk: White Cube (galleri) og Fashion and Textile Museum (ikke åpent i helgen).
 - Tilbake til f.eks. London Bridge Station via Tooley St.
+
+- en: Take the Jubilee line from Baker Street to London Bridge.
+- Stop by Borough Market.
+- Then walk to Shad Thames by Tower Bridge (e.g. along the river on The Queen’s Walk) — a preserved (if gentrified) warehouse district that shows what the Thames riverside once looked like.
+- On to Maltby Street Market (Ropewalk) for a bite to eat.
+- Plenty of bars, casual places to eat and a few small shops in the railway arches on both sides south-east of Maltby Street (Druid St and Enid St, for example).
+- Then walk to Bermondsey Street (e.g. Abbey St to The Bermondsey Square Hotel, then Bermondsey St north towards the Thames). Worth noting: White Cube (gallery) and the Fashion and Textile Museum (closed at weekends).
+- Back to e.g. London Bridge Station via Tooley St.
 
 # East
 
@@ -184,11 +207,13 @@ Ta Jubilee fra Baker Street til London Bridge.
 - sted: 51.5367, -0.0617
 - google: ChIJaZN7MugcdkgRdBDt4u41D4A
 Marked lørdager
+- en: Market on Saturdays
 
 ### Columbia Road ★
 - sted: 51.5291, -0.0698
 - google: ChIJUe_EX7McdkgRUyuFGZPputs
 Blomstermarked søndager
+- en: Flower market on Sundays
 
 ### London Fields ★
 - sted: 51.5418, -0.0602
@@ -215,6 +240,10 @@ Blomstermarked søndager
 EKSEMPEL — ruten på kartet er en grov skisse; tegn den langs gatene i geojson.io.
 
 Start i London Fields. Gå ned Broadway Market, så bort til og ned Columbia Road, og så ned til Shoreditch inkludert Redchurch Street, og så ned Brick Lane til Spitalfields.
+
+- en: EXAMPLE — the route on the map is a rough sketch; draw it along the streets in geojson.io.
+
+Start in London Fields. Walk down Broadway Market, then over to and down Columbia Road, on to Shoreditch including Redchurch Street, and finally down Brick Lane to Spitalfields.
 
 # West
 
@@ -245,6 +274,7 @@ Lonsdale / Salusbury Road
 - sted: 51.4738, -0.2492
 - google: ChIJG6sdYVgOdkgRrgKNBvsQTyo
 Farmers market lørdag
+- en: Farmers’ market on Saturdays
 
 ### Chiswick High Road / Turnham Green
 - sted: 51.4920, -0.2663
@@ -255,6 +285,7 @@ Devonshire Road
 - sted: 51.4852, -0.2880
 - google: ChIJMevjjNkNdkgRtEdyVHdNdko
 Ønskeliste — kombiner med Kew Gardens
+- en: Wish list — combine with Kew Gardens
 
 ### Little Venice
 - sted: 51.5233, -0.1838
@@ -271,6 +302,7 @@ Devonshire Road
 - google: ChIJVRbdmE0PdkgRh_lJOXrBqeM
 - nettside: http://www.hermanoscoffeeroasters.com/
 EKSEMPEL — Barnes. Koordinat er omtrentlig
+- en: EXAMPLE — Barnes. Location is approximate
 
 ## Verdt en omvei
 
@@ -279,8 +311,11 @@ EKSEMPEL — Barnes. Koordinat er omtrentlig
 - google: ChIJnfoSY6wPdkgR69kRGIFCCUU
 - nettside: https://www.wwt.org.uk/wetland-centres/london/
 EKSEMPEL — viser hvordan en park legges inn
+- en: EXAMPLE — shows how a park is added
 
 ## Gåturer
 
 ### Holland Park → Westbourne Grove ★
 Start på Holland Park-stasjonen og gå Holland Park Avenue og så Clarendon Road eller Lansdowne Road til Clarendon Cross. Så Elgin Crescent (via evt. gågate-strekket i Kensington Park Road) til Portobello Road, og så inn Westbourne Grove.
+
+- en: Start at Holland Park station and walk along Holland Park Avenue, then Clarendon Road or Lansdowne Road to Clarendon Cross. Then Elgin Crescent (possibly via the pedestrianised stretch of Kensington Park Road) to Portobello Road, and on into Westbourne Grove.
