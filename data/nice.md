@@ -266,6 +266,7 @@ Cocktailbar
 - sted: 43.71952, 7.27588
 - google: ChIJnz74K1DFzRIRiRaLt2c5MhA
 - nettside: https://www.musee-matisse-nice.org/en/
+- utenfor: ja
 
 ## Butikker
 
