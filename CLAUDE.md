@@ -18,7 +18,7 @@ Hold HANDOVER.md oppdatert når noe vesentlig endres (punkt 2, 8 og 10.5).
   bygges av .github/workflows/pages.yml).
 - Sjekk designet selv: .claude/skjermbilde.sh <url> <fil.png> 390 844 (mobil) og 1300 900 (desktop);
   legg til «hel» for hele siden. Tillatt: https://stam.pe/... og http://localhost:<port>/... (eller 127.0.0.1)
-  (kjør python3 -m http.server 8000 først — gir rask sjekk før push). Virker i skyen og på Macen;
+  (kjør python3 -m http.server 8000 --bind 127.0.0.1 først — gir rask sjekk før push). Virker i skyen og på Macen;
   på Macen kreves Node og Playwright (installasjon øverst i skriptet).
 - Fletting: Kan du selv verifisere at alt er i orden (skjermbilder mobil + desktop, ingen JS-feil),
   åpne PR og flett uten å spørre. Er det noe Pål bør se på (designvalg, smak, usikkerhet), push grenen,
