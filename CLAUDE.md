@@ -13,12 +13,15 @@ Hold HANDOVER.md oppdatert når noe vesentlig endres (punkt 2, 8 og 10.5).
 ## Arbeidsflyt
 - Endringer som ikke trenger forhåndsvisning — data (data/*.md, data/*-geometri.geojson, byer.json)
   og dokumentasjon (CLAUDE.md, HANDOVER.md) — pushes rett til main, uten gren og PR.
-- Kodeendringer (app.js, style.css, index.html, stubber) på egen gren. Push grenen, og oppgi
-  forhåndsvisningen: https://stam.pe/byguider/forhandsvisning/<gren>/london/ (klar 1–2 min etter push,
-  bygges av .github/workflows/pages.yml). Pål sjekker den på mobil og desktop før fletting.
-- Sjekk designet selv før du oppgir forhåndsvisningen: .claude/skjermbilde.sh <url> <fil.png> 390 844
-  (mobil) og 1300 900 (desktop); legg til «hel» for hele siden. Bare https://stam.pe/... er tillatt.
-- Åpne PR mot main når Pål er fornøyd, eller når han ber om det. Flett bare når han sier det.
+- Kodeendringer (app.js, style.css, index.html, stubber, .claude/) på egen gren. Push grenen; forhåndsvisningen
+  er https://stam.pe/byguider/forhandsvisning/<gren>/london/ (klar 1–2 min etter push,
+  bygges av .github/workflows/pages.yml).
+- Sjekk designet selv: .claude/skjermbilde.sh <url> <fil.png> 390 844 (mobil) og 1300 900 (desktop);
+  legg til «hel» for hele siden. Tillatt: https://stam.pe/... og http://localhost:<port>/...
+  (kjør python3 -m http.server 8000 først — gir rask sjekk før push).
+- Fletting: Kan du selv verifisere at alt er i orden (skjermbilder mobil + desktop, ingen JS-feil),
+  åpne PR og flett uten å spørre. Er det noe Pål bør se på (designvalg, smak, usikkerhet), push grenen,
+  oppgi forhåndsvisningen og vent — flett når han sier ok.
 - GitHub sletter grenen automatisk ved fletting. Sjekk bare at den er borte (git ls-remote --heads origin);
   slett den selv bare hvis den likevel ligger igjen.
 - Én endring per gren. Små, selvstendige commits.
@@ -27,7 +30,7 @@ Hold HANDOVER.md oppdatert når noe vesentlig endres (punkt 2, 8 og 10.5).
 - Ingen byggesteg, ingen rammeverk, ingen npm. Statiske filer: index.html, app.js, style.css, byer.json.
 - MapLibre GL JS v5 fra unpkg, CARTO Voyager vektorstil omfarget til papirpaletten (KARTPALETT/STILREGLER).
 - CARTO_KEY i app.js velges etter vertsnavn: én nøkkel for stam.pe, *.stam.pe og paalstampe.github.io,
-  én for localhost/127.0.0.1. Fra andre opphav blir kartet blankt — det er ikke en feil.
+  én for localhost (ikke 127.0.0.1). Fra andre opphav blir kartet blankt — det er ikke en feil.
   Ikke commit endringer i nøklene.
 - Kategorier, farger og ikoner defineres ett sted: KATEGORIER og IKONER øverst i app.js.
 - Faste tekster finnes på norsk og engelsk i TEKST i app.js (og egen TEKST i index.html).
