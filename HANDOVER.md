@@ -205,7 +205,8 @@ jobben. Nærmer seg en guidebok.
 - Ingen byggesteg, ingen rammeverk. Statiske filer.
 
 Praktisk: `fetch()` blokkeres når sidene åpnes fra `file://`.
-Kjør `python3 -m http.server` i `byguider/` og åpne `localhost:8000/london/`.
+Kjør `python3 -m http.server` i `byguider/` og åpne `localhost:8000/london/` — kartet virker
+lokalt med egen CARTO-nøkkel (se punkt 9).
 
 ---
 
@@ -257,10 +258,10 @@ flett.
 - Lista virker selv om kartet ikke laster (f.eks. CARTO 403); lagene legges på når stilen er klar.
 - Zoom i MapLibre er én lavere enn Leaflet for samme utsnitt. `metadata.zoom` for London er 11.
 - CARTO-nøkkelen ligger som `CARTO_KEY` øverst i `app.js` og sendes med på stil-URL-en.
-  Domenerestriksjonen er på: `stam.pe`, `*.stam.pe`, `paalstampe.github.io`. Fra andre opphav
-  (`localhost`, raw.githack.com) svarer CARTO uten CORS-header og kartet blir blankt — ikke en
-  kodefeil. For lokal testing: fjern nøkkelen midlertidig i `app.js` (stilen svarer 200 uten nøkkel),
-  og ikke commit det.
+  To nøkler, valgt etter `location.hostname` (CARTO krever egen nøkkel for lokale opphav):
+  publisert (`stam.pe`, `*.stam.pe`, `paalstampe.github.io`) og lokal (`localhost`, `127.0.0.1`).
+  Fra andre opphav (raw.githack.com o.l.) svarer CARTO uten CORS-header og kartet blir blankt —
+  ikke en kodefeil.
 
 ---
 

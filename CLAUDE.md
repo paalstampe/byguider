@@ -26,8 +26,9 @@ Hold HANDOVER.md oppdatert når noe vesentlig endres (punkt 2, 8 og 10.5).
 ## Teknikk (kort — detaljer i HANDOVER.md)
 - Ingen byggesteg, ingen rammeverk, ingen npm. Statiske filer: index.html, app.js, style.css, byer.json.
 - MapLibre GL JS v5 fra unpkg, CARTO Voyager vektorstil omfarget til papirpaletten (KARTPALETT/STILREGLER).
-- CARTO_KEY i app.js er domenebegrenset (stam.pe, *.stam.pe, paalstampe.github.io). Fra localhost
-  blir kartet blankt — det er ikke en feil. Ikke commit endringer i nøkkelen.
+- CARTO_KEY i app.js velges etter vertsnavn: én nøkkel for stam.pe, *.stam.pe og paalstampe.github.io,
+  én for localhost/127.0.0.1. Fra andre opphav blir kartet blankt — det er ikke en feil.
+  Ikke commit endringer i nøklene.
 - Kategorier, farger og ikoner defineres ett sted: KATEGORIER og IKONER øverst i app.js.
 - Faste tekster finnes på norsk og engelsk i TEKST i app.js (og egen TEKST i index.html).
   Nye UI-tekster skal alltid ha begge språk.
