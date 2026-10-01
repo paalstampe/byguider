@@ -26,6 +26,9 @@ Hold HANDOVER.md oppdatert når noe vesentlig endres (punkt 2, 8 og 10.5).
 - Lokal økt på Påls Mac: skal Pål se på noe, start serveren selv om den ikke kjører
   (python3 -m http.server 8000 --bind 127.0.0.1, i bakgrunnen) og åpne siden for ham med
   open http://localhost:8000/<by>/. Stopp serveren når han er ferdig. I skyøkter: bruk forhåndsvisningen.
+- Lokal eller sky velges når Pål starter økta. Kode- og designarbeid går raskest lokalt på Macen;
+  data og dokumentasjon går like bra i sky. Får du en kode- eller designoppgave i en skyøkt,
+  si fra tidlig at den egner seg bedre lokalt (fortsett hvis Pål vil).
 - GitHub sletter grenen automatisk ved fletting. Sjekk bare at den er borte (git ls-remote --heads origin);
   slett den selv bare hvis den likevel ligger igjen.
 - Én endring per gren. Små, selvstendige commits.
