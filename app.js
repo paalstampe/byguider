@@ -312,7 +312,7 @@ function lesKoordinat(tekst) {
   return m ? [parseFloat(m[2]), parseFloat(m[1])] : null;
 }
 
-const FELT = ['sted', 'besokt', 'google', 'nettside', 'gater', 'lengde', 'varighet', 'utenfor', 'en', 'navn-en'];  // besokt leses, men vises ikke
+const FELT = ['sted', 'besokt', 'google', 'nettside', 'gater', 'lengde', 'varighet', 'utenfor', 'en', 'navn-en', 'les'];  // besokt leses, men vises ikke
 
 function lesMarkdown(tekst) {
   const linjer = String(tekst).replace(/\r/g, '').replace(/<!--[\s\S]*?-->/g, '').split('\n');
@@ -357,6 +357,9 @@ function lesMarkdown(tekst) {
         // - en: starter det engelske notatet; fri tekst etter denne linjen hører også til det
         sted.iEngelsk = true;
         sted.notatEn.push(f[2]);
+      } else if (felt === 'les') {
+        // - les: kan gjentas — én lenke til omtale/artikkel per linje
+        (sted.felt.les = sted.felt.les || []).push(f[2].trim());
       } else if (f && FELT.includes(felt)) sted.felt[felt] = f[2].trim();
       else (sted.iEngelsk ? sted.notatEn : sted.notat).push(l);
     }
@@ -397,7 +400,9 @@ function byggFeatures(md, geo) {
       lengde: st.felt.lengde || '',
       varighet: st.felt.varighet || '',
       // utenfor: ja — stedet holdes utenfor startutsnittet (og «Vis hele byen»)
-      utenfor: /^(ja|j|yes|x|true)$/.test(normaliser(st.felt.utenfor))
+      utenfor: /^(ja|j|yes|x|true)$/.test(normaliser(st.felt.utenfor)),
+      // les: «Etikett | https://…» eller bare lenken (etiketten blir da domenet)
+      les: (st.felt.les || []).map(lesLenke).filter(Boolean)
     };
 
     const omrade = finnGeo(st.navn, 'omrade').map(f => ({ type: 'Feature', geometry: f.geometry, properties: { rolle: 'omrade' } }));
@@ -417,6 +422,17 @@ function byggFeatures(md, geo) {
 
     return { type: 'Feature', geometry: geometry, properties: p, fokus: omrade.concat(gater) };
   });
+}
+
+/* «Financial Times | https://www.ft.com/…» -> { tekst, url } */
+function lesLenke(verdi) {
+  const m = String(verdi || '').match(/^(?:(.*?)\s*\|\s*)?(https?:\/\/\S+)\s*$/);
+  if (!m) return null;
+  let tekst = (m[1] || '').trim();
+  if (!tekst) {
+    try { tekst = new URL(m[2]).hostname.replace(/^www\./, ''); } catch (e) { tekst = m[2]; }
+  }
+  return { tekst: tekst, url: m[2] };
 }
 
 /* Metadata fra frontmatter; soner fra rekkefølgen på #-overskriftene. */
@@ -949,7 +965,9 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       id ? '<button type="button" class="pop-lenke pop-zoom" data-id="' + esc(id) + '">' + t('zoomInn') + '</button>' : '',
       lenke ? '<a class="pop-lenke" href="' + lenke + '" target="_blank" rel="noopener">' + t('aapneMaps') + '</a>' : '',
       p.nettside ? '<a class="pop-lenke" href="' + esc(p.nettside) + '" target="_blank" rel="noopener">' + t('nettside') + '</a>' : ''
-    ].filter(Boolean);
+    ].concat((p.les || []).map(l =>
+      '<a class="pop-lenke" href="' + esc(l.url) + '" target="_blank" rel="noopener">' + esc(l.tekst) + '</a>'
+    )).filter(Boolean);
     const notat = visNotat(p);
     return '<h3 class="pop-navn">' + esc(visNavn(p)) + '</h3>' +
       '<p class="pop-meta">' + esc(metaLinje(p) || ruteMeta(p)) + '</p>' +
