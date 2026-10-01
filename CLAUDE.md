@@ -23,6 +23,9 @@ Hold HANDOVER.md oppdatert når noe vesentlig endres (punkt 2, 8 og 10.5).
 - Fletting: Kan du selv verifisere at alt er i orden (skjermbilder mobil + desktop, ingen JS-feil),
   åpne PR og flett uten å spørre. Er det noe Pål bør se på (designvalg, smak, usikkerhet), push grenen,
   oppgi forhåndsvisningen og vent — flett når han sier ok.
+- Lokal økt på Påls Mac: skal Pål se på noe, start serveren selv om den ikke kjører
+  (python3 -m http.server 8000 --bind 127.0.0.1, i bakgrunnen) og åpne siden for ham med
+  open http://localhost:8000/<by>/. Stopp serveren når han er ferdig. I skyøkter: bruk forhåndsvisningen.
 - GitHub sletter grenen automatisk ved fletting. Sjekk bare at den er borte (git ls-remote --heads origin);
   slett den selv bare hvis den likevel ligger igjen.
 - Én endring per gren. Små, selvstendige commits.
