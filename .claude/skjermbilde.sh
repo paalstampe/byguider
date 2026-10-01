@@ -1,15 +1,19 @@
 #!/bin/bash
-# Skjermbilde av en side på stam.pe fra Claude Code-containeren i skyen.
+# Skjermbilde av en side på stam.pe, eller en lokal kopi, fra Claude Code-containeren i skyen.
 # Bruk: .claude/skjermbilde.sh <url> <fil.png> [bredde] [høyde] [hel]
 #   f.eks. .claude/skjermbilde.sh https://stam.pe/byguider/oslo/ oslo.png 390 844        (mobil)
 #          .claude/skjermbilde.sh https://stam.pe/byguider/oslo/ oslo.png 1300 900 hel  (hele siden)
+#          .claude/skjermbilde.sh http://localhost:8000/oslo/ oslo.png 390 844          (lokalt)
+# Lokalt: kjør først «python3 -m http.server 8000» i byguider/. Kartet virker fordi app.js
+# bruker den egne localhost-nøkkelen til CARTO.
 #
 # Containeren går via en proxy som bytter ut TLS-sertifikatene med egne (Anthropic-CA-er i
 # /root/.ccr/ca-bundle.crt). Chromium kjenner dem ikke, og med bare «ignorer sertifikatfeil»
 # gir den opp tilfeldige forespørsler (ERR_TOO_MANY_RETRIES) — da blir kartet blankt.
 # Derfor godtas nøyaktig proxyens CA-er, identifisert på nøkkel (SPKI); alle andre
 # sertifikater verifiseres som normalt. Playwright venter til nettet er stille, slik at
-# kartfliser og markører er tegnet før bildet tas. Bare stam.pe tillates som adresse.
+# kartfliser og markører er tegnet før bildet tas. Bare stam.pe og localhost
+# tillates som adresse; localhost går utenom proxyen.
 set -euo pipefail
 
 url="${1:?url mangler}"
@@ -19,8 +23,8 @@ hoyde="${4:-900}"
 hel="${5:-}"
 
 case "$url" in
-  https://stam.pe/*) ;;
-  *) echo "Bare https://stam.pe/... er tillatt" >&2; exit 1 ;;
+  https://stam.pe/*|http://localhost:*) ;;
+  *) echo "Bare https://stam.pe/... og http://localhost:<port>/... er tillatt" >&2; exit 1 ;;
 esac
 
 tmp=$(mktemp -d)
@@ -40,8 +44,9 @@ const { chromium } = require('playwright');
 (async () => {
   const e = process.env;
   const nettleser = await chromium.launch({
-    proxy: { server: e.HTTPS_PROXY },
-    args: ['--ignore-certificate-errors-spki-list=' + e.SPKI,
+    // Proxy via Chromium-flagg, ikke Playwrights proxy-valg: det sender også localhost til proxyen.
+    args: ['--proxy-server=' + e.HTTPS_PROXY, '--proxy-bypass-list=localhost',
+           '--ignore-certificate-errors-spki-list=' + e.SPKI,
            '--use-gl=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'],
   });
   const side = await nettleser.newPage({ viewport: { width: +e.BREDDE, height: +e.HOYDE } });
