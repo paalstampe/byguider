@@ -12,7 +12,7 @@
 # gir den opp tilfeldige forespørsler (ERR_TOO_MANY_RETRIES) — da blir kartet blankt.
 # Derfor godtas nøyaktig proxyens CA-er, identifisert på nøkkel (SPKI); alle andre
 # sertifikater verifiseres som normalt. Playwright venter til nettet er stille, slik at
-# kartfliser og markører er tegnet før bildet tas. Bare stam.pe og localhost
+# kartfliser og markører er tegnet før bildet tas. Bare stam.pe og localhost/127.0.0.1
 # tillates som adresse; localhost går utenom proxyen.
 set -euo pipefail
 
@@ -23,7 +23,7 @@ hoyde="${4:-900}"
 hel="${5:-}"
 
 case "$url" in
-  https://stam.pe/*|http://localhost:*) ;;
+  https://stam.pe/*|http://localhost:*|http://127.0.0.1:*) ;;
   *) echo "Bare https://stam.pe/... og http://localhost:<port>/... er tillatt" >&2; exit 1 ;;
 esac
 
@@ -45,7 +45,7 @@ const { chromium } = require('playwright');
   const e = process.env;
   const nettleser = await chromium.launch({
     // Proxy via Chromium-flagg, ikke Playwrights proxy-valg: det sender også localhost til proxyen.
-    args: ['--proxy-server=' + e.HTTPS_PROXY, '--proxy-bypass-list=localhost',
+    args: ['--proxy-server=' + e.HTTPS_PROXY, '--proxy-bypass-list=localhost;127.0.0.1',
            '--ignore-certificate-errors-spki-list=' + e.SPKI,
            '--use-gl=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'],
   });

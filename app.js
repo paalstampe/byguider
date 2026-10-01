@@ -261,10 +261,10 @@ const PAPIR = '#F7F4EE';
    rasterkartene, men nøkkelen sendes med på vektorstilen også.
    To nøkler, fordi CARTO krever egen nøkkel for lokale opphav:
    – publisert: låst til stam.pe, *.stam.pe og paalstampe.github.io
-   – lokal: låst til localhost (python3 -m http.server; 127.0.0.1 virker ikke)
+   – lokal: låst til localhost og 127.0.0.1 (python3 -m http.server)
    Fra andre opphav (raw.githack.com o.l.) svarer CARTO uten CORS-header og
    kartet blir blankt — det er ikke en kodefeil. */
-const LOKAL = location.hostname === 'localhost';
+const LOKAL = ['localhost', '127.0.0.1'].includes(location.hostname);
 const CARTO_KEY = LOKAL
   ? 'cb1_400i_2_e6808290ee15514de2ed6c55'
   : 'cb1_400i_1_fd049a8bd96268b9a1be2213';
