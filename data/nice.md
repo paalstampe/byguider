@@ -5,7 +5,7 @@ tittel-en: Pål’s Nice
 undertittel-en: Restaurants, cafés and places worth a detour.
 senter: 43.6990, 7.2620
 zoom: 13
-oppdatert: 2026-09-30
+oppdatert: 2026-10-01
 ---
 
 <!--
@@ -44,11 +44,41 @@ og kobles hit på navn: type "område", "gate" eller "rute".
 - sted: 43.69865, 7.26037
 - google: ChIJh0j648HRzRIR2O7JLHWH22g
 - nettside: https://www.nespo-restaurant.com/
+Middag og lunsj
+
+Middelhavskjøkken med italiensk preg på Boulevard Victor Hugo. Elegant, men ikke formelt. Konsistent og svært høy kvalitet.
+
+Våre favoritter: assiette de pata negra, vitello tonnato, carpaccio de daurade, carpaccio de thon rouge, friture de calamars, rigatoni à la truffe, filet de bœuf au poivre, sole meunière.
+
+Stengt søndag og mandag.
+
+- en: Dinner and lunch
+
+Italian-leaning Mediterranean cooking on Boulevard Victor Hugo. Elegant but not formal. Consistent and of very high quality.
+
+Our favourites: assiette de pata negra, vitello tonnato, carpaccio de daurade, carpaccio de thon rouge, friture de calamars, rigatoni à la truffe, filet de bœuf au poivre, sole meunière.
+
+Closed Sunday and Monday.
 
 ### Le Bistrot de Jan ★
 - sted: 43.69980, 7.28484
 - google: ChIJ4z-TInPbzRIRTk5V0X5EZ8k
 - nettside: https://janonline.com/le-bistrot-de-jan/
+Middag og lunsj
+
+Den uformelle lillebroren til Michelin-restauranten Jan i Rue Lascaris i havneområdet. Fransk bistro med sørafrikanske innslag. Konsistent og meget høy kvalitet. Flott interiør og god stemning.
+
+Våre favoritter: huître de Roumégous n° 3, burratina de bufflonne, samoussa au bobotie de lentilles, tourte au poulet, couscous royal, bobotie de lentilles.
+
+Åpent alle dager.
+
+- en: Dinner and lunch
+
+The informal little brother of Jan, the Michelin-starred restaurant on Rue Lascaris in the port district. French bistro cooking with South African touches. Consistent and of very high quality. Beautiful interior and a great atmosphere.
+
+Our favourites: huître de Roumégous n° 3, burratina de bufflonne, samoussa au bobotie de lentilles, tourte au poulet, couscous royal, bobotie de lentilles.
+
+Open every day.
 
 ### Pirouette ★
 - sted: 43.70042, 7.28501
@@ -188,21 +218,48 @@ Fine dining
 - google: ChIJabINg9HbzRIRROD1oaTT7vA
 - nettside: https://lapopotedondine.com/
 Lunsj
+
+Våre favoritter: salade Cobb, salade Caesar, bagel poulet.
+
+Rue Blacas og Rue de la Liberté er åpne hver dag, Rue Gioffredo mandag til lørdag. Vi foretrekker å sitte på terrassen i Rue Blacas.
+
 - en: Lunch
+
+Our favourites: salade Cobb, salade Caesar, bagel poulet.
+
+Rue Blacas and Rue de la Liberté are open every day, Rue Gioffredo Monday to Saturday. We prefer the terrace on Rue Blacas.
 
 ### La Popote d'Ondine – Rue Gioffredo
 - sted: 43.70153, 7.27591
 - google: ChIJwxJ4SqXazRIRd0c4_plzmS0
 - nettside: https://lapopotedondine.com/
 Lunsj
+
+Våre favoritter: salade Cobb, salade Caesar, bagel poulet.
+
+Rue Blacas og Rue de la Liberté er åpne hver dag, Rue Gioffredo mandag til lørdag. Vi foretrekker å sitte på terrassen i Rue Blacas.
+
 - en: Lunch
+
+Our favourites: salade Cobb, salade Caesar, bagel poulet.
+
+Rue Blacas and Rue de la Liberté are open every day, Rue Gioffredo Monday to Saturday. We prefer the terrace on Rue Blacas.
 
 ### La Popote d'Ondine – Rue de la Liberté
 - sted: 43.69845, 7.26870
 - google: ChIJx8vezqTbzRIR5ND4FN-EXSY
 - nettside: https://lapopotedondine.com/
 Lunsj
+
+Våre favoritter: salade Cobb, salade Caesar, bagel poulet.
+
+Rue Blacas og Rue de la Liberté er åpne hver dag, Rue Gioffredo mandag til lørdag. Vi foretrekker å sitte på terrassen i Rue Blacas.
+
 - en: Lunch
+
+Our favourites: salade Cobb, salade Caesar, bagel poulet.
+
+Rue Blacas and Rue de la Liberté are open every day, Rue Gioffredo Monday to Saturday. We prefer the terrace on Rue Blacas.
 
 ### Pinpin
 - sted: 43.70058, 7.28261
@@ -223,7 +280,20 @@ Lunsj
 - google: ChIJTdc4QRPbzRIRH8b-ttMUugw
 - nettside: https://delicity.com/deli-banh-mi-nice
 Lunsj
+
+Vietnamesisk gatemat i Rue de l'Hôtel des Postes: banh mi, bo bun og nems.
+
+Våre favoritter: banh mi, kyllingsalat, bun chay og naturligvis vietnamesisk kaffe (cà phê sữa đá).
+
+Åpent mandag til lørdag. Liten terrasse.
+
 - en: Lunch
+
+Vietnamese street food on Rue de l'Hôtel des Postes: banh mi, bo bun and nems.
+
+Our favourites: banh mi, chicken salad, bun chay and, of course, Vietnamese coffee (cà phê sữa đá).
+
+Open Monday to Saturday. Small terrace.
 
 ### Clay – Rue Bonaparte
 - sted: 43.70060, 7.28177
@@ -312,11 +382,19 @@ Sykkelklær og café
 - google: ChIJfUqOdgXPzRIR-8aYHCo-Qxw
 - nettside: https://www.marriott.com/en-us/hotels/ncehc-hotel-du-couvent-a-luxury-collection-hotel-nice-france/overview/
 - les: Financial Times | Inside Hôtel du Couvent, a 400-year-old nunnery turned five-star sanctuary in Nice | https://www.ft.com/content/ef323f7a-af07-45e6-834f-877ff37ca9ad
+Et nonnekloster fra 1600-tallet høyt oppe over gamlebyen Vieux-Nice, som åpnet som hotell i 2024. Terrassehager, romerske bad og et rolig tempo som ellers er sjeldent i sentrum. Basseng, kjøkkenhage og egen urtekyndig. Et nytt topphotell i Nice.
+
+- en: A 17th-century convent high above the old town, Vieux-Nice, opened as a hotel in 2024. Terraced gardens, Roman baths and a calm that is otherwise rare in the centre. Pool, kitchen garden and an in-house herbalist. A new top hotel in Nice.
+
 
 ### Hôtel Amour
 - sted: 43.69740, 7.25537
 - google: ChIJ7SvucQDRzRIRzEKI0M7xHss
 - nettside: https://hotelamourparis.fr/hotel-amour-nice/
+Søsteren til Hôtel Amour i Paris, noen kvartaler fra Negresco og Promenade des Anglais. Bohemsk og sosial, med cocktailbar og DJ i helgene, basseng på taket og egen strandklubb.
+
+- en: The sister of Hôtel Amour in Paris, a few blocks from the Negresco and the Promenade des Anglais. Bohemian and social, with a cocktail bar and DJs at weekends, a rooftop pool and its own beach club.
+
 
 ### Le Negresco
 - sted: 43.69455, 7.25833
