@@ -197,7 +197,7 @@ Lunsj
 Lunsj
 - en: Lunch
 
-### La Popote d'Ondine – Passage Émile Négrin
+### La Popote d'Ondine – Rue de la Liberté
 - sted: 43.69845, 7.26870
 - google: ChIJx8vezqTbzRIR5ND4FN-EXSY
 - nettside: https://lapopotedondine.com/
