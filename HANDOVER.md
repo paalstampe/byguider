@@ -259,7 +259,7 @@ flett.
 - Zoom i MapLibre er én lavere enn Leaflet for samme utsnitt. `metadata.zoom` for London er 11.
 - CARTO-nøkkelen ligger som `CARTO_KEY` øverst i `app.js` og sendes med på stil-URL-en.
   To nøkler, valgt etter `location.hostname` (CARTO krever egen nøkkel for lokale opphav):
-  publisert (`stam.pe`, `*.stam.pe`, `paalstampe.github.io`) og lokal (bare `localhost` — `127.0.0.1` gir blankt kart).
+  publisert (`stam.pe`, `*.stam.pe`, `paalstampe.github.io`) og lokal (`localhost`, `127.0.0.1`).
   Fra andre opphav (raw.githack.com o.l.) svarer CARTO uten CORS-header og kartet blir blankt —
   ikke en kodefeil.
 
