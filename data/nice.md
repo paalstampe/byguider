@@ -21,6 +21,7 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
   - google: <Place ID eller lenke fra Google Maps>   gjør at «Åpne i Google Maps» viser stedets side
                                 (uten: søk på navnet ved koordinaten). Claude kan hente Place ID-er.
   - nettside: https://…          stedets egen side — gir lenken «Nettside» i infoboksen
+  - les: Financial Times | Tittel | https://…   artikkel: «Artikkel fra Financial Times: Tittel» sist i infoboksen. Kan gjentas.
   - gater: Gate 1, Gate 2       nabolag: de viktigste gatene
   - lengde: 2,5 km              gåturer
   - varighet: ca. 1 t           gåturer
@@ -310,6 +311,7 @@ Sykkelklær og café
 - sted: 43.69718, 7.27884
 - google: ChIJfUqOdgXPzRIR-8aYHCo-Qxw
 - nettside: https://www.marriott.com/en-us/hotels/ncehc-hotel-du-couvent-a-luxury-collection-hotel-nice-france/overview/
+- les: Financial Times | Inside Hôtel du Couvent, a 400-year-old nunnery turned five-star sanctuary in Nice | https://www.ft.com/content/ef323f7a-af07-45e6-834f-877ff37ca9ad
 
 ### Hôtel Amour
 - sted: 43.69740, 7.25537

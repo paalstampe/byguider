@@ -85,6 +85,8 @@ const TEKST = {
     zoomInn: 'Zoom inn',
     aapneMaps: 'Åpne i Google Maps',
     nettside: 'Nettside',
+    artikkelFra: 'Artikkel fra',
+    artikkel: 'Artikkel',
     visHeleByen: 'Vis hele byen',
     forhandsvisning: 'forhåndsvisning',
     ingenTreff: 'Ingen treff. Juster filtrene eller søket.',
@@ -115,6 +117,8 @@ const TEKST = {
     zoomInn: 'Zoom in',
     aapneMaps: 'Open in Google Maps',
     nettside: 'Website',
+    artikkelFra: 'Article from',
+    artikkel: 'Article',
     visHeleByen: 'Show the whole city',
     forhandsvisning: 'preview',
     ingenTreff: 'No matches. Adjust the filters or the search.',
@@ -312,7 +316,7 @@ function lesKoordinat(tekst) {
   return m ? [parseFloat(m[2]), parseFloat(m[1])] : null;
 }
 
-const FELT = ['sted', 'besokt', 'google', 'nettside', 'gater', 'lengde', 'varighet', 'utenfor', 'en', 'navn-en'];  // besokt leses, men vises ikke
+const FELT = ['sted', 'besokt', 'google', 'nettside', 'gater', 'lengde', 'varighet', 'utenfor', 'en', 'navn-en', 'les'];  // besokt leses, men vises ikke
 
 function lesMarkdown(tekst) {
   const linjer = String(tekst).replace(/\r/g, '').replace(/<!--[\s\S]*?-->/g, '').split('\n');
@@ -357,6 +361,9 @@ function lesMarkdown(tekst) {
         // - en: starter det engelske notatet; fri tekst etter denne linjen hører også til det
         sted.iEngelsk = true;
         sted.notatEn.push(f[2]);
+      } else if (felt === 'les') {
+        // - les: kan gjentas — én lenke til omtale/artikkel per linje
+        (sted.felt.les = sted.felt.les || []).push(f[2].trim());
       } else if (f && FELT.includes(felt)) sted.felt[felt] = f[2].trim();
       else (sted.iEngelsk ? sted.notatEn : sted.notat).push(l);
     }
@@ -397,7 +404,9 @@ function byggFeatures(md, geo) {
       lengde: st.felt.lengde || '',
       varighet: st.felt.varighet || '',
       // utenfor: ja — stedet holdes utenfor startutsnittet (og «Vis hele byen»)
-      utenfor: /^(ja|j|yes|x|true)$/.test(normaliser(st.felt.utenfor))
+      utenfor: /^(ja|j|yes|x|true)$/.test(normaliser(st.felt.utenfor)),
+      // les: «Kilde | Tittel | https://…» — vises sist i infoboksen
+      les: (st.felt.les || []).map(lesLenke).filter(Boolean)
     };
 
     const omrade = finnGeo(st.navn, 'omrade').map(f => ({ type: 'Feature', geometry: f.geometry, properties: { rolle: 'omrade' } }));
@@ -417,6 +426,20 @@ function byggFeatures(md, geo) {
 
     return { type: 'Feature', geometry: geometry, properties: p, fokus: omrade.concat(gater) };
   });
+}
+
+/* «Financial Times | Artikkelens tittel | https://…» -> { kilde, tittel, url }.
+   Kilde og tittel kan sløyfes; uten tittel brukes domenet. */
+function lesLenke(verdi) {
+  const deler = String(verdi || '').split('|').map(x => x.trim());
+  const url = deler.pop();
+  if (!/^https?:\/\/\S+$/.test(url || '')) return null;
+  let tittel = deler.pop() || '';
+  const kilde = deler.join(' | ');
+  if (!tittel) {
+    try { tittel = new URL(url).hostname.replace(/^www\./, ''); } catch (e) { tittel = url; }
+  }
+  return { kilde: kilde, tittel: tittel, url: url };
 }
 
 /* Metadata fra frontmatter; soner fra rekkefølgen på #-overskriftene. */
@@ -950,11 +973,17 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       lenke ? '<a class="pop-lenke" href="' + lenke + '" target="_blank" rel="noopener">' + t('aapneMaps') + '</a>' : '',
       p.nettside ? '<a class="pop-lenke" href="' + esc(p.nettside) + '" target="_blank" rel="noopener">' + t('nettside') + '</a>' : ''
     ].filter(Boolean);
+    // «Artikkel fra Financial Times: Tittel» — tittelen er lenken
+    const les = (p.les || []).map(l =>
+      '<p class="pop-les">' + esc(l.kilde ? t('artikkelFra') + ' ' + l.kilde : t('artikkel')) + ': ' +
+      '<a href="' + esc(l.url) + '" target="_blank" rel="noopener">' + esc(l.tittel) + '</a></p>'
+    ).join('');
     const notat = visNotat(p);
     return '<h3 class="pop-navn">' + esc(visNavn(p)) + '</h3>' +
       '<p class="pop-meta">' + esc(metaLinje(p) || ruteMeta(p)) + '</p>' +
       (p.gater && p.gater.length ? '<p class="pop-gater">' + esc(p.gater.join(' · ')) + '</p>' : '') +
       (notat ? '<p class="pop-notat">' + esc(notat) + '</p>' : '') +
+      les +
       (lenker.length ? '<p class="pop-lenker">' + lenker.join('<span class="pop-skille">·</span>') + '</p>' : '');
   }
 

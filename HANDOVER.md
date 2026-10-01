@@ -100,6 +100,9 @@ Butikker · Hoteller · Strender og beach clubs · Verdt en omvei · Gåturer. O
 (navn, nøkkel og alias, uten hensyn til aksenter/store bokstaver). Ukjent kategori vises
 med overskriften som navn og grå prikk.
 
+`- les: Financial Times | Tittel | https://…` gir «Artikkel fra Financial Times: Tittel» sist i infoboksen,
+med tittelen som lenke (kan gjentas; uten kilde: «Artikkel: Tittel»).
+
 `- utenfor: ja` holder et sted (eller en gåtur) utenfor utsnittet kartet åpner med og som
 «Vis hele byen» går til — for strender, beach clubs og turer et stykke utenfor byen.
 

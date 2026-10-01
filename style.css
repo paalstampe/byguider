@@ -566,6 +566,9 @@ html, body {
 }
 
 .pop-notat { margin: 8px 0 0; font-size: 13px; line-height: 1.45; white-space: pre-line; max-height: 220px; overflow-y: auto; }
+.pop-les { margin: 8px 0 0; font-size: 13px; line-height: 1.45; }
+.pop-les a { color: var(--aksent); text-decoration: underline; text-underline-offset: 3px; }
+@media (hover: hover) and (pointer: fine) { .pop-les a:hover { color: var(--aksent-hover); } }
 
 .pop-lenker {
   margin: 10px 0 0;
