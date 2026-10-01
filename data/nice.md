@@ -281,7 +281,7 @@ Lunsj
 - nettside: https://delicity.com/deli-banh-mi-nice
 Lunsj
 
-Vietnamesisk gatemat i Rue de l'Hôtel des Postes: banh mi, bo bun og nems.
+Vietnamesisk gatemat i Rue de l'Hôtel des Postes.
 
 Våre favoritter: banh mi, kyllingsalat, bun chay og naturligvis vietnamesisk kaffe (cà phê sữa đá).
 
@@ -289,7 +289,7 @@ Våre favoritter: banh mi, kyllingsalat, bun chay og naturligvis vietnamesisk ka
 
 - en: Lunch
 
-Vietnamese street food on Rue de l'Hôtel des Postes: banh mi, bo bun and nems.
+Vietnamese street food on Rue de l'Hôtel des Postes.
 
 Our favourites: banh mi, chicken salad, bun chay and, of course, Vietnamese coffee (cà phê sữa đá).
 
