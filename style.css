@@ -382,7 +382,10 @@ html, body {
 .forside-head { padding: 0 0 28px; border-bottom: 1px solid var(--kant); }
 
 .by-lenke {
-  display: block;
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  align-items: center;
+  gap: 0 24px;
   padding: 20px 0 21px;
   border-bottom: 1px solid var(--kant-lys);
   color: var(--tekst);
@@ -406,6 +409,16 @@ html, body {
 }
 
 .by-lenke:hover .by-navn { color: var(--aksent); }
+
+/* Miniatyr av byens åpningsside, 4:3. Tom ramme når bildet mangler. */
+.miniatyr {
+  display: block;
+  width: 120px;
+  height: 90px;
+  border: 1px solid var(--kant);
+  background: var(--kort);
+}
+.miniatyr.er-tom { border-color: var(--kant-lys); background: transparent; }
 
 /* By som ikke er klar ennå: dempet og ikke klikkbar */
 .by-lenke.er-inaktiv { cursor: default; }
@@ -675,4 +688,9 @@ button.pop-lenke {
   .sprakvalg { top: -7px; }
   .sprakvalg button { padding: 6px 5px 3px; }   /* større trykkflate på mobil */
   .by-navn { font-size: 26px; }
+}
+
+@media (max-width: 600px) {
+  .by-lenke { grid-template-columns: 76px 1fr; gap: 0 14px; align-items: start; }
+  .miniatyr { width: 76px; height: 57px; margin-top: 4px; }
 }

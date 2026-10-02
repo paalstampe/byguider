@@ -50,7 +50,8 @@ byguider/
 ├── index.html              forside: lista over byer, bygges fra byer.json
 ├── app.js                  all logikk — én kopi for alle byer
 ├── style.css               all styling — én kopi
-├── byer.json               manifest: id, navn, land, data (md), geometri, beskrivelse
+├── byer.json               manifest: id, navn, land, data (md), geometri, beskrivelse, evt. bilde
+├── bilder/<id>.webp        miniatyrer på forsiden (360×270), lages med .claude/miniatyrer.sh
 ├── london/index.html       stubb: <script src="../app.js" data-by="london">
 ├── nice/index.html
 ├── oslo/index.html
@@ -68,6 +69,13 @@ byguider/
 
 Ny by = én linje i `byer.json`, én md-fil (+ tom geometri-fil), én stubbmappe
 (kopier `london/index.html` og bytt `data-by`).
+
+Forsiden viser en miniatyr av åpningssiden foran hver by: `bilder/<id>.webp` som fast regel,
+eller valgfritt felt `bilde` i byer.json. Samme oppskrift som landingssiden stam.pe: viewport
+1300×900, deviceScaleFactor 2, beskåret til 1200×900 fra venstre og skalert til 360×270.
+Lag på nytt etter synlige endringer: `.claude/miniatyrer.sh` (alle) eller
+`.claude/miniatyrer.sh https://stam.pe/byguider nice` (én by; tar bildet fra live-siden).
+Vises 120×90 (76×57 på mobil ≤ 600 px). By med `status: "kommer"` eller uten bilde får tom ramme.
 
 Designretningene ligger som artboards her:
 https://claude.ai/artifact/StKKz6su1kLPBVyy4bZ9NN
