@@ -26,7 +26,9 @@
 <script>
 /* Språk: samme valg og lagring som i app.js (NO / EN, ?lang=en, husket i nettleseren).
    Lista bygges fra byer.json — ny by vises her automatisk. Engelske tekster fra
-   feltene land_en, beskrivelse_en og evt. navn_en; mangler de, vises norsk. */
+   feltene land_en, beskrivelse_en og evt. navn_en; mangler de, vises norsk.
+   Miniatyr: bilder/<id>.webp (360×270, lages med .claude/miniatyrer.sh), eller feltet «bilde»
+   i byer.json. By med status «kommer» eller uten bilde får en tom ramme i samme størrelse. */
 const NOKKEL = 'byguider-sprak';
 const TEKST = {
   no: { duErHer: 'Du er her', byguider: 'Påls byguider', tittel: 'Påls byer',
@@ -70,6 +72,18 @@ function tegn() {
     a.className = 'by-lenke' + (klar ? '' : ' er-inaktiv');
     if (klar) a.href = b.id + '/' + (en ? '?lang=en' : '');
     else a.setAttribute('aria-disabled', 'true');
+    let bilde;
+    if (klar) {
+      bilde = document.createElement('img');
+      bilde.src = b.bilde || 'bilder/' + b.id + '.webp';
+      bilde.alt = '';
+      bilde.width = 120;
+      bilde.height = 90;
+      bilde.addEventListener('error', () => bilde.replaceWith(tomRamme()));
+    } else bilde = tomRamme();
+    bilde.classList.add('miniatyr');
+    const tekst = document.createElement('span');
+    tekst.className = 'by-tekst';
     const navn = document.createElement('span');
     navn.className = 'by-navn';
     navn.textContent = (en && b.navn_en) || b.navn;
@@ -77,9 +91,16 @@ function tegn() {
     meta.className = 'by-meta';
     meta.textContent = [(en && b.land_en) || b.land, (en && b.beskrivelse_en) || b.beskrivelse]
       .filter(Boolean).join(' · ');
-    a.append(navn, meta);
+    tekst.append(navn, meta);
+    a.append(bilde, tekst);
     nav.appendChild(a);
   });
+}
+
+function tomRamme() {
+  const r = document.createElement('span');
+  r.className = 'miniatyr er-tom';
+  return r;
 }
 
 document.addEventListener('click', e => {
