@@ -1,7 +1,7 @@
 {
   "byer": [
-    {"id": "london", "navn": "London", "land": "Storbritannia", "land_en": "United Kingdom", "data": "data/london.md", "geometri": "data/london-geometri.geojson", "beskrivelse": "Gater, torg og strøk verdt en omvei — med noen ruter å gå dem på.", "beskrivelse_en": "Streets, squares and neighbourhoods worth a detour — with a few walks to take them in."},
-    {"id": "nice", "navn": "Nice", "land": "Frankrike", "land_en": "France", "data": "data/nice.md", "geometri": "data/nice-geometri.geojson", "beskrivelse": "Bistroer, caféer og strender — og noen steder verdt en omvei.", "beskrivelse_en": "Bistros, cafés and beaches — and a few places worth a detour."},
-    {"id": "oslo", "navn": "Oslo", "land": "Norge", "land_en": "Norway", "data": "data/oslo.md", "geometri": "data/oslo-geometri.geojson", "beskrivelse": "Restauranter — flere kategorier kommer.", "beskrivelse_en": "Restaurants — more categories to come."}
+    {"id": "london", "navn": "London", "land": "Storbritannia", "land_en": "United Kingdom", "data": "data/london.md", "geometri": "data/london-geometri.geojson", "beskrivelse": "Nabolag, gater og steder verdt en omvei.", "beskrivelse_en": "Neighbourhoods, streets and places worth a detour."},
+    {"id": "nice", "navn": "Nice", "land": "Frankrike", "land_en": "France", "data": "data/nice.md", "geometri": "data/nice-geometri.geojson", "beskrivelse": "Det beste av Nice, uten turistfellene.", "beskrivelse_en": "The best of Nice, without the tourist traps."},
+    {"id": "oslo", "navn": "Oslo", "land": "Norge", "land_en": "Norway", "data": "data/oslo.md", "geometri": "data/oslo-geometri.geojson", "beskrivelse": "Bord og barer jeg kommer tilbake til.", "beskrivelse_en": "Tables and bars I keep coming back to."}
   ]
 }
