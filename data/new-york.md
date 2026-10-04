@@ -184,6 +184,7 @@ Good modern Japanese.
 
 ### Izakaya Futago
 - sted: 40.75123, -73.97320
+- google: ChIJ14y5HwNZwokRrNpTpUqpB7Q
 - nettside: https://www.izakaya-futago.com/
 Midtown East
 
