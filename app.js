@@ -904,6 +904,25 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
   function aapnePopup(o, lngLat) {
     popup.setLngLat(lngLat).setHTML(popupHtml(o.p, o.punkt, o.id)).addTo(kart);
+    // Venter til en eventuell flyTo er ferdig, ellers avbryter forskyvningen den.
+    if (kart.isMoving()) kart.once('moveend', faaPopupInn);
+    else requestAnimationFrame(faaPopupInn);
+  }
+
+  /* Lang tekst kan få infoboksen til å stikke ut av kartet (særlig på mobil, der kartet er lavt).
+     Flytt kartet akkurat så mye at hele boksen synes; er den høyere enn kartet, vises toppen. */
+  function faaPopupInn() {
+    if (!popup.isOpen()) return;
+    const boks = popup.getElement().getBoundingClientRect();
+    const ramme = kart.getContainer().getBoundingClientRect();
+    const marg = 10;
+    const forskyv = (lav, hoy, min, maks) =>
+      hoy > maks - marg ? Math.min(hoy - (maks - marg), lav - (min + marg))
+      : lav < min + marg ? lav - (min + marg)
+      : 0;
+    const dx = forskyv(boks.left, boks.right, ramme.left, ramme.right);
+    const dy = forskyv(boks.top, boks.bottom, ramme.top, ramme.bottom);
+    if (Math.abs(dx) > 1 || Math.abs(dy) > 1) kart.panBy([dx, dy], { duration: 400 });
   }
 
   /* «Zoom inn» i popupen: til området når det er tegnet, ellers et godt stykke inn —
