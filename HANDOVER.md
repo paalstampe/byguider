@@ -105,8 +105,8 @@ senter: 51.5105, -0.1235            senter (breddegrad, lengdegrad), zoom, oppda
 Fri tekst = notat. Første avsnitt i lista, alt i popupen.
 ```
 
-Kategorier (`##`): Nabolag og gater · Restauranter · Caféer · Barer · Muséer og gallerier ·
-Butikker · Hoteller · Strender og beach clubs · Verdt en omvei · Gåturer. Overskriftene matches mot `KATEGORIER` i `app.js`
+Kategorier (`##`): Nabolag og gater · Restauranter · Caféer · Barer · Jazzklubber ·
+Muséer og gallerier · Butikker · Hoteller · Strender og beach clubs · Verdt en omvei · Gåturer. Overskriftene matches mot `KATEGORIER` i `app.js`
 (navn, nøkkel og alias, uten hensyn til aksenter/store bokstaver). Ukjent kategori vises
 med overskriften som navn og grå prikk.
 
