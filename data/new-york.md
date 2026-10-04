@@ -184,6 +184,7 @@ Good modern Japanese.
 
 ### Izakaya Futago
 - sted: 40.75123, -73.97320
+- nettside: https://www.izakaya-futago.com/
 Midtown East
 
 Japansk izakaya der Soba Totto lå.
