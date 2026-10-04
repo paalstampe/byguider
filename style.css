@@ -130,7 +130,7 @@ html, body {
 
 /* ---------- Søk ---------- */
 
-.sok-rad { padding: 4px 32px 18px; }
+.sok-rad { padding: 4px 32px 18px; position: relative; }
 
 .sok {
   width: 100%;
@@ -149,6 +149,31 @@ html, body {
 .sok:focus {
   outline: none;
   border-color: var(--aksent);
+}
+
+/* Eget kryss i stedet for nettleserens, som ser ulikt ut (og mangler på iOS). */
+.sok { padding-right: 44px; }
+.sok::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+
+.sok-tom {
+  position: absolute;
+  top: 4px;
+  right: 32px;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: none;
+  font-size: 22px;
+  line-height: 1;
+  color: var(--dempet);
+  cursor: pointer;
+  padding: 0;
+}
+
+.sok-tom[hidden] { display: none; }
+
+@media (hover: hover) and (pointer: fine) {
+  .sok-tom:hover { color: var(--aksent); }
 }
 
 /* ---------- Filtre ---------- */
@@ -679,6 +704,7 @@ button.pop-lenke {
   .sidebar-head { padding: 26px 20px 16px; }
   .tittel { font-size: 32px; }
   .sok-rad, .filtre, .liste { padding-left: 20px; padding-right: 20px; }
+  .sok-tom { right: 20px; }
   .chip { height: 34px; }                 /* litt større trykkflate på mobil */
   .teller-rad { margin-left: 20px; margin-right: 20px; }
   .sidebar-fot { padding-left: 20px; padding-right: 20px; }
