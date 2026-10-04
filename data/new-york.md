@@ -95,7 +95,7 @@ Good classic-modern French-based cooking inside The Mark hotel, by star chef Jea
 ## Barer
 
 ### Bemelmans Bar ★
-- sted: 40.77442, -73.96317
+- sted: 40.77449, -73.96332
 - google: ChIJEQ6D9pRYwokRS-qUAZyIb6k
 - nettside: https://www.rosewoodhotels.com/en/the-carlyle-new-york/dining/bemelmans-bar
 Upper East Side
