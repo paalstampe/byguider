@@ -74,6 +74,7 @@ const TEKST = {
     byguider: 'Byguider',
     sok: 'Søk etter navn eller notat',
     sokEtikett: 'Søk',
+    tomSok: 'Tøm søket',
     omrade: 'Område',
     kategori: 'Kategori',
     alle: 'Alle',
@@ -106,6 +107,7 @@ const TEKST = {
     byguider: 'City guides',
     sok: 'Search names and notes',
     sokEtikett: 'Search',
+    tomSok: 'Clear search',
     omrade: 'Area',
     kategori: 'Category',
     alle: 'All',
@@ -483,6 +485,7 @@ const SKALL = `
     </header>
     <div class="sok-rad">
       <input type="search" id="sok" class="sok" data-t-placeholder="sok" data-t-aria="sokEtikett" autocomplete="off">
+      <button type="button" class="sok-tom" id="sok-tom" data-t-aria="tomSok" hidden>&times;</button>
     </div>
     <div class="filtre">
       <div class="filterblokk">
@@ -608,6 +611,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     kart:       null,
     liste:      document.getElementById('liste'),
     sok:        document.getElementById('sok'),
+    sokTom:     document.getElementById('sok-tom'),
     teller:     document.getElementById('teller'),
     fSone:      document.getElementById('filter-sone'),
     fKategori:  document.getElementById('filter-kategori'),
@@ -1258,6 +1262,16 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
   el.sok.addEventListener('input', e => {
     state.sok = e.target.value;
+    el.sokTom.hidden = !state.sok;
+    tegn();
+  });
+
+  // Krysset tømmer søket og lar fokus bli i feltet, så man kan skrive på nytt med en gang.
+  el.sokTom.addEventListener('click', () => {
+    el.sok.value = '';
+    state.sok = '';
+    el.sokTom.hidden = true;
+    el.sok.focus();
     tegn();
   });
 
