@@ -1,8 +1,8 @@
 ---
 tittel: Pål og Vibekes London
-undertittel: Gater, torg og strøk verdt en omvei — med noen ruter å gå dem på.
+undertittel: Nabolag, gåturer og restauranter verdt en omvei.
 tittel-en: Pål and Vibeke’s London
-undertittel-en: Streets, squares and neighbourhoods worth a detour — with a few walks to take them in.
+undertittel-en: Neighbourhoods, walks and restaurants worth a detour.
 senter: 51.5105, -0.1235
 zoom: 11
 oppdatert: 2026-09-27

@@ -1,8 +1,8 @@
 ---
 tittel: Pål og Vibekes New York
-undertittel: Restauranter, barer og hoteller jeg kommer tilbake til.
+undertittel: Restauranter, barer og hoteller vi kommer tilbake til.
 tittel-en: Pål and Vibeke’s New York
-undertittel-en: Restaurants, bars and hotels I keep coming back to.
+undertittel-en: Restaurants, bars and hotels we keep coming back to.
 senter: 40.7400, -73.9850
 zoom: 12
 oppdatert: 2026-10-04
