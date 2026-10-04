@@ -13,8 +13,9 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
 
   # Sone            overskrift 1: Uptown, Midtown … Rekkefølgen her blir rekkefølgen i appen.
                     Byer uten soner: dropp #-overskriftene.
-  ## Kategori       Nabolag og gater · Restauranter · Caféer · Barer · Muséer og gallerier ·
-                    Butikker · Hoteller · Strender og beach clubs · Verdt en omvei · Gåturer
+  ## Kategori       Nabolag og gater · Restauranter · Caféer · Barer · Jazzklubber ·
+                    Muséer og gallerier · Butikker · Hoteller · Strender og beach clubs ·
+                    Verdt en omvei · Gåturer
   ### Navn ★        ett sted. ★ bak navnet = favoritt.
   - sted: 40.7583, -73.9719     breddegrad, lengdegrad — som Google Maps viser det
                                 (høyreklikk i Google Maps og klikk på tallene for å kopiere)
@@ -105,17 +106,19 @@ Inne på The Carlyle.
 
 Inside The Carlyle.
 
+## Jazzklubber
+
 ### Café Carlyle
 - sted: 40.77436, -73.96304
 - google: ChIJEQ6D9pRYwokR8M_uqv0O4bE
 - nettside: https://www.rosewoodhotels.com/en/the-carlyle-new-york/dining/cafe-carlyle
 Upper East Side
 
-Jazzklubb inne på The Carlyle.
+Inne på The Carlyle.
 
 - en: Upper East Side
 
-Jazz club inside The Carlyle.
+Inside The Carlyle.
 
 ## Hoteller
 
@@ -201,7 +204,7 @@ Bra moderne japansk – finnes mange steder i verden.
 
 Good modern Japanese – found in many cities around the world.
 
-## Barer
+## Jazzklubber
 
 ### Birdland
 - sted: 40.75909, -73.98972
@@ -209,11 +212,7 @@ Good modern Japanese – found in many cities around the world.
 - nettside: https://www.birdlandjazz.com/
 Theater District
 
-Jazzklubb.
-
 - en: Theater District
-
-Jazz club.
 
 # Downtown
 
@@ -393,17 +392,15 @@ Cocktailbar.
 
 Cocktail bar.
 
+## Jazzklubber
+
 ### Blue Note
 - sted: 40.73091, -74.00066
 - google: ChIJbfTV15NZwokRSeNM676BEZI
 - nettside: https://www.bluenotejazz.com/nyc/
 Greenwich Village
 
-Jazzklubb.
-
 - en: Greenwich Village
-
-Jazz club.
 
 ## Hoteller
 
