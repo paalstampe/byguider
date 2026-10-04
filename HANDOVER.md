@@ -398,5 +398,8 @@ Hvert trinn skal kunne committes for seg og fungere alene.
 - Infoboks får plass (grenen `festive-faraday`, 4.10.): stikker popupen ut av kartet (lang tekst,
   lavt kart på mobil), forskyves kartet akkurat nok til at hele boksen synes (`faaPopupInn`);
   er den høyere enn kartet, vises toppen. Venter til en flyTo er ferdig.
+- Infoboks unna kartknappene (grenen `nifty-noether-ep5o2q`, 4.10.): `faaPopupInn` regner også
+  knappene øverst til venstre som hindring — boksen flyttes til høyre for dem, eller ned under dem
+  hvis den ikke får plass i bredden.
 - Neste: data. Pål kommer med navneendringer (som Marylebone High Street → Marylebone Village)
   og nye steder; områdeskisser tegnes etter hvert. Eksempelstedene er merket EKSEMPEL.

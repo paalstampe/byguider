@@ -917,7 +917,9 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
   }
 
   /* Lang tekst kan få infoboksen til å stikke ut av kartet (særlig på mobil, der kartet er lavt).
-     Flytt kartet akkurat så mye at hele boksen synes; er den høyere enn kartet, vises toppen. */
+     Flytt kartet akkurat så mye at hele boksen synes; er den høyere enn kartet, vises toppen.
+     Knappene øverst til venstre (zoom, hele byen, posisjon) skal heller ikke dekke boksen:
+     da flyttes den til høyre for dem, eller ned under dem hvis den ikke får plass i bredden. */
   function faaPopupInn() {
     if (!popup.isOpen()) return;
     const boks = popup.getElement().getBoundingClientRect();
@@ -927,8 +929,18 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       hoy > maks - marg ? Math.min(hoy - (maks - marg), lav - (min + marg))
       : lav < min + marg ? lav - (min + marg)
       : 0;
-    const dx = forskyv(boks.left, boks.right, ramme.left, ramme.right);
-    const dy = forskyv(boks.top, boks.bottom, ramme.top, ramme.bottom);
+    let dx = forskyv(boks.left, boks.right, ramme.left, ramme.right);
+    let dy = forskyv(boks.top, boks.bottom, ramme.top, ramme.bottom);
+    const knapper = kart.getContainer().querySelector('.maplibregl-ctrl-top-left');
+    const k = knapper && knapper.getBoundingClientRect();
+    if (k && k.width && k.height) {
+      const venstre = boks.left - dx, topp = boks.top - dy;
+      const hoyre = venstre + boks.width, bunn = topp + boks.height;
+      if (venstre < k.right && topp < k.bottom && hoyre > k.left && bunn > k.top) {
+        if (boks.width <= ramme.right - k.right - 2 * marg) dx += venstre - (k.right + marg);
+        else dy += topp - k.bottom;
+      }
+    }
     if (Math.abs(dx) > 1 || Math.abs(dy) > 1) kart.panBy([dx, dy], { duration: 400 });
   }
 
