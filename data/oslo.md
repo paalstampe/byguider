@@ -1,8 +1,8 @@
 ---
 tittel: Pål og Vibekes Oslo
-undertittel: Restauranter — mine go-to-steder og andre jeg liker.
+undertittel: Restauranter og barer.
 tittel-en: Pål and Vibeke’s Oslo
-undertittel-en: Restaurants — my go-to places and others I like.
+undertittel-en: Restaurants and bars.
 senter: 59.9180, 10.7400
 zoom: 13
 oppdatert: 2026-09-28
