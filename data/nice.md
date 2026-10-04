@@ -1,7 +1,7 @@
 ---
-tittel: Påls Nice
+tittel: Pål og Vibekes Nice
 undertittel: Restauranter, caféer og steder verdt en omvei.
-tittel-en: Pål’s Nice
+tittel-en: Pål and Vibeke’s Nice
 undertittel-en: Restaurants, cafés and places worth a detour.
 senter: 43.6990, 7.2620
 zoom: 13
@@ -13,8 +13,9 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
 
   # Sone            overskrift 1: Central, North … Rekkefølgen her blir rekkefølgen i appen.
                     Byer uten soner: dropp #-overskriftene.
-  ## Kategori       Nabolag og gater · Restauranter · Caféer · Barer · Muséer og gallerier ·
-                    Butikker · Hoteller · Strender og beach clubs · Verdt en omvei · Gåturer
+  ## Kategori       Nabolag og gater · Restauranter · Caféer · Barer · Jazzklubber ·
+                    Muséer og gallerier · Butikker · Hoteller · Strender og beach clubs ·
+                    Verdt en omvei · Gåturer
   ### Navn ★        ett sted. ★ bak navnet = favoritt.
   - sted: 51.5207, -0.1519      breddegrad, lengdegrad — som Google Maps viser det
                                 (høyreklikk i Google Maps og klikk på tallene for å kopiere)

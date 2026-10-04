@@ -1,8 +1,8 @@
 ---
-tittel: Påls London
-undertittel: Gater, torg og strøk verdt en omvei — med noen ruter å gå dem på.
-tittel-en: Pål’s London
-undertittel-en: Streets, squares and neighbourhoods worth a detour — with a few walks to take them in.
+tittel: Pål og Vibekes London
+undertittel: Nabolag, gåturer og restauranter verdt en omvei.
+tittel-en: Pål and Vibeke’s London
+undertittel-en: Neighbourhoods, walks and restaurants worth a detour.
 senter: 51.5105, -0.1235
 zoom: 11
 oppdatert: 2026-09-27
@@ -13,8 +13,9 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
 
   # Sone            overskrift 1: Central, North … Rekkefølgen her blir rekkefølgen i appen.
                     Byer uten soner: dropp #-overskriftene.
-  ## Kategori       Nabolag og gater · Restauranter · Caféer · Barer · Muséer og gallerier ·
-                    Butikker · Hoteller · Strender og beach clubs · Verdt en omvei · Gåturer
+  ## Kategori       Nabolag og gater · Restauranter · Caféer · Barer · Jazzklubber ·
+                    Muséer og gallerier · Butikker · Hoteller · Strender og beach clubs ·
+                    Verdt en omvei · Gåturer
   ### Navn ★        ett sted. ★ bak navnet = favoritt.
   - sted: 51.5207, -0.1519      breddegrad, lengdegrad — som Google Maps viser det
                                 (høyreklikk i Google Maps og klikk på tallene for å kopiere)

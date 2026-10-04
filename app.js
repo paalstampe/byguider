@@ -27,6 +27,8 @@ const KATEGORIER = {
                 alias: ['Café', 'Kafé', 'Kafeer', 'Bakeri', 'Bakerier'] },
   bar:        { navn: 'Barer',               en: 'Bars',                   farge: '#6E4A6B', ikon: 'glass',
                 alias: ['Bar', 'Puber', 'Pub'] },
+  jazz:       { navn: 'Jazzklubber',         en: 'Jazz clubs',             farge: '#A33E6B', ikon: 'note',
+                alias: ['Jazzklubb', 'Jazz', 'Livemusikk', 'Musikk', 'Jazz club'] },
   museum:     { navn: 'Muséer og gallerier', en: 'Museums and galleries',  farge: '#3F5A6B', ikon: 'ramme',
                 alias: ['Museum', 'Museer', 'Galleri', 'Gallerier'] },
   butikk:     { navn: 'Butikker',            en: 'Shops',                  farge: '#4F6B7A', ikon: 'pose',
@@ -69,9 +71,10 @@ const TEKST = {
   no: {
     sprak: 'Språk',
     duErHer: 'Du er her',
-    byguider: 'Påls byguider',
+    byguider: 'Byguider',
     sok: 'Søk etter navn eller notat',
     sokEtikett: 'Søk',
+    tomSok: 'Tøm søket',
     omrade: 'Område',
     kategori: 'Kategori',
     alle: 'Alle',
@@ -101,9 +104,10 @@ const TEKST = {
   en: {
     sprak: 'Language',
     duErHer: 'You are here',
-    byguider: 'Pål’s city guides',
+    byguider: 'City guides',
     sok: 'Search names and notes',
     sokEtikett: 'Search',
+    tomSok: 'Clear search',
     omrade: 'Area',
     kategori: 'Category',
     alle: 'All',
@@ -200,6 +204,7 @@ const IKONER = {
   flagg:   'M7 21V4 M7 4.5h10l-2.2 3.75L17 12H7',
   seng:    'M4 6v13 M4 15h16v4 M4 11.5h6V15 M10 11.5h6.5A3.5 3.5 0 0 1 20 15 M7 9.5a1.3 1.3 0 1 0 0.01 0',
   parasoll:'M4 11.5a8 6.5 0 0 1 16 0z M12 11.5v8 M5 19.5h14',
+  note:    'M11 18V6.5l8-2V16 M11 10l8-2 M6 18a2.5 2 0 1 0 5 0a2.5 2 0 1 0-5 0 M14 16a2.5 2 0 1 0 5 0a2.5 2 0 1 0-5 0',
   prikk:   'M9 12a3 3 0 1 0 6 0a3 3 0 1 0-6 0'
 };
 
@@ -283,7 +288,7 @@ const UKJENT_FARGE = '#6B5D4A';
    Hver by er én markdown-fil (data/<by>.md) som er kilden for alt innhold:
 
      ---                              frontmatter: tittel, kicker, undertittel,
-     tittel: Påls London              senter (breddegrad, lengdegrad), zoom, oppdatert
+     tittel: Pål og Vibekes London        senter (breddegrad, lengdegrad), zoom, oppdatert
      ---
      # Central                        sone (rekkefølgen her = rekkefølgen i appen)
      ## Nabolag og gater              kategori (matches mot KATEGORIER)
@@ -480,6 +485,7 @@ const SKALL = `
     </header>
     <div class="sok-rad">
       <input type="search" id="sok" class="sok" data-t-placeholder="sok" data-t-aria="sokEtikett" autocomplete="off">
+      <button type="button" class="sok-tom" id="sok-tom" data-t-aria="tomSok" hidden>&times;</button>
     </div>
     <div class="filtre">
       <div class="filterblokk">
@@ -605,6 +611,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     kart:       null,
     liste:      document.getElementById('liste'),
     sok:        document.getElementById('sok'),
+    sokTom:     document.getElementById('sok-tom'),
     teller:     document.getElementById('teller'),
     fSone:      document.getElementById('filter-sone'),
     fKategori:  document.getElementById('filter-kategori'),
@@ -657,7 +664,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       b.dataset.tTitle = b.dataset.tAria = 'visHeleByen';
       b.title = t('visHeleByen');
       b.setAttribute('aria-label', t('visHeleByen'));
-      b.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/></svg>';
+      b.innerHTML = '<svg viewBox="0 0 18 18" width="18" height="18" aria-hidden="true"><path d="M3 6.75V3h3.75M15 6.75V3h-3.75M3 11.25V15h3.75M15 11.25V15h-3.75" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg>';
       b.addEventListener('click', tilStart);
       div.appendChild(b);
       return div;
@@ -910,7 +917,9 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
   }
 
   /* Lang tekst kan få infoboksen til å stikke ut av kartet (særlig på mobil, der kartet er lavt).
-     Flytt kartet akkurat så mye at hele boksen synes; er den høyere enn kartet, vises toppen. */
+     Flytt kartet akkurat så mye at hele boksen synes; er den høyere enn kartet, vises toppen.
+     Knappene øverst til venstre (zoom, hele byen, posisjon) skal heller ikke dekke boksen:
+     da flyttes den til høyre for dem, eller ned under dem hvis den ikke får plass i bredden. */
   function faaPopupInn() {
     if (!popup.isOpen()) return;
     const boks = popup.getElement().getBoundingClientRect();
@@ -920,8 +929,18 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       hoy > maks - marg ? Math.min(hoy - (maks - marg), lav - (min + marg))
       : lav < min + marg ? lav - (min + marg)
       : 0;
-    const dx = forskyv(boks.left, boks.right, ramme.left, ramme.right);
-    const dy = forskyv(boks.top, boks.bottom, ramme.top, ramme.bottom);
+    let dx = forskyv(boks.left, boks.right, ramme.left, ramme.right);
+    let dy = forskyv(boks.top, boks.bottom, ramme.top, ramme.bottom);
+    const knapper = kart.getContainer().querySelector('.maplibregl-ctrl-top-left');
+    const k = knapper && knapper.getBoundingClientRect();
+    if (k && k.width && k.height) {
+      const venstre = boks.left - dx, topp = boks.top - dy;
+      const hoyre = venstre + boks.width, bunn = topp + boks.height;
+      if (venstre < k.right && topp < k.bottom && hoyre > k.left && bunn > k.top) {
+        if (boks.width <= ramme.right - k.right - 2 * marg) dx += venstre - (k.right + marg);
+        else dy += topp - k.bottom;
+      }
+    }
     if (Math.abs(dx) > 1 || Math.abs(dy) > 1) kart.panBy([dx, dy], { duration: 400 });
   }
 
@@ -1255,6 +1274,16 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
   el.sok.addEventListener('input', e => {
     state.sok = e.target.value;
+    el.sokTom.hidden = !state.sok;
+    tegn();
+  });
+
+  // Krysset tømmer søket og lar fokus bli i feltet, så man kan skrive på nytt med en gang.
+  el.sokTom.addEventListener('click', () => {
+    el.sok.value = '';
+    state.sok = '';
+    el.sokTom.hidden = true;
+    el.sok.focus();
     tegn();
   });
 

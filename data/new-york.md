@@ -1,8 +1,8 @@
 ---
-tittel: Påls New York
-undertittel: Restauranter, barer og hoteller jeg kommer tilbake til.
-tittel-en: Pål’s New York
-undertittel-en: Restaurants, bars and hotels I keep coming back to.
+tittel: Pål og Vibekes New York
+undertittel: Restauranter, barer og hoteller vi kommer tilbake til.
+tittel-en: Pål and Vibeke’s New York
+undertittel-en: Restaurants, bars and hotels we keep coming back to.
 senter: 40.7400, -73.9850
 zoom: 12
 oppdatert: 2026-10-04
@@ -83,7 +83,7 @@ A wonderful little bistro – like Balthazar, only better.
 ### The Mark Restaurant by Jean-Georges
 - sted: 40.77534, -73.96333
 - google: ChIJnQLwRJRYwokRAok9jZJTLrY
-- nettside: https://www.themarkhotel.com/
+- nettside: https://www.themarkrestaurantnyc.com/
 Upper East Side
 
 Bra klassisk-moderne franskbasert kjøkken inne på hotellet The Mark, av superkokken Jean-Georges Vongerichten.
@@ -95,9 +95,9 @@ Good classic-modern French-based cooking inside The Mark hotel, by star chef Jea
 ## Barer
 
 ### Bemelmans Bar ★
-- sted: 40.77442, -73.96317
+- sted: 40.77449, -73.96332
 - google: ChIJEQ6D9pRYwokRS-qUAZyIb6k
-- nettside: https://www.rosewoodhotels.com/en/the-carlyle-new-york
+- nettside: https://www.rosewoodhotels.com/en/the-carlyle-new-york/dining/bemelmans-bar
 Upper East Side
 
 Inne på The Carlyle.
@@ -111,7 +111,7 @@ Inside The Carlyle.
 ### Café Carlyle
 - sted: 40.77436, -73.96304
 - google: ChIJEQ6D9pRYwokR8M_uqv0O4bE
-- nettside: https://www.rosewoodhotels.com/en/the-carlyle-new-york
+- nettside: https://www.rosewoodhotels.com/en/the-carlyle-new-york/dining/cafe-carlyle
 Upper East Side
 
 Inne på The Carlyle.
@@ -189,10 +189,22 @@ Bra moderne japansk.
 
 Good modern Japanese.
 
+### Izakaya Futago
+- sted: 40.75123, -73.97320
+- google: ChIJ14y5HwNZwokRrNpTpUqpB7Q
+- nettside: https://www.izakaya-futago.com/
+Midtown East
+
+Japansk izakaya der Soba Totto lå.
+
+- en: Midtown East
+
+Japanese izakaya where Soba Totto used to be.
+
 ### Zuma
 - sted: 40.75044, -73.98074
 - google: ChIJjxZ92gBZwokRBs-63wLcBp8
-- nettside: https://www.zumarestaurant.com/
+- nettside: https://www.zumarestaurant.com/en/new-york
 Murray Hill
 
 Bra moderne japansk – finnes mange steder i verden.

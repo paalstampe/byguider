@@ -7,7 +7,7 @@ Sist oppdatert: 4. oktober 2026 (New York som fjerde by, grenen `new-york`).
 
 ## 1. Målet
 
-En enkel nettbasert app som viser Påls byer — London først, så Nice, Oslo og New York — på kart,
+En enkel nettbasert app som viser Pål og Vibekes byer — London først, så Nice, Oslo og New York — på kart,
 med nabolag, steder i flere kategorier (caféer, parker, butikker, markeder, gallerier)
 og markerte gater og gåturer. Skal kunne deles via lenke uten innlogging.
 
@@ -93,7 +93,7 @@ Instruksjonene står som kommentar øverst i hver fil.
 
 ```
 ---
-tittel: Påls London                 frontmatter: tittel, undertittel,
+tittel: Pål og Vibekes London       frontmatter: tittel, undertittel,
 senter: 51.5105, -0.1235            senter (breddegrad, lengdegrad), zoom, oppdatert
 ---
 # Central                           sone — rekkefølgen her er rekkefølgen i appen
@@ -105,8 +105,8 @@ senter: 51.5105, -0.1235            senter (breddegrad, lengdegrad), zoom, oppda
 Fri tekst = notat. Første avsnitt i lista, alt i popupen.
 ```
 
-Kategorier (`##`): Nabolag og gater · Restauranter · Caféer · Barer · Muséer og gallerier ·
-Butikker · Hoteller · Strender og beach clubs · Verdt en omvei · Gåturer. Overskriftene matches mot `KATEGORIER` i `app.js`
+Kategorier (`##`): Nabolag og gater · Restauranter · Caféer · Barer · Jazzklubber ·
+Muséer og gallerier · Butikker · Hoteller · Strender og beach clubs · Verdt en omvei · Gåturer. Overskriftene matches mot `KATEGORIER` i `app.js`
 (navn, nøkkel og alias, uten hensyn til aksenter/store bokstaver). Ukjent kategori vises
 med overskriften som navn og grå prikk.
 
@@ -383,7 +383,7 @@ Hvert trinn skal kunne committes for seg og fungere alene.
 - Avkryssing av besøkte steder: valgt bort foreløpig — `besokt` redigeres i dataene.
 - ~~Kategorier og md som kilde.~~ Gjort (grenen `md-kilde`): sju kategorier + gåturer,
   md-fila er kilden, nabolag vises med områdeskisse + gater, klikk i kartet blar ikke i lista.
-- ~~Navigasjon og filtre.~~ Gjort (grenen `navigasjon`): brødsmuler (stam.pe / Påls byguider /
+- ~~Navigasjon og filtre.~~ Gjort (grenen `navigasjon`): brødsmuler (stam.pe / Byguider /
   By) øverst i sidebaren og på forsiden; «Alle» først i sone- og kategorifiltrene, ett valg om
   gangen (trykk igjen = Alle), «Nullstill» fjernet; «besøkt» fjernet fra visning og data;
   «Zoom inn» i popupen (til området om det er tegnet, ellers bydelsnivå for nabolag og gatenivå
@@ -398,5 +398,8 @@ Hvert trinn skal kunne committes for seg og fungere alene.
 - Infoboks får plass (grenen `festive-faraday`, 4.10.): stikker popupen ut av kartet (lang tekst,
   lavt kart på mobil), forskyves kartet akkurat nok til at hele boksen synes (`faaPopupInn`);
   er den høyere enn kartet, vises toppen. Venter til en flyTo er ferdig.
+- Infoboks unna kartknappene (grenen `nifty-noether-ep5o2q`, 4.10.): `faaPopupInn` regner også
+  knappene øverst til venstre som hindring — boksen flyttes til høyre for dem, eller ned under dem
+  hvis den ikke får plass i bredden.
 - Neste: data. Pål kommer med navneendringer (som Marylebone High Street → Marylebone Village)
   og nye steder; områdeskisser tegnes etter hvert. Eksempelstedene er merket EKSEMPEL.

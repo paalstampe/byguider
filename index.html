@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Påls byguider</title>
+<title>Pål og Vibekes byguider</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -14,10 +14,10 @@
 <main class="forside-innhold">
   <header class="sidebar-head forside-head">
     <nav class="smuler" data-t-aria="duErHer">
-      <a href="/">stam.pe</a><span class="smule-skille">/</span><span aria-current="page" data-t="byguider">Påls byguider</span>
+      <a href="/">stam.pe</a><span class="smule-skille">/</span><span aria-current="page" data-t="byguider">Byguider</span>
       <span class="sprakvalg" role="group" data-t-aria="sprak"><button type="button" data-sprak="no" lang="no">NO</button><span class="smule-skille">/</span><button type="button" data-sprak="en" lang="en">EN</button></span>
     </nav>
-    <h1 class="tittel" data-t="tittel">Påls byer</h1>
+    <h1 class="tittel" data-t="tittel">Pål og Vibekes byer</h1>
     <p class="ingress" data-t="ingress">Nabolag, gater og steder verdt en omvei.</p>
   </header>
   <nav class="by-liste" id="by-liste" data-t-aria="byer"></nav>
@@ -31,9 +31,9 @@
    i byer.json. By med status «kommer» eller uten bilde får en tom ramme i samme størrelse. */
 const NOKKEL = 'byguider-sprak';
 const TEKST = {
-  no: { duErHer: 'Du er her', byguider: 'Påls byguider', tittel: 'Påls byer',
+  no: { duErHer: 'Du er her', sidetittel: 'Pål og Vibekes byguider', byguider: 'Byguider', tittel: 'Pål og Vibekes byer',
         ingress: 'Nabolag, gater og steder verdt en omvei.', byer: 'Byer', sprak: 'Språk' },
-  en: { duErHer: 'You are here', byguider: 'Pål’s city guides', tittel: 'Pål’s cities',
+  en: { duErHer: 'You are here', sidetittel: 'Pål and Vibeke’s city guides', byguider: 'City guides', tittel: 'Pål and Vibeke’s cities',
         ingress: 'Neighbourhoods, streets and places worth a detour.', byer: 'Cities', sprak: 'Language' }
 };
 
@@ -56,7 +56,7 @@ function tegn() {
   const T = TEKST[sprak];
   const en = sprak === 'en';
   document.documentElement.lang = sprak;
-  document.title = T.byguider;
+  document.title = T.sidetittel;
   document.querySelectorAll('[data-t]').forEach(e => { e.textContent = T[e.dataset.t]; });
   document.querySelectorAll('[data-t-aria]').forEach(e => { e.setAttribute('aria-label', T[e.dataset.tAria]); });
   document.querySelectorAll('.sprakvalg [data-sprak]').forEach(b => {

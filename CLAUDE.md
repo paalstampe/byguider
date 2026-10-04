@@ -1,6 +1,6 @@
 # Byguider — arbeidsregler for Claude
 
-Påls byguider (London, Nice, Oslo) på kart. Live på https://stam.pe/byguider/.
+Pål og Vibekes byguider (London, Nice, Oslo) på kart. Live på https://stam.pe/byguider/.
 Les HANDOVER.md før større endringer — den har datamodell, design, teknikk og status.
 Hold HANDOVER.md oppdatert når noe vesentlig endres (punkt 2, 8 og 10.5).
 

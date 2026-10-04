@@ -1,8 +1,8 @@
 ---
-tittel: Påls Oslo
-undertittel: Restauranter — mine go-to-steder og andre jeg liker.
-tittel-en: Pål’s Oslo
-undertittel-en: Restaurants — my go-to places and others I like.
+tittel: Pål og Vibekes Oslo
+undertittel: Restauranter og barer.
+tittel-en: Pål and Vibeke’s Oslo
+undertittel-en: Restaurants and bars.
 senter: 59.9180, 10.7400
 zoom: 13
 oppdatert: 2026-09-28
@@ -13,8 +13,9 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
 
   # Sone            overskrift 1: Central, North … Rekkefølgen her blir rekkefølgen i appen.
                     Byer uten soner: dropp #-overskriftene.
-  ## Kategori       Nabolag og gater · Restauranter · Caféer · Barer · Muséer og gallerier ·
-                    Butikker · Hoteller · Strender og beach clubs · Verdt en omvei · Gåturer
+  ## Kategori       Nabolag og gater · Restauranter · Caféer · Barer · Jazzklubber ·
+                    Muséer og gallerier · Butikker · Hoteller · Strender og beach clubs ·
+                    Verdt en omvei · Gåturer
   ### Navn ★        ett sted. ★ bak navnet = favoritt.
   - sted: 51.5207, -0.1519      breddegrad, lengdegrad — som Google Maps viser det
                                 (høyreklikk i Google Maps og klikk på tallene for å kopiere)
