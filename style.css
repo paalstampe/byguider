@@ -457,8 +457,7 @@ html, body {
 .maplibregl-ctrl-group button + button { border-top: 1px solid var(--kant); }
 .maplibregl-ctrl-group button:hover { background-color: var(--papir) !important; }
 
-.ktrl-hjem { display: flex; align-items: center; justify-content: center; color: var(--dempet); }
-.ktrl-hjem:hover { color: var(--tekst); }
+.ktrl-hjem { display: flex; align-items: center; justify-content: center; color: var(--tekst); }
 
 /* Egen posisjon: blå, som i kartapper ellers — ingen kategori bruker blått,
    så prikken skiller seg fra stedene. Større enn standard, med hvit kant,

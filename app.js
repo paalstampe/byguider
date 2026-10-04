@@ -660,7 +660,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       b.dataset.tTitle = b.dataset.tAria = 'visHeleByen';
       b.title = t('visHeleByen');
       b.setAttribute('aria-label', t('visHeleByen'));
-      b.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/></svg>';
+      b.innerHTML = '<svg viewBox="0 0 18 18" width="18" height="18" aria-hidden="true"><path d="M3 6.75V3h3.75M15 6.75V3h-3.75M3 11.25V15h3.75M15 11.25V15h-3.75" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg>';
       b.addEventListener('click', tilStart);
       div.appendChild(b);
       return div;
