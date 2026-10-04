@@ -71,7 +71,7 @@ const TEKST = {
   no: {
     sprak: 'Språk',
     duErHer: 'Du er her',
-    byguider: 'Påls byguider',
+    byguider: 'Pål og Vibekes byguider',
     sok: 'Søk etter navn eller notat',
     sokEtikett: 'Søk',
     omrade: 'Område',
@@ -103,7 +103,7 @@ const TEKST = {
   en: {
     sprak: 'Language',
     duErHer: 'You are here',
-    byguider: 'Pål’s city guides',
+    byguider: 'Pål and Vibeke’s city guides',
     sok: 'Search names and notes',
     sokEtikett: 'Search',
     omrade: 'Area',
@@ -286,7 +286,7 @@ const UKJENT_FARGE = '#6B5D4A';
    Hver by er én markdown-fil (data/<by>.md) som er kilden for alt innhold:
 
      ---                              frontmatter: tittel, kicker, undertittel,
-     tittel: Påls London              senter (breddegrad, lengdegrad), zoom, oppdatert
+     tittel: Pål og Vibekes London        senter (breddegrad, lengdegrad), zoom, oppdatert
      ---
      # Central                        sone (rekkefølgen her = rekkefølgen i appen)
      ## Nabolag og gater              kategori (matches mot KATEGORIER)
