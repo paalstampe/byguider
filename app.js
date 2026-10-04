@@ -71,7 +71,7 @@ const TEKST = {
   no: {
     sprak: 'Språk',
     duErHer: 'Du er her',
-    byguider: 'Pål og Vibekes byguider',
+    byguider: 'Byguider',
     sok: 'Søk etter navn eller notat',
     sokEtikett: 'Søk',
     omrade: 'Område',
@@ -103,7 +103,7 @@ const TEKST = {
   en: {
     sprak: 'Language',
     duErHer: 'You are here',
-    byguider: 'Pål and Vibeke’s city guides',
+    byguider: 'City guides',
     sok: 'Search names and notes',
     sokEtikett: 'Search',
     omrade: 'Area',

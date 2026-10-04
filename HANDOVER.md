@@ -383,7 +383,7 @@ Hvert trinn skal kunne committes for seg og fungere alene.
 - Avkryssing av besøkte steder: valgt bort foreløpig — `besokt` redigeres i dataene.
 - ~~Kategorier og md som kilde.~~ Gjort (grenen `md-kilde`): sju kategorier + gåturer,
   md-fila er kilden, nabolag vises med områdeskisse + gater, klikk i kartet blar ikke i lista.
-- ~~Navigasjon og filtre.~~ Gjort (grenen `navigasjon`): brødsmuler (stam.pe / Pål og Vibekes byguider /
+- ~~Navigasjon og filtre.~~ Gjort (grenen `navigasjon`): brødsmuler (stam.pe / Byguider /
   By) øverst i sidebaren og på forsiden; «Alle» først i sone- og kategorifiltrene, ett valg om
   gangen (trykk igjen = Alle), «Nullstill» fjernet; «besøkt» fjernet fra visning og data;
   «Zoom inn» i popupen (til området om det er tegnet, ellers bydelsnivå for nabolag og gatenivå
