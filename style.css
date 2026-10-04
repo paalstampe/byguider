@@ -705,6 +705,8 @@ button.pop-lenke {
   .tittel { font-size: 32px; }
   .sok-rad, .filtre, .liste { padding-left: 20px; padding-right: 20px; }
   .sok-tom { right: 20px; }
+  /* Under 16 px zoomer iOS inn når feltet får fokus. */
+  .sok { font-size: 16px; }
   .chip { height: 34px; }                 /* litt større trykkflate på mobil */
   .teller-rad { margin-left: 20px; margin-right: 20px; }
   .sidebar-fot { padding-left: 20px; padding-right: 20px; }
