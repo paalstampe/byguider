@@ -379,7 +379,7 @@ html, body {
   padding: 72px 32px 64px;
 }
 
-.forside-head { padding: 0 0 28px; border-bottom: 1px solid var(--kant); }
+.sidebar-head.forside-head { padding: 0 0 28px; border-bottom: 1px solid var(--kant); }
 
 .by-lenke {
   display: grid;
