@@ -393,5 +393,8 @@ Hvert trinn skal kunne committes for seg og fungere alene.
   pulsen helt av; nå en stillestående glorie som toner inn og ut.
 - Liste → kart på mobil (grenen `liste-til-kart`, 30.9.): trykk i lista (≤ 900 px) blar opp til
   kartet med infoboksen/rutekortet åpen, som i Reiseplanlegging.
+- Infoboks får plass (grenen `festive-faraday`, 4.10.): stikker popupen ut av kartet (lang tekst,
+  lavt kart på mobil), forskyves kartet akkurat nok til at hele boksen synes (`faaPopupInn`);
+  er den høyere enn kartet, vises toppen. Venter til en flyTo er ferdig.
 - Neste: data. Pål kommer med navneendringer (som Marylebone High Street → Marylebone Village)
   og nye steder; områdeskisser tegnes etter hvert. Eksempelstedene er merket EKSEMPEL.
