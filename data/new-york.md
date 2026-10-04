@@ -13,8 +13,9 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
 
   # Sone            overskrift 1: Uptown, Midtown … Rekkefølgen her blir rekkefølgen i appen.
                     Byer uten soner: dropp #-overskriftene.
-  ## Kategori       Nabolag og gater · Restauranter · Caféer · Barer · Muséer og gallerier ·
-                    Butikker · Hoteller · Strender og beach clubs · Verdt en omvei · Gåturer
+  ## Kategori       Nabolag og gater · Restauranter · Caféer · Barer · Jazzklubber ·
+                    Muséer og gallerier · Butikker · Hoteller · Strender og beach clubs ·
+                    Verdt en omvei · Gåturer
   ### Navn ★        ett sted. ★ bak navnet = favoritt.
   - sted: 40.7583, -73.9719     breddegrad, lengdegrad — som Google Maps viser det
                                 (høyreklikk i Google Maps og klikk på tallene for å kopiere)
@@ -46,6 +47,7 @@ og kobles hit på navn: type "område", "gate" eller "rute".
 ### Sant Ambroeus – Madison Ave ★
 - sted: 40.77542, -73.96299
 - google: ChIJL-_3K5RYwokRzKguUK0MB-w
+- nettside: https://www.santambroeus.com/
 Upper East Side
 
 Veldig autentisk, halvjålete klassisk italiensk. Supert til lunsj også. Den i Madison Ave er vår favoritt.
@@ -57,6 +59,7 @@ Very authentic, slightly posh classic Italian. Great for lunch too. The one on M
 ### Le Bilboquet
 - sted: 40.76392, -73.97057
 - google: ChIJdQhd5e9YwokRCqi-NNF8vkU
+- nettside: https://www.lebilboquetny.com/
 Upper East Side
 
 Liten, briljant fransk restaurant.
@@ -68,6 +71,7 @@ A small, brilliant French restaurant.
 ### Match 65
 - sted: 40.76727, -73.96822
 - google: ChIJraJ9su5YwokR7iKyqGteG58
+- nettside: https://www.match65.com/
 Upper East Side
 
 Strålende liten bistro – à la Balthazar, men bedre.
@@ -79,6 +83,7 @@ A wonderful little bistro – like Balthazar, only better.
 ### The Mark Restaurant by Jean-Georges
 - sted: 40.77534, -73.96333
 - google: ChIJnQLwRJRYwokRAok9jZJTLrY
+- nettside: https://www.themarkhotel.com/
 Upper East Side
 
 Bra klassisk-moderne franskbasert kjøkken inne på hotellet The Mark, av superkokken Jean-Georges Vongerichten.
@@ -92,6 +97,7 @@ Good classic-modern French-based cooking inside The Mark hotel, by star chef Jea
 ### Bemelmans Bar ★
 - sted: 40.77442, -73.96317
 - google: ChIJEQ6D9pRYwokRS-qUAZyIb6k
+- nettside: https://www.rosewoodhotels.com/en/the-carlyle-new-york
 Upper East Side
 
 Inne på The Carlyle.
@@ -100,22 +106,26 @@ Inne på The Carlyle.
 
 Inside The Carlyle.
 
+## Jazzklubber
+
 ### Café Carlyle
 - sted: 40.77436, -73.96304
 - google: ChIJEQ6D9pRYwokR8M_uqv0O4bE
+- nettside: https://www.rosewoodhotels.com/en/the-carlyle-new-york
 Upper East Side
 
-Jazzklubb inne på The Carlyle.
+Inne på The Carlyle.
 
 - en: Upper East Side
 
-Jazz club inside The Carlyle.
+Inside The Carlyle.
 
 ## Hoteller
 
 ### The Carlyle
 - sted: 40.77442, -73.96316
 - google: ChIJEQ6D9pRYwokR5TXzH7ACo7I
+- nettside: https://www.rosewoodhotels.com/en/the-carlyle-new-york
 Upper East Side
 
 - en: Upper East Side
@@ -127,6 +137,7 @@ Upper East Side
 ### The Grill ★
 - sted: 40.75832, -73.97187
 - google: ChIJ8UxZqPxYwokRQSC7-Qoeea0
+- nettside: https://www.thegrillnewyork.com/
 Midtown East
 
 Power dining. Vår favorittrestaurant på verdensbasis.
@@ -138,17 +149,19 @@ Power dining. Our favourite restaurant anywhere in the world.
 ### Per Se ★
 - sted: 40.76822, -73.98290
 - google: ChIJp3PsL_ZYwokRZYqs_40RJF4
+- nettside: https://www.thomaskeller.com/perseny
 Columbus Circle
 
-Thomas Kellers restaurant og en av verdens beste. Tre Michelin-stjerner. Kan fint besøkes til lunsj.
+Thomas Kellers restaurant og en av verdens beste. Tre Michelin-stjerner. Middag.
 
 - en: Columbus Circle
 
-Thomas Keller’s restaurant and one of the best in the world. Three Michelin stars. Works well for lunch too.
+Thomas Keller’s restaurant and one of the best in the world. Three Michelin stars. Dinner.
 
 ### Danji
 - sted: 40.76403, -73.98686
 - google: ChIJIwWKEldYwokRp55CNPQ4XkE
+- nettside: https://www.danjinyc.com/
 Hell’s Kitchen
 
 Bra, moderne koreansk i mellomprisklassen.
@@ -157,9 +170,17 @@ Bra, moderne koreansk i mellomprisklassen.
 
 Good modern Korean, mid-range.
 
+### Izakaya Futago
+- sted: 40.75123, -73.97320
+- google: ChIJ14y5HwNZwokRrNpTpUqpB7Q
+Midtown East
+
+- en: Midtown East
+
 ### Nobu 57
 - sted: 40.76371, -73.97625
 - google: ChIJPX5iCfpYwokRACnACAf2pJw
+- nettside: https://www.noburestaurants.com/fifty-seven/
 Midtown
 
 Bra moderne japansk.
@@ -168,15 +189,10 @@ Bra moderne japansk.
 
 Good modern Japanese.
 
-### Soba Totto
-- sted: 40.75123, -73.97320
-Midtown East
-
-- en: Midtown East
-
 ### Zuma
 - sted: 40.75044, -73.98074
 - google: ChIJjxZ92gBZwokRBs-63wLcBp8
+- nettside: https://www.zumarestaurant.com/
 Murray Hill
 
 Bra moderne japansk – finnes mange steder i verden.
@@ -185,18 +201,15 @@ Bra moderne japansk – finnes mange steder i verden.
 
 Good modern Japanese – found in many cities around the world.
 
-## Barer
+## Jazzklubber
 
 ### Birdland
 - sted: 40.75909, -73.98972
 - google: ChIJdc9EhVNYwokR-naSYfm_Urc
+- nettside: https://www.birdlandjazz.com/
 Theater District
 
-Jazzklubb.
-
 - en: Theater District
-
-Jazz club.
 
 # Downtown
 
@@ -205,6 +218,7 @@ Jazz club.
 ### Gramercy Tavern ★
 - sted: 40.73846, -73.98851
 - google: ChIJvSQIgqFZwokRFYQbJdzceSs
+- nettside: https://www.gramercytavern.com/
 Flatiron/Gramercy
 
 Dining room: old school, amerikansk high-end. Tavern: uformell.
@@ -216,17 +230,19 @@ Dining room: old-school, high-end American. Tavern: informal.
 ### Babbo
 - sted: 40.73230, -73.99928
 - google: ChIJ0cr5SZFZwokRqThsmC5Caes
+- nettside: https://www.babbonyc.com/
 Greenwich Village
 
-Veldig bra, autentisk italiensk. Bestill bord – men seks bord holdes av til walk-in.
+Veldig bra, autentisk italiensk.
 
 - en: Greenwich Village
 
-Very good, authentic Italian. Book ahead – though six tables are kept for walk-ins.
+Very good, authentic Italian.
 
 ### Beauty & Essex
 - sted: 40.72043, -73.98686
 - google: ChIJJWCTb4FZwokRLe7HgJSuHFI
+- nettside: https://www.beautyandessex.com/
 Lower East Side
 
 Utrolig kul restaurant som etter hvert blir til utested.
@@ -235,16 +251,10 @@ Utrolig kul restaurant som etter hvert blir til utested.
 
 A seriously cool restaurant that turns into a nightspot as the evening goes on.
 
-### Cadence
-- sted: 40.72669, -73.98446
-- google: ChIJqWOfDa9ZwokR8S9r58dyv5Y
-East Village
-
-- en: East Village
-
 ### Café Cluny
 - sted: 40.73741, -74.00396
 - google: ChIJ_WPcdpVZwokR6vSItP7fDZo
+- nettside: https://www.cafecluny.com/
 West Village
 
 Veldig bra café. Også middag.
@@ -256,6 +266,7 @@ A very good café. Dinner too.
 ### Cosme
 - sted: 40.73960, -73.98836
 - google: ChIJT-gYZKFZwokR7O8LLYuYMjU
+- nettside: https://www.cosmenyc.com/
 Flatiron
 
 - en: Flatiron
@@ -263,6 +274,7 @@ Flatiron
 ### Eleven Madison Park
 - sted: 40.74165, -73.98724
 - google: ChIJEWbXz6ZZwokRLKmKrtPfVFY
+- nettside: https://www.elevenmadisonpark.com/
 Flatiron
 
 Legendarisk tre-stjerners som har vært kåret til verdens beste restaurant. Opplevelsene våre har imidlertid vært litt varierende.
@@ -274,6 +286,7 @@ A legendary three-star that has been named the world’s best restaurant. Our ow
 ### GupShup
 - sted: 40.73688, -73.98764
 - google: ChIJvYavzZ5ZwokRBQj3hhDtpfk
+- nettside: https://www.gupshupnyc.com/
 Gramercy
 
 - en: Gramercy
@@ -281,6 +294,7 @@ Gramercy
 ### John’s of Bleecker Street
 - sted: 40.73162, -74.00345
 - google: ChIJuW43oZNZwokRdE5tLzpuykE
+- nettside: https://www.johnsofbleecker.com/
 West Village
 
 Legendarisk, røft pizzasted.
@@ -292,6 +306,7 @@ A legendary, no-frills pizzeria.
 ### Jungsik
 - sted: 40.71883, -74.00908
 - google: ChIJpSTN0R9awokRI29rK_SfbeA
+- nettside: https://www.jungsik.com/
 Tribeca
 
 Koreansk med tre Michelin-stjerner. Svært bra, men moderne og et stykke unna typisk koreansk.
@@ -303,6 +318,7 @@ Korean with three Michelin stars. Excellent, but modern and some way from typica
 ### La Esquina
 - sted: 40.72140, -73.99759
 - google: ChIJibtT3ohZwokR7tX0gp0nG8U
+- nettside: https://www.esquinanyc.com/
 Nolita
 
 Bra, røff meksikansk. Walk-in i caféen, eller bestill bord i brasseriet (DJ m.m.) – inngangen er en «hemmelig» dør i takeaway-delen.
@@ -314,6 +330,7 @@ Good, rough-and-ready Mexican. Walk in at the café, or book a table in the bras
 ### Lafayette Grand Café & Bakery
 - sted: 40.72759, -73.99370
 - google: ChIJBVtTt5pZwokR48CgdYqHma8
+- nettside: https://www.lafayetteny.com/
 NoHo
 
 Hyggelig brasserie, gjerne til lunsj.
@@ -325,6 +342,7 @@ A pleasant brasserie, ideally for lunch.
 ### Minetta Tavern
 - sted: 40.72999, -74.00070
 - google: ChIJeQcZlpFZwokRjoemq-_w9QA
+- nettside: https://www.minettatavernny.com/
 Greenwich Village
 
 Historisk og meget bra brasserie.
@@ -336,6 +354,7 @@ A historic and very good brasserie.
 ### Piccola Cucina Estiatorio
 - sted: 40.72468, -74.00318
 - google: ChIJlQbeXYxZwokRnKjjqj-xmxM
+- nettside: https://www.piccolacucinagroup.com/
 SoHo
 
 Livlig, ujålete siciliansk.
@@ -347,6 +366,7 @@ Lively, unpretentious Sicilian.
 ### Sant Ambroeus – Nolita
 - sted: 40.72335, -73.99653
 - google: ChIJC2jHPo9ZwokR_1oNEY13rM4
+- nettside: https://www.santambroeus.com/
 Nolita
 
 Veldig autentisk, halvjålete klassisk italiensk. Supert til lunsj også. Vår favoritt er den i Madison Ave.
@@ -355,18 +375,12 @@ Veldig autentisk, halvjålete klassisk italiensk. Supert til lunsj også. Vår f
 
 Very authentic, slightly posh classic Italian. Great for lunch too. Our favourite is the one on Madison Ave.
 
-### Shuka
-- sted: 40.72706, -74.00279
-- google: ChIJ3dbcl41ZwokRouIrXtQ5erk
-SoHo
-
-- en: SoHo
-
 ## Barer
 
 ### Death & Co ★
 - sted: 40.72592, -73.98465
 - google: ChIJKU1MNJ1ZwokRQ7eiWK511vI
+- nettside: https://www.deathandcompany.com/
 East Village
 
 Cocktailbar.
@@ -375,22 +389,22 @@ Cocktailbar.
 
 Cocktail bar.
 
+## Jazzklubber
+
 ### Blue Note
 - sted: 40.73091, -74.00066
 - google: ChIJbfTV15NZwokRSeNM676BEZI
+- nettside: https://www.bluenotejazz.com/nyc/
 Greenwich Village
 
-Jazzklubb.
-
 - en: Greenwich Village
-
-Jazz club.
 
 ## Hoteller
 
 ### Crosby Street Hotel
 - sted: 40.72301, -73.99742
 - google: ChIJpYIgKY9ZwokRMt2wXGRZ1fg
+- nettside: https://www.firmdalehotels.com/hotels/new-york/crosby-street-hotel/
 SoHo
 
 - en: SoHo
@@ -398,6 +412,7 @@ SoHo
 ### The Hotel Chelsea
 - sted: 40.74433, -73.99687
 - google: ChIJZ2_TLytZwokR03K2GtOG9h8
+- nettside: https://www.hotelchelsea.com/
 Chelsea
 
 - en: Chelsea
@@ -405,6 +420,7 @@ Chelsea
 ### Soho Grand Hotel
 - sted: 40.72198, -74.00433
 - google: ChIJH8Pll4pZwokR8v9iZ3fgZ-Q
+- nettside: https://www.sohogrand.com/
 SoHo
 
 - en: SoHo
@@ -412,6 +428,7 @@ SoHo
 ### 11 Howard
 - sted: 40.71918, -74.00011
 - google: ChIJJ8Cu8olZwokRP0gu7bI_PHs
+- nettside: https://www.11howard.com/
 SoHo
 
 - en: SoHo
@@ -423,6 +440,7 @@ SoHo
 ### Oxomoco ★
 - sted: 40.72982, -73.95548
 - google: ChIJ__-z7kBZwokRezHqB39zBLI
+- nettside: https://www.oxomoco.com/
 Greenpoint
 
 Veldig kul, moderne og ujålete meksikansk. God stemning.
@@ -434,6 +452,7 @@ Very cool, modern and unpretentious Mexican. Great atmosphere.
 ### Peter Luger
 - sted: 40.70988, -73.96251
 - google: ChIJR_bK295bwokR8gM6QgEdmkY
+- nettside: https://peterluger.com/
 Williamsburg
 
 Legendarisk steaksted, kåret til USAs beste i flere tiår.
@@ -445,6 +464,7 @@ A legendary steakhouse, named the best in the US for decades.
 ### The River Café
 - sted: 40.70383, -73.99479
 - google: ChIJ2QZOdTpawokRU_eN_EPJaX8
+- nettside: https://www.rivercafe.com/
 DUMBO
 
 Legendarisk, romantisk old school-restaurant med Michelin-stjerne, rett under Brooklyn Bridge.
