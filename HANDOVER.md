@@ -1,13 +1,13 @@
 # Byguider — overlevering
 
 Statusdokument for å ta prosjektet videre i en Cowork-økt.
-Sist oppdatert: 30. september 2026 (mobilretting på grenen `mobil`).
+Sist oppdatert: 4. oktober 2026 (New York som fjerde by, grenen `new-york`).
 
 ---
 
 ## 1. Målet
 
-En enkel nettbasert app som viser Påls byer — London først, så Nice og Oslo — på kart,
+En enkel nettbasert app som viser Påls byer — London først, så Nice, Oslo og New York — på kart,
 med nabolag, steder i flere kategorier (caféer, parker, butikker, markeder, gallerier)
 og markerte gater og gåturer. Skal kunne deles via lenke uten innlogging.
 
@@ -55,11 +55,13 @@ byguider/
 ├── london/index.html       stubb: <script src="../app.js" data-by="london">
 ├── nice/index.html
 ├── oslo/index.html
+├── new-york/index.html
 ├── data/
 │   ├── london.md                 kilden: steder, notater, soner, metadata
 │   ├── london-geometri.geojson   områder, gater, gåturer (koblet på navn)
 │   ├── nice.md / nice-geometri.geojson   tomme, metadata utfylt
-│   └── oslo.md / oslo-geometri.geojson   tomme, metadata utfylt
+│   ├── oslo.md / oslo-geometri.geojson
+│   └── new-york.md / new-york-geometri.geojson   soner Uptown, Midtown, Downtown, Brooklyn; geometrien er tom
 ├── arkiv/
 │   └── london-map_1.html   gammel prototype, ikke i bruk
 ├── Tips til nabolag i London.md   råmateriale, kilden til London-dataene
@@ -227,7 +229,7 @@ Repoet `paalstampe/byguider` publiseres med Settings → Pages → Deploy from a
 `main` / `(root)`. Adresser:
 
 - `https://paalstampe.github.io/byguider/` (forside) — evt. `stam.pe/byguider/`
-- `…/byguider/london/`, `…/byguider/nice/`, `…/byguider/oslo/`
+- `…/byguider/london/`, `…/byguider/nice/`, `…/byguider/oslo/`, `…/byguider/new-york/`
 
 GitHub videresender git-trafikk fra det gamle repo-navnet, men **ikke** Pages-adressen:
 `…/nabolag-london/` slutter å virke. Netlify er vurdert og valgt bort (kredittmåler).
