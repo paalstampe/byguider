@@ -1,7 +1,7 @@
 ---
-tittel: Påls London
+tittel: Pål og Vibekes London
 undertittel: Gater, torg og strøk verdt en omvei — med noen ruter å gå dem på.
-tittel-en: Pål’s London
+tittel-en: Pål and Vibeke’s London
 undertittel-en: Streets, squares and neighbourhoods worth a detour — with a few walks to take them in.
 senter: 51.5105, -0.1235
 zoom: 11

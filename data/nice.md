@@ -1,7 +1,7 @@
 ---
-tittel: Påls Nice
+tittel: Pål og Vibekes Nice
 undertittel: Restauranter, caféer og steder verdt en omvei.
-tittel-en: Pål’s Nice
+tittel-en: Pål and Vibeke’s Nice
 undertittel-en: Restaurants, cafés and places worth a detour.
 senter: 43.6990, 7.2620
 zoom: 13

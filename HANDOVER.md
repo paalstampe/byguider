@@ -7,7 +7,7 @@ Sist oppdatert: 4. oktober 2026 (New York som fjerde by, grenen `new-york`).
 
 ## 1. Målet
 
-En enkel nettbasert app som viser Påls byer — London først, så Nice, Oslo og New York — på kart,
+En enkel nettbasert app som viser Pål og Vibekes byer — London først, så Nice, Oslo og New York — på kart,
 med nabolag, steder i flere kategorier (caféer, parker, butikker, markeder, gallerier)
 og markerte gater og gåturer. Skal kunne deles via lenke uten innlogging.
 
@@ -93,7 +93,7 @@ Instruksjonene står som kommentar øverst i hver fil.
 
 ```
 ---
-tittel: Påls London                 frontmatter: tittel, undertittel,
+tittel: Pål og Vibekes London       frontmatter: tittel, undertittel,
 senter: 51.5105, -0.1235            senter (breddegrad, lengdegrad), zoom, oppdatert
 ---
 # Central                           sone — rekkefølgen her er rekkefølgen i appen
@@ -383,7 +383,7 @@ Hvert trinn skal kunne committes for seg og fungere alene.
 - Avkryssing av besøkte steder: valgt bort foreløpig — `besokt` redigeres i dataene.
 - ~~Kategorier og md som kilde.~~ Gjort (grenen `md-kilde`): sju kategorier + gåturer,
   md-fila er kilden, nabolag vises med områdeskisse + gater, klikk i kartet blar ikke i lista.
-- ~~Navigasjon og filtre.~~ Gjort (grenen `navigasjon`): brødsmuler (stam.pe / Påls byguider /
+- ~~Navigasjon og filtre.~~ Gjort (grenen `navigasjon`): brødsmuler (stam.pe / Pål og Vibekes byguider /
   By) øverst i sidebaren og på forsiden; «Alle» først i sone- og kategorifiltrene, ett valg om
   gangen (trykk igjen = Alle), «Nullstill» fjernet; «besøkt» fjernet fra visning og data;
   «Zoom inn» i popupen (til området om det er tegnet, ellers bydelsnivå for nabolag og gatenivå

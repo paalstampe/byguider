@@ -1,4 +1,4 @@
-# Påls byguider
+# Pål og Vibekes byguider
 
 Interaktive kart over nabolag, gater, gåturer og steder — London, Nice og Oslo.
 

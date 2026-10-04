@@ -1,7 +1,7 @@
 ---
-tittel: Påls Oslo
+tittel: Pål og Vibekes Oslo
 undertittel: Restauranter — mine go-to-steder og andre jeg liker.
-tittel-en: Pål’s Oslo
+tittel-en: Pål and Vibeke’s Oslo
 undertittel-en: Restaurants — my go-to places and others I like.
 senter: 59.9180, 10.7400
 zoom: 13
