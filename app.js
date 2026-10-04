@@ -27,6 +27,8 @@ const KATEGORIER = {
                 alias: ['Café', 'Kafé', 'Kafeer', 'Bakeri', 'Bakerier'] },
   bar:        { navn: 'Barer',               en: 'Bars',                   farge: '#6E4A6B', ikon: 'glass',
                 alias: ['Bar', 'Puber', 'Pub'] },
+  jazz:       { navn: 'Jazzklubber',         en: 'Jazz clubs',             farge: '#A33E6B', ikon: 'note',
+                alias: ['Jazzklubb', 'Jazz', 'Livemusikk', 'Musikk', 'Jazz club'] },
   museum:     { navn: 'Muséer og gallerier', en: 'Museums and galleries',  farge: '#3F5A6B', ikon: 'ramme',
                 alias: ['Museum', 'Museer', 'Galleri', 'Gallerier'] },
   butikk:     { navn: 'Butikker',            en: 'Shops',                  farge: '#4F6B7A', ikon: 'pose',
@@ -200,6 +202,7 @@ const IKONER = {
   flagg:   'M7 21V4 M7 4.5h10l-2.2 3.75L17 12H7',
   seng:    'M4 6v13 M4 15h16v4 M4 11.5h6V15 M10 11.5h6.5A3.5 3.5 0 0 1 20 15 M7 9.5a1.3 1.3 0 1 0 0.01 0',
   parasoll:'M4 11.5a8 6.5 0 0 1 16 0z M12 11.5v8 M5 19.5h14',
+  note:    'M11 18V6.5l8-2V16 M11 10l8-2 M6 18a2.5 2 0 1 0 5 0a2.5 2 0 1 0-5 0 M14 16a2.5 2 0 1 0 5 0a2.5 2 0 1 0-5 0',
   prikk:   'M9 12a3 3 0 1 0 6 0a3 3 0 1 0-6 0'
 };
 
