@@ -93,7 +93,7 @@ Open every day.
 ### Jan ★
 - sted: 43.69986, 7.28490
 - google: ChIJ7cguWLjazRIR0sVOtnZhvUM
-- nettside: http://www.restaurantjan.com/
+- nettside: https://janonline.com/restaurantjan/
 Fine dining
 
 ### Les Agitateurs ★
@@ -195,7 +195,7 @@ Fine dining
 ### Olive & Artichaut
 - sted: 43.69649, 7.27599
 - google: ChIJpU2cM6PazRIRqHWfuvZTVkI
-- nettside: http://www.oliveartichaut.com/
+- nettside: https://guide.michelin.com/gb/en/provence-alpes-cote-dazur/nice/restaurant/olive-et-artichaut
 
 ### L'eau de vie
 - sted: 43.70168, 7.27569
@@ -313,7 +313,6 @@ Lunsj
 ### Maranna
 - sted: 43.69637, 7.27671
 - google: ChIJ22rwonPbzRIR_iWefjIZCzI
-- nettside: http://www.maranna.fr/
 Lunsj
 - en: Lunch
 
