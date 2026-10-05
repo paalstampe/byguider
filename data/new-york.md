@@ -54,7 +54,7 @@ og kobles hit på navn: type "område", "gate" eller "rute".
 ### Sant Ambroeus – Madison Ave ★
 - sted: 40.77542, -73.96299
 - google: ChIJL-_3K5RYwokRzKguUK0MB-w
-- nettside: https://www.santambroeus.com/
+- nettside: https://www.santambroeus.com/pages/location-madison-avenue
 Upper East Side
 
 Veldig autentisk, halvjålete klassisk italiensk. Supert til lunsj også. Den i Madison Ave er vår favoritt.
@@ -159,9 +159,14 @@ Upper West Side
 - sted: 40.77442, -73.96316
 - google: ChIJEQ6D9pRYwokR5TXzH7ACo7I
 - nettside: https://www.rosewoodhotels.com/en/the-carlyle-new-york
+- les: IMDb | Always at the Carlyle | https://www.imdb.com/title/tt4151320/
 Upper East Side
 
+Kjent fra dokumentaren «Always at the Carlyle» (2018).
+
 - en: Upper East Side
+
+Featured in the documentary “Always at the Carlyle” (2018).
 
 ## Verdt en omvei
 
@@ -236,18 +241,6 @@ Japansk izakaya der Soba Totto lå.
 - en: Midtown East
 
 Japanese izakaya where Soba Totto used to be.
-
-### Zuma
-- sted: 40.75044, -73.98074
-- google: ChIJjxZ92gBZwokRBs-63wLcBp8
-- nettside: https://www.zumarestaurant.com/en/new-york
-Murray Hill
-
-Bra moderne japansk – finnes mange steder i verden.
-
-- en: Murray Hill
-
-Good modern Japanese – found in many cities around the world.
 
 ## Jazzklubber
 
@@ -451,15 +444,15 @@ Livlig, ujålete siciliansk.
 
 Lively, unpretentious Sicilian.
 
-### Sant Ambroeus – Nolita
+### Sant Ambroeus – SoHo
 - sted: 40.72335, -73.99653
 - google: ChIJC2jHPo9ZwokR_1oNEY13rM4
-- nettside: https://www.santambroeus.com/
-Nolita
+- nettside: https://www.santambroeus.com/pages/location-soho
+SoHo
 
 Veldig autentisk, halvjålete klassisk italiensk. Supert til lunsj også. Vår favoritt er den i Madison Ave.
 
-- en: Nolita
+- en: SoHo
 
 Very authentic, slightly posh classic Italian. Great for lunch too. Our favourite is the one on Madison Ave.
 
@@ -520,7 +513,7 @@ Nolita
 ### McNally Jackson Books SoHo
 - sted: 40.72542, -74.00069
 - google: ChIJwaHnQI9ZwokRvlECeQqpHdg
-- nettside: https://www.mcnallyjackson.com/
+- nettside: https://mcnallyjackson.com/
 SoHo
 
 - en: SoHo
@@ -528,7 +521,7 @@ SoHo
 ### McNulty's Tea & Coffee Co
 - sted: 40.73350, -74.00519
 - google: ChIJcSBRXpNZwokR5JrsEsXYId4
-- nettside: https://www.mcnultys.com/
+- nettside: https://mcnultys.com
 West Village
 
 - en: West Village
@@ -592,6 +585,14 @@ Chelsea
 
 - en: Chelsea
 
+### Comedy Cellar
+- sted: 40.73020, -74.00056
+- google: ChIJmzPYgJFZwokRg4zUwTlZwtI
+- nettside: https://www.comedycellar.com/
+Greenwich Village
+
+- en: Greenwich Village
+
 ### Pier 54
 - sted: 40.74155, -74.00997
 - google: ChIJ7-JxocFZwokRC5WeLJsMfXk
@@ -647,14 +648,14 @@ Fra Pier 54 langs Hudson River Park og Battery Park City helt ned til sørspisse
 ### Williamsburg
 - sted: 40.71784, -73.95772
 - google: ChIJQSrBBv1bwokRbNfFHCnyeYI
-- gater: Bedford Avenue
+- gater: Bedford Avenue, Wythe Avenue, Berry Street, North 6th Street
 
 ## Restauranter
 
 ### Oxomoco ★
 - sted: 40.72982, -73.95548
 - google: ChIJ__-z7kBZwokRezHqB39zBLI
-- nettside: https://www.oxomoco.com/
+- nettside: https://www.oxomoconyc.com
 Greenpoint
 
 Veldig kul, moderne og ujålete meksikansk. God stemning.
