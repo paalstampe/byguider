@@ -1,11 +1,11 @@
 ---
 tittel: Pål og Vibekes New York
-undertittel: Restauranter, barer og hoteller vi kommer tilbake til.
+undertittel: Nabolag, gåturer, restauranter og barer vi kommer tilbake til.
 tittel-en: Pål and Vibeke’s New York
-undertittel-en: Restaurants, bars and hotels we keep coming back to.
+undertittel-en: Neighbourhoods, walks, restaurants and bars we keep coming back to.
 senter: 40.7400, -73.9850
 zoom: 12
-oppdatert: 2026-10-04
+oppdatert: 2026-10-05
 ---
 
 <!--
@@ -41,6 +41,13 @@ og kobles hit på navn: type "område", "gate" eller "rute".
 -->
 
 # Uptown
+
+## Nabolag og gater
+
+### Upper East Side ★
+- sted: 40.77191, -73.96535
+- google: ChIJa49ICL9YwokRDaotFKkGh2E
+- gater: Madison Avenue
 
 ## Restauranter
 
@@ -120,6 +127,32 @@ Inne på The Carlyle.
 
 Inside The Carlyle.
 
+## Muséer og gallerier
+
+### Guggenheim
+- sted: 40.78298, -73.95897
+- google: ChIJmZ5emqJYwokRuDz79o0coAQ
+- nettside: https://www.guggenheim.org/
+Upper East Side
+
+- en: Upper East Side
+
+### Metropolitan Museum of Art
+- sted: 40.77944, -73.96324
+- google: ChIJb8Jg9pZYwokR-qHGtvSkLzs
+- nettside: https://www.metmuseum.org/
+Upper East Side
+
+- en: Upper East Side
+
+### American Museum of Natural History
+- sted: 40.78132, -73.97399
+- google: ChIJCXoPsPRYwokRsV1MYnKBfaI
+- nettside: https://www.amnh.org/
+Upper West Side
+
+- en: Upper West Side
+
 ## Hoteller
 
 ### The Carlyle
@@ -129,6 +162,16 @@ Inside The Carlyle.
 Upper East Side
 
 - en: Upper East Side
+
+## Verdt en omvei
+
+### Central Park
+- sted: 40.77395, -73.97097
+- google: ChIJ4zGFAZpYwokRGUGph3Mf37k
+- nettside: https://www.centralparknyc.org/
+Bethesda Terrace og The Mall.
+
+- en: Bethesda Terrace and The Mall.
 
 # Midtown
 
@@ -169,13 +212,6 @@ Bra, moderne koreansk i mellomprisklassen.
 - en: Hell’s Kitchen
 
 Good modern Korean, mid-range.
-
-### Izakaya Futago
-- sted: 40.75123, -73.97320
-- google: ChIJ14y5HwNZwokRrNpTpUqpB7Q
-Midtown East
-
-- en: Midtown East
 
 ### Nobu 57
 - sted: 40.76371, -73.97625
@@ -223,7 +259,47 @@ Theater District
 
 - en: Theater District
 
+## Muséer og gallerier
+
+### MoMA
+- sted: 40.76143, -73.97762
+- google: ChIJKxDbe_lYwokRVf__s8CPn-o
+- nettside: https://www.moma.org/
+Midtown
+
+- en: Midtown
+
 # Downtown
+
+## Nabolag og gater
+
+### Nolita ★
+- sted: 40.72352, -73.99467
+- google: ChIJd9PLRY9ZwokRk9g2ewaGdEI
+- gater: Elizabeth Street, Mott Street, Mulberry Street
+
+### SoHo ★
+- sted: 40.72519, -73.99970
+- google: ChIJ8-JRXoxZwokRGPiQ9Ek0L84
+- gater: Prince Street, Spring Street, Broome Street
+
+### West Village ★
+- sted: 40.73520, -74.00490
+- google: ChIJY1SflpRZwokRhLCM-FupOe8
+- gater: Bleecker Street, West 4th Street, Hudson Street
+
+### East Village
+- sted: 40.72897, -73.98888
+- google: ChIJRU7M53dZwokR7GgPQPM1qW8
+
+### Lower East Side
+- sted: 40.72052, -73.98901
+- google: ChIJ64usFYBZwokRcGprpf5JuFk
+- gater: Orchard Street
+
+### Meatpacking District
+- sted: 40.74099, -74.00761
+- google: ChIJSWHWcMBZwokRnuiJh_NVI3A
 
 ## Restauranter
 
@@ -387,6 +463,16 @@ Veldig autentisk, halvjålete klassisk italiensk. Supert til lunsj også. Vår f
 
 Very authentic, slightly posh classic Italian. Great for lunch too. Our favourite is the one on Madison Ave.
 
+## Caféer
+
+### Russ & Daughters
+- sted: 40.72258, -73.98831
+- google: ChIJ7VEEjYNZwokRS0bdsXA3uyg
+- nettside: https://www.russanddaughters.com/
+Lower East Side
+
+- en: Lower East Side
+
 ## Barer
 
 ### Death & Co ★
@@ -407,6 +493,50 @@ Cocktail bar.
 - sted: 40.73091, -74.00066
 - google: ChIJbfTV15NZwokRSeNM676BEZI
 - nettside: https://www.bluenotejazz.com/nyc/
+Greenwich Village
+
+- en: Greenwich Village
+
+## Muséer og gallerier
+
+### Whitney Museum
+- sted: 40.73959, -74.00886
+- google: ChIJN3MJ6pRYwokRiXg91flSP8Y
+- nettside: https://whitney.org/
+Meatpacking District
+
+- en: Meatpacking District
+
+## Butikker
+
+### Goods for the Study
+- sted: 40.72264, -73.99590
+- google: ChIJodKmS49ZwokRhZAuDVbCn8M
+- nettside: https://goodsforthestudy.com/
+Nolita
+
+- en: Nolita
+
+### McNally Jackson Books SoHo
+- sted: 40.72542, -74.00069
+- google: ChIJwaHnQI9ZwokRvlECeQqpHdg
+- nettside: https://www.mcnallyjackson.com/
+SoHo
+
+- en: SoHo
+
+### McNulty's Tea & Coffee Co
+- sted: 40.73350, -74.00519
+- google: ChIJcSBRXpNZwokR5JrsEsXYId4
+- nettside: https://www.mcnultys.com/
+West Village
+
+- en: West Village
+
+### The Strand
+- sted: 40.73325, -73.99095
+- google: ChIJnSKGEJlZwokRQIpiCvzKzV4
+- nettside: https://www.strandbooks.com/
 Greenwich Village
 
 - en: Greenwich Village
@@ -445,7 +575,79 @@ SoHo
 
 - en: SoHo
 
+## Verdt en omvei
+
+### Beastie Boys Square
+- sted: 40.72000, -73.98836
+- google: ChIJJR01Hr1ZwokR7y2qRaJCi00
+Lower East Side
+
+- en: Lower East Side
+
+### Chelsea Market
+- sted: 40.74244, -74.00614
+- google: ChIJw2lMFL9ZwokRosAtly52YX4
+- nettside: https://www.chelseamarket.com/
+Chelsea
+
+- en: Chelsea
+
+### Pier 54
+- sted: 40.74155, -74.00997
+- google: ChIJ7-JxocFZwokRC5WeLJsMfXk
+- nettside: https://hudsonriverpark.org/
+Hudson River Park
+
+- en: Hudson River Park
+
+### Washington Square Park
+- sted: 40.73088, -73.99733
+- google: ChIJjX494pBZwokRGH620d9eYfo
+Greenwich Village
+
+- en: Greenwich Village
+
+## Gåturer
+
+### High Line
+- lengde: ca. 2,3 km
+- varighet: ca. 45 min
+- nettside: https://www.thehighline.org/
+Fra Gansevoort St ved Whitney til 34th St ved Hudson Yards.
+
+- en: From Gansevoort St by the Whitney to 34th St at Hudson Yards.
+
+### Langs Hudson River
+- navn-en: Along the Hudson River
+- lengde: ca. 4,5 km
+- varighet: ca. 1 t
+Fra Pier 54 langs Hudson River Park og Battery Park City helt ned til sørspissen av Manhattan.
+
+- en: From Pier 54 along Hudson River Park and Battery Park City all the way down to the southern tip of Manhattan.
+
 # Brooklyn
+
+## Nabolag og gater
+
+### Carroll Gardens og Cobble Hill ★
+- navn-en: Carroll Gardens and Cobble Hill
+- sted: 40.68450, -73.99488
+- google: ChIJZd-PEVhawokR3JKplgUnNhY
+- gater: Smith Street, Court Street
+
+### Brooklyn Heights
+- sted: 40.69593, -73.99555
+- google: ChIJhbEG30dawokR7kJ8wEsjicg
+- gater: Brooklyn Heights Promenade
+
+### Park Slope
+- sted: 40.67100, -73.98000
+- google: ChIJ4TnckwFbwokR5KGK5JUDPgA
+
+### Williamsburg
+- sted: 40.71784, -73.95772
+- google: ChIJQSrBBv1bwokRbNfFHCnyeYI
+- gater: Bedford Avenue
 
 ## Restauranter
 
