@@ -911,6 +911,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
   function aapnePopup(o, lngLat) {
     popup.setLngLat(lngLat).setHTML(popupHtml(o.p, o.punkt, o.id)).addTo(kart);
+    nullstillFlytt();
     // Venter til en eventuell flyTo er ferdig, ellers avbryter forskyvningen den.
     if (kart.isMoving()) kart.once('moveend', faaPopupInn);
     else requestAnimationFrame(faaPopupInn);
@@ -943,6 +944,63 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     }
     if (Math.abs(dx) > 1 || Math.abs(dy) > 1) kart.panBy([dx, dy], { duration: 400 });
   }
+
+  /* Infoboksen kan dras bort når den dekker gatene. Forskyvningen legges som transform på
+     innholdet, så boksen følger fortsatt stedet når kartet flyttes; spissen skjules.
+     Ny popup = nytt innhold = tilbake på plass. Lenker og knapper drar ikke; på touch heller
+     ikke notatet, som må kunne rulles. Litt slark før dra starter, så vanlige klikk virker.
+     Popupen ligger utenfor kartets lerret, så kartet panoreres ikke samtidig. */
+  /* MapLibre gjenbruker innholdselementet når popupen får nytt innhold, så en tidligere
+     forskyvning må fjernes — ellers åpner neste sted boksen langt unna (eller utenfor skjermen). */
+  function nullstillFlytt() {
+    const pop = popup.getElement();
+    if (!pop) return;
+    pop.classList.remove('er-flyttet', 'drar');
+    const innhold = pop.querySelector('.maplibregl-popup-content');
+    if (innhold) { innhold.style.transform = ''; delete innhold.dataset.flytt; }
+  }
+
+  (function flyttbarPopup() {
+    const ramme = kart.getContainer();
+    let dra = null;
+
+    ramme.addEventListener('pointerdown', e => {
+      const innhold = e.target.closest('.pop .maplibregl-popup-content');
+      if (!innhold || !e.isPrimary || e.button !== 0) return;
+      if (e.target.closest('a, button')) return;
+      if (e.pointerType !== 'mouse' && e.target.closest('.pop-notat')) return;
+      const [x, y] = (innhold.dataset.flytt || '0,0').split(',').map(Number);
+      dra = { innhold, id: e.pointerId, x0: e.clientX, y0: e.clientY, x, y, iGang: false,
+              boks: innhold.getBoundingClientRect(), kant: ramme.getBoundingClientRect() };
+    });
+
+    ramme.addEventListener('pointermove', e => {
+      if (!dra || e.pointerId !== dra.id) return;
+      const dx = e.clientX - dra.x0, dy = e.clientY - dra.y0;
+      if (!dra.iGang) {
+        if (Math.hypot(dx, dy) < 5) return;
+        dra.iGang = true;
+        dra.innhold.setPointerCapture(e.pointerId);
+        popup.getElement().classList.add('er-flyttet', 'drar');
+      }
+      // Hold boksen innenfor kartet
+      const { boks, kant } = dra;
+      const fx = Math.min(Math.max(dx, kant.left - boks.left), kant.right - boks.right);
+      const fy = Math.min(Math.max(dy, kant.top - boks.top), kant.bottom - boks.bottom);
+      const x = dra.x + fx, y = dra.y + fy;
+      dra.innhold.style.transform = 'translate(' + x + 'px,' + y + 'px)';
+      dra.innhold.dataset.flytt = x + ',' + y;
+      e.preventDefault();
+    });
+
+    function slipp(e) {
+      if (!dra || e.pointerId !== dra.id) return;
+      if (dra.iGang) dra.innhold.closest('.maplibregl-popup').classList.remove('drar');
+      dra = null;
+    }
+    ramme.addEventListener('pointerup', slipp);
+    ramme.addEventListener('pointercancel', slipp);
+  })();
 
   /* «Zoom inn» i popupen: til området når det er tegnet, ellers et godt stykke inn —
      nabolag til bydelsnivå, enkeltsteder til gatenivå. */

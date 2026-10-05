@@ -557,6 +557,17 @@ html, body {
 .pop.maplibregl-popup-anchor-left .maplibregl-popup-tip { border-right-color: var(--kort); }
 .pop.maplibregl-popup-anchor-right .maplibregl-popup-tip { border-left-color: var(--kort); }
 
+/* Infoboksen kan dras bort fra gatene (flyttbarPopup i app.js). */
+.pop .maplibregl-popup-content { touch-action: none; }
+.pop .pop-notat { touch-action: pan-y; }
+.pop.er-flyttet .maplibregl-popup-tip { visibility: hidden; }
+.pop.drar { user-select: none; -webkit-user-select: none; }
+@media (hover: hover) and (pointer: fine) {
+  .pop .maplibregl-popup-content { cursor: grab; }
+  .pop.drar .maplibregl-popup-content { cursor: grabbing; }
+  .pop .maplibregl-popup-content :is(a, button) { cursor: pointer; }
+}
+
 .pop .maplibregl-popup-close-button {
   top: 2px;
   right: 4px;
@@ -693,6 +704,14 @@ button.pop-lenke {
 
 .rute-notat { margin: 8px 0 0; font-size: 13px; line-height: 1.45; white-space: pre-line; max-height: 40vh; overflow-y: auto; }
 .rute-notat:empty, .rute-meta:empty { display: none; }
+
+/* Desktop: hele sidepanelet ruller (ett rullefelt), tellerlinjen blir liggende øverst. */
+@media (min-width: 901px) {
+  .sidebar { overflow-y: auto; overscroll-behavior: contain; }
+  .sidebar > * { flex-shrink: 0; }
+  .liste { flex: 1 0 auto; overflow: visible; }
+  .teller-rad { position: sticky; top: 0; z-index: 2; background: var(--papir); }
+}
 
 /* ---------- Mobil ---------- */
 
