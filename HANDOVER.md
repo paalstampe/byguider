@@ -401,5 +401,12 @@ Hvert trinn skal kunne committes for seg og fungere alene.
 - Infoboks unna kartknappene (grenen `nifty-noether-ep5o2q`, 4.10.): `faaPopupInn` regner også
   knappene øverst til venstre som hindring — boksen flyttes til høyre for dem, eller ned under dem
   hvis den ikke får plass i bredden.
+- Sidepanelet ruller samlet på desktop (grenen `epic-mendel-vk2p30`, 5.10.): hele sidebaren har
+  ett rullefelt (overskrift, søk og filtre ruller bort), tellerlinjen blir liggende øverst — som i
+  Reiseplanlegging. Mobil uendret.
+- Flyttbar infoboks (samme gren): popupen kan dras bort fra gatene (`flyttbarPopup`), med mus og
+  touch. Forskyvningen er en transform på innholdet, så boksen følger stedet når kartet flyttes;
+  spissen skjules, og boksen holdes innenfor kartet. Lenker/knapper drar ikke, og på touch ruller
+  notatet i stedet for å dra. Ny popup starter på vanlig plass.
 - Neste: data. Pål kommer med navneendringer (som Marylebone High Street → Marylebone Village)
   og nye steder; områdeskisser tegnes etter hvert. Eksempelstedene er merket EKSEMPEL.

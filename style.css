@@ -557,6 +557,17 @@ html, body {
 .pop.maplibregl-popup-anchor-left .maplibregl-popup-tip { border-right-color: var(--kort); }
 .pop.maplibregl-popup-anchor-right .maplibregl-popup-tip { border-left-color: var(--kort); }
 
+/* Infoboksen kan dras bort fra gatene (flyttbarPopup i app.js). */
+.pop .maplibregl-popup-content { touch-action: none; }
+.pop .pop-notat { touch-action: pan-y; }
+.pop.er-flyttet .maplibregl-popup-tip { visibility: hidden; }
+.pop.drar { user-select: none; -webkit-user-select: none; }
+@media (hover: hover) and (pointer: fine) {
+  .pop .maplibregl-popup-content { cursor: grab; }
+  .pop.drar .maplibregl-popup-content { cursor: grabbing; }
+  .pop .maplibregl-popup-content :is(a, button) { cursor: pointer; }
+}
+
 .pop .maplibregl-popup-close-button {
   top: 2px;
   right: 4px;
