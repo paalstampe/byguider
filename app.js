@@ -753,6 +753,32 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
   const KLIKKBARE = ['gater', 'gaaturer', 'punkter'];
 
+  /* Oversikt: alle tegnede nabolag med tynt omriss og navn, bare når kartet er zoomet ut.
+     Navnet står under nabolagets ikon. Ingen infoboks — ikonet velger nabolaget som før. */
+  const OVERSIKT_MAKSZOOM = 13.5;
+  const OVERSIKTSLAG = {
+    'oversikt-kant': {
+      source: 'omrader', type: 'line', maxzoom: OVERSIKT_MAKSZOOM,
+      filter: ['==', ['geometry-type'], 'Polygon'],
+      layout: { 'line-join': 'round' },
+      paint: { 'line-color': '#8A5A2B', 'line-width': 1, 'line-opacity': 0.55, 'line-dasharray': [3, 2] }
+    },
+    'oversikt-navn': {
+      source: 'omrader', type: 'symbol', maxzoom: OVERSIKT_MAKSZOOM,
+      filter: ['==', ['geometry-type'], 'Point'],
+      layout: {
+        'text-anchor': 'top',
+        'text-offset': [0, 1],
+        'text-field': ['get', 'navn'],
+        'text-font': KARTSKRIFT,
+        'text-size': 12,
+        'text-max-width': 7,
+        'text-padding': 2
+      },
+      paint: { 'text-color': '#8A5A2B', 'text-halo-color': PAPIR, 'text-halo-width': 1.5 }
+    }
+  };
+
   /* Valgt nabolag: skisse av området (lys flate, stiplet kant) og de viktigste
      gatene uthevet. Tegnes under ruter og ikoner, og bare mens nabolaget er valgt. */
   const FOKUSLAG = {
@@ -841,6 +867,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     tilpassKartstil();
     registrerIkoner();
 
+    kart.addSource('omrader', { type: 'geojson', data: tomSamling() });
     kart.addSource('fokus', { type: 'geojson', data: tomSamling() });
     kart.addSource('ruter', { type: 'geojson', data: tomSamling() });
     kart.addSource('steder', {
@@ -851,8 +878,9 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       clusterRadius: 14      // klynger bare der ikonene ellers ville overlappe
     });
 
-    Object.keys(FOKUSLAG).concat(Object.keys(KARTLAG)).forEach(id => {
-      kart.addLayer(Object.assign({ id: id }, FOKUSLAG[id] || KARTLAG[id]));
+    const lag = Object.assign({}, OVERSIKTSLAG, FOKUSLAG, KARTLAG);
+    Object.keys(lag).forEach(id => {
+      kart.addLayer(Object.assign({ id: id }, lag[id]));
     });
 
     /* Klikk på tomt kart lukker infoboksen og opphever valget. Popupens egen closeOnClick er av:
@@ -908,6 +936,14 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     const linjer = medGeo.filter(o => o.erLinje).map(o => o.f);
     kart.getSource('steder').setData({ type: 'FeatureCollection', features: punkter });
     kart.getSource('ruter').setData({ type: 'FeatureCollection', features: linjer });
+    const omrader = vis.flatMap(o => {
+      const flater = o.fokus.filter(x => x.properties.rolle === 'omrade');
+      if (!flater.length) return [];
+      const navn = { navn: visNavn(o.p) };
+      return flater.map(x => ({ type: 'Feature', geometry: x.geometry, properties: navn }))
+        .concat(o.f.geometry ? [{ type: 'Feature', geometry: o.f.geometry, properties: navn }] : []);
+    });
+    kart.getSource('omrader').setData({ type: 'FeatureCollection', features: omrader });
   }
 
   function visFokus(o) {
