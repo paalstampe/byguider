@@ -641,10 +641,6 @@ Fra Pier 54 langs Hudson River Park og Battery Park City helt ned til sørspisse
 - google: ChIJhbEG30dawokR7kJ8wEsjicg
 - gater: Brooklyn Heights Promenade
 
-### Park Slope
-- sted: 40.67100, -73.98000
-- google: ChIJ4TnckwFbwokR5KGK5JUDPgA
-
 ### Williamsburg
 - sted: 40.71784, -73.95772
 - google: ChIJQSrBBv1bwokRbNfFHCnyeYI
