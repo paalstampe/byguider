@@ -13,16 +13,17 @@ Hold HANDOVER.md oppdatert når noe vesentlig endres (punkt 2, 8 og 10.5).
 ## Arbeidsflyt
 - Endringer som ikke trenger forhåndsvisning — data (data/*.md, data/*-geometri.geojson, byer.json)
   og dokumentasjon (CLAUDE.md, HANDOVER.md) — pushes rett til main, uten gren og PR.
-- Kodeendringer (app.js, style.css, index.html, stubber, .claude/) på egen gren. Push grenen; forhåndsvisningen
-  er https://stam.pe/byguider/forhandsvisning/<gren>/london/ (klar 1–2 min etter push,
-  bygges av .github/workflows/pages.yml).
+- Kodeendringer (app.js, style.css, index.html, stubber, .claude/) på egen gren.
+  Lokal økt: Pål ser endringene på localhost, ikke i forhåndsvisningen — grenen pushes først når den skal flettes.
+  Skyøkt: push grenen; forhåndsvisningen er https://stam.pe/byguider/forhandsvisning/<gren>/london/
+  (klar 1–2 min etter push, bygges av .github/workflows/pages.yml).
 - Sjekk designet selv: .claude/skjermbilde.sh <url> <fil.png> 390 844 (mobil) og 1300 900 (desktop);
   legg til «hel» for hele siden. Tillatt: https://stam.pe/... og http://localhost:<port>/... (eller 127.0.0.1)
   (kjør python3 -m http.server 8000 --bind 127.0.0.1 først — gir rask sjekk før push). Virker i skyen og på Macen;
   på Macen kreves Node og Playwright (installasjon øverst i skriptet).
 - Fletting: Kan du selv verifisere at alt er i orden (skjermbilder mobil + desktop, ingen JS-feil),
-  åpne PR og flett uten å spørre. Er det noe Pål bør se på (designvalg, smak, usikkerhet), push grenen,
-  oppgi forhåndsvisningen og vent — flett når han sier ok.
+  åpne PR og flett uten å spørre. Er det noe Pål bør se på (designvalg, smak, usikkerhet), vis ham det
+  (lokalt: localhost; sky: push grenen og oppgi forhåndsvisningen) og vent — flett når han sier ok.
 - Lokal økt på Påls Mac: skal Pål se på noe, start serveren selv om den ikke kjører
   (python3 -m http.server 8000 --bind 127.0.0.1, i bakgrunnen) og åpne siden for ham med
   open http://localhost:8000/<by>/. Stopp serveren når han er ferdig. I skyøkter: bruk forhåndsvisningen.
