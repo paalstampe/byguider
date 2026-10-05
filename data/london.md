@@ -100,8 +100,8 @@ Antikk
 - google: ChIJiTYKy8AbdkgRM_8p51pSGqQ
 
 ### Hampstead Village
-- sted: 51.5608, -0.1629
-- google: ChIJIzJDyggadkgROFAV19Ti070
+- sted: 51.5555, -0.1771
+- google: https://www.google.com/maps/search/?api=1&query=Hampstead+High+Street,+London+NW3
 
 ### Highgate Village
 - sted: 51.5714, -0.1500
