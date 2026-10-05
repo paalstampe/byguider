@@ -105,7 +105,6 @@ Antikk
 
 ### Highgate Village
 - sted: 51.5714, -0.1500
-- google: ChIJF2lcJk8adkgRpjwgNQWd0-Q
 
 ### Muswell Hill
 - sted: 51.5914, -0.1427
@@ -154,7 +153,7 @@ Peckham
 
 ### East Dulwich
 - sted: 51.4617, -0.0800
-- google: ChIJS2-tbJADdkgR2H2ywPwoxTY
+- google: ChIJd4CybJADdkgROOjt-aigvws
 
 ### Herne Hill
 - sted: 51.4545, -0.0967
@@ -253,7 +252,6 @@ Start in London Fields. Walk down Broadway Market, then over to and down Columbi
 
 ### Chelsea Green ★
 - sted: 51.4907, -0.1660
-- google: ChIJASFhcWsFdkgRKfayV46TGxs
 
 ### Clarendon Cross ★
 - sted: 51.5104, -0.2102
