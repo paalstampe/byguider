@@ -1,8 +1,8 @@
 {
   "byer": [
     {"id": "london", "navn": "London", "land": "Storbritannia", "land_en": "United Kingdom", "data": "data/london.md", "geometri": "data/london-geometri.geojson", "beskrivelse": "Nabolag, gåturer og restauranter verdt en omvei.", "beskrivelse_en": "Neighbourhoods, walks and restaurants worth a detour."},
-    {"id": "nice", "navn": "Nice", "land": "Frankrike", "land_en": "France", "data": "data/nice.md", "geometri": "data/nice-geometri.geojson", "beskrivelse": "Bistroer, caféer og strender — og noen steder verdt en omvei.", "beskrivelse_en": "Bistros, cafés and beaches — and a few places worth a detour."},
-    {"id": "oslo", "navn": "Oslo", "land": "Norge", "land_en": "Norway", "data": "data/oslo.md", "geometri": "data/oslo-geometri.geojson", "beskrivelse": "Restauranter og barer.", "beskrivelse_en": "Restaurants and bars."},
+    {"id": "nice", "navn": "Nice", "land": "Frankrike", "land_en": "France", "data": "data/nice.md", "geometri": "data/nice-geometri.geojson", "beskrivelse": "Det beste av Nice, uten turistfellene.", "beskrivelse_en": "The best of Nice, without the tourist traps."},
+    {"id": "oslo", "navn": "Oslo", "land": "Norge", "land_en": "Norway", "data": "data/oslo.md", "geometri": "data/oslo-geometri.geojson", "beskrivelse": "Bord og barer vi kommer tilbake til.", "beskrivelse_en": "Tables and bars we keep coming back to."},
     {"id": "new-york", "navn": "New York", "land": "USA", "land_en": "United States", "data": "data/new-york.md", "geometri": "data/new-york-geometri.geojson", "beskrivelse": "Nabolag, gåturer, restauranter og barer vi kommer tilbake til.", "beskrivelse_en": "Neighbourhoods, walks, restaurants and bars we keep coming back to."}
   ]
 }
