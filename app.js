@@ -753,18 +753,19 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
   const KLIKKBARE = ['gater', 'gaaturer', 'punkter'];
 
-  /* Oversikt: alle tegnede nabolag med tynt omriss og navn, bare når kartet er zoomet ut.
-     Navnet står under nabolagets ikon. Ingen infoboks — ikonet velger nabolaget som før. */
-  const OVERSIKT_MAKSZOOM = 13.5;
-  const OVERSIKTSLAG = {
-    'oversikt-kant': {
-      source: 'omrader', type: 'line', maxzoom: OVERSIKT_MAKSZOOM,
+  /* Alle tegnede nabolag har omriss hele tiden (større område og kjerne), i samme stil som
+     når nabolaget er valgt. Navnet står under ikonet, men først når man har zoomet inn og
+     det er plass. Ingen infoboks — ikonet velger nabolaget som før. */
+  const NABOLAGSNAVN_MINZOOM = 13;
+  const OMRADELAG = {
+    'omrader-kant': {
+      source: 'omrader', type: 'line',
       filter: ['==', ['geometry-type'], 'Polygon'],
       layout: { 'line-join': 'round' },
-      paint: { 'line-color': '#8A5A2B', 'line-width': 1, 'line-opacity': 0.55, 'line-dasharray': [3, 2] }
+      paint: { 'line-color': '#8A5A2B', 'line-width': 1.5, 'line-opacity': 0.8, 'line-dasharray': [3, 2] }
     },
-    'oversikt-navn': {
-      source: 'omrader', type: 'symbol', maxzoom: OVERSIKT_MAKSZOOM,
+    'omrader-navn': {
+      source: 'omrader', type: 'symbol', minzoom: NABOLAGSNAVN_MINZOOM,
       filter: ['==', ['geometry-type'], 'Point'],
       layout: {
         'text-anchor': 'top',
@@ -878,7 +879,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       clusterRadius: 14      // klynger bare der ikonene ellers ville overlappe
     });
 
-    const lag = Object.assign({}, OVERSIKTSLAG, FOKUSLAG, KARTLAG);
+    const lag = Object.assign({}, OMRADELAG, FOKUSLAG, KARTLAG);
     Object.keys(lag).forEach(id => {
       kart.addLayer(Object.assign({ id: id }, lag[id]));
     });
