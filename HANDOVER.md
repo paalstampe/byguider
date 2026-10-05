@@ -428,4 +428,5 @@ Hvert trinn skal kunne committes for seg og fungere alene.
   Meatpacking stopper nå ved Tenth Ave og Gansevoort St; Park Slope er fjernet.
   Lokale økter bruker localhost, ikke forhåndsvisningen (CLAUDE.md).
 - Neste: data. Pål kommer med navneendringer (som Marylebone High Street → Marylebone Village)
-  og nye steder; områdeskisser tegnes etter hvert. Eksempelstedene er merket EKSEMPEL.
+  og nye steder. Områdeskisser: alle nabolag i London og New York er tegnet (London 5.10.,
+  langs gatene i OpenStreetMap); nye nabolag trenger skisse. Eksempelstedene er merket EKSEMPEL.
