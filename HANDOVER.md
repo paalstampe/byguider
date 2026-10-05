@@ -245,6 +245,10 @@ minutter etter push. Slettede grener forsvinner ved neste publisering. Pages-kil
 «GitHub Actions». Arbeidsflyt: data rett i `main`; kode på egen gren, sjekk forhåndsvisningen,
 flett.
 
+På Påls Mac er GitHub CLI (`gh`) installert i `/usr/local/bin` (hentet fra GitHubs utgivelser —
+Homebrew i `/usr/local` er for gammel for macOS 27) og innlogget; `gh auth setup-git` gjør at
+git pusher med samme innlogging. Claude kan dermed pushe, åpne PR og flette lokalt.
+
 ---
 
 ## 8. Neste steg
@@ -409,5 +413,13 @@ Hvert trinn skal kunne committes for seg og fungere alene.
   spissen skjules, og boksen holdes innenfor kartet. Lenker/knapper drar ikke, og på touch ruller
   notatet i stedet for å dra. Ny popup starter på vanlig plass (`nullstillFlytt` — MapLibre
   gjenbruker innholdselementet, så forskyvningen må fjernes eksplisitt).
+- Infoboks ved klikk fra sted til sted (grenen `kart-popup-klikk`, PR #30, 5.10.): popupen har
+  `closeOnClick: false`. MapLibres egen lukking lyttet på samme klikk som stedet og lukket den nye
+  infoboksen når man klikket rett fra ett sted til et annet (Williamsburg → Carroll Gardens ga bare
+  omrisset). Klikk på tomt kart lukker nå popupen eksplisitt og opphever valget. Navnelappen
+  vises ikke ved hover over stedet som allerede har infoboksen åpen.
+- Forsidetekster (grenen `forside-undertekster`, PR #31, 5.10.): ingress «Byene slik vi bruker
+  dem.», Nice «Det beste av Nice, uten turistfellene.», Oslo «Bord og barer vi kommer tilbake
+  til.» — hentet fra en uflettet commit (`802e279`, jeg-form) og skrevet om til vi-form.
 - Neste: data. Pål kommer med navneendringer (som Marylebone High Street → Marylebone Village)
   og nye steder; områdeskisser tegnes etter hvert. Eksempelstedene er merket EKSEMPEL.
