@@ -124,12 +124,13 @@ Gåturer har `lengde:` og `varighet:` som fritekst, og kan mangle tegnet rute
 
 | type | geometri | vises |
 |---|---|---|
-| `område` | Polygon | lys flate med stiplet kant når nabolaget er valgt |
+| `område` | Polygon | lys flate med stiplet kant, alltid synlig; kjernen (polygon nr. 2) blir mørkere der den ligger oppå |
 | `gate` | LineString | uthevet gate når nabolaget er valgt |
 | `rute` | LineString | gåturens stiplede rute, alltid synlig |
 
-Et nabolag uten `sted:` men med `område` får punkt midt i området. Klikk på nabolaget
-(i lista eller kartet) viser område og gater og zoomer dit; klikk på tomt kart opphever.
+Et nabolag uten `sted:` men med `område` får punkt midt i området. Navnet står under
+nabolagsikonet fra zoom 13 (`NABOLAGSNAVN_MINZOOM`). Klikk på nabolaget
+(i lista eller kartet) uthever område og gater og zoomer dit; klikk på tomt kart opphever.
 Gategeometri kan hentes fra OpenStreetMap (Overpass) — Claude kan gjøre det på forespørsel.
 
 Koordinatrekkefølge: **md-fila bruker breddegrad, lengdegrad** (Google-rekkefølge);
@@ -421,5 +422,10 @@ Hvert trinn skal kunne committes for seg og fungere alene.
 - Forsidetekster (grenen `forside-undertekster`, PR #31, 5.10.): ingress «Byene slik vi bruker
   dem.», Nice «Det beste av Nice, uten turistfellene.», Oslo «Bord og barer vi kommer tilbake
   til.» — hentet fra en uflettet commit (`802e279`, jeg-form) og skrevet om til vi-form.
+- Nabolag alltid synlige (grenen `oversikt-omrader`, PR #32, 5.10.): alle tegnede områder
+  (større område og kjerne) har lys flate og stiplet omriss hele tiden (`OMRADELAG`, kilden
+  `omrader`, følger filtrene); navn under ikonet fra zoom 13. Ingen infoboks før man klikker.
+  Meatpacking stopper nå ved Tenth Ave og Gansevoort St; Park Slope er fjernet.
+  Lokale økter bruker localhost, ikke forhåndsvisningen (CLAUDE.md).
 - Neste: data. Pål kommer med navneendringer (som Marylebone High Street → Marylebone Village)
   og nye steder; områdeskisser tegnes etter hvert. Eksempelstedene er merket EKSEMPEL.
