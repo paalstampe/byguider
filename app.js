@@ -684,7 +684,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
   const kartKlar = new Promise(res => kart.once('load', res));
 
-  const popup = new maplibregl.Popup({ closeButton: true, focusAfterOpen: false, maxWidth: '300px', offset: 15, className: 'pop' });
+  const popup = new maplibregl.Popup({ closeButton: true, closeOnClick: false, focusAfterOpen: false, maxWidth: '300px', offset: 15, className: 'pop' });
   const tips = new maplibregl.Popup({ closeButton: false, closeOnClick: false, offset: 15, className: 'tips' });
   const ekteHover = window.matchMedia('(hover: hover) and (pointer: fine)');
   const smalSkjerm = window.matchMedia('(max-width: 900px)');   // samme brytepunkt som i style.css
@@ -855,9 +855,13 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       kart.addLayer(Object.assign({ id: id }, FOKUSLAG[id] || KARTLAG[id]));
     });
 
-    // Klikk på tomt kart opphever valget.
+    /* Klikk på tomt kart lukker infoboksen og opphever valget. Popupens egen closeOnClick er av:
+       den lytter på samme klikk som stedet, og lukket den nye infoboksen når man klikket
+       fra ett sted rett til et annet. */
     kart.on('click', e => {
-      if (!kart.queryRenderedFeatures(e.point, { layers: KLIKKBARE.concat('klynger') }).length) nullstillValg();
+      if (kart.queryRenderedFeatures(e.point, { layers: KLIKKBARE.concat('klynger') }).length) return;
+      popup.remove();
+      nullstillValg();
     });
 
     KLIKKBARE.concat('klynger').forEach(id => {
@@ -888,6 +892,8 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     if (ekteHover.matches) {
       kart.on('mousemove', 'punkter', e => {
         const f = e.features[0];
+        // Navnet står allerede i infoboksen
+        if (popup.isOpen() && f.properties._id === state.valgtId) { tips.remove(); return; }
         tips.setLngLat(f.geometry.coordinates).setText(visNavn(f.properties)).addTo(kart);
       });
       kart.on('mouseleave', 'punkter', () => tips.remove());
