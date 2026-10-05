@@ -694,6 +694,14 @@ button.pop-lenke {
 .rute-notat { margin: 8px 0 0; font-size: 13px; line-height: 1.45; white-space: pre-line; max-height: 40vh; overflow-y: auto; }
 .rute-notat:empty, .rute-meta:empty { display: none; }
 
+/* Desktop: hele sidepanelet ruller (ett rullefelt), tellerlinjen blir liggende øverst. */
+@media (min-width: 901px) {
+  .sidebar { overflow-y: auto; overscroll-behavior: contain; }
+  .sidebar > * { flex-shrink: 0; }
+  .liste { flex: 1 0 auto; overflow: visible; }
+  .teller-rad { position: sticky; top: 0; z-index: 2; background: var(--papir); }
+}
+
 /* ---------- Mobil ---------- */
 
 @media (max-width: 900px) {
