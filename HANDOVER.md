@@ -407,6 +407,7 @@ Hvert trinn skal kunne committes for seg og fungere alene.
 - Flyttbar infoboks (samme gren): popupen kan dras bort fra gatene (`flyttbarPopup`), med mus og
   touch. Forskyvningen er en transform på innholdet, så boksen følger stedet når kartet flyttes;
   spissen skjules, og boksen holdes innenfor kartet. Lenker/knapper drar ikke, og på touch ruller
-  notatet i stedet for å dra. Ny popup starter på vanlig plass.
+  notatet i stedet for å dra. Ny popup starter på vanlig plass (`nullstillFlytt` — MapLibre
+  gjenbruker innholdselementet, så forskyvningen må fjernes eksplisitt).
 - Neste: data. Pål kommer med navneendringer (som Marylebone High Street → Marylebone Village)
   og nye steder; områdeskisser tegnes etter hvert. Eksempelstedene er merket EKSEMPEL.

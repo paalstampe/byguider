@@ -911,6 +911,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
   function aapnePopup(o, lngLat) {
     popup.setLngLat(lngLat).setHTML(popupHtml(o.p, o.punkt, o.id)).addTo(kart);
+    nullstillFlytt();
     // Venter til en eventuell flyTo er ferdig, ellers avbryter forskyvningen den.
     if (kart.isMoving()) kart.once('moveend', faaPopupInn);
     else requestAnimationFrame(faaPopupInn);
@@ -949,6 +950,16 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
      Ny popup = nytt innhold = tilbake på plass. Lenker og knapper drar ikke; på touch heller
      ikke notatet, som må kunne rulles. Litt slark før dra starter, så vanlige klikk virker.
      Popupen ligger utenfor kartets lerret, så kartet panoreres ikke samtidig. */
+  /* MapLibre gjenbruker innholdselementet når popupen får nytt innhold, så en tidligere
+     forskyvning må fjernes — ellers åpner neste sted boksen langt unna (eller utenfor skjermen). */
+  function nullstillFlytt() {
+    const pop = popup.getElement();
+    if (!pop) return;
+    pop.classList.remove('er-flyttet', 'drar');
+    const innhold = pop.querySelector('.maplibregl-popup-content');
+    if (innhold) { innhold.style.transform = ''; delete innhold.dataset.flytt; }
+  }
+
   (function flyttbarPopup() {
     const ramme = kart.getContainer();
     let dra = null;
