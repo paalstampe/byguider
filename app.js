@@ -753,6 +753,38 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
   const KLIKKBARE = ['gater', 'gaaturer', 'punkter'];
 
+  /* Alle tegnede nabolag har flate og omriss hele tiden (større område og kjerne), i samme stil som
+     når nabolaget er valgt. Flatene er gjennomsiktige, så kjernen — som ligger oppå — blir mørkere. Navnet står under ikonet, men først når man har zoomet inn og
+     det er plass. Ingen infoboks — ikonet velger nabolaget som før. */
+  const NABOLAGSNAVN_MINZOOM = 13;
+  const OMRADELAG = {
+    'omrader-flate': {
+      source: 'omrader', type: 'fill',
+      filter: ['==', ['geometry-type'], 'Polygon'],
+      paint: { 'fill-color': '#8A5A2B', 'fill-opacity': 0.07 }
+    },
+    'omrader-kant': {
+      source: 'omrader', type: 'line',
+      filter: ['==', ['geometry-type'], 'Polygon'],
+      layout: { 'line-join': 'round' },
+      paint: { 'line-color': '#8A5A2B', 'line-width': 1.5, 'line-opacity': 0.8, 'line-dasharray': [3, 2] }
+    },
+    'omrader-navn': {
+      source: 'omrader', type: 'symbol', minzoom: NABOLAGSNAVN_MINZOOM,
+      filter: ['==', ['geometry-type'], 'Point'],
+      layout: {
+        'text-anchor': 'top',
+        'text-offset': [0, 1],
+        'text-field': ['get', 'navn'],
+        'text-font': KARTSKRIFT,
+        'text-size': 12,
+        'text-max-width': 7,
+        'text-padding': 2
+      },
+      paint: { 'text-color': '#8A5A2B', 'text-halo-color': PAPIR, 'text-halo-width': 1.5 }
+    }
+  };
+
   /* Valgt nabolag: skisse av området (lys flate, stiplet kant) og de viktigste
      gatene uthevet. Tegnes under ruter og ikoner, og bare mens nabolaget er valgt. */
   const FOKUSLAG = {
@@ -841,6 +873,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     tilpassKartstil();
     registrerIkoner();
 
+    kart.addSource('omrader', { type: 'geojson', data: tomSamling() });
     kart.addSource('fokus', { type: 'geojson', data: tomSamling() });
     kart.addSource('ruter', { type: 'geojson', data: tomSamling() });
     kart.addSource('steder', {
@@ -851,8 +884,9 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       clusterRadius: 14      // klynger bare der ikonene ellers ville overlappe
     });
 
-    Object.keys(FOKUSLAG).concat(Object.keys(KARTLAG)).forEach(id => {
-      kart.addLayer(Object.assign({ id: id }, FOKUSLAG[id] || KARTLAG[id]));
+    const lag = Object.assign({}, OMRADELAG, FOKUSLAG, KARTLAG);
+    Object.keys(lag).forEach(id => {
+      kart.addLayer(Object.assign({ id: id }, lag[id]));
     });
 
     /* Klikk på tomt kart lukker infoboksen og opphever valget. Popupens egen closeOnClick er av:
@@ -908,6 +942,14 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     const linjer = medGeo.filter(o => o.erLinje).map(o => o.f);
     kart.getSource('steder').setData({ type: 'FeatureCollection', features: punkter });
     kart.getSource('ruter').setData({ type: 'FeatureCollection', features: linjer });
+    const omrader = vis.flatMap(o => {
+      const flater = o.fokus.filter(x => x.properties.rolle === 'omrade');
+      if (!flater.length) return [];
+      const navn = { navn: visNavn(o.p) };
+      return flater.map(x => ({ type: 'Feature', geometry: x.geometry, properties: navn }))
+        .concat(o.f.geometry ? [{ type: 'Feature', geometry: o.f.geometry, properties: navn }] : []);
+    });
+    kart.getSource('omrader').setData({ type: 'FeatureCollection', features: omrader });
   }
 
   function visFokus(o) {
