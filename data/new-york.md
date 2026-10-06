@@ -5,7 +5,7 @@ tittel-en: Pål and Vibeke’s New York
 undertittel-en: Neighbourhoods, walks, restaurants and bars we keep coming back to.
 senter: 40.7400, -73.9850
 zoom: 12
-oppdatert: 2026-10-05
+oppdatert: 2026-10-06
 ---
 
 <!--
@@ -172,7 +172,7 @@ Featured in the documentary “Always at the Carlyle” (2018).
 
 ### Central Park
 - sted: 40.77395, -73.97097
-- google: ChIJ4zGFAZpYwokRGUGph3Mf37k
+- google: ChIJEYYWppJYwokRUTul6ztwlJ0
 - nettside: https://www.centralparknyc.org/
 Bethesda Terrace og The Mall.
 
@@ -242,6 +242,16 @@ Japansk izakaya der Soba Totto lå.
 
 Japanese izakaya where Soba Totto used to be.
 
+## Verdt en omvei
+
+### Grand Central Terminal
+- sted: 40.75336, -73.97680
+- google: ChIJhRwB-yFawokRi0AhGH87UTc
+- nettside: https://www.grandcentralterminal.com/
+Midtown East
+
+- en: Midtown East
+
 ## Jazzklubber
 
 ### Birdland
@@ -261,6 +271,24 @@ Theater District
 Midtown
 
 - en: Midtown
+
+### The Morgan Library & Museum
+- sted: 40.74923, -73.98140
+- google: ChIJ3453OAdZwokRja92OOKCugM
+- nettside: https://www.themorgan.org/
+Murray Hill
+
+- en: Murray Hill
+
+## Butikker
+
+### Argosy Book Store
+- sted: 40.76248, -73.96920
+- google: ChIJoXSJb-VYwokRuaErGbTz67Y
+- nettside: https://www.argosybooks.com/
+Midtown East
+
+- en: Midtown East
 
 # Downtown
 
@@ -466,6 +494,14 @@ Lower East Side
 
 - en: Lower East Side
 
+### St Jardim
+- sted: 40.73438, -74.00285
+- google: ChIJQT7u80BZwokR5MLuGvTsBiY
+- nettside: https://www.stjardimnyc.com/
+West Village
+
+- en: West Village
+
 ## Barer
 
 ### Death & Co ★
@@ -490,6 +526,14 @@ Greenwich Village
 
 - en: Greenwich Village
 
+### Village Vanguard
+- sted: 40.73603, -74.00165
+- google: ChIJ1Y0Fz5VZwokRia-gnWy02iE
+- nettside: https://villagevanguard.com/
+West Village
+
+- en: West Village
+
 ## Muséer og gallerier
 
 ### Whitney Museum
@@ -510,6 +554,13 @@ Nolita
 
 - en: Nolita
 
+### Gramercy Typewriter Company
+- sted: 40.73943, -73.99621
+- google: ChIJZ85G96NZwokRuv5OpADdKSY
+Chelsea
+
+- en: Chelsea
+
 ### McNally Jackson Books SoHo
 - sted: 40.72542, -74.00069
 - google: ChIJwaHnQI9ZwokRvlECeQqpHdg
@@ -525,6 +576,22 @@ SoHo
 West Village
 
 - en: West Village
+
+### Nalata Nalata
+- sted: 40.72468, -73.99145
+- google: ChIJ3dxJ_IRZwokRvhbPYi54EZE
+- nettside: https://nalatanalata.com/
+East Village
+
+- en: East Village
+
+### Paragon Sports
+- sted: 40.73771, -73.99042
+- google: ChIJNb8JQKJZwokRUfwoS6rHX0M
+- nettside: https://paragonsports.com/
+Union Square
+
+- en: Union Square
 
 ### The Strand
 - sted: 40.73325, -73.99095
@@ -585,6 +652,13 @@ Chelsea
 
 - en: Chelsea
 
+### Charging Bull
+- sted: 40.70557, -74.01345
+- google: ChIJURWoF5pYwokRIfXv4To528c
+Financial District
+
+- en: Financial District
+
 ### Comedy Cellar
 - sted: 40.73020, -74.00056
 - google: ChIJmzPYgJFZwokRg4zUwTlZwtI
@@ -600,6 +674,25 @@ Greenwich Village
 Hudson River Park
 
 - en: Hudson River Park
+
+### Union Square Greenmarket
+- sted: 40.73653, -73.99039
+- google: ChIJ9wsQc59ZwokRou28v68fSR4
+- nettside: https://www.grownyc.org/greenmarket/manhattan-union-square-m
+Union Square
+
+- en: Union Square
+
+### Wall Street
+- sted: 40.70607, -74.00890
+- google: ChIJq8ztWxZawokRAa61A_Ddsiw
+Financial District
+
+Fra William St til Broadway.
+
+- en: Financial District
+
+From William St to Broadway.
 
 ### Washington Square Park
 - sted: 40.73088, -73.99733
@@ -625,6 +718,13 @@ Fra Gansevoort St ved Whitney til 34th St ved Hudson Yards.
 Fra Pier 54 langs Hudson River Park og Battery Park City helt ned til sørspissen av Manhattan.
 
 - en: From Pier 54 along Hudson River Park and Battery Park City all the way down to the southern tip of Manhattan.
+
+### Brooklyn Bridge
+- lengde: ca. 2,4 km
+- varighet: ca. 40 min
+Fra City Hall Park over broa til Brooklyn, mellom DUMBO og Brooklyn Heights.
+
+- en: From City Hall Park across the bridge to Brooklyn, between DUMBO and Brooklyn Heights.
 
 # Brooklyn
 
