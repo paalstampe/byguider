@@ -723,9 +723,9 @@ Fra Pier 54 langs Hudson River Park og Battery Park City helt ned til sørspisse
 ### Brooklyn Bridge
 - lengde: ca. 1,8 km
 - varighet: ca. 30 min
-Opp trappa fra Park Row, rett under broa, og ned trappa til Washington St og Prospect St i DUMBO. Hovedinngangen ved City Hall Park er ca. 150 m lenger vest.
+Opp trappa fra Park Row, rett under broa, og ned trappa til Washington St og Prospect St i DUMBO. Hovedinngangen ved City Hall Park er ca. 150 m lenger vest. Tips: Gå gjerne motsatt vei, fra DUMBO, så har du Manhattan-skylinen foran deg hele veien.
 
-- en: Up the stairs from Park Row, right under the bridge, and down the stairs to Washington St and Prospect St in DUMBO. The main entrance by City Hall Park is about 150 m further west.
+- en: Up the stairs from Park Row, right under the bridge, and down the stairs to Washington St and Prospect St in DUMBO. The main entrance by City Hall Park is about 150 m further west. Tip: Consider walking the other way, from DUMBO, with the Manhattan skyline ahead of you all the way.
 
 # Brooklyn
 
