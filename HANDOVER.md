@@ -422,6 +422,9 @@ Hvert trinn skal kunne committes for seg og fungere alene.
 - Forsidetekster (grenen `forside-undertekster`, PR #31, 5.10.): ingress «Byene slik vi bruker
   dem.», Nice «Det beste av Nice, uten turistfellene.», Oslo «Bord og barer vi kommer tilbake
   til.» — hentet fra en uflettet commit (`802e279`, jeg-form) og skrevet om til vi-form.
+  6.10.: forsidetekst og undertittel er nå like for hver by — London og New York «Nabolag,
+  gåturer og restauranter verdt en omvei.», Nice «Restauranter, caféer og steder verdt en omvei.»,
+  Oslo «Restauranter og barer, pluss litt annet.».
 - Nabolag alltid synlige (grenen `oversikt-omrader`, PR #32, 5.10.): alle tegnede områder
   (større område og kjerne) har lys flate og stiplet omriss hele tiden (`OMRADELAG`, kilden
   `omrader`, følger filtrene); navn under ikonet fra zoom 13. Ingen infoboks før man klikker.

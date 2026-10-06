@@ -1,8 +1,8 @@
 ---
 tittel: Pål og Vibekes Oslo
-undertittel: Restauranter og barer.
+undertittel: Restauranter og barer, pluss litt annet.
 tittel-en: Pål and Vibeke’s Oslo
-undertittel-en: Restaurants and bars.
+undertittel-en: Restaurants and bars, plus a few other things.
 senter: 59.9180, 10.7400
 zoom: 13
 oppdatert: 2026-09-28

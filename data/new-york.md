@@ -1,8 +1,8 @@
 ---
 tittel: Pål og Vibekes New York
-undertittel: Nabolag, gåturer, restauranter og barer vi kommer tilbake til.
+undertittel: Nabolag, gåturer og restauranter verdt en omvei.
 tittel-en: Pål and Vibeke’s New York
-undertittel-en: Neighbourhoods, walks, restaurants and bars we keep coming back to.
+undertittel-en: Neighbourhoods, walks and restaurants worth a detour.
 senter: 40.7400, -73.9850
 zoom: 12
 oppdatert: 2026-10-06
