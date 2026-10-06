@@ -302,7 +302,7 @@ Midtown East
 ### SoHo ★
 - sted: 40.72519, -73.99970
 - google: ChIJ8-JRXoxZwokRGPiQ9Ek0L84
-- gater: Prince Street, Spring Street, Broome Street
+- gater: Prince Street, Spring Street, Broome Street, Wooster Street, Greene Street, Mercer Street
 
 ### West Village ★
 - sted: 40.73520, -74.00490
