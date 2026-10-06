@@ -557,6 +557,7 @@ Nolita
 ### Gramercy Typewriter Company
 - sted: 40.73943, -73.99621
 - google: ChIJZ85G96NZwokRuv5OpADdKSY
+- nettside: https://gramercytypewriter.com
 Chelsea
 
 - en: Chelsea
@@ -720,11 +721,11 @@ Fra Pier 54 langs Hudson River Park og Battery Park City helt ned til sørspisse
 - en: From Pier 54 along Hudson River Park and Battery Park City all the way down to the southern tip of Manhattan.
 
 ### Brooklyn Bridge
-- lengde: ca. 2,4 km
-- varighet: ca. 40 min
-Fra City Hall Park over broa til Brooklyn, mellom DUMBO og Brooklyn Heights.
+- lengde: ca. 1,8 km
+- varighet: ca. 30 min
+Opp trappa fra Park Row, rett under broa, og ned trappa til Washington St og Prospect St i DUMBO. Hovedinngangen ved City Hall Park er ca. 150 m lenger vest.
 
-- en: From City Hall Park across the bridge to Brooklyn, between DUMBO and Brooklyn Heights.
+- en: Up the stairs from Park Row, right under the bridge, and down the stairs to Washington St and Prospect St in DUMBO. The main entrance by City Hall Park is about 150 m further west.
 
 # Brooklyn
 
