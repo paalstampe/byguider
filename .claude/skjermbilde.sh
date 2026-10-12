@@ -5,7 +5,7 @@
 #   f.eks. .claude/skjermbilde.sh https://stam.pe/byguider/oslo/ oslo.png 390 844        (mobil)
 #          .claude/skjermbilde.sh https://stam.pe/byguider/oslo/ oslo.png 1300 900 hel  (hele siden)
 #          .claude/skjermbilde.sh http://localhost:8000/oslo/ oslo.png 390 844          (lokalt)
-# Lokal kopi: kjør først «python3 -m http.server 8000» i byguider/. Kartet virker fordi app.js
+# Lokal kopi: kjør først .claude/server.sh. Kartet virker fordi app.js
 # bruker den egne localhost-nøkkelen til CARTO.
 #
 # Krever Node og Playwright med Chromium. I skyen er det ferdig installert. På Macen, én gang:
