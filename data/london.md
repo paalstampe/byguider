@@ -268,7 +268,7 @@ Antikkmarked med mange forhandlere under samme tak, Northcote Road 155a.
 Ta Jubilee fra Baker Street til London Bridge.
 - Gå innom Borough Market.
 - Gå så til Shad Thames ved Tower Bridge (f.eks. langs Thames på The Queen's Walk) — bevart (men gentrifisert) lagerområde slik det så ut langs Thames før i tiden.
-- Så til Maltby Street Market (Ropewalk) for litt å spise.
+- Så Tanner Street og Maltby Street til Maltby Street Market på Ropewalk for litt å spise, Millstream Road og tilbake på Maltby Street.
 - Mange barer, enkle spisesteder og noen småbutikker under jernbanebuene på begge sider sørøst for Maltby Street (Druid St og Enid St f.eks.).
 - Gå så til Bermondsey Street (f.eks. Abbey St til The Bermondsey Square Hotel, og Bermondsey St nordover mot Thames). Merk: White Cube (galleri) og Fashion and Textile Museum (ikke åpent i helgen).
 - Tilbake til f.eks. London Bridge Station via Tooley St.
@@ -276,7 +276,7 @@ Ta Jubilee fra Baker Street til London Bridge.
 - en: Take the Jubilee line from Baker Street to London Bridge.
 - Stop by Borough Market.
 - Then walk to Shad Thames by Tower Bridge (e.g. along the river on The Queen’s Walk) — a preserved (if gentrified) warehouse district that shows what the Thames riverside once looked like.
-- On to Maltby Street Market (Ropewalk) for a bite to eat.
+- Then Tanner Street and Maltby Street to Maltby Street Market on Ropewalk for a bite to eat, Millstream Road and back along Maltby Street.
 - Plenty of bars, casual places to eat and a few small shops in the railway arches on both sides south-east of Maltby Street (Druid St and Enid St, for example).
 - Then walk to Bermondsey Street (e.g. Abbey St to The Bermondsey Square Hotel, then Bermondsey St north towards the Thames). Worth noting: White Cube (gallery) and the Fashion and Textile Museum (closed at weekends).
 - Back to e.g. London Bridge Station via Tooley St.
