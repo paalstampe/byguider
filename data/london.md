@@ -121,6 +121,14 @@ Camden Passage (antikk) og Upper Street opp til Islington Green.
 - sted: 51.5834, -0.0176
 - google: ChIJ0ckah1Gn2EcRB3mcysWWvGM
 
+## Restauranter
+
+### Trullo
+- sted: 51.54627, -0.10146
+- nettside: https://www.trullorestaurant.com/
+Italiensk ved Highbury Corner, St Paul's Road 300–302.
+- en: Italian at Highbury Corner, 300–302 St Paul's Road.
+
 ## Caféer
 
 ### The Spence Bakery
@@ -131,7 +139,8 @@ Stoke Newington Church Street 161.
 ## Butikker
 
 ### Nook
-- sted: 51.5615, -0.0815
+- sted: 51.56153, -0.08159
+- google: https://maps.app.goo.gl/UyRQmaPFkSRNhZ7P9
 - nettside: https://nookshop.co.uk/
 Stoke Newington Church Street 153.
 
@@ -254,7 +263,7 @@ Antikkmarked med mange forhandlere under samme tak, Northcote Road 155a.
 
 ### Bermondsey-runden ★
 - navn-en: Bermondsey loop
-- lengde: 4,7 km
+- lengde: 4,5 km
 - varighet: ca. 1 t gange (uten stopp)
 Ta Jubilee fra Baker Street til London Bridge.
 - Gå innom Borough Market.
@@ -311,9 +320,9 @@ Blomstermarked søndager
 ### Whitecross Village
 - sted: 51.5230, -0.0929
 - google: ChIJlfVTzakcdkgRDkdY8jAouVk
-- les: Triptide | Whitecross Village | https://triptide.london/articles/whitecross-village
-Mellom Old Street og Barbican, rundt Whitecross Street.
-- en: Between Old Street and the Barbican, around Whitecross Street.
+- gater: Whitecross Street
+Mellom Old Street og Barbican, rundt Whitecross Street. Matmarked i gata på hverdager til lunsj, flest boder torsdag og fredag.
+- en: Between Old Street and the Barbican, around Whitecross Street. Street food market on weekdays at lunchtime, most stalls on Thursdays and Fridays.
 
 ## Restauranter
 
@@ -345,6 +354,7 @@ Vintage, Broadway Market 23 (også på Wilton Way 61).
 
 ### Colenimo ★
 - sted: 51.52889, -0.07
+- nettside: https://colenimo.com
 Klær, Columbia Road 110A.
 - en: Clothing, 110A Columbia Road.
 
@@ -358,6 +368,12 @@ V&As åpne magasin i Queen Elizabeth Olympic Park — man kan se (og bestille fr
 
 ## Verdt en omvei
 
+### Spitalfields Market
+- sted: 51.51965, -0.07534
+- nettside: https://www.oldspitalfieldsmarket.com/
+Overbygd marked fra viktoriatiden med boder, mat og butikker. Åpent hver dag.
+- en: Covered Victorian market with stalls, food and shops. Open daily.
+
 ### Whitecross Street Market
 - sted: 51.52347, -0.09322
 Lunsjmarked på hverdager, flest matboder torsdag og fredag.
@@ -366,7 +382,7 @@ Lunsjmarked på hverdager, flest matboder torsdag og fredag.
 ## Gåturer
 
 ### London Fields → Spitalfields ★
-- lengde: 4,8 km
+- lengde: 4,7 km
 - varighet: ca. 1 t gange (uten stopp)
 Wilton Way fra Royal Oak Road til Navarino Road, og Navarino Road ned til London Fields. Skrått over parken mot London Fields stasjon, og skrått igjen mot Broadway Market.
 - Broadway Market, Goldsmith's Row og Hackney Road til fotgjengerovergangen ved Hello Vet, og ned til Columbia Road.
