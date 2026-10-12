@@ -87,7 +87,7 @@ Tyburnia
 - google: ChIJdYATLGMcdkgReU8cDcdqaU0
 - gater: Stoke Newington Church Street
 
-### Upper Street, Islington ★
+### Upper Street, Islington
 - sted: 51.5383, -0.1024
 
 ### Angel
