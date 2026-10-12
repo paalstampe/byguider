@@ -85,15 +85,16 @@ Tyburnia
 ### Stoke Newington Church Street ★
 - sted: 51.5613, -0.0828
 - google: ChIJdYATLGMcdkgReU8cDcdqaU0
+- gater: Stoke Newington Church Street
 
 ### Upper Street, Islington ★
 - sted: 51.5383, -0.1024
 
-### Camden Passage
+### Angel
 - sted: 51.5347, -0.1040
 - google: ChIJS2-WPs4EdkgRT5bUdYdl1Os
-Antikk
-- en: Antiques
+Camden Passage (antikk) og Upper Street opp til Islington Green.
+- en: Camden Passage (antiques) and Upper Street up to Islington Green.
 
 ### Crouch End
 - sted: 51.5796, -0.1234
@@ -105,6 +106,7 @@ Antikk
 
 ### Highgate Village
 - sted: 51.5714, -0.1500
+- gater: Highgate High Street
 
 ### Muswell Hill
 - sted: 51.5914, -0.1427
@@ -113,10 +115,30 @@ Antikk
 ### Primrose Hill
 - sted: 51.5413, -0.1533
 - google: ChIJ6V7jzO4adkgRmRjI9lMi07M
+- gater: Regent's Park Road
 
 ### Walthamstow Village
 - sted: 51.5834, -0.0176
 - google: ChIJ0ckah1Gn2EcRB3mcysWWvGM
+
+## Caféer
+
+### The Spence Bakery
+- sted: 51.5614, -0.0819
+- nettside: https://www.spencebakery.co.uk/
+Stoke Newington Church Street 161.
+
+## Butikker
+
+### Nook
+- sted: 51.5615, -0.0815
+- nettside: https://nookshop.co.uk/
+Stoke Newington Church Street 153.
+
+### Search & Rescue
+- sted: 51.5619, -0.0807
+- nettside: https://searchandrescuelondon.co.uk/
+Stoke Newington Church Street 129.
 
 # South
 
@@ -124,24 +146,29 @@ Antikk
 
 ### Abbeville Village ★
 - sted: 51.4561, -0.1381
+- gater: Abbeville Road
 Clapham
 
-### Bermondsey Street ★
+### Bermondsey ★
 - sted: 51.5008, -0.0818
-- gater: Bermondsey Street
-White Cube, Fashion and Textile Museum
+- gater: Bermondsey Street, Ropewalk
+Bermondsey Street med White Cube og Fashion and Textile Museum, og Maltby Street Market på Ropewalk.
+- en: Bermondsey Street with White Cube and the Fashion and Textile Museum, and Maltby Street Market on Ropewalk.
 
 ### Bellenden Road
 - sted: 51.4697, -0.0729
+- gater: Maxted Road, Bellenden Road, Blenheim Grove
 Peckham
 
 ### Brixton Village
 - sted: 51.4625, -0.1122
 - google: ChIJx9r5NWUEdkgRJY0mTciVn-k
+- gater: Atlantic Road, Electric Avenue
 
 ### Crystal Palace Triangle
 - sted: 51.4195, -0.0839
 - google: ChIJ79E0xE8BdkgRh0mDf0w1zco
+- gater: Westow Hill, Westow Street, Church Road
 Ønskeliste
 - en: Wish list
 
@@ -154,6 +181,7 @@ Peckham
 ### East Dulwich
 - sted: 51.4617, -0.0800
 - google: ChIJd4CybJADdkgROOjt-aigvws
+- gater: Lordship Lane, North Cross Road
 
 ### Herne Hill
 - sted: 51.4545, -0.0967
@@ -164,6 +192,7 @@ Peckham
 ### Northcote Road
 - sted: 51.4572, -0.1656
 - google: ChIJreaLCpYFdkgRlfk2KgbW-Lg
+- gater: Northcote Road
 
 ### Nunhead
 - sted: 51.4655, -0.0587
@@ -173,17 +202,60 @@ Peckham
 
 ## Muséer og gallerier
 
-### White Cube Bermondsey
-- sted: 51.49938, -0.08232
+### White Cube
+- sted: 51.49945, -0.08233
 - google: ChIJ2SOnxbocdkgRxmoRKRwc49M
 - nettside: https://whitecube.com/
-EKSEMPEL — galleri
-- en: EXAMPLE — gallery
+Galleri på Bermondsey Street.
+- en: Gallery on Bermondsey Street.
+
+### Dulwich Picture Gallery
+- sted: 51.44596, -0.08633
+- nettside: https://www.dulwichpicturegallery.org.uk/
+Englands eldste offentlige kunstgalleri, i Dulwich Village.
+- en: England’s oldest public art gallery, in Dulwich Village.
+
+## Verdt en omvei
+
+### Borough Market
+- sted: 51.50559, -0.09035
+- nettside: https://boroughmarket.org.uk/
+Matmarked ved London Bridge.
+- en: Food market by London Bridge.
+
+### Maltby Street Market
+- sted: 51.49926, -0.07562
+- nettside: https://www.maltby.st/
+Matmarked på Ropewalk, under jernbanebuene. Helger.
+- en: Food market on Ropewalk, under the railway arches. Weekends.
+
+### Brixton Village Market
+- sted: 51.46239, -0.11184
+Overbygd marked med små spisesteder og butikker, mellom Coldharbour Lane og Atlantic Road.
+- en: Covered market with small places to eat and shops, between Coldharbour Lane and Atlantic Road.
+
+### David Bowie Memorial
+- sted: 51.46255, -0.11455
+Veggmaleriet av Bowie på Tunstall Road, rett ved Brixton stasjon. Bowie ble født i Brixton.
+- en: The Bowie mural on Tunstall Road, right by Brixton station. Bowie was born in Brixton.
+
+### O2 Academy Brixton
+- sted: 51.4657, -0.11487
+- nettside: https://www.academymusicgroup.com/o2academybrixton/
+Konsertsal i et gammelt art deco-kino.
+- en: Concert venue in an old art deco cinema.
+
+### Northcote Road Antiques Market
+- sted: 51.45536, -0.16458
+Antikkmarked med mange forhandlere under samme tak, Northcote Road 155a.
+- en: Antiques market with many dealers under one roof, 155a Northcote Road.
 
 ## Gåturer
 
 ### Bermondsey-runden ★
 - navn-en: Bermondsey loop
+- lengde: 4,7 km
+- varighet: ca. 1 t gange (uten stopp)
 Ta Jubilee fra Baker Street til London Bridge.
 - Gå innom Borough Market.
 - Gå så til Shad Thames ved Tower Bridge (f.eks. langs Thames på The Queen's Walk) — bevart (men gentrifisert) lagerområde slik det så ut langs Thames før i tiden.
@@ -207,21 +279,25 @@ Ta Jubilee fra Baker Street til London Bridge.
 ### Broadway Market ★
 - sted: 51.5367, -0.0617
 - google: ChIJaZN7MugcdkgRdBDt4u41D4A
-Marked lørdager
-- en: Market on Saturdays
+- gater: Broadway Market
+Marked lørdag og søndag (søndag mindre, mest mat og blomster)
+- en: Market on Saturdays and Sundays (Sunday is smaller, mostly food and flowers)
 
 ### Columbia Road ★
 - sted: 51.5291, -0.0698
 - google: ChIJUe_EX7McdkgRUyuFGZPputs
+- gater: Columbia Road
 Blomstermarked søndager
 - en: Flower market on Sundays
 
 ### London Fields ★
 - sted: 51.5418, -0.0602
 - google: ChIJH7vcjOYddkgRQAmHYvUaK-U
+- gater: Wilton Way
 
 ### Shoreditch ★
 - sted: 51.5243, -0.0773
+- gater: Redchurch Street, Brick Lane
 
 ### Hackney Wick
 - sted: 51.5446, -0.0257
@@ -230,21 +306,79 @@ Blomstermarked søndager
 ### Victoria Park Village
 - sted: 51.5383, -0.0438
 - google: ChIJVV7kax4ddkgRQHrksg4N0oY
+- gater: Lauriston Road
 
-### Whitecross Street
+### Whitecross Village
 - sted: 51.5230, -0.0929
 - google: ChIJlfVTzakcdkgRDkdY8jAouVk
+- les: Triptide | Whitecross Village | https://triptide.london/articles/whitecross-village
+Mellom Old Street og Barbican, rundt Whitecross Street.
+- en: Between Old Street and the Barbican, around Whitecross Street.
+
+## Restauranter
+
+### Dishoom Shoreditch
+- sted: 51.5245, -0.07682
+- nettside: https://www.dishoom.com/shoreditch/
+Boundary Street 7.
+
+## Caféer
+
+### Pophams
+- sted: 51.53836, -0.04524
+- nettside: https://www.pophams.com/
+Lauriston Road 110a.
+
+## Butikker
+
+### Rough Trade East ★
+- sted: 51.5212, -0.07242
+- nettside: https://www.roughtrade.com/
+Platebutikk i Old Truman Brewery, ved Brick Lane.
+- en: Record shop in the Old Truman Brewery, off Brick Lane.
+
+### Retrouvé ★
+- sted: 51.53621, -0.06224
+- nettside: https://retrouvevintage.co.uk/
+Vintage, Broadway Market 23 (også på Wilton Way 61).
+- en: Vintage, 23 Broadway Market (also at 61 Wilton Way).
+
+### Colenimo ★
+- sted: 51.52889, -0.07
+Klær, Columbia Road 110A.
+- en: Clothing, 110A Columbia Road.
+
+## Muséer og gallerier
+
+### V&A East Storehouse
+- sted: 51.54644, -0.02118
+- nettside: https://www.vam.ac.uk/east/storehouse
+V&As åpne magasin i Queen Elizabeth Olympic Park — man kan se (og bestille fram) gjenstander fra samlingen.
+- en: The V&A’s open storehouse in Queen Elizabeth Olympic Park — browse (and order up) objects from the collection.
+
+## Verdt en omvei
+
+### Whitecross Street Market
+- sted: 51.52347, -0.09322
+Lunsjmarked på hverdager, flest matboder torsdag og fredag.
+- en: Weekday lunchtime market, most food stalls on Thursdays and Fridays.
 
 ## Gåturer
 
 ### London Fields → Spitalfields ★
-EKSEMPEL — ruten på kartet er en grov skisse; tegn den langs gatene i geojson.io.
+- lengde: 4,8 km
+- varighet: ca. 1 t gange (uten stopp)
+Wilton Way fra Royal Oak Road til Navarino Road, og Navarino Road ned til London Fields. Skrått over parken mot London Fields stasjon, og skrått igjen mot Broadway Market.
+- Broadway Market, Goldsmith's Row og Hackney Road til fotgjengerovergangen ved Hello Vet, og ned til Columbia Road.
+- Columbia Road til Gosset Street, gjennom nabolaget til Gibraltar Walk og ut på Bethnal Green Road.
+- Redchurch Street vestover til Shoreditch High Street, ned til Bethnal Green Road og østover til Brick Lane.
+- Brick Lane sørover til Hanbury Street, og Hanbury Street vestover til Spitalfields Market.
 
-Start i London Fields. Gå ned Broadway Market, så bort til og ned Columbia Road, og så ned til Shoreditch inkludert Redchurch Street, og så ned Brick Lane til Spitalfields.
-
-- en: EXAMPLE — the route on the map is a rough sketch; draw it along the streets in geojson.io.
-
-Start in London Fields. Walk down Broadway Market, then over to and down Columbia Road, on to Shoreditch including Redchurch Street, and finally down Brick Lane to Spitalfields.
+- en: Wilton Way from Royal Oak Road to Navarino Road, then Navarino Road down to London Fields. Cut diagonally across the park towards London Fields station, then diagonally again towards Broadway Market.
+- Broadway Market, Goldsmith's Row and Hackney Road to the pedestrian crossing by Hello Vet, then down to Columbia Road.
+- Columbia Road to Gosset Street, through the neighbourhood to Gibraltar Walk and out onto Bethnal Green Road.
+- Redchurch Street west to Shoreditch High Street, down to Bethnal Green Road and east to Brick Lane.
+- Brick Lane south to Hanbury Street, then Hanbury Street west to Spitalfields Market.
 
 # West
 
