@@ -219,7 +219,7 @@ jobben. Nærmer seg en guidebok.
 - Ingen byggesteg, ingen rammeverk. Statiske filer.
 
 Praktisk: `fetch()` blokkeres når sidene åpnes fra `file://`.
-Kjør `python3 -m http.server 8000 --bind 127.0.0.1` i `byguider/` (bind hindrer at andre på samme nett ser mappen) og åpne `localhost:8000/london/` — kartet virker
+Kjør `.claude/server.sh` (bare 127.0.0.1, og `Cache-Control: no-store` så nettleseren alltid henter ferske data) og åpne `localhost:8000/london/` — kartet virker
 lokalt med egen CARTO-nøkkel (se punkt 9).
 
 ---
