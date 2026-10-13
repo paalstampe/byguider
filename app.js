@@ -555,6 +555,12 @@ async function finnBy(id) {
   return by;
 }
 
+/* Offline: sw.js lagrer sidene, dataene og kartet (se kommentaren der). */
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register(new URL('sw.js', BASE).href, { scope: BASE.href }).catch(() => {});
+}
+if (performance.setResourceTimingBufferSize) performance.setResourceTimingBufferSize(2000);
+
 (async function oppstart() {
   const css = Promise.all([
     lastCss(RESSURSER.fonter),
@@ -1146,6 +1152,64 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
   /* ---------- oppslag fra data ---------- */
 
+  /* Offline: ber sw.js lagre alt byen trenger — det siden har lastet (biblioteker, fonter, stil,
+     data) pluss kartfliser for hele byens område (alle steder, også «utenfor», med litt marg),
+     zoom 0–14 (CARTO har ikke fliser over 14; MapLibre forstørrer dem). Det som alt er lagret,
+     hoppes over. Blir det over MAKS_FLISER, kuttes de høyeste zoomnivåene. */
+  function forhandslastOffline(omrade) {
+    if (!('serviceWorker' in navigator) || !navigator.onLine) return;
+    const MAKS_FLISER = 1500;
+    const stil = kart.getStyle();
+    const kilde = Object.keys(stil.sources).map(id => kart.getSource(id))
+      .find(k => k && k.type === 'vector' && Array.isArray(k.tiles) && k.tiles.length);
+    const adresser = [location.href.split('#')[0]].concat(
+      performance.getEntriesByType('resource').map(e => e.name).filter(u => /^https?:/.test(u)));
+
+    if (kilde) {
+      const mal = kilde.tiles[0];
+      const maksZoom = Math.min(14, kilde.maxzoom || 14);
+      const marg = 0.15;
+      const [v, s, o, n] = omrade;
+      const bv = (o - v) * marg, bh = (n - s) * marg;
+      const flisX = (lng, z) => Math.floor((lng + 180) / 360 * 2 ** z);
+      const flisY = (lat, z) => {
+        const r = lat * Math.PI / 180;
+        return Math.floor((1 - Math.log(Math.tan(r) + 1 / Math.cos(r)) / Math.PI) / 2 * 2 ** z);
+      };
+      const fliserFor = z => {
+        const x0 = flisX(v - bv, z), x1 = flisX(o + bv, z), y0 = flisY(n + bh, z), y1 = flisY(s - bh, z);
+        const ut = [];
+        for (let x = x0; x <= x1; x++) for (let y = y0; y <= y1; y++) {
+          ut.push(mal.replace('{z}', z).replace('{x}', x).replace('{y}', y));
+        }
+        return ut;
+      };
+      let fliser = [];
+      for (let topp = maksZoom; topp >= 0; topp--) {
+        fliser = [];
+        for (let z = 0; z <= topp; z++) fliser = fliser.concat(fliserFor(z));
+        if (fliser.length <= MAKS_FLISER) break;
+      }
+      adresser.push(...fliser);
+    }
+
+    // Glyfer (tegn til kartnavn) for latinske tegn i alle fontene stilen bruker.
+    if (stil.glyphs) {
+      const fonter = new Set();
+      stil.layers.forEach(l => {
+        let f = l.layout && l.layout['text-font'];
+        if (Array.isArray(f) && f[0] === 'literal') f = f[1];
+        if (Array.isArray(f) && f.every(x => typeof x === 'string')) fonter.add(f.join(','));
+      });
+      fonter.forEach(f => ['0-255', '256-511', '8192-8447'].forEach(omr => adresser.push(
+        stil.glyphs.replace('{fontstack}', encodeURIComponent(f).replace(/%2C/g, ',')).replace('{range}', omr))));
+    }
+
+    navigator.serviceWorker.ready.then(reg => {
+      if (reg.active) reg.active.postMessage({ type: 'forhandslast', adresser: adresser });
+    }).catch(() => {});
+  }
+
   function bbox(coords) {
     const b = [Infinity, Infinity, -Infinity, -Infinity];
     coords.forEach(c => {
@@ -1508,6 +1572,10 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       kartKlar.then(() => {
         leggTilKartlag();
         filtrerKart(synlige());
+        if (alleMedBbox.length) {
+          const omrade = bbox(alleMedBbox.flatMap(o => [o.bbox.slice(0, 2), o.bbox.slice(2)]));
+          kart.once('idle', () => forhandslastOffline(omrade));
+        }
       });
 
       fot = () => t('fot', '<code>' + esc(DATA_NAVN) + '</code>', esc(meta.oppdatert || ''));
