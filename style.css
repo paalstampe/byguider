@@ -729,7 +729,12 @@ button.pop-lenke {
   .chip { height: 34px; }                 /* litt større trykkflate på mobil */
   .teller-rad { margin-left: 20px; margin-right: 20px; }
   .sidebar-fot { padding-left: 20px; padding-right: 20px; }
-  .rute-kort { left: 12px; right: 12px; width: auto; bottom: 12px; }
+  /* Rutekortet holdes lavt, så ruten synes over det; notatet ruller. */
+  .rute-kort { left: 12px; right: 12px; width: auto; bottom: 12px; padding: 12px 16px 14px; }
+  .rute-kicker { margin-bottom: 4px; }
+  .rute-navn { font-size: 19px; padding-right: 24px; }
+  .rute-meta { margin-top: 6px; padding-top: 6px; }
+  .rute-notat { max-height: 6.5em; margin-top: 6px; overscroll-behavior: contain; }
   .forside-innhold { padding: 40px 20px 48px; }
   .sprakvalg { top: -7px; }
   .sprakvalg button { padding: 6px 5px 3px; }   /* større trykkflate på mobil */
