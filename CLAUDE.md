@@ -61,6 +61,10 @@ Hold HANDOVER.md oppdatert når noe vesentlig endres (punkt 2, 8 og 10.5).
   !3d<bredde>!4d<lengde>; Place ID = base64url(0a 12 09 + a som 8 byte little-endian + 11 + b som 8 byte LE),
   uten «=». Gir søket en liste, har lenkene ChIJ… direkte i «!19s». Bruk OpenStreetMap bare som reserve,
   og si fra hvis du er usikker på plasseringen.
+- Nettside hentes samme sted: lenken «Website» på stedets side i Google Maps (a[data-item-id="authority"]).
+  Ta bare med stedets egen side (ev. Instagram) — ikke bookingtjenester eller tredjepartsguider.
+- Restauranter, caféer, butikker o.l.: første linje i notatet (og i en:) er området/nabolaget stedet ligger i
+  (f.eks. «Marylebone»), som i New York. Slå det opp per sted; adressen kommer i teksten under.
 - Engelsk innhold via navn-en: og en: (valgfritt; mangler det, vises norsk).
 
 ## Ikke gjør

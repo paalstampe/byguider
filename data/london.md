@@ -86,120 +86,205 @@ Tyburnia
 - sted: 51.52081, -0.15269
 - google: ChIJpyhiLAAbdkgRGUaeAOxxRLc
 - nettside: https://litamarylebone.com/
-Marylebone, Paddington Street 7–9.
-- en: Marylebone, 7–9 Paddington Street.
+Marylebone
+
+Paddington Street 7–9.
+
+- en: Marylebone
+
+7–9 Paddington Street.
 
 ### Sale e Pepe Mare ★
 - sted: 51.51759, -0.14323
 - google: ChIJMZ-GUpAbdkgRFXrN8dsAPUM
 - nettside: https://www.saleepepe.co.uk/sale-e-pepe-mare-the-langham-london
+Marylebone
+
 Italiensk sjømat på The Langham, Portland Place 1c.
-- en: Italian seafood at The Langham, 1c Portland Place.
+
+- en: Marylebone
+
+Italian seafood at The Langham, 1c Portland Place.
 
 ### The Hart ★
 - sted: 51.51842, -0.15479
 - google: ChIJORrfka8bdkgRKELOG6g3k0Q
 - nettside: https://www.thehartw1.com/
-Pub og restaurant i Marylebone, Blandford Street 56.
-- en: Pub and restaurant in Marylebone, 56 Blandford Street.
+Marylebone
+
+Pub og restaurant, Blandford Street 56.
+
+- en: Marylebone
+
+Pub and restaurant, 56 Blandford Street.
 
 ### Nina
 - sted: 51.51715, -0.15153
 - google: ChIJVVVpjNIadkgR3hUrqE-jxDA
 - nettside: https://www.nina.london/
-Italiensk i kjelleren, Thayer Street 18, Marylebone.
-- en: Italian in a basement, 18 Thayer Street, Marylebone.
+Marylebone
+
+Italiensk i kjelleren, Thayer Street 18.
+
+- en: Marylebone
+
+Italian in a basement, 18 Thayer Street.
 
 ### Trishna ★
 - sted: 51.51830, -0.15307
 - google: ChIJ8fHhiM0adkgR5dxGPhTVlvA
 - nettside: https://trishnalondon.com/
-Indisk sjømat, Blandford Street 15–17, Marylebone.
-- en: Indian seafood, 15–17 Blandford Street, Marylebone.
+Marylebone
+
+Indisk sjømat, Blandford Street 15–17.
+
+- en: Marylebone
+
+Indian seafood, 15–17 Blandford Street.
 
 ### Josephine ★
 - sted: 51.51845, -0.15199
 - google: ChIJb46nPwAbdkgRe8rg5yiLYsA
 - nettside: https://josephinebistro.com/
-Claude Bosis franske bistro, Blandford Street 6–8, Marylebone.
-- en: Claude Bosi’s French bistro, 6–8 Blandford Street, Marylebone.
+Marylebone
+
+Claude Bosis franske bistro, Blandford Street 6–8.
+
+- en: Marylebone
+
+Claude Bosi’s French bistro, 6–8 Blandford Street.
 
 ### KOL
 - sted: 51.51476, -0.15752
 - google: ChIJvfnOCgUbdkgR3FvbixhS2cw
 - nettside: https://kolrestaurant.com/
-Meksikansk med britiske råvarer, Seymour Street 9, Marylebone.
-- en: Mexican with British produce, 9 Seymour Street, Marylebone.
+Marylebone
+
+Meksikansk med britiske råvarer, Seymour Street 9.
+
+- en: Marylebone
+
+Mexican with British produce, 9 Seymour Street.
 
 ### Gymkhana ★
 - sted: 51.50849, -0.14147
 - google: ChIJtwn55ikFdkgRAvOuPIWeLM0
 - nettside: https://gymkhanalondon.com/
-Indisk, Albemarle Street 42, Mayfair.
-- en: Indian, 42 Albemarle Street, Mayfair.
+Mayfair
+
+Indisk, Albemarle Street 42.
+
+- en: Mayfair
+
+Indian, 42 Albemarle Street.
 
 ### Lilibet's ★
 - sted: 51.51048, -0.14457
 - google: ChIJT9u6kt0FdkgR4bjKKXEeIbg
 - nettside: https://www.lilibetsrestaurant.com/
-Sjømat i Bruton Street 17, Mayfair.
-- en: Seafood at 17 Bruton Street, Mayfair.
+Mayfair
+
+Sjømat, Bruton Street 17.
+
+- en: Mayfair
+
+Seafood, 17 Bruton Street.
 
 ### Scott's ★
 - sted: 51.50990, -0.15083
 - google: ChIJcf7z3i0FdkgRp8viwzBRRn8
 - nettside: https://www.scotts-restaurant.com/
-Sjømat, Mount Street 20–22, Mayfair.
-- en: Seafood, 20–22 Mount Street, Mayfair.
+Mayfair
+
+Sjømat, Mount Street 20–22.
+
+- en: Mayfair
+
+Seafood, 20–22 Mount Street.
 
 ### Noble Rot ★
 - sted: 51.50652, -0.14720
 - google: ChIJAzNI_8sFdkgRbRvnLqAvUJY
 - nettside: https://noblerot.co.uk/
-Vinbar og restaurant i Shepherd Market, Trebeck Street 5, Mayfair.
-- en: Wine bar and restaurant in Shepherd Market, 5 Trebeck Street, Mayfair.
+Mayfair
+
+Vinbar og restaurant i Shepherd Market, Trebeck Street 5.
+
+- en: Mayfair
+
+Wine bar and restaurant in Shepherd Market, 5 Trebeck Street.
 
 ### MA/NA
 - sted: 51.51012, -0.15507
 - google: ChIJtVfNANQFdkgRIpzEN8Ww9Jw
 - nettside: https://manarestaurants.com/
-Japansk, Upper Grosvenor Street 30, Mayfair.
-- en: Japanese, 30 Upper Grosvenor Street, Mayfair.
+Mayfair
+
+Japansk, Upper Grosvenor Street 30.
+
+- en: Mayfair
+
+Japanese, 30 Upper Grosvenor Street.
 
 ### The Dover
 - sted: 51.50889, -0.14300
 - google: ChIJxdsYFy0FdkgRho04Glik8uI
 - nettside: https://thedoverrestaurant.com/
-Italiensk-amerikansk, Dover Street 33, Mayfair.
-- en: Italian-American, 33 Dover Street, Mayfair.
+Mayfair
+
+Italiensk-amerikansk, Dover Street 33.
+
+- en: Mayfair
+
+Italian-American, 33 Dover Street.
 
 ### Arlington ★
 - sted: 51.50652, -0.14052
 - google: ChIJjXwvJ10FdkgRTMUyHZ9BZIo
 - nettside: https://www.arlington.london/
-Klassiker i Arlington Street 20, St James's (der Le Caprice var).
-- en: A classic at 20 Arlington Street, St James’s (the old Le Caprice).
+St James's
+
+Klassiker i Arlington Street 20 (der Le Caprice var).
+
+- en: St James's
+
+A classic at 20 Arlington Street (the old Le Caprice).
 
 ### 45 Jermyn Street
 - sted: 51.50801, -0.13829
 - google: ChIJgyJHWdYEdkgRX_4TkG1PT9o
 - nettside: https://45jermynst.com/
-Ved Fortnum & Mason, Jermyn Street 45, St James's.
-- en: Next to Fortnum & Mason, 45 Jermyn Street, St James’s.
+St James's
+
+Ved Fortnum & Mason, Jermyn Street 45.
+
+- en: St James's
+
+Next to Fortnum & Mason, 45 Jermyn Street.
 
 ### Trattoria Burro
 - sted: 51.51177, -0.12513
 - google: ChIJn0cIykwFdkgRkJL_xSjcqYI
 - nettside: https://trattoriaburro.com/
-Italiensk-irsk i Floral Court, Covent Garden.
-- en: Italian-Irish in Floral Court, Covent Garden.
+Covent Garden
+
+Italiensk-irsk i Floral Court.
+
+- en: Covent Garden
+
+Italian-Irish in Floral Court.
 
 ### Faros
 - sted: 51.51661, -0.14103
 - google: ChIJ_7T82w8bdkgRngOFit8DkGg
 - nettside: https://www.farosrestaurant.co.uk/
-Italiensk, Great Portland Street 22–24, Fitzrovia.
-- en: Italian, 22–24 Great Portland Street, Fitzrovia.
+Fitzrovia
+
+Italiensk, Great Portland Street 22–24.
+
+- en: Fitzrovia
+
+Italian, 22–24 Great Portland Street.
 
 # North
 
@@ -258,8 +343,13 @@ Camden Passage (antikk) og Upper Street opp til Islington Green.
 - sted: 51.54626, -0.10157
 - google: ChIJjVaytWQbdkgRKi6VkI5G4fM
 - nettside: https://www.trullorestaurant.com/
+Highbury, Islington
+
 Italiensk ved Highbury Corner, St Paul's Road 300–302.
-- en: Italian at Highbury Corner, 300–302 St Paul's Road.
+
+- en: Highbury, Islington
+
+Italian at Highbury Corner, 300–302 St Paul's Road.
 
 ## Caféer
 
@@ -268,7 +358,13 @@ Italiensk ved Highbury Corner, St Paul's Road 300–302.
 - google: ChIJUSaZUmMcdkgRg6EPBE8CLV8
 - nettside: https://www.spencebakery.co.uk/
 - utenfor: ja
-Stoke Newington Church Street 161.
+Stoke Newington
+
+Bakeri og kafé, Stoke Newington Church Street 161.
+
+- en: Stoke Newington
+
+Bakery and café, 161 Stoke Newington Church Street.
 
 ## Butikker
 
@@ -277,14 +373,26 @@ Stoke Newington Church Street 161.
 - google: ChIJ0fh8W2McdkgReoxRPZaoHrk
 - nettside: https://nookshop.co.uk/
 - utenfor: ja
-Stoke Newington Church Street 153.
+Stoke Newington
+
+Interiør og gaver, Stoke Newington Church Street 153.
+
+- en: Stoke Newington
+
+Homeware and gifts, 153 Stoke Newington Church Street.
 
 ### Search & Rescue
 - sted: 51.56192, -0.08068
 - google: ChIJBWwhQ2McdkgRzBxcZSnjyHM
 - nettside: https://searchandrescuelondon.co.uk/
 - utenfor: ja
-Stoke Newington Church Street 129.
+Stoke Newington
+
+Gaver og design, Stoke Newington Church Street 129.
+
+- en: Stoke Newington
+
+Gifts and design, 129 Stoke Newington Church Street.
 
 # South
 
@@ -359,16 +467,26 @@ Peckham
 - sted: 51.49945, -0.08233
 - google: ChIJ2SOnxbocdkgRxmoRKRwc49M
 - nettside: https://whitecube.com/
+Bermondsey
+
 Galleri på Bermondsey Street.
-- en: Gallery on Bermondsey Street.
+
+- en: Bermondsey
+
+Gallery on Bermondsey Street.
 
 ### Dulwich Picture Gallery
 - sted: 51.44606, -0.08633
 - google: ChIJE_hdXfEDdkgR09Yvt9rEzmI
 - nettside: https://www.dulwichpicturegallery.org.uk/
 - utenfor: ja
-Englands eldste offentlige kunstgalleri, i Dulwich Village.
-- en: England’s oldest public art gallery, in Dulwich Village.
+Dulwich Village
+
+Englands eldste offentlige kunstgalleri.
+
+- en: Dulwich Village
+
+England’s oldest public art gallery.
 
 ## Verdt en omvei
 
@@ -376,43 +494,73 @@ Englands eldste offentlige kunstgalleri, i Dulwich Village.
 - sted: 51.50558, -0.09048
 - google: ChIJD2bPdVcDdkgRuUSgnOXnKDE
 - nettside: https://boroughmarket.org.uk/
+Borough
+
 Matmarked ved London Bridge.
-- en: Food market by London Bridge.
+
+- en: Borough
+
+Food market by London Bridge.
 
 ### Maltby Street Market
 - sted: 51.49946, -0.07593
 - google: ChIJZ9jUVEEDdkgRN7k3RDL_908
 - nettside: https://www.maltby.st/
+Bermondsey
+
 Matmarked på Ropewalk, under jernbanebuene. Helger.
-- en: Food market on Ropewalk, under the railway arches. Weekends.
+
+- en: Bermondsey
+
+Food market on Ropewalk, under the railway arches. Weekends.
 
 ### Brixton Village Market
 - sted: 51.46245, -0.11220
 - google: ChIJx9r5NWUEdkgRJY0mTciVn-k
 - nettside: https://www.brixtonvillage.com/
+Brixton
+
 Overbygd marked med små spisesteder og butikker, mellom Coldharbour Lane og Atlantic Road.
-- en: Covered market with small places to eat and shops, between Coldharbour Lane and Atlantic Road.
+
+- en: Brixton
+
+Covered market with small places to eat and shops, between Coldharbour Lane and Atlantic Road.
 
 ### David Bowie Memorial
 - sted: 51.46266, -0.11546
 - google: ChIJlzbEs74EdkgRXFCd_HWS_HM
+Brixton
+
 Veggmaleriet av Bowie på Tunstall Road, rett ved Brixton stasjon. Bowie ble født i Brixton.
-- en: The Bowie mural on Tunstall Road, right by Brixton station. Bowie was born in Brixton.
+
+- en: Brixton
+
+The Bowie mural on Tunstall Road, right by Brixton station. Bowie was born in Brixton.
 
 ### O2 Academy Brixton
 - sted: 51.46516, -0.11493
 - google: ChIJL1UqD2cEdkgRidF8HHIq4fQ
 - nettside: https://www.academymusicgroup.com/o2academybrixton/
-Konsertsal i et gammelt art deco-kino.
-- en: Concert venue in an old art deco cinema.
+Brixton
+
+Konsertsal i en gammel art deco-kino.
+
+- en: Brixton
+
+Concert venue in an old art deco cinema.
 
 ### Northcote Road Antiques Market
 - sted: 51.45534, -0.16453
 - google: ChIJLTzCjpUFdkgREt7408Gfd0g
 - nettside: https://www.instagram.com/northcoteantiques/
 - utenfor: ja
+Battersea
+
 Antikkmarked med mange forhandlere under samme tak, Northcote Road 155a.
-- en: Antiques market with many dealers under one roof, 155a Northcote Road.
+
+- en: Battersea
+
+Antiques market with many dealers under one roof, 155a Northcote Road.
 
 ## Gåturer
 
@@ -479,7 +627,13 @@ Blomstermarked søndager
 - sted: 51.52450, -0.07660
 - google: ChIJxYs1ArocdkgR-G13PLmofec
 - nettside: https://www.dishoom.com/shoreditch/
-Boundary Street 7.
+Shoreditch
+
+Indisk (Bombay-kafé), Boundary Street 7.
+
+- en: Shoreditch
+
+Indian (Bombay café), 7 Boundary Street.
 
 ## Caféer
 
@@ -487,7 +641,13 @@ Boundary Street 7.
 - sted: 51.53836, -0.04526
 - google: ChIJH2ft-vYddkgRmdbbpzu9hjQ
 - nettside: https://www.pophams.com/
-Lauriston Road 110a.
+Victoria Park Village
+
+Bakeri og kafé, Lauriston Road 110a.
+
+- en: Victoria Park Village
+
+Bakery and café, 110a Lauriston Road.
 
 ## Butikker
 
@@ -495,22 +655,37 @@ Lauriston Road 110a.
 - sted: 51.52110, -0.07249
 - google: ChIJNWOBQbYcdkgRwHyVPW3qnIc
 - nettside: https://www.roughtrade.com/
+Spitalfields
+
 Platebutikk i Old Truman Brewery, ved Brick Lane.
-- en: Record shop in the Old Truman Brewery, off Brick Lane.
+
+- en: Spitalfields
+
+Record shop in the Old Truman Brewery, off Brick Lane.
 
 ### Retrouvé ★
 - sted: 51.53629, -0.06214
 - google: ChIJ6-tWKFsddkgRsmiYPbAs0S0
 - nettside: https://retrouvevintage.co.uk/
+London Fields
+
 Vintage, Broadway Market 23 (også på Wilton Way 61).
-- en: Vintage, 23 Broadway Market (also at 61 Wilton Way).
+
+- en: London Fields
+
+Vintage, 23 Broadway Market (also at 61 Wilton Way).
 
 ### Colenimo ★
 - sted: 51.52889, -0.07000
 - google: ChIJ1WLCBLocdkgRDHvOvjh3GWw
 - nettside: https://colenimo.com
+Columbia Road
+
 Klær, Columbia Road 110A.
-- en: Clothing, 110A Columbia Road.
+
+- en: Columbia Road
+
+Clothing, 110A Columbia Road.
 
 ## Muséer og gallerier
 
@@ -518,8 +693,13 @@ Klær, Columbia Road 110A.
 - sted: 51.54642, -0.02120
 - google: ChIJDwtf_QwddkgRRQHAFbZNFFM
 - nettside: https://www.vam.ac.uk/east/storehouse
+Stratford
+
 V&As åpne magasin i Queen Elizabeth Olympic Park — man kan se (og bestille fram) gjenstander fra samlingen.
-- en: The V&A’s open storehouse in Queen Elizabeth Olympic Park — browse (and order up) objects from the collection.
+
+- en: Stratford
+
+The V&A’s open storehouse in Queen Elizabeth Olympic Park — browse (and order up) objects from the collection.
 
 ## Verdt en omvei
 
@@ -527,8 +707,13 @@ V&As åpne magasin i Queen Elizabeth Olympic Park — man kan se (og bestille fr
 - sted: 51.51966, -0.07555
 - google: ChIJh6-3GrQcdkgRvNQCJqs-8qI
 - nettside: https://www.oldspitalfieldsmarket.com/
+Spitalfields
+
 Overbygd marked fra viktoriatiden med boder, mat og butikker. Åpent hver dag.
-- en: Covered Victorian market with stalls, food and shops. Open daily.
+
+- en: Spitalfields
+
+Covered Victorian market with stalls, food and shops. Open daily.
 
 ## Gåturer
 
@@ -609,15 +794,25 @@ Devonshire Road
 - google: ChIJxxa_ELAPdkgRF2wx7RLroiY
 - nettside: https://rivercafe.co.uk/
 - utenfor: ja
-Italiensk ved Themsen, Rainville Road, Hammersmith.
-- en: Italian by the Thames, Rainville Road, Hammersmith.
+Hammersmith
+
+Italiensk ved Themsen, Rainville Road.
+
+- en: Hammersmith
+
+Italian by the Thames, Rainville Road.
 
 ### The Hero ★
 - sted: 51.52432, -0.18876
 - google: ChIJbZyeMwARdkgRVwNMuMakX74
 - nettside: https://theherow9.com/
-Pub og spisesal, Shirland Road 55, Maida Vale.
-- en: Pub and dining room, 55 Shirland Road, Maida Vale.
+Maida Vale
+
+Pub og spisesal, Shirland Road 55.
+
+- en: Maida Vale
+
+Pub and dining room, 55 Shirland Road.
 
 ## Caféer
 
