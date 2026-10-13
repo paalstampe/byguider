@@ -95,7 +95,7 @@ Instruksjonene står som kommentar øverst i hver fil.
 ---
 tittel: Pål og Vibekes London       frontmatter: tittel, undertittel,
 senter: 51.5105, -0.1235            senter (breddegrad, lengdegrad), zoom, oppdatert
-senter-mobil: 51.5125, -0.1260     valgfritt: startutsnitt på mobil (≤ 900 px) med zoom-mobil,
+senter-mobil: 51.5230, -0.1060     valgfritt: startutsnitt på mobil (≤ 900 px) med zoom-mobil,
                                     i stedet for utsnittet med alle stedene (for vidt på smal skjerm)
 ---
 # Central                           sone — rekkefølgen her er rekkefølgen i appen
