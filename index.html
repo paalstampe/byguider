@@ -45,13 +45,13 @@ const NOKKEL = 'byguider-sprak';
 const TEKST = {
   no: { duErHer: 'Du er her', sidetittel: 'Pål og Vibekes byguider', byguider: 'Byguider', tittel: 'Pål og Vibekes byer',
         ingress: 'Byene slik vi bruker dem.', byer: 'Byer', sprak: 'Språk',
-        lagreAlle: 'Lagre alle byene for bruk uten nett',
+        lagreAlle: 'Lagre alle byene for bruk offline',
         lagreMerknad: 'Henter kartene for alle byene, ca. 100 MB i alt. Bruk wifi.',
         lagrer: (by, pst, n, tot) => 'Lagrer ' + by + ' … ' + pst + ' % (' + n + ' av ' + tot + ')',
-        ferdig: 'Alle byene er klare uten nett.',
+        ferdig: 'Alle byene er tilgjengelige offline.',
         delvis: 'Noe ble ikke lagret. Prøv igjen.',
         kreverNett: 'Krever nett.',
-        klar: dato => 'Klar uten nett · ' + dato },
+        klar: dato => 'Tilgjengelig offline · ' + dato },
   en: { duErHer: 'You are here', sidetittel: 'Pål and Vibeke’s city guides', byguider: 'City guides', tittel: 'Pål and Vibeke’s cities',
         ingress: 'The cities as we use them.', byer: 'Cities', sprak: 'Language',
         lagreAlle: 'Save all cities for offline use',
@@ -132,65 +132,72 @@ function tegn() {
   });
 }
 
-/* Offline: datoen en by sist ble lagret, satt av app.js (samme nøkkel). */
+/* Offline: datoen en by sist ble lagret, satt av app.js og lagreAlle (samme nøkkel). */
+const offlineNokkel = id => 'byguider-offline:' + new URL('./', location.href).pathname + id;
 function offlineDato(id) {
   let v = null;
-  try { v = localStorage.getItem('byguider-offline:' + new URL('./', location.href).pathname + id); } catch (e) {}
+  try { v = localStorage.getItem(offlineNokkel(id)); } catch (e) {}
   const d = v ? new Date(v) : null;
   if (!d || isNaN(d)) return null;
-  return sprak === 'en' ? d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' })
-    : d.getDate() + '.' + (d.getMonth() + 1) + '.';
+  return d.getDate() + (sprak === 'en'
+    ? ' ' + 'Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split(' ')[d.getMonth()]
+    : '. ' + 'jan feb mar apr mai jun jul aug sep okt nov des'.split(' ')[d.getMonth()]);
 }
 
-/* «Lagre alle byene»: åpner hver by i en usynlig ramme, én om gangen. Byen lagrer seg selv
-   (forhandslastOffline i app.js, i lagremodus) og melder fremdrift og resultat hit. */
-let lagrer = false, merknadSatt = false;
+/* «Lagre alle byene»: ber sw.js lagre alle byene (lagreByer i sw.js regner ut kartet selv, uten å tegne
+   det) og viser fremdriften. Kartstil og MapLibre er de samme som KARTSTIL og RESSURSER i app.js. */
+const KARTSTIL = 'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json';
+const MAPLIBRE = ['https://unpkg.com/maplibre-gl@5/dist/maplibre-gl.css', 'https://unpkg.com/maplibre-gl@5/dist/maplibre-gl.js'];
+let lagrer = false, merknadSatt = false, igjen = [], feil = 0;
+
 async function lagreAlle() {
-  if (lagrer) return;
-  const T = () => TEKST[sprak];
   const merknad = document.getElementById('offline-merknad');
-  const knapp = document.getElementById('lagre-alle');
-  if (!navigator.onLine) { merknad.textContent = T().kreverNett; merknadSatt = true; return; }
-  lagrer = true;
-  knapp.disabled = true;
+  if (lagrer) return;
+  if (!navigator.onLine) { merknad.textContent = TEKST[sprak].kreverNett; merknadSatt = true; return; }
   const liste = byer.filter(b => b.status !== 'kommer');
-  let feil = 0;
-  for (let i = 0; i < liste.length; i++) {
-    const b = liste[i];
-    const navn = (sprak === 'en' && b.navn_en) || b.navn;
-    const vis = pst => { merknad.textContent = T().lagrer(navn, pst, i + 1, liste.length); };
-    vis(0);
-    const resultat = await new Promise(ferdig => {
-      const ramme = document.createElement('iframe');
-      ramme.className = 'lagre-ramme';
-      ramme.setAttribute('aria-hidden', 'true');
-      ramme.tabIndex = -1;
-      ramme.src = b.id + '/?lagre=1';
-      const frist = setTimeout(() => slutt({ feilet: 1 }), 15 * 60 * 1000);
-      function lytt(e) {
-        if (e.source !== ramme.contentWindow || !e.data || e.data.by !== b.id) return;
-        if (e.data.type === 'byguider-fremdrift') vis(e.data.pst);
-        if (e.data.type === 'byguider-lagret') slutt(e.data);
-      }
-      function slutt(d) {
-        clearTimeout(frist);
-        window.removeEventListener('message', lytt);
-        ramme.remove();
-        ferdig(d);
-      }
-      window.addEventListener('message', lytt);
-      document.body.appendChild(ramme);
-    });
-    if (resultat.feilet) feil++;
-    tegn();
-  }
-  merknad.textContent = feil ? T().delvis : T().ferdig;
-  merknadSatt = true;
-  knapp.disabled = false;
-  lagrer = false;
+  lagrer = true; feil = 0;
+  igjen = liste.map(b => b.id);
+  document.getElementById('lagre-alle').disabled = true;
+  merknad.textContent = TEKST[sprak].lagrer(navnPa(liste[0].id), 0, 1, liste.length);
+  const adresser = MAPLIBRE.concat(performance.getEntriesByType('resource').map(e => e.name).filter(u => /^https?:/.test(u)));
+  const reg = await navigator.serviceWorker.ready;
+  reg.active.postMessage({ type: 'lagre', stil: KARTSTIL, adresser: adresser, byer: liste.map(b => ({
+    id: b.id,
+    side: new URL(b.id + '/', location.href).href,
+    data: new URL(b.data || 'data/' + b.id + '.md', location.href).href,
+    geometri: b.geometri ? new URL(b.geometri, location.href).href : null
+  })) });
 }
-document.getElementById('lagre-alle').addEventListener('click', lagreAlle);
-if ('serviceWorker' in navigator) document.getElementById('offline-boks').hidden = false;
+
+const navnPa = id => { const b = byer.find(x => x.id === id) || {}; return (sprak === 'en' && b.navn_en) || b.navn || id; };
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.addEventListener('message', e => {
+    const m = e.data || {};
+    if (!lagrer || !igjen.includes(m.by)) return;
+    const merknad = document.getElementById('offline-merknad');
+    const alle = byer.filter(b => b.status !== 'kommer').length;
+    const nr = alle - igjen.length + 1;
+    if (m.type === 'fremdrift') {
+      merknad.textContent = TEKST[sprak].lagrer(navnPa(m.by), Math.floor(100 * m.ferdig / Math.max(1, m.totalt)), nr, alle);
+    } else if (m.type === 'lagret') {
+      if (m.feilet) feil++;
+      else try { localStorage.setItem(offlineNokkel(m.by), new Date().toISOString()); } catch (err) {}
+      igjen = igjen.filter(id => id !== m.by);
+      if (!igjen.length) {
+        lagrer = false;
+        merknadSatt = true;
+        document.getElementById('lagre-alle').disabled = false;
+      }
+      tegn();
+      merknad.textContent = igjen.length ? TEKST[sprak].lagrer(navnPa(igjen[0]), 0, nr + 1, alle)
+        : feil ? TEKST[sprak].delvis : TEKST[sprak].ferdig;
+    }
+  });
+  navigator.serviceWorker.startMessages();   // Safari leverer ellers ikke meldingene til addEventListener
+  document.getElementById('lagre-alle').addEventListener('click', lagreAlle);
+  document.getElementById('offline-boks').hidden = false;
+}
 
 function tomRamme() {
   const r = document.createElement('span');

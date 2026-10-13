@@ -265,21 +265,27 @@ git pusher med samme innlogging. Claude kan dermed pushe, åpne PR og flette lok
   lagrede kopi. Ved installasjon lagres alle byenes sider, data og miniatyrer.
 - Kart og biblioteker (CARTO-fliser, stil, glyfer, sprite, MapLibre fra unpkg, Google Fonts) tas
   **fra lageret først**; fliser eldre enn 30 døgn fornyes når det er nett.
-- Når en by åpnes med nett, sender `forhandslastOffline()` i `app.js` en liste til `sw.js`: alt siden
-  har lastet (Resource Timing) pluss CARTO-fliser zoom 0–14 for hele byens område (alle steder, også
-  «utenfor», med 15 % marg; maks 1500 fliser) og latinske glyfer for stilens fonter. Det som alt er
-  lagret, hoppes over. London: ca. 450 fliser. Over zoom 14 forstørrer MapLibre flisene.
-- Status ved telleren: «Lagrer for bruk uten nett …» første gang, så «Klar uten nett · 13.10.»
-  (dato huskes per by i localStorage, nøkkel `byguider-offline:<sti><by>`), eller «Bare delvis …» hvis noe feilet.
-- Altså: åpne hver by én gang med nett, så virker den uten. Eller trykk «Lagre alle byene for bruk uten nett»
-  på forsiden: den åpner hver by i en usynlig ramme (`?lagre=1`, `LAGREMODUS` i `app.js`), én om gangen, og
-  byen lagrer seg selv som ved et vanlig besøk og melder fremdrift og resultat til forsiden (postMessage).
-  Forsiden viser «Klar uten nett · dato» per by. Størrelse 13.10.2026: ca. 105 MB i alt, London 75 MB —
-  oppdater teksten `lagreMerknad` i `index.html` hvis det endrer seg mye. Hjemskjerm-app og Safari har hvert sitt
-  lager på iOS — åpne byen i den man skal bruke.
+- Lagring: `sw.js` får meldingen `{ type: 'lagre', stil, adresser, byer: [{ id, side, data, geometri }] }` og
+  regner ut alt selv (`lagreByer`): stil, tiles.json, sprite, latinske glyfer og CARTO-fliser zoom 0–14 over
+  alle koordinatene i byens md-fil og geometrifil (15 % marg, maks 1500 fliser). Kartet trenger ikke tegnes.
+  Det som alt er lagret, hoppes over. Kartstilen lagres uten `?key=`, så forsiden (uten nøkkel) og byene deler den.
+  Fremdrift og resultat sendes til alle åpne sider (`fremdrift`, `lagret`); sidene kaller `startMessages()`
+  (Safari leverer ellers ikke meldingene).
+- Meldingen sendes når en by åpnes med nett (`forhandslastOffline()` i `app.js`, med det siden har lastet
+  som `adresser`), og fra «Lagre alle byene for bruk offline» på forsiden (alle byene, én om gangen;
+  `KARTSTIL` og MapLibre-adressene står der også — hold dem like `app.js`).
+- Status: ved telleren i byen («Lagrer for bruk offline … 45 %», så «Tilgjengelig offline · 13. okt») og
+  under hver by på forsiden. Datoen huskes i localStorage, nøkkel `byguider-offline:<sti><by>`.
+- Størrelse 13.10.2026: ca. 105 MB for alle byene, London 75 MB — oppdater `lagreMerknad` i `index.html`
+  hvis det endrer seg mye.
+- iOS: hjemskjerm-app og Safari har hvert sitt lager; åpne/lagre i den man skal bruke. Sletter man
+  hjemskjerm-appen, slettes også dens lager.
 - Endres strategi eller lagerformat: øk `VERSJON` i `sw.js`, så slettes gamle lagre.
 - Testet i Chromium med nett sperret og serveren stoppet: London med kart (også innzoomet), forsiden,
   og New York (ikke besøkt) med liste og steder, men uten bakgrunnskart.
+  «Lagre alle byene» fra blank nettleser: alle fire byene lagret på ca. 25 s og åpner med kart uten nett.
+  (Første versjon lastet hver by i en skjult iframe; den hang på iPhone og viste kartet — derfor gjør
+  `sw.js` nå jobben selv.)
 
 ---
 
