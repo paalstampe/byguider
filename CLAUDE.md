@@ -56,7 +56,11 @@ Hold HANDOVER.md oppdatert når noe vesentlig endres (punkt 2, 8 og 10.5).
 ## Data
 - Én md-fil per by i data/. Format står som kommentar øverst i hver fil.
 - ★ etter navnet = favoritt. Eksempelsteder er merket EKSEMPEL.
-- Nye steder: finn koordinater og helst Google Place ID; si fra hvis du er usikker på plasseringen.
+- Nye steder: hent alltid Google Place ID og koordinater fra Google Maps (nettleserpanelet:
+  google.com/maps/search/<navn+adresse>; avvis informasjonskapsler). Plass-URL-en har 1s0x<a>:0x<b> og
+  !3d<bredde>!4d<lengde>; Place ID = base64url(0a 12 09 + a som 8 byte little-endian + 11 + b som 8 byte LE),
+  uten «=». Gir søket en liste, har lenkene ChIJ… direkte i «!19s». Bruk OpenStreetMap bare som reserve,
+  og si fra hvis du er usikker på plasseringen.
 - Engelsk innhold via navn-en: og en: (valgfritt; mangler det, vises norsk).
 
 ## Ikke gjør

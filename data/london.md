@@ -445,13 +445,6 @@ Blomstermarked søndager
 - google: ChIJVV7kax4ddkgRQHrksg4N0oY
 - gater: Lauriston Road
 
-### Whitecross Village
-- sted: 51.5230, -0.0929
-- google: ChIJlfVTzakcdkgRDkdY8jAouVk
-- gater: Whitecross Street
-Mellom Old Street og Barbican, rundt Whitecross Street. Matmarked i gata på hverdager til lunsj, flest boder torsdag og fredag.
-- en: Between Old Street and the Barbican, around Whitecross Street. Street food market on weekdays at lunchtime, most stalls on Thursdays and Fridays.
-
 ## Restauranter
 
 ### Dishoom Shoreditch
@@ -538,6 +531,7 @@ Wilton Way fra Royal Oak Road til Navarino Road, og Navarino Road ned til London
 
 ### Chelsea Green ★
 - sted: 51.4907, -0.1660
+- google: ChIJFx4VGmsFdkgRxEiqdnQDTtg
 
 ### Clarendon Cross ★
 - sted: 51.5104, -0.2102
