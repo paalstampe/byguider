@@ -78,6 +78,98 @@ Tyburnia
 - sted: 51.5066, -0.1469
 - google: ChIJpfHK0igFdkgR66lvlSSEvWM
 
+## Restauranter
+
+### Lita ★
+- sted: 51.52081, -0.15276
+Marylebone, Paddington Street 7–9.
+- en: Marylebone, 7–9 Paddington Street.
+
+### Sale e Pepe Mare ★
+- sted: 51.51766, -0.14357
+Italiensk sjømat på The Langham, Portland Place 1c.
+- en: Italian seafood at The Langham, 1c Portland Place.
+
+### The Hart ★
+- sted: 51.51842, -0.15478
+Pub og restaurant i Marylebone, Blandford Street 56.
+- en: Pub and restaurant in Marylebone, 56 Blandford Street.
+
+### Nina
+- sted: 51.51717, -0.15149
+- nettside: https://www.nina.london/
+Italiensk i kjelleren, Thayer Street 18, Marylebone.
+- en: Italian in a basement, 18 Thayer Street, Marylebone.
+
+### Trishna ★
+- sted: 51.51834, -0.15307
+- nettside: https://trishnalondon.com/
+Indisk sjømat, Blandford Street 15–17, Marylebone.
+- en: Indian seafood, 15–17 Blandford Street, Marylebone.
+
+### Josephine ★
+- sted: 51.51848, -0.15195
+Claude Bosis franske bistro, Blandford Street 6–8, Marylebone.
+- en: Claude Bosi’s French bistro, 6–8 Blandford Street, Marylebone.
+
+### KOL
+- sted: 51.51479, -0.15753
+- nettside: https://kolrestaurant.com/
+Meksikansk med britiske råvarer, Seymour Street 9, Marylebone.
+- en: Mexican with British produce, 9 Seymour Street, Marylebone.
+
+### Gymkhana ★
+- sted: 51.50848, -0.14149
+- nettside: https://gymkhanalondon.com/
+Indisk, Albemarle Street 42, Mayfair.
+- en: Indian, 42 Albemarle Street, Mayfair.
+
+### Lilibet's ★
+- sted: 51.51029, -0.14491
+Sjømat i Bruton Street 17, Mayfair.
+- en: Seafood at 17 Bruton Street, Mayfair.
+
+### Scott's ★
+- sted: 51.50982, -0.15093
+- nettside: https://www.scotts-restaurant.com/
+Sjømat, Mount Street 20–22, Mayfair.
+- en: Seafood, 20–22 Mount Street, Mayfair.
+
+### MA/NA
+- sted: 51.51036, -0.15429
+Japansk, Upper Grosvenor Street 30, Mayfair.
+- en: Japanese, 30 Upper Grosvenor Street, Mayfair.
+
+### The Dover
+- sted: 51.5083, -0.1418
+Italiensk-amerikansk, Dover Street 33, Mayfair.
+- en: Italian-American, 33 Dover Street, Mayfair.
+
+### Arlington ★
+- sted: 51.50648, -0.14051
+Klassiker i Arlington Street 20, St James's (der Le Caprice var).
+- en: A classic at 20 Arlington Street, St James’s (the old Le Caprice).
+
+### 45 Jermyn Street
+- sted: 51.50794, -0.13827
+Ved Fortnum & Mason, Jermyn Street 45, St James's.
+- en: Next to Fortnum & Mason, 45 Jermyn Street, St James’s.
+
+### Dear Jackie
+- sted: 51.51322, -0.13712
+Italiensk i kjelleren på Broadwick Soho, Broadwick Street 20. Kan være overtatt av Beefbar fra september 2026 — sjekk før besøk.
+- en: Italian in the basement of Broadwick Soho, 20 Broadwick Street. May have become Beefbar from September 2026 — check before visiting.
+
+### Trattoria Burro
+- sted: 51.51168, -0.12509
+Italiensk-irsk i Floral Court, Covent Garden.
+- en: Italian-Irish in Floral Court, Covent Garden.
+
+### Faros
+- sted: 51.5172, -0.1418
+Italiensk, Great Portland Street 22–24, Fitzrovia.
+- en: Italian, 22–24 Great Portland Street, Fitzrovia.
+
 # North
 
 ## Nabolag og gater
@@ -444,6 +536,19 @@ Devonshire Road
 ### Richmond
 - sted: 51.4673, -0.2995
 - google: ChIJ9aBQEyUMdkgRCZSWDFJ3LAw
+
+## Restauranter
+
+### The River Cafe
+- sted: 51.48404, -0.22421
+- nettside: https://rivercafe.co.uk/
+Italiensk ved Themsen, Rainville Road, Hammersmith.
+- en: Italian by the Thames, Rainville Road, Hammersmith.
+
+### The Hero ★
+- sted: 51.52435, -0.18871
+Pub og spisesal, Shirland Road 55, Maida Vale.
+- en: Pub and dining room, 55 Shirland Road, Maida Vale.
 
 ## Caféer
 
