@@ -456,6 +456,8 @@ function byggMeta(md) {
     tittelEn: m['tittel-en'] || '', undertittelEn: m['undertittel-en'] || '',
     senter: s || undefined,
     zoom: m.zoom ? parseFloat(m.zoom) : undefined,
+    senterMobil: lesKoordinat(m['senter-mobil']) || undefined,
+    zoomMobil: m['zoom-mobil'] ? parseFloat(m['zoom-mobil']) : undefined,
     oppdatert: m.oppdatert || '',
     soner: md.soner
   };
@@ -1488,7 +1490,13 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       const medBbox = innenfor.length ? innenfor : alleMedBbox;
       if (medBbox.length) {
         startutsnitt = bbox(medBbox.flatMap(o => [o.bbox.slice(0, 2), o.bbox.slice(2)]));
-        kart.fitBounds(startutsnitt, { padding: 50, duration: 0 });
+        /* På mobil er kartet smalt, og utsnittet med alle stedene blir for vidt. Har byen
+           senter-mobil og zoom-mobil, åpner kartet der; «Vis hele byen» viser fortsatt alt. */
+        if (smalSkjerm.matches && sideMeta.senterMobil && typeof sideMeta.zoomMobil === 'number') {
+          kart.jumpTo({ center: sideMeta.senterMobil, zoom: sideMeta.zoomMobil });
+        } else {
+          kart.fitBounds(startutsnitt, { padding: 50, duration: 0 });
+        }
       }
 
       // Lista virker uavhengig av kartet; lagene legges på når stilen er lastet.
