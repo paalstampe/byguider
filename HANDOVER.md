@@ -51,6 +51,7 @@ byguider/
 ├── app.js                  all logikk — én kopi for alle byer
 ├── style.css               all styling — én kopi
 ├── byer.json               manifest: id, navn, land, data (md), geometri, beskrivelse, evt. bilde
+├── apple-touch-icon.png    hjemskjerm-ikon (180×180): kobber «b» i Playfair Display på papir
 ├── bilder/<id>.webp        miniatyrer på forsiden (360×270), lages med .claude/miniatyrer.sh
 ├── london/index.html       stubb: <script src="../app.js" data-by="london">
 ├── nice/index.html
@@ -70,7 +71,8 @@ byguider/
 ```
 
 Ny by = én linje i `byer.json`, én md-fil (+ tom geometri-fil), én stubbmappe
-(kopier `london/index.html` og bytt `data-by`).
+(kopier `london/index.html` og bytt `data-by` og `apple-mobile-web-app-title` — navnet under
+hjemskjerm-ikonet, f.eks. «London»; forsiden heter «Byguider»).
 
 Forsiden viser en miniatyr av åpningssiden foran hver by: `bilder/<id>.webp` som fast regel,
 eller valgfritt felt `bilde` i byer.json. Samme oppskrift som landingssiden stam.pe: viewport
