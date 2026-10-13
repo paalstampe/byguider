@@ -198,6 +198,7 @@ Italiensk, Great Portland Street 22–24, Fitzrovia.
 - sted: 51.5613, -0.0828
 - google: ChIJdYATLGMcdkgReU8cDcdqaU0
 - gater: Stoke Newington Church Street
+- utenfor: ja
 
 ### Upper Street, Islington
 - sted: 51.5383, -0.1024
@@ -212,19 +213,23 @@ Camden Passage (antikk) og Upper Street opp til Islington Green.
 ### Crouch End
 - sted: 51.5796, -0.1234
 - google: ChIJiTYKy8AbdkgRM_8p51pSGqQ
+- utenfor: ja
 
 ### Hampstead Village
 - sted: 51.5555, -0.1771
 - google: ChIJSat0DIgadkgRZO1szWVa-VQ
+- utenfor: ja
 
 ### Highgate Village
 - sted: 51.5714, -0.1500
 - google: ChIJtSrBgk4adkgRLuoo2Ib8WG4
 - gater: Highgate High Street
+- utenfor: ja
 
 ### Muswell Hill
 - sted: 51.5914, -0.1427
 - google: ChIJ7WhD4iwadkgRTwEDFT2KkvE
+- utenfor: ja
 
 ### Primrose Hill
 - sted: 51.5413, -0.1533
@@ -234,6 +239,7 @@ Camden Passage (antikk) og Upper Street opp til Islington Green.
 ### Walthamstow Village
 - sted: 51.5834, -0.0176
 - google: ChIJ0ckah1Gn2EcRB3mcysWWvGM
+- utenfor: ja
 
 ## Restauranter
 
@@ -250,6 +256,7 @@ Italiensk ved Highbury Corner, St Paul's Road 300–302.
 - sted: 51.56140, -0.08183
 - google: ChIJUSaZUmMcdkgRg6EPBE8CLV8
 - nettside: https://www.spencebakery.co.uk/
+- utenfor: ja
 Stoke Newington Church Street 161.
 
 ## Butikker
@@ -258,12 +265,14 @@ Stoke Newington Church Street 161.
 - sted: 51.56153, -0.08159
 - google: ChIJ0fh8W2McdkgReoxRPZaoHrk
 - nettside: https://nookshop.co.uk/
+- utenfor: ja
 Stoke Newington Church Street 153.
 
 ### Search & Rescue
 - sted: 51.56192, -0.08068
 - google: ChIJBWwhQ2McdkgRzBxcZSnjyHM
 - nettside: https://searchandrescuelondon.co.uk/
+- utenfor: ja
 Stoke Newington Church Street 129.
 
 # South
@@ -274,6 +283,7 @@ Stoke Newington Church Street 129.
 - sted: 51.4561, -0.1381
 - google: ChIJ23GwCksEdkgRAKjuv399vOs
 - gater: Abbeville Road
+- utenfor: ja
 Clapham
 
 ### Bermondsey ★
@@ -298,12 +308,14 @@ Peckham
 - sted: 51.4195, -0.0839
 - google: ChIJ79E0xE8BdkgRh0mDf0w1zco
 - gater: Westow Hill, Westow Street, Church Road
+- utenfor: ja
 Ønskeliste
 - en: Wish list
 
 ### Dulwich Village
 - sted: 51.4506, -0.0855
 - google: ChIJdXaCE_MDdkgRNbsLxUq87W8
+- utenfor: ja
 Ønskeliste
 - en: Wish list
 
@@ -315,6 +327,7 @@ Peckham
 ### Herne Hill
 - sted: 51.4545, -0.0967
 - google: ChIJ1QO9jYcDdkgRHAlfXDX_ugA
+- utenfor: ja
 Ønskeliste
 - en: Wish list
 
@@ -342,6 +355,7 @@ Galleri på Bermondsey Street.
 - sted: 51.44606, -0.08633
 - google: ChIJE_hdXfEDdkgR09Yvt9rEzmI
 - nettside: https://www.dulwichpicturegallery.org.uk/
+- utenfor: ja
 Englands eldste offentlige kunstgalleri, i Dulwich Village.
 - en: England’s oldest public art gallery, in Dulwich Village.
 
@@ -383,6 +397,7 @@ Konsertsal i et gammelt art deco-kino.
 ### Northcote Road Antiques Market
 - sted: 51.45534, -0.16453
 - google: ChIJLTzCjpUFdkgREt7408Gfd0g
+- utenfor: ja
 Antikkmarked med mange forhandlere under samme tak, Northcote Road 155a.
 - en: Antiques market with many dealers under one roof, 155a Northcote Road.
 
@@ -548,17 +563,20 @@ Lonsdale / Salusbury Road
 ### Barnes Village
 - sted: 51.4738, -0.2492
 - google: ChIJG6sdYVgOdkgRrgKNBvsQTyo
+- utenfor: ja
 Farmers market lørdag
 - en: Farmers’ market on Saturdays
 
 ### Chiswick High Road / Turnham Green
 - sted: 51.4920, -0.2663
 - google: ChIJ38-tk2wOdkgRGDMU_F4xZCQ
+- utenfor: ja
 Devonshire Road
 
 ### Kew Green
 - sted: 51.4852, -0.2880
 - google: ChIJMevjjNkNdkgRtEdyVHdNdko
+- utenfor: ja
 Ønskeliste — kombiner med Kew Gardens
 - en: Wish list — combine with Kew Gardens
 
@@ -569,6 +587,7 @@ Devonshire Road
 ### Richmond
 - sted: 51.4673, -0.2995
 - google: ChIJ9aBQEyUMdkgRCZSWDFJ3LAw
+- utenfor: ja
 
 ## Restauranter
 
@@ -576,6 +595,7 @@ Devonshire Road
 - sted: 51.48400, -0.22423
 - google: ChIJxxa_ELAPdkgRF2wx7RLroiY
 - nettside: https://rivercafe.co.uk/
+- utenfor: ja
 Italiensk ved Themsen, Rainville Road, Hammersmith.
 - en: Italian by the Thames, Rainville Road, Hammersmith.
 
@@ -591,6 +611,7 @@ Pub og spisesal, Shirland Road 55, Maida Vale.
 - sted: 51.47348, -0.24855
 - google: ChIJVRbdmE0PdkgRh_lJOXrBqeM
 - nettside: http://www.hermanoscoffeeroasters.com/
+- utenfor: ja
 EKSEMPEL — Barnes. Koordinat er omtrentlig
 - en: EXAMPLE — Barnes. Location is approximate
 
@@ -600,6 +621,7 @@ EKSEMPEL — Barnes. Koordinat er omtrentlig
 - sted: 51.47614, -0.23466
 - google: ChIJnfoSY6wPdkgR69kRGIFCCUU
 - nettside: https://www.wwt.org.uk/wetland-centres/london/
+- utenfor: ja
 EKSEMPEL — viser hvordan en park legges inn
 - en: EXAMPLE — shows how a park is added
 
