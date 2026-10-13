@@ -649,11 +649,15 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
   kart.touchZoomRotate.disableRotation();
   kart.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-left');
 
-  /* Tilbake til startvisningen: utsnittet med stedene (unntatt «utenfor: ja»), slik siden åpnes
-     (senter og zoom fra metadata når byen ikke har steder ennå). */
+  /* Tilbake til startvisningen, slik siden åpnes: mobilutsnittet (senter-mobil/zoom-mobil) på smal
+     skjerm, ellers utsnittet med stedene (unntatt «utenfor: ja»), ellers senter og zoom fra metadata. */
   let startvisning = null, startutsnitt = null;
+  const mobilvisning = () => smalSkjerm.matches && sideMeta && sideMeta.senterMobil && typeof sideMeta.zoomMobil === 'number'
+    ? { center: sideMeta.senterMobil, zoom: sideMeta.zoomMobil } : null;
   const tilStart = () => {
-    if (startutsnitt) kart.fitBounds(startutsnitt, { padding: 50, duration: 800 });
+    const mobil = startutsnitt && mobilvisning();
+    if (mobil) kart.flyTo(Object.assign({ duration: 800 }, mobil));
+    else if (startutsnitt) kart.fitBounds(startutsnitt, { padding: 50, duration: 800 });
     else if (startvisning) kart.flyTo(Object.assign({ duration: 800 }, startvisning));
   };
   kart.addControl({
@@ -1491,9 +1495,10 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       if (medBbox.length) {
         startutsnitt = bbox(medBbox.flatMap(o => [o.bbox.slice(0, 2), o.bbox.slice(2)]));
         /* På mobil er kartet smalt, og utsnittet med alle stedene blir for vidt. Har byen
-           senter-mobil og zoom-mobil, åpner kartet der; «Vis hele byen» viser fortsatt alt. */
-        if (smalSkjerm.matches && sideMeta.senterMobil && typeof sideMeta.zoomMobil === 'number') {
-          kart.jumpTo({ center: sideMeta.senterMobil, zoom: sideMeta.zoomMobil });
+           senter-mobil og zoom-mobil, åpner kartet der (og «Vis hele byen» går dit). */
+        const mobil = mobilvisning();
+        if (mobil) {
+          kart.jumpTo(mobil);
         } else {
           kart.fitBounds(startutsnitt, { padding: 50, duration: 0 });
         }
