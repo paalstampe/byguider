@@ -97,6 +97,10 @@ const TEKST = {
     ingenData: 'Ingen data',
     steder: n => n + (n === 1 ? ' sted' : ' steder'),
     ruter: n => n + (n === 1 ? ' rute' : ' ruter'),
+    offlineLagrer: 'Lagrer for bruk offline …',
+    offlineLagrerPst: p => 'Lagrer for bruk offline … ' + p + ' %',
+    offlineLagret: dato => 'Tilgjengelig offline · ' + dato,
+    offlineDelvis: 'Bare delvis lagret for bruk offline',
     fot: (fil, dato) => 'Rediger ' + fil + ' for å legge til steder.' + (dato ? ' Sist oppdatert ' + dato + '.' : ''),
     fantIkke: (fil, feil) => 'Fant ikke ' + fil + ' (' + feil + ').',
     lokalt: 'Åpnes siden fra <code>file://</code>? Kjør <code>python3 -m http.server</code> i mappen og åpne <code>localhost:8000</code>.'
@@ -130,6 +134,10 @@ const TEKST = {
     ingenData: 'No data',
     steder: n => n + (n === 1 ? ' place' : ' places'),
     ruter: n => n + (n === 1 ? ' walk' : ' walks'),
+    offlineLagrer: 'Saving for offline use …',
+    offlineLagrerPst: p => 'Saving for offline use … ' + p + '%',
+    offlineLagret: dato => 'Available offline · ' + dato,
+    offlineDelvis: 'Only partly saved for offline use',
     fot: (fil, dato) => 'Edit ' + fil + ' to add places.' + (dato ? ' Last updated ' + dato + '.' : ''),
     fantIkke: (fil, feil) => 'Could not find ' + fil + ' (' + feil + ').',
     lokalt: 'Opened from <code>file://</code>? Run <code>python3 -m http.server</code> in the folder and open <code>localhost:8000</code>.'
@@ -502,6 +510,7 @@ const SKALL = `
     </div>
     <div class="teller-rad">
       <span id="teller" class="teller"></span>
+      <span id="offline-status" class="offline-status" hidden></span>
     </div>
     <div class="liste" id="liste" role="list"></div>
     <footer class="sidebar-fot">
@@ -621,6 +630,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     sok:        document.getElementById('sok'),
     sokTom:     document.getElementById('sok-tom'),
     teller:     document.getElementById('teller'),
+    offline:    document.getElementById('offline-status'),
     fSone:      document.getElementById('filter-sone'),
     fKategori:  document.getElementById('filter-kategori'),
     fStatus:    document.getElementById('filter-status'),
@@ -1152,63 +1162,56 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
   /* ---------- oppslag fra data ---------- */
 
-  /* Offline: ber sw.js lagre alt byen trenger — det siden har lastet (biblioteker, fonter, stil,
-     data) pluss kartfliser for hele byens område (alle steder, også «utenfor», med litt marg),
-     zoom 0–14 (CARTO har ikke fliser over 14; MapLibre forstørrer dem). Det som alt er lagret,
-     hoppes over. Blir det over MAKS_FLISER, kuttes de høyeste zoomnivåene. */
-  function forhandslastOffline(omrade) {
+  /* Offline: ber sw.js lagre alt byen trenger — det siden har lastet (biblioteker, fonter) pluss byens
+     side, data og kart. Flisene og resten av kartet regner sw.js ut selv (lagreByer); det som alt er
+     lagret, hoppes over. */
+  function forhandslastOffline() {
     if (!('serviceWorker' in navigator) || !navigator.onLine) return;
-    const MAKS_FLISER = 1500;
-    const stil = kart.getStyle();
-    const kilde = Object.keys(stil.sources).map(id => kart.getSource(id))
-      .find(k => k && k.type === 'vector' && Array.isArray(k.tiles) && k.tiles.length);
-    const adresser = [location.href.split('#')[0]].concat(
-      performance.getEntriesByType('resource').map(e => e.name).filter(u => /^https?:/.test(u)));
-
-    if (kilde) {
-      const mal = kilde.tiles[0];
-      const maksZoom = Math.min(14, kilde.maxzoom || 14);
-      const marg = 0.15;
-      const [v, s, o, n] = omrade;
-      const bv = (o - v) * marg, bh = (n - s) * marg;
-      const flisX = (lng, z) => Math.floor((lng + 180) / 360 * 2 ** z);
-      const flisY = (lat, z) => {
-        const r = lat * Math.PI / 180;
-        return Math.floor((1 - Math.log(Math.tan(r) + 1 / Math.cos(r)) / Math.PI) / 2 * 2 ** z);
-      };
-      const fliserFor = z => {
-        const x0 = flisX(v - bv, z), x1 = flisX(o + bv, z), y0 = flisY(n + bh, z), y1 = flisY(s - bh, z);
-        const ut = [];
-        for (let x = x0; x <= x1; x++) for (let y = y0; y <= y1; y++) {
-          ut.push(mal.replace('{z}', z).replace('{x}', x).replace('{y}', y));
-        }
-        return ut;
-      };
-      let fliser = [];
-      for (let topp = maksZoom; topp >= 0; topp--) {
-        fliser = [];
-        for (let z = 0; z <= topp; z++) fliser = fliser.concat(fliserFor(z));
-        if (fliser.length <= MAKS_FLISER) break;
-      }
-      adresser.push(...fliser);
-    }
-
-    // Glyfer (tegn til kartnavn) for latinske tegn i alle fontene stilen bruker.
-    if (stil.glyphs) {
-      const fonter = new Set();
-      stil.layers.forEach(l => {
-        let f = l.layout && l.layout['text-font'];
-        if (Array.isArray(f) && f[0] === 'literal') f = f[1];
-        if (Array.isArray(f) && f.every(x => typeof x === 'string')) fonter.add(f.join(','));
-      });
-      fonter.forEach(f => ['0-255', '256-511', '8192-8447'].forEach(omr => adresser.push(
-        stil.glyphs.replace('{fontstack}', encodeURIComponent(f).replace(/%2C/g, ',')).replace('{range}', omr))));
-    }
-
+    const adresser = performance.getEntriesByType('resource').map(e => e.name).filter(u => /^https?:/.test(u));
+    if (!offlineDato()) visOffline('lagrer');
     navigator.serviceWorker.ready.then(reg => {
-      if (reg.active) reg.active.postMessage({ type: 'forhandslast', adresser: adresser });
+      if (reg.active) reg.active.postMessage({ type: 'lagre', stil: KARTSTIL, adresser: adresser,
+        byer: [{ id: BY, side: location.href.split(/[?#]/)[0], data: DATA_URL, geometri: GEO_URL }] });
     }).catch(() => {});
   }
+
+  /* Status ved telleren: «Lagrer …» første gang, «Tilgjengelig offline · 13. okt» når sw.js har hentet alt
+     (datoen huskes per by i nettleseren, samme nøkkel som forsiden), «Bare delvis …» hvis noe feilet. */
+  const OFFLINE_NOKKEL = 'byguider-offline:' + BASE.pathname + BY;
+  let offlineTilstand = null;
+  function offlineDato() {
+    try { return localStorage.getItem(OFFLINE_NOKKEL); } catch (e) { return null; }
+  }
+  function visOffline(tilstand) {
+    offlineTilstand = tilstand || offlineTilstand;
+    const dato = offlineDato();
+    if (!offlineTilstand && dato) offlineTilstand = 'lagret';
+    if (!offlineTilstand) { el.offline.hidden = true; return; }
+    const d = dato ? new Date(dato) : null;
+    const datoTekst = !d || isNaN(d) ? '' : SPRAK === 'en'
+      ? d.getDate() + ' ' + 'Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split(' ')[d.getMonth()]
+      : d.getDate() + '. ' + 'jan feb mar apr mai jun jul aug sep okt nov des'.split(' ')[d.getMonth()];
+    el.offline.textContent = offlineTilstand === 'lagrer' ? t('offlineLagrer')
+      : offlineTilstand === 'delvis' ? t('offlineDelvis') : t('offlineLagret', datoTekst);
+    el.offline.hidden = false;
+  }
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.addEventListener('message', e => {
+      const m = e.data || {};
+      if (m.by !== BY) return;
+      if (m.type === 'fremdrift') {
+        if (offlineTilstand === 'lagrer') el.offline.textContent = t('offlineLagrerPst', Math.floor(100 * m.ferdig / Math.max(1, m.totalt)));
+        return;
+      }
+      if (m.type !== 'lagret') return;
+      if (m.feilet) { visOffline('delvis'); return; }
+      try { localStorage.setItem(OFFLINE_NOKKEL, new Date().toISOString()); } catch (err) { /* ingen lagring */ }
+      visOffline('lagret');
+    });
+    navigator.serviceWorker.startMessages();   // Safari leverer ellers ikke meldingene til addEventListener
+    visOffline();
+  }
+  sprakLyttere.push(() => { if (!el.offline.hidden) visOffline(); });
 
   function bbox(coords) {
     const b = [Infinity, Infinity, -Infinity, -Infinity];
@@ -1572,10 +1575,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       kartKlar.then(() => {
         leggTilKartlag();
         filtrerKart(synlige());
-        if (alleMedBbox.length) {
-          const omrade = bbox(alleMedBbox.flatMap(o => [o.bbox.slice(0, 2), o.bbox.slice(2)]));
-          kart.once('idle', () => forhandslastOffline(omrade));
-        }
+        kart.once('idle', forhandslastOffline);
       });
 
       fot = () => t('fot', '<code>' + esc(DATA_NAVN) + '</code>', esc(meta.oppdatert || ''));
