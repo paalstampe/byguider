@@ -464,7 +464,7 @@ html, body {
   font-size: 13px;
   color: var(--aksent);
 }
-.offline-boks { padding: 44px 0 0; }
+.offline-boks { padding: 22px 0 0; }
 .offline-boks .chip:disabled { opacity: 0.55; cursor: default; }
 .offline-merknad {
   margin: 10px 0 0;
