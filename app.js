@@ -1287,8 +1287,10 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
     if (o.erLinje) {
       popup.remove();
-      if (flyTil && o.bbox) kart.fitBounds(o.bbox, { padding: 70, maxZoom: 15, duration: 600 });
       visRuteKort(o);
+      // Mobil: rutekortet ligger nederst i kartet — hold ruten over det.
+      const under = smalSkjerm.matches ? el.ruteKort.offsetHeight + 24 : 70;
+      if (flyTil && o.bbox) kart.fitBounds(o.bbox, { padding: { top: 50, right: 40, bottom: under, left: 40 }, maxZoom: 15, duration: 600 });
     } else {
       el.ruteKort.hidden = true;
       if (flyTil && o.fokusBbox) {
