@@ -5,6 +5,8 @@ tittel-en: Pål and Vibeke’s London
 undertittel-en: Neighbourhoods, walks and restaurants worth a detour.
 senter: 51.5105, -0.1235
 zoom: 11
+senter-mobil: 51.5125, -0.1260
+zoom-mobil: 11.4
 oppdatert: 2026-09-27
 ---
 
