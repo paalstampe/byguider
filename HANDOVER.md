@@ -269,6 +269,8 @@ git pusher med samme innlogging. Claude kan dermed pushe, åpne PR og flette lok
   har lastet (Resource Timing) pluss CARTO-fliser zoom 0–14 for hele byens område (alle steder, også
   «utenfor», med 15 % marg; maks 1500 fliser) og latinske glyfer for stilens fonter. Det som alt er
   lagret, hoppes over. London: ca. 450 fliser. Over zoom 14 forstørrer MapLibre flisene.
+- Status ved telleren: «Lagrer for bruk uten nett …» første gang, så «Klar uten nett · 13.10.»
+  (dato huskes per by i localStorage, nøkkel `byguider-offline:<sti><by>`), eller «Bare delvis …» hvis noe feilet.
 - Altså: åpne hver by én gang med nett, så virker den uten. Hjemskjerm-app og Safari har hvert sitt
   lager på iOS — åpne byen i den man skal bruke.
 - Endres strategi eller lagerformat: øk `VERSJON` i `sw.js`, så slettes gamle lagre.

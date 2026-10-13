@@ -264,6 +264,12 @@ html, body {
   color: var(--dempet);
 }
 
+.offline-status {
+  font-size: 12px;
+  color: var(--dempet);
+  text-align: right;
+}
+
 .nullstill {
   border: 0;
   background: none;

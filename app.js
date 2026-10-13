@@ -97,6 +97,9 @@ const TEKST = {
     ingenData: 'Ingen data',
     steder: n => n + (n === 1 ? ' sted' : ' steder'),
     ruter: n => n + (n === 1 ? ' rute' : ' ruter'),
+    offlineLagrer: 'Lagrer for bruk uten nett …',
+    offlineLagret: dato => 'Klar uten nett · ' + dato,
+    offlineDelvis: 'Bare delvis lagret uten nett',
     fot: (fil, dato) => 'Rediger ' + fil + ' for å legge til steder.' + (dato ? ' Sist oppdatert ' + dato + '.' : ''),
     fantIkke: (fil, feil) => 'Fant ikke ' + fil + ' (' + feil + ').',
     lokalt: 'Åpnes siden fra <code>file://</code>? Kjør <code>python3 -m http.server</code> i mappen og åpne <code>localhost:8000</code>.'
@@ -130,6 +133,9 @@ const TEKST = {
     ingenData: 'No data',
     steder: n => n + (n === 1 ? ' place' : ' places'),
     ruter: n => n + (n === 1 ? ' walk' : ' walks'),
+    offlineLagrer: 'Saving for offline use …',
+    offlineLagret: dato => 'Available offline · ' + dato,
+    offlineDelvis: 'Only partly saved for offline use',
     fot: (fil, dato) => 'Edit ' + fil + ' to add places.' + (dato ? ' Last updated ' + dato + '.' : ''),
     fantIkke: (fil, feil) => 'Could not find ' + fil + ' (' + feil + ').',
     lokalt: 'Opened from <code>file://</code>? Run <code>python3 -m http.server</code> in the folder and open <code>localhost:8000</code>.'
@@ -502,6 +508,7 @@ const SKALL = `
     </div>
     <div class="teller-rad">
       <span id="teller" class="teller"></span>
+      <span id="offline-status" class="offline-status" hidden></span>
     </div>
     <div class="liste" id="liste" role="list"></div>
     <footer class="sidebar-fot">
@@ -621,6 +628,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     sok:        document.getElementById('sok'),
     sokTom:     document.getElementById('sok-tom'),
     teller:     document.getElementById('teller'),
+    offline:    document.getElementById('offline-status'),
     fSone:      document.getElementById('filter-sone'),
     fKategori:  document.getElementById('filter-kategori'),
     fStatus:    document.getElementById('filter-status'),
@@ -1205,10 +1213,43 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
         stil.glyphs.replace('{fontstack}', encodeURIComponent(f).replace(/%2C/g, ',')).replace('{range}', omr))));
     }
 
+    if (!offlineDato()) visOffline('lagrer');
     navigator.serviceWorker.ready.then(reg => {
       if (reg.active) reg.active.postMessage({ type: 'forhandslast', adresser: adresser });
     }).catch(() => {});
   }
+
+  /* Status ved telleren: «Lagrer …» første gang, «Klar uten nett · 13.10.» når sw.js har hentet alt
+     (datoen huskes per by i nettleseren), «Bare delvis …» hvis noe feilet. */
+  const OFFLINE_NOKKEL = 'byguider-offline:' + BASE.pathname + BY;
+  let offlineTilstand = null;
+  function offlineDato() {
+    try { return localStorage.getItem(OFFLINE_NOKKEL); } catch (e) { return null; }
+  }
+  function visOffline(tilstand) {
+    offlineTilstand = tilstand || offlineTilstand;
+    const dato = offlineDato();
+    if (!offlineTilstand && dato) offlineTilstand = 'lagret';
+    if (!offlineTilstand) { el.offline.hidden = true; return; }
+    const d = dato ? new Date(dato) : null;
+    const datoTekst = !d || isNaN(d) ? '' : SPRAK === 'en'
+      ? d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' })
+      : d.getDate() + '.' + (d.getMonth() + 1) + '.';
+    el.offline.textContent = offlineTilstand === 'lagrer' ? t('offlineLagrer')
+      : offlineTilstand === 'delvis' ? t('offlineDelvis') : t('offlineLagret', datoTekst);
+    el.offline.hidden = false;
+  }
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.addEventListener('message', e => {
+      const m = e.data || {};
+      if (m.type !== 'forhandslastet') return;
+      if (m.feilet) { visOffline('delvis'); return; }
+      try { localStorage.setItem(OFFLINE_NOKKEL, new Date().toISOString()); } catch (err) { /* ingen lagring */ }
+      visOffline('lagret');
+    });
+    visOffline();
+  }
+  sprakLyttere.push(() => { if (!el.offline.hidden) visOffline(); });
 
   function bbox(coords) {
     const b = [Infinity, Infinity, -Infinity, -Infinity];
