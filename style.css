@@ -457,6 +457,33 @@ html, body {
 .by-lenke.er-inaktiv:hover .by-navn { color: var(--kant); }
 .by-lenke.er-inaktiv .by-meta { color: var(--kant); }
 
+/* Offline: status per by og «Lagre alle byene» under lista */
+.by-offline {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--aksent);
+}
+.offline-boks { padding: 28px 0 0; }
+.offline-boks .chip:disabled { opacity: 0.55; cursor: default; }
+.offline-merknad {
+  margin: 10px 0 0;
+  font-size: 12.5px;
+  color: var(--dempet);
+}
+/* Skjult ramme som laster en by mens den lagres; må ha reell størrelse for at kartet skal starte. */
+.lagre-ramme {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 390px;
+  height: 600px;
+  border: 0;
+  opacity: 0.01;
+  pointer-events: none;
+  z-index: -1;
+}
+
 /* ---------- Kart ---------- */
 
 .kartflate {

@@ -115,7 +115,9 @@ self.addEventListener('message', e => {
   e.waitUntil((async () => {
     const egne = await caches.open(EGNE), kart = await caches.open(KART);
     const ko = [...new Set(m.adresser)];
-    let hentet = 0, feilet = 0;
+    const totalt = ko.length;
+    let hentet = 0, feilet = 0, ferdig = 0;
+    const meld = d => { if (e.source) e.source.postMessage(d); };
     async function arbeider() {
       while (ko.length) {
         const url = ko.shift();
@@ -124,9 +126,10 @@ self.addEventListener('message', e => {
         const kopi = await lager.match(nokkel(url), SOK);
         if (kopi && !foreldet(kopi, url)) continue;
         try { await lagre(lager, url); hentet++; } catch (err) { feilet++; }
+        if (++ferdig % 20 === 0) meld({ type: 'fremdrift', ferdig: totalt - ko.length, totalt });
       }
     }
     await Promise.all(Array.from({ length: SAMTIDIG }, arbeider));
-    if (e.source) e.source.postMessage({ type: 'forhandslastet', hentet, feilet });
+    meld({ type: 'forhandslastet', hentet, feilet });
   })());
 });

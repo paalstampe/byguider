@@ -98,6 +98,7 @@ const TEKST = {
     steder: n => n + (n === 1 ? ' sted' : ' steder'),
     ruter: n => n + (n === 1 ? ' rute' : ' ruter'),
     offlineLagrer: 'Lagrer for bruk uten nett …',
+    offlineLagrerPst: p => 'Lagrer for bruk uten nett … ' + p + ' %',
     offlineLagret: dato => 'Klar uten nett · ' + dato,
     offlineDelvis: 'Bare delvis lagret uten nett',
     fot: (fil, dato) => 'Rediger ' + fil + ' for å legge til steder.' + (dato ? ' Sist oppdatert ' + dato + '.' : ''),
@@ -134,6 +135,7 @@ const TEKST = {
     steder: n => n + (n === 1 ? ' place' : ' places'),
     ruter: n => n + (n === 1 ? ' walk' : ' walks'),
     offlineLagrer: 'Saving for offline use …',
+    offlineLagrerPst: p => 'Saving for offline use … ' + p + '%',
     offlineLagret: dato => 'Available offline · ' + dato,
     offlineDelvis: 'Only partly saved for offline use',
     fot: (fil, dato) => 'Edit ' + fil + ' to add places.' + (dato ? ' Last updated ' + dato + '.' : ''),
@@ -474,6 +476,7 @@ function byggMeta(md) {
 const SKRIPT = document.currentScript;
 const BASE = new URL('.', SKRIPT.src);          // mappen app.js ligger i
 const BY = SKRIPT.dataset.by;
+const LAGREMODUS = new URLSearchParams(location.search).has('lagre');   // se «Lagre alle byene» i index.html
 
 const RESSURSER = {
   fonter:  'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Work+Sans:wght@400;500;600&display=swap',
@@ -1165,7 +1168,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
      zoom 0–14 (CARTO har ikke fliser over 14; MapLibre forstørrer dem). Det som alt er lagret,
      hoppes over. Blir det over MAKS_FLISER, kuttes de høyeste zoomnivåene. */
   function forhandslastOffline(omrade) {
-    if (!('serviceWorker' in navigator) || !navigator.onLine) return;
+    if (!('serviceWorker' in navigator) || !navigator.onLine) { tilForside({ type: 'byguider-lagret', by: BY, feilet: 1 }); return; }
     const MAKS_FLISER = 1500;
     const stil = kart.getStyle();
     const kilde = Object.keys(stil.sources).map(id => kart.getSource(id))
@@ -1173,7 +1176,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     const adresser = [location.href.split('#')[0]].concat(
       performance.getEntriesByType('resource').map(e => e.name).filter(u => /^https?:/.test(u)));
 
-    if (kilde) {
+    if (kilde && omrade) {
       const mal = kilde.tiles[0];
       const maksZoom = Math.min(14, kilde.maxzoom || 14);
       const marg = 0.15;
@@ -1242,7 +1245,14 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.addEventListener('message', e => {
       const m = e.data || {};
+      if (m.type === 'fremdrift') {
+        const pst = Math.floor(100 * m.ferdig / Math.max(1, m.totalt));
+        if (offlineTilstand === 'lagrer') el.offline.textContent = t('offlineLagrerPst', pst);
+        tilForside({ type: 'byguider-fremdrift', by: BY, pst: pst });
+        return;
+      }
       if (m.type !== 'forhandslastet') return;
+      tilForside({ type: 'byguider-lagret', by: BY, feilet: m.feilet });
       if (m.feilet) { visOffline('delvis'); return; }
       try { localStorage.setItem(OFFLINE_NOKKEL, new Date().toISOString()); } catch (err) { /* ingen lagring */ }
       visOffline('lagret');
@@ -1250,6 +1260,11 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     visOffline();
   }
   sprakLyttere.push(() => { if (!el.offline.hidden) visOffline(); });
+
+  // I lagremodus ligger siden i en ramme på forsiden; den får vite fremdrift og når byen er lagret.
+  function tilForside(melding) {
+    if (LAGREMODUS && window.parent !== window) window.parent.postMessage(melding, location.origin);
+  }
 
   function bbox(coords) {
     const b = [Infinity, Infinity, -Infinity, -Infinity];
@@ -1613,10 +1628,11 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       kartKlar.then(() => {
         leggTilKartlag();
         filtrerKart(synlige());
-        if (alleMedBbox.length) {
-          const omrade = bbox(alleMedBbox.flatMap(o => [o.bbox.slice(0, 2), o.bbox.slice(2)]));
-          kart.once('idle', () => forhandslastOffline(omrade));
-        }
+        const omrade = alleMedBbox.length
+          ? bbox(alleMedBbox.flatMap(o => [o.bbox.slice(0, 2), o.bbox.slice(2)])) : null;
+        // Fra «Lagre alle byene» (skjult ramme på forsiden): straks — der tegnes kartet ikke nødvendigvis ferdig.
+        if (LAGREMODUS) setTimeout(() => forhandslastOffline(omrade), 500);
+        else kart.once('idle', () => forhandslastOffline(omrade));
       });
 
       fot = () => t('fot', '<code>' + esc(DATA_NAVN) + '</code>', esc(meta.oppdatert || ''));
