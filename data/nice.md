@@ -141,6 +141,7 @@ Fine dining
 ### Le Bistrot des Serruriers
 - sted: 43.69746, 7.27838
 - google: ChIJje0pesTbzRIR2yKcPzPf1cM
+- nettside: https://www.marriott.com/en-us/hotels/ncehc-hotel-du-couvent-a-luxury-collection-hotel-nice-france/dining/
 
 ### Apopino
 - sted: 43.69908, 7.26488
@@ -191,6 +192,7 @@ Fine dining
 ### Cave de Peixes
 - sted: 43.69980, 7.28109
 - google: ChIJw63H7FfbzRIRcgsFc3Fb5cs
+- nettside: https://www.instagram.com/lacavedepeixes/
 
 ### Olive & Artichaut
 - sted: 43.69649, 7.27599

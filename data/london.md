@@ -343,11 +343,11 @@ Camden Passage (antikk) og Upper Street opp til Islington Green.
 - sted: 51.54626, -0.10157
 - google: ChIJjVaytWQbdkgRKi6VkI5G4fM
 - nettside: https://www.trullorestaurant.com/
-Highbury, Islington
+Islington
 
 Italiensk ved Highbury Corner, St Paul's Road 300–302.
 
-- en: Highbury, Islington
+- en: Islington
 
 Italian at Highbury Corner, 300–302 St Paul's Road.
 
