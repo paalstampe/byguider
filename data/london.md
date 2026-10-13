@@ -44,6 +44,7 @@ og kobles hit på navn: type "område", "gate" eller "rute".
 
 ### Elizabeth Street ★
 - sted: 51.4938, -0.1511
+- google: ChIJqXePdxgFdkgRwVq8eRPm7FU
 Lower Belgravia
 
 ### Lamb's Conduit Street ★
@@ -68,6 +69,7 @@ Mayfair
 
 ### Connaught Village
 - sted: 51.5146, -0.1651
+- google: ChIJ4_o2BdUEdkgRTVk0JSwAVBE
 Tyburnia
 
 ### Exmouth Market
@@ -199,6 +201,7 @@ Italiensk, Great Portland Street 22–24, Fitzrovia.
 
 ### Upper Street, Islington
 - sted: 51.5383, -0.1024
+- google: ChIJw9C6S2YbdkgRbHBgllY-qmg
 
 ### Angel
 - sted: 51.5347, -0.1040
@@ -212,10 +215,11 @@ Camden Passage (antikk) og Upper Street opp til Islington Green.
 
 ### Hampstead Village
 - sted: 51.5555, -0.1771
-- google: https://www.google.com/maps/search/?api=1&query=Hampstead+High+Street,+London+NW3
+- google: ChIJSat0DIgadkgRZO1szWVa-VQ
 
 ### Highgate Village
 - sted: 51.5714, -0.1500
+- google: ChIJtSrBgk4adkgRLuoo2Ib8WG4
 - gater: Highgate High Street
 
 ### Muswell Hill
@@ -243,7 +247,8 @@ Italiensk ved Highbury Corner, St Paul's Road 300–302.
 ## Caféer
 
 ### The Spence Bakery
-- sted: 51.5614, -0.0819
+- sted: 51.56140, -0.08183
+- google: ChIJUSaZUmMcdkgRg6EPBE8CLV8
 - nettside: https://www.spencebakery.co.uk/
 Stoke Newington Church Street 161.
 
@@ -256,7 +261,8 @@ Stoke Newington Church Street 161.
 Stoke Newington Church Street 153.
 
 ### Search & Rescue
-- sted: 51.5619, -0.0807
+- sted: 51.56192, -0.08068
+- google: ChIJBWwhQ2McdkgRzBxcZSnjyHM
 - nettside: https://searchandrescuelondon.co.uk/
 Stoke Newington Church Street 129.
 
@@ -266,17 +272,20 @@ Stoke Newington Church Street 129.
 
 ### Abbeville Village ★
 - sted: 51.4561, -0.1381
+- google: ChIJ23GwCksEdkgRAKjuv399vOs
 - gater: Abbeville Road
 Clapham
 
 ### Bermondsey ★
 - sted: 51.5008, -0.0818
+- google: ChIJ3zuCyUQDdkgRK-qKftgeg9o
 - gater: Bermondsey Street, Ropewalk
 Bermondsey Street med White Cube og Fashion and Textile Museum, og Maltby Street Market på Ropewalk.
 - en: Bermondsey Street with White Cube and the Fashion and Textile Museum, and Maltby Street Market on Ropewalk.
 
 ### Bellenden Road
 - sted: 51.4697, -0.0729
+- google: ChIJQaCs254DdkgR6M6hbzLHVwM
 - gater: Maxted Road, Bellenden Road, Blenheim Grove
 Peckham
 
@@ -330,7 +339,8 @@ Galleri på Bermondsey Street.
 - en: Gallery on Bermondsey Street.
 
 ### Dulwich Picture Gallery
-- sted: 51.44596, -0.08633
+- sted: 51.44606, -0.08633
+- google: ChIJE_hdXfEDdkgR09Yvt9rEzmI
 - nettside: https://www.dulwichpicturegallery.org.uk/
 Englands eldste offentlige kunstgalleri, i Dulwich Village.
 - en: England’s oldest public art gallery, in Dulwich Village.
@@ -338,35 +348,41 @@ Englands eldste offentlige kunstgalleri, i Dulwich Village.
 ## Verdt en omvei
 
 ### Borough Market
-- sted: 51.50559, -0.09035
+- sted: 51.50558, -0.09048
+- google: ChIJD2bPdVcDdkgRuUSgnOXnKDE
 - nettside: https://boroughmarket.org.uk/
 Matmarked ved London Bridge.
 - en: Food market by London Bridge.
 
 ### Maltby Street Market
-- sted: 51.49926, -0.07562
+- sted: 51.49946, -0.07593
+- google: ChIJZ9jUVEEDdkgRN7k3RDL_908
 - nettside: https://www.maltby.st/
 Matmarked på Ropewalk, under jernbanebuene. Helger.
 - en: Food market on Ropewalk, under the railway arches. Weekends.
 
 ### Brixton Village Market
-- sted: 51.46239, -0.11184
+- sted: 51.46245, -0.11220
+- google: ChIJx9r5NWUEdkgRJY0mTciVn-k
 Overbygd marked med små spisesteder og butikker, mellom Coldharbour Lane og Atlantic Road.
 - en: Covered market with small places to eat and shops, between Coldharbour Lane and Atlantic Road.
 
 ### David Bowie Memorial
-- sted: 51.46255, -0.11455
+- sted: 51.46266, -0.11546
+- google: ChIJlzbEs74EdkgRXFCd_HWS_HM
 Veggmaleriet av Bowie på Tunstall Road, rett ved Brixton stasjon. Bowie ble født i Brixton.
 - en: The Bowie mural on Tunstall Road, right by Brixton station. Bowie was born in Brixton.
 
 ### O2 Academy Brixton
-- sted: 51.4657, -0.11487
+- sted: 51.46516, -0.11493
+- google: ChIJL1UqD2cEdkgRidF8HHIq4fQ
 - nettside: https://www.academymusicgroup.com/o2academybrixton/
 Konsertsal i et gammelt art deco-kino.
 - en: Concert venue in an old art deco cinema.
 
 ### Northcote Road Antiques Market
-- sted: 51.45536, -0.16458
+- sted: 51.45534, -0.16453
+- google: ChIJLTzCjpUFdkgREt7408Gfd0g
 Antikkmarked med mange forhandlere under samme tak, Northcote Road 155a.
 - en: Antiques market with many dealers under one roof, 155a Northcote Road.
 
@@ -417,6 +433,7 @@ Blomstermarked søndager
 
 ### Shoreditch ★
 - sted: 51.5243, -0.0773
+- google: ChIJbUUvR7ocdkgRklxuM4jRB2U
 - gater: Redchurch Street, Brick Lane
 
 ### Hackney Wick
@@ -438,33 +455,38 @@ Mellom Old Street og Barbican, rundt Whitecross Street. Matmarked i gata på hve
 ## Restauranter
 
 ### Dishoom Shoreditch
-- sted: 51.5245, -0.07682
+- sted: 51.52450, -0.07660
+- google: ChIJxYs1ArocdkgR-G13PLmofec
 - nettside: https://www.dishoom.com/shoreditch/
 Boundary Street 7.
 
 ## Caféer
 
 ### Pophams
-- sted: 51.53836, -0.04524
+- sted: 51.53836, -0.04526
+- google: ChIJH2ft-vYddkgRmdbbpzu9hjQ
 - nettside: https://www.pophams.com/
 Lauriston Road 110a.
 
 ## Butikker
 
 ### Rough Trade East ★
-- sted: 51.5212, -0.07242
+- sted: 51.52110, -0.07249
+- google: ChIJNWOBQbYcdkgRwHyVPW3qnIc
 - nettside: https://www.roughtrade.com/
 Platebutikk i Old Truman Brewery, ved Brick Lane.
 - en: Record shop in the Old Truman Brewery, off Brick Lane.
 
 ### Retrouvé ★
-- sted: 51.53621, -0.06224
+- sted: 51.53629, -0.06214
+- google: ChIJ6-tWKFsddkgRsmiYPbAs0S0
 - nettside: https://retrouvevintage.co.uk/
 Vintage, Broadway Market 23 (også på Wilton Way 61).
 - en: Vintage, 23 Broadway Market (also at 61 Wilton Way).
 
 ### Colenimo ★
-- sted: 51.52889, -0.07
+- sted: 51.52889, -0.07000
+- google: ChIJ1WLCBLocdkgRDHvOvjh3GWw
 - nettside: https://colenimo.com
 Klær, Columbia Road 110A.
 - en: Clothing, 110A Columbia Road.
@@ -472,7 +494,8 @@ Klær, Columbia Road 110A.
 ## Muséer og gallerier
 
 ### V&A East Storehouse
-- sted: 51.54644, -0.02118
+- sted: 51.54642, -0.02120
+- google: ChIJDwtf_QwddkgRRQHAFbZNFFM
 - nettside: https://www.vam.ac.uk/east/storehouse
 V&As åpne magasin i Queen Elizabeth Olympic Park — man kan se (og bestille fram) gjenstander fra samlingen.
 - en: The V&A’s open storehouse in Queen Elizabeth Olympic Park — browse (and order up) objects from the collection.
@@ -480,13 +503,15 @@ V&As åpne magasin i Queen Elizabeth Olympic Park — man kan se (og bestille fr
 ## Verdt en omvei
 
 ### Spitalfields Market
-- sted: 51.51965, -0.07534
+- sted: 51.51966, -0.07555
+- google: ChIJh6-3GrQcdkgRvNQCJqs-8qI
 - nettside: https://www.oldspitalfieldsmarket.com/
 Overbygd marked fra viktoriatiden med boder, mat og butikker. Åpent hver dag.
 - en: Covered Victorian market with stalls, food and shops. Open daily.
 
 ### Whitecross Street Market
-- sted: 51.52347, -0.09322
+- sted: 51.52311, -0.09292
+- google: ChIJW4WhNKgcdkgRllQq7c3FfTk
 Lunsjmarked på hverdager, flest matboder torsdag og fredag.
 - en: Weekday lunchtime market, most food stalls on Thursdays and Fridays.
 
@@ -530,6 +555,7 @@ Lonsdale / Salusbury Road
 
 ### Westbourne Grove ★
 - sted: 51.5152, -0.1939
+- google: ChIJw_N_hv0PdkgRpK05Y_aiFNA
 
 ### Barnes Village
 - sted: 51.4738, -0.2492
