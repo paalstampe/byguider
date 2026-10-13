@@ -502,12 +502,6 @@ V&As åpne magasin i Queen Elizabeth Olympic Park — man kan se (og bestille fr
 Overbygd marked fra viktoriatiden med boder, mat og butikker. Åpent hver dag.
 - en: Covered Victorian market with stalls, food and shops. Open daily.
 
-### Whitecross Street Market
-- sted: 51.52311, -0.09292
-- google: ChIJW4WhNKgcdkgRllQq7c3FfTk
-Lunsjmarked på hverdager, flest matboder torsdag og fredag.
-- en: Weekday lunchtime market, most food stalls on Thursdays and Fridays.
-
 ## Gåturer
 
 ### London Fields → Spitalfields ★
