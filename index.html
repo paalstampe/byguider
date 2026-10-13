@@ -28,6 +28,10 @@
 </main>
 
 <script>
+/* Offline: sw.js lagrer alle byenes sider og data; kartet lagres når en by åpnes. */
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
+</script>
+<script>
 /* Språk: samme valg og lagring som i app.js (NO / EN, ?lang=en, husket i nettleseren).
    Lista bygges fra byer.json — ny by vises her automatisk. Engelske tekster fra
    feltene land_en, beskrivelse_en og evt. navn_en; mangler de, vises norsk.

@@ -49,6 +49,7 @@ Arbeidskatalogen er den lokale klonen av repoet `paalstampe/byguider`:
 byguider/
 ├── index.html              forside: lista over byer, bygges fra byer.json
 ├── app.js                  all logikk — én kopi for alle byer
+├── sw.js                   service worker: offline (se punkt 7, «Offline»)
 ├── style.css               all styling — én kopi
 ├── byer.json               manifest: id, navn, land, data (md), geometri, beskrivelse, evt. bilde
 ├── apple-touch-icon.png    hjemskjerm-ikon (180×180): kobber «b» i Playfair Display på papir
@@ -254,6 +255,25 @@ flett.
 På Påls Mac er GitHub CLI (`gh`) installert i `/usr/local/bin` (hentet fra GitHubs utgivelser —
 Homebrew i `/usr/local` er for gammel for macOS 27) og innlogget; `gh auth setup-git` gjør at
 git pusher med samme innlogging. Claude kan dermed pushe, åpne PR og flette lokalt.
+
+### Offline
+
+`sw.js` (service worker, registreres fra `app.js` og forsiden) gjør byguidene brukbare uten nett:
+
+- Egne filer (sider, `app.js`, `style.css`, `data/*`, `byer.json`) hentes **nettet først** — med nett
+  vises endringer straks som før. Uten nett, eller når nettet ikke svarer innen 4 s, brukes siste
+  lagrede kopi. Ved installasjon lagres alle byenes sider, data og miniatyrer.
+- Kart og biblioteker (CARTO-fliser, stil, glyfer, sprite, MapLibre fra unpkg, Google Fonts) tas
+  **fra lageret først**; fliser eldre enn 30 døgn fornyes når det er nett.
+- Når en by åpnes med nett, sender `forhandslastOffline()` i `app.js` en liste til `sw.js`: alt siden
+  har lastet (Resource Timing) pluss CARTO-fliser zoom 0–14 for hele byens område (alle steder, også
+  «utenfor», med 15 % marg; maks 1500 fliser) og latinske glyfer for stilens fonter. Det som alt er
+  lagret, hoppes over. London: ca. 450 fliser. Over zoom 14 forstørrer MapLibre flisene.
+- Altså: åpne hver by én gang med nett, så virker den uten. Hjemskjerm-app og Safari har hvert sitt
+  lager på iOS — åpne byen i den man skal bruke.
+- Endres strategi eller lagerformat: øk `VERSJON` i `sw.js`, så slettes gamle lagre.
+- Testet i Chromium med nett sperret og serveren stoppet: London med kart (også innzoomet), forsiden,
+  og New York (ikke besøkt) med liste og steder, men uten bakgrunnskart.
 
 ---
 
