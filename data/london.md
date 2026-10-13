@@ -85,18 +85,21 @@ Tyburnia
 ### Lita ★
 - sted: 51.52081, -0.15269
 - google: ChIJpyhiLAAbdkgRGUaeAOxxRLc
+- nettside: https://litamarylebone.com/
 Marylebone, Paddington Street 7–9.
 - en: Marylebone, 7–9 Paddington Street.
 
 ### Sale e Pepe Mare ★
 - sted: 51.51759, -0.14323
 - google: ChIJMZ-GUpAbdkgRFXrN8dsAPUM
+- nettside: https://www.saleepepe.co.uk/sale-e-pepe-mare-the-langham-london
 Italiensk sjømat på The Langham, Portland Place 1c.
 - en: Italian seafood at The Langham, 1c Portland Place.
 
 ### The Hart ★
 - sted: 51.51842, -0.15479
 - google: ChIJORrfka8bdkgRKELOG6g3k0Q
+- nettside: https://www.thehartw1.com/
 Pub og restaurant i Marylebone, Blandford Street 56.
 - en: Pub and restaurant in Marylebone, 56 Blandford Street.
 
@@ -117,6 +120,7 @@ Indisk sjømat, Blandford Street 15–17, Marylebone.
 ### Josephine ★
 - sted: 51.51845, -0.15199
 - google: ChIJb46nPwAbdkgRe8rg5yiLYsA
+- nettside: https://josephinebistro.com/
 Claude Bosis franske bistro, Blandford Street 6–8, Marylebone.
 - en: Claude Bosi’s French bistro, 6–8 Blandford Street, Marylebone.
 
@@ -137,6 +141,7 @@ Indisk, Albemarle Street 42, Mayfair.
 ### Lilibet's ★
 - sted: 51.51048, -0.14457
 - google: ChIJT9u6kt0FdkgR4bjKKXEeIbg
+- nettside: https://www.lilibetsrestaurant.com/
 Sjømat i Bruton Street 17, Mayfair.
 - en: Seafood at 17 Bruton Street, Mayfair.
 
@@ -157,36 +162,42 @@ Vinbar og restaurant i Shepherd Market, Trebeck Street 5, Mayfair.
 ### MA/NA
 - sted: 51.51012, -0.15507
 - google: ChIJtVfNANQFdkgRIpzEN8Ww9Jw
+- nettside: https://manarestaurants.com/
 Japansk, Upper Grosvenor Street 30, Mayfair.
 - en: Japanese, 30 Upper Grosvenor Street, Mayfair.
 
 ### The Dover
 - sted: 51.50889, -0.14300
 - google: ChIJxdsYFy0FdkgRho04Glik8uI
+- nettside: https://thedoverrestaurant.com/
 Italiensk-amerikansk, Dover Street 33, Mayfair.
 - en: Italian-American, 33 Dover Street, Mayfair.
 
 ### Arlington ★
 - sted: 51.50652, -0.14052
 - google: ChIJjXwvJ10FdkgRTMUyHZ9BZIo
+- nettside: https://www.arlington.london/
 Klassiker i Arlington Street 20, St James's (der Le Caprice var).
 - en: A classic at 20 Arlington Street, St James’s (the old Le Caprice).
 
 ### 45 Jermyn Street
 - sted: 51.50801, -0.13829
 - google: ChIJgyJHWdYEdkgRX_4TkG1PT9o
+- nettside: https://45jermynst.com/
 Ved Fortnum & Mason, Jermyn Street 45, St James's.
 - en: Next to Fortnum & Mason, 45 Jermyn Street, St James’s.
 
 ### Trattoria Burro
 - sted: 51.51177, -0.12513
 - google: ChIJn0cIykwFdkgRkJL_xSjcqYI
+- nettside: https://trattoriaburro.com/
 Italiensk-irsk i Floral Court, Covent Garden.
 - en: Italian-Irish in Floral Court, Covent Garden.
 
 ### Faros
 - sted: 51.51661, -0.14103
 - google: ChIJ_7T82w8bdkgRngOFit8DkGg
+- nettside: https://www.farosrestaurant.co.uk/
 Italiensk, Great Portland Street 22–24, Fitzrovia.
 - en: Italian, 22–24 Great Portland Street, Fitzrovia.
 
@@ -378,6 +389,7 @@ Matmarked på Ropewalk, under jernbanebuene. Helger.
 ### Brixton Village Market
 - sted: 51.46245, -0.11220
 - google: ChIJx9r5NWUEdkgRJY0mTciVn-k
+- nettside: https://www.brixtonvillage.com/
 Overbygd marked med små spisesteder og butikker, mellom Coldharbour Lane og Atlantic Road.
 - en: Covered market with small places to eat and shops, between Coldharbour Lane and Atlantic Road.
 
@@ -397,6 +409,7 @@ Konsertsal i et gammelt art deco-kino.
 ### Northcote Road Antiques Market
 - sted: 51.45534, -0.16453
 - google: ChIJLTzCjpUFdkgREt7408Gfd0g
+- nettside: https://www.instagram.com/northcoteantiques/
 - utenfor: ja
 Antikkmarked med mange forhandlere under samme tak, Northcote Road 155a.
 - en: Antiques market with many dealers under one roof, 155a Northcote Road.
@@ -602,6 +615,7 @@ Italiensk ved Themsen, Rainville Road, Hammersmith.
 ### The Hero ★
 - sted: 51.52432, -0.18876
 - google: ChIJbZyeMwARdkgRVwNMuMakX74
+- nettside: https://theherow9.com/
 Pub og spisesal, Shirland Road 55, Maida Vale.
 - en: Pub and dining room, 55 Shirland Road, Maida Vale.
 

@@ -698,6 +698,7 @@ From William St to Broadway.
 ### Washington Square Park
 - sted: 40.73088, -73.99733
 - google: ChIJjX494pBZwokRGH620d9eYfo
+- nettside: https://www.nycgovparks.org/parks/washington-square-park
 Greenwich Village
 
 - en: Greenwich Village

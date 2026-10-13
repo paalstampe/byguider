@@ -313,6 +313,7 @@ Lunsj
 ### Maranna
 - sted: 43.69637, 7.27671
 - google: ChIJ22rwonPbzRIR_iWefjIZCzI
+- nettside: https://www.maranna.fr/
 Lunsj
 - en: Lunch
 
