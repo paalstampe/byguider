@@ -698,6 +698,13 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
   const FAV = ['==', ['get', 'favoritt'], true];
 
   const KARTLAG = {
+    /* Usynlig, bred strek under gater og gåturer: gjør dem lette å treffe, særlig med fingeren. */
+    'ruter-treff': {
+      source: 'ruter',
+      type: 'line',
+      layout: { 'line-cap': 'round', 'line-join': 'round' },
+      paint: { 'line-color': '#000', 'line-opacity': 0, 'line-width': 28 }
+    },
     gater: {
       source: 'ruter',
       type: 'line',
@@ -751,7 +758,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     }
   };
 
-  const KLIKKBARE = ['gater', 'gaaturer', 'punkter'];
+  const KLIKKBARE = ['ruter-treff', 'punkter'];
 
   /* Alle tegnede nabolag har flate og omriss hele tiden (større område og kjerne), i samme stil som
      når nabolaget er valgt. Flatene er gjennomsiktige, så kjernen — som ligger oppå — blir mørkere. Navnet står under ikonet, men først når man har zoomet inn og
