@@ -267,28 +267,26 @@ Ramen
 - nettside: http://www.maaemo.no/
 Fine dining
 
-<!-- Ønskeliste: restauranter vi ikke har besøkt ennå (- status: onskeliste). Vises bare med ?onskeliste.
-     ★ = de vi helst vil til først. Fjern «status»-linja når vi har vært der. -->
+### Sparta Matbar ★
+- sted: 59.91632, 10.75005
+- google: ChIJMyUhSwBvQUYRJxQRz1b9kmk
+- nettside: https://www.spartaoslo.no/
+Sentrum
+Mariboes gate 2B.
+- en: Sentrum
+Mariboes gate 2B.
 
-### Rodeo ★
+### Rodeo
 - sted: 59.92844, 10.75740
 - google: ChIJjeu0Y9NvQUYRs7HTbF_gxWE
 - nettside: https://rodeooslo.no/
-- status: onskeliste
 Grünerløkka
 Moderne europeisk. Sannergata 2.
 - en: Grünerløkka
 Modern European. Sannergata 2.
 
-### Sparta Matbar ★
-- sted: 59.91632, 10.75005
-- google: ChIJMyUhSwBvQUYRJxQRz1b9kmk
-- nettside: https://www.spartaoslo.no/
-- status: onskeliste
-Sentrum
-Mariboes gate 2B.
-- en: Sentrum
-Mariboes gate 2B.
+<!-- Ønskeliste: restauranter vi ikke har besøkt ennå (- status: onskeliste). Vises bare med ?onskeliste.
+     ★ = de vi helst vil til først. Fjern «status»-linja når vi har vært der. -->
 
 ### The Little Pickle ★
 - sted: 59.91909, 10.76404
