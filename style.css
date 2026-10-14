@@ -363,6 +363,55 @@ html, body {
   color: var(--tekst);
 }
 
+/* Ønskeliste (bare med ?onskeliste): sammenslått seksjon nederst, dempede oppslag. */
+.onskeliste-hode {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 100%;
+  margin: 28px 0 8px;
+  padding: 0 0 6px;
+  border: 0;
+  border-bottom: 1px solid var(--kant-lys);
+  background: none;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-align: left;
+  color: var(--dempet);
+  cursor: pointer;
+}
+
+.onskeliste-hode::after {
+  content: '+';
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.onskeliste-hode[aria-expanded="true"]::after { content: '\2212'; }
+
+@media (hover: hover) and (pointer: fine) {
+  .onskeliste-hode:hover { color: var(--aksent); }
+}
+
+.oppslag--onskeliste { opacity: 0.55; }
+.oppslag--onskeliste.er-valgt { opacity: 0.8; }
+
+.merke-ikke-besokt {
+  display: inline-block;
+  margin: 0 0 8px;
+  padding: 2px 6px;
+  border: 1px solid var(--kant);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dempet);
+}
+
 .tomt {
   padding: 28px 0;
   font-size: 14px;
