@@ -61,6 +61,7 @@ East Bloomsbury
 - sted: 51.5207, -0.1519
 - gater: Marylebone High Street, Chiltern Street
 - google: ChIJ8fPDaNIadkgRLjwLg3Njj9g
+- nettside: https://www.marylebonevillage.com
 
 ### Motcomb Street ★
 - sted: 51.4995, -0.1564
@@ -206,6 +207,18 @@ Sjømat, Mount Street 20–22.
 - en: Mayfair
 
 Seafood, 20–22 Mount Street.
+
+### Mount St Restaurant ★
+- sted: 51.50971, -0.15159
+- google: ChIJd8Vf0-UFdkgRbSaCIpLtUXo
+- nettside: https://mountstrestaurant.com/
+Mayfair
+
+Over puben The Audley, Mount Street 41–43.
+
+- en: Mayfair
+
+Above The Audley pub, 41–43 Mount Street.
 
 ### Noble Rot ★
 - sted: 51.50652, -0.14720
