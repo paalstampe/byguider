@@ -23,6 +23,9 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
                                 (uten: søk på navnet ved koordinaten). Claude kan hente Place ID-er.
   - nettside: https://…          stedets egen side — gir lenken «Nettside» i infoboksen
   - les: Financial Times | Tittel | https://…   artikkel: «Artikkel fra Financial Times: Tittel» sist i infoboksen. Kan gjentas.
+  - status: onskeliste          ønskeliste: ikke besøkt ennå. Vises bare med ?onskeliste i adressen
+                                (f.eks. stam.pe/byguider/<by>/?onskeliste). ★ = førstevalg.
+                                Fjern linja når vi har vært der.
   - gater: Gate 1, Gate 2       nabolag: de viktigste gatene
   - lengde: 2,5 km              gåturer
   - varighet: ca. 1 t           gåturer
@@ -326,6 +329,26 @@ Aker Brygge
 Del av Stranden 30.
 - en: Aker Brygge
 Part of Stranden 30.
+
+### Bronx ★
+- sted: 59.91642, 10.71658
+- google: ChIJUWBWNABtQUYRHIGwNlcKRl0
+- nettside: https://www.bronxoslo.no/
+- status: onskeliste
+Frogner
+Pizza. Behrens' gate 2.
+- en: Frogner
+Pizza. Behrens' gate 2.
+
+### Sabotage ★
+- sted: 59.91964, 10.74874
+- google: ChIJ9d0Gj0ZvQUYRA5u22RAqof0
+- nettside: http://www.restaurant-sabotage.no/
+- status: onskeliste
+Sentrum
+Rosteds gate 15b.
+- en: Sentrum
+Rosteds gate 15b.
 
 ### Tabuno
 - sted: 59.90674, 10.76006
