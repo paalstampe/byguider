@@ -114,7 +114,7 @@ async function lagre(lager, url) {
    adresser er det siden selv har lastet (biblioteker, fonter). For hver by hentes siden, dataene og
    kartet: stil, sprite, glyfer for latinske tegn og CARTO-fliser zoom 0–14 over alle stedene i byen
    (koordinatene i md-fila og geometrifila, med 15 % marg; maks MAKS_FLISER). Det som alt er lagret,
-   hoppes over. Fremdrift og resultat sendes til alle åpne sider:
+   hoppes over. Fremdrift og resultat sendes til alle åpne sider (og svarkanalen, se meld):
      { type: 'fremdrift', by, ferdig, totalt }  og  { type: 'lagret', by, hentet, feilet }
    Alt regnes ut her, uten at kartet må tegnes — så forsiden kan lagre byer som ikke er åpnet. */
 const MAKS_FLISER = 1500;
@@ -122,15 +122,18 @@ const MAKS_FLISER = 1500;
 self.addEventListener('message', e => {
   const m = e.data || {};
   if (m.type !== 'lagre' || !Array.isArray(m.byer)) return;
-  e.waitUntil(lagreByer(m));
+  e.waitUntil(lagreByer(m, e.ports && e.ports[0]));
 });
 
-async function meld(d) {
+/* Til alle åpne sider, og til svarkanalen (MessageChannel) når avsenderen sendte med en — den kommer
+   alltid fram, også i Safari når avsendersiden styres av en annen service worker (stam.pe). */
+async function meld(d, kanal) {
+  if (kanal) kanal.postMessage(d);
   const sider = await self.clients.matchAll({ type: 'window', includeUncontrolled: true });
   sider.forEach(c => c.postMessage(d));
 }
 
-async function lagreByer(m) {
+async function lagreByer(m, kanal) {
   let felles = [...(m.adresser || [])];
   try { felles = felles.concat(await kartRessurser(m.stil)); } catch (err) { /* uten nett */ }
   let fliseMal = null, maksZoom = 14;
@@ -149,7 +152,7 @@ async function lagreByer(m) {
         if (omrade) adresser.push(...fliser(omrade, fliseMal, maksZoom));
       } catch (err) { /* uten data: bare sidene */ }
     }
-    await hentAlle(by.id, adresser);
+    await hentAlle(by.id, adresser, kanal);
     felles = [];   // felles ressurser én gang
   }
 }
@@ -224,12 +227,12 @@ function fliser([v, s, o, n], mal, maksZoom) {
   return [];
 }
 
-async function hentAlle(by, liste) {
+async function hentAlle(by, liste, kanal) {
   const egne = await caches.open(EGNE), kart = await caches.open(KART);
   const ko = [...new Set(liste)].filter(u => u.startsWith(OMFANG) || FREMMEDE.test(u));
   const totalt = ko.length;
   let hentet = 0, feilet = 0, sist = 0;
-  meld({ type: 'fremdrift', by, ferdig: 0, totalt });
+  meld({ type: 'fremdrift', by, ferdig: 0, totalt }, kanal);
   async function arbeider() {
     while (ko.length) {
       const url = ko.shift();
@@ -239,9 +242,9 @@ async function hentAlle(by, liste) {
         try { await lagre(lager, url); hentet++; } catch (err) { feilet++; }
       }
       const ferdig = totalt - ko.length;
-      if (ferdig - sist >= 10) { sist = ferdig; meld({ type: 'fremdrift', by, ferdig, totalt }); }
+      if (ferdig - sist >= 10) { sist = ferdig; meld({ type: 'fremdrift', by, ferdig, totalt }, kanal); }
     }
   }
   await Promise.all(Array.from({ length: SAMTIDIG }, arbeider));
-  await meld({ type: 'lagret', by, hentet, feilet });
+  await meld({ type: 'lagret', by, hentet, feilet }, kanal);
 }
