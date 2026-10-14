@@ -93,6 +93,10 @@ const TEKST = {
     visHeleByen: 'Vis hele byen',
     forhandsvisning: 'forhåndsvisning',
     ingenTreff: 'Ingen treff. Juster filtrene eller søket.',
+    ikkeBesokt: 'Ikke besøkt ennå',
+    ikkeBesoktAntall: n => 'Ikke besøkt ennå (' + n + ')',
+    visOnskeliste: 'Vis ønskeliste',
+    forstevalg: 'Førstevalg',
     ingenSteder: 'Ingen steder lagt inn ennå.',
     ingenData: 'Ingen data',
     steder: n => n + (n === 1 ? ' sted' : ' steder'),
@@ -130,6 +134,10 @@ const TEKST = {
     visHeleByen: 'Show the whole city',
     forhandsvisning: 'preview',
     ingenTreff: 'No matches. Adjust the filters or the search.',
+    ikkeBesokt: 'Not yet visited',
+    ikkeBesoktAntall: n => 'Not yet visited (' + n + ')',
+    visOnskeliste: 'Show wishlist',
+    forstevalg: 'Top pick',
     ingenSteder: 'No places added yet.',
     ingenData: 'No data',
     steder: n => n + (n === 1 ? ' place' : ' places'),
@@ -158,6 +166,11 @@ function maal(s) {
     .replace(/(\d)\s*timer?\b/g, '$1 hours')
     .replace(/(\d)\s*t\b/g, '$1 h');
 }
+
+/* Ønskeliste: steder med «- status: onskeliste» er ikke besøkt ennå. De vises bare når adressen
+   har ?onskeliste (f.eks. oslo/?onskeliste); ellers fjernes de før noe annet bygges. */
+const ONSKELISTE = new URLSearchParams(location.search).has('onskeliste');
+const erOnskeliste = p => normaliser(p.status) === 'onskeliste';
 
 const SPRAKVALG =
   '<span class="sprakvalg" role="group" data-t-aria="sprak">' +
@@ -329,7 +342,7 @@ function lesKoordinat(tekst) {
   return m ? [parseFloat(m[2]), parseFloat(m[1])] : null;
 }
 
-const FELT = ['sted', 'besokt', 'google', 'nettside', 'gater', 'lengde', 'varighet', 'utenfor', 'en', 'navn-en', 'les'];  // besokt leses, men vises ikke
+const FELT = ['sted', 'besokt', 'status', 'google', 'nettside', 'gater', 'lengde', 'varighet', 'utenfor', 'en', 'navn-en', 'les'];  // besokt leses, men vises ikke
 
 function lesMarkdown(tekst) {
   const linjer = String(tekst).replace(/\r/g, '').replace(/<!--[\s\S]*?-->/g, '').split('\n');
@@ -408,6 +421,7 @@ function byggFeatures(md, geo) {
       sone: st.sone,
       favoritt: st.favoritt,
       besokt: b ? /^(ja|j|yes|x)$/.test(b) : undefined,
+      status: normaliser(st.felt.status) || undefined,
       notat: st.notat,
       notat_en: st.notatEn,
       place_id: /^https?:/.test(google) ? '' : google,
@@ -613,6 +627,9 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
   const state = {
     oppslag: [],                 // { id, f, p, erLinje, punkt, bbox }
+    onskeliste: [],              // ikke besøkt ennå — bare med ?onskeliste; holdes utenfor oppslag
+    visOnskeliste: false,        // kartlaget
+    onskelisteApen: false,       // seksjonen nederst i lista
     soner: new Set(),            // tom = alle
     kategorier: new Set(),       // tom = alle
     kunFavoritter: false,
@@ -780,7 +797,34 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     }
   };
 
-  const KLIKKBARE = ['ruter-treff', 'punkter'];
+  /* Ønskelisten: egen kilde uten klynging, så stedene aldri slås sammen med besøkte steder.
+     Ring-ikoner (omriss uten fyll) i dempet farge; gåturer som tynn stiplet linje. Under de besøkte. */
+  const ONSKEFARGE = '#6B5D4A';   // dempet tekst i papirpaletten
+  const ONSKELAG = {
+    'onskeliste-ruter': {
+      source: 'onskeliste', type: 'line',
+      filter: ['==', ['geometry-type'], 'LineString'],
+      layout: { 'line-cap': 'round', 'line-join': 'round', visibility: 'none' },
+      paint: { 'line-color': ONSKEFARGE, 'line-width': 3, 'line-opacity': 0.8, 'line-dasharray': [0.2, 2] }
+    },
+    'onskeliste-punkter': {
+      source: 'onskeliste', type: 'symbol',
+      filter: ['==', ['geometry-type'], 'Point'],
+      layout: {
+        // ★ på ønskelisten = førstevalg: ringen i kobber
+        'icon-image': ['coalesce',
+          ['image', ['concat', 'ikon-ring-', ['case', FAV, 'fav-', ''], ['get', 'kategori']]],
+          ['image', ['case', FAV, 'ikon-ring-fav-ukjent', 'ikon-ring-ukjent']]],
+        'symbol-sort-key': ['case', FAV, 1, 0],
+        'icon-size': ['interpolate', ['linear'], ['zoom'], 10, 0.8, 14, 0.95],
+        'icon-allow-overlap': true,
+        'icon-ignore-placement': true,
+        visibility: 'none'
+      }
+    }
+  };
+
+  const KLIKKBARE = ['ruter-treff', 'punkter'].concat(ONSKELISTE ? ['onskeliste-ruter', 'onskeliste-punkter'] : []);
 
   /* Alle tegnede nabolag har flate og omriss hele tiden (større område og kjerne), i samme stil som
      når nabolaget er valgt. Flatene er gjennomsiktige, så kjernen — som ligger oppå — blir mørkere. Navnet står under ikonet, men først når man har zoomet inn og
@@ -844,6 +888,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     const c = document.createElement('canvas');
     c.width = c.height = D;
     const x = c.getContext('2d');
+    if (favoritt === 'ring') return lagRing(x, D, R, glyf, farge || ONSKEFARGE);
     x.beginPath();
     x.arc(D / 2, D / 2, 11.5 * R, 0, 2 * Math.PI);
     x.fillStyle = farge;
@@ -869,6 +914,31 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     return x.getImageData(0, 0, D, D);
   }
 
+  /* Ønskeliste: bare omriss og glyf i dempet farge, uten fyll. En smal papirkant på begge sider
+     av strekene holder dem lesbare oppå gater og bygninger. */
+  function lagRing(x, D, R, glyf, farge) {
+    x.beginPath();
+    x.arc(D / 2, D / 2, 11 * R, 0, 2 * Math.PI);
+    x.lineWidth = 4 * R;
+    x.strokeStyle = PAPIR;
+    x.stroke();
+    x.lineWidth = 1.6 * R;
+    x.strokeStyle = farge;
+    x.stroke();
+    const s = (15 * R) / 24;
+    x.translate(D / 2 - 12 * s, D / 2 - 12 * s);
+    x.scale(s, s);
+    x.lineCap = 'round';
+    x.lineJoin = 'round';
+    x.lineWidth = 4.4;
+    x.strokeStyle = PAPIR;
+    x.stroke(new Path2D(glyf));
+    x.lineWidth = 2.2;
+    x.strokeStyle = farge;
+    x.stroke(new Path2D(glyf));
+    return x.getImageData(0, 0, D, D);
+  }
+
   function registrerIkoner() {
     Object.keys(KATEGORIER).forEach(k => {
       const kat = KATEGORIER[k];
@@ -876,7 +946,15 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       const glyf = IKONER[kat.ikon] || IKONER.prikk;
       kart.addImage('ikon-' + k, lagIkon(kat.farge, glyf), { pixelRatio: 2 });
       kart.addImage('ikon-fav-' + k, lagIkon(kat.farge, glyf, true), { pixelRatio: 2 });
+      if (ONSKELISTE) {
+        kart.addImage('ikon-ring-' + k, lagIkon(null, glyf, 'ring'), { pixelRatio: 2 });
+        kart.addImage('ikon-ring-fav-' + k, lagIkon('#8A5A2B', glyf, 'ring'), { pixelRatio: 2 });
+      }
     });
+    if (ONSKELISTE) {
+      kart.addImage('ikon-ring-ukjent', lagIkon(null, IKONER.prikk, 'ring'), { pixelRatio: 2 });
+      kart.addImage('ikon-ring-fav-ukjent', lagIkon('#8A5A2B', IKONER.prikk, 'ring'), { pixelRatio: 2 });
+    }
     kart.addImage('ikon-ukjent', lagIkon(UKJENT_FARGE, IKONER.prikk), { pixelRatio: 2 });
     kart.addImage('ikon-fav-ukjent', lagIkon(UKJENT_FARGE, IKONER.prikk, true), { pixelRatio: 2 });
   }
@@ -918,6 +996,14 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       kart.addLayer(Object.assign({ id: id }, lag[id]));
     });
 
+    if (ONSKELISTE) {
+      kart.addSource('onskeliste', { type: 'geojson', data: tomSamling() });
+      Object.keys(ONSKELAG).forEach(id => {
+        kart.addLayer(Object.assign({ id: id }, ONSKELAG[id]), 'klynger');
+      });
+      visOnskelag();
+    }
+
     /* Klikk på tomt kart lukker infoboksen og opphever valget. Popupens egen closeOnClick er av:
        den lytter på samme klikk som stedet, og lukket den nye infoboksen når man klikket
        fra ett sted rett til et annet. */
@@ -935,6 +1021,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     KLIKKBARE.forEach(id => {
       kart.on('click', id, e => {
         // Punkter ligger over linjer: klikk på et punkt skal ikke også velge linjen under.
+        // Ønskelisten ligger under de besøkte stedene på samme måte.
         if (id !== 'punkter' && kart.queryRenderedFeatures(e.point, { layers: ['punkter', 'klynger'] }).length) return;
         const o = oppslagFraId(e.features[0].properties._id);
         if (!o) return;
@@ -953,13 +1040,15 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
        en etterlignet mousemove ved trykk: lappen dukket opp, iOS svelget klikket, og popupen kom først
        ved andre trykk — oppå lappen. Der er popupen nok alene. */
     if (ekteHover.matches) {
-      kart.on('mousemove', 'punkter', e => {
-        const f = e.features[0];
-        // Navnet står allerede i infoboksen
-        if (popup.isOpen() && f.properties._id === state.valgtId) { tips.remove(); return; }
-        tips.setLngLat(f.geometry.coordinates).setText(visNavn(f.properties)).addTo(kart);
+      KLIKKBARE.filter(id => /punkter$/.test(id)).forEach(id => {
+        kart.on('mousemove', id, e => {
+          const f = e.features[0];
+          // Navnet står allerede i infoboksen
+          if (popup.isOpen() && f.properties._id === state.valgtId) { tips.remove(); return; }
+          tips.setLngLat(f.geometry.coordinates).setText(visNavn(f.properties)).addTo(kart);
+        });
+        kart.on('mouseleave', id, () => tips.remove());
       });
-      kart.on('mouseleave', 'punkter', () => tips.remove());
     }
   }
 
@@ -979,6 +1068,23 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
         .concat(o.f.geometry ? [{ type: 'Feature', geometry: o.f.geometry, properties: navn }] : []);
     });
     kart.getSource('omrader').setData({ type: 'FeatureCollection', features: omrader });
+    if (kart.getSource('onskeliste')) {
+      kart.getSource('onskeliste').setData({ type: 'FeatureCollection',
+        features: synligeOnskeliste().filter(o => o.f.geometry).map(o => o.f) });
+    }
+  }
+
+  function visOnskelag() {
+    Object.keys(ONSKELAG).forEach(id => {
+      if (kart.getLayer(id)) kart.setLayoutProperty(id, 'visibility', state.visOnskeliste ? 'visible' : 'none');
+    });
+  }
+
+  function settOnskelag(paa) {
+    if (state.visOnskeliste === paa) return;
+    state.visOnskeliste = paa;
+    visOnskelag();
+    byggFiltre();
   }
 
   function visFokus(o) {
@@ -1152,7 +1258,9 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       '<a href="' + esc(l.url) + '" target="_blank" rel="noopener">' + esc(l.tittel) + '</a></p>'
     ).join('');
     const notat = visNotat(p);
-    return '<h3 class="pop-navn">' + esc(visNavn(p)) + '</h3>' +
+    return (erOnskeliste(p) ? '<p class="merke-ikke-besokt">' + t('ikkeBesokt') +
+        (p.favoritt ? ' · ' + t('forstevalg') : '') + '</p>' : '') +
+      '<h3 class="pop-navn">' + esc(visNavn(p)) + '</h3>' +
       '<p class="pop-meta">' + esc(metaLinje(p) || ruteMeta(p)) + '</p>' +
       (p.gater && p.gater.length ? '<p class="pop-gater">' + esc(p.gater.join(' · ')) + '</p>' : '') +
       (notat ? '<p class="pop-notat">' + esc(notat) + '</p>' : '') +
@@ -1244,14 +1352,23 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
   }
 
   function oppslagFraId(id) {
-    return state.oppslag.find(x => x.id === id);
+    return state.oppslag.find(x => x.id === id) || state.onskeliste.find(x => x.id === id);
   }
 
   /* ---------- filtrering ---------- */
 
   function synlige() {
+    return filtrer(state.oppslag);
+  }
+
+  /* Ønskelisten følger samme sone-, kategori- og søkefilter som resten av lista. */
+  function synligeOnskeliste() {
+    return filtrer(state.onskeliste);
+  }
+
+  function filtrer(liste) {
     const q = state.sok.trim().toLowerCase();
-    return state.oppslag.filter(o => {
+    return liste.filter(o => {
       const p = o.p;
       if (state.soner.size && !state.soner.has(p.sone)) return false;
       if (state.kategorier.size && !state.kategorier.has(p.kategori)) return false;
@@ -1281,7 +1398,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
     tegnListe(vis);
 
-    if (state.valgtId && !vis.some(o => o.id === state.valgtId)) {
+    if (state.valgtId && !vis.concat(synligeOnskeliste()).some(o => o.id === state.valgtId)) {
       state.valgtId = null;
       el.ruteKort.hidden = true;
       popup.remove();
@@ -1295,10 +1412,11 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     if (!vis.length) {
       const tomt = document.createElement('p');
       tomt.className = 'tomt';
-      tomt.textContent = state.oppslag.length
+      tomt.textContent = state.oppslag.length || state.onskeliste.length
         ? t('ingenTreff')
         : t('ingenSteder');
       el.liste.appendChild(tomt);
+      tegnOnskeliste();
       return;
     }
 
@@ -1320,27 +1438,59 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
         }
         el.liste.appendChild(oppslagEl(o));
       });
+
+    tegnOnskeliste();
+  }
+
+  /* Egen seksjon nederst: «Ikke besøkt ennå (n)», sammenslått til den åpnes.
+     Å åpne den slår på kartlaget, å lukke den slår det av. */
+  function tegnOnskeliste() {
+    const vis = synligeOnskeliste();
+    if (!vis.length) return;
+
+    const hode = document.createElement('button');
+    hode.type = 'button';
+    hode.className = 'onskeliste-hode';
+    hode.setAttribute('aria-expanded', state.onskelisteApen ? 'true' : 'false');
+    hode.textContent = t('ikkeBesoktAntall', vis.length);
+    hode.addEventListener('click', () => {
+      state.onskelisteApen = !state.onskelisteApen;
+      settOnskelag(state.onskelisteApen);   // laget følger seksjonen: åpne = på, lukke = av
+      tegnListe(synlige());
+    });
+    el.liste.appendChild(hode);
+    if (!state.onskelisteApen) return;
+
+    // Førstevalg (★) øverst, så alfabetisk
+    vis.slice()
+      .sort((a, b) => (!!b.p.favoritt - !!a.p.favoritt) ||
+        visNavn(a.p).localeCompare(visNavn(b.p), SPRAK === 'en' ? 'en' : 'nb'))
+      .forEach(o => el.liste.appendChild(oppslagEl(o)));
   }
 
   function oppslagEl(o) {
     const p = o.p;
     const info = katInfo(p.kategori);
 
+    const onske = erOnskeliste(p);
+    // Ønskelisten: bare første linje av notatet
+    const notat = onske ? visNotat(p).split('\n')[0].trim() : visNotat(p);
+
     const div = document.createElement('div');
-    div.className = 'oppslag' + (state.valgtId === o.id ? ' er-valgt' : '');
+    div.className = 'oppslag' + (onske ? ' oppslag--onskeliste' : '') + (state.valgtId === o.id ? ' er-valgt' : '');
     div.setAttribute('role', 'listitem');
     div.tabIndex = 0;
 
     div.innerHTML =
       '<div class="oppslag-topp">' +
         '<h2 class="oppslag-navn">' + esc(visNavn(p)) + '</h2>' +
-        (p.favoritt ? '<span class="favoritt-merke">' + t('favoritt') + '</span>' : '') +
+        (p.favoritt ? '<span class="favoritt-merke">' + t(onske ? 'forstevalg' : 'favoritt') + '</span>' : '') +
       '</div>' +
       '<p class="oppslag-meta">' +
         '<span class="prikk" style="background:' + info.farge + '"></span>' +
         esc(metaLinje(p) || ruteMeta(p)) +
       '</p>' +
-      (visNotat(p) ? '<p class="oppslag-notat">' + esc(kortNotat(visNotat(p))) + '</p>' : '');
+      (notat ? '<p class="oppslag-notat">' + esc(kortNotat(notat)) + '</p>' : '');
 
     div.addEventListener('click', () => velg(o.id, true));
     div.addEventListener('keydown', e => {
@@ -1357,6 +1507,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     if (!o) return;
     state.valgtId = id;
     visFokus(o);
+    if (erOnskeliste(o.p)) settOnskelag(true);
 
     if (o.erLinje) {
       popup.remove();
@@ -1394,7 +1545,8 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
   function visRuteKort(o) {
     const p = o.p;
-    el.ruteKicker.textContent = t('gatur') + (o.f.geometry ? '' : ' · ' + t('ruteIkkeTegnet'));
+    el.ruteKicker.textContent = (erOnskeliste(p) ? t('ikkeBesokt') + ' · ' : '') +
+      t('gatur') + (o.f.geometry ? '' : ' · ' + t('ruteIkkeTegnet'));
     el.ruteNavn.textContent = visNavn(p);
     el.ruteMeta.textContent = ruteMeta(p);
     el.ruteNotat.textContent = visNotat(p);
@@ -1458,6 +1610,11 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       byggFiltre();
       tegn();
     }));
+    if (state.onskeliste.length) {
+      el.fStatus.appendChild(lagChip(t('visOnskeliste'), null, state.visOnskeliste, () => {
+        settOnskelag(!state.visOnskeliste);
+      }));
+    }
   }
 
   el.sok.addEventListener('input', e => {
@@ -1533,19 +1690,22 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       const meta = byggMeta(md);
       settOppSide(meta);
 
-      state.oppslag = byggFeatures(md, geo).map(lagOppslag);
+      // Uten ?onskeliste fjernes ønskelistestedene før noe annet bygges.
+      const alle = byggFeatures(md, geo).filter(f => ONSKELISTE || !erOnskeliste(f.properties)).map(lagOppslag);
+      state.oppslag = alle.filter(o => !erOnskeliste(o.p));
+      state.onskeliste = alle.filter(o => erOnskeliste(o.p));
       Object.keys(md.kategoriNavn).forEach(k => {
         if (!KATEGORIER[k]) state.ukjenteKategorier[k] = md.kategoriNavn[k];
       });
 
-      state.brukteSoner = new Set(state.oppslag.map(o => o.p.sone).filter(Boolean));
+      state.brukteSoner = new Set(alle.map(o => o.p.sone).filter(Boolean));
       state.soneRekkefolge = (meta.soner || []).slice();
       state.brukteSoner.forEach(s => {
         if (!state.soneRekkefolge.includes(s)) state.soneRekkefolge.push(s);
       });
       const rekkefolge = Object.keys(KATEGORIER);
-      state.brukteKategorier = rekkefolge.filter(k => state.oppslag.some(o => o.p.kategori === k));
-      state.oppslag.forEach(o => {
+      state.brukteKategorier = rekkefolge.filter(k => alle.some(o => o.p.kategori === k));
+      alle.forEach(o => {
         if (o.p.kategori && !state.brukteKategorier.includes(o.p.kategori)) {
           state.brukteKategorier.push(o.p.kategori);
         }

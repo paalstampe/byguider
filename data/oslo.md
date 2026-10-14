@@ -263,3 +263,206 @@ Ramen
 - google: ChIJhyP_qopuQUYRwvq5k9QGIy8
 - nettside: http://www.maaemo.no/
 Fine dining
+
+<!-- Ønskeliste: restauranter vi ikke har besøkt ennå (- status: onskeliste). Vises bare med ?onskeliste.
+     ★ = de vi helst vil til først. Fjern «status»-linja når vi har vært der. -->
+
+### Rodeo ★
+- sted: 59.92844, 10.75740
+- google: ChIJjeu0Y9NvQUYRs7HTbF_gxWE
+- nettside: https://rodeooslo.no/
+- status: onskeliste
+Grünerløkka
+Moderne europeisk. Sannergata 2.
+- en: Grünerløkka
+Modern European. Sannergata 2.
+
+### Sparta Matbar ★
+- sted: 59.91632, 10.75005
+- google: ChIJMyUhSwBvQUYRJxQRz1b9kmk
+- nettside: https://www.spartaoslo.no/
+- status: onskeliste
+Sentrum
+Mariboes gate 2B.
+- en: Sentrum
+Mariboes gate 2B.
+
+### The Little Pickle ★
+- sted: 59.91909, 10.76404
+- google: ChIJWzscAZ1vQUYR4wxlWWvTMJU
+- nettside: http://thelittlepickle.no/
+- status: onskeliste
+Tøyen
+Jens Bjelkes gate 9a.
+- en: Tøyen
+Jens Bjelkes gate 9a.
+
+### Zio Pizza ★
+- sted: 59.93261, 10.72430
+- google: ChIJkQkYdXNtQUYRKamtTrKg_nA
+- nettside: http://ziopizza.no/
+- status: onskeliste
+Marienlyst
+Pizza. Wilhelm Færdens vei 1A.
+- en: Marienlyst
+Pizza. Wilhelm Færdens vei 1A.
+
+### Pao ★
+- sted: 59.92146, 10.75753
+- google: ChIJZ9JWHQBvQUYRQCKaPXCH08Y
+- nettside: https://www.pao-oslo.com/
+- status: onskeliste
+Grünerløkka
+Thai bar og grill. Markveien 46A.
+- en: Grünerløkka
+Thai bar and barbecue. Markveien 46A.
+
+### Vågen ★
+- sted: 59.90859, 10.72596
+- google: ChIJw0UHBQNvQUYROJfvo6M630o
+- nettside: https://stranden30.no/
+- status: onskeliste
+Aker Brygge
+Del av Stranden 30.
+- en: Aker Brygge
+Part of Stranden 30.
+
+### Tabuno
+- sted: 59.90674, 10.76006
+- google: ChIJvYp6lZ1vQUYRig2VpObLCWE
+- nettside: https://tabuno.no/
+- status: onskeliste
+Bjørvika
+Asiatisk fusjon. Rostockgata 35.
+- en: Bjørvika
+Asian fusion. Rostockgata 35.
+
+### Byssa
+- sted: 59.91126, 10.74333
+- google: ChIJl7Q6MQBvQUYRsIDsNKeNQuw
+- nettside: http://www.prinsenoslo.no/no/byssa
+- status: onskeliste
+Kvadraturen
+Sjømat. Prinsens gate 18.
+- en: Kvadraturen
+Seafood. Prinsens gate 18.
+
+### Code
+- sted: 59.90783, 10.75883
+- google: ChIJRXSbLY5vQUYRSFH3Gn-cMSY
+- nettside: http://www.coderestaurant.no/
+- status: onskeliste
+Bjørvika
+Moderne europeisk. Dronning Eufemias gate 18.
+- en: Bjørvika
+Modern European. Dronning Eufemias gate 18.
+
+### Lulu
+- sted: 59.91488, 10.75074
+- google: ChIJMyUxzWNuQUYRNDH6hd1976s
+- nettside: http://lulu.no/
+- status: onskeliste
+Youngstorget
+Youngs gate 7.
+- en: Youngstorget
+Youngs gate 7.
+
+### Substans
+- sted: 59.91093, 10.73639
+- google: ChIJycrEbQBvQUYREW53VmAigng
+- nettside: http://restaurantsubstans.no/
+- status: onskeliste
+Kvadraturen
+Asiatisk fusjon. Rådhusgata 27.
+- en: Kvadraturen
+Asian fusion. Rådhusgata 27.
+
+### Bistro Fourrage
+- sted: 59.91759, 10.75543
+- google: ChIJrxOTnAhvQUYRD-xVzBHRTVE
+- nettside: https://fourrage.no/
+- status: onskeliste
+Grünerløkka
+Fransk. Storgata 97.
+- en: Grünerløkka
+French. Storgata 97.
+
+### Pillefyken
+- sted: 59.91525, 10.77334
+- google: ChIJ2yxNOWZvQUYRFFD7MZ6IK8U
+- nettside: http://www.pillefyken.no/
+- status: onskeliste
+Kampen
+Monrads gate 1.
+- en: Kampen
+Monrads gate 1.
+
+### Grotten
+- sted: 59.91846, 10.73220
+- google: ChIJW3ema0VvQUYRuYHm0lqr8qE
+- nettside: https://www.thonhotels.no/hoteller/norge/oslo/thon-hotel-slottsparken/grotten-ol-og-vinbar/
+- status: onskeliste
+Homansbyen
+Øl- og vinbar. Wergelandsveien 5.
+- en: Homansbyen
+Beer and wine bar. Wergelandsveien 5.
+
+### Fager Bistro
+- sted: 59.92788, 10.72854
+- google: ChIJjRqf7J1tQUYRDe_X6hAJPdc
+- nettside: https://www.fagerbistro.no/
+- status: onskeliste
+Fagerborg
+Fagerborggata 1.
+- en: Fagerborg
+Fagerborggata 1.
+
+### Mantra
+- sted: 59.91107, 10.74667
+- google: ChIJl3mVyIluQUYRGVHhVr8vZ0o
+- nettside: http://www.mantra.no/
+- status: onskeliste
+Kvadraturen
+Indisk. Dronningens gate 19.
+- en: Kvadraturen
+Indian. Dronningens gate 19.
+
+### Flavour
+- sted: 59.91418, 10.76720
+- google: ChIJ3cwTgSNvQUYR3hgSK6jYO40
+- nettside: https://www.flavour.no/
+- status: onskeliste
+Grønland
+Kinesisk. Heimdalsgata 37.
+- en: Grønland
+Chinese. Heimdalsgata 37.
+
+### Kanpai
+- sted: 59.92242, 10.73176
+- google: ChIJL8ijAJFvQUYRECyoVqQZoDA
+- nettside: https://www.kanpai.no/
+- status: onskeliste
+Bislett
+Japansk izakaya. Parkveien 1b.
+- en: Bislett
+Japanese izakaya. Parkveien 1b.
+
+### Shanghai 2K18
+- sted: 59.91150, 10.74510
+- google: ChIJh6moMYhuQUYRHi1nFHBpbPw
+- nettside: http://www.shanghai2k18.no/
+- status: onskeliste
+Kvadraturen
+Kinesisk. Kirkegata 30.
+- en: Kvadraturen
+Chinese. Kirkegata 30.
+
+### Kain
+- sted: 59.91515, 10.75195
+- google: ChIJm8kNSnxvQUYRkUTym_x4F2Q
+- nettside: https://www.kain-oslo.com/
+- status: onskeliste
+Hammersborg
+Neo-filippinsk bistro. Hammersborggata 9.
+- en: Hammersborg
+Neo-Filipino bistro. Hammersborggata 9.
