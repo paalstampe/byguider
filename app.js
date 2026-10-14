@@ -1370,7 +1370,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
   }
 
   /* Egen seksjon nederst: «Ikke besøkt ennå (n)», sammenslått til den åpnes.
-     Å åpne den slår på kartlaget. */
+     Å åpne den slår på kartlaget, å lukke den slår det av. */
   function tegnOnskeliste() {
     const vis = synligeOnskeliste();
     if (!vis.length) return;
@@ -1382,7 +1382,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     hode.textContent = t('ikkeBesoktAntall', vis.length);
     hode.addEventListener('click', () => {
       state.onskelisteApen = !state.onskelisteApen;
-      if (state.onskelisteApen) settOnskelag(true);
+      settOnskelag(state.onskelisteApen);   // laget følger seksjonen: åpne = på, lukke = av
       tegnListe(synlige());
     });
     el.liste.appendChild(hode);
