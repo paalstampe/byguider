@@ -263,13 +263,3 @@ Ramen
 - google: ChIJhyP_qopuQUYRwvq5k9QGIy8
 - nettside: http://www.maaemo.no/
 Fine dining
-
-<!-- TESTPUNKT FOR ØNSKELISTE — fjernes før grenen onskeliste flettes. -->
-### EKSEMPEL Ønskeliste-test
-- sted: 59.92700, 10.70080
-- status: onskeliste
-Testpunkt for ønskelisten (vises bare med ?onskeliste).
-Andre linje — skal ikke vises i lista.
-- en: Test point for the wishlist (shown only with ?onskeliste).
-Second line — not shown in the list.
-<!-- /TESTPUNKT -->
