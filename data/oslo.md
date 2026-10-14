@@ -317,6 +317,16 @@ Thai bar og grill. Markveien 46A.
 - en: Grünerløkka
 Thai bar and barbecue. Markveien 46A.
 
+### Vågen ★
+- sted: 59.90859, 10.72596
+- google: ChIJw0UHBQNvQUYROJfvo6M630o
+- nettside: https://stranden30.no/
+- status: onskeliste
+Aker Brygge
+Del av Stranden 30.
+- en: Aker Brygge
+Part of Stranden 30.
+
 ### Tabuno
 - sted: 59.90674, 10.76006
 - google: ChIJvYp6lZ1vQUYRig2VpObLCWE
