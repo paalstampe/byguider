@@ -101,6 +101,10 @@ const TEKST = {
     ingenData: 'Ingen data',
     steder: n => n + (n === 1 ? ' sted' : ' steder'),
     ruter: n => n + (n === 1 ? ' rute' : ' ruter'),
+    offlineLagrer: 'Lagrer for bruk offline …',
+    offlineLagrerPst: p => 'Lagrer for bruk offline … ' + p + ' %',
+    offlineLagret: dato => 'Tilgjengelig offline · ' + dato,
+    offlineDelvis: 'Bare delvis lagret for bruk offline',
     fot: (fil, dato) => 'Rediger ' + fil + ' for å legge til steder.' + (dato ? ' Sist oppdatert ' + dato + '.' : ''),
     fantIkke: (fil, feil) => 'Fant ikke ' + fil + ' (' + feil + ').',
     lokalt: 'Åpnes siden fra <code>file://</code>? Kjør <code>python3 -m http.server</code> i mappen og åpne <code>localhost:8000</code>.'
@@ -138,6 +142,10 @@ const TEKST = {
     ingenData: 'No data',
     steder: n => n + (n === 1 ? ' place' : ' places'),
     ruter: n => n + (n === 1 ? ' walk' : ' walks'),
+    offlineLagrer: 'Saving for offline use …',
+    offlineLagrerPst: p => 'Saving for offline use … ' + p + '%',
+    offlineLagret: dato => 'Available offline · ' + dato,
+    offlineDelvis: 'Only partly saved for offline use',
     fot: (fil, dato) => 'Edit ' + fil + ' to add places.' + (dato ? ' Last updated ' + dato + '.' : ''),
     fantIkke: (fil, feil) => 'Could not find ' + fil + ' (' + feil + ').',
     lokalt: 'Opened from <code>file://</code>? Run <code>python3 -m http.server</code> in the folder and open <code>localhost:8000</code>.'
@@ -470,6 +478,8 @@ function byggMeta(md) {
     tittelEn: m['tittel-en'] || '', undertittelEn: m['undertittel-en'] || '',
     senter: s || undefined,
     zoom: m.zoom ? parseFloat(m.zoom) : undefined,
+    senterMobil: lesKoordinat(m['senter-mobil']) || undefined,
+    zoomMobil: m['zoom-mobil'] ? parseFloat(m['zoom-mobil']) : undefined,
     oppdatert: m.oppdatert || '',
     soner: md.soner
   };
@@ -514,6 +524,7 @@ const SKALL = `
     </div>
     <div class="teller-rad">
       <span id="teller" class="teller"></span>
+      <span id="offline-status" class="offline-status" hidden></span>
     </div>
     <div class="liste" id="liste" role="list"></div>
     <footer class="sidebar-fot">
@@ -566,6 +577,12 @@ async function finnBy(id) {
   if (!by) throw new Error('Fant ikke byen «' + id + '» i byer.json');
   return by;
 }
+
+/* Offline: sw.js lagrer sidene, dataene og kartet (se kommentaren der). */
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register(new URL('sw.js', BASE).href, { scope: BASE.href }).catch(() => {});
+}
+if (performance.setResourceTimingBufferSize) performance.setResourceTimingBufferSize(2000);
 
 (async function oppstart() {
   const css = Promise.all([
@@ -630,6 +647,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     sok:        document.getElementById('sok'),
     sokTom:     document.getElementById('sok-tom'),
     teller:     document.getElementById('teller'),
+    offline:    document.getElementById('offline-status'),
     fSone:      document.getElementById('filter-sone'),
     fKategori:  document.getElementById('filter-kategori'),
     fStatus:    document.getElementById('filter-status'),
@@ -664,11 +682,15 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
   kart.touchZoomRotate.disableRotation();
   kart.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-left');
 
-  /* Tilbake til startvisningen: utsnittet med stedene (unntatt «utenfor: ja»), slik siden åpnes
-     (senter og zoom fra metadata når byen ikke har steder ennå). */
+  /* Tilbake til startvisningen, slik siden åpnes: mobilutsnittet (senter-mobil/zoom-mobil) på smal
+     skjerm, ellers utsnittet med stedene (unntatt «utenfor: ja»), ellers senter og zoom fra metadata. */
   let startvisning = null, startutsnitt = null;
+  const mobilvisning = () => smalSkjerm.matches && sideMeta && sideMeta.senterMobil && typeof sideMeta.zoomMobil === 'number'
+    ? { center: sideMeta.senterMobil, zoom: sideMeta.zoomMobil } : null;
   const tilStart = () => {
-    if (startutsnitt) kart.fitBounds(startutsnitt, { padding: 50, duration: 800 });
+    const mobil = startutsnitt && mobilvisning();
+    if (mobil) kart.flyTo(Object.assign({ duration: 800 }, mobil));
+    else if (startutsnitt) kart.fitBounds(startutsnitt, { padding: 50, duration: 800 });
     else if (startvisning) kart.flyTo(Object.assign({ duration: 800 }, startvisning));
   };
   kart.addControl({
@@ -1248,6 +1270,57 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
   /* ---------- oppslag fra data ---------- */
 
+  /* Offline: ber sw.js lagre alt byen trenger — det siden har lastet (biblioteker, fonter) pluss byens
+     side, data og kart. Flisene og resten av kartet regner sw.js ut selv (lagreByer); det som alt er
+     lagret, hoppes over. */
+  function forhandslastOffline() {
+    if (!('serviceWorker' in navigator) || !navigator.onLine) return;
+    const adresser = performance.getEntriesByType('resource').map(e => e.name).filter(u => /^https?:/.test(u));
+    if (!offlineDato()) visOffline('lagrer');
+    navigator.serviceWorker.ready.then(reg => {
+      if (reg.active) reg.active.postMessage({ type: 'lagre', stil: KARTSTIL, adresser: adresser,
+        byer: [{ id: BY, side: location.href.split(/[?#]/)[0], data: DATA_URL, geometri: GEO_URL }] });
+    }).catch(() => {});
+  }
+
+  /* Status ved telleren: «Lagrer …» første gang, «Tilgjengelig offline · 13. okt» når sw.js har hentet alt
+     (datoen huskes per by i nettleseren, samme nøkkel som forsiden), «Bare delvis …» hvis noe feilet. */
+  const OFFLINE_NOKKEL = 'byguider-offline:' + BASE.pathname + BY;
+  let offlineTilstand = null;
+  function offlineDato() {
+    try { return localStorage.getItem(OFFLINE_NOKKEL); } catch (e) { return null; }
+  }
+  function visOffline(tilstand) {
+    offlineTilstand = tilstand || offlineTilstand;
+    const dato = offlineDato();
+    if (!offlineTilstand && dato) offlineTilstand = 'lagret';
+    if (!offlineTilstand) { el.offline.hidden = true; return; }
+    const d = dato ? new Date(dato) : null;
+    const datoTekst = !d || isNaN(d) ? '' : SPRAK === 'en'
+      ? d.getDate() + ' ' + 'Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split(' ')[d.getMonth()]
+      : d.getDate() + '. ' + 'jan feb mar apr mai jun jul aug sep okt nov des'.split(' ')[d.getMonth()];
+    el.offline.textContent = offlineTilstand === 'lagrer' ? t('offlineLagrer')
+      : offlineTilstand === 'delvis' ? t('offlineDelvis') : t('offlineLagret', datoTekst);
+    el.offline.hidden = false;
+  }
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.addEventListener('message', e => {
+      const m = e.data || {};
+      if (m.by !== BY) return;
+      if (m.type === 'fremdrift') {
+        if (offlineTilstand === 'lagrer') el.offline.textContent = t('offlineLagrerPst', Math.floor(100 * m.ferdig / Math.max(1, m.totalt)));
+        return;
+      }
+      if (m.type !== 'lagret') return;
+      if (m.feilet) { visOffline('delvis'); return; }
+      try { localStorage.setItem(OFFLINE_NOKKEL, new Date().toISOString()); } catch (err) { /* ingen lagring */ }
+      visOffline('lagret');
+    });
+    navigator.serviceWorker.startMessages();   // Safari leverer ellers ikke meldingene til addEventListener
+    visOffline();
+  }
+  sprakLyttere.push(() => { if (!el.offline.hidden) visOffline(); });
+
   function bbox(coords) {
     const b = [Infinity, Infinity, -Infinity, -Infinity];
     coords.forEach(c => {
@@ -1648,13 +1721,21 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       const medBbox = innenfor.length ? innenfor : alleMedBbox;
       if (medBbox.length) {
         startutsnitt = bbox(medBbox.flatMap(o => [o.bbox.slice(0, 2), o.bbox.slice(2)]));
-        kart.fitBounds(startutsnitt, { padding: 50, duration: 0 });
+        /* På mobil er kartet smalt, og utsnittet med alle stedene blir for vidt. Har byen
+           senter-mobil og zoom-mobil, åpner kartet der (og «Vis hele byen» går dit). */
+        const mobil = mobilvisning();
+        if (mobil) {
+          kart.jumpTo(mobil);
+        } else {
+          kart.fitBounds(startutsnitt, { padding: 50, duration: 0 });
+        }
       }
 
       // Lista virker uavhengig av kartet; lagene legges på når stilen er lastet.
       kartKlar.then(() => {
         leggTilKartlag();
         filtrerKart(synlige());
+        kart.once('idle', forhandslastOffline);
       });
 
       fot = () => t('fot', '<code>' + esc(DATA_NAVN) + '</code>', esc(meta.oppdatert || ''));

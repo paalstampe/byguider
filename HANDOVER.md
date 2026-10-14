@@ -49,8 +49,10 @@ Arbeidskatalogen er den lokale klonen av repoet `paalstampe/byguider`:
 byguider/
 ├── index.html              forside: lista over byer, bygges fra byer.json
 ├── app.js                  all logikk — én kopi for alle byer
+├── sw.js                   service worker: offline (se punkt 7, «Offline»)
 ├── style.css               all styling — én kopi
 ├── byer.json               manifest: id, navn, land, data (md), geometri, beskrivelse, evt. bilde
+├── apple-touch-icon.png    hjemskjerm-ikon (180×180): kobber «b» i Playfair Display på papir
 ├── bilder/<id>.webp        miniatyrer på forsiden (360×270), lages med .claude/miniatyrer.sh
 ├── london/index.html       stubb: <script src="../app.js" data-by="london">
 ├── nice/index.html
@@ -70,7 +72,8 @@ byguider/
 ```
 
 Ny by = én linje i `byer.json`, én md-fil (+ tom geometri-fil), én stubbmappe
-(kopier `london/index.html` og bytt `data-by`).
+(kopier `london/index.html` og bytt `data-by` og `apple-mobile-web-app-title` — navnet under
+hjemskjerm-ikonet, f.eks. «London»; forsiden heter «Byguider»).
 
 Forsiden viser en miniatyr av åpningssiden foran hver by: `bilder/<id>.webp` som fast regel,
 eller valgfritt felt `bilde` i byer.json. Samme oppskrift som landingssiden stam.pe: viewport
@@ -95,6 +98,9 @@ Instruksjonene står som kommentar øverst i hver fil.
 ---
 tittel: Pål og Vibekes London       frontmatter: tittel, undertittel,
 senter: 51.5105, -0.1235            senter (breddegrad, lengdegrad), zoom, oppdatert
+senter-mobil: 51.5230, -0.1060     valgfritt: startutsnitt på mobil (≤ 900 px) med zoom-mobil,
+                                    i stedet for utsnittet med alle stedene (for vidt på smal skjerm);
+                                    «Vis hele byen» går også dit på mobil
 ---
 # Central                           sone — rekkefølgen her er rekkefølgen i appen
 ## Nabolag og gater                 kategori
@@ -257,6 +263,39 @@ flett.
 På Påls Mac er GitHub CLI (`gh`) installert i `/usr/local/bin` (hentet fra GitHubs utgivelser —
 Homebrew i `/usr/local` er for gammel for macOS 27) og innlogget; `gh auth setup-git` gjør at
 git pusher med samme innlogging. Claude kan dermed pushe, åpne PR og flette lokalt.
+
+### Offline
+
+`sw.js` (service worker, registreres fra `app.js` og forsiden) gjør byguidene brukbare uten nett:
+
+- Egne filer (sider, `app.js`, `style.css`, `data/*`, `byer.json`) hentes **nettet først** — med nett
+  vises endringer straks som før. Uten nett, eller når nettet ikke svarer innen 4 s, brukes siste
+  lagrede kopi. Ved installasjon lagres alle byenes sider, data og miniatyrer.
+- Kart og biblioteker (CARTO-fliser, stil, glyfer, sprite, MapLibre fra unpkg, Google Fonts) tas
+  **fra lageret først**; fliser eldre enn 30 døgn fornyes når det er nett.
+- Lagring: `sw.js` får meldingen `{ type: 'lagre', stil, adresser, byer: [{ id, side, data, geometri }] }` og
+  regner ut alt selv (`lagreByer`): stil, tiles.json, sprite, latinske glyfer og CARTO-fliser zoom 0–14 over
+  alle koordinatene i byens md-fil og geometrifil (15 % marg, maks 1500 fliser). Kartet trenger ikke tegnes.
+  Det som alt er lagret, hoppes over. Kartstilen lagres uten `?key=`, så forsiden (uten nøkkel) og byene deler den.
+  Fremdrift og resultat sendes til alle åpne sider (`fremdrift`, `lagret`); sidene kaller `startMessages()`
+  (Safari leverer ellers ikke meldingene).
+  Sendes meldingen med en MessageChannel-port (som fra stam.pe), går svarene også dit — det er eneste
+  sikre vei i Safari når avsendersiden styres av en annen service worker.
+- Meldingen sendes når en by åpnes med nett (`forhandslastOffline()` i `app.js`, med det siden har lastet
+  som `adresser`), og fra «Lagre alle byene for bruk offline» på forsiden (alle byene, én om gangen;
+  `KARTSTIL` og MapLibre-adressene står der også — hold dem like `app.js`).
+- Status: ved telleren i byen («Lagrer for bruk offline … 45 %», så «Tilgjengelig offline · 13. okt») og
+  under hver by på forsiden. Datoen huskes i localStorage, nøkkel `byguider-offline:<sti><by>`.
+- Størrelse 13.10.2026: ca. 105 MB for alle byene, London 75 MB — oppdater `lagreMerknad` i `index.html`
+  hvis det endrer seg mye.
+- iOS: hjemskjerm-app og Safari har hvert sitt lager; åpne/lagre i den man skal bruke. Sletter man
+  hjemskjerm-appen, slettes også dens lager.
+- Endres strategi eller lagerformat: øk `VERSJON` i `sw.js`, så slettes gamle lagre.
+- Testet i Chromium med nett sperret og serveren stoppet: London med kart (også innzoomet), forsiden,
+  og New York (ikke besøkt) med liste og steder, men uten bakgrunnskart.
+  «Lagre alle byene» fra blank nettleser: alle fire byene lagret på ca. 25 s og åpner med kart uten nett.
+  (Første versjon lastet hver by i en skjult iframe; den hang på iPhone og viste kartet — derfor gjør
+  `sw.js` nå jobben selv.)
 
 ---
 
