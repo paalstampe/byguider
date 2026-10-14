@@ -345,9 +345,9 @@ Pizza. Behrens' gate 2.
 - google: ChIJ9d0Gj0ZvQUYRA5u22RAqof0
 - nettside: http://www.restaurant-sabotage.no/
 - status: onskeliste
-Sentrum
+Fredensborg
 Rosteds gate 15b.
-- en: Sentrum
+- en: Fredensborg
 Rosteds gate 15b.
 
 ### Tabuno
