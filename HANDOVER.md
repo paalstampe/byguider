@@ -121,6 +121,8 @@ med `?onskeliste` i adressen (virker sammen med `?lang=en`); uten parameteren fj
 liste, filtre og telling bygges. Med parameteren: sammenslått seksjon «Ikke besøkt ennå (n)» nederst
 i lista (dempet, første linje av notatet), bryteren «Vis ønskeliste» i filterlinjen, egen kartkilde
 uten klynging med ring-ikoner i dempet farge, og merkelappen «Ikke besøkt ennå» i infoboksen.
+★ på et ønskelistested betyr førstevalg: «Førstevalg» / «Top pick» i lista (sortert øverst),
+kobberfarget ring på kartet og «Ikke besøkt ennå · Førstevalg» i infoboksen.
 
 Gåturer har `lengde:` og `varighet:` som fritekst, og kan mangle tegnet rute
 (rutekortet sier da «rute ikke tegnet»).

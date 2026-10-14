@@ -96,6 +96,7 @@ const TEKST = {
     ikkeBesokt: 'Ikke besøkt ennå',
     ikkeBesoktAntall: n => 'Ikke besøkt ennå (' + n + ')',
     visOnskeliste: 'Vis ønskeliste',
+    forstevalg: 'Førstevalg',
     ingenSteder: 'Ingen steder lagt inn ennå.',
     ingenData: 'Ingen data',
     steder: n => n + (n === 1 ? ' sted' : ' steder'),
@@ -132,6 +133,7 @@ const TEKST = {
     ikkeBesokt: 'Not yet visited',
     ikkeBesoktAntall: n => 'Not yet visited (' + n + ')',
     visOnskeliste: 'Show wishlist',
+    forstevalg: 'Top pick',
     ingenSteder: 'No places added yet.',
     ingenData: 'No data',
     steder: n => n + (n === 1 ? ' place' : ' places'),
@@ -787,7 +789,11 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       source: 'onskeliste', type: 'symbol',
       filter: ['==', ['geometry-type'], 'Point'],
       layout: {
-        'icon-image': ['coalesce', ['image', ['concat', 'ikon-ring-', ['get', 'kategori']]], ['image', 'ikon-ring-ukjent']],
+        // ★ på ønskelisten = førstevalg: ringen i kobber
+        'icon-image': ['coalesce',
+          ['image', ['concat', 'ikon-ring-', ['case', FAV, 'fav-', ''], ['get', 'kategori']]],
+          ['image', ['case', FAV, 'ikon-ring-fav-ukjent', 'ikon-ring-ukjent']]],
+        'symbol-sort-key': ['case', FAV, 1, 0],
         'icon-size': ['interpolate', ['linear'], ['zoom'], 10, 0.8, 14, 0.95],
         'icon-allow-overlap': true,
         'icon-ignore-placement': true,
@@ -860,7 +866,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     const c = document.createElement('canvas');
     c.width = c.height = D;
     const x = c.getContext('2d');
-    if (favoritt === 'ring') return lagRing(x, D, R, glyf);
+    if (favoritt === 'ring') return lagRing(x, D, R, glyf, farge || ONSKEFARGE);
     x.beginPath();
     x.arc(D / 2, D / 2, 11.5 * R, 0, 2 * Math.PI);
     x.fillStyle = farge;
@@ -888,14 +894,14 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
   /* Ønskeliste: bare omriss og glyf i dempet farge, uten fyll. En smal papirkant på begge sider
      av strekene holder dem lesbare oppå gater og bygninger. */
-  function lagRing(x, D, R, glyf) {
+  function lagRing(x, D, R, glyf, farge) {
     x.beginPath();
     x.arc(D / 2, D / 2, 11 * R, 0, 2 * Math.PI);
     x.lineWidth = 4 * R;
     x.strokeStyle = PAPIR;
     x.stroke();
     x.lineWidth = 1.6 * R;
-    x.strokeStyle = ONSKEFARGE;
+    x.strokeStyle = farge;
     x.stroke();
     const s = (15 * R) / 24;
     x.translate(D / 2 - 12 * s, D / 2 - 12 * s);
@@ -906,7 +912,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     x.strokeStyle = PAPIR;
     x.stroke(new Path2D(glyf));
     x.lineWidth = 2.2;
-    x.strokeStyle = ONSKEFARGE;
+    x.strokeStyle = farge;
     x.stroke(new Path2D(glyf));
     return x.getImageData(0, 0, D, D);
   }
@@ -918,9 +924,15 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       const glyf = IKONER[kat.ikon] || IKONER.prikk;
       kart.addImage('ikon-' + k, lagIkon(kat.farge, glyf), { pixelRatio: 2 });
       kart.addImage('ikon-fav-' + k, lagIkon(kat.farge, glyf, true), { pixelRatio: 2 });
-      if (ONSKELISTE) kart.addImage('ikon-ring-' + k, lagIkon(null, glyf, 'ring'), { pixelRatio: 2 });
+      if (ONSKELISTE) {
+        kart.addImage('ikon-ring-' + k, lagIkon(null, glyf, 'ring'), { pixelRatio: 2 });
+        kart.addImage('ikon-ring-fav-' + k, lagIkon('#8A5A2B', glyf, 'ring'), { pixelRatio: 2 });
+      }
     });
-    if (ONSKELISTE) kart.addImage('ikon-ring-ukjent', lagIkon(null, IKONER.prikk, 'ring'), { pixelRatio: 2 });
+    if (ONSKELISTE) {
+      kart.addImage('ikon-ring-ukjent', lagIkon(null, IKONER.prikk, 'ring'), { pixelRatio: 2 });
+      kart.addImage('ikon-ring-fav-ukjent', lagIkon('#8A5A2B', IKONER.prikk, 'ring'), { pixelRatio: 2 });
+    }
     kart.addImage('ikon-ukjent', lagIkon(UKJENT_FARGE, IKONER.prikk), { pixelRatio: 2 });
     kart.addImage('ikon-fav-ukjent', lagIkon(UKJENT_FARGE, IKONER.prikk, true), { pixelRatio: 2 });
   }
@@ -1224,7 +1236,8 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       '<a href="' + esc(l.url) + '" target="_blank" rel="noopener">' + esc(l.tittel) + '</a></p>'
     ).join('');
     const notat = visNotat(p);
-    return (erOnskeliste(p) ? '<p class="merke-ikke-besokt">' + t('ikkeBesokt') + '</p>' : '') +
+    return (erOnskeliste(p) ? '<p class="merke-ikke-besokt">' + t('ikkeBesokt') +
+        (p.favoritt ? ' · ' + t('forstevalg') : '') + '</p>' : '') +
       '<h3 class="pop-navn">' + esc(visNavn(p)) + '</h3>' +
       '<p class="pop-meta">' + esc(metaLinje(p) || ruteMeta(p)) + '</p>' +
       (p.gater && p.gater.length ? '<p class="pop-gater">' + esc(p.gater.join(' · ')) + '</p>' : '') +
@@ -1375,8 +1388,10 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     el.liste.appendChild(hode);
     if (!state.onskelisteApen) return;
 
+    // Førstevalg (★) øverst, så alfabetisk
     vis.slice()
-      .sort((a, b) => visNavn(a.p).localeCompare(visNavn(b.p), SPRAK === 'en' ? 'en' : 'nb'))
+      .sort((a, b) => (!!b.p.favoritt - !!a.p.favoritt) ||
+        visNavn(a.p).localeCompare(visNavn(b.p), SPRAK === 'en' ? 'en' : 'nb'))
       .forEach(o => el.liste.appendChild(oppslagEl(o)));
   }
 
@@ -1396,7 +1411,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     div.innerHTML =
       '<div class="oppslag-topp">' +
         '<h2 class="oppslag-navn">' + esc(visNavn(p)) + '</h2>' +
-        (p.favoritt ? '<span class="favoritt-merke">' + t('favoritt') + '</span>' : '') +
+        (p.favoritt ? '<span class="favoritt-merke">' + t(onske ? 'forstevalg' : 'favoritt') + '</span>' : '') +
       '</div>' +
       '<p class="oppslag-meta">' +
         '<span class="prikk" style="background:' + info.farge + '"></span>' +
