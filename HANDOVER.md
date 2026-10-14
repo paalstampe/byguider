@@ -271,6 +271,8 @@ git pusher med samme innlogging. Claude kan dermed pushe, åpne PR og flette lok
   Det som alt er lagret, hoppes over. Kartstilen lagres uten `?key=`, så forsiden (uten nøkkel) og byene deler den.
   Fremdrift og resultat sendes til alle åpne sider (`fremdrift`, `lagret`); sidene kaller `startMessages()`
   (Safari leverer ellers ikke meldingene).
+  Sendes meldingen med en MessageChannel-port (som fra stam.pe), går svarene også dit — det er eneste
+  sikre vei i Safari når avsendersiden styres av en annen service worker.
 - Meldingen sendes når en by åpnes med nett (`forhandslastOffline()` i `app.js`, med det siden har lastet
   som `adresser`), og fra «Lagre alle byene for bruk offline» på forsiden (alle byene, én om gangen;
   `KARTSTIL` og MapLibre-adressene står der også — hold dem like `app.js`).
