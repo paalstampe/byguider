@@ -31,6 +31,7 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
   - varighet: ca. 1 t           gåturer
   - utenfor: ja                 holder stedet utenfor utsnittet kartet åpner med (og «Vis hele byen»)
   Fri tekst under feltene blir notatet. Første avsnitt vises i lista, alt i popupen.
+  [tekst](https://…) i notatet blir en lenke.
   Her er første avsnitt nabolaget.
 
   Engelsk (språkbryteren NO / EN) — valgfritt; mangler det, vises norsk:

@@ -31,6 +31,7 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
   - varighet: ca. 1 t           gåturer
   - utenfor: ja                 holder stedet utenfor utsnittet kartet åpner med (og «Vis hele byen»)
   Fri tekst under feltene blir notatet. Første avsnitt vises i lista, alt i popupen.
+  [tekst](https://…) i notatet blir en lenke.
 
   Engelsk (språkbryteren NO / EN) — valgfritt; mangler det, vises norsk:
   - navn-en: Coastal path       engelsk navn, bare når det skiller seg fra det norske
@@ -415,11 +416,21 @@ Søsteren til Hôtel Amour i Paris, noen kvartaler fra Negresco og Promenade des
 - nettside: https://www.lenegresco.com/la-plage
 Beach club
 
+Seng bør bookes ved personlig oppmøte.
+- en: Beach club
+
+Sunbeds are best booked in person.
+
 ### Hôtel Amour Plage
 - sted: 43.69332, 7.25600
 - google: ChIJwcsVMIjRzRIRVB11QajIGEw
 - nettside: https://hotelamourparis.fr/hotel-amour-plage/
 Beach club
+
+[Booking av seng](https://bookings.zenchef.com/results?rid=355682&pid=1001)
+- en: Beach club
+
+[Book a sunbed](https://bookings.zenchef.com/results?rid=355682&pid=1001)
 
 ### Plage de la Fosse
 - sted: 43.68671, 7.33612

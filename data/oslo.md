@@ -30,6 +30,7 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
   - lengde: 2,5 km              gåturer
   - varighet: ca. 1 t           gåturer
   Fri tekst under feltene blir notatet. Første avsnitt vises i lista, alt i popupen.
+  [tekst](https://…) i notatet blir en lenke.
 
   Engelsk (språkbryteren NO / EN) — valgfritt; mangler det, vises norsk:
   - navn-en: Coastal path       engelsk navn, bare når det skiller seg fra det norske
