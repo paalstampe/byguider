@@ -815,3 +815,29 @@ button.pop-lenke {
   .by-lenke { grid-template-columns: 76px 1fr; gap: 0 14px; align-items: start; }
   .miniatyr { width: 76px; height: 57px; margin-top: 4px; }
 }
+
+/* ---------- Mørk modus (prøve) ----------
+   Samme variabler som over, mørke og varme, som på stam.pe (mork.css der).
+   Kartpaletten byttes i app.js (MORK). */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --papir:       #1B1814;
+    --kartflate:   #221E19;
+    --kort:        #24201B;
+    --tekst:       #ECE5D8;
+    --dempet:      #A6987F;
+    --kant:        #4A4136;
+    --kant-lys:    #362F27;
+    --aksent:      #C99158;
+    --aksent-hover:#E0AA72;
+    --park:        #283024;
+    --vann:        #1C282C;
+  }
+  .maplibregl-ctrl-attrib { background: rgba(36,32,27,0.88) !important; }
+  .maplibregl-ctrl-attrib a { color: var(--dempet) !important; }
+  .tips .maplibregl-popup-content { background: var(--kort); color: var(--tekst); }
+  .maplibregl-ctrl-group { background: var(--kort); }
+  .maplibregl-ctrl-group button + button { border-top-color: var(--kant-lys); }
+  .maplibregl-ctrl button .maplibregl-ctrl-icon { filter: invert(0.88) sepia(0.2); }
+}
