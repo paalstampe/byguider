@@ -440,19 +440,57 @@ function byggFeatures(md, geo) {
     const gater = finnGeo(st.navn, 'gate').map(f => ({ type: 'Feature', geometry: f.geometry, properties: { rolle: 'gate' } }));
     const rute = finnGeo(st.navn, 'rute')[0];
 
+    // Nabolagsknappen ligger i kjernen (polygon nr. 2) når den finnes: ligger sted: utenfor,
+    // flyttes knappen inn. Uten sted: havner den midt i kjernen, ellers midt i området.
+    const kjerne = omrade[1];
     let geometry = null;
     const pkt = lesKoordinat(st.felt.sted);
-    if (pkt) geometry = { type: 'Point', coordinates: pkt };
-    else if (rute) geometry = rute.geometry;
-    else if (omrade.length) {
-      const c = [].concat.apply([], omrade[0].geometry.coordinates);
-      const x = c.map(k => k[0]), y = c.map(k => k[1]);
-      geometry = { type: 'Point', coordinates: [(Math.min.apply(null, x) + Math.max.apply(null, x)) / 2,
-                                                (Math.min.apply(null, y) + Math.max.apply(null, y)) / 2] };
+    if (kjerne && !(pkt && iPolygon(pkt, kjerne.geometry.coordinates[0]))) {
+      geometry = { type: 'Point', coordinates: punktInni(kjerne.geometry.coordinates[0]) };
     }
+    else if (pkt) geometry = { type: 'Point', coordinates: pkt };
+    else if (rute) geometry = rute.geometry;
+    else if (omrade.length) geometry = { type: 'Point', coordinates: punktInni(omrade[0].geometry.coordinates[0]) };
 
     return { type: 'Feature', geometry: geometry, properties: p, fokus: omrade.concat(gater) };
   });
+}
+
+/* Ligger punktet [lng, lat] inni ringen? (strålekasting) */
+function iPolygon(p, ring) {
+  let inni = false;
+  for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+    const [xi, yi] = ring[i], [xj, yj] = ring[j];
+    if ((yi > p[1]) !== (yj > p[1]) && p[0] < (xj - xi) * (p[1] - yi) / (yj - yi) + xi) inni = !inni;
+  }
+  return inni;
+}
+
+/* Et punkt midt i ringen: tyngdepunktet hvis det ligger inni, ellers midt på det bredeste
+   stykket av en vannrett linje gjennom midten (alltid inni, også for buktete former). */
+function punktInni(ring) {
+  let a = 0, cx = 0, cy = 0;
+  for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+    const k = ring[j][0] * ring[i][1] - ring[i][0] * ring[j][1];
+    a += k; cx += (ring[j][0] + ring[i][0]) * k; cy += (ring[j][1] + ring[i][1]) * k;
+  }
+  if (a) {
+    const t = [cx / (3 * a), cy / (3 * a)];
+    if (iPolygon(t, ring)) return t;
+  }
+  const ys = ring.map(k => k[1]);
+  const y = (Math.min.apply(null, ys) + Math.max.apply(null, ys)) / 2;
+  const xs = [];
+  for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+    const [xi, yi] = ring[i], [xj, yj] = ring[j];
+    if ((yi > y) !== (yj > y)) xs.push(xi + (y - yi) * (xj - xi) / (yj - yi));
+  }
+  xs.sort((m, n) => m - n);
+  let best = [ring[0][0], ring[0][1]], bredde = -1;
+  for (let i = 0; i + 1 < xs.length; i += 2) {
+    if (xs[i + 1] - xs[i] > bredde) { bredde = xs[i + 1] - xs[i]; best = [(xs[i] + xs[i + 1]) / 2, y]; }
+  }
+  return best;
 }
 
 /* «Financial Times | Artikkelens tittel | https://…» -> { kilde, tittel, url }.
