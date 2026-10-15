@@ -233,6 +233,9 @@ jobben. Nærmer seg en guidebok.
   omfarget ved lasting til papirpaletten (`KARTPALETT` + `STILREGLER` i `app.js`; reglene matcher
   Voyagers lag-id-er med regex, første treff vinner). `building-top` er slått av (ga mørk
   skyggekant på høy zoom). Attribusjonen kommer fra stilen.
+  Omfargingen skjer i stil-JSON-en før første tegning (`fargeleggStil`, via
+  `setStyle(KARTSTIL, { transformStyle })`), så den opprinnelige, lyse Voyager-stilen aldri blinker fram.
+  `app.js` setter også papirfargen på `<html>` straks, før `style.css` er lastet.
 - To kilder: `steder` (punkter, klynger t.o.m. zoom 12, radius 14 px) med lagene `klynger`,
   `klyngetall` og `punkter` (symbol med kategoriikon), og `ruter` med `gater` og `gaaturer`.
   Filtrering bytter ut kildedataene (`setData`), slik at klyngene følger filtrene.

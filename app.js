@@ -300,6 +300,24 @@ const STILREGLER = (P => [
   [/^housenumber$/,           { 'text-color': P.husnummer, 'text-halo-color': P.bakgrunn }]
 ])(KARTPALETT);
 
+/* Bruker STILREGLER og SKJULTE_LAG på Voyager-stilen (JSON) før kartet får den. Bare egenskaper
+   som hører til lagtypen settes (fill-* på fill-lag osv.), ellers avviser MapLibre stilen. */
+const EGENSKAP_TYPE = { background: 'background', fill: 'fill', line: 'line', text: 'symbol', icon: 'symbol' };
+function fargeleggStil(stil) {
+  stil.layers.forEach(l => {
+    if (SKJULTE_LAG.some(r => r.test(l.id))) {
+      l.layout = Object.assign({}, l.layout, { visibility: 'none' });
+      return;
+    }
+    const regel = STILREGLER.find(([r]) => r.test(l.id));
+    if (!regel) return;
+    Object.keys(regel[1]).forEach(egenskap => {
+      if (EGENSKAP_TYPE[egenskap.split('-')[0]] === l.type) (l.paint = l.paint || {})[egenskap] = regel[1][egenskap];
+    });
+  });
+  return stil;
+}
+
 /* Lag i Voyager som slås av. building-top er en forskjøvet kopi av bygningene
    som gir en mørk «skyggekant» på høy zoom. */
 const SKJULTE_LAG = [/^building-top$/];
@@ -309,6 +327,9 @@ const KARTSKRIFT = ['Montserrat Medium', 'Open Sans Bold', 'Noto Sans Regular',
   'HanWangHeiLight Regular', 'NanumBarunGothic Regular'];
 
 const PAPIR = MORK ? '#1B1814' : '#F7F4EE';
+/* Papirfargen med en gang, før style.css er lastet — ellers er siden hvit et øyeblikk i mørk modus. */
+document.documentElement.style.background = PAPIR;
+document.documentElement.style.colorScheme = MORK ? 'dark' : 'light';
 const KORT = MORK ? '#24201B' : '#FFFDF8';
 const TEKSTFARGE = MORK ? '#ECE5D8' : '#241F19';
 const AKSENT = MORK ? '#C99158' : '#8A5A2B';
@@ -735,7 +756,6 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
      Zoom er i MapLibre-skala: én lavere enn Leaflet for samme målestokk. */
   const kart = new maplibregl.Map({
     container: 'kart',
-    style: KARTSTIL,
     center: [0, 20],
     zoom: 1,
     maxZoom: 18,
@@ -745,6 +765,8 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     attributionControl: { compact: false }
   });
   kart.touchZoomRotate.disableRotation();
+  // Stilen fargelegges før den tegnes første gang, så den opprinnelige Voyager-stilen aldri blinker fram.
+  kart.setStyle(KARTSTIL, { transformStyle: (forrige, ny) => fargeleggStil(ny) });
   kart.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-left');
 
   /* Tilbake til startvisningen, slik siden åpnes: mobilutsnittet (senter-mobil/zoom-mobil) på smal
@@ -1024,25 +1046,10 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     kart.addImage('ikon-fav-ukjent', lagIkon(UKJENT_FARGE, IKONER.prikk, true), { pixelRatio: 2 });
   }
 
-  function tilpassKartstil() {
-    kart.getStyle().layers.forEach(l => {
-      if (SKJULTE_LAG.some(r => r.test(l.id))) {
-        kart.setLayoutProperty(l.id, 'visibility', 'none');
-        return;
-      }
-      const regel = STILREGLER.find(([r]) => r.test(l.id));
-      if (!regel) return;
-      Object.keys(regel[1]).forEach(egenskap => {
-        try { kart.setPaintProperty(l.id, egenskap, regel[1][egenskap]); }
-        catch (e) { /* egenskapen finnes ikke for denne lagtypen — hopp over */ }
-      });
-    });
-  }
 
   const tomSamling = () => ({ type: 'FeatureCollection', features: [] });
 
   function leggTilKartlag() {
-    tilpassKartstil();
     registrerIkoner();
 
     kart.addSource('omrader', { type: 'geojson', data: tomSamling() });
