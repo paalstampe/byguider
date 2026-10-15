@@ -299,7 +299,7 @@ Lunsj
 
 Vietnamesisk gatemat i Rue de l'Hôtel des Postes.
 
-Våre favoritter: banh mi, kyllingsalat, bun chay og naturligvis vietnamesisk kaffe (cà phê sữa đá).
+Våre favoritter: banh mi, salade poulet, bun chay og naturligvis vietnamesisk kaffe (cà phê sữa đá).
 
 Åpent mandag til lørdag. Liten terrasse.
 
@@ -307,7 +307,7 @@ Våre favoritter: banh mi, kyllingsalat, bun chay og naturligvis vietnamesisk ka
 
 Vietnamese street food on Rue de l'Hôtel des Postes.
 
-Our favourites: banh mi, chicken salad, bun chay and, of course, Vietnamese coffee (cà phê sữa đá).
+Our favourites: banh mi, salade poulet, bun chay and, of course, Vietnamese coffee (cà phê sữa đá).
 
 Open Monday to Saturday. Small terrace.
 
