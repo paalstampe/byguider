@@ -758,6 +758,7 @@ Wilton Way fra Royal Oak Road til Navarino Road, og Navarino Road ned til London
 ### Chelsea Green ★
 - sted: 51.4907, -0.1660
 - google: ChIJFx4VGmsFdkgRxEiqdnQDTtg
+- gater: Elystan Street, Cale Street
 
 ### Clarendon Cross ★
 - sted: 51.5104, -0.2102
@@ -842,6 +843,32 @@ Pub and dining room, 55 Shirland Road.
 - utenfor: ja
 EKSEMPEL — Barnes. Koordinat er omtrentlig
 - en: EXAMPLE — Barnes. Location is approximate
+
+## Butikker
+
+### Sign of the Times
+- sted: 51.49102, -0.16675
+- google: ChIJdcMjiDN5dkgROqbs4NTxXRs
+- nettside: https://www.signofthetimeslondon.com/
+Chelsea
+
+Designerklær på kommisjon, Elystan Street 5.
+
+- en: Chelsea
+
+Designer dress agency, 5 Elystan Street.
+
+### Felt
+- sted: 51.49047, -0.16680
+- google: ChIJtU7uD2sFdkgRniK3eMpSWmQ
+- nettside: https://www.feltlondon.com/
+Chelsea
+
+Smykker, Godfrey Street 53, rett ved Chelsea Green.
+
+- en: Chelsea
+
+Jewellery, 53 Godfrey Street, right by Chelsea Green.
 
 ## Verdt en omvei
 
