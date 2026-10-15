@@ -41,7 +41,7 @@ if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catc
    Lista bygges fra byer.json — ny by vises her automatisk. Engelske tekster fra
    feltene land_en, beskrivelse_en og evt. navn_en; mangler de, vises norsk.
    Miniatyr: bilder/<id>.webp (360×270, lages med .claude/miniatyrer.sh), eller feltet «bilde»
-   i byer.json. By med status «kommer» eller uten bilde får en tom ramme i samme størrelse. */
+   i byer.json. I mørk modus bilder/<id>-mork.webp; mangler den, brukes den lyse. By med status «kommer» eller uten bilde får en tom ramme i samme størrelse. */
 const NOKKEL = 'byguider-sprak';
 const TEKST = {
   no: { duErHer: 'Du er her', sidetittel: 'Pål og Vibekes byguider', byguider: 'Byguider', tittel: 'Pål og Vibekes byer',
@@ -104,11 +104,16 @@ function tegn() {
     let bilde;
     if (klar) {
       bilde = document.createElement('img');
-      bilde.src = b.bilde || 'bilder/' + b.id + '.webp';
+      const lys = b.bilde || 'bilder/' + b.id + '.webp';
+      const mork = !b.bilde && matchMedia('(prefers-color-scheme: dark)').matches && 'bilder/' + b.id + '-mork.webp';
+      bilde.src = mork || lys;
       bilde.alt = '';
       bilde.width = 120;
       bilde.height = 90;
-      bilde.addEventListener('error', () => bilde.replaceWith(tomRamme()));
+      bilde.addEventListener('error', () => {
+        if (mork && !bilde.src.endsWith(lys)) bilde.src = lys;
+        else bilde.replaceWith(tomRamme());
+      });
     } else bilde = tomRamme();
     bilde.classList.add('miniatyr');
     const tekst = document.createElement('span');

@@ -38,6 +38,7 @@ self.addEventListener('install', e => {
       const byer = (await r.json()).byer || [];
       byer.forEach(b => {
         filer.push(b.id + '/', b.data || ('data/' + b.id + '.md'), b.bilde || ('bilder/' + b.id + '.webp'));
+        if (!b.bilde) filer.push('bilder/' + b.id + '-mork.webp');
         if (b.geometri) filer.push(b.geometri);
       });
     } catch (err) { /* uten byer.json lagres bare skallet */ }

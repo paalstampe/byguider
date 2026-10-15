@@ -1,6 +1,6 @@
 #!/bin/bash
 # Miniatyrer til forsiden: skjermbilde av åpningssiden til hver by i byer.json, lagret som
-# bilder/<id>.webp (360×270). Samme oppskrift som landingssiden stam.pe: viewport 1300×900,
+# bilder/<id>.webp (360×270), og i mørk modus som bilder/<id>-mork.webp. Samme oppskrift som landingssiden stam.pe: viewport 1300×900,
 # deviceScaleFactor 2, beskjært til 1200×900 fra venstre kant og skalert ned.
 # Bruk: .claude/miniatyrer.sh [grunnadresse] [by-id ...]
 #   f.eks. .claude/miniatyrer.sh                                   (alle byer fra stam.pe)
@@ -49,7 +49,10 @@ const fs = require('fs');
   const byer = JSON.parse(fs.readFileSync('byer.json', 'utf8')).byer
     .filter(b => b.status !== 'kommer' && (!valgte.length || valgte.includes(b.id)));
   const nettleser = await chromium.launch({ args });
-  const side = await nettleser.newPage({ viewport: { width: 1300, height: 900 }, deviceScaleFactor: 2 });
+  for (const [modus, endelse] of [['light', ''], ['dark', '-mork']]) {
+  const kontekst = await nettleser.newContext({ viewport: { width: 1300, height: 900 }, deviceScaleFactor: 2, colorScheme: modus });
+  await kontekst.addInitScript(() => { try { localStorage.setItem('byguider-sprak', 'no'); } catch (f) {} });
+  const side = await kontekst.newPage();
   for (const b of byer) {
     const url = `${e.GRUNN}/${b.id}/`;
     await side.goto(url, { waitUntil: 'networkidle', timeout: 60000 });
@@ -72,8 +75,10 @@ const fs = require('fs');
       }
       return kilde.toDataURL('image/webp', 0.86).split(',')[1];
     }, png.toString('base64'));
-    fs.writeFileSync(`bilder/${b.id}.webp`, Buffer.from(webp, 'base64'));
-    console.log(`Lagret bilder/${b.id}.webp fra ${url}`);
+    fs.writeFileSync(`bilder/${b.id}${endelse}.webp`, Buffer.from(webp, 'base64'));
+    console.log(`Lagret bilder/${b.id}${endelse}.webp fra ${url}`);
+  }
+  await kontekst.close();
   }
   await nettleser.close();
 })().catch(f => { console.error(f.message); process.exit(1); });
