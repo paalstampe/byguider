@@ -1219,6 +1219,13 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   }
 
+  /* Notat som HTML: [tekst](https://…) blir en lenke, resten escapes. */
+  const LENKE_I_NOTAT = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g;
+  function notatHtml(tekst) {
+    return esc(tekst).replace(LENKE_I_NOTAT, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+  }
+  const utenLenker = tekst => String(tekst || '').replace(LENKE_I_NOTAT, '$1');
+
   function metaLinje(p) {
     return [p.sone, katInfo(p.kategori).navn].filter(Boolean).join(' · ');
   }
@@ -1229,7 +1236,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
   /* Første avsnitt av notatet, forkortet — brukes i lista. Hele notatet vises i popup/rutekort. */
   function kortNotat(tekst) {
-    const a = String(tekst || '').split(/\n\s*\n/)[0].replace(/\s*\n\s*/g, ' ');
+    const a = utenLenker(tekst).split(/\n\s*\n/)[0].replace(/\s*\n\s*/g, ' ');
     return a.length > 160 ? a.slice(0, 157).replace(/\s+\S*$/, '') + ' …' : a;
   }
 
@@ -1263,7 +1270,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       '<h3 class="pop-navn">' + esc(visNavn(p)) + '</h3>' +
       '<p class="pop-meta">' + esc(metaLinje(p) || ruteMeta(p)) + '</p>' +
       (p.gater && p.gater.length ? '<p class="pop-gater">' + esc(p.gater.join(' · ')) + '</p>' : '') +
-      (notat ? '<p class="pop-notat">' + esc(notat) + '</p>' : '') +
+      (notat ? '<p class="pop-notat">' + notatHtml(notat) + '</p>' : '') +
       les +
       (lenker.length ? '<p class="pop-lenker">' + lenker.join('<span class="pop-skille">·</span>') + '</p>' : '');
   }
@@ -1375,7 +1382,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       if (state.kunFavoritter && !p.favoritt) return false;
       if (q) {
         const kat = KATEGORIER[p.kategori] || {};
-        const hay = [p.navn, p.navn_en, p.notat, p.notat_en, p.sone, katInfo(p.kategori).navn, kat.navn, kat.en]
+        const hay = [p.navn, p.navn_en, utenLenker(p.notat), utenLenker(p.notat_en), p.sone, katInfo(p.kategori).navn, kat.navn, kat.en]
           .concat(p.gater || []).join(' ').toLowerCase();
         if (!hay.includes(q)) return false;
       }
@@ -1549,7 +1556,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       t('gatur') + (o.f.geometry ? '' : ' · ' + t('ruteIkkeTegnet'));
     el.ruteNavn.textContent = visNavn(p);
     el.ruteMeta.textContent = ruteMeta(p);
-    el.ruteNotat.textContent = visNotat(p);
+    el.ruteNotat.innerHTML = notatHtml(visNotat(p));
     el.ruteZoom.dataset.id = o.id;
     el.ruteZoom.parentNode.style.display = o.bbox ? '' : 'none';
     el.ruteKort.hidden = false;
