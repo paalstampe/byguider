@@ -407,6 +407,8 @@ Søsteren til Hôtel Amour i Paris, noen kvartaler fra Negresco og Promenade des
 - sted: 43.69455, 7.25833
 - google: ChIJtzA17YPRzRIR5Lu8Yh7BihA
 - nettside: https://www.lenegresco.com/
+Nices grand old lady. Litt over toppen, litt eksentrisk og helt uten like. Ta en drink i Le 1913 og se deg rundt i Salon Royal.
+- en: Nice's grand old lady. A little over the top, a little eccentric and quite unlike anywhere else. Have a drink at Le 1913 and take a look around the Salon Royal.
 
 ## Strender og beach clubs
 
