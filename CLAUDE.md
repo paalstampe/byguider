@@ -65,6 +65,9 @@ Hold HANDOVER.md oppdatert når noe vesentlig endres (punkt 2, 8 og 10.5).
   Ta bare med stedets egen side (ev. Instagram) — ikke bookingtjenester eller tredjepartsguider.
 - Restauranter, caféer, butikker o.l.: første linje i notatet (og i en:) er området/nabolaget stedet ligger i
   (f.eks. «Marylebone»), som i New York. Slå det opp per sted; adressen kommer i teksten under.
+- Nabolag får alltid omriss i data/<by>-geometri.geojson, i alle byer (også nye), som i New York:
+  to «område»-polygoner med notat — først en skisse av hele nabolaget, så kjernen — avgrenset av
+  navngitte gater (koordinater fra OpenStreetMap/Overpass). Gater Pål ber om å markere legges inn som «gate».
 - Engelsk innhold via navn-en: og en: (valgfritt; mangler det, vises norsk).
 
 ## Ikke gjør
