@@ -143,7 +143,8 @@ Gåturer har `lengde:` og `varighet:` som fritekst, og kan mangle tegnet rute
 | `gate` | LineString | uthevet gate når nabolaget er valgt |
 | `rute` | LineString | gåturens stiplede rute, alltid synlig |
 
-Et nabolag uten `sted:` men med `område` får punkt midt i området. Navnet står under
+Nabolagsknappen ligger i kjernen (polygon nr. 2) når den finnes: ligger `sted:` utenfor,
+flyttes knappen inn (`punktInni`). Uten `sted:` havner den midt i kjernen, ellers midt i området. Navnet står under
 nabolagsikonet fra zoom 13 (`NABOLAGSNAVN_MINZOOM`). Klikk på nabolaget
 (i lista eller kartet) uthever område og gater og zoomer dit; klikk på tomt kart opphever.
 Gategeometri kan hentes fra OpenStreetMap (Overpass) — Claude kan gjøre det på forespørsel.

@@ -68,6 +68,7 @@ Hold HANDOVER.md oppdatert når noe vesentlig endres (punkt 2, 8 og 10.5).
 - Nabolag får alltid omriss i data/<by>-geometri.geojson, i alle byer (også nye), som i New York:
   to «område»-polygoner med notat — først en skisse av hele nabolaget, så kjernen — avgrenset av
   navngitte gater (koordinater fra OpenStreetMap/Overpass). Gater Pål ber om å markere legges inn som «gate».
+  Kartet legger nabolagsknappen i kjernen selv om sted: (fra Google) ligger utenfor.
 - Engelsk innhold via navn-en: og en: (valgfritt; mangler det, vises norsk).
 
 ## Ikke gjør
