@@ -231,7 +231,30 @@ const IKONER = {
 
 /* Kartstilen: CARTO Voyager omfarget til papirpaletten fra style.css.
    Reglene matcher lag-id-er i Voyager-stilen; første treff vinner. */
-const KARTPALETT = {
+/* Mørk modus (prøve): følger enhetens innstilling når siden lastes. Samme Voyager-stil
+   (så offline-lageret er det samme), bare med en mørk, varm palett. Fargene i style.css
+   byttes i @media (prefers-color-scheme: dark) nederst der. */
+const MORK = !!(window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches);
+
+const KARTPALETT = MORK ? {
+  bakgrunn:    '#221E19',
+  park:        '#283024',
+  vann:        '#1C282C',
+  bygg:        '#2A251F',
+  byggKant:    '#352E26',
+  vei:         '#3A332B',
+  veiKant:     '#2C2620',
+  storVei:     '#4A4034',
+  storVeiKant: '#3A3128',
+  sti:         '#564A3B',
+  bane:        '#463D33',
+  grense:      '#4A4136',
+  tekst:       '#DCD3C3',
+  tekstDempet: '#A6987F',
+  veinavn:     '#8C7F6A',
+  vannTekst:   '#7F9AA2',
+  husnummer:   '#6E6252'
+} : {
   bakgrunn:    '#EFEADF',
   park:        '#D6DFCB',
   vann:        '#B9C9CE',
@@ -285,7 +308,11 @@ const SKJULTE_LAG = [/^building-top$/];
 const KARTSKRIFT = ['Montserrat Medium', 'Open Sans Bold', 'Noto Sans Regular',
   'HanWangHeiLight Regular', 'NanumBarunGothic Regular'];
 
-const PAPIR = '#F7F4EE';
+const PAPIR = MORK ? '#1B1814' : '#F7F4EE';
+const KORT = MORK ? '#24201B' : '#FFFDF8';
+const TEKSTFARGE = MORK ? '#ECE5D8' : '#241F19';
+const AKSENT = MORK ? '#C99158' : '#8A5A2B';
+const DEMPET = MORK ? '#A6987F' : '#6B5D4A';
 
 /* CARTO-nøkkel (gratis, https://carto.com/basemaps/apikey). Kravet gjelder foreløpig
    rasterkartene, men nøkkelen sendes med på vektorstilen også.
@@ -302,7 +329,7 @@ const CARTO_KEY = LOKAL
 const KARTSTIL = 'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json'
   + (CARTO_KEY ? '?key=' + CARTO_KEY : '');
 
-const UKJENT_FARGE = '#6B5D4A';
+const UKJENT_FARGE = DEMPET;
 
 /* ---------- by-fila (markdown) ----------
 
@@ -803,7 +830,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       paint: {
         'circle-color': KARTPALETT.vei,
         'circle-radius': ['step', ['get', 'point_count'], 14, 10, 17, 25, 20],
-        'circle-stroke-color': '#8A5A2B',
+        'circle-stroke-color': AKSENT,
         'circle-stroke-width': 1.5
       }
     },
@@ -817,7 +844,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
         'text-size': 12,
         'text-allow-overlap': true
       },
-      paint: { 'text-color': '#241F19' }
+      paint: { 'text-color': TEKSTFARGE }
     },
     punkter: {
       source: 'steder',
@@ -837,7 +864,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
   /* Ønskelisten: egen kilde uten klynging, så stedene aldri slås sammen med besøkte steder.
      Ring-ikoner (omriss uten fyll) i dempet farge; gåturer som tynn stiplet linje. Under de besøkte. */
-  const ONSKEFARGE = '#6B5D4A';   // dempet tekst i papirpaletten
+  const ONSKEFARGE = DEMPET;   // dempet tekst i papirpaletten
   const ONSKELAG = {
     'onskeliste-ruter': {
       source: 'onskeliste', type: 'line',
@@ -872,13 +899,13 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     'omrader-flate': {
       source: 'omrader', type: 'fill',
       filter: ['==', ['geometry-type'], 'Polygon'],
-      paint: { 'fill-color': '#8A5A2B', 'fill-opacity': 0.07 }
+      paint: { 'fill-color': AKSENT, 'fill-opacity': 0.07 }
     },
     'omrader-kant': {
       source: 'omrader', type: 'line',
       filter: ['==', ['geometry-type'], 'Polygon'],
       layout: { 'line-join': 'round' },
-      paint: { 'line-color': '#8A5A2B', 'line-width': 1.5, 'line-opacity': 0.8, 'line-dasharray': [3, 2] }
+      paint: { 'line-color': AKSENT, 'line-width': 1.5, 'line-opacity': 0.8, 'line-dasharray': [3, 2] }
     },
     'omrader-navn': {
       source: 'omrader', type: 'symbol', minzoom: NABOLAGSNAVN_MINZOOM,
@@ -892,7 +919,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
         'text-max-width': 7,
         'text-padding': 2
       },
-      paint: { 'text-color': '#8A5A2B', 'text-halo-color': PAPIR, 'text-halo-width': 1.5 }
+      paint: { 'text-color': AKSENT, 'text-halo-color': PAPIR, 'text-halo-width': 1.5 }
     }
   };
 
@@ -902,19 +929,19 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     'fokus-flate': {
       source: 'fokus', type: 'fill',
       filter: ['==', ['get', 'rolle'], 'omrade'],
-      paint: { 'fill-color': '#8A5A2B', 'fill-opacity': 0.08 }
+      paint: { 'fill-color': AKSENT, 'fill-opacity': 0.08 }
     },
     'fokus-kant': {
       source: 'fokus', type: 'line',
       filter: ['==', ['get', 'rolle'], 'omrade'],
       layout: { 'line-join': 'round' },
-      paint: { 'line-color': '#8A5A2B', 'line-width': 1.5, 'line-opacity': 0.8, 'line-dasharray': [3, 2] }
+      paint: { 'line-color': AKSENT, 'line-width': 1.5, 'line-opacity': 0.8, 'line-dasharray': [3, 2] }
     },
     'fokus-gater': {
       source: 'fokus', type: 'line',
       filter: ['==', ['get', 'rolle'], 'gate'],
       layout: { 'line-cap': 'round', 'line-join': 'round' },
-      paint: { 'line-color': '#8A5A2B', 'line-width': ['interpolate', ['linear'], ['zoom'], 12, 3, 16, 6], 'line-opacity': 0.7 }
+      paint: { 'line-color': AKSENT, 'line-width': ['interpolate', ['linear'], ['zoom'], 12, 3, 16, 6], 'line-opacity': 0.7 }
     }
   };
 
@@ -938,7 +965,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       x.beginPath();
       x.arc(D / 2, D / 2, 13.25 * R, 0, 2 * Math.PI);
       x.lineWidth = 1.5 * R;
-      x.strokeStyle = '#8A5A2B';
+      x.strokeStyle = AKSENT;
       x.stroke();
     }
     const s = (15 * R) / 24;
@@ -947,7 +974,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     x.lineWidth = 2.2;
     x.lineCap = 'round';
     x.lineJoin = 'round';
-    x.strokeStyle = '#FFFDF8';
+    x.strokeStyle = KORT;
     x.stroke(new Path2D(glyf));
     return x.getImageData(0, 0, D, D);
   }
@@ -986,12 +1013,12 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       kart.addImage('ikon-fav-' + k, lagIkon(kat.farge, glyf, true), { pixelRatio: 2 });
       if (ONSKELISTE) {
         kart.addImage('ikon-ring-' + k, lagIkon(null, glyf, 'ring'), { pixelRatio: 2 });
-        kart.addImage('ikon-ring-fav-' + k, lagIkon('#8A5A2B', glyf, 'ring'), { pixelRatio: 2 });
+        kart.addImage('ikon-ring-fav-' + k, lagIkon(AKSENT, glyf, 'ring'), { pixelRatio: 2 });
       }
     });
     if (ONSKELISTE) {
       kart.addImage('ikon-ring-ukjent', lagIkon(null, IKONER.prikk, 'ring'), { pixelRatio: 2 });
-      kart.addImage('ikon-ring-fav-ukjent', lagIkon('#8A5A2B', IKONER.prikk, 'ring'), { pixelRatio: 2 });
+      kart.addImage('ikon-ring-fav-ukjent', lagIkon(AKSENT, IKONER.prikk, 'ring'), { pixelRatio: 2 });
     }
     kart.addImage('ikon-ukjent', lagIkon(UKJENT_FARGE, IKONER.prikk), { pixelRatio: 2 });
     kart.addImage('ikon-fav-ukjent', lagIkon(UKJENT_FARGE, IKONER.prikk, true), { pixelRatio: 2 });
