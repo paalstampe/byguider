@@ -447,8 +447,8 @@ Sykkelklær og café
 - sted: 43.69633, 7.27601
 - google: ChIJpShtU6PazRIRHyPKaG4RDEk
 - nettside: http://www.tresorspublics.com/
-Et lite museum over fransk hverdagsliv der alt er til salgs. Nesten tusen ting, fra emaljekrus til olivenoljesåpe, alt laget i Frankrike. Fin å finne gaver i.
-- en: A small museum of French everyday life where everything is for sale. Nearly a thousand things, from enamel mugs to olive-oil soap, all made in France. Good for gifts.
+Et lite museum over fransk hverdagsliv der alt er til salgs. Nesten tusen ting – kjøkkenutstyr, toalettartikler, klær, leker og mye annet – alt laget i Frankrike. Fin å finne gaver i.
+- en: A small museum of French everyday life where everything is for sale. Nearly a thousand things – kitchenware, toiletries, clothes, toys and much more – all made in France. Good for gifts.
 
 ### Palace
 - sted: 43.70026, 7.28235
