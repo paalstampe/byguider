@@ -75,6 +75,9 @@ Ny by = én linje i `byer.json`, én md-fil (+ tom geometri-fil), én stubbmappe
 (kopier `london/index.html` og bytt `data-by` og `apple-mobile-web-app-title` — navnet under
 hjemskjerm-ikonet, f.eks. «London»; forsiden heter «Byguider»).
 
+Ikke søkbar: forsiden og alle stubbene har `<meta name="robots" content="noindex, nofollow, noarchive">`
+(stubben kopieres med den). KI-innsamlere stenges ute av `robots.txt` i `paalstampe.github.io`, som gjelder hele stam.pe.
+
 Forsiden viser en miniatyr av åpningssiden foran hver by: `bilder/<id>.webp` som fast regel,
 eller valgfritt felt `bilde` i byer.json. Samme oppskrift som landingssiden stam.pe: viewport
 1300×900, deviceScaleFactor 2, beskåret til 1200×900 fra venstre og skalert til 360×270.
