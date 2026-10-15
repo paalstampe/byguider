@@ -108,7 +108,8 @@ senter-mobil: 51.5230, -0.1060     valgfritt: startutsnitt på mobil (≤ 900 px
 - sted: 51.5207, -0.1519            breddegrad, lengdegrad (som Google Maps)
 - gater: Marylebone High Street, Chiltern Street
 - google: <Place ID eller lenke>
-Fri tekst = notat. Første avsnitt i lista, alt i popupen.
+Fri tekst = notat. Første avsnitt i lista, alt i popupen. `[tekst](https://…)` i notatet blir en lenke
+(popup og rutekort; lista og søket bruker bare lenketeksten).
 ```
 
 Kategorier (`##`): Nabolag og gater · Restauranter · Caféer · Barer · Jazzklubber ·
