@@ -15,7 +15,7 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
 
   # Sone            overskrift 1: Central, North … Rekkefølgen her blir rekkefølgen i appen.
                     Byer uten soner: dropp #-overskriftene.
-  ## Kategori       Nabolag og gater · Restauranter · Caféer · Barer · Jazzklubber ·
+  ## Kategori       Nabolag og gater · Restauranter · Kaféer · Barer · Jazzklubber ·
                     Muséer og gallerier · Butikker · Hoteller · Strender og beach clubs ·
                     Verdt en omvei · Gåturer
   ### Navn ★        ett sted. ★ bak navnet = favoritt.
@@ -370,7 +370,7 @@ Italiensk ved Highbury Corner, St Paul's Road 300–302.
 
 Italian at Highbury Corner, 300–302 St Paul's Road.
 
-## Caféer
+## Kaféer
 
 ### The Spence Bakery
 - sted: 51.56140, -0.08183
@@ -654,7 +654,7 @@ Indisk (Bombay-kafé), Boundary Street 7.
 
 Indian (Bombay café), 7 Boundary Street.
 
-## Caféer
+## Kaféer
 
 ### Pophams
 - sted: 51.53836, -0.04526
@@ -834,7 +834,7 @@ Pub og spisesal, Shirland Road 55.
 
 Pub and dining room, 55 Shirland Road.
 
-## Caféer
+## Kaféer
 
 ### Hermanos Coffee Roasters
 - sted: 51.47348, -0.24855

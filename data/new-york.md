@@ -13,7 +13,7 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
 
   # Sone            overskrift 1: Uptown, Midtown … Rekkefølgen her blir rekkefølgen i appen.
                     Byer uten soner: dropp #-overskriftene.
-  ## Kategori       Nabolag og gater · Restauranter · Caféer · Barer · Jazzklubber ·
+  ## Kategori       Nabolag og gater · Restauranter · Kaféer · Barer · Jazzklubber ·
                     Muséer og gallerier · Butikker · Hoteller · Strender og beach clubs ·
                     Verdt en omvei · Gåturer
   ### Navn ★        ett sted. ★ bak navnet = favoritt.
@@ -370,7 +370,7 @@ A seriously cool restaurant that turns into a nightspot as the evening goes on.
 - nettside: https://www.cafecluny.com/
 West Village
 
-Veldig bra café. Også middag.
+Veldig bra kafé. Også middag.
 
 - en: West Village
 
@@ -434,7 +434,7 @@ Korean with three Michelin stars. Excellent, but modern and some way from typica
 - nettside: https://www.esquinanyc.com/
 Nolita
 
-Bra, røff meksikansk. Walk-in i caféen, eller bestill bord i brasseriet (DJ m.m.) – inngangen er en «hemmelig» dør i takeaway-delen.
+Bra, røff meksikansk. Walk-in i kaféen, eller bestill bord i brasseriet (DJ m.m.) – inngangen er en «hemmelig» dør i takeaway-delen.
 
 - en: Nolita
 
@@ -488,7 +488,7 @@ Veldig autentisk, halvjålete klassisk italiensk. Supert til lunsj også. Vår f
 
 Very authentic, slightly posh classic Italian. Great for lunch too. Our favourite is the one on Madison Ave.
 
-## Caféer
+## Kaféer
 
 ### Russ & Daughters
 - sted: 40.72258, -73.98831

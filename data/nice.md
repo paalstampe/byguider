@@ -1,6 +1,6 @@
 ---
 tittel: Pål og Vibekes Nice
-undertittel: Restauranter, caféer og steder verdt en omvei.
+undertittel: Restauranter, kaféer og steder verdt en omvei.
 tittel-en: Pål and Vibeke’s Nice
 undertittel-en: Restaurants, cafés and places worth a detour.
 senter: 43.6990, 7.2620
@@ -13,7 +13,7 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
 
   # Sone            overskrift 1: Central, North … Rekkefølgen her blir rekkefølgen i appen.
                     Byer uten soner: dropp #-overskriftene.
-  ## Kategori       Nabolag og gater · Restauranter · Caféer · Barer · Jazzklubber ·
+  ## Kategori       Nabolag og gater · Restauranter · Kaféer · Barer · Jazzklubber ·
                     Muséer og gallerier · Butikker · Hoteller · Strender og beach clubs ·
                     Verdt en omvei · Gåturer
   ### Navn ★        ett sted. ★ bak navnet = favoritt.
@@ -49,8 +49,8 @@ og kobles hit på navn: type "område", "gate" eller "rute".
 - sted: 43.69728, 7.26301
 - google: ChIJ8UDfoKDazRIRfXnUNCW1OOc
 - gater: Rue Alphonse Karr, Rue Paradis, Avenue de Verdun, Avenue de Suède, Rue Longchamp
-Elegante butikker og boligkvartaler mellom Boulevard Victor Hugo og sjøen.
-- en: Elegant shops and residential blocks between Boulevard Victor Hugo and the sea.
+Flott område med butikker, restauranter og kaféer mellom Boulevard Victor Hugo og sjøen.
+- en: A lovely area with shops, restaurants and cafés between Boulevard Victor Hugo and the sea.
 
 ## Restauranter
 
@@ -227,7 +227,7 @@ Fine dining
 - google: ChIJi8Q6NtnbzRIRU8p6NkexOrk
 - nettside: https://lesagitateurs.com/magma
 
-## Caféer
+## Kaféer
 
 ### La Popote d'Ondine – Rue Blacas ★
 - sted: 43.69979, 7.27089
@@ -440,7 +440,7 @@ Cocktailbar
 - sted: 43.69639, 7.28621
 - google: ChIJe7daQ7_azRIRisFL66Jl5u8
 - nettside: https://www.cafeducycliste.com/
-Sykkelklær og café
+Sykkelklær og kafé
 - en: Cycling apparel and café
 
 ### Trésors Publics

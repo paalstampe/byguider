@@ -63,7 +63,7 @@ Hold HANDOVER.md oppdatert når noe vesentlig endres (punkt 2, 8 og 10.5).
   og si fra hvis du er usikker på plasseringen.
 - Nettside hentes samme sted: lenken «Website» på stedets side i Google Maps (a[data-item-id="authority"]).
   Ta bare med stedets egen side (ev. Instagram) — ikke bookingtjenester eller tredjepartsguider.
-- Restauranter, caféer, butikker o.l.: første linje i notatet (og i en:) er området/nabolaget stedet ligger i
+- Restauranter, kaféer, butikker o.l.: første linje i notatet (og i en:) er området/nabolaget stedet ligger i
   (f.eks. «Marylebone»), som i New York. Slå det opp per sted; adressen kommer i teksten under.
 - Nabolag får alltid omriss i data/<by>-geometri.geojson, i alle byer (også nye): et «område»-polygon
   med notat som skisserer hele nabolaget, avgrenset av navngitte gater (koordinater fra OpenStreetMap/Overpass).

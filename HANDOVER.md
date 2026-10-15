@@ -8,7 +8,7 @@ Sist oppdatert: 4. oktober 2026 (New York som fjerde by, grenen `new-york`).
 ## 1. Målet
 
 En enkel nettbasert app som viser Pål og Vibekes byer — London først, så Nice, Oslo og New York — på kart,
-med nabolag, steder i flere kategorier (caféer, parker, butikker, markeder, gallerier)
+med nabolag, steder i flere kategorier (kaféer, parker, butikker, markeder, gallerier)
 og markerte gater og gåturer. Skal kunne deles via lenke uten innlogging.
 
 Todelt strategi:
@@ -112,7 +112,7 @@ Fri tekst = notat. Første avsnitt i lista, alt i popupen. `[tekst](https://…)
 (popup og rutekort; lista og søket bruker bare lenketeksten).
 ```
 
-Kategorier (`##`): Nabolag og gater · Restauranter · Caféer · Barer · Jazzklubber ·
+Kategorier (`##`): Nabolag og gater · Restauranter · Kaféer · Barer · Jazzklubber ·
 Muséer og gallerier · Butikker · Hoteller · Strender og beach clubs · Verdt en omvei · Gåturer. Overskriftene matches mot `KATEGORIER` i `app.js`
 (navn, nøkkel og alias, uten hensyn til aksenter/store bokstaver). Ukjent kategori vises
 med overskriften som navn og grå prikk.
@@ -387,7 +387,7 @@ Ut av koden, inn i `metadata` i hver bys GeoJSON-fil:
 
 Blir liggende felles i `app.js`:
 
-- `KATEGORIER` med farger. En café skal se lik ut i alle byer.
+- `KATEGORIER` med farger. En kafé skal se lik ut i alle byer.
 - All listelogikk, søk, sortering og sidebar. Denne delen rører aldri kartet
   og skal ikke endres av MapLibre-byttet.
 
@@ -472,7 +472,7 @@ Hvert trinn skal kunne committes for seg og fungere alene.
   dem.», Nice «Det beste av Nice, uten turistfellene.», Oslo «Bord og barer vi kommer tilbake
   til.» — hentet fra en uflettet commit (`802e279`, jeg-form) og skrevet om til vi-form.
   6.10.: forsidetekst og undertittel er nå like for hver by — London og New York «Nabolag,
-  gåturer og restauranter verdt en omvei.», Nice «Restauranter, caféer og steder verdt en omvei.»,
+  gåturer og restauranter verdt en omvei.», Nice «Restauranter, kaféer og steder verdt en omvei.»,
   Oslo «Restauranter og barer, pluss litt annet.».
 - Nabolag alltid synlige (grenen `oversikt-omrader`, PR #32, 5.10.): alle tegnede områder
   (større område og kjerne) har lys flate og stiplet omriss hele tiden (`OMRADELAG`, kilden

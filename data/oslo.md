@@ -13,7 +13,7 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
 
   # Sone            overskrift 1: Central, North … Rekkefølgen her blir rekkefølgen i appen.
                     Byer uten soner: dropp #-overskriftene.
-  ## Kategori       Nabolag og gater · Restauranter · Caféer · Barer · Jazzklubber ·
+  ## Kategori       Nabolag og gater · Restauranter · Kaféer · Barer · Jazzklubber ·
                     Muséer og gallerier · Butikker · Hoteller · Strender og beach clubs ·
                     Verdt en omvei · Gåturer
   ### Navn ★        ett sted. ★ bak navnet = favoritt.
