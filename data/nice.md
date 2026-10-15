@@ -43,6 +43,15 @@ Områdeskisser, gater og gåturer tegnes i nice-geometri.geojson (f.eks. i geojs
 og kobles hit på navn: type "område", "gate" eller "rute".
 -->
 
+## Nabolag og gater
+
+### Carré d'Or
+- sted: 43.69728, 7.26301
+- google: ChIJ8UDfoKDazRIRfXnUNCW1OOc
+- gater: Rue Alphonse Karr, Rue Paradis, Avenue de Verdun, Avenue de Suède, Rue Longchamp
+Elegante butikker og boligkvartaler mellom Boulevard Victor Hugo og sjøen.
+- en: Elegant shops and residential blocks between Boulevard Victor Hugo and the sea.
+
 ## Restauranter
 
 ### Nespo ★
@@ -350,6 +359,63 @@ Kaffe
 - nettside: https://www.lecountrystore.com/
 Kaffe
 - en: Coffee
+
+### Garden Café
+- sted: 43.69802, 7.25605
+- google: ChIJE-K7_GrRzRIR5HuLGpCNgv8
+- nettside: https://www.gardencafenice.com/
+Brunch
+- en: Brunch
+
+### Le Daily-Ric
+- sted: 43.69929, 7.27038
+- google: ChIJFWt4oKbazRIRkfK6AZJPVhc
+Lunsj
+
+32 Rue de l'Hôtel des Postes.
+- en: Lunch
+
+32 Rue de l'Hôtel des Postes.
+
+### Le Daily-Ric 2
+- sted: 43.69597, 7.26052
+- google: ChIJYYrobG_RzRIR2JGn-UgdmyU
+Lunsj
+
+34 Rue de France.
+- en: Lunch
+
+34 Rue de France.
+
+### Philippe Tayac Pâtisserie
+- sted: 43.69869, 7.26550
+- google: ChIJC8S5hXDbzRIRVG2sju1j2So
+Konditori
+
+15 Rue du Maréchal Joffre.
+- en: Pâtisserie
+
+15 Rue du Maréchal Joffre.
+
+### Cafés Indien – Rue Pairolière
+- sted: 43.69915, 7.27860
+- google: ChIJAbb1CrvazRIRETuBFlnlj-Y
+Kaffebrenneri
+
+35 Rue Pairolière, Vieux-Nice.
+- en: Coffee roaster
+
+35 Rue Pairolière, Vieux-Nice.
+
+### Cafés Indien – Rue Sainte-Réparate
+- sted: 43.69689, 7.27605
+- google: ChIJpVW5SqPazRIRJNT8abGm6nE
+Kaffebrenneri
+
+2 bis Rue Sainte-Réparate, Vieux-Nice.
+- en: Coffee roaster
+
+2 bis Rue Sainte-Réparate, Vieux-Nice.
 
 ## Barer
 
