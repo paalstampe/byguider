@@ -86,6 +86,8 @@ Ikke søkbar: forsiden og alle stubbene har `<meta name="robots" content="noinde
 Forsiden viser en miniatyr av åpningssiden foran hver by: `bilder/<id>.webp` som fast regel,
 eller valgfritt felt `bilde` i byer.json. Samme oppskrift som landingssiden stam.pe: viewport
 1300×900, deviceScaleFactor 2, beskåret til 1200×900 fra venstre og skalert til 360×270.
+Hver by har også en mørk utgave, `bilder/<id>-mork.webp`, som forsiden viser i mørk modus
+(mangler den, brukes den lyse). Skriptet lager begge.
 Lag på nytt etter synlige endringer: `.claude/miniatyrer.sh` (alle) eller
 `.claude/miniatyrer.sh https://stam.pe/byguider nice` (én by; tar bildet fra live-siden).
 Vises 120×90 (76×57 på mobil ≤ 600 px). By med `status: "kommer"` eller uten bilde får tom ramme.
