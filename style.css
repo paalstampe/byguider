@@ -535,6 +535,11 @@ html, body {
   background: var(--kartflate);
 }
 
+/* Skjult til byens utsnitt er satt (se kart-venter i app.js), så tonet inn. */
+#kart .maplibregl-canvas { transition: opacity 0.2s; }
+#kart.kart-venter .maplibregl-canvas { opacity: 0; }
+@media (prefers-reduced-motion: reduce) { #kart .maplibregl-canvas { transition: none; } }
+
 .maplibregl-map {
   font-family: 'Work Sans', system-ui, sans-serif;
   background: var(--kartflate);

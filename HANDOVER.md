@@ -236,6 +236,9 @@ jobben. Nærmer seg en guidebok.
   Omfargingen skjer i stil-JSON-en før første tegning (`fargeleggStil`, via
   `setStyle(KARTSTIL, { transformStyle })`), så den opprinnelige, lyse Voyager-stilen aldri blinker fram.
   `app.js` setter også papirfargen på `<html>` straks, før `style.css` er lastet.
+  Kartflaten (`.maplibregl-canvas`) er skjult (`kart-venter`) til byens utsnitt er satt og kartbitene
+  er lastet (høyst 0,8 s etter at lagene er lagt på), og tones så inn — ellers vises verdenskartet fra
+  startposisjonen et øyeblikk når bydataene kommer etter stilen.
 - To kilder: `steder` (punkter, klynger t.o.m. zoom 12, radius 14 px) med lagene `klynger`,
   `klyngetall` og `punkter` (symbol med kategoriikon), og `ruter` med `gater` og `gaaturer`.
   Filtrering bytter ut kildedataene (`setData`), slik at klyngene følger filtrene.
