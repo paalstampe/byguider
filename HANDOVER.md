@@ -133,9 +133,9 @@ med tittelen som lenke (kan gjentas; uten kilde: «Artikkel: Tittel»).
 `- utenfor: ja` holder et sted (eller en gåtur) utenfor utsnittet kartet åpner med og som
 «Vis hele byen» går til — for strender, beach clubs og turer et stykke utenfor byen.
 
-`- status: onskeliste` merker et sted som ikke besøkt ennå (ønskeliste). Slike steder vises bare
-med `?onskeliste` i adressen (virker sammen med `?lang=en`); uten parameteren fjernes de før kart,
-liste, filtre og telling bygges. Med parameteren: sammenslått seksjon «Ikke besøkt ennå (n)» nederst
+`- status: onskeliste` merker et sted som ikke besøkt ennå (ønskeliste). Slike steder vises for alle
+(tidligere bare med `?onskeliste`, som nå ikke gjør noe), holdt utenfor hovedlista og tellingen:
+sammenslått seksjon «Ikke besøkt ennå (n)» nederst
 i lista (dempet, første linje av notatet), bryteren «Vis ønskeliste» i filterlinjen, egen kartkilde
 uten klynging med ring-ikoner i dempet farge, og merkelappen «Ikke besøkt ennå» i infoboksen.
 ★ på et ønskelistested betyr førstevalg: «Førstevalg» / «Top pick» i lista (sortert øverst),
