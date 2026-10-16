@@ -454,6 +454,39 @@
       "type": "Feature",
       "properties": {
         "navn": "Havnen – Le Petit Marais",
+        "type": "område",
+        "notat": "Kjernen: havnen (Place de l'Île de Beauté) nordover til Rue Bonaparte, Rue Cassini/Rue Martin Seytour–Rue Arson"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [7.28297, 43.7007],
+            [7.28336, 43.70067],
+            [7.28425, 43.70061],
+            [7.28549, 43.70052],
+            [7.28669, 43.70044],
+            [7.28658, 43.69976],
+            [7.28646, 43.6991],
+            [7.28637, 43.69856],
+            [7.28624, 43.69836],
+            [7.28553, 43.69844],
+            [7.28416, 43.69856],
+            [7.28394, 43.69858],
+            [7.28377, 43.6989],
+            [7.28315, 43.69929],
+            [7.28299, 43.69939],
+            [7.2821, 43.69995],
+            [7.28292, 43.70065],
+            [7.28297, 43.7007]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "navn": "Havnen – Le Petit Marais",
         "type": "gate",
         "gate": "Rue Bonaparte",
         "kilde": "OpenStreetMap"
