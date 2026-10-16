@@ -764,6 +764,11 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     attributionControl: { compact: false }
   });
   kart.touchZoomRotate.disableRotation();
+  /* Kartflaten holdes skjult (kun --kartflate synes) til byens utsnitt og stedene er på plass —
+     ellers vises verdenskartet fra startposisjonen et øyeblikk før kartet hopper til byen. */
+  const kartBoks = kart.getContainer();
+  kartBoks.classList.add('kart-venter');
+  const visKart = () => kartBoks.classList.remove('kart-venter');
   // Stilen fargelegges før den tegnes første gang, så den opprinnelige Voyager-stilen aldri blinker fram.
   kart.setStyle(KARTSTIL, { transformStyle: (forrige, ny) => fargeleggStil(ny) });
   kart.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-left');
@@ -1806,6 +1811,12 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       kartKlar.then(() => {
         leggTilKartlag();
         filtrerKart(synlige());
+        // Tones inn når kartbitene for utsnittet er lastet, så stedene ikke kommer før gatene.
+        // Venter høyst 0,8 s (å vente på «idle» tar for lang tid mens offline-lagringen går).
+        const naarLastet = () => { if (kart.areTilesLoaded()) { kart.off('render', naarLastet); visKart(); } };
+        kart.on('render', naarLastet);
+        naarLastet();
+        setTimeout(() => { kart.off('render', naarLastet); visKart(); }, 800);
         kart.once('idle', forhandslastOffline);
       });
 
@@ -1813,6 +1824,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       el.fotTekst.innerHTML = fot();
     })
     .catch(err => {
+      visKart();
       feil = () => {
         el.liste.innerHTML = '<p class="tomt">' + t('fantIkke', '<code>' + esc(DATA_NAVN) + '</code>', esc(err.message)) +
           '<br><br>' + t('lokalt') + '</p>';
