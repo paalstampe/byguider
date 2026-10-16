@@ -289,6 +289,16 @@ Modern European. Sannergata 2.
 <!-- Ønskeliste: restauranter vi ikke har besøkt ennå (- status: onskeliste). Vises bare med ?onskeliste.
      ★ = de vi helst vil til først. Fjern «status»-linja når vi har vært der. -->
 
+### Lasarett Matbar ★
+- sted: 59.93317, 10.76704
+- google: ChIJzwYbgMlvQUYR7Z2-SeCYje4
+- nettside: http://www.lasarett.no/
+- status: onskeliste
+Torshov
+Torshovgata 15.
+- en: Torshov
+Torshovgata 15.
+
 ### The Little Pickle ★
 - sted: 59.91909, 10.76404
 - google: ChIJWzscAZ1vQUYR4wxlWWvTMJU
