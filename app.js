@@ -167,9 +167,8 @@ function maal(s) {
     .replace(/(\d)\s*t\b/g, '$1 h');
 }
 
-/* Ønskeliste: steder med «- status: onskeliste» er ikke besøkt ennå. De vises bare når adressen
-   har ?onskeliste (f.eks. oslo/?onskeliste); ellers fjernes de før noe annet bygges. */
-const ONSKELISTE = new URLSearchParams(location.search).has('onskeliste');
+/* Ønskeliste: steder med «- status: onskeliste» er ikke besøkt ennå. De vises for alle,
+   sammenslått nederst i lista og som eget kartlag som er av til man slår det på. */
 const erOnskeliste = p => normaliser(p.status) === 'onskeliste';
 
 const SPRAKVALG =
@@ -713,7 +712,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
   const state = {
     oppslag: [],                 // { id, f, p, erLinje, punkt, bbox }
-    onskeliste: [],              // ikke besøkt ennå — bare med ?onskeliste; holdes utenfor oppslag
+    onskeliste: [],              // ikke besøkt ennå — holdes utenfor oppslag
     visOnskeliste: false,        // kartlaget
     onskelisteApen: false,       // seksjonen nederst i lista
     soner: new Set(),            // tom = alle
@@ -911,7 +910,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     }
   };
 
-  const KLIKKBARE = ['ruter-treff', 'punkter'].concat(ONSKELISTE ? ['onskeliste-ruter', 'onskeliste-punkter'] : []);
+  const KLIKKBARE = ['ruter-treff', 'punkter', 'onskeliste-ruter', 'onskeliste-punkter'];
 
   /* Alle tegnede nabolag har flate og omriss hele tiden (større område og kjerne), i samme stil som
      når nabolaget er valgt. Flatene er gjennomsiktige, så kjernen — som ligger oppå — blir mørkere. Navnet står under ikonet, men først når man har zoomet inn og
@@ -1033,15 +1032,11 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       const glyf = IKONER[kat.ikon] || IKONER.prikk;
       kart.addImage('ikon-' + k, lagIkon(kat.farge, glyf), { pixelRatio: 2 });
       kart.addImage('ikon-fav-' + k, lagIkon(kat.farge, glyf, true), { pixelRatio: 2 });
-      if (ONSKELISTE) {
-        kart.addImage('ikon-ring-' + k, lagIkon(null, glyf, 'ring'), { pixelRatio: 2 });
-        kart.addImage('ikon-ring-fav-' + k, lagIkon(AKSENT, glyf, 'ring'), { pixelRatio: 2 });
-      }
+      kart.addImage('ikon-ring-' + k, lagIkon(null, glyf, 'ring'), { pixelRatio: 2 });
+      kart.addImage('ikon-ring-fav-' + k, lagIkon(AKSENT, glyf, 'ring'), { pixelRatio: 2 });
     });
-    if (ONSKELISTE) {
-      kart.addImage('ikon-ring-ukjent', lagIkon(null, IKONER.prikk, 'ring'), { pixelRatio: 2 });
-      kart.addImage('ikon-ring-fav-ukjent', lagIkon(AKSENT, IKONER.prikk, 'ring'), { pixelRatio: 2 });
-    }
+    kart.addImage('ikon-ring-ukjent', lagIkon(null, IKONER.prikk, 'ring'), { pixelRatio: 2 });
+    kart.addImage('ikon-ring-fav-ukjent', lagIkon(AKSENT, IKONER.prikk, 'ring'), { pixelRatio: 2 });
     kart.addImage('ikon-ukjent', lagIkon(UKJENT_FARGE, IKONER.prikk), { pixelRatio: 2 });
     kart.addImage('ikon-fav-ukjent', lagIkon(UKJENT_FARGE, IKONER.prikk, true), { pixelRatio: 2 });
   }
@@ -1068,13 +1063,11 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       kart.addLayer(Object.assign({ id: id }, lag[id]));
     });
 
-    if (ONSKELISTE) {
-      kart.addSource('onskeliste', { type: 'geojson', data: tomSamling() });
-      Object.keys(ONSKELAG).forEach(id => {
-        kart.addLayer(Object.assign({ id: id }, ONSKELAG[id]), 'klynger');
-      });
-      visOnskelag();
-    }
+    kart.addSource('onskeliste', { type: 'geojson', data: tomSamling() });
+    Object.keys(ONSKELAG).forEach(id => {
+      kart.addLayer(Object.assign({ id: id }, ONSKELAG[id]), 'klynger');
+    });
+    visOnskelag();
 
     /* Klikk på tomt kart lukker infoboksen og opphever valget. Popupens egen closeOnClick er av:
        den lytter på samme klikk som stedet, og lukket den nye infoboksen når man klikket
@@ -1769,8 +1762,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       const meta = byggMeta(md);
       settOppSide(meta);
 
-      // Uten ?onskeliste fjernes ønskelistestedene før noe annet bygges.
-      const alle = byggFeatures(md, geo).filter(f => ONSKELISTE || !erOnskeliste(f.properties)).map(lagOppslag);
+      const alle = byggFeatures(md, geo).map(lagOppslag);
       state.oppslag = alle.filter(o => !erOnskeliste(o.p));
       state.onskeliste = alle.filter(o => erOnskeliste(o.p));
       Object.keys(md.kategoriNavn).forEach(k => {
