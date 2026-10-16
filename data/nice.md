@@ -56,7 +56,7 @@ Flott område med butikker, restauranter og kaféer mellom Boulevard Victor Hugo
 - navn-en: The Port – Le Petit Marais
 - sted: 43.69854, 7.28552
 - google: ChIJL8mHPb7azRIR6TKKM-V4290
-- gater: Rue Bonaparte, Rue Bavastro, Rue Fodéré, Rue Martin Seytour, Rue Catherine Segurane
+- gater: Rue Bonaparte, Rue Bavastro, Rue Lascaris, Rue Martin Seytour, Rue Catherine Segurane
 Kvarteret mellom Place Garibaldi og havnen, kalt Le Petit Marais. Smale gater med kaféer, vinbarer, bistroer og antikvitetsbutikker – mer lokalt og mindre turistpreget enn gamlebyen. Mange nye, gode restauranter åpner rundt havnen, også flere i Michelinguiden.
 - en: The quarter between Place Garibaldi and the port, nicknamed Le Petit Marais. Narrow streets with cafés, wine bars, bistros and antique shops – more local and less touristy than the old town. Many new, good restaurants are opening around the port, including several in the Michelin Guide.
 
