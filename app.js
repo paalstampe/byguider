@@ -618,14 +618,6 @@ const SKALL = `
   </aside>
   <main class="kartflate">
     <div id="kart"></div>
-    <div class="rute-kort" id="rute-kort" hidden>
-      <button type="button" class="rute-lukk" id="rute-lukk" data-t-aria="lukk">&times;</button>
-      <p class="rute-kicker" id="rute-kicker"></p>
-      <h2 class="rute-navn" id="rute-navn"></h2>
-      <p class="rute-meta" id="rute-meta"></p>
-      <p class="rute-notat" id="rute-notat"></p>
-      <p class="pop-lenker"><button type="button" class="pop-lenke pop-zoom" id="rute-zoom" data-t="zoomInn"></button></p>
-    </div>
   </main>
 </div>`;
 
@@ -739,14 +731,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     fotTekst:   document.getElementById('fot-tekst'),
     smuleBy:    document.getElementById('smule-by'),
     tittel:     document.getElementById('tittel'),
-    ingress:    document.getElementById('ingress'),
-    ruteKort:   document.getElementById('rute-kort'),
-    ruteKicker: document.getElementById('rute-kicker'),
-    ruteNavn:   document.getElementById('rute-navn'),
-    ruteMeta:   document.getElementById('rute-meta'),
-    ruteNotat:  document.getElementById('rute-notat'),
-    ruteLukk:   document.getElementById('rute-lukk'),
-    ruteZoom:   document.getElementById('rute-zoom')
+    ingress:    document.getElementById('ingress')
   };
 
   /* ---------- kart ---------- */
@@ -1096,7 +1081,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
         const o = oppslagFraId(e.features[0].properties._id);
         if (!o) return;
         tips.remove();
-        velg(o.id, false);   // gåturer vises i rutekortet, ikke i popup
+        velg(o.id, false, o.erLinje ? e.lngLat : null);   // gåturer: boksen der ruten ble klikket
       });
     });
 
@@ -1304,7 +1289,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     return [maal(p.lengde), maal(p.varighet), p.sone].filter(Boolean).join(' · ');
   }
 
-  /* Første avsnitt av notatet, forkortet — brukes i lista. Hele notatet vises i popup/rutekort. */
+  /* Første avsnitt av notatet, forkortet — brukes i lista. Hele notatet vises i popupen. */
   function kortNotat(tekst) {
     const a = utenLenker(tekst).split(/\n\s*\n/)[0].replace(/\s*\n\s*/g, ' ');
     return a.length > 160 ? a.slice(0, 157).replace(/\s+\S*$/, '') + ' …' : a;
@@ -1335,10 +1320,14 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       '<a href="' + esc(l.url) + '" target="_blank" rel="noopener">' + esc(l.tittel) + '</a></p>'
     ).join('');
     const notat = visNotat(p);
+    const o = id && oppslagFraId(id);
+    const meta = o && o.erLinje
+      ? [t('gatur'), ruteMeta(p), o.f.geometry ? '' : t('ruteIkkeTegnet')].filter(Boolean).join(' · ')
+      : metaLinje(p) || ruteMeta(p);
     return (erOnskeliste(p) ? '<p class="merke-ikke-besokt">' + t('ikkeBesokt') +
         (p.favoritt ? ' · ' + t('forstevalg') : '') + '</p>' : '') +
       '<h3 class="pop-navn">' + esc(visNavn(p)) + '</h3>' +
-      '<p class="pop-meta">' + esc(metaLinje(p) || ruteMeta(p)) + '</p>' +
+      '<p class="pop-meta">' + esc(meta) + '</p>' +
       (p.gater && p.gater.length ? '<p class="pop-gater">' + esc(p.gater.join(' · ')) + '</p>' : '') +
       (notat ? '<p class="pop-notat">' + notatHtml(notat) + '</p>' : '') +
       les +
@@ -1477,7 +1466,6 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
     if (state.valgtId && !vis.concat(synligeOnskeliste()).some(o => o.id === state.valgtId)) {
       state.valgtId = null;
-      el.ruteKort.hidden = true;
       popup.remove();
       visFokus(null);
     }
@@ -1579,7 +1567,21 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
   /* ---------- valg ---------- */
 
-  function velg(id, flyTil) {
+  /* Gåturer har ikke ett punkt: infoboksen festes der ruten ble klikket, ellers på ruten nær midten
+     av den (punktet nærmest midten av ruteboksen). Uten tegnet rute: midt i kartet. */
+  function ruteAnker(o) {
+    const g = o.f.geometry;
+    if (!g || !o.bbox) return kart.getCenter();
+    const mx = (o.bbox[0] + o.bbox[2]) / 2, my = (o.bbox[1] + o.bbox[3]) / 2;
+    let best = g.coordinates[0], avstand = Infinity;
+    g.coordinates.forEach(c => {
+      const d = (c[0] - mx) ** 2 + (c[1] - my) ** 2;
+      if (d < avstand) { avstand = d; best = c; }
+    });
+    return { lng: best[0], lat: best[1] };
+  }
+
+  function velg(id, flyTil, klikkPunkt) {
     const o = oppslagFraId(id);
     if (!o) return;
     state.valgtId = id;
@@ -1587,13 +1589,9 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     if (erOnskeliste(o.p)) settOnskelag(true);
 
     if (o.erLinje) {
-      popup.remove();
-      visRuteKort(o);
-      // Mobil: rutekortet ligger nederst i kartet — hold ruten over det.
-      const under = smalSkjerm.matches ? el.ruteKort.offsetHeight + 24 : 70;
-      if (flyTil && o.bbox) kart.fitBounds(o.bbox, { padding: { top: 50, right: 40, bottom: under, left: 40 }, maxZoom: 15, duration: 600 });
+      if (flyTil && o.bbox) kart.fitBounds(o.bbox, { padding: 70, maxZoom: 15, duration: 600 });
+      aapnePopup(o, klikkPunkt || ruteAnker(o));
     } else {
-      el.ruteKort.hidden = true;
       if (flyTil && o.fokusBbox) {
         kart.fitBounds(o.fokusBbox, { padding: 90, maxZoom: 16, duration: 600 });
       } else if (flyTil && o.punkt) {
@@ -1606,7 +1604,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     tegnListe(synlige());
 
     // Mobil: kartet ligger over lista. Valg fra lista hopper opp til kartet, med infoboksen
-    // (eller rutekortet) åpen — som i Reiseplanlegging.
+    // åpen — som i Reiseplanlegging.
     if (flyTil && smalSkjerm.matches) {
       document.querySelector('.kartflate').scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
@@ -1615,24 +1613,9 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
   function nullstillValg() {
     if (!state.valgtId) return;
     state.valgtId = null;
-    el.ruteKort.hidden = true;
     visFokus(null);
     tegnListe(synlige());
   }
-
-  function visRuteKort(o) {
-    const p = o.p;
-    el.ruteKicker.textContent = (erOnskeliste(p) ? t('ikkeBesokt') + ' · ' : '') +
-      t('gatur') + (o.f.geometry ? '' : ' · ' + t('ruteIkkeTegnet'));
-    el.ruteNavn.textContent = visNavn(p);
-    el.ruteMeta.textContent = ruteMeta(p);
-    el.ruteNotat.innerHTML = notatHtml(visNotat(p));
-    el.ruteZoom.dataset.id = o.id;
-    el.ruteZoom.parentNode.style.display = o.bbox ? '' : 'none';
-    el.ruteKort.hidden = false;
-  }
-
-  el.ruteLukk.addEventListener('click', nullstillValg);
 
   /* ---------- filterknapper ---------- */
 
@@ -1745,8 +1728,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     byggFiltre();
     tegn();
     const o = state.valgtId && oppslagFraId(state.valgtId);
-    if (o && o.erLinje) visRuteKort(o);
-    else if (o && o.punkt && popup.isOpen()) aapnePopup(o, o.punkt);
+    if (o && popup.isOpen()) aapnePopup(o, o.punkt || popup.getLngLat());
   });
 
   /* ---------- last data ---------- */

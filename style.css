@@ -690,8 +690,8 @@ html, body {
 
 .pop-notat { margin: 8px 0 0; font-size: 13px; line-height: 1.45; white-space: pre-line; max-height: 220px; overflow-y: auto; }
 .pop-les { margin: 8px 0 0; font-size: 13px; line-height: 1.45; }
-.pop-les a, .pop-notat a, .rute-notat a { color: var(--aksent); text-decoration: underline; text-underline-offset: 3px; }
-@media (hover: hover) and (pointer: fine) { .pop-les a:hover, .pop-notat a:hover, .rute-notat a:hover { color: var(--aksent-hover); } }
+.pop-les a, .pop-notat a { color: var(--aksent); text-decoration: underline; text-underline-offset: 3px; }
+@media (hover: hover) and (pointer: fine) { .pop-les a:hover, .pop-notat a:hover { color: var(--aksent-hover); } }
 
 .pop-lenker {
   margin: 10px 0 0;
@@ -721,65 +721,6 @@ button.pop-lenke {
 
 .pop-lenke:hover { color: var(--aksent-hover); }
 
-/* ---------- Kort for valgt gåtur ---------- */
-
-.rute-kort {
-  position: absolute;
-  left: 20px;
-  bottom: 24px;
-  z-index: 500;
-  width: 300px;
-  padding: 18px 20px 20px;
-  background: var(--kort);
-  border: 1px solid var(--kant);
-  border-radius: 0;
-  box-shadow: none;
-}
-
-.rute-lukk {
-  position: absolute;
-  top: 8px;
-  right: 10px;
-  border: 0;
-  background: none;
-  font-size: 20px;
-  line-height: 1;
-  color: var(--dempet);
-  cursor: pointer;
-  padding: 2px 4px;
-}
-
-.rute-lukk:hover { color: var(--aksent); }
-
-.rute-kicker {
-  margin: 0 0 8px;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--aksent);
-}
-
-.rute-navn {
-  margin: 0;
-  font-family: 'Playfair Display', Georgia, serif;
-  font-weight: 500;
-  font-size: 22px;
-  line-height: 1.2;
-}
-
-.rute-meta {
-  margin: 8px 0 0;
-  padding-top: 8px;
-  border-top: 1px solid var(--kant-lys);
-  font-size: 12px;
-  letter-spacing: 0.02em;
-  color: var(--dempet);
-}
-
-.rute-notat { margin: 8px 0 0; font-size: 13px; line-height: 1.45; white-space: pre-line; max-height: 40vh; overflow-y: auto; }
-.rute-notat:empty, .rute-meta:empty { display: none; }
-
 /* Desktop: hele sidepanelet ruller (ett rullefelt), tellerlinjen blir liggende øverst. */
 @media (min-width: 901px) {
   .sidebar { overflow-y: auto; overscroll-behavior: contain; }
@@ -805,11 +746,6 @@ button.pop-lenke {
   .teller-rad { margin-left: 20px; margin-right: 20px; }
   .sidebar-fot { padding-left: 20px; padding-right: 20px; }
   /* Rutekortet holdes lavt, så ruten synes over det; notatet ruller. */
-  .rute-kort { left: 12px; right: 12px; width: auto; bottom: 12px; padding: 12px 16px 14px; }
-  .rute-kicker { margin-bottom: 4px; }
-  .rute-navn { font-size: 19px; padding-right: 24px; }
-  .rute-meta { margin-top: 6px; padding-top: 6px; }
-  .rute-notat { max-height: 6.5em; margin-top: 6px; overscroll-behavior: contain; }
   .forside-innhold { padding: 40px 20px 48px; }
   .sprakvalg { top: -7px; }
   .sprakvalg button { padding: 6px 5px 3px; }   /* større trykkflate på mobil */
