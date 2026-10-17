@@ -846,6 +846,19 @@ Pub and dining room, 55 Shirland Road.
 EKSEMPEL — Barnes. Koordinat er omtrentlig
 - en: EXAMPLE — Barnes. Location is approximate
 
+### The Alberts Deli
+- sted: 51.46160, -0.29667
+- google: ChIJ15fZhToMdkgRa6kq1Emo24I
+- nettside: http://www.thealbertsdeli.com/
+- utenfor: ja
+Richmond
+
+Deli og kafé, Worple Way 2.
+
+- en: Richmond
+
+Deli and café, 2 Worple Way.
+
 ## Butikker
 
 ### Sign of the Times
