@@ -487,17 +487,14 @@ function byggFeatures(md, geo) {
     const gater = finnGeo(st.navn, 'gate').map(f => ({ type: 'Feature', geometry: f.geometry, properties: { rolle: 'gate' } }));
     const rute = finnGeo(st.navn, 'rute')[0];
 
-    // Nabolagsknappen ligger i kjernen (polygon nr. 2) når den finnes: ligger sted: utenfor,
-    // flyttes knappen inn. Uten sted: havner den midt i kjernen, ellers midt i området.
-    const kjerne = omrade[1];
+    // Nabolagsknappen ligger midt i kjernen (polygon nr. 2) når den finnes, ellers midt i området.
+    // sted: (fra Google) brukes bare for nabolag uten omriss.
+    const flate = omrade[1] || omrade[0];
     let geometry = null;
     const pkt = lesKoordinat(st.felt.sted);
-    if (kjerne && !(pkt && iPolygon(pkt, kjerne.geometry.coordinates[0]))) {
-      geometry = { type: 'Point', coordinates: punktInni(kjerne.geometry.coordinates[0]) };
-    }
+    if (flate) geometry = { type: 'Point', coordinates: punktInni(flate.geometry.coordinates[0]) };
     else if (pkt) geometry = { type: 'Point', coordinates: pkt };
     else if (rute) geometry = rute.geometry;
-    else if (omrade.length) geometry = { type: 'Point', coordinates: punktInni(omrade[0].geometry.coordinates[0]) };
 
     return { type: 'Feature', geometry: geometry, properties: p, fokus: omrade.concat(gater) };
   });
@@ -513,31 +510,39 @@ function iPolygon(p, ring) {
   return inni;
 }
 
-/* Et punkt midt i ringen: tyngdepunktet hvis det ligger inni, ellers midt på det bredeste
-   stykket av en vannrett linje gjennom midten (alltid inni, også for buktete former). */
+/* Et punkt midt i ringen: tyngdepunktet, så lenge det ligger godt inni. For buktete eller
+   smale former (der tyngdepunktet havner utenfor eller nær kanten) brukes i stedet punktet
+   lengst fra kanten, funnet på et rutenett over formen. */
 function punktInni(ring) {
   let a = 0, cx = 0, cy = 0;
   for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
     const k = ring[j][0] * ring[i][1] - ring[i][0] * ring[j][1];
     a += k; cx += (ring[j][0] + ring[i][0]) * k; cy += (ring[j][1] + ring[i][1]) * k;
   }
-  if (a) {
-    const t = [cx / (3 * a), cy / (3 * a)];
-    if (iPolygon(t, ring)) return t;
+  const midt = a ? [cx / (3 * a), cy / (3 * a)] : ring[0];
+  const xs = ring.map(k => k[0]), ys = ring.map(k => k[1]);
+  const x0 = Math.min.apply(null, xs), x1 = Math.max.apply(null, xs);
+  const y0 = Math.min.apply(null, ys), y1 = Math.max.apply(null, ys);
+  let best = midt, bestAvstand = 0;
+  for (let i = 1; i < 30; i++) for (let j = 1; j < 30; j++) {
+    const p = [x0 + (x1 - x0) * i / 30, y0 + (y1 - y0) * j / 30];
+    const d = iPolygon(p, ring) ? kantAvstand(p, ring) : 0;
+    if (d > bestAvstand) { bestAvstand = d; best = p; }
   }
-  const ys = ring.map(k => k[1]);
-  const y = (Math.min.apply(null, ys) + Math.max.apply(null, ys)) / 2;
-  const xs = [];
+  return iPolygon(midt, ring) && kantAvstand(midt, ring) >= bestAvstand / 2 ? midt : best;
+}
+
+/* Korteste avstand fra punktet til ringens kant (i grader breddegrad; lengdegrad justert). */
+function kantAvstand(p, ring) {
+  const c = Math.cos(p[1] * Math.PI / 180);
+  let min = Infinity;
   for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
-    const [xi, yi] = ring[i], [xj, yj] = ring[j];
-    if ((yi > y) !== (yj > y)) xs.push(xi + (y - yi) * (xj - xi) / (yj - yi));
+    const ax = (ring[j][0] - p[0]) * c, ay = ring[j][1] - p[1];
+    const dx = (ring[i][0] - ring[j][0]) * c, dy = ring[i][1] - ring[j][1];
+    const t = Math.max(0, Math.min(1, -(ax * dx + ay * dy) / (dx * dx + dy * dy || 1)));
+    min = Math.min(min, Math.hypot(ax + t * dx, ay + t * dy));
   }
-  xs.sort((m, n) => m - n);
-  let best = [ring[0][0], ring[0][1]], bredde = -1;
-  for (let i = 0; i + 1 < xs.length; i += 2) {
-    if (xs[i + 1] - xs[i] > bredde) { bredde = xs[i + 1] - xs[i]; best = [(xs[i] + xs[i + 1]) / 2, y]; }
-  }
-  return best;
+  return min;
 }
 
 /* «Financial Times | Artikkelens tittel | https://…» -> { kilde, tittel, url }.

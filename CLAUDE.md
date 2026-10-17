@@ -81,7 +81,7 @@ Playwright med `colorScheme: 'light'` og `'dark'`. Ta bildene fra stam.pe etter 
 - Nabolag får alltid omriss i data/<by>-geometri.geojson, i alle byer (også nye): et «område»-polygon
   med notat som skisserer hele nabolaget, avgrenset av navngitte gater (koordinater fra OpenStreetMap/Overpass).
   Kjerne er valgfritt — bare der den gir mening; da kommer den som et polygon nr. 2 etter skissen (som i New York),
-  og kartet legger nabolagsknappen i kjernen selv om sted: (fra Google) ligger utenfor.
+  Kartet legger nabolagsknappen midt i kjernen, ellers midt i området — sted: (fra Google) brukes ikke til den.
   Gater Pål ber om å markere legges inn som «gate».
 - Engelsk innhold via navn-en: og en: (valgfritt; mangler det, vises norsk).
 
