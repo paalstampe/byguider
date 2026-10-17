@@ -119,7 +119,7 @@ senter-mobil: 51.5230, -0.1060     valgfritt: startutsnitt på mobil (≤ 900 px
 - gater: Marylebone High Street, Chiltern Street
 - google: <Place ID eller lenke>
 Fri tekst = notat. Første avsnitt i lista, alt i popupen. `[tekst](https://…)` i notatet blir en lenke
-(popup og rutekort; lista og søket bruker bare lenketeksten).
+(popupen; lista og søket bruker bare lenketeksten).
 ```
 
 Kategorier (`##`): Nabolag og gater · Restauranter · Kaféer · Barer · Jazzklubber ·
@@ -142,7 +142,7 @@ uten klynging med ring-ikoner i dempet farge, og merkelappen «Ikke besøkt enn�
 kobberfarget ring på kartet og «Ikke besøkt ennå · Førstevalg» i infoboksen.
 
 Gåturer har `lengde:` og `varighet:` som fritekst, og kan mangle tegnet rute
-(rutekortet sier da «rute ikke tegnet»).
+(infoboksen sier da «rute ikke tegnet» og åpner midt i kartet).
 
 **Geometri: `data/<by>-geometri.geojson`**, redigeres i geojson.io. Hver feature har
 `navn` (samme som `###` i md-fila) og `type`:
@@ -184,7 +184,7 @@ så en engelsk lenke kan deles direkte (`stam.pe/byguider/london/?lang=en`). Sta
   desimalkomma → punktum).
 - Søket treffer både norsk og engelsk tekst uansett språk. Stedsnavn i bakgrunnskartet
   (CARTO) står på lokalspråket.
-- Byttet tegner lista, filtrene, åpen popup og rutekortet på nytt uten å laste siden.
+- Byttet tegner lista, filtrene, og åpen popup på nytt uten å laste siden.
 
 ## 5. Valgt designretning: A — redaksjonell
 
@@ -217,8 +217,7 @@ Layout (desktop 1440×900):
 - Listeelementer er korte oppslag, ikke tabellrader: navn i Playfair 21 px,
   metalinje «Sone · Kategori · Status» i 13 px dempet, eventuelt notat i 14 px.
   Favoritter merkes med små caps i aksentfarge til høyre, ikke ikon.
-- Kort for valgt gåtur nede til venstre over kartet: 300 px bredt, hvit flate,
-  1 px kantlinje, ingen skygge.
+- Gåturer bruker samme infoboks som stedene (flyttbar), festet på ruten.
 
 Prinsipper som skiller A fra de andre: papirflate framfor hvitt, serif kun til
 navn og titler, ingen skygger, ingen avrundede kort — kantlinjer og luft gjør
@@ -495,6 +494,10 @@ Hvert trinn skal kunne committes for seg og fungere alene.
   `omrader`, følger filtrene); navn under ikonet fra zoom 13. Ingen infoboks før man klikker.
   Meatpacking stopper nå ved Tenth Ave og Gansevoort St; Park Slope er fjernet.
   Lokale økter bruker localhost, ikke forhåndsvisningen (CLAUDE.md).
+- Gåturer i infoboksen (grenen `gaatur-infoboks`, 17.10.): det faste rutekortet nede til venstre
+  er fjernet. Gåturer åpner den vanlige popupen — dermed flyttbar — der ruten ble klikket, eller
+  fra lista på rutepunktet nærmest midten av ruteboksen (`ruteAnker`). Metalinjen er
+  «Gåtur · lengde · varighet · sone».
 - Neste: data. Pål kommer med navneendringer (som Marylebone High Street → Marylebone Village)
   og nye steder. Områdeskisser: alle nabolag i London og New York er tegnet (London 5.10.,
   langs gatene i OpenStreetMap); nye nabolag trenger skisse. Eksempelstedene er merket EKSEMPEL.
