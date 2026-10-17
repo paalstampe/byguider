@@ -763,6 +763,7 @@ Wilton Way fra Royal Oak Road til Navarino Road, og Navarino Road ned til London
 ### Clarendon Cross ★
 - sted: 51.5104, -0.2102
 - google: ChIJtaV0x-APdkgRps-xtDCnlUo
+- gater: Portland Road, Clarendon Cross, Hippodrome Place
 Holland Park
 
 ### Golborne Road ★
