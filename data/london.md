@@ -769,6 +769,7 @@ Holland Park
 ### Golborne Road ★
 - sted: 51.5226, -0.2075
 - google: ChIJGSXeoBkQdkgRU50dAgixBfk
+- gater: Golborne Road, Portobello Road
 
 ### Queen's Park ★
 - sted: 51.5369, -0.2041
