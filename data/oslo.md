@@ -42,6 +42,41 @@ Områdeskisser, gater og gåturer tegnes i oslo-geometri.geojson (f.eks. i geojs
 og kobles hit på navn: type "område", "gate" eller "rute".
 -->
 
+## Nabolag og gater
+
+### Fredensborg
+- sted: 59.91941, 10.74798
+- google: ChIJWwUYjWRuQUYRpp0393vnWVg
+- gater: Fredensborgveien
+Fredensborgveien fra Eff Eff opp til rundkjøringen ved Hrímnir.
+- en: Fredensborgveien from Eff Eff up to the roundabout by Hrímnir.
+
+### St. Hanshaugen
+- sted: 59.92875, 10.74168
+- google: ChIJw1U8f99tQUYRScqXxtHUwD4
+- gater: Dalsbergstien, Waldemar Thranes gate, Hallings gate, Ullevålsveien
+Med Hallings gate. Dalsbergstien fra Schwensens gate til Ullevålsveien, Waldemar Thranes gate opp til Café Rouleur og Ullevålsveien fra Akersbakken til Schwensens gate.
+- en: Including Hallings gate. Dalsbergstien from Schwensens gate to Ullevålsveien, Waldemar Thranes gate up to Café Rouleur and Ullevålsveien from Akersbakken to Schwensens gate.
+
+### Grünerløkka
+- sted: 59.92161, 10.75741
+- google: ChIJo4fNyWhuQUYREmgqeefR9TY
+- gater: Markveien, Thorvald Meyers gate
+
+### SoSoPa
+- sted: 59.92114, 10.76342
+- google: ChIJhXwp82duQUYRSDN-Bunh7_g
+- gater: Rathkes gate, Rathkes plass, Jens Bjelkes gate
+South of Sofienbergparken – kvartalene mellom parken og Trondheimsveien.
+- en: South of Sofienbergparken – the blocks between the park and Trondheimsveien.
+
+### Kampen
+- sted: 59.91298, 10.77940
+- google: ChIJz0yNfVduQUYRZIJROqrdkC4
+- gater: Torbjørn Egners plass, Bøgata, Nannestadgata
+Torbjørn Egners plass og Bøgata ned til Farine.
+- en: Torbjørn Egners plass and Bøgata down to Farine.
+
 ## Restauranter
 
 ### Le Benjamin ★
@@ -709,6 +744,24 @@ Fuglens kafé og brenneri. St. Halvards gate 33.
 - en: Gamlebyen
 Fuglen’s café and roastery. St. Halvards gate 33.
 
+### Kampen Kaffe & Bar
+- sted: 59.91196, 10.78097
+- google: ChIJL4xgmVduQUYRqpPEBbWmSto
+- nettside: https://www.kampenbar.no/
+Kampen
+Kafé og bar. Bøgata 10.
+- en: Kampen
+Café and bar. Bøgata 10.
+
+### Farine
+- sted: 59.91153, 10.78155
+- google: ChIJGWLf9NdvQUYR06xTMM8rYsA
+- nettside: http://www.farine.no/
+Kampen
+Bakeri og kafé. Normannsgata 44.
+- en: Kampen
+Bakery and café. Normannsgata 44.
+
 ## Barer
 
 ### Café Rouleur
@@ -943,3 +996,12 @@ Sentrum
 Platebutikk. Møllergata 3A.
 - en: Sentrum
 Record shop. Møllergata 3A.
+
+### Kampen Vinyl
+- sted: 59.91192, 10.78068
+- google: ChIJPTNjVwBvQUYRgSQPDiLTvKE
+- nettside: https://kampenvinyl.com/
+Kampen
+Platebutikk. Nannestadgata 10C, inngang fra Bøgata.
+- en: Kampen
+Record shop. Nannestadgata 10C, entrance from Bøgata.
