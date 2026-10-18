@@ -6,19 +6,29 @@
       "properties": {
         "navn": "Carré d'Or",
         "type": "område",
-        "notat": "Skisse: Boulevard Victor Hugo–Promenade des Anglais, Boulevard Gambetta–Avenue Jean Médecin/Avenue de Verdun"
+        "notat": "Carré d'Or: Boulevard Victor Hugo–Promenade des Anglais, Boulevard Gambetta–Avenue Jean Médecin/Avenue de Verdun",
+        "kilde": "OpenStreetMap"
       },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
           [
-            [7.25623, 43.69754],
+            [7.25622, 43.69754],
+            [7.26473, 43.6995],
             [7.2679, 43.70056],
-            [7.26967, 43.69814],
+            [7.2691, 43.6987],
             [7.26972, 43.69723],
-            [7.26639, 43.6953],
-            [7.2563, 43.6938],
-            [7.25623, 43.69754]
+            [7.26725, 43.6962],
+            [7.2669, 43.696],
+            [7.26678, 43.69588],
+            [7.26685, 43.69585],
+            [7.26649, 43.69529],
+            [7.26652, 43.69504],
+            [7.26357, 43.69492],
+            [7.26113, 43.69473],
+            [7.25853, 43.69435],
+            [7.2563, 43.69386],
+            [7.25622, 43.69754]
           ]
         ]
       }
@@ -28,19 +38,24 @@
       "properties": {
         "navn": "Carré d'Or",
         "type": "område",
-        "notat": "Kjernen: Rue Alphonse Karr–Avenue Jean Médecin, Boulevard Victor Hugo–Avenue de Verdun/Avenue de Suède"
+        "notat": "Kjernen: Rue Alphonse Karr–Avenue Jean Médecin, Boulevard Victor Hugo–Avenue de Verdun/Avenue de Suède",
+        "kilde": "OpenStreetMap"
       },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
           [
-            [7.26502, 43.69958],
+            [7.26501, 43.69959],
             [7.2679, 43.70056],
-            [7.26967, 43.69814],
+            [7.2691, 43.6987],
             [7.26972, 43.69723],
             [7.26725, 43.6962],
+            [7.26709, 43.69631],
             [7.26615, 43.69631],
-            [7.26502, 43.69958]
+            [7.26516, 43.69669],
+            [7.26511, 43.69677],
+            [7.26575, 43.6989],
+            [7.26501, 43.69959]
           ]
         ]
       }
@@ -419,33 +434,27 @@
       "properties": {
         "navn": "Havnen – Le Petit Marais",
         "type": "område",
-        "notat": "Skisse: Place Garibaldi–Rue Arson langs Rue Barla, ned til havnen (Place de l'Île de Beauté/Quai Papacino), vest til Rue Catherine Segurane"
+        "notat": "Le Port: Place Garibaldi og Rue Catherine Segurane–Rue Arson, Rue Barla–havnen",
+        "kilde": "OpenStreetMap"
       },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
           [
-            [7.27945, 43.70113],
-            [7.28006, 43.70273],
-            [7.28219, 43.70206],
-            [7.2841, 43.70148],
-            [7.28552, 43.70108],
+            [7.2806, 43.70023],
+            [7.28086, 43.7007],
+            [7.27948, 43.70116],
+            [7.27967, 43.7015],
+            [7.28038, 43.70129],
+            [7.28103, 43.70243],
+            [7.28427, 43.70143],
             [7.28676, 43.70074],
-            [7.28658, 43.69976],
-            [7.28646, 43.6991],
             [7.28637, 43.69856],
-            [7.28624, 43.69836],
-            [7.28553, 43.69844],
-            [7.28416, 43.69856],
-            [7.28394, 43.69858],
-            [7.28362, 43.69753],
-            [7.28351, 43.69679],
-            [7.28285, 43.69732],
+            [7.2861, 43.69852],
+            [7.28602, 43.6984],
+            [7.28211, 43.69875],
             [7.28179, 43.69864],
-            [7.28122, 43.69939],
-            [7.28058, 43.70028],
-            [7.27953, 43.7007],
-            [7.27945, 43.70113]
+            [7.2806, 43.70023]
           ]
         ]
       }
@@ -455,36 +464,20 @@
       "properties": {
         "navn": "Havnen – Le Petit Marais",
         "type": "område",
-        "notat": "Kjernen: havnen (Place de l'Île de Beauté) nordover til Rue Bonaparte, Rue Cassini–Rue Arson"
+        "notat": "Kjernen (Le Petit Marais): Rue Bonaparte–havnen, Rue Cassini–Rue Arson",
+        "kilde": "OpenStreetMap"
       },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
           [
-            [7.28297, 43.7007],
-            [7.28336, 43.70067],
-            [7.28425, 43.70061],
-            [7.28549, 43.70052],
-            [7.28669, 43.70044],
-            [7.28658, 43.69976],
-            [7.28646, 43.6991],
-            [7.28637, 43.69856],
-            [7.28624, 43.69836],
-            [7.28553, 43.69844],
-            [7.28416, 43.69856],
-            [7.28394, 43.69858],
-            [7.28377, 43.6989],
-            [7.28315, 43.69929],
-            [7.28299, 43.69939],
-            [7.2821, 43.69995],
-            [7.28203, 43.69999],
-            [7.28103, 43.70062],
-            [7.2812, 43.70064],
-            [7.28194, 43.70069],
-            [7.28218, 43.70071],
-            [7.28252, 43.70072],
+            [7.28104, 43.70062],
             [7.28277, 43.70072],
-            [7.28297, 43.7007]
+            [7.28669, 43.70044],
+            [7.28637, 43.69856],
+            [7.2861, 43.69852],
+            [7.28397, 43.69875],
+            [7.28104, 43.70062]
           ]
         ]
       }
