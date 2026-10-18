@@ -2,8 +2,7 @@
   "permissions": {
     "allow": [
       "Bash(.claude/skjermbilde.sh:*)",
-      "Bash(.claude/server.sh:*)",
-      "Bash(/home/user/byguider/.claude/skjermbilde.sh:*)"
+      "Bash(.claude/server.sh:*)"
     ]
   }
 }
