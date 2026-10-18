@@ -1,6 +1,6 @@
 # Byguider — overlevering
 
-Statusdokument for å ta prosjektet videre i en Cowork-økt.
+Referansedokument: mål, datamodell, design og teknikk. Løpende status står i NOTES.md.
 Sist oppdatert: 4. oktober 2026 (New York som fjerde by, grenen `new-york`).
 
 ---
@@ -21,22 +21,7 @@ Todelt strategi:
 
 ## 2. Hvor prosjektet står
 
-Ferdig og live på `https://stam.pe/byguider/` (PR #1 fra `multi-by`, flettet 27.9.), jf. punkt 10:
-
-1. `71cdfdd` Datadrevet app — soner, senter, zoom og titler fra `metadata`.
-2. `055dfef` Flerbys-struktur — `byer.json`, forside, stubber, `data/london.geojson`.
-3. `4eb6b97` Leaflet → MapLibre GL JS med CARTO Voyager vektorstil.
-4. `852089e` Nice og Oslo som tomme byer.
-
-Testet i headless Chromium mot attrapper av kartbibliotekene (CDN-ene var ikke
-nåbare fra testmiljøet): lasting, filtre, søk, valg fra liste og kart, popup,
-rutekort, tomme byer og forsiden. Visuelt verifisert 27.9. mot ekte MapLibre og CARTO via
-raw.githack.com: London med markører, gåtur, rutekort og popup ser ut som før.
-
-Gjenstår ellers:
-
-- Finjustering av koordinatene i de to eksempel-linjene (grove skisser).
-- Eventuelt KML-eksport for My Maps-sporet.
+Se NOTES.md (Status nå). Historikken over hva som er bygget står i punkt 10.5.
 
 ---
 
@@ -319,13 +304,7 @@ git pusher med samme innlogging. Claude kan dermed pushe, åpne PR og flette lok
 
 ## 8. Neste steg
 
-1. ~~Verifiser `multi-by` visuelt.~~ Gjort.
-2. ~~Flett `multi-by` inn i `main`.~~ Gjort — PR #1, live på `stam.pe/byguider/`.
-3. ~~Domenerestriksjon i CARTO.~~ Har vært på hele tiden: `stam.pe`, `*.stam.pe`, `paalstampe.github.io`.
-4. Rett opp koordinatene i de to eksempel-linjene i geojson.io.
-5. Fyll på data: London, Nice, Oslo.
-6. Punkt 10.5: landingsside på `stam.pe`, kartstil mot papirpaletten, kartfunksjoner.
-7. Vurder KML-eksport for My Maps-sporet.
+Se NOTES.md (Neste steg og Åpne spørsmål).
 
 ## 9. Notater om implementasjonen
 
