@@ -5,7 +5,7 @@ tittel-en: Pål and Vibeke’s Oslo
 undertittel-en: Restaurants and bars, plus a few other things.
 senter: 59.9180, 10.7400
 zoom: 13
-oppdatert: 2026-09-28
+oppdatert: 2026-10-18
 ---
 
 <!--
@@ -498,3 +498,32 @@ Hammersborg
 Neo-filippinsk bistro. Hammersborggata 9.
 - en: Hammersborg
 Neo-Filipino bistro. Hammersborggata 9.
+
+## Butikker
+
+### Lush Dive
+- sted: 59.92459, 10.75580
+- google: ChIJ-8kIRmluQUYRwmChqOib1qM
+- nettside: http://www.lushdive.no/
+Grünerløkka
+Papirhandel – notatbøker, fyllepenner, blyanter og kalendere. Thorvald Meyers gate 19.
+- en: Grünerløkka
+Stationery shop – notebooks, fountain pens, pencils and calendars. Thorvald Meyers gate 19.
+
+### Tronsmo
+- sted: 59.91664, 10.73859
+- google: ChIJy43eRnxuQUYRJM7BQ6TvnYE
+- nettside: http://www.tronsmo.no/
+Sentrum
+Bokhandel. Universitetsgata 12.
+- en: Sentrum
+Bookshop. Universitetsgata 12.
+
+### Dagestad
+- sted: 59.92341, 10.72995
+- google: ChIJI0lVF3huQUYR1TaQz_UGp8g
+- nettside: http://skomakerdagestad.no/
+Bislett
+Skomaker Dagestad – skobutikk og skomaker. Josefines gate 2B.
+- en: Bislett
+Skomaker Dagestad – shoe shop and cobbler. Josefines gate 2B.
