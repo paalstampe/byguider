@@ -1,8 +1,8 @@
 # Pål og Vibekes byguider
 
-Interaktive kart over nabolag, gater, gåturer og steder — London, Nice og Oslo.
+Interaktive kart over nabolag, gater, gåturer og steder — London, Nice, Oslo og New York.
 
-Publisert: https://paalstampe.github.io/byguider/
+Publisert: https://stam.pe/byguider/
 
 ## Struktur
 
@@ -15,12 +15,14 @@ byguider/
 ├── london/index.html   stubb per by — laster ../app.js med data-by="london"
 ├── nice/index.html
 ├── oslo/index.html
+├── new-york/index.html
 ├── data/
 │   ├── london.md                 dataene — én md-fil per by
 │   ├── london-geometri.geojson   områder, gater, gåturer
-│   └── …                         nice, oslo
+│   └── …                         nice, oslo, new-york
 ├── arkiv/              tidligere versjoner, ikke i bruk
-├── HANDOVER.md         statusdokument
+├── HANDOVER.md         referanse: datamodell, design, teknikk
+├── NOTES.md            løpende status
 └── README.md
 ```
 
@@ -53,9 +55,10 @@ Områdeskisser, gater og gåturer tegnes i `data/<by>-geometri.geojson` (f.eks. 
 `fetch()` blokkeres ved åpning fra `file://`. Kjør i stedet:
 
 ```
-cd byguider
-python3 -m http.server
+.claude/server.sh
 ```
+
+(Starter en lokal server på http://localhost:8000/.)
 
 og åpne `http://localhost:8000` (forside) eller `http://localhost:8000/london/`.
 
