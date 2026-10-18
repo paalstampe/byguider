@@ -95,11 +95,11 @@ Tyburnia
 - nettside: https://litamarylebone.com/
 Marylebone
 
-Paddington Street 7–9.
+Middelhavskjøkken, Paddington Street 7–9.
 
 - en: Marylebone
 
-7–9 Paddington Street.
+Mediterranean, 7–9 Paddington Street.
 
 ### Sale e Pepe Mare ★
 - sted: 51.51759, -0.14323
