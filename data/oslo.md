@@ -107,11 +107,6 @@ Ramen
 - google: ChIJNUctz4duQUYRft4pW7dWnMI
 - nettside: http://www.brasseriehansken.no/
 
-### Madonna
-- sted: 59.90723, 10.75597
-- google: ChIJcbwTrcZvQUYR64DfKiHkiko
-- nettside: https://madonnaoslo.no/
-
 ### Restaurant Betong
 - sted: 59.90642, 10.75937
 - google: ChIJ5XKFeB5vQUYRN-s3zQz545k
@@ -232,7 +227,7 @@ Ramen
 - google: ChIJH9mEVGhtQUYRSs08c_ew8Ag
 - nettside: https://www.vadio-oslo.com/
 
-### Omakase
+### Sabi Omakase
 - sted: 59.91434, 10.72921
 - google: ChIJyZ1OK35uQUYRs_kHgYhPRqE
 - nettside: https://www.omakaseoslo.no/
@@ -285,6 +280,33 @@ Grünerløkka
 Moderne europeisk. Sannergata 2.
 - en: Grünerløkka
 Modern European. Sannergata 2.
+
+### Credo
+- sted: 59.91431, 10.71732
+- google: ChIJj2nrhZwxbUYR9u_gaKC89IE
+- nettside: http://restaurantcredo.no/
+Vika
+Fine dining. Henrik Ibsens gate 110.
+- en: Vika
+Fine dining. Henrik Ibsens gate 110.
+
+### Jewel of India
+- sted: 59.91595, 10.71686
+- google: ChIJOzAEv9RtQUYRTWGppDpLDwE
+- nettside: http://www.jewelofindia.no/
+Frogner
+Indisk. Oscars gate 81.
+- en: Frogner
+Indian. Oscars gate 81.
+
+### Festningen
+- sted: 59.90841, 10.73552
+- google: ChIJLY_ZY4ZuQUYRY4TaMjHPqGE
+- nettside: http://www.festningenrestaurant.no/
+Kvadraturen
+Ved Akershus festning. Myntgata 9.
+- en: Kvadraturen
+By Akershus Fortress. Myntgata 9.
 
 <!-- Ønskeliste: restauranter vi ikke har besøkt ennå (- status: onskeliste). Vises bare med ?onskeliste.
      ★ = de vi helst vil til først. Fjern «status»-linja når vi har vært der. -->
