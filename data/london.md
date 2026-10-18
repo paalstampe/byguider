@@ -345,7 +345,7 @@ Filmplakater, Marylebone Lane 43.
 
 Film posters, 43 Marylebone Lane.
 
-### Daunt Books
+### Daunt Books ★
 - sted: 51.52040, -0.15199
 - google: ChIJTQJH99EadkgRgli4gpxCkOY
 - nettside: https://www.dauntbooks.co.uk/
@@ -405,7 +405,7 @@ Herreklær, Weymouth Street 57.
 
 Menswear, 57 Weymouth Street.
 
-### Trunk
+### Trunk ★
 - sted: 51.51865, -0.15455
 - google: ChIJ7UHkt1EbdkgRNmasWiuQamE
 - nettside: https://www.trunkclothiers.com/
