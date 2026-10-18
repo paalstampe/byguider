@@ -771,7 +771,7 @@ Bakeri og kafé. Normannsgata 44.
 - en: Kampen
 Bakery and café. Normannsgata 44.
 
-### Åpent Bakeri
+### Åpent Bakeri Damplassen
 - sted: 59.94408, 10.73302
 - google: ChIJLa4ESeJtQUYR6gQxQ-fKkfE
 - nettside: http://apentbakeri.no/#/damplassen
@@ -1061,3 +1061,75 @@ Vulkan
 Mathall med spisesteder og matbutikker. Vulkan 5.
 - en: Vulkan
 Food hall with places to eat and food shops. Vulkan 5.
+
+### Operaen
+- navn-en: Oslo Opera House
+- sted: 59.90805, 10.75118
+- google: ChIJFfcho4tuQUYREdaiosanthw
+- nettside: https://operaen.no/
+Bjørvika
+Gå opp på taket. Kirsten Flagstads plass 1.
+- en: Bjørvika
+Walk up onto the roof. Kirsten Flagstads plass 1.
+
+## Muséer og gallerier
+
+### Nasjonalmuseet
+- navn-en: National Museum
+- sted: 59.91212, 10.72974
+- google: ChIJOdGZU3xuQUYRRpZUX1Z3YUM
+- nettside: http://www.nasjonalmuseet.no/
+Vika
+Kunst, arkitektur og design. Brynjulf Bulls plass 3.
+- en: Vika
+Art, architecture and design. Brynjulf Bulls plass 3.
+
+### Munchmuseet
+- navn-en: MUNCH
+- sted: 59.90590, 10.75526
+- google: ChIJJ0uE7VtuQUYRGxJdLJL1PmU
+- nettside: https://www.munch.no/
+Bjørvika
+Edvard Munchs plass 1.
+- en: Bjørvika
+Edvard Munchs plass 1.
+
+### Astrup Fearnley Museet
+- navn-en: Astrup Fearnley Museum
+- sted: 59.90690, 10.72131
+- google: ChIJT4tdJ4luQUYRgMF5nmdF7L8
+- nettside: https://www.afmuseet.no/
+Tjuvholmen
+Moderne og samtidskunst. Strandpromenaden 2.
+- en: Tjuvholmen
+Modern and contemporary art. Strandpromenaden 2.
+
+### Frammuseet
+- navn-en: Fram Museum
+- sted: 59.90337, 10.69960
+- google: ChIJMcBwszpsQUYReqPeWg4Oe4A
+- nettside: https://frammuseum.no/
+Bygdøy
+Polarskuta Fram. Bygdøynesveien 39.
+- en: Bygdøy
+The polar ship Fram. Bygdøynesveien 39.
+
+### Kon-Tiki Museet
+- navn-en: Kon-Tiki Museum
+- sted: 59.90345, 10.69836
+- google: ChIJu4wrvDpsQUYRgF8XWfTcwBU
+- nettside: https://www.kon-tiki.no/
+Bygdøy
+Thor Heyerdahls flåter. Bygdøynesveien 36.
+- en: Bygdøy
+Thor Heyerdahl’s rafts. Bygdøynesveien 36.
+
+### Norsk Folkemuseum
+- navn-en: Norwegian Museum of Cultural History
+- sted: 59.90700, 10.68643
+- google: ChIJbcQbpTdsQUYRcPVxnHOFQy4
+- nettside: https://norskfolkemuseum.no/
+Bygdøy
+Friluftsmuseum med gamle hus fra hele landet. Museumsveien 10.
+- en: Bygdøy
+Open-air museum with old buildings from all over Norway. Museumsveien 10.
