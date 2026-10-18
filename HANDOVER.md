@@ -49,8 +49,6 @@ byguider/
 │   ├── nice.md / nice-geometri.geojson   tomme, metadata utfylt
 │   ├── oslo.md / oslo-geometri.geojson
 │   └── new-york.md / new-york-geometri.geojson   soner Uptown, Midtown, Downtown, Brooklyn; geometrien er tom
-├── arkiv/
-│   └── london-map_1.html   gammel prototype, ikke i bruk
 ├── README.md
 └── HANDOVER.md             dette dokumentet
 ```

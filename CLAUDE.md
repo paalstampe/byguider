@@ -102,6 +102,5 @@ Playwright med `colorScheme: 'light'` og `'dark'`. Ta bildene fra stam.pe etter 
 - Engelsk innhold via navn-en: og en: (valgfritt; mangler det, vises norsk).
 
 ## Ikke gjør
-- Ikke rør arkiv/ (råmateriale).
 - Ikke legg inn avhengigheter, byggeverktøy eller rammeverk.
 - Ikke slett uflettede grener eller force-push uten at Pål ber om det.

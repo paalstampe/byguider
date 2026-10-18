@@ -20,7 +20,6 @@ byguider/
 │   ├── london.md                 dataene — én md-fil per by
 │   ├── london-geometri.geojson   områder, gater, gåturer
 │   └── …                         nice, oslo, new-york
-├── arkiv/              tidligere versjoner, ikke i bruk
 ├── HANDOVER.md         referanse: datamodell, design, teknikk
 ├── NOTES.md            løpende status
 └── README.md
