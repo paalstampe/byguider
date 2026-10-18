@@ -13,12 +13,18 @@ Sist oppdatert: 18. oktober 2026.
 - Arbeidet nå er data: nye steder, favoritter, beskrivelser og nabolagsomriss. 18.10. fikk Oslo
   nabolagene Fredensborg, St. Hanshaugen, Grünerløkka, SoSoPa, Kampen og Gamlebyen, og London
   fikk Marylebone-butikker, jazzklubber og muséer.
+- 18.10. ble nabolagsomrissene i London, New York og Nice gjort presise: offentlige grenser der de finnes
+  (Londons conservation areas; New Yorks NTA 2020 og historiske distrikter), ellers grensegater sporet i OSM.
+  London: 18 av 43 tegnet om, resten fulgte allerede gatene. New York: alle 10. Nice: begge.
+  `kilde` i hver feature sier hvor omrisset kommer fra. `arkiv/` er fjernet fra repoet.
 - Ingen åpne grener utenom `main`.
 
 ## Neste steg
 
 - Fyll på data etter hvert som Pål kommer med steder og navneendringer, i alle byer.
-- Nye nabolag trenger alltid omriss i `data/<by>-geometri.geojson` (se CLAUDE.md, Data).
+- Nye nabolag trenger alltid et presist omriss i `data/<by>-geometri.geojson`; fremgangsmåten står i CLAUDE.md, Data.
+- Mulig etterarbeid: de 25 London-omrissene som ble beholdt (bl.a. Marylebone, Mayfair, Belgravia, Richmond, Kew Green)
+  kan sjekkes mot conservation areas på samme måte hvis Pål ser noe som ikke stemmer.
 - Oppdater miniatyrene når en by endrer utseende merkbart (CLAUDE.md, Miniatyrer).
 - KML-eksport for Google My Maps-sporet: scopet i [scope-kml.md](scope-kml.md) (forslag: `?kml` i appen, test med London). Venter på svar fra Pål på de åpne spørsmålene nederst der.
 
@@ -39,3 +45,6 @@ Sist oppdatert: 18. oktober 2026.
 - 2026-10-18: Notatet om å rette eksempel-linjene i geojson er utdatert. De to linjene (én gate, én gåtur) lå i den opprinnelige london.geojson fra 20.9. og finnes ikke lenger.
 - 2026-10-18: «Tips til nabolag i London.md» er slettet. Innholdet ligger i data/london.md, og Pål har notert de få tipsene som ikke kom med.
 - 2026-10-18: «Claude outputs/github-pages-oppsett-reiseplanlegger.md» er slettet. Den var en kopi av et utdatert oppsettnotat fra reiseplanlegging.
+- 2026-10-18: Nabolagsomriss skal være presise i alle byer: offentlige grenser først, ellers grensegater sporet i OSM, med `kilde` i hver feature. Fremgangsmåten står i CLAUDE.md.
+- 2026-10-18: West Village i New York følger byplankontorets NTA-grense, selv om den er smalere i øst enn den gamle skissen (som gikk til 6th Ave).
+- 2026-10-18: `arkiv/` med den gamle London-prototypen er fjernet. Pål flyttet filen ut av repoet.
