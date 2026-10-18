@@ -835,15 +835,6 @@ Bar og restaurant ved sjøen. Frognerstranda 4.
 - en: Frognerkilen
 Waterside bar and restaurant. Frognerstranda 4.
 
-### Herr Nilsen
-- sted: 59.91530, 10.74091
-- google: ChIJY0isJn1uQUYRGFgwCsFhuRc
-- nettside: http://www.herrnilsen.no/
-Sentrum
-Jazzklubb og bar. C. J. Hambros plass 5.
-- en: Sentrum
-Jazz club and bar. C. J. Hambros plass 5.
-
 ### Last Train
 - sted: 59.91473, 10.73656
 - google: ChIJ25upon1uQUYRStlYX9894vE
@@ -879,6 +870,17 @@ Grünerløkka
 Cocktailbar. Trondheimsveien 2.
 - en: Grünerløkka
 Cocktail bar. Trondheimsveien 2.
+
+## Jazzklubber
+
+### Herr Nilsen
+- sted: 59.91530, 10.74091
+- google: ChIJY0isJn1uQUYRGFgwCsFhuRc
+- nettside: http://www.herrnilsen.no/
+Sentrum
+Jazzklubb og bar. C. J. Hambros plass 5.
+- en: Sentrum
+Jazz club and bar. C. J. Hambros plass 5.
 
 ## Butikker
 
