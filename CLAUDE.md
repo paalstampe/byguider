@@ -71,7 +71,7 @@ Playwright med `colorScheme: 'light'` og `'dark'`. Ta bildene fra stam.pe etter 
 
 ## Data
 - Én md-fil per by i data/. Format står som kommentar øverst i hver fil.
-- ★ etter navnet = favoritt. Eksempelsteder er merket EKSEMPEL.
+- ★ etter navnet = favoritt.
 - Nye steder: hent alltid Google Place ID og koordinater fra Google Maps (nettleserpanelet:
   google.com/maps/search/<navn+adresse>; avvis informasjonskapsler). Plass-URL-en har 1s0x<a>:0x<b> og
   !3d<bredde>!4d<lengde>; Place ID = base64url(0a 12 09 + a som 8 byte little-endian + 11 + b som 8 byte LE),

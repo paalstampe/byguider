@@ -20,12 +20,11 @@ Sist oppdatert: 18. oktober 2026.
 - Fyll på data etter hvert som Pål kommer med steder og navneendringer, i alle byer.
 - Nye nabolag trenger alltid omriss i `data/<by>-geometri.geojson` (se CLAUDE.md, Data).
 - Oppdater miniatyrene når en by endrer utseende merkbart (CLAUDE.md, Miniatyrer).
+- KML-eksport for Google My Maps-sporet: skal gjøres ved anledning, men scopes først (hva som skal med, hvordan det lages og oppdateres) før arbeidet starter.
 
 ## Åpne spørsmål
 
-- KML-eksport for Google My Maps-sporet: fortsatt aktuelt?
 - Koordinatene i de to eksempel-linjene i geojson (HANDOVER punkt 8.4): fortsatt aktuelt, eller er de borte?
-- London har to oppføringer merket EKSEMPEL. Skal de erstattes eller fjernes?
 
 ## Beslutningslogg
 
@@ -35,3 +34,5 @@ Sist oppdatert: 18. oktober 2026.
 - 2026-10-17: Gåturer bruker den vanlige infoboksen, og det faste rutekortet er fjernet. Da blir oppførselen lik for alt.
 - 2026-10-17: Nabolagsikonet ligger midt i kjernen, ellers midt i området, ikke på `sted:` fra Google.
 - 2026-10-18: Løpende status flyttes fra HANDOVER.md (punkt 2 og 8) til NOTES.md. HANDOVER.md blir referanse.
+- 2026-10-18: De to EKSEMPEL-oppføringene i London (Hermanos Coffee Roasters og WWT London Wetland Centre) er fjernet.
+- 2026-10-18: KML-eksport er fortsatt aktuelt, men skal scopes før vi setter i gang.

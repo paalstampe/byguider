@@ -1062,14 +1062,6 @@ Pub and dining room, 55 Shirland Road.
 
 ## Kaféer
 
-### Hermanos Coffee Roasters
-- sted: 51.47348, -0.24855
-- google: ChIJVRbdmE0PdkgRh_lJOXrBqeM
-- nettside: http://www.hermanoscoffeeroasters.com/
-- utenfor: ja
-EKSEMPEL — Barnes. Koordinat er omtrentlig
-- en: EXAMPLE — Barnes. Location is approximate
-
 ### The Alberts Deli
 - sted: 51.46160, -0.29667
 - google: ChIJ15fZhToMdkgRa6kq1Emo24I
@@ -1146,16 +1138,6 @@ Smykker, Godfrey Street 53, rett ved Chelsea Green.
 - en: Chelsea
 
 Jewellery, 53 Godfrey Street, right by Chelsea Green.
-
-## Verdt en omvei
-
-### WWT London Wetland Centre
-- sted: 51.47614, -0.23466
-- google: ChIJnfoSY6wPdkgR69kRGIFCCUU
-- nettside: https://www.wwt.org.uk/wetland-centres/london/
-- utenfor: ja
-EKSEMPEL — viser hvordan en park legges inn
-- en: EXAMPLE — shows how a park is added
 
 ## Gåturer
 
