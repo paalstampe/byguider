@@ -51,7 +51,6 @@ byguider/
 │   └── new-york.md / new-york-geometri.geojson   soner Uptown, Midtown, Downtown, Brooklyn; geometrien er tom
 ├── arkiv/
 │   └── london-map_1.html   gammel prototype, ikke i bruk
-├── Tips til nabolag i London.md   råmateriale, kilden til London-dataene
 ├── README.md
 └── HANDOVER.md             dette dokumentet
 ```
@@ -147,8 +146,6 @@ Gategeometri kan hentes fra OpenStreetMap (Overpass) — Claude kan gjøre det p
 
 Koordinatrekkefølge: **md-fila bruker breddegrad, lengdegrad** (Google-rekkefølge);
 GeoJSON-fila bruker lengdegrad, breddegrad. Parseren snur md-koordinatene.
-
-`Tips til nabolag i London.md` er råmaterialet London-fila ble bygd fra.
 
 ### Språk: norsk og engelsk
 
