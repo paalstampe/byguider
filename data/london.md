@@ -305,6 +305,142 @@ Italiensk, Great Portland Street 22–24.
 
 Italian, 22–24 Great Portland Street.
 
+## Kaféer
+
+### Gail's
+- sted: 51.52129, -0.15203
+- google: ChIJrekrEbUbdkgR273zE25RRKc
+- nettside: https://gails.com/pages/marylebone-village
+Marylebone
+
+Bakeri og kafé, Marylebone High Street 72–75.
+
+- en: Marylebone
+
+Bakery and café, 72–75 Marylebone High Street.
+
+### N6 at La Fromagerie
+- sted: 51.51990, -0.15235
+- google: ChIJUSwJNwAbdkgREskc16VaZdI
+- nettside: https://lafromagerie.co.uk/pages/location-no-6
+Marylebone
+
+Kafé og restaurant ved La Fromagerie, Moxon Street 6.
+
+- en: Marylebone
+
+Café and restaurant next to La Fromagerie, 6 Moxon Street.
+
+## Butikker
+
+### At the Movies
+- sted: 51.51735, -0.15095
+- google: ChIJN7gSjNIadkgRNsGpT86Ozpg
+- nettside: https://atthemovies.uk/
+Marylebone
+
+Filmplakater, Marylebone Lane 43.
+
+- en: Marylebone
+
+Film posters, 43 Marylebone Lane.
+
+### Daunt Books
+- sted: 51.52040, -0.15199
+- google: ChIJTQJH99EadkgRgli4gpxCkOY
+- nettside: https://www.dauntbooks.co.uk/
+Marylebone
+
+Bokhandel, Marylebone High Street 84.
+
+- en: Marylebone
+
+Bookshop, 84 Marylebone High Street.
+
+### Bayley & Sage
+- sted: 51.52031, -0.15159
+- google: ChIJu53LNUQbdkgRWqOuEWJ9nAo
+- nettside: https://www.bayley-sage.co.uk/
+Marylebone
+
+Delikatesser, Marylebone High Street 33–34.
+
+- en: Marylebone
+
+Delicatessen, 33–34 Marylebone High Street.
+
+### La Fromagerie
+- sted: 51.51988, -0.15232
+- google: ChIJQ_xyA9IadkgRgMIkd4-ZVxc
+- nettside: https://www.lafromagerie.co.uk/
+Marylebone
+
+Ostebutikk, Moxon Street 2–6.
+
+- en: Marylebone
+
+Cheese shop, 2–6 Moxon Street.
+
+### Ginger Pig
+- sted: 51.51988, -0.15245
+- google: ChIJI7fwA9IadkgRzICGDweO9vg
+- nettside: https://www.thegingerpig.co.uk/
+Marylebone
+
+Slakter, Moxon Street 8–10.
+
+- en: Marylebone
+
+Butcher, 8–10 Moxon Street.
+
+### Anglo-Italian Company
+- sted: 51.51994, -0.15078
+- google: ChIJ0Q7yJtIadkgR8nxH9FPFdWQ
+- nettside: https://angloitalian.com/
+Marylebone
+
+Herreklær, Weymouth Street 57.
+
+- en: Marylebone
+
+Menswear, 57 Weymouth Street.
+
+### Trunk
+- sted: 51.51865, -0.15455
+- google: ChIJ7UHkt1EbdkgRNmasWiuQamE
+- nettside: https://www.trunkclothiers.com/
+Marylebone
+
+Herreklær, Chiltern Street 8.
+
+- en: Marylebone
+
+Menswear, 8 Chiltern Street.
+
+### Monocle
+- sted: 51.51908, -0.15482
+- google: ChIJG4SYZdIadkgR8XwfVFwbWTg
+- nettside: https://monocle.com/shop/
+Marylebone
+
+Monocles butikk, Chiltern Street 34.
+
+- en: Marylebone
+
+Monocle’s shop, 34 Chiltern Street.
+
+### KJ West One
+- sted: 51.51859, -0.15049
+- google: ChIJG5q0SNIadkgRtM4oeNUl7Ag
+- nettside: https://www.kjwestone.co.uk/
+Marylebone
+
+Hifi-butikk, New Cavendish Street 26.
+
+- en: Marylebone
+
+Hi-fi shop, 26 New Cavendish Street.
+
 # North
 
 ## Nabolag og gater
