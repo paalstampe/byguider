@@ -20,7 +20,7 @@ Sist oppdatert: 18. oktober 2026.
 - Fyll på data etter hvert som Pål kommer med steder og navneendringer, i alle byer.
 - Nye nabolag trenger alltid omriss i `data/<by>-geometri.geojson` (se CLAUDE.md, Data).
 - Oppdater miniatyrene når en by endrer utseende merkbart (CLAUDE.md, Miniatyrer).
-- KML-eksport for Google My Maps-sporet: skal gjøres ved anledning, men scopes først (hva som skal med, hvordan det lages og oppdateres) før arbeidet starter.
+- KML-eksport for Google My Maps-sporet: scopet i [scope-kml.md](scope-kml.md) (forslag: `?kml` i appen, test med London). Venter på svar fra Pål på de åpne spørsmålene nederst der.
 
 ## Åpne spørsmål
 
