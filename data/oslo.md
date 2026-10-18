@@ -928,6 +928,7 @@ Vika
 Delikatesser. Ruseløkkveien 26.
 - en: Vika
 Delicatessen. Ruseløkkveien 26.
+
 ### Annis Pølsemakeri
 - sted: 59.92222, 10.75205
 - google: ChIJoe7MQWRuQUYRQPdr5y2fyyU
