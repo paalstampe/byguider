@@ -511,6 +511,15 @@ Ved Akershus festning. Myntgata 9.
 - en: Kvadraturen
 By Akershus Fortress. Myntgata 9.
 
+### Grytelokket
+- sted: 59.91528, 10.75556
+- google: ChIJzX7OEGFuQUYRlFFEGe5Xjwc
+- nettside: http://grytelokket.no/
+Sentrum
+Husmannskost. Storgata 45.
+- en: Sentrum
+Traditional Norwegian home cooking. Storgata 45.
+
 <!-- Ønskeliste: restauranter vi ikke har besøkt ennå (- status: onskeliste). Vises bare med ?onskeliste.
      ★ = de vi helst vil til først. Fjern «status»-linja når vi har vært der. -->
 
@@ -761,6 +770,15 @@ Kampen
 Bakeri og kafé. Normannsgata 44.
 - en: Kampen
 Bakery and café. Normannsgata 44.
+
+### Åpent Bakeri
+- sted: 59.94408, 10.73302
+- google: ChIJLa4ESeJtQUYR6gQxQ-fKkfE
+- nettside: http://apentbakeri.no/#/damplassen
+Ullevål Hageby
+Bakeri og kafé. Damplassen 24–25.
+- en: Ullevål Hageby
+Bakery and café. Damplassen 24–25.
 
 ## Barer
 
@@ -1014,3 +1032,32 @@ SoSoPa
 Interiør og design. Schous plass 7A.
 - en: SoSoPa
 Interiors and design. Schous plass 7A.
+
+### Strøm-Larsen
+- sted: 59.93512, 10.76545
+- google: ChIJp6Tt2BRuQUYROUq3cjHdZLw
+- nettside: https://www.strom-larsen.no/
+Torshov
+Kjøtt og delikatesser. Vogts gate 53A.
+- en: Torshov
+Butcher and delicatessen. Vogts gate 53A.
+
+## Verdt en omvei
+
+### Oslo Street Food
+- sted: 59.91578, 10.75107
+- google: ChIJ_82Ml0dvQUYR9CfRMglU_lo
+- nettside: https://www.oslo-streetfood.no/
+Sentrum
+Mathall med mange små kjøkken. Torggata 16B.
+- en: Sentrum
+Food hall with lots of small kitchens. Torggata 16B.
+
+### Mathallen
+- sted: 59.92163, 10.75195
+- google: ChIJLSeTf2VuQUYRw9V12gQwpqU
+- nettside: https://mathallenoslo.no/
+Vulkan
+Mathall med spisesteder og matbutikker. Vulkan 5.
+- en: Vulkan
+Food hall with places to eat and food shops. Vulkan 5.
