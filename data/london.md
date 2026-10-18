@@ -333,7 +333,7 @@ Café and restaurant next to La Fromagerie, 6 Moxon Street.
 
 ## Jazzklubber
 
-### Ronnie Scott's
+### Ronnie Scott's ★
 - sted: 51.51347, -0.13154
 - google: ChIJVwS659IEdkgRkDBpUYSalUc
 - nettside: https://www.ronniescotts.co.uk/
