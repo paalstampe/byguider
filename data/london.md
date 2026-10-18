@@ -331,6 +331,58 @@ Kafé og restaurant ved La Fromagerie, Moxon Street 6.
 
 Café and restaurant next to La Fromagerie, 6 Moxon Street.
 
+## Jazzklubber
+
+### Ronnie Scott's
+- sted: 51.51347, -0.13154
+- google: ChIJVwS659IEdkgRkDBpUYSalUc
+- nettside: https://www.ronniescotts.co.uk/
+Soho
+
+Jazzklubb siden 1959, Frith Street 47.
+
+- en: Soho
+
+Jazz club since 1959, 47 Frith Street.
+
+### Pizza Express Live
+- sted: 51.51512, -0.13332
+- google: ChIJA4ZB-DgFdkgRZ_B5RhzOHnE
+- nettside: https://www.pizzaexpresslive.com/
+Soho
+
+Jazzklubb i kjelleren under Pizza Express, Dean Street 10.
+
+- en: Soho
+
+Jazz club in the basement of Pizza Express, 10 Dean Street.
+
+## Muséer og gallerier
+
+### Tate Britain
+- sted: 51.49106, -0.12779
+- google: ChIJvWjCxekEdkgRoCgQVJHZH_U
+- nettside: https://www.tate.org.uk/visit/tate-britain
+Millbank
+
+Britisk kunst fra 1500-tallet til i dag, med Turner-samlingen.
+
+- en: Millbank
+
+British art from the 1500s to the present, including the Turner collection.
+
+### Somerset House
+- sted: 51.51106, -0.11715
+- google: ChIJcWfE87UEdkgRoYClOMTsOQQ
+- nettside: https://www.somersethouse.org.uk/
+Strand
+
+Kunst- og kultursenter i et palass ved Themsen, med Courtauld Gallery.
+
+- en: Strand
+
+Arts centre in a riverside palace, home to the Courtauld Gallery.
+
 ## Butikker
 
 ### At the Movies
@@ -440,6 +492,18 @@ Hifi-butikk, New Cavendish Street 26.
 - en: Marylebone
 
 Hi-fi shop, 26 New Cavendish Street.
+
+### Sounds of the Universe
+- sted: 51.51394, -0.13469
+- google: ChIJmdFeXNMEdkgR3GYfAq6NVgo
+- nettside: https://soundsoftheuniverse.com/
+Soho
+
+Platebutikk, Broadwick Street 7.
+
+- en: Soho
+
+Record shop, 7 Broadwick Street.
 
 # North
 
@@ -642,6 +706,30 @@ Englands eldste offentlige kunstgalleri.
 - en: Dulwich Village
 
 England’s oldest public art gallery.
+
+### Tate Modern
+- sted: 51.50760, -0.09936
+- google: ChIJlRl2MakEdkgR55tr4CNv_B8
+- nettside: https://www.tate.org.uk/visit/tate-modern
+Bankside
+
+Moderne og samtidskunst i den gamle Bankside-kraftstasjonen.
+
+- en: Bankside
+
+Modern and contemporary art in the former Bankside Power Station.
+
+### Hayward Gallery
+- sted: 51.50621, -0.11544
+- google: ChIJEYfH57cEdkgRuNeOk-nbgeo
+- nettside: https://www.southbankcentre.co.uk/venues/hayward-gallery/
+South Bank
+
+Samtidskunst i brutalistisk bygg i Southbank Centre.
+
+- en: South Bank
+
+Contemporary art in a brutalist building at the Southbank Centre.
 
 ## Verdt en omvei
 
@@ -994,6 +1082,44 @@ Deli og kafé, Worple Way 2.
 - en: Richmond
 
 Deli and café, 2 Worple Way.
+
+## Muséer og gallerier
+
+### Design Museum
+- sted: 51.49990, -0.20024
+- google: ChIJs0HnpkcDdkgRJjUYVf4jca4
+- nettside: https://designmuseum.org/
+Kensington
+
+Design og arkitektur, Kensington High Street 224–238, ved Holland Park.
+
+- en: Kensington
+
+Design and architecture, 224–238 Kensington High Street, by Holland Park.
+
+### Victoria & Albert Museum
+- sted: 51.49664, -0.17218
+- google: ChIJw1d-sUMFdkgRH2XN_U0Jt54
+- nettside: https://www.vam.ac.uk/south-kensington
+South Kensington
+
+Kunst, design og kunsthåndverk, Cromwell Road.
+
+- en: South Kensington
+
+Art, design and decorative arts, Cromwell Road.
+
+### Natural History Museum
+- sted: 51.49671, -0.17637
+- google: ChIJPy8Y5kIFdkgRxGSXw4Xjt3s
+- nettside: https://www.nhm.ac.uk/
+South Kensington
+
+Naturhistorisk museum, Cromwell Road.
+
+- en: South Kensington
+
+Natural history museum, Cromwell Road.
 
 ## Butikker
 
