@@ -561,7 +561,7 @@ Bjerregaards gate 5A.
 - en: St. Hanshaugen
 Bjerregaards gate 5A.
 
-### Coffee & Cigarettes
+### Coffee & Cigarettes ★
 - sted: 59.91853, 10.74782
 - google: ChIJe90FDhlvQUYRZg5int9_5kM
 Fredensborg
@@ -623,7 +623,7 @@ Holmens gate 4.
 - en: Aker Brygge
 Holmens gate 4.
 
-### Territoriet
+### Territoriet ★
 - sted: 59.91895, 10.75747
 - google: ChIJ2xki5mZuQUYRx7h4Nt9hxBE
 - nettside: https://www.territoriet.no/
@@ -670,7 +670,7 @@ Skobutikk og skomaker. Josefines gate 2B.
 - en: Bislett
 Shoe shop and cobbler. Josefines gate 2B.
 
-### Gutta på Haugen – Ullevålsveien
+### Gutta på Haugen – Ullevålsveien ★
 - sted: 59.92413, 10.73958
 - google: ChIJvUxVC3puQUYRLK0ECUfu8J4
 - nettside: https://www.gutta.no/
@@ -679,7 +679,7 @@ Delikatesser. Ullevålsveien 45.
 - en: St. Hanshaugen
 Delicatessen. Ullevålsveien 45.
 
-### Gutta på Haugen – Mathallen
+### Gutta på Haugen – Mathallen ★
 - sted: 59.92223, 10.75205
 - google: ChIJw79hpW9vQUYRQPbcUXmGVoU
 - nettside: https://www.gutta.no/
@@ -697,7 +697,7 @@ Pølser og spekemat i Mathallen. Vulkan 5.
 - en: Vulkan
 Sausages and cured meats in Mathallen. Vulkan 5.
 
-### Fjelberg
+### Fjelberg ★
 - sted: 59.91817, 10.70524
 - google: ChIJQ46Lec1tQUYRfm__ofcPYFk
 - nettside: http://www.fjelberg.no/
@@ -706,7 +706,7 @@ Fisk og vilt. Bygdøy allé 56.
 - en: Frogner
 Fish and game. Bygdøy allé 56.
 
-### Frogner Special
+### Frogner Special ★
 - sted: 59.91821, 10.70506
 - google: ChIJZY9cd81tQUYRXN0O4d1rVVY
 - nettside: https://www.frognerspecial.com/
@@ -715,7 +715,7 @@ Ost og delikatesser. Bygdøy allé 56B.
 - en: Frogner
 Cheese and delicatessen. Bygdøy allé 56B.
 
-### Maschmanns
+### Maschmanns ★
 - sted: 59.92151, 10.68058
 - google: ChIJ4YXFiLNtQUYR83Mx91sbR4U
 - nettside: https://maschmanns.no/
@@ -741,7 +741,7 @@ Gamle postkort. Storgata 36A.
 - en: Sentrum
 Vintage postcards. Storgata 36A.
 
-### Eksakt Hifi
+### Eksakt Hifi ★
 - sted: 59.92680, 10.72409
 - google: ChIJbfdZi41tQUYRdfYsiXctYM4
 - nettside: http://www.eksakthifi.no/
