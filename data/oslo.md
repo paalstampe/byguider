@@ -62,7 +62,7 @@ og kobles hit på navn: type "område", "gate" eller "rute".
 ### SoSoPa
 - sted: 59.92114, 10.76342
 - google: ChIJhXwp82duQUYRSDN-Bunh7_g
-- gater: Toftes gate, Herslebs gate, Rathkes gate, Rathkes plass
+- gater: Schous plass, Herslebs gate, Rathkes gate, Rathkes plass
 South of Sofienbergparken – kvartalene mellom parken og Trondheimsveien.
 - en: South of Sofienbergparken – the blocks between the park and Trondheimsveien.
 
