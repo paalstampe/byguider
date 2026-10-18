@@ -87,6 +87,18 @@ Playwright med `colorScheme: 'light'` og `'dark'`. Ta bildene fra stam.pe etter 
   Kjerne er valgfritt — bare der den gir mening; da kommer den som et polygon nr. 2 etter skissen (som i New York),
   Kartet legger nabolagsknappen midt i kjernen, ellers midt i området — sted: (fra Google) brukes ikke til den.
   Gater Pål ber om å markere legges inn som «gate».
+- Avgrensningen skal være presis, ikke en skisse med rette streker. Fremgangsmåte for nye nabolag:
+  1. Finn definisjonen: søk bredt og dypt (byleksikon, Wikipedia, lokale kilder) og se etter offentlige grenser.
+     London: bydelenes conservation areas (planning.data.gov.uk, API med geometry=<WKT>). New York: byplankontorets
+     Neighborhood Tabulation Areas 2020 og Landmarks-kommisjonens historiske distrikter (NYC Open Data; distriktene
+     ligger i EPSG:2263 og må regnes om). Oslo: oslobyleksikon.no, lokalhistoriewiki.no, kommunen.
+  2. Passer en offentlig grense med nabolaget, bruk den (gjerne som kjerne hvis den er smalere enn nabolaget).
+  3. Ellers: velg grensegatene og spor dem i OSM (Overpass) fra kryss til kryss, så omrisset følger gatene og
+     kystlinjen. Hovedgaten skal ligge inni, ikke være kanten, når butikkene ligger på begge sider.
+  4. Forenkle til ca. 3–6 m, fjern pigger og brygger, sjekk at polygonet er gyldig, og se på resultatet på kartet
+     (lokalt) før commit.
+  5. Sett `kilde` (f.eks. «Islington Council (conservation area), planning.data.gov.uk» eller «OpenStreetMap»)
+     og et kort `notat` i featuren. Si fra hvis grensen er usikker.
 - Engelsk innhold via navn-en: og en: (valgfritt; mangler det, vises norsk).
 
 ## Ikke gjør
