@@ -48,229 +48,397 @@ og kobles hit på navn: type "område", "gate" eller "rute".
 - sted: 59.91871, 10.75801
 - google: ChIJFwDK4GZuQUYRh78N3NETWWQ
 - nettside: http://www.lebenjamin.no/
+Grünerløkka
+Fransk bar og bistro. Søndre gate 6.
+- en: Grünerløkka
+French bar and bistro. Søndre gate 6.
 
 ### Little Wolf ★
 - sted: 59.93123, 10.74274
 - google: ChIJXVikAQBvQUYRDAUBGdtdTQs
 - nettside: https://www.littlewolfoslo.com/
+St. Hanshaugen
+Middelhavskjøkken. Geitmyrsveien 57.
+- en: St. Hanshaugen
+Mediterranean. Geitmyrsveien 57.
 
 ### Panu ★
 - sted: 59.91799, 10.74070
 - google: ChIJcdoojjhvQUYR8aMYGP5Rbnk
 - nettside: https://www.restaurant-panu.com/
+Sentrum
+Fine dining. St. Olavs plass 3.
+- en: Sentrum
+Fine dining. St. Olavs plass 3.
 
 ### Nektar ★
 - sted: 59.92042, 10.74908
 - google: ChIJh7RxrqBvQUYRQyeMWJKNAC0
 - nettside: https://www.nektarvinbar.no/
+Fredensborg
+Vinbar med mat. Fredensborgveien 42.
+- en: Fredensborg
+Wine bar with food. Fredensborgveien 42.
 
 ### Plah ★
 - sted: 59.91526, 10.71931
 - google: ChIJAZ2m2XhuQUYRPAT1khX_A_E
 - nettside: http://www.plah.no/
-Thai, fine dining
+Vika
+Thai, fine dining. Sommerrogata 1.
+- en: Vika
+Thai, fine dining. Sommerrogata 1.
 
 ### Kolonialen ★
 - sted: 59.92290, 10.73530
 - google: ChIJh202oihvQUYRPfBspCtatRE
 - nettside: https://kolonialenbislett.no/
+Bislett
+Moderne europeisk. Sofies gate 16.
+- en: Bislett
+Modern European. Sofies gate 16.
 
 ### Palace Grill ★
 - sted: 59.91436, 10.72045
 - google: ChIJR33azCpsQUYRr_9ZUzIKtpw
 - nettside: http://palacegrill.no/
-Fine dining
+Vika
+Fine dining. Solligata 2.
+- en: Vika
+Fine dining. Solligata 2.
 
 ### Chez Colin ★
 - sted: 59.92046, 10.74913
 - google: ChIJpYsC_GRuQUYR6ExBDG0vDxE
 - nettside: http://www.chezcolin.no/
+Fredensborg
+Fransk. Fredensborgveien 44.
+- en: Fredensborg
+French. Fredensborgveien 44.
 
 ### Vintage Kitchen ★
 - sted: 59.91696, 10.76252
 - google: ChIJA3sxAF5uQUYRJ-xMVd5xIPM
 - nettside: http://vintagekitchen.no/
+Grønland
+Dansk, med smørbrød og vinbar. Lakkegata 55.
+- en: Grønland
+Danish, with smørrebrød and a wine bar. Lakkegata 55.
 
 ### Hrímnir ★
 - sted: 59.92138, 10.75144
 - google: ChIJc41X4YduQUYRsXHstRp-S3M
 - nettside: https://www.hrimnir-ramen.no/
-Ramen
+Fredensborg
+Ramen. Maridalsveien 9A.
+- en: Fredensborg
+Ramen. Maridalsveien 9A.
 
 ### Norum Grill ★
 - sted: 59.91831, 10.70585
 - google: ChIJ2_gDbABtQUYRyni5yytLnlA
 - nettside: https://norumgrill.no/
+Frogner
+Grill. Bygdøy allé 53.
+- en: Frogner
+Grill. Bygdøy allé 53.
 
 ### Brasserie Hansken ★
 - sted: 59.91052, 10.73955
 - google: ChIJNUctz4duQUYRft4pW7dWnMI
 - nettside: http://www.brasseriehansken.no/
+Kvadraturen
+Klassisk brasserie. Christiania torv 4.
+- en: Kvadraturen
+Classic brasserie. Christiania torv 4.
 
 ### Restaurant Betong
 - sted: 59.90642, 10.75937
 - google: ChIJ5XKFeB5vQUYRN-s3zQz545k
 - nettside: http://restaurantbetong.no/
+Bjørvika
+Norsk. Operagata 77D.
+- en: Bjørvika
+Norwegian. Operagata 77D.
 
 ### Liminal
 - sted: 59.93318, 10.76701
 - google: ChIJQ0YIJfVvQUYRImW8QJ7PlmU
 - nettside: https://liminaloslo.no/
+Torshov
+Liten restaurant med nordisk settmeny. Torshovgata 15.
+- en: Torshov
+Small restaurant with a Nordic set menu. Torshovgata 15.
 
 ### Cordial
 - sted: 59.91653, 10.71340
 - google: ChIJxXO1XgBtQUYRijFcke-LXAU
 - nettside: https://www.cordial.no/
+Frogner
+Moderne bistro. Frognerveien 12B.
+- en: Frogner
+Modern bistro. Frognerveien 12B.
 
 ### Kafeteria August
 - sted: 59.91705, 10.73851
 - google: ChIJ2y4Hwz1vQUYR_Z2_kblubOY
 - nettside: https://kafeteriaaugust.no/
+Sentrum
+Småretter. Universitetsgata 9.
+- en: Sentrum
+Small plates. Universitetsgata 9.
 
 ### Savage
 - sted: 59.90954, 10.74026
 - google: ChIJoYdyGlVvQUYRQiTpfSvhOQs
 - nettside: https://www.restaurantsavage.no/
+Kvadraturen
+Fine dining. Nedre Slottsgate 2.
+- en: Kvadraturen
+Fine dining. Nedre Slottsgate 2.
 
 ### Theatercaféen
 - sted: 59.91404, 10.73389
 - google: ChIJKUfL-n1uQUYRBQem1qv03-8
 - nettside: https://www.theatercafeen.no/
+Sentrum
+Wienerkafé og brasserie på Hotel Continental. Stortingsgata 24.
+- en: Sentrum
+Viennese café and brasserie at Hotel Continental. Stortingsgata 24.
 
 ### Brasserie Coucou
 - sted: 59.91499, 10.72045
 - google: ChIJwVibOhttQUYR7FaSj6yfax8
 - nettside: http://www.brasseriecoucou.no/
+Vika
+Fransk. Henrik Ibsens gate 60C.
+- en: Vika
+French. Henrik Ibsens gate 60C.
 
 ### Apostrophe
 - sted: 59.92129, 10.76379
 - google: ChIJEYOIclZvQUYRp4xIMswDgSw
 - nettside: https://www.restaurant-apostrophe.com/
+Grünerløkka
+Lofthus Samvirkelags restaurant ved Rathkes plass. Kirkegårdsgata 7A.
+- en: Grünerløkka
+Lofthus Samvirkelag’s restaurant on Rathkes plass. Kirkegårdsgata 7A.
 
 ### ZZ Pizza
 - sted: 59.90595, 10.77508
 - google: ChIJS30OxvlvQUYRwHb4EwQRq7o
 - nettside: http://www.zz.pizza/
+Gamlebyen
+Pizza. St. Halvards gate 33.
+- en: Gamlebyen
+Pizza. St. Halvards gate 33.
 
 ### Antonietta
 - sted: 59.91909, 10.71886
 - google: ChIJ8wEu3qltQUYROW3r9gtz_QQ
 - nettside: https://www.antonietta.no/
+Frogner
+Italiensk. Niels Juels gate 51.
+- en: Frogner
+Italian. Niels Juels gate 51.
 
 ### Vesuvio Café & Pizzeria
 - sted: 59.92508, 10.74575
 - google: ChIJffDoEHBuQUYRXFpOCIHgcK0
 - nettside: http://www.vesuviocafe.no/
+St. Hanshaugen
+Napolitansk pizza. Bjerregaards gate 29B.
+- en: St. Hanshaugen
+Neapolitan pizza. Bjerregaards gate 29B.
 
 ### Izakaya
 - sted: 59.90904, 10.74233
 - google: ChIJ5aUOZvlvQUYRp6izA8_HWGI
 - nettside: https://izakayabyvladimirpak.omakasegroup.no/
+Kvadraturen
+Japansk izakaya. Kirkegata 1.
+- en: Kvadraturen
+Japanese izakaya. Kirkegata 1.
 
 ### Osteria Campo
 - sted: 59.91831, 10.70612
 - google: ChIJ-ys2HABtQUYR69q3BYZhLK4
 - nettside: https://camposteria.no/
+Frogner
+Italiensk. Bygdøy allé 53.
+- en: Frogner
+Italian. Bygdøy allé 53.
 
 ### Brasserie Ouest
 - sted: 59.91874, 10.70618
 - google: ChIJ-6UJg81tQUYRNIX8xkm68LU
 - nettside: https://www.brasserieouest.no/
+Frogner
+Fransk. Elisenbergveien 19.
+- en: Frogner
+French. Elisenbergveien 19.
 
 ### Bono
 - sted: 59.91609, 10.71421
 - google: ChIJy6xvXNNtQUYR0z3_IDYQem4
 - nettside: https://www.facebook.com/BONOoslo/
+Frogner
+Italiensk. Niels Juels gate 25.
+- en: Frogner
+Italian. Niels Juels gate 25.
 
 ### Koie
 - sted: 59.91703, 10.75253
 - google: ChIJLa_z_GNuQUYRRhUe7WvM-Lk
 - nettside: https://koieramen.no/
+Sentrum
+Ramen. Osterhaus' gate 13.
+- en: Sentrum
+Ramen. Osterhaus' gate 13.
 
 ### Arakataka
 - sted: 59.91637, 10.75062
 - google: ChIJ3Ume7GNuQUYRdpKwDiAdbLw
 - nettside: http://www.arakataka.no/
+Sentrum
+Nordisk sesongmat. Mariboes gate 7B.
+- en: Sentrum
+Seasonal Nordic. Mariboes gate 7B.
 
 ### St. Lars
 - sted: 59.92654, 10.73115
 - google: ChIJd0nD6nduQUYRhBLG8jKcEpg
 - nettside: http://www.stlars.no/
+Bislett
+Grill. Thereses gate 45.
+- en: Bislett
+Grill. Thereses gate 45.
 
 ### Grotto
 - sted: 59.92203, 10.73914
 - google: ChIJMy9cVtRvQUYRnd0T4CBpVyc
 - nettside: https://www.grottooslo.no/
+Bislett
+Moderne fransk. Hallings gate 5.
+- en: Bislett
+Modern French. Hallings gate 5.
 
 ### Nedre Foss Gård
 - sted: 59.92218, 10.75373
 - google: ChIJJZIg6WVuQUYR4glnL2osba4
 - nettside: http://www.nedrefossgaard.no/
+Grünerløkka
+Norsk, i en gammel gård ved Akerselva. Nordre gate 2.
+- en: Grünerløkka
+Norwegian, in an old farmhouse by the Akerselva. Nordre gate 2.
 
 ### Katla
 - sted: 59.91651, 10.73862
 - google: ChIJ14-S6T1vQUYRea2IV0MFpdU
 - nettside: https://www.katlaoslo.no/
+Sentrum
+Nordiske råvarer med smaker fra Asia og Latin-Amerika. Universitetsgata 12.
+- en: Sentrum
+Nordic produce with flavours from Asia and Latin America. Universitetsgata 12.
 
 ### Szechuan Chengdu
 - sted: 59.92317, 10.77167
 - google: ChIJX7AYPENuQUYRZDu9flbGRZE
 - nettside: http://www.szechuanrestaurant.no/
+Grünerløkka
+Sichuan-kinesisk. Trondheimsveien 64.
+- en: Grünerløkka
+Sichuan Chinese. Trondheimsveien 64.
 
 ### B vin
 - sted: 59.91856, 10.76034
 - google: ChIJCYv3p6VvQUYRDPLSZNgeJdY
 - nettside: https://www.b-vin.no/
+Grünerløkka
+Bistro og vinbar. Trondheimsveien 2.
+- en: Grünerløkka
+Bistro and wine bar. Trondheimsveien 2.
 
 ### Vadio
 - sted: 59.91985, 10.71801
 - google: ChIJH9mEVGhtQUYRSs08c_ew8Ag
 - nettside: https://www.vadio-oslo.com/
+Briskeby
+Portugisisk. Briskebyveien 26A.
+- en: Briskeby
+Portuguese. Briskebyveien 26A.
 
 ### Sabi Omakase
 - sted: 59.91434, 10.72921
 - google: ChIJyZ1OK35uQUYRs_kHgYhPRqE
 - nettside: https://www.omakaseoslo.no/
+Vika
+Sushi, omakase. Ruseløkkveien 3.
+- en: Vika
+Omakase sushi. Ruseløkkveien 3.
 
 ### Happolati
 - sted: 59.91825, 10.74030
 - google: ChIJgZh-hHxuQUYRfIGWf8WIqac
 - nettside: http://happolati.no/
+Sentrum
+Asiatisk. St. Olavs plass 2.
+- en: Sentrum
+Asian. St. Olavs plass 2.
 
 ### Mon Oncle
 - sted: 59.91705, 10.73891
 - google: ChIJF6SOh3dvQUYRf3c7twtZWVA
 - nettside: http://mononcle.no/
+Sentrum
+Fine dining. Universitetsgata 9.
+- en: Sentrum
+Fine dining. Universitetsgata 9.
 
 ### Feinschmecker
 - sted: 59.91848, 10.70794
 - google: ChIJfWKXYtJtQUYRFpCx84qAQtg
 - nettside: http://www.feinschmecker.no/
+Frogner
+Fine dining, fransk-nordisk. Balchens gate 5.
+- en: Frogner
+Fine dining, French-Nordic. Balchens gate 5.
 
 ### Brasserie France
 - sted: 59.91306, 10.74280
 - google: ChIJfZiTrmJuQUYRo3gKwWWXWBY
 - nettside: http://www.brasseriefrance.no/
+Kvadraturen
+Fransk. Øvre Slottsgate 16.
+- en: Kvadraturen
+French. Øvre Slottsgate 16.
 
 ### Brasserie Blanche
 - sted: 59.92343, 10.72571
 - google: ChIJ_5gpzNdtQUYR1rdew28Fbiw
 - nettside: http://www.blanche.no/
+Homansbyen
+Fransk. Josefines gate 23.
+- en: Homansbyen
+French. Josefines gate 23.
 
 ### Maaemo
 - sted: 59.90754, 10.75818
 - google: ChIJhyP_qopuQUYRwvq5k9QGIy8
 - nettside: http://www.maaemo.no/
-Fine dining
+Bjørvika
+Fine dining, tre Michelin-stjerner. Dronning Eufemias gate 23.
+- en: Bjørvika
+Fine dining, three Michelin stars. Dronning Eufemias gate 23.
 
 ### Sparta Matbar ★
 - sted: 59.91632, 10.75005
 - google: ChIJMyUhSwBvQUYRJxQRz1b9kmk
 - nettside: https://www.spartaoslo.no/
 Sentrum
-Mariboes gate 2B.
+Matbar og vinbar. Mariboes gate 2B.
 - en: Sentrum
-Mariboes gate 2B.
+Food and wine bar. Mariboes gate 2B.
 
 ### Rodeo
 - sted: 59.92844, 10.75740
@@ -317,9 +485,9 @@ By Akershus Fortress. Myntgata 9.
 - nettside: http://www.lasarett.no/
 - status: onskeliste
 Torshov
-Torshovgata 15.
+Liten matbar med mye vin. Torshovgata 15.
 - en: Torshov
-Torshovgata 15.
+Small food bar with plenty of wine. Torshovgata 15.
 
 ### The Little Pickle ★
 - sted: 59.91909, 10.76404
@@ -327,9 +495,9 @@ Torshovgata 15.
 - nettside: http://thelittlepickle.no/
 - status: onskeliste
 Tøyen
-Jens Bjelkes gate 9a.
+Nabolagsrestaurant med lokale råvarer. Jens Bjelkes gate 9a.
 - en: Tøyen
-Jens Bjelkes gate 9a.
+Neighbourhood restaurant with local produce. Jens Bjelkes gate 9a.
 
 ### Zio Pizza ★
 - sted: 59.93261, 10.72430
@@ -377,9 +545,9 @@ Pizza. Behrens' gate 2.
 - nettside: http://www.restaurant-sabotage.no/
 - status: onskeliste
 Fredensborg
-Rosteds gate 15b.
+Norsk, fransk og polsk. Rosteds gate 15b.
 - en: Fredensborg
-Rosteds gate 15b.
+Norwegian, French and Polish. Rosteds gate 15b.
 
 ### Tabuno
 - sted: 59.90674, 10.76006
@@ -417,9 +585,9 @@ Modern European. Dronning Eufemias gate 18.
 - nettside: http://lulu.no/
 - status: onskeliste
 Youngstorget
-Youngs gate 7.
+Omakase med fisk og sjømat. Youngs gate 7.
 - en: Youngstorget
-Youngs gate 7.
+Omakase with fish and seafood. Youngs gate 7.
 
 ### Substans
 - sted: 59.91093, 10.73639
@@ -467,9 +635,9 @@ Beer and wine bar. Wergelandsveien 5.
 - nettside: https://www.fagerbistro.no/
 - status: onskeliste
 Fagerborg
-Fagerborggata 1.
+Fransk bistro. Fagerborggata 1.
 - en: Fagerborg
-Fagerborggata 1.
+French bistro. Fagerborggata 1.
 
 ### Mantra
 - sted: 59.91107, 10.74667
