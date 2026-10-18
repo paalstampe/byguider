@@ -501,7 +501,7 @@ Neo-Filipino bistro. Hammersborggata 9.
 
 ## Butikker
 
-### Lush Dive
+### Lush Dive ★
 - sted: 59.92459, 10.75580
 - google: ChIJ-8kIRmluQUYRwmChqOib1qM
 - nettside: http://www.lushdive.no/
@@ -510,7 +510,7 @@ Papirhandel – notatbøker, fyllepenner, blyanter og kalendere. Thorvald Meyers
 - en: Grünerløkka
 Stationery shop – notebooks, fountain pens, pencils and calendars. Thorvald Meyers gate 19.
 
-### Tronsmo
+### Tronsmo ★
 - sted: 59.91664, 10.73859
 - google: ChIJy43eRnxuQUYRJM7BQ6TvnYE
 - nettside: http://www.tronsmo.no/
@@ -519,11 +519,11 @@ Bokhandel. Universitetsgata 12.
 - en: Sentrum
 Bookshop. Universitetsgata 12.
 
-### Dagestad
+### Skomaker Dagestad
 - sted: 59.92341, 10.72995
 - google: ChIJI0lVF3huQUYR1TaQz_UGp8g
 - nettside: http://skomakerdagestad.no/
 Bislett
-Skomaker Dagestad – skobutikk og skomaker. Josefines gate 2B.
+Skobutikk og skomaker. Josefines gate 2B.
 - en: Bislett
-Skomaker Dagestad – shoe shop and cobbler. Josefines gate 2B.
+Shoe shop and cobbler. Josefines gate 2B.
