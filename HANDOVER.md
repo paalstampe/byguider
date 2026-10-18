@@ -143,6 +143,10 @@ tyngdepunktet, eller punktet lengst fra kanten når tyngdepunktet havner nær ka
 nabolagsikonet fra zoom 13 (`NABOLAGSNAVN_MINZOOM`). Klikk på nabolaget
 (i lista eller kartet) uthever område og gater og zoomer dit; klikk på tomt kart opphever.
 Gategeometri kan hentes fra OpenStreetMap (Overpass) — Claude kan gjøre det på forespørsel.
+Nabolagsomriss bygger på offentlige kilder der de finnes, og ellers på gategrenser sporet i OSM; `kilde` i hver
+feature sier hvilken: London — bydelenes conservation areas (planning.data.gov.uk); New York — byplankontorets
+Neighborhood Tabulation Areas 2020 og Landmarks-kommisjonens historiske distrikter (NYC Open Data); Oslo — byleksikon
+og kommunale kilder; Nice — ingen offisielle kvartalsgrenser for Carré d'Or/Le Petit Marais, så gategrenser.
 
 Koordinatrekkefølge: **md-fila bruker breddegrad, lengdegrad** (Google-rekkefølge);
 GeoJSON-fila bruker lengdegrad, breddegrad. Parseren snur md-koordinatene.
