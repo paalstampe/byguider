@@ -1008,7 +1008,7 @@ Hifi. Grensen 9.
 - en: Sentrum
 Hi-fi. Grensen 9.
 
-### Big Dipper
+### Big Dipper ★
 - sted: 59.91373, 10.74543
 - google: ChIJr4uAU2FuQUYRKp-iSt3tBPM
 - nettside: http://www.bigdipper.no/
