@@ -77,6 +77,14 @@ South of Sofienbergparken – kvartalene mellom parken og Trondheimsveien.
 Torbjørn Egners plass og Bøgata ned til Farine.
 - en: Torbjørn Egners plass and Bøgata down to Farine.
 
+### Gamlebyen
+- sted: 59.90236, 10.77178
+- google: ChIJZ4zz7vBuQUYRW-gCu3C1Bq4
+- gater: Schweigaards gate
+- navn-en: Old Town
+Schweigaards gate fra Oslo gate til St. Halvards gate.
+- en: Schweigaards gate from Oslo gate to St. Halvards gate.
+
 ## Restauranter
 
 ### Le Benjamin ★
