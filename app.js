@@ -95,7 +95,6 @@ const TEKST = {
     ingenTreff: 'Ingen treff. Juster filtrene eller søket.',
     ikkeBesokt: 'Ikke besøkt ennå',
     ikkeBesoktAntall: n => 'Ikke besøkt ennå (' + n + ')',
-    visOnskeliste: 'Vis ønskeliste',
     forstevalg: 'Førstevalg',
     ingenSteder: 'Ingen steder lagt inn ennå.',
     ingenData: 'Ingen data',
@@ -136,7 +135,6 @@ const TEKST = {
     ingenTreff: 'No matches. Adjust the filters or the search.',
     ikkeBesokt: 'Not yet visited',
     ikkeBesoktAntall: n => 'Not yet visited (' + n + ')',
-    visOnskeliste: 'Show wishlist',
     forstevalg: 'Top pick',
     ingenSteder: 'No places added yet.',
     ingenData: 'No data',
@@ -1144,7 +1142,6 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     if (state.visOnskeliste === paa) return;
     state.visOnskeliste = paa;
     visOnskelag();
-    byggFiltre();
   }
 
   function visFokus(o) {
@@ -1675,11 +1672,6 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       byggFiltre();
       tegn();
     }));
-    if (state.onskeliste.length) {
-      el.fStatus.appendChild(lagChip(t('visOnskeliste'), null, state.visOnskeliste, () => {
-        settOnskelag(!state.visOnskeliste);
-      }));
-    }
   }
 
   el.sok.addEventListener('input', e => {

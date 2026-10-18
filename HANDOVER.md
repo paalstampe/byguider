@@ -136,7 +136,7 @@ med tittelen som lenke (kan gjentas; uten kilde: «Artikkel: Tittel»).
 `- status: onskeliste` merker et sted som ikke besøkt ennå (ønskeliste). Slike steder vises for alle
 (tidligere bare med `?onskeliste`, som nå ikke gjør noe), holdt utenfor hovedlista og tellingen:
 sammenslått seksjon «Ikke besøkt ennå (n)» nederst
-i lista (dempet, første linje av notatet), bryteren «Vis ønskeliste» i filterlinjen, egen kartkilde
+i lista (dempet, første linje av notatet; å åpne den viser stedene på kartet), egen kartkilde
 uten klynging med ring-ikoner i dempet farge, og merkelappen «Ikke besøkt ennå» i infoboksen.
 ★ på et ønskelistested betyr førstevalg: «Førstevalg» / «Top pick» i lista (sortert øverst),
 kobberfarget ring på kartet og «Ikke besøkt ennå · Førstevalg» i infoboksen.
