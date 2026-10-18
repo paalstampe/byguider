@@ -139,7 +139,11 @@ Inside The Carlyle.
 - nettside: https://www.guggenheim.org/
 Upper East Side
 
+Kunstmuseum i Frank Lloyd Wrights spiral, 5th Avenue 1071.
+
 - en: Upper East Side
+
+Art museum in Frank Lloyd Wright’s spiral, 1071 Fifth Avenue.
 
 ### Metropolitan Museum of Art
 - sted: 40.77944, -73.96324
@@ -147,7 +151,11 @@ Upper East Side
 - nettside: https://www.metmuseum.org/
 Upper East Side
 
+Et av verdens store kunstmuseer, 5th Avenue 1000.
+
 - en: Upper East Side
+
+One of the world’s great art museums, 1000 Fifth Avenue.
 
 ### American Museum of Natural History
 - sted: 40.78132, -73.97399
@@ -155,7 +163,11 @@ Upper East Side
 - nettside: https://www.amnh.org/
 Upper West Side
 
+Naturhistorisk museum, Central Park West 200.
+
 - en: Upper West Side
+
+Natural history museum, 200 Central Park West.
 
 ## Hoteller
 
@@ -264,7 +276,11 @@ Midtown East
 - nettside: https://www.birdlandjazz.com/
 Theater District
 
+Klassisk jazzklubb, West 44th Street 315.
+
 - en: Theater District
+
+Classic jazz club, 315 West 44th Street.
 
 ## Muséer og gallerier
 
@@ -274,7 +290,11 @@ Theater District
 - nettside: https://www.moma.org/
 Midtown
 
+Moderne kunst, West 53rd Street 11.
+
 - en: Midtown
+
+Modern art, 11 West 53rd Street.
 
 ### The Morgan Library & Museum
 - sted: 40.74923, -73.98140
@@ -282,7 +302,11 @@ Midtown
 - nettside: https://www.themorgan.org/
 Murray Hill
 
+J. P. Morgans bibliotek og museum, Madison Avenue 225.
+
 - en: Murray Hill
+
+J. P. Morgan’s library and museum, 225 Madison Avenue.
 
 ## Butikker
 
@@ -292,7 +316,11 @@ Murray Hill
 - nettside: https://www.argosybooks.com/
 Midtown East
 
+Antikvariat siden 1925, East 59th Street 116.
+
 - en: Midtown East
+
+Antiquarian bookshop since 1925, 116 East 59th Street.
 
 # Downtown
 
@@ -382,7 +410,11 @@ A very good café. Dinner too.
 - nettside: https://www.cosmenyc.com/
 Flatiron
 
+Moderne meksikansk, East 21st Street 35.
+
 - en: Flatiron
+
+Modern Mexican, 35 East 21st Street.
 
 ### Eleven Madison Park
 - sted: 40.74165, -73.98724
@@ -402,7 +434,11 @@ A legendary three-star that has been named the world’s best restaurant. Our ow
 - nettside: https://www.gupshupnyc.com/
 Gramercy
 
+Moderne indisk, East 18th Street 115.
+
 - en: Gramercy
+
+Modern Indian, 115 East 18th Street.
 
 ### John’s of Bleecker Street
 - sted: 40.73162, -74.00345
@@ -496,7 +532,11 @@ Very authentic, slightly posh classic Italian. Great for lunch too. Our favourit
 - nettside: https://www.russanddaughters.com/
 Lower East Side
 
+Røkt fisk og bagels siden 1914, East Houston Street 179.
+
 - en: Lower East Side
+
+Smoked fish and bagels since 1914, 179 East Houston Street.
 
 ### St Jardim
 - sted: 40.73438, -74.00285
@@ -504,7 +544,11 @@ Lower East Side
 - nettside: https://www.stjardimnyc.com/
 West Village
 
+Kafé og vinbar, West 10th Street 183.
+
 - en: West Village
+
+Café and wine bar, 183 West 10th Street.
 
 ## Barer
 
@@ -528,7 +572,11 @@ Cocktail bar.
 - nettside: https://www.bluenotejazz.com/nyc/
 Greenwich Village
 
+Legendarisk jazzklubb, West 3rd Street 131.
+
 - en: Greenwich Village
+
+Legendary jazz club, 131 West 3rd Street.
 
 ### Village Vanguard
 - sted: 40.73603, -74.00165
@@ -536,7 +584,11 @@ Greenwich Village
 - nettside: https://villagevanguard.com/
 West Village
 
+Legendarisk jazzklubb i en kjeller, 7th Avenue South 178.
+
 - en: West Village
+
+Legendary basement jazz club, 178 Seventh Avenue South.
 
 ## Muséer og gallerier
 
@@ -546,7 +598,11 @@ West Village
 - nettside: https://whitney.org/
 Meatpacking District
 
+Amerikansk kunst fra 1900-tallet til i dag, Gansevoort Street 99.
+
 - en: Meatpacking District
+
+20th-century and contemporary American art, 99 Gansevoort Street.
 
 ## Butikker
 
@@ -556,7 +612,11 @@ Meatpacking District
 - nettside: https://goodsforthestudy.com/
 Nolita
 
+Papirvarer og skrivebordsting, Mulberry Street 234.
+
 - en: Nolita
+
+Stationery and desk supplies, 234 Mulberry Street.
 
 ### Gramercy Typewriter Company
 - sted: 40.73943, -73.99621
@@ -564,7 +624,11 @@ Nolita
 - nettside: https://gramercytypewriter.com
 Chelsea
 
+Skrivemaskiner – salg og reparasjon, West 17th Street 108.
+
 - en: Chelsea
+
+Typewriters – sales and repairs, 108 West 17th Street.
 
 ### McNally Jackson Books SoHo
 - sted: 40.72542, -74.00069
@@ -572,7 +636,11 @@ Chelsea
 - nettside: https://mcnallyjackson.com/
 SoHo
 
+Bokhandel, Prince Street 134.
+
 - en: SoHo
+
+Bookshop, 134 Prince Street.
 
 ### McNulty's Tea & Coffee Co
 - sted: 40.73350, -74.00519
@@ -580,7 +648,11 @@ SoHo
 - nettside: https://mcnultys.com
 West Village
 
+Te og kaffe siden 1895, Christopher Street 109.
+
 - en: West Village
+
+Tea and coffee since 1895, 109 Christopher Street.
 
 ### Nalata Nalata
 - sted: 40.72468, -73.99145
@@ -588,7 +660,11 @@ West Village
 - nettside: https://nalatanalata.com/
 East Village
 
+Interiør og bruksting, mye japansk håndverk, Extra Place 2.
+
 - en: East Village
+
+Homeware, much of it Japanese craft, 2 Extra Place.
 
 ### Paragon Sports
 - sted: 40.73771, -73.99042
@@ -596,7 +672,11 @@ East Village
 - nettside: https://paragonsports.com/
 Union Square
 
+Sportsbutikk, Broadway 867.
+
 - en: Union Square
+
+Sporting goods, 867 Broadway.
 
 ### The Strand
 - sted: 40.73325, -73.99095
@@ -604,7 +684,11 @@ Union Square
 - nettside: https://www.strandbooks.com/
 Greenwich Village
 
+Nye, brukte og sjeldne bøker, Broadway 828.
+
 - en: Greenwich Village
+
+New, used and rare books, 828 Broadway.
 
 ## Hoteller
 
@@ -614,7 +698,11 @@ Greenwich Village
 - nettside: https://www.firmdalehotels.com/hotels/new-york/crosby-street-hotel/
 SoHo
 
+Firmdale-hotell, Crosby Street 79.
+
 - en: SoHo
+
+Firmdale hotel, 79 Crosby Street.
 
 ### The Hotel Chelsea
 - sted: 40.74433, -73.99687
@@ -622,7 +710,11 @@ SoHo
 - nettside: https://www.hotelchelsea.com/
 Chelsea
 
+Historisk kunstnerhotell, West 23rd Street 222.
+
 - en: Chelsea
+
+Historic artists’ hotel, 222 West 23rd Street.
 
 ### Soho Grand Hotel
 - sted: 40.72198, -74.00433
@@ -630,7 +722,11 @@ Chelsea
 - nettside: https://www.sohogrand.com/
 SoHo
 
+Hotell, West Broadway 310.
+
 - en: SoHo
+
+Hotel, 310 West Broadway.
 
 ### 11 Howard
 - sted: 40.71918, -74.00011
@@ -638,7 +734,11 @@ SoHo
 - nettside: https://www.11howard.com/
 SoHo
 
+Designhotell, Howard Street 11.
+
 - en: SoHo
+
+Design hotel, 11 Howard Street.
 
 ## Verdt en omvei
 
@@ -647,7 +747,11 @@ SoHo
 - google: ChIJJR01Hr1ZwokR7y2qRaJCi00
 Lower East Side
 
+Hjørnet Ludlow og Rivington Street, kjent fra omslaget til «Paul’s Boutique».
+
 - en: Lower East Side
+
+Corner of Ludlow and Rivington Street, known from the cover of “Paul’s Boutique”.
 
 ### Chelsea Market
 - sted: 40.74244, -74.00614
@@ -655,7 +759,11 @@ Lower East Side
 - nettside: https://www.chelseamarket.com/
 Chelsea
 
+Mathall i en gammel kjeksfabrikk, 9th Avenue 75.
+
 - en: Chelsea
+
+Food hall in an old biscuit factory, 75 Ninth Avenue.
 
 ### Charging Bull
 - sted: 40.70557, -74.01345
@@ -670,7 +778,11 @@ Financial District
 - nettside: https://www.comedycellar.com/
 Greenwich Village
 
+Komiklubb i kjelleren, MacDougal Street 117.
+
 - en: Greenwich Village
+
+Basement comedy club, 117 MacDougal Street.
 
 ### Pier 54
 - sted: 40.74155, -74.00997
@@ -678,7 +790,11 @@ Greenwich Village
 - nettside: https://hudsonriverpark.org/
 Hudson River Park
 
+Cunards gamle brygge, der Carpathia kom inn med de overlevende fra Titanic.
+
 - en: Hudson River Park
+
+Cunard’s old pier, where the Carpathia arrived with the Titanic survivors.
 
 ### Union Square Greenmarket
 - sted: 40.73653, -73.99039
@@ -686,7 +802,11 @@ Hudson River Park
 - nettside: https://www.grownyc.org/greenmarket/manhattan-union-square-m
 Union Square
 
+Bondens marked mandag, onsdag, fredag og lørdag.
+
 - en: Union Square
+
+Farmers’ market on Mondays, Wednesdays, Fridays and Saturdays.
 
 ### Wall Street
 - sted: 40.70607, -74.00890
