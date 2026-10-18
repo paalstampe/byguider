@@ -499,6 +499,126 @@ Neo-filippinsk bistro. Hammersborggata 9.
 - en: Hammersborg
 Neo-Filipino bistro. Hammersborggata 9.
 
+## Kaféer
+
+### Fuglen – Universitetsgata
+- sted: 59.91715, 10.73990
+- google: ChIJc8XN8nxuQUYRVgqbPUEYzLE
+- nettside: https://www.fuglen.no/
+Sentrum
+Kaffebar og cocktailbar med vintagemøbler. Universitetsgata 2.
+- en: Sentrum
+Coffee bar and cocktail bar with vintage furniture. Universitetsgata 2.
+
+### Fuglen – Gamlebyen
+- sted: 59.90622, 10.77465
+- google: ChIJc80CYT9vQUYR43VJOX086R8
+- nettside: https://www.fuglencoffee.no/
+Gamlebyen
+Fuglens kafé og brenneri. St. Halvards gate 33.
+- en: Gamlebyen
+Fuglen’s café and roastery. St. Halvards gate 33.
+
+## Barer
+
+### Café Rouleur
+- sted: 59.92389, 10.74048
+- google: ChIJVS-zcXpuQUYRskn1VIzlKfk
+- nettside: http://www.rouleuroslo.no/
+St. Hanshaugen
+Ullevålsveien 16A.
+- en: St. Hanshaugen
+Ullevålsveien 16A.
+
+### Merkur Bar
+- sted: 59.92350, 10.74165
+- google: ChIJg9GPYnpuQUYRaVhrauOle-I
+- nettside: http://www.merkurbar.com/
+St. Hanshaugen
+Bjerregaards gate 5A.
+- en: St. Hanshaugen
+Bjerregaards gate 5A.
+
+### Coffee & Cigarettes
+- sted: 59.91853, 10.74782
+- google: ChIJe90FDhlvQUYRZg5int9_5kM
+Fredensborg
+Fredensborgveien 22A.
+- en: Fredensborg
+Fredensborgveien 22A.
+
+### Himkok
+- sted: 59.91429, 10.75153
+- google: ChIJUyV7KGJuQUYRohEJQ-fnslw
+- nettside: http://www.himkok.no/
+Sentrum
+Cocktailbar og destilleri. Storgata 27.
+- en: Sentrum
+Cocktail bar and distillery. Storgata 27.
+
+### Svanen
+- sted: 59.91243, 10.74457
+- google: ChIJD_-Fb2pvQUYRjcMxOgNFm2c
+- nettside: http://www.svanenoslo.no/
+Sentrum
+Cocktailbar. Karl Johans gate 13.
+- en: Sentrum
+Cocktail bar. Karl Johans gate 13.
+
+### Kongen Marina
+- sted: 59.91016, 10.70518
+- google: ChIJowC-3C1sQUYRkBX3jm6gIZI
+- nettside: https://kongenmarina.no/
+Frognerkilen
+Bar og restaurant ved sjøen. Frognerstranda 4.
+- en: Frognerkilen
+Waterside bar and restaurant. Frognerstranda 4.
+
+### Herr Nilsen
+- sted: 59.91530, 10.74091
+- google: ChIJY0isJn1uQUYRGFgwCsFhuRc
+- nettside: http://www.herrnilsen.no/
+Sentrum
+Jazzklubb og bar. C. J. Hambros plass 5.
+- en: Sentrum
+Jazz club and bar. C. J. Hambros plass 5.
+
+### Last Train
+- sted: 59.91473, 10.73656
+- google: ChIJ25upon1uQUYRStlYX9894vE
+- nettside: http://www.lasttrain.no/
+Sentrum
+Rockebar. Karl Johans gate 45.
+- en: Sentrum
+Rock bar. Karl Johans gate 45.
+
+### Oh Dear
+- sted: 59.91039, 10.72657
+- google: ChIJyTvW615vQUYREbvfKgiFNP4
+- nettside: http://ohdearoslo.no/
+Aker Brygge
+Holmens gate 4.
+- en: Aker Brygge
+Holmens gate 4.
+
+### Territoriet
+- sted: 59.91895, 10.75747
+- google: ChIJ2xki5mZuQUYRx7h4Nt9hxBE
+- nettside: https://www.territoriet.no/
+Grünerløkka
+Vinbar. Markveien 58.
+- en: Grünerløkka
+Wine bar. Markveien 58.
+
+### Bettola
+- sted: 59.91837, 10.75964
+- google: ChIJjR3ZamduQUYRuzVd_4CzUOo
+- nettside: https://www.bettola.no/
+Grünerløkka
+Cocktailbar. Trondheimsveien 2.
+- en: Grünerløkka
+Cocktail bar. Trondheimsveien 2.
+
 ## Butikker
 
 ### Lush Dive ★
@@ -527,3 +647,109 @@ Bislett
 Skobutikk og skomaker. Josefines gate 2B.
 - en: Bislett
 Shoe shop and cobbler. Josefines gate 2B.
+
+### Gutta på Haugen – Ullevålsveien
+- sted: 59.92413, 10.73958
+- google: ChIJvUxVC3puQUYRLK0ECUfu8J4
+- nettside: https://www.gutta.no/
+St. Hanshaugen
+Delikatesser. Ullevålsveien 45.
+- en: St. Hanshaugen
+Delicatessen. Ullevålsveien 45.
+
+### Gutta på Haugen – Mathallen
+- sted: 59.92223, 10.75205
+- google: ChIJw79hpW9vQUYRQPbcUXmGVoU
+- nettside: https://www.gutta.no/
+Vulkan
+Pålegg og delikatesser i Mathallen. Vulkan 5.
+- en: Vulkan
+Cold cuts and delicatessen in Mathallen. Vulkan 5.
+
+### Annis Pølsemakeri
+- sted: 59.92222, 10.75205
+- google: ChIJoe7MQWRuQUYRQPdr5y2fyyU
+- nettside: https://polsemakeri.no/
+Vulkan
+Pølser og spekemat i Mathallen. Vulkan 5.
+- en: Vulkan
+Sausages and cured meats in Mathallen. Vulkan 5.
+
+### Fjelberg
+- sted: 59.91817, 10.70524
+- google: ChIJQ46Lec1tQUYRfm__ofcPYFk
+- nettside: http://www.fjelberg.no/
+Frogner
+Fisk og vilt. Bygdøy allé 56.
+- en: Frogner
+Fish and game. Bygdøy allé 56.
+
+### Frogner Special
+- sted: 59.91821, 10.70506
+- google: ChIJZY9cd81tQUYRXN0O4d1rVVY
+- nettside: https://www.frognerspecial.com/
+Frogner
+Ost og delikatesser. Bygdøy allé 56B.
+- en: Frogner
+Cheese and delicatessen. Bygdøy allé 56B.
+
+### Maschmanns
+- sted: 59.92151, 10.68058
+- google: ChIJ4YXFiLNtQUYR83Mx91sbR4U
+- nettside: https://maschmanns.no/
+Skøyen
+Matmarked. Karenslyst allé 51.
+- en: Skøyen
+Food market. Karenslyst allé 51.
+
+### Juels 33
+- sted: 59.91820, 10.71894
+- google: ChIJWyMwgdRtQUYRz-w2DRedOWI
+Frogner
+Kolonial. Meltzers gate 9.
+- en: Frogner
+Grocer. Meltzers gate 9.
+
+### Bærre Lækkert Postkort
+- sted: 59.91492, 10.75492
+- google: ChIJAwyyDGFuQUYRQBgbrJ3g2gs
+- nettside: http://www.berrelekkert.no/
+Sentrum
+Gamle postkort. Storgata 36A.
+- en: Sentrum
+Vintage postcards. Storgata 36A.
+
+### Eksakt Hifi
+- sted: 59.92680, 10.72409
+- google: ChIJbfdZi41tQUYRdfYsiXctYM4
+- nettside: http://www.eksakthifi.no/
+Fagerborg
+Hifi. Vibes gate 13A.
+- en: Fagerborg
+Hi-fi. Vibes gate 13A.
+
+### Skomakern Ans
+- sted: 59.91232, 10.72495
+- google: ChIJ_____4BuQUYRw19IlsfWGis
+Vika
+Skomaker. Ruseløkkveien 50.
+- en: Vika
+Cobbler. Ruseløkkveien 50.
+
+### Stereofil
+- sted: 59.91408, 10.74357
+- google: ChIJJ5vAt2JuQUYRcSMK8tvtVhg
+- nettside: http://www.stereofil.no/
+Sentrum
+Hifi. Grensen 9.
+- en: Sentrum
+Hi-fi. Grensen 9.
+
+### Big Dipper
+- sted: 59.91373, 10.74543
+- google: ChIJr4uAU2FuQUYRKp-iSt3tBPM
+- nettside: http://www.bigdipper.no/
+Sentrum
+Platebutikk. Møllergata 3A.
+- en: Sentrum
+Record shop. Møllergata 3A.
