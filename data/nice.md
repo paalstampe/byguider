@@ -106,10 +106,24 @@ Open every day.
 - sted: 43.70042, 7.28501
 - google: ChIJB7NnzyHbzRIRtO8fkFwdBl0
 - nettside: http://lesagitateurs.com/pirouette
+Bistro fra Les Agitateurs
+
+34 Rue Bonaparte.
+
+- en: Bistro from Les Agitateurs
+
+34 Rue Bonaparte.
 
 ### Lavomatique ★
 - sted: 43.69756, 7.27619
 - google: ChIJXypbOnvbzRIRlNgKVjfYNq8
+Småretter til deling
+
+11 Rue du Pont-Vieux.
+
+- en: Small plates to share
+
+11 Rue du Pont-Vieux.
 
 ### Jan ★
 - sted: 43.69986, 7.28490
@@ -133,107 +147,253 @@ Fine dining
 - sted: 43.69979, 7.28439
 - google: ChIJRfplVQjbzRIRpBldOM3IXjE
 - nettside: https://tinatrattoria.com/tina-trattoria
+Italiensk trattoria
+
+16 Rue Lascaris.
+
+- en: Italian trattoria
+
+16 Rue Lascaris.
 
 ### Noto
 - sted: 43.69562, 7.27049
 - google: ChIJv78aqqrbzRIRv43Z2SPIznE
 - nettside: https://noto-nice.com/
+Siciliansk
+
+20 Rue Saint-François de Paule.
+
+- en: Sicilian
+
+20 Rue Saint-François de Paule.
 
 ### Zenirō
 - sted: 43.70151, 7.27940
 - google: ChIJj0UwwrXbzRIR-tCPIbLPlYY
 - nettside: https://www.zenirorestaurants.com/
+Japansk restaurant og bar
+
+64 Boulevard Risso.
+
+- en: Japanese restaurant and bar
+
+64 Boulevard Risso.
 
 ### Cagnard
 - sted: 43.70008, 7.28428
 - google: ChIJ6W_m91HbzRIRKRypInZwg5k
 - nettside: https://lesagitateurs.com/cagnard
+Sesongretter til deling, fra Les Agitateurs
+
+11 Rue François Guisol.
+
+- en: Seasonal sharing plates, from Les Agitateurs
+
+11 Rue François Guisol.
 
 ### Fine Gueule
 - sted: 43.69605, 7.27188
 - google: ChIJEzRKyqPazRIRJGVgSPuxt5g
 - nettside: http://www.finegueule.fr/
+Fransk og niçoise
+
+2 Rue de l'Hôtel de Ville.
+
+- en: French and Niçoise
+
+2 Rue de l'Hôtel de Ville.
 
 ### La Petite Maison
 - sted: 43.69584, 7.27093
 - google: ChIJU7N6KqLazRIRY837PEcbJAs
 - nettside: https://www.instagram.com/lapetitemaison_nice/
+Niçoise- og middelhavskjøkken
+
+11 Rue Saint-François de Paule.
+
+- en: Niçoise and Mediterranean
+
+11 Rue Saint-François de Paule.
 
 ### Le Bistrot des Serruriers
 - sted: 43.69746, 7.27838
 - google: ChIJje0pesTbzRIR2yKcPzPf1cM
 - nettside: https://www.marriott.com/en-us/hotels/ncehc-hotel-du-couvent-a-luxury-collection-hotel-nice-france/dining/
+Bistro på Hôtel du Couvent
+
+16 Rue des Serruriers.
+
+- en: Bistro at Hôtel du Couvent
+
+16 Rue des Serruriers.
 
 ### Apopino
 - sted: 43.69908, 7.26488
 - google: ChIJjW6jy23RzRIR4RXJ6suyNmI
 - nettside: https://www.apopinorestaurant.com/
+Middelhavskjøkken
 
+11 bis Rue Grimaldi.
+
+- en: Mediterranean
+
+11 bis Rue Grimaldi.
 
 ### Le Séjour
 - sted: 43.69895, 7.26495
 - google: ChIJOWwC_AnQzRIRIC5eAiqAv3k
 - nettside: https://www.sejourcafe.fr/
+Moderne fransk
+
+11 Rue Grimaldi.
+
+- en: Modern French
+
+11 Rue Grimaldi.
 
 ### L'antidote
 - sted: 43.69649, 7.26166
 - google: ChIJPUu6AgDRzRIROxpWab1RRxM
 - nettside: https://lantidotenice.fr/
+Fransk
+
+3 Rue Dalpozzo.
+
+- en: French
+
+3 Rue Dalpozzo.
 
 ### Salette
 - sted: 43.70068, 7.28469
 - google: ChIJn3fG3QDbzRIR_18otd8PNn4
 - nettside: https://www.salette-restaurant.fr/
+Fransk bistronomi
+
+35a Rue Bonaparte.
+
+- en: French bistronomy
+
+35a Rue Bonaparte.
 
 ### Franchin
 - sted: 43.69643, 7.26413
 - google: ChIJE51pigrQzRIR_x_PzrQ_He0
 - nettside: https://www.franchin.net/
+Franske klassikere i art deco-lokale
+
+10 Rue Massenet.
+
+- en: French classics in an art deco room
+
+10 Rue Massenet.
 
 ### Bar des Oiseaux
 - sted: 43.69693, 7.27487
 - google: ChIJPbZSQaPazRIRJJ75fBP1XE8
 - nettside: https://www.instagram.com/bar_des_oiseaux_nice
+Fransk med internasjonale innslag
+
+5 Rue Saint-Vincent.
+
+- en: French with global touches
+
+5 Rue Saint-Vincent.
 
 ### Le Comptoir du Marché
 - sted: 43.69748, 7.27497
 - google: ChIJR2xXXaPazRIRkzg4n7-k-sY
 - nettside: http://www.comptoirdumarche.fr/
+Bistro, middelhavskjøkken
+
+8 Rue du Marché.
+
+- en: Bistro, Mediterranean
+
+8 Rue du Marché.
 
 ### Bistrot d'Antoine
 - sted: 43.69638, 7.27631
 - google: ChIJaSzDzLzazRIRCRtNrjEbXvk
 - nettside: https://www.facebook.com/pages/Le-Bistro-D-Antoine/174404542628277
+Bistro
+
+27 Rue de la Préfecture.
+
+- en: Bistro
+
+27 Rue de la Préfecture.
 
 ### Peixes
 - sted: 43.69603, 7.27102
 - google: ChIJcypl1KPazRIRiHefCSt4GJQ
 - nettside: https://www.peixes.fr/
+Fisk og sjømat med søramerikansk preg
+
+4 Rue Jacques Médecin.
+
+- en: Fish and seafood with a South American twist
+
+4 Rue Jacques Médecin.
 
 ### Cave de Peixes
 - sted: 43.69980, 7.28109
 - google: ChIJw63H7FfbzRIRcgsFc3Fb5cs
 - nettside: https://www.instagram.com/lacavedepeixes/
+Vinbar fra Peixes
+
+8 Rue Catherine Ségurane.
+
+- en: Wine bar from Peixes
+
+8 Rue Catherine Ségurane.
 
 ### Olive & Artichaut
 - sted: 43.69649, 7.27599
 - google: ChIJpU2cM6PazRIRqHWfuvZTVkI
 - nettside: https://guide.michelin.com/gb/en/provence-alpes-cote-dazur/nice/restaurant/olive-et-artichaut
+Middelhavskjøkken
+
+6 Rue Sainte-Réparate.
+
+- en: Mediterranean
+
+6 Rue Sainte-Réparate.
 
 ### L'eau de vie
 - sted: 43.70168, 7.27569
 - google: ChIJ8V2bSaXazRIRQW52wdexwdY
 - nettside: https://restaurant-eau-de-vie-nice.fr/
+Moderne fransk
+
+11 Rue Delille.
+
+- en: Modern French
+
+11 Rue Delille.
 
 ### Chez Davia
 - sted: 43.69905, 7.26483
 - google: ChIJqTIC_AnQzRIR96POL-9UfMc
 - nettside: https://www.chezdavia.com/
+Niçoise-kjøkken
+
+11 bis Rue Grimaldi.
+
+- en: Niçoise cooking
+
+11 bis Rue Grimaldi.
 
 ### Magma
 - sted: 43.70071, 7.28409
 - google: ChIJi8Q6NtnbzRIRU8p6NkexOrk
 - nettside: https://lesagitateurs.com/magma
+Asiatisk fusjon fra Les Agitateurs
+
+31 Rue Bonaparte.
+
+- en: Asian fusion from Les Agitateurs
+
+31 Rue Bonaparte.
 
 ## Kaféer
 
@@ -290,14 +450,24 @@ Rue Blacas and Rue de la Liberté are open every day, Rue Gioffredo Monday to Sa
 - google: ChIJl9k1H6fbzRIRZbF1UAi8LnM
 - nettside: http://www.pin-pin.fr/
 Lunsj
+
+2 Rue Martin Seytour.
+
 - en: Lunch
+
+2 Rue Martin Seytour.
 
 ### Fino
 - sted: 43.69908, 7.27307
 - google: ChIJN9o6by3bzRIRH5WEZiJf7rk
 - nettside: https://cafefino.fr/
 Lunsj
+
+39 Rue Gioffredo.
+
 - en: Lunch
+
+39 Rue Gioffredo.
 
 ### Deli Banh Mi ★
 - sted: 43.69967, 7.27109
@@ -324,56 +494,96 @@ Open Monday to Saturday. Small terrace.
 - google: ChIJHfz3ZK7bzRIR0Ymt-Btfx2k
 - nettside: https://leclay.fr/
 Lunsj
+
+4 Rue Bonaparte.
+
 - en: Lunch
+
+4 Rue Bonaparte.
 
 ### Clay – Rue Gioffredo
 - sted: 43.69857, 7.27157
 - google: ChIJlTxwUwDbzRIR9Uj9_nHeiGs
 - nettside: https://leclay.fr/
 Lunsj
+
+47 Rue Gioffredo.
+
 - en: Lunch
+
+47 Rue Gioffredo.
 
 ### Maranna
 - sted: 43.69637, 7.27671
 - google: ChIJ22rwonPbzRIR_iWefjIZCzI
 - nettside: https://www.maranna.fr/
 Lunsj
+
+31 Rue Benoît Bunico, Vieux-Nice.
+
 - en: Lunch
+
+31 Rue Benoît Bunico, Vieux-Nice.
 
 ### Ginette – Rue Pastorelli
 - sted: 43.70015, 7.26904
 - google: ChIJ-4rD-9rbzRIRnI_Afje3FGs
 - nettside: https://ginette-cafe-cantine.com/
 Lunsj
+
+42 Rue Pastorelli.
+
 - en: Lunch
+
+42 Rue Pastorelli.
 
 ### Ginette – Rue Meyerbeer
 - sted: 43.69600, 7.26057
 - google: ChIJqy2U3F7RzRIRSgGZdc1CqDQ
 - nettside: https://ginette-cafe-cantine.com/
 Lunsj
+
+11 Rue Meyerbeer.
+
 - en: Lunch
+
+11 Rue Meyerbeer.
 
 ### Le Country Store – Rue de l'Hôtel des Postes
 - sted: 43.69931, 7.27110
 - google: ChIJP7LF4bDbzRIRgqpxBoU3f2c
 - nettside: https://www.lecountrystore.com/
 Kaffe
+
+43 Rue de l'Hôtel des Postes.
+
 - en: Coffee
+
+43 Rue de l'Hôtel des Postes.
 
 ### Le Country Store – Rue du Maréchal Joffre
 - sted: 43.69790, 7.26174
 - google: ChIJy777N6TRzRIRpCZSiC01waw
 - nettside: https://www.lecountrystore.com/
 Kaffe
+
+39 Rue du Maréchal Joffre.
+
 - en: Coffee
+
+39 Rue du Maréchal Joffre.
 
 ### Garden Café
 - sted: 43.69802, 7.25605
 - google: ChIJE-K7_GrRzRIR5HuLGpCNgv8
 - nettside: https://www.gardencafenice.com/
 Brunch
+
+37 Boulevard Gambetta.
+
 - en: Brunch
+
+37 Boulevard Gambetta.
 
 ### Le Daily-Ric
 - sted: 43.69929, 7.27038
@@ -432,7 +642,12 @@ Kaffebrenneri
 - google: ChIJb5hW0yfbzRIRc9OxuKFcR9c
 - nettside: https://www.instagram.com/vibes.bar.nice/
 Cocktailbar
+
+22 Rue François Guisol.
+
 - en: Cocktail bar
+
+22 Rue François Guisol.
 
 ## Muséer og gallerier
 
@@ -441,6 +656,13 @@ Cocktailbar
 - google: ChIJnz74K1DFzRIRiRaLt2c5MhA
 - nettside: https://www.musee-matisse-nice.org/en/
 - utenfor: ja
+Kunstmuseum
+
+I en villa fra 1600-tallet i Cimiez, 164 Avenue des Arènes de Cimiez.
+
+- en: Art museum
+
+In a 17th-century villa in Cimiez, 164 Avenue des Arènes de Cimiez.
 
 ## Butikker
 
@@ -449,7 +671,12 @@ Cocktailbar
 - google: ChIJe7daQ7_azRIRisFL66Jl5u8
 - nettside: https://www.cafeducycliste.com/
 Sykkelklær og kafé
+
+16 Quai des Docks, ved havna.
+
 - en: Cycling apparel and café
+
+16 Quai des Docks, by the port.
 
 ### Trésors Publics
 - sted: 43.69633, 7.27601
