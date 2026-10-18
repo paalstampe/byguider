@@ -920,15 +920,14 @@ Delikatesser. Ullevålsveien 45.
 - en: St. Hanshaugen
 Delicatessen. Ullevålsveien 45.
 
-### Gutta på Haugen – Mathallen ★
-- sted: 59.92223, 10.75205
-- google: ChIJw79hpW9vQUYRQPbcUXmGVoU
+### Gutta på Haugen – Vika ★
+- sted: 59.91275, 10.72648
+- google: ChIJbVBTBq5vQUYRV0qTRGwRfM8
 - nettside: https://www.gutta.no/
-Vulkan
-Pålegg og delikatesser i Mathallen. Vulkan 5.
-- en: Vulkan
-Cold cuts and delicatessen in Mathallen. Vulkan 5.
-
+Vika
+Delikatesser. Ruseløkkveien 26.
+- en: Vika
+Delicatessen. Ruseløkkveien 26.
 ### Annis Pølsemakeri
 - sted: 59.92222, 10.75205
 - google: ChIJoe7MQWRuQUYRQPdr5y2fyyU
@@ -1076,7 +1075,7 @@ Walk up onto the roof. Kirsten Flagstads plass 1.
 
 ## Muséer og gallerier
 
-### Nasjonalmuseet
+### Nasjonalmuseet ★
 - navn-en: National Museum
 - sted: 59.91212, 10.72974
 - google: ChIJOdGZU3xuQUYRRpZUX1Z3YUM
@@ -1096,7 +1095,7 @@ Edvard Munchs plass 1.
 - en: Bjørvika
 Edvard Munchs plass 1.
 
-### Astrup Fearnley Museet
+### Astrup Fearnley Museet ★
 - navn-en: Astrup Fearnley Museum
 - sted: 59.90690, 10.72131
 - google: ChIJT4tdJ4luQUYRgMF5nmdF7L8
