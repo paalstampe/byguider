@@ -48,15 +48,11 @@ og kobles hit på navn: type "område", "gate" eller "rute".
 - sted: 59.91941, 10.74798
 - google: ChIJWwUYjWRuQUYRpp0393vnWVg
 - gater: Fredensborgveien
-Fredensborgveien fra Eff Eff opp til rundkjøringen ved Hrímnir.
-- en: Fredensborgveien from Eff Eff up to the roundabout by Hrímnir.
 
 ### St. Hanshaugen
 - sted: 59.92875, 10.74168
 - google: ChIJw1U8f99tQUYRScqXxtHUwD4
 - gater: Dalsbergstien, Waldemar Thranes gate, Hallings gate, Ullevålsveien
-Med Hallings gate. Dalsbergstien fra Schwensens gate til Ullevålsveien, Waldemar Thranes gate opp til Café Rouleur og Ullevålsveien fra Akersbakken til Schwensens gate.
-- en: Including Hallings gate. Dalsbergstien from Schwensens gate to Ullevålsveien, Waldemar Thranes gate up to Café Rouleur and Ullevålsveien from Akersbakken to Schwensens gate.
 
 ### Grünerløkka
 - sted: 59.92161, 10.75741
@@ -66,24 +62,20 @@ Med Hallings gate. Dalsbergstien fra Schwensens gate til Ullevålsveien, Waldema
 ### SoSoPa
 - sted: 59.92114, 10.76342
 - google: ChIJhXwp82duQUYRSDN-Bunh7_g
-- gater: Rathkes gate, Rathkes plass, Jens Bjelkes gate
+- gater: Toftes gate, Rathkes gate, Rathkes plass
 South of Sofienbergparken – kvartalene mellom parken og Trondheimsveien.
 - en: South of Sofienbergparken – the blocks between the park and Trondheimsveien.
 
 ### Kampen
 - sted: 59.91298, 10.77940
 - google: ChIJz0yNfVduQUYRZIJROqrdkC4
-- gater: Torbjørn Egners plass, Bøgata, Nannestadgata
-Torbjørn Egners plass og Bøgata ned til Farine.
-- en: Torbjørn Egners plass and Bøgata down to Farine.
+- gater: Bøgata, Nannestadgata
 
 ### Gamlebyen
 - sted: 59.90236, 10.77178
 - google: ChIJZ4zz7vBuQUYRW-gCu3C1Bq4
 - gater: Schweigaards gate
 - navn-en: Old Town
-Schweigaards gate fra Oslo gate til St. Halvards gate.
-- en: Schweigaards gate from Oslo gate to St. Halvards gate.
 
 ## Restauranter
 
@@ -1013,3 +1005,12 @@ Kampen
 Platebutikk. Nannestadgata 10C, inngang fra Bøgata.
 - en: Kampen
 Record shop. Nannestadgata 10C, entrance from Bøgata.
+
+### Kollekted By
+- sted: 59.92048, 10.76135
+- google: ChIJ3V7mlmduQUYRCS48chAwN-k
+- nettside: http://kollektedby.no/
+SoSoPa
+Interiør og design. Schous plass 7A.
+- en: SoSoPa
+Interiors and design. Schous plass 7A.
