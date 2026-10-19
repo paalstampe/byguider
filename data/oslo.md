@@ -5,7 +5,7 @@ tittel-en: Pål and Vibeke’s Oslo
 undertittel-en: Restaurants and bars, plus a few other things.
 senter: 59.9180, 10.7400
 zoom: 13
-oppdatert: 2026-10-18
+oppdatert: 2026-10-19
 ---
 
 <!--
@@ -901,6 +901,24 @@ Sentrum
 Bokhandel. Universitetsgata 12.
 - en: Sentrum
 Bookshop. Universitetsgata 12.
+
+### Chillout – Grünerløkka
+- sted: 59.92039, 10.75717
+- google: ChIJSYHvXmZuQUYRHOeY2fDhlSQ
+- nettside: http://www.chillout.no/
+Grünerløkka
+Reisebutikk – guidebøker, kart, bagasje og reiseutstyr. Markveien 55.
+- en: Grünerløkka
+Travel shop – guidebooks, maps, luggage and travel gear. Markveien 55.
+
+### Chillout – Bogstadveien
+- sted: 59.92747, 10.71988
+- google: ChIJPXUnHtptQUYR9xTjZeqjr3o
+- nettside: http://www.chillout.no/
+Majorstuen
+Reisebutikk – guidebøker, kart, bagasje og reiseutstyr. Bogstadveien 41.
+- en: Majorstuen
+Travel shop – guidebooks, maps, luggage and travel gear. Bogstadveien 41.
 
 ### Skomaker Dagestad
 - sted: 59.92341, 10.72995
