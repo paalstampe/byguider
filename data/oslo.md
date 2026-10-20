@@ -5,7 +5,7 @@ tittel-en: Pål and Vibeke’s Oslo
 undertittel-en: Restaurants and bars, plus a few other things.
 senter: 59.9180, 10.7400
 zoom: 13
-oppdatert: 2026-10-19
+oppdatert: 2026-10-20
 ---
 
 <!--
@@ -779,6 +779,33 @@ Ullevål Hageby
 Bakeri og kafé. Damplassen 24–25.
 - en: Ullevål Hageby
 Bakery and café. Damplassen 24–25.
+
+### Stockfleths – Homansbyen
+- sted: 59.92316, 10.72608
+- google: ChIJhaCRVRxtQUYRo38W3JvsvWI
+- nettside: https://stockfleths.as/kaffebarene/homansbyen
+Homansbyen
+Kaffebar. Josefines gate 23.
+- en: Homansbyen
+Coffee bar. Josefines gate 23.
+
+### Stockfleths – Lille Grensen
+- sted: 59.91360, 10.74100
+- google: ChIJq32bvIRvQUYRM48yyk0FVu0
+- nettside: https://stockfleths.as/kaffebar/lille-grensen/
+Sentrum
+Kaffebar. Karl Johans gate 25, inngang fra Lille Grensen.
+- en: Sentrum
+Coffee bar. Karl Johans gate 25, entrance from Lille Grensen.
+
+### Stockfleths – Gamlebyen
+- sted: 59.90841, 10.76820
+- google: ChIJAT1ZdvZuQUYR-B6Wci9lK6U
+- nettside: https://stockfleths.as/kaffebar/gamlebyen/
+Gamlebyen
+Kaffebar. Munkegata 2.
+- en: Gamlebyen
+Coffee bar. Munkegata 2.
 
 ## Barer
 
