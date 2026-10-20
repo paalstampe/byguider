@@ -807,6 +807,15 @@ Kaffebar. Munkegata 2.
 - en: Gamlebyen
 Coffee bar. Munkegata 2.
 
+### Supreme Roastworks
+- sted: 59.92804, 10.75936
+- google: ChIJmajkImtuQUYRBQWIGVLwrj8
+- nettside: http://www.srw.no/
+Grünerløkka
+Kaffebar og brenneri. Thorvald Meyers gate 18A.
+- en: Grünerløkka
+Coffee bar and roastery. Thorvald Meyers gate 18A.
+
 ## Barer
 
 ### Café Rouleur
