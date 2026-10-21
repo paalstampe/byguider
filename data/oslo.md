@@ -5,7 +5,7 @@ tittel-en: Pål and Vibeke’s Oslo
 undertittel-en: Restaurants and bars, plus a few other things.
 senter: 59.9180, 10.7400
 zoom: 13
-oppdatert: 2026-10-20
+oppdatert: 2026-10-21
 ---
 
 <!--
@@ -973,6 +973,15 @@ St. Hanshaugen
 Delikatesser. Ullevålsveien 45.
 - en: St. Hanshaugen
 Delicatessen. Ullevålsveien 45.
+
+### Balthazar Interior
+- sted: 59.92300, 10.74023
+- google: ChIJ5blUOS48QUYRLt_9je7fXl4
+- nettside: https://www.balthazarinterior.no/
+St. Hanshaugen
+Interiørbutikk – nordiske interiørmerker, tekstiler og møbler. Dalsbergstien 2.
+- en: St. Hanshaugen
+Interior shop – Nordic interior brands, textiles and furniture. Dalsbergstien 2.
 
 ### Gutta på Haugen – Vika ★
 - sted: 59.91275, 10.72648
