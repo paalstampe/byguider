@@ -992,7 +992,7 @@ Delikatesser. Ruseløkkveien 26.
 - en: Vika
 Delicatessen. Ruseløkkveien 26.
 
-### Annis Pølsemakeri
+### Annis Pølsemakeri – Vulkan
 - sted: 59.92222, 10.75205
 - google: ChIJoe7MQWRuQUYRQPdr5y2fyyU
 - nettside: https://polsemakeri.no/
@@ -1000,6 +1000,15 @@ Vulkan
 Pølser og spekemat i Mathallen. Vulkan 5.
 - en: Vulkan
 Sausages and cured meats in Mathallen. Vulkan 5.
+
+### Annis Pølsemakeri – Bjørvika
+- sted: 59.90734, 10.75905
+- google: ChIJiwSemT5vQUYRcUbtA8ooSic
+- nettside: https://polsemakeri.no/
+Bjørvika
+Pølser og spekemat i Oslobukta. Dronning Eufemias gate 37.
+- en: Bjørvika
+Sausages and cured meats in Oslobukta. Dronning Eufemias gate 37.
 
 ### Fjelberg ★
 - sted: 59.91817, 10.70524
