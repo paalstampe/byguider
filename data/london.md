@@ -692,8 +692,7 @@ Peckham
 - sted: 51.4506, -0.0855
 - google: ChIJdXaCE_MDdkgRNbsLxUq87W8
 - utenfor: ja
-Ønskeliste
-- en: Wish list
+- status: onskeliste
 
 ### East Dulwich
 - sted: 51.4617, -0.0800
@@ -704,8 +703,7 @@ Peckham
 - sted: 51.4545, -0.0967
 - google: ChIJ1QO9jYcDdkgRHAlfXDX_ugA
 - utenfor: ja
-Ønskeliste
-- en: Wish list
+- status: onskeliste
 
 ### Northcote Road
 - sted: 51.4572, -0.1656
@@ -715,8 +713,7 @@ Peckham
 ### Nunhead
 - sted: 51.4655, -0.0587
 - google: ChIJDWdRh6UDdkgRIZme5IYIHaE
-Ønskeliste
-- en: Wish list
+- status: onskeliste
 
 ## Muséer og gallerier
 
@@ -1054,13 +1051,6 @@ Farmers market lørdag
 - google: ChIJ38-tk2wOdkgRGDMU_F4xZCQ
 - utenfor: ja
 Devonshire Road
-
-### Kew Green
-- sted: 51.4852, -0.2880
-- google: ChIJMevjjNkNdkgRtEdyVHdNdko
-- utenfor: ja
-Ønskeliste — kombiner med Kew Gardens
-- en: Wish list — combine with Kew Gardens
 
 ### Little Venice
 - sted: 51.5233, -0.1838
