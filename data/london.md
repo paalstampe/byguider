@@ -583,6 +583,7 @@ Camden Passage (antikk) og Upper Street opp til Islington Green.
 - sted: 51.5914, -0.1427
 - google: ChIJ7WhD4iwadkgRTwEDFT2KkvE
 - utenfor: ja
+- status: onskeliste
 
 ### Primrose Hill
 - sted: 51.5413, -0.1533
@@ -593,6 +594,7 @@ Camden Passage (antikk) og Upper Street opp til Islington Green.
 - sted: 51.5834, -0.0176
 - google: ChIJ0ckah1Gn2EcRB3mcysWWvGM
 - utenfor: ja
+- status: onskeliste
 
 ## Restauranter
 
@@ -732,6 +734,7 @@ Gallery on Bermondsey Street.
 - google: ChIJE_hdXfEDdkgR09Yvt9rEzmI
 - nettside: https://www.dulwichpicturegallery.org.uk/
 - utenfor: ja
+- status: onskeliste
 Dulwich Village
 
 Englands eldste offentlige kunstgalleri.
