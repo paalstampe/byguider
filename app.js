@@ -877,9 +877,22 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
   };
 
   /* Ønskelisten: egen kilde uten klynging, så stedene aldri slås sammen med besøkte steder.
-     Ring-ikoner (omriss uten fyll) i dempet farge; gåturer som tynn stiplet linje. Under de besøkte. */
+     Ring-ikoner (omriss uten fyll) i dempet farge; gåturer som tynn stiplet linje; nabolag med
+     omrisset fra geometrifila, som de besøkte, men i dempet farge. Under de besøkte. */
   const ONSKEFARGE = DEMPET;   // dempet tekst i papirpaletten
   const ONSKELAG = {
+    'onskeliste-flate': {
+      source: 'onskeliste', type: 'fill',
+      filter: ['==', ['geometry-type'], 'Polygon'],
+      layout: { visibility: 'none' },
+      paint: { 'fill-color': ONSKEFARGE, 'fill-opacity': 0.07 }
+    },
+    'onskeliste-kant': {
+      source: 'onskeliste', type: 'line',
+      filter: ['==', ['geometry-type'], 'Polygon'],
+      layout: { 'line-join': 'round', visibility: 'none' },
+      paint: { 'line-color': ONSKEFARGE, 'line-width': 1.5, 'line-opacity': 0.8, 'line-dasharray': [3, 2] }
+    },
     'onskeliste-ruter': {
       source: 'onskeliste', type: 'line',
       filter: ['==', ['geometry-type'], 'LineString'],
@@ -1127,8 +1140,11 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     });
     kart.getSource('omrader').setData({ type: 'FeatureCollection', features: omrader });
     if (kart.getSource('onskeliste')) {
+      const onske = synligeOnskeliste();
+      const flater = onske.flatMap(o => o.fokus.filter(x => x.properties.rolle === 'omrade')
+        .map(x => ({ type: 'Feature', geometry: x.geometry, properties: {} })));
       kart.getSource('onskeliste').setData({ type: 'FeatureCollection',
-        features: synligeOnskeliste().filter(o => o.f.geometry).map(o => o.f) });
+        features: flater.concat(onske.filter(o => o.f.geometry).map(o => o.f)) });
     }
   }
 
