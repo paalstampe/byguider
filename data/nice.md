@@ -5,7 +5,7 @@ tittel-en: Pål and Vibeke’s Nice
 undertittel-en: Restaurants, cafés and places worth a detour.
 senter: 43.6990, 7.2620
 zoom: 13
-oppdatert: 2026-10-01
+oppdatert: 2026-10-23
 ---
 
 <!--
@@ -705,6 +705,16 @@ Frukt og grønt
 - en: Fruit and vegetables
 
 38 Rue Bonaparte.
+
+### L'Italien
+- sted: 43.69547, 7.25825
+- google: ChIJs8u2QifRzRIRdksJ76j61qs
+Italiensk delikatesse
+
+76 Rue de France.
+- en: Italian deli
+
+76 Rue de France.
 
 ## Hoteller
 
