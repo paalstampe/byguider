@@ -7,7 +7,7 @@ senter: 51.5105, -0.1235
 zoom: 11
 senter-mobil: 51.5230, -0.1060
 zoom-mobil: 11.05
-oppdatert: 2026-09-27
+oppdatert: 2026-10-23
 ---
 
 <!--
@@ -331,6 +331,30 @@ Kafé og restaurant ved La Fromagerie, Moxon Street 6.
 
 Café and restaurant next to La Fromagerie, 6 Moxon Street.
 
+### Corner Shop
+- sted: 51.51137, -0.11396
+- google: ChIJS8KOSwAFdkgRtCKtf2Qa5_A
+- nettside: https://cornershoplondon.com/
+Strand
+
+Kafé, deli og vinbar i 180 The Thames, Arundel Street 7.
+
+- en: Strand
+
+Café, deli and wine bar at 180 The Thames, 7 Arundel Street.
+
+### Fortitude Bakehouse
+- sted: 51.52282, -0.12420
+- google: ChIJVxsH2DAbdkgRONMO5bA31EA
+- nettside: https://www.fortitudebakehouse.com/
+Bloomsbury
+
+Bakeri og kafé i en mews, Colonnade 35.
+
+- en: Bloomsbury
+
+Bakery and café in a mews, 35 Colonnade.
+
 ## Jazzklubber
 
 ### Ronnie Scott's ★
@@ -504,6 +528,20 @@ Platebutikk, Broadwick Street 7.
 - en: Soho
 
 Record shop, 7 Broadwick Street.
+
+## Verdt en omvei
+
+### Barbican
+- sted: 51.52021, -0.09379
+- google: ChIJdbJk-1YbdkgRQB_SdWbiVsc
+- nettside: https://www.barbican.org.uk/
+City
+
+Brutalistisk boligområde og kultursenter med konserthall, teater, kino, galleri og drivhus.
+
+- en: City
+
+Brutalist housing estate and arts centre with a concert hall, theatre, cinema, gallery and conservatory.
 
 # North
 
