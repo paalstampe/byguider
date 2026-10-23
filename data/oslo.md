@@ -29,6 +29,7 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
   - gater: Gate 1, Gate 2       nabolag: de viktigste gatene
   - lengde: 2,5 km              gåturer
   - varighet: ca. 1 t           gåturer
+  - utenfor: ja                 holder stedet utenfor utsnittet kartet åpner med (og «Vis hele byen»)
   Fri tekst under feltene blir notatet. Første avsnitt vises i lista, alt i popupen.
   [tekst](https://…) i notatet blir en lenke.
 
@@ -209,6 +210,7 @@ Norwegian. Operagata 77D.
 - sted: 59.93318, 10.76701
 - google: ChIJQ0YIJfVvQUYRImW8QJ7PlmU
 - nettside: https://liminaloslo.no/
+- utenfor: ja
 Torshov
 Liten restaurant med nordisk settmeny. Torshovgata 15.
 - en: Torshov
@@ -784,6 +786,7 @@ Bakery and café. Normannsgata 44.
 - sted: 59.94408, 10.73302
 - google: ChIJLa4ESeJtQUYR6gQxQ-fKkfE
 - nettside: http://apentbakeri.no/#/damplassen
+- utenfor: ja
 Ullevål Hageby
 Bakeri og kafé. Damplassen 24–25.
 - en: Ullevål Hageby
@@ -1060,6 +1063,7 @@ Cheese and delicatessen. Bygdøy allé 56B.
 - sted: 59.92151, 10.68058
 - google: ChIJ4YXFiLNtQUYR83Mx91sbR4U
 - nettside: https://maschmanns.no/
+- utenfor: ja
 Skøyen
 Matmarked. Karenslyst allé 51.
 - en: Skøyen
@@ -1131,6 +1135,7 @@ Interiors and design. Schous plass 7A.
 - sted: 59.93512, 10.76545
 - google: ChIJp6Tt2BRuQUYROUq3cjHdZLw
 - nettside: https://www.strom-larsen.no/
+- utenfor: ja
 Torshov
 Kjøtt og delikatesser. Vogts gate 53A.
 - en: Torshov
@@ -1203,6 +1208,7 @@ Modern and contemporary art. Strandpromenaden 2.
 - sted: 59.90337, 10.69960
 - google: ChIJMcBwszpsQUYReqPeWg4Oe4A
 - nettside: https://frammuseum.no/
+- utenfor: ja
 Bygdøy
 Polarskuta Fram. Bygdøynesveien 39.
 - en: Bygdøy
@@ -1213,6 +1219,7 @@ The polar ship Fram. Bygdøynesveien 39.
 - sted: 59.90345, 10.69836
 - google: ChIJu4wrvDpsQUYRgF8XWfTcwBU
 - nettside: https://www.kon-tiki.no/
+- utenfor: ja
 Bygdøy
 Thor Heyerdahls flåter. Bygdøynesveien 36.
 - en: Bygdøy
@@ -1223,6 +1230,7 @@ Thor Heyerdahl’s rafts. Bygdøynesveien 36.
 - sted: 59.90700, 10.68643
 - google: ChIJbcQbpTdsQUYRcPVxnHOFQy4
 - nettside: https://norskfolkemuseum.no/
+- utenfor: ja
 Bygdøy
 Friluftsmuseum med gamle hus fra hele landet. Museumsveien 10.
 - en: Bygdøy
