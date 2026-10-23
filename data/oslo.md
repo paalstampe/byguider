@@ -5,7 +5,7 @@ tittel-en: Pål and Vibeke’s Oslo
 undertittel-en: Restaurants and bars, plus a few other things.
 senter: 59.9180, 10.7400
 zoom: 13
-oppdatert: 2026-10-21
+oppdatert: 2026-10-23
 ---
 
 <!--
@@ -160,7 +160,7 @@ Dansk, med smørbrød og vinbar. Lakkegata 55.
 - en: Grønland
 Danish, with smørrebrød and a wine bar. Lakkegata 55.
 
-### Hrímnir ★
+### Hrímnir – Fredensborg ★
 - sted: 59.92138, 10.75144
 - google: ChIJc41X4YduQUYRsXHstRp-S3M
 - nettside: https://www.hrimnir-ramen.no/
@@ -168,6 +168,15 @@ Fredensborg
 Ramen. Maridalsveien 9A.
 - en: Fredensborg
 Ramen. Maridalsveien 9A.
+
+### Hrímnir – Storgata
+- sted: 59.91497, 10.75402
+- google: ChIJBQoA4-FvQUYRFRwk0Fvo6IU
+- nettside: https://www.hrimnir-ramen.no/
+Sentrum
+Ramen. Storgata 37.
+- en: Sentrum
+Ramen. Storgata 37.
 
 ### Norum Grill ★
 - sted: 59.91831, 10.70585
@@ -816,6 +825,34 @@ Kaffebar og brenneri. Thorvald Meyers gate 18A.
 - en: Grünerløkka
 Coffee bar and roastery. Thorvald Meyers gate 18A.
 
+### Fox and Loaf
+- sted: 59.91391, 10.75091
+- google: ChIJf3ljg29vQUYR_5vwKQsS9bg
+- nettside: https://www.foxandloaf.no/
+Sentrum
+Smørbrød og bakst. Storgata 23.
+- en: Sentrum
+Sandwiches and baking. Storgata 23.
+
+### Disken
+- sted: 59.93316, 10.73351
+- google: ChIJZaDqyb5vQUYR8UMHpdMU6sQ
+- nettside: https://www.disken.net/
+Adamstuen
+Kaffe, panini og deli. Ullevålsveien 88A.
+- en: Adamstuen
+Coffee, panini and deli. Ullevålsveien 88A.
+
+### Ugly Duckling
+- sted: 59.91646, 10.75251
+- google: ChIJgWjCKotvQUYR8u6tpn16aoU
+- nettside: https://www.udoslo.com/
+- status: onskeliste
+Sentrum
+Smørbrød. Torggata 21B.
+- en: Sentrum
+Sandwiches. Torggata 21B.
+
 ## Barer
 
 ### Café Rouleur
@@ -938,7 +975,7 @@ Bokhandel. Universitetsgata 12.
 - en: Sentrum
 Bookshop. Universitetsgata 12.
 
-### Chillout – Grünerløkka
+### Chillout
 - sted: 59.92039, 10.75717
 - google: ChIJSYHvXmZuQUYRHOeY2fDhlSQ
 - nettside: http://www.chillout.no/
@@ -946,15 +983,6 @@ Grünerløkka
 Reisebutikk – guidebøker, kart, bagasje og reiseutstyr. Markveien 55.
 - en: Grünerløkka
 Travel shop – guidebooks, maps, luggage and travel gear. Markveien 55.
-
-### Chillout – Bogstadveien
-- sted: 59.92747, 10.71988
-- google: ChIJPXUnHtptQUYR9xTjZeqjr3o
-- nettside: http://www.chillout.no/
-Majorstuen
-Reisebutikk – guidebøker, kart, bagasje og reiseutstyr. Bogstadveien 41.
-- en: Majorstuen
-Travel shop – guidebooks, maps, luggage and travel gear. Bogstadveien 41.
 
 ### Skomaker Dagestad
 - sted: 59.92341, 10.72995
@@ -1062,14 +1090,6 @@ Fagerborg
 Hifi. Vibes gate 13A.
 - en: Fagerborg
 Hi-fi. Vibes gate 13A.
-
-### Skomakern Ans
-- sted: 59.91232, 10.72495
-- google: ChIJ_____4BuQUYRw19IlsfWGis
-Vika
-Skomaker. Ruseløkkveien 50.
-- en: Vika
-Cobbler. Ruseløkkveien 50.
 
 ### Stereofil
 - sted: 59.91408, 10.74357
