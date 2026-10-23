@@ -5,7 +5,7 @@ tittel-en: Pål and Vibeke’s New York
 undertittel-en: Neighbourhoods, walks and restaurants worth a detour.
 senter: 40.7400, -73.9850
 zoom: 12
-oppdatert: 2026-10-06
+oppdatert: 2026-10-23
 ---
 
 <!--
@@ -183,6 +183,18 @@ Kjent fra dokumentaren «Always at the Carlyle» (2018).
 - en: Upper East Side
 
 Featured in the documentary “Always at the Carlyle” (2018).
+
+### The Surrey
+- sted: 40.77434, -73.96403
+- google: ChIJCcAxi5RYwokRUyhXQvDUJsY
+- nettside: https://www.corinthia.com/new-york/
+Upper East Side
+
+Corinthia-hotell, East 76th Street 20.
+
+- en: Upper East Side
+
+Corinthia hotel, 20 East 76th Street.
 
 ## Verdt en omvei
 
