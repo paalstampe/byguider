@@ -716,6 +716,16 @@ Italiensk delikatesse
 
 76 Rue de France.
 
+### Harper
+- sted: 43.70074, 7.28384
+- nettside: https://www.instagram.com/harper_bonaparte/
+Klær
+
+29 Rue Bonaparte.
+- en: Clothing
+
+29 Rue Bonaparte.
+
 ## Hoteller
 
 ### Hôtel du Couvent
