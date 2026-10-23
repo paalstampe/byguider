@@ -685,8 +685,6 @@ Peckham
 - google: ChIJ79E0xE8BdkgRh0mDf0w1zco
 - gater: Westow Hill, Westow Street, Church Road
 - utenfor: ja
-Ønskeliste
-- en: Wish list
 
 ### Dulwich Village
 - sted: 51.4506, -0.0855
