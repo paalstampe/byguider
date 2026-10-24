@@ -7,7 +7,7 @@ Oppdateres ved slutten av hver økt (`/avslutt`).
 
 Sist oppdatert: 24. oktober 2026.
 
-- Live på https://stam.pe/byguider/ med fire byer: London (215 oppføringer, hvorav 94 på ønskelista), Oslo (128, 22 på ønskelista), New York (77), Nice (67). Tokyo og Bangkok kommer.
+- Live på https://stam.pe/byguider/ med fem byer: London (215 oppføringer, hvorav 94 på ønskelista), Oslo (128, 22 på ønskelista), New York (77), Nice (67), Tokyo (54). Bangkok kommer.
 - Appen er i hovedsak ferdig: MapLibre med papirpalett og mørk modus, nabolag med omriss, kjerne og gater,
   flyttbar infoboks, gåturer i infoboksen, ønskeliste for alle, norsk og engelsk.
 - Arbeidet nå er data: nye steder, favoritter, beskrivelser og nabolagsomriss. 18.10. fikk Oslo
@@ -23,11 +23,18 @@ Sist oppdatert: 24. oktober 2026.
 - 24.10. også: korte beskrivelser for 43 nabolag, Nice har området som første linje som de andre byene,
   og alle guidene har «En høyst subjektiv guide» / «An opinionated guide» under tittelen (kicker i frontmatter);
   forsiden har «Høyst subjektive byguider» / «Opinionated city guides».
+- 24.10. kveld: Tokyo publisert (PR #58). 18 nabolag i sonene Central, West og East, 54 oppføringer.
+  Omrissene er de offisielle chōme-grensene fra e-Stat (folketellingen 2020), slått sammen per nabolag.
+  Kjerner i blant annet Tomigaya og Yanaka følger gatene. Gatene kommer fra OSM, blant annet Yanaka-firkanten
+  (Yanaka Ginza via Yūyake Dandan, Gotenzaka, Hatsune-no-michi, Sansakizaka, Yomise-dori), Cat Street,
+  Udagawa-promenaden og smågatene i Minami-Aoyama 5. Miniatyrer i lys og mørk.
 - Ingen åpne grener utenom `main`.
 
 ## Neste steg
 
 - Fyll på data etter hvert som Pål kommer med steder og navneendringer, i alle byer.
+- Tokyo: flere notater er bare én linje («Sushi.», «Bar.», «Moderne vietnamesisk.»). Fyll på når Pål har tekst.
+  Bar Penguin, Apollo Bar, Kihara, Ăn Đi og Kosho SamenoHa mangler nettside.
 - Nye nabolag trenger alltid et presist omriss i `data/<by>-geometri.geojson`; fremgangsmåten står i CLAUDE.md, Data.
 - Mulig etterarbeid: de 25 London-omrissene som ble beholdt (bl.a. Marylebone, Mayfair, Belgravia, Richmond, Kew Green)
   kan sjekkes mot conservation areas på samme måte hvis Pål ser noe som ikke stemmer.
@@ -63,3 +70,7 @@ Sist oppdatert: 24. oktober 2026.
   Musiciens, Gambetta, Promenade des Anglais) og Around Nice (Cimiez, Libération, Cap Ferrat, Èze, gåturene).
 - 2026-10-24: Undertittelen er «En høyst subjektiv guide» / «An opinionated guide», i kursiv under tittelen.
 - 2026-10-24: Harper (Nice) får ikke Google-lenke (finnes ikke i Google Maps). Brixton Village beholder markedets Place ID.
+- 2026-10-24: Tokyo-omrissene bygger på chōme-grensene fra e-Stat. Japan har offisielle grenser helt ned på kvartalsnivå, og de er mer presise enn gategrenser fra OSM.
+- 2026-10-24: «Meguro» i Tokyo er lagt inn som Nakameguro (hipsterområdet langs Meguro River). Yurakucho er eget nabolag ved siden av Ginza.
+- 2026-10-24: Tomigaya tar med Kamiyama-chō, slik at gatene ned mot Shibuya ligger inni. Kjernen er kilen der butikkene og kaféene ligger.
+- 2026-10-24: Gater vises bare der de er verdt å gå. Inokashira-dori (Tomigaya) og Keyakizaka (Roppongi) ble fjernet fordi de er trafikkerte.
