@@ -529,6 +529,18 @@ Platebutikk, Broadwick Street 7.
 
 Record shop, 7 Broadwick Street.
 
+### Drake's
+- sted: 51.51083, -0.14002
+- google: ChIJD7Rg6vsFdkgRtVD0qP2_lPA
+- nettside: https://www.drakes.com/
+Mayfair
+
+Herreklær, Savile Row 9.
+
+- en: Mayfair
+
+Menswear, 9 Savile Row.
+
 ## Verdt en omvei
 
 ### Barbican
