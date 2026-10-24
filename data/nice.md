@@ -23,8 +23,8 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
                                 (uten: søk på navnet ved koordinaten). Claude kan hente Place ID-er.
   - nettside: https://…          stedets egen side — gir lenken «Nettside» i infoboksen
   - les: Financial Times | Tittel | https://…   artikkel: «Artikkel fra Financial Times: Tittel» sist i infoboksen. Kan gjentas.
-  - status: onskeliste          ønskeliste: ikke besøkt ennå. Vises bare med ?onskeliste i adressen
-                                (f.eks. stam.pe/byguider/<by>/?onskeliste). ★ = førstevalg.
+  - status: onskeliste          ønskeliste: ikke besøkt ennå. Vises nederst i lista og som eget
+                                kartlag (av til man slår det på). ★ = førstevalg.
                                 Fjern linja når vi har vært der.
   - gater: Gate 1, Gate 2       nabolag: de viktigste gatene
   - lengde: 2,5 km              gåturer
@@ -105,7 +105,7 @@ Open every day.
 ### Pirouette ★
 - sted: 43.70042, 7.28501
 - google: ChIJB7NnzyHbzRIRtO8fkFwdBl0
-- nettside: http://lesagitateurs.com/pirouette
+- nettside: https://lesagitateurs.com/pirouette
 Bistro fra Les Agitateurs
 
 34 Rue Bonaparte.
@@ -194,7 +194,7 @@ Sesongretter til deling, fra Les Agitateurs
 ### Fine Gueule
 - sted: 43.69605, 7.27188
 - google: ChIJEzRKyqPazRIRJGVgSPuxt5g
-- nettside: http://www.finegueule.fr/
+- nettside: https://www.finegueule.fr/
 Fransk og niçoise
 
 2 Rue de l'Hôtel de Ville.
@@ -302,7 +302,7 @@ Fransk med internasjonale innslag
 ### Le Comptoir du Marché
 - sted: 43.69748, 7.27497
 - google: ChIJR2xXXaPazRIRkzg4n7-k-sY
-- nettside: http://www.comptoirdumarche.fr/
+- nettside: https://www.comptoirdumarche.fr/
 Bistro, middelhavskjøkken
 
 8 Rue du Marché.
@@ -448,7 +448,7 @@ Rue Blacas and Rue de la Liberté are open every day, Rue Gioffredo Monday to Sa
 ### Pinpin
 - sted: 43.70058, 7.28261
 - google: ChIJl9k1H6fbzRIRZbF1UAi8LnM
-- nettside: http://www.pin-pin.fr/
+- nettside: https://www.pin-pin.fr/
 Lunsj
 
 2 Rue Martin Seytour.
@@ -681,7 +681,7 @@ Sykkelklær og kafé
 ### Trésors Publics
 - sted: 43.69633, 7.27601
 - google: ChIJpShtU6PazRIRHyPKaG4RDEk
-- nettside: http://www.tresorspublics.com/
+- nettside: https://www.tresorspublics.com/
 Et lite museum over fransk hverdagsliv der alt er til salgs. Nesten tusen ting – kjøkkenutstyr, toalettartikler, klær, leker og mye annet – alt laget i Frankrike. Fin å finne gaver i.
 - en: A small museum of French everyday life where everything is for sale. Nearly a thousand things – kitchenware, toiletries, clothes, toys and much more – all made in France. Good for gifts.
 

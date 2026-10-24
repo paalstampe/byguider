@@ -25,8 +25,8 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
                                 (uten: søk på navnet ved koordinaten). Claude kan hente Place ID-er.
   - nettside: https://…          stedets egen side — gir lenken «Nettside» i infoboksen
   - les: Financial Times | Tittel | https://…   artikkel: «Artikkel fra Financial Times: Tittel» sist i infoboksen. Kan gjentas.
-  - status: onskeliste          ønskeliste: ikke besøkt ennå. Vises bare med ?onskeliste i adressen
-                                (f.eks. stam.pe/byguider/<by>/?onskeliste). ★ = førstevalg.
+  - status: onskeliste          ønskeliste: ikke besøkt ennå. Vises nederst i lista og som eget
+                                kartlag (av til man slår det på). ★ = førstevalg.
                                 Fjern linja når vi har vært der.
   - gater: Gate 1, Gate 2       nabolag: de viktigste gatene
   - lengde: 2,5 km              gåturer
@@ -417,7 +417,7 @@ Ramen, 46–48 James Street.
 ### The Italian Greyhound
 - sted: 51.51442, -0.16116
 - google: ChIJK_Si0DQFdkgR8gKoxhjBDu0
-- nettside: http://theitaliangreyhound.co.uk/
+- nettside: https://theitaliangreyhound.co.uk/
 - status: onskeliste
 Marylebone
 
@@ -430,7 +430,7 @@ Italian, 62 Seymour Street.
 ### Taka
 - sted: 51.51895, -0.15182
 - google: ChIJY5DvzC4bdkgRbS0zBTvgwWk
-- nettside: http://takalondon.com/
+- nettside: https://takalondon.com/
 - status: onskeliste
 Marylebone
 
@@ -443,7 +443,7 @@ Japanese, 109 Marylebone High Street.
 ### Clio
 - sted: 51.52031, -0.15531
 - google: ChIJ0ydGUwAbdkgRrZlMwfaVjOA
-- nettside: http://www.cliorestaurant.co.uk/
+- nettside: https://www.cliorestaurant.co.uk/
 - status: onskeliste
 Marylebone
 
@@ -456,7 +456,7 @@ Greek, 66 Chiltern Street.
 ### Maset
 - sted: 51.51919, -0.15486
 - google: ChIJR_r0XgAbdkgRwrYykKTR7E8
-- nettside: http://maset.london/
+- nettside: https://maset.london/
 - status: onskeliste
 Marylebone
 
@@ -469,7 +469,7 @@ Spanish and French, 40 Chiltern Street.
 ### La Petite Maison
 - sted: 51.51263, -0.14623
 - google: ChIJgeGDeSsFdkgRdmrFtEogVbI
-- nettside: http://www.lpmrestaurants.com/london
+- nettside: https://www.lpmrestaurants.com/london
 - status: onskeliste
 Mayfair
 
@@ -508,7 +508,7 @@ Oysters and seafood, 11–15 Swallow Street.
 ### Pinna
 - sted: 51.50672, -0.14678
 - google: ChIJPQJ-AzcFdkgRc9e4UZBgQsY
-- nettside: http://www.pinnamayfair.com/
+- nettside: https://www.pinnamayfair.com/
 - status: onskeliste
 Shepherd Market
 
@@ -521,7 +521,7 @@ Italian, 43 Curzon Street.
 ### Sabor
 - sted: 51.51140, -0.13970
 - google: ChIJoXHzltUEdkgRc7QLGWRren0
-- nettside: http://www.saborrestaurants.co.uk/
+- nettside: https://www.saborrestaurants.co.uk/
 - status: onskeliste
 Mayfair
 
@@ -625,7 +625,7 @@ Japanese, 54 Frith Street.
 ### Rita's
 - sted: 51.51313, -0.13646
 - google: ChIJoddM1nEFdkgRsNOAoG3mIhA
-- nettside: http://www.ritasdining.com/
+- nettside: https://www.ritasdining.com/
 - status: onskeliste
 Soho
 
@@ -651,7 +651,7 @@ Thai, 24 Brewer Street.
 ### Quo Vadis
 - sted: 51.51411, -0.13265
 - google: ChIJQdL1JNMEdkgRxbWzk_RxYHI
-- nettside: http://www.quovadissoho.co.uk/
+- nettside: https://www.quovadissoho.co.uk/
 - status: onskeliste
 Soho
 
@@ -729,7 +729,7 @@ Wardour Street 84.
 ### Mountain
 - sted: 51.51202, -0.13823
 - google: ChIJGXGPYsEFdkgRAIIfSSET698
-- nettside: http://mountainbeakstreet.com/
+- nettside: https://mountainbeakstreet.com/
 - status: onskeliste
 Soho
 
@@ -755,7 +755,7 @@ Mediterranean, 13–14 Dean Street.
 ### Kiln
 - sted: 51.51140, -0.13606
 - google: ChIJ_7nqbtQEdkgRuNOUsTUwfTI
-- nettside: http://www.kilnsoho.com/
+- nettside: https://www.kilnsoho.com/
 - status: onskeliste
 Soho
 
@@ -898,7 +898,7 @@ Italian, 88 St John Street.
 ### Dinings SW3
 - sted: 51.49614, -0.16439
 - google: ChIJ__9Lhz8FdkgRdyenFjfQu5c
-- nettside: http://diningssw3.co.uk/
+- nettside: https://diningssw3.co.uk/
 - status: onskeliste
 Knightsbridge
 
@@ -976,7 +976,7 @@ Japanese izakaya, 33 Old Jewry.
 ### YiQi
 - sted: 51.51151, -0.13081
 - google: ChIJy23uOwAFdkgRii6cDLJ0Z8k
-- nettside: http://www.yiqipanasia.co.uk/
+- nettside: https://www.yiqipanasia.co.uk/
 - status: onskeliste
 Chinatown
 
@@ -1041,7 +1041,7 @@ Jean-Georges' restaurant at The Emory, Old Barrack Yard.
 ### Hunan
 - sted: 51.49046, -0.15278
 - google: ChIJAz_ZYhcFdkgRvs31bOm2Omc
-- nettside: http://www.hunanlondon.com/
+- nettside: https://www.hunanlondon.com/
 - status: onskeliste
 Pimlico
 
@@ -1691,7 +1691,7 @@ Cantonese, 7 Nine Elms Lane.
 ### OMA
 - sted: 51.50535, -0.09002
 - google: ChIJ4co2k5kDdkgROKjVBk6wD8k
-- nettside: http://oma.london/
+- nettside: https://oma.london/
 - status: onskeliste
 Borough Market
 
@@ -1704,7 +1704,7 @@ Greek, 2–4 Bedale Street.
 ### Spring Street Pizza
 - sted: 51.50443, -0.09474
 - google: ChIJvzUkv6EEdkgR-DJoPcr_tfI
-- nettside: http://www.springstpizza.com/
+- nettside: https://www.springstpizza.com/
 - status: onskeliste
 Borough Market
 
@@ -1743,7 +1743,7 @@ Thai, 213 Blenheim Grove.
 ### The Anchor & Hope
 - sted: 51.50346, -0.10658
 - google: ChIJzee0vroEdkgRsWQAXWfSU5Q
-- nettside: http://www.anchorandhopepub.co.uk/
+- nettside: https://www.anchorandhopepub.co.uk/
 - status: onskeliste
 South Bank
 
@@ -1769,7 +1769,7 @@ Chinese, on the 33rd floor of The Shard. 31 St Thomas Street.
 ### Trivet
 - sted: 51.50225, -0.08470
 - google: ChIJhZkSsNQDdkgRwGJZ7Z2rMjg
-- nettside: http://trivetrestaurant.co.uk/
+- nettside: https://trivetrestaurant.co.uk/
 - status: onskeliste
 Bermondsey
 
@@ -1981,7 +1981,7 @@ Indian (Bombay café), 7 Boundary Street.
 ### Sông Quê
 - sted: 51.53080, -0.07686
 - google: ChIJybk4BLwcdkgRlNpyGIPk3n4
-- nettside: http://www.songque.co.uk/
+- nettside: https://www.songque.co.uk/
 - status: onskeliste
 Shoreditch
 
@@ -1994,7 +1994,7 @@ Vietnamese, pho. 134 Kingsland Road.
 ### BRAT
 - sted: 51.52425, -0.07674
 - google: ChIJ7XVltrAcdkgRISmskLX7lbw
-- nettside: http://bratrestaurant.com/
+- nettside: https://bratrestaurant.co.uk/
 - status: onskeliste
 Shoreditch
 
@@ -2007,7 +2007,7 @@ Basque grill, 4 Redchurch Street.
 ### The Marksman
 - sted: 51.53092, -0.06951
 - google: ChIJo74Bs8AcdkgRg7RlvkGVKrM
-- nettside: http://www.marksmanpublichouse.com/
+- nettside: https://www.marksmanpublichouse.com/
 - status: onskeliste
 Hackney
 
@@ -2033,7 +2033,7 @@ Westgate Street 1.
 ### One Club Row
 - sted: 51.52400, -0.07422
 - google: ChIJLTPl7JIddkgR76bZYSpbA2A
-- nettside: http://www.oneclubrow.com/
+- nettside: https://www.oneclubrow.com/
 - status: onskeliste
 Shoreditch
 
@@ -2059,7 +2059,7 @@ Malaysian, 78 Lower Clapton Road.
 ### Manteca
 - sted: 51.52402, -0.08057
 - google: ChIJG9ssOq8FdkgRGTu5-ErLMaI
-- nettside: http://www.mantecarestaurant.co.uk/
+- nettside: https://www.mantecarestaurant.co.uk/
 - status: onskeliste
 Shoreditch
 
@@ -2262,7 +2262,7 @@ Pub and dining room, 55 Shirland Road.
 ### No. Fifty Cheyne
 - sted: 51.48335, -0.16941
 - google: ChIJ7dsWCHIFdkgR0l78z0NcBrs
-- nettside: http://www.fiftycheyne.com/
+- nettside: https://www.fiftycheyne.com/
 - status: onskeliste
 Chelsea
 
@@ -2275,7 +2275,7 @@ Restaurant and bar by the Thames, 50 Cheyne Walk.
 ### Café at The Lavery
 - sted: 51.49509, -0.17462
 - google: ChIJEwZiUeQFdkgRIFuYZtxXa_U
-- nettside: http://cafelavery.co.uk/
+- nettside: https://cafelavery.co.uk/
 - status: onskeliste
 South Kensington
 
@@ -2301,7 +2301,7 @@ Italian, inside Holland Park. Abbotsbury Road.
 ### Canteen
 - sted: 51.52100, -0.20933
 - google: ChIJ02QECgkRdkgR_4meeUf8Kws
-- nettside: http://www.canteen310.com/
+- nettside: https://www.canteen310.com/
 - status: onskeliste
 Notting Hill
 
@@ -2314,7 +2314,7 @@ Italian, 310 Portobello Road.
 ### Chelsea Grill
 - sted: 51.48588, -0.17326
 - google: ChIJjYJZKwAFdkgRugTB8iv1GX0
-- nettside: http://www.chelseagrill.co.uk/
+- nettside: https://www.chelseagrill.co.uk/
 - status: onskeliste
 Chelsea
 
@@ -2340,7 +2340,7 @@ Pub, 310 Portobello Road.
 ### Caia
 - sted: 51.52266, -0.20761
 - google: ChIJ_fpMZjIRdkgRiac_zdVgpBE
-- nettside: http://www.caia.london/
+- nettside: https://www.caia.london/
 - status: onskeliste
 Notting Hill
 
@@ -2353,7 +2353,7 @@ Restaurant and bar, 46 Golborne Road.
 ### Wild Tavern
 - sted: 51.49072, -0.16582
 - google: ChIJWxa4PlEFdkgRIULkrd0GUv0
-- nettside: http://www.wildtavern.co.uk/
+- nettside: https://www.wildtavern.co.uk/
 - status: onskeliste
 Chelsea
 
@@ -2379,7 +2379,7 @@ Jeremy King's restaurant, 2 Queensway.
 ### La Mia Mamma
 - sted: 51.48603, -0.17212
 - google: ChIJwx_Hci0FdkgRgxwdoexS6ec
-- nettside: http://www.lamiamamma.co.uk/
+- nettside: https://www.lamiamamma.co.uk/
 - status: onskeliste
 Chelsea
 
@@ -2405,7 +2405,7 @@ Italian, 94 Kensington High Street.
 ### Chez Lui
 - sted: 51.51538, -0.20546
 - google: ChIJGdhJt1ERdkgRlH5kvNLZr88
-- nettside: http://chezluibistrot.com/
+- nettside: https://chezluibistrot.com/
 - status: onskeliste
 Notting Hill
 
@@ -2420,7 +2420,7 @@ French, 184A Kensington Park Road.
 ### The Alberts Deli
 - sted: 51.46160, -0.29667
 - google: ChIJ15fZhToMdkgRa6kq1Emo24I
-- nettside: http://www.thealbertsdeli.com/
+- nettside: https://www.thealbertsdeli.com/
 - utenfor: ja
 Richmond
 

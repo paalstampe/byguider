@@ -23,8 +23,8 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
                                 (uten: søk på navnet ved koordinaten). Claude kan hente Place ID-er.
   - nettside: https://…          stedets egen side — gir lenken «Nettside» i infoboksen
   - les: Financial Times | Tittel | https://…   artikkel: «Artikkel fra Financial Times: Tittel» sist i infoboksen. Kan gjentas.
-  - status: onskeliste          ønskeliste: ikke besøkt ennå. Vises bare med ?onskeliste i adressen
-                                (f.eks. stam.pe/byguider/<by>/?onskeliste). ★ = førstevalg.
+  - status: onskeliste          ønskeliste: ikke besøkt ennå. Vises nederst i lista og som eget
+                                kartlag (av til man slår det på). ★ = førstevalg.
                                 Fjern linja når vi har vært der.
   - gater: Gate 1, Gate 2       nabolag: de viktigste gatene
   - lengde: 2,5 km              gåturer
