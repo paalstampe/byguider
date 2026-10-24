@@ -20,6 +20,9 @@ Sist oppdatert: 24. oktober 2026.
 - 24.10. vedlikeholdsøkt: 90 nettsider oppgradert til https, ønskeliste-kommentaren i byfilene rettet,
   alle miniatyrer (byguider og stam.pe) tatt på nytt i lys og mørk. Oslo-omrissene er gjort presise
   (grensegater sporet i OSM fra kryss til kryss); nå har alle byer `kilde` på hvert omriss.
+- 24.10. også: korte beskrivelser for 43 nabolag, Nice har området som første linje som de andre byene,
+  og alle guidene har «En høyst subjektiv guide» / «An opinionated guide» under tittelen (kicker i frontmatter);
+  forsiden har «Høyst subjektive byguider» / «Opinionated city guides».
 - Ingen åpne grener utenom `main`.
 
 ## Neste steg
@@ -33,12 +36,9 @@ Sist oppdatert: 24. oktober 2026.
 
 ## Åpne spørsmål
 
-- 42 nabolag mangler notat (London 27, New York 10, Oslo 5). Første linje i notatet vises i lista.
-- Nice bruker typen («Lunsj», «Moderne fransk») som første linje, ikke området som de andre byene. Nice har heller ingen soner.
-- Oh Dear (Oslo): nettsiden er død (Wix-feil). Stengt?
-- Harper (Nice) mangler Google Place ID. Brixton Village (nabolag) bruker Place ID-en til Brixton Village Market.
+- Nice har ingen soner (# i nice.md). Forslag: Vieux-Nice, Le Port (Le Petit Marais, Garibaldi), Sentrum (Carré d'Or, Centre-ville,
+  Musiciens, Gambetta, Promenade des Anglais) og Utenfor sentrum (Cimiez, Libération, Cap Ferrat, Èze).
 - Hrímnir – Fredensborg ligger øst for Maridalsveien (ved Vulkan), utenfor Fredensborg-omrisset.
-- Undertittel «An opinionated guide» / norsk motstykke — ikke bestemt.
 
 ## Beslutningslogg
 
@@ -61,3 +61,5 @@ Sist oppdatert: 24. oktober 2026.
   (uten Fougstads gate-kilen og Pilestredet park-lobben), og kjernen har Hallings gate inni. Gamlebyen går til
   Tøyenbekken/Klosterenga i nord, og kjernen ligger mellom bekken og Hovedbanen. Fredensborg tar med nordsiden
   av Fredensborgveien. Grünerløkka og SoSoPa fulgte allerede gatene og fikk bare `kilde`.
+- 2026-10-24: Undertittelen er «En høyst subjektiv guide» / «An opinionated guide», i kursiv under tittelen.
+- 2026-10-24: Harper (Nice) får ikke Google-lenke (finnes ikke i Google Maps). Brixton Village beholder markedets Place ID.
