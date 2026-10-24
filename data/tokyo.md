@@ -80,7 +80,6 @@ Her lå det kjente fiskemarkedet, som nå har flyttet til Toyosu. Det ytre marke
 ### Roppongi
 - sted: 35.66186, 139.73455
 - google: ChIJh5EcPJ2LGGAR_pwW6UjC-Ug
-- gater: Keyakizaka
 Utelivsområde, med noen moderne boligområder rundt Roppongi Hills og Tokyo Midtown.
 - en: A nightlife district, with some modern residential areas around Roppongi Hills and Tokyo Midtown.
 
