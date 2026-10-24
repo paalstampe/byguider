@@ -7,7 +7,7 @@ Sist oppdatert: 4. oktober 2026 (New York som fjerde by, grenen `new-york`).
 
 ## 1. Målet
 
-En enkel nettbasert app som viser Pål og Vibekes byer — London først, så Nice, Oslo og New York — på kart,
+En enkel nettbasert app som viser Pål og Vibekes byer — London først, så Nice, Oslo, New York og Tokyo — på kart,
 med nabolag, steder i flere kategorier (kaféer, parker, butikker, markeder, gallerier)
 og markerte gater og gåturer. Skal kunne deles via lenke uten innlogging.
 
@@ -43,12 +43,14 @@ byguider/
 ├── nice/index.html
 ├── oslo/index.html
 ├── new-york/index.html
+├── tokyo/index.html
 ├── data/
 │   ├── london.md                 kilden: steder, notater, soner, metadata
 │   ├── london-geometri.geojson   områder, gater, gåturer (koblet på navn)
 │   ├── nice.md / nice-geometri.geojson   tomme, metadata utfylt
 │   ├── oslo.md / oslo-geometri.geojson
-│   └── new-york.md / new-york-geometri.geojson   soner Uptown, Midtown, Downtown, Brooklyn; geometrien er tom
+│   ├── new-york.md / new-york-geometri.geojson   soner Uptown, Midtown, Downtown, Brooklyn
+│   └── tokyo.md / tokyo-geometri.geojson         soner Central, West, East
 ├── README.md
 └── HANDOVER.md             dette dokumentet
 ```
@@ -144,7 +146,9 @@ Gategeometri kan hentes fra OpenStreetMap (Overpass) — Claude kan gjøre det p
 Nabolagsomriss bygger på offentlige kilder der de finnes, og ellers på gategrenser sporet i OSM; `kilde` i hver
 feature sier hvilken: London — bydelenes conservation areas (planning.data.gov.uk); New York — byplankontorets
 Neighborhood Tabulation Areas 2020 og Landmarks-kommisjonens historiske distrikter (NYC Open Data); Oslo — byleksikon
-og kommunale kilder; Nice — ingen offisielle kvartalsgrenser for Carré d'Or/Le Petit Marais, så gategrenser.
+og kommunale kilder; Nice — ingen offisielle kvartalsgrenser for Carré d'Or/Le Petit Marais, så gategrenser;
+Tokyo — de offisielle chōme-grensene fra folketellingen 2020 (e-Stat, «小地域» shapefiler per bydel), slått sammen
+per nabolag; kjernene i Tomigaya og Yanaka følger gatene i OSM.
 
 Koordinatrekkefølge: **md-fila bruker breddegrad, lengdegrad** (Google-rekkefølge);
 GeoJSON-fila bruker lengdegrad, breddegrad. Parseren snur md-koordinatene.

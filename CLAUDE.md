@@ -3,7 +3,7 @@ Gjeldende status (lastes inn automatisk):
 
 # Byguider — arbeidsregler for Claude
 
-Pål og Vibekes byguider (London, Nice, Oslo, New York) på kart. Live på https://stam.pe/byguider/.
+Pål og Vibekes byguider (London, Nice, Oslo, New York, Tokyo) på kart. Live på https://stam.pe/byguider/.
 Løpende status, neste steg, åpne spørsmål og beslutningslogg: NOTES.md (oppdateres ved slutten av hver økt).
 Les HANDOVER.md før større endringer — den har datamodell, design og teknikk.
 Hold HANDOVER.md oppdatert når noe vesentlig endres i teknikk eller design (f.eks. punkt 10.5).
@@ -92,6 +92,8 @@ Playwright med `colorScheme: 'light'` og `'dark'`. Ta bildene fra stam.pe etter 
      London: bydelenes conservation areas (planning.data.gov.uk, API med geometry=<WKT>). New York: byplankontorets
      Neighborhood Tabulation Areas 2020 og Landmarks-kommisjonens historiske distrikter (NYC Open Data; distriktene
      ligger i EPSG:2263 og må regnes om). Oslo: oslobyleksikon.no, lokalhistoriewiki.no, kommunen.
+     Tokyo: chōme-grensene fra folketellingen 2020 (e-Stat, statmap-search, shapefil per bydel, JGD2011 ≈ WGS84),
+     slått sammen per nabolag.
   2. Passer en offentlig grense med nabolaget, bruk den (gjerne som kjerne hvis den er smalere enn nabolaget).
   3. Ellers: velg grensegatene og spor dem i OSM (Overpass) fra kryss til kryss, så omrisset følger gatene og
      kystlinjen. Hovedgaten skal ligge inni, ikke være kanten, når butikkene ligger på begge sider.
