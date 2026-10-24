@@ -36,8 +36,6 @@ Sist oppdatert: 24. oktober 2026.
 
 ## Åpne spørsmål
 
-- Nice har ingen soner (# i nice.md). Forslag: Vieux-Nice, Le Port (Le Petit Marais, Garibaldi), Sentrum (Carré d'Or, Centre-ville,
-  Musiciens, Gambetta, Promenade des Anglais) og Utenfor sentrum (Cimiez, Libération, Cap Ferrat, Èze).
 - Hrímnir – Fredensborg ligger øst for Maridalsveien (ved Vulkan), utenfor Fredensborg-omrisset.
 
 ## Beslutningslogg
@@ -61,5 +59,7 @@ Sist oppdatert: 24. oktober 2026.
   (uten Fougstads gate-kilen og Pilestredet park-lobben), og kjernen har Hallings gate inni. Gamlebyen går til
   Tøyenbekken/Klosterenga i nord, og kjernen ligger mellom bekken og Hovedbanen. Fredensborg tar med nordsiden
   av Fredensborgveien. Grünerløkka og SoSoPa fulgte allerede gatene og fikk bare `kilde`.
+- 2026-10-24: Nice har fire soner: Vieux-Nice, Le Port (Le Petit Marais, Garibaldi), Sentrum (Carré d'Or, Centre-ville,
+  Musiciens, Gambetta, Promenade des Anglais) og Utenfor sentrum (Cimiez, Libération, Cap Ferrat, Èze, gåturene).
 - 2026-10-24: Undertittelen er «En høyst subjektiv guide» / «An opinionated guide», i kursiv under tittelen.
 - 2026-10-24: Harper (Nice) får ikke Google-lenke (finnes ikke i Google Maps). Brixton Village beholder markedets Place ID.

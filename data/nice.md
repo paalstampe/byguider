@@ -46,84 +46,9 @@ Områdeskisser, gater og gåturer tegnes i nice-geometri.geojson (f.eks. i geojs
 og kobles hit på navn: type "område", "gate" eller "rute".
 -->
 
-## Nabolag og gater
-
-### Carré d'Or
-- sted: 43.69728, 7.26301
-- google: ChIJ8UDfoKDazRIRfXnUNCW1OOc
-- gater: Rue Alphonse Karr, Rue Paradis, Avenue de Verdun, Avenue de Suède, Rue Longchamp
-Flott område med butikker, restauranter og kaféer mellom Boulevard Victor Hugo og sjøen.
-- en: A lovely area with shops, restaurants and cafés between Boulevard Victor Hugo and the sea.
-
-### Havnen – Le Petit Marais
-- navn-en: The Port – Le Petit Marais
-- sted: 43.69854, 7.28552
-- google: ChIJL8mHPb7azRIR6TKKM-V4290
-- gater: Rue Bonaparte, Rue Bavastro, Rue Lascaris, Rue Fodéré, Rue Martin Seytour, Rue Catherine Segurane
-Kvarteret mellom Place Garibaldi og havnen, kalt Le Petit Marais. Smale gater med kaféer, vinbarer, bistroer og antikvitetsbutikker – mer lokalt og mindre turistpreget enn gamlebyen. Mange nye, gode restauranter åpner rundt havnen, også flere i Michelinguiden.
-- en: The quarter between Place Garibaldi and the port, nicknamed Le Petit Marais. Narrow streets with cafés, wine bars, bistros and antique shops – more local and less touristy than the old town. Many new, good restaurants are opening around the port, including several in the Michelin Guide.
+# Vieux-Nice
 
 ## Restauranter
-
-### Nespo ★
-- sted: 43.69865, 7.26037
-- google: ChIJh0j648HRzRIR2O7JLHWH22g
-- nettside: https://www.nespo-restaurant.com/
-Musiciens
-
-Middag og lunsj.
-
-Middelhavskjøkken med italiensk preg på Boulevard Victor Hugo. Elegant, men ikke formelt. Konsistent og svært høy kvalitet.
-
-Våre favoritter: assiette de pata negra, vitello tonnato, carpaccio de daurade, carpaccio de thon rouge, friture de calamars, rigatoni à la truffe, filet de bœuf au poivre, sole meunière.
-
-Stengt søndag og mandag.
-
-- en: Musiciens
-
-Dinner and lunch.
-
-Italian-leaning Mediterranean cooking on Boulevard Victor Hugo. Elegant but not formal. Consistent and of very high quality.
-
-Our favourites: assiette de pata negra, vitello tonnato, carpaccio de daurade, carpaccio de thon rouge, friture de calamars, rigatoni à la truffe, filet de bœuf au poivre, sole meunière.
-
-Closed Sunday and Monday.
-
-### Le Bistrot de Jan ★
-- sted: 43.69980, 7.28484
-- google: ChIJ4z-TInPbzRIRTk5V0X5EZ8k
-- nettside: https://janonline.com/le-bistrot-de-jan/
-Le Petit Marais
-
-Middag og lunsj.
-
-Den uformelle lillebroren til Michelin-restauranten Jan i Rue Lascaris i havneområdet. Fransk bistro med sørafrikanske innslag. Konsistent og meget høy kvalitet. Flott interiør og god stemning.
-
-Våre favoritter: huître de Roumégous n° 3, burratina de bufflonne, samoussa au bobotie de lentilles, tourte au poulet, couscous royal, bobotie de lentilles.
-
-Åpent alle dager.
-
-- en: Le Petit Marais
-
-Dinner and lunch.
-
-The informal little brother of Jan, the Michelin-starred restaurant on Rue Lascaris in the port district. French bistro cooking with South African touches. Consistent and of very high quality. Beautiful interior and a great atmosphere.
-
-Our favourites: huître de Roumégous n° 3, burratina de bufflonne, samoussa au bobotie de lentilles, tourte au poulet, couscous royal, bobotie de lentilles.
-
-Open every day.
-
-### Pirouette ★
-- sted: 43.70042, 7.28501
-- google: ChIJB7NnzyHbzRIRtO8fkFwdBl0
-- nettside: https://lesagitateurs.com/pirouette
-Le Petit Marais
-
-Bistro fra Les Agitateurs. 34 Rue Bonaparte.
-
-- en: Le Petit Marais
-
-Bistro from Les Agitateurs. 34 Rue Bonaparte.
 
 ### Lavomatique ★
 - sted: 43.69756, 7.27619
@@ -136,42 +61,6 @@ Småretter til deling. 11 Rue du Pont-Vieux.
 
 Small plates to share. 11 Rue du Pont-Vieux.
 
-### Jan ★
-- sted: 43.69986, 7.28490
-- google: ChIJ7cguWLjazRIR0sVOtnZhvUM
-- nettside: https://janonline.com/restaurantjan/
-Le Petit Marais
-
-Fine dining.
-
-### Les Agitateurs ★
-- sted: 43.70052, 7.28435
-- google: ChIJk76xaCnbzRIRZRqji8u5qxc
-- nettside: https://www.lesagitateurs.com/
-Le Petit Marais
-
-Fine dining.
-
-### Épicentre ★
-- sted: 43.69904, 7.28570
-- google: ChIJC-GpTdnbzRIRyzHwhjXfYuU
-- nettside: https://restaurant-epicentre.com/
-Le Petit Marais
-
-Fine dining.
-
-### Tina Trattoria
-- sted: 43.69979, 7.28439
-- google: ChIJRfplVQjbzRIRpBldOM3IXjE
-- nettside: https://tinatrattoria.com/tina-trattoria
-Le Petit Marais
-
-Italiensk trattoria. 16 Rue Lascaris.
-
-- en: Le Petit Marais
-
-Italian trattoria. 16 Rue Lascaris.
-
 ### Noto
 - sted: 43.69562, 7.27049
 - google: ChIJv78aqqrbzRIRv43Z2SPIznE
@@ -183,30 +72,6 @@ Siciliansk. 20 Rue Saint-François de Paule.
 - en: Vieux-Nice
 
 Sicilian. 20 Rue Saint-François de Paule.
-
-### Zenirō
-- sted: 43.70151, 7.27940
-- google: ChIJj0UwwrXbzRIR-tCPIbLPlYY
-- nettside: https://www.zenirorestaurants.com/
-Le Port
-
-Japansk restaurant og bar. 64 Boulevard Risso.
-
-- en: Le Port
-
-Japanese restaurant and bar. 64 Boulevard Risso.
-
-### Cagnard
-- sted: 43.70008, 7.28428
-- google: ChIJ6W_m91HbzRIRKRypInZwg5k
-- nettside: https://lesagitateurs.com/cagnard
-Le Petit Marais
-
-Sesongretter til deling, fra Les Agitateurs. 11 Rue François Guisol.
-
-- en: Le Petit Marais
-
-Seasonal sharing plates, from Les Agitateurs. 11 Rue François Guisol.
 
 ### Fine Gueule
 - sted: 43.69605, 7.27188
@@ -243,66 +108,6 @@ Bistro på Hôtel du Couvent. 16 Rue des Serruriers.
 - en: Vieux-Nice
 
 Bistro at Hôtel du Couvent. 16 Rue des Serruriers.
-
-### Apopino
-- sted: 43.69908, 7.26488
-- google: ChIJjW6jy23RzRIR4RXJ6suyNmI
-- nettside: https://www.apopinorestaurant.com/
-Carré d'Or
-
-Middelhavskjøkken. 11 bis Rue Grimaldi.
-
-- en: Carré d'Or
-
-Mediterranean. 11 bis Rue Grimaldi.
-
-### Le Séjour
-- sted: 43.69895, 7.26495
-- google: ChIJOWwC_AnQzRIRIC5eAiqAv3k
-- nettside: https://www.sejourcafe.fr/
-Carré d'Or
-
-Moderne fransk. 11 Rue Grimaldi.
-
-- en: Carré d'Or
-
-Modern French. 11 Rue Grimaldi.
-
-### L'antidote
-- sted: 43.69649, 7.26166
-- google: ChIJPUu6AgDRzRIROxpWab1RRxM
-- nettside: https://lantidotenice.fr/
-Carré d'Or
-
-Fransk. 3 Rue Dalpozzo.
-
-- en: Carré d'Or
-
-French. 3 Rue Dalpozzo.
-
-### Salette
-- sted: 43.70068, 7.28469
-- google: ChIJn3fG3QDbzRIR_18otd8PNn4
-- nettside: https://www.salette-restaurant.fr/
-Le Port
-
-Fransk bistronomi. 35a Rue Bonaparte.
-
-- en: Le Port
-
-French bistronomy. 35a Rue Bonaparte.
-
-### Franchin
-- sted: 43.69643, 7.26413
-- google: ChIJE51pigrQzRIR_x_PzrQ_He0
-- nettside: https://www.franchin.net/
-Carré d'Or
-
-Franske klassikere i art deco-lokale. 10 Rue Massenet.
-
-- en: Carré d'Or
-
-French classics in an art deco room. 10 Rue Massenet.
 
 ### Bar des Oiseaux
 - sted: 43.69693, 7.27487
@@ -352,18 +157,6 @@ Fisk og sjømat med søramerikansk preg. 4 Rue Jacques Médecin.
 
 Fish and seafood with a South American twist. 4 Rue Jacques Médecin.
 
-### Cave de Peixes
-- sted: 43.69980, 7.28109
-- google: ChIJw63H7FfbzRIRcgsFc3Fb5cs
-- nettside: https://www.instagram.com/lacavedepeixes/
-Le Port
-
-Vinbar fra Peixes. 8 Rue Catherine Ségurane.
-
-- en: Le Port
-
-Wine bar from Peixes. 8 Rue Catherine Ségurane.
-
 ### Olive & Artichaut
 - sted: 43.69649, 7.27599
 - google: ChIJpU2cM6PazRIRqHWfuvZTVkI
@@ -376,6 +169,205 @@ Middelhavskjøkken. 6 Rue Sainte-Réparate.
 
 Mediterranean. 6 Rue Sainte-Réparate.
 
+## Kaféer
+
+### Maranna
+- sted: 43.69637, 7.27671
+- google: ChIJ22rwonPbzRIR_iWefjIZCzI
+- nettside: https://www.maranna.fr/
+Vieux-Nice
+
+Lunsj. 31 Rue Benoît Bunico, Vieux-Nice.
+
+- en: Vieux-Nice
+
+Lunch. 31 Rue Benoît Bunico, Vieux-Nice.
+
+### Cafés Indien – Rue Pairolière
+- sted: 43.69915, 7.27860
+- google: ChIJAbb1CrvazRIRETuBFlnlj-Y
+Vieux-Nice
+
+Kaffebrenneri. 35 Rue Pairolière, Vieux-Nice.
+
+- en: Vieux-Nice
+
+Coffee roaster. 35 Rue Pairolière, Vieux-Nice.
+
+### Cafés Indien – Rue Sainte-Réparate
+- sted: 43.69689, 7.27605
+- google: ChIJpVW5SqPazRIRJNT8abGm6nE
+Vieux-Nice
+
+Kaffebrenneri. 2 bis Rue Sainte-Réparate, Vieux-Nice.
+
+- en: Vieux-Nice
+
+Coffee roaster. 2 bis Rue Sainte-Réparate, Vieux-Nice.
+
+## Butikker
+
+### Trésors Publics
+- sted: 43.69633, 7.27601
+- google: ChIJpShtU6PazRIRHyPKaG4RDEk
+- nettside: https://www.tresorspublics.com/
+Vieux-Nice
+
+Et lite museum over fransk hverdagsliv der alt er til salgs. Nesten tusen ting – kjøkkenutstyr, toalettartikler, klær, leker og mye annet – alt laget i Frankrike. Fin å finne gaver i.
+
+- en: Vieux-Nice
+
+A small museum of French everyday life where everything is for sale. Nearly a thousand things – kitchenware, toiletries, clothes, toys and much more – all made in France. Good for gifts.
+
+## Hoteller
+
+### Hôtel du Couvent
+- sted: 43.69718, 7.27884
+- google: ChIJfUqOdgXPzRIR-8aYHCo-Qxw
+- nettside: https://www.marriott.com/en-us/hotels/ncehc-hotel-du-couvent-a-luxury-collection-hotel-nice-france/overview/
+- les: Financial Times | Inside Hôtel du Couvent, a 400-year-old nunnery turned five-star sanctuary in Nice | https://www.ft.com/content/ef323f7a-af07-45e6-834f-877ff37ca9ad
+Vieux-Nice
+
+Et nonnekloster fra 1600-tallet høyt oppe over gamlebyen Vieux-Nice, som åpnet som hotell i 2024. Terrassehager, romerske bad og et rolig tempo som ellers er sjeldent i sentrum. Basseng, kjøkkenhage og egen urtekyndig. Et nytt topphotell i Nice.
+
+- en: Vieux-Nice
+
+A 17th-century convent high above the old town, Vieux-Nice, opened as a hotel in 2024. Terraced gardens, Roman baths and a calm that is otherwise rare in the centre. Pool, kitchen garden and an in-house herbalist. A new top hotel in Nice.
+
+# Le Port
+
+## Nabolag og gater
+
+### Havnen – Le Petit Marais
+- navn-en: The Port – Le Petit Marais
+- sted: 43.69854, 7.28552
+- google: ChIJL8mHPb7azRIR6TKKM-V4290
+- gater: Rue Bonaparte, Rue Bavastro, Rue Lascaris, Rue Fodéré, Rue Martin Seytour, Rue Catherine Segurane
+Kvarteret mellom Place Garibaldi og havnen, kalt Le Petit Marais. Smale gater med kaféer, vinbarer, bistroer og antikvitetsbutikker – mer lokalt og mindre turistpreget enn gamlebyen. Mange nye, gode restauranter åpner rundt havnen, også flere i Michelinguiden.
+- en: The quarter between Place Garibaldi and the port, nicknamed Le Petit Marais. Narrow streets with cafés, wine bars, bistros and antique shops – more local and less touristy than the old town. Many new, good restaurants are opening around the port, including several in the Michelin Guide.
+
+## Restauranter
+
+### Le Bistrot de Jan ★
+- sted: 43.69980, 7.28484
+- google: ChIJ4z-TInPbzRIRTk5V0X5EZ8k
+- nettside: https://janonline.com/le-bistrot-de-jan/
+Le Petit Marais
+
+Middag og lunsj.
+
+Den uformelle lillebroren til Michelin-restauranten Jan i Rue Lascaris i havneområdet. Fransk bistro med sørafrikanske innslag. Konsistent og meget høy kvalitet. Flott interiør og god stemning.
+
+Våre favoritter: huître de Roumégous n° 3, burratina de bufflonne, samoussa au bobotie de lentilles, tourte au poulet, couscous royal, bobotie de lentilles.
+
+Åpent alle dager.
+
+- en: Le Petit Marais
+
+Dinner and lunch.
+
+The informal little brother of Jan, the Michelin-starred restaurant on Rue Lascaris in the port district. French bistro cooking with South African touches. Consistent and of very high quality. Beautiful interior and a great atmosphere.
+
+Our favourites: huître de Roumégous n° 3, burratina de bufflonne, samoussa au bobotie de lentilles, tourte au poulet, couscous royal, bobotie de lentilles.
+
+Open every day.
+
+### Pirouette ★
+- sted: 43.70042, 7.28501
+- google: ChIJB7NnzyHbzRIRtO8fkFwdBl0
+- nettside: https://lesagitateurs.com/pirouette
+Le Petit Marais
+
+Bistro fra Les Agitateurs. 34 Rue Bonaparte.
+
+- en: Le Petit Marais
+
+Bistro from Les Agitateurs. 34 Rue Bonaparte.
+
+### Jan ★
+- sted: 43.69986, 7.28490
+- google: ChIJ7cguWLjazRIR0sVOtnZhvUM
+- nettside: https://janonline.com/restaurantjan/
+Le Petit Marais
+
+Fine dining.
+
+### Les Agitateurs ★
+- sted: 43.70052, 7.28435
+- google: ChIJk76xaCnbzRIRZRqji8u5qxc
+- nettside: https://www.lesagitateurs.com/
+Le Petit Marais
+
+Fine dining.
+
+### Épicentre ★
+- sted: 43.69904, 7.28570
+- google: ChIJC-GpTdnbzRIRyzHwhjXfYuU
+- nettside: https://restaurant-epicentre.com/
+Le Petit Marais
+
+Fine dining.
+
+### Tina Trattoria
+- sted: 43.69979, 7.28439
+- google: ChIJRfplVQjbzRIRpBldOM3IXjE
+- nettside: https://tinatrattoria.com/tina-trattoria
+Le Petit Marais
+
+Italiensk trattoria. 16 Rue Lascaris.
+
+- en: Le Petit Marais
+
+Italian trattoria. 16 Rue Lascaris.
+
+### Zenirō
+- sted: 43.70151, 7.27940
+- google: ChIJj0UwwrXbzRIR-tCPIbLPlYY
+- nettside: https://www.zenirorestaurants.com/
+Le Port
+
+Japansk restaurant og bar. 64 Boulevard Risso.
+
+- en: Le Port
+
+Japanese restaurant and bar. 64 Boulevard Risso.
+
+### Cagnard
+- sted: 43.70008, 7.28428
+- google: ChIJ6W_m91HbzRIRKRypInZwg5k
+- nettside: https://lesagitateurs.com/cagnard
+Le Petit Marais
+
+Sesongretter til deling, fra Les Agitateurs. 11 Rue François Guisol.
+
+- en: Le Petit Marais
+
+Seasonal sharing plates, from Les Agitateurs. 11 Rue François Guisol.
+
+### Salette
+- sted: 43.70068, 7.28469
+- google: ChIJn3fG3QDbzRIR_18otd8PNn4
+- nettside: https://www.salette-restaurant.fr/
+Le Port
+
+Fransk bistronomi. 35a Rue Bonaparte.
+
+- en: Le Port
+
+French bistronomy. 35a Rue Bonaparte.
+
+### Cave de Peixes
+- sted: 43.69980, 7.28109
+- google: ChIJw63H7FfbzRIRcgsFc3Fb5cs
+- nettside: https://www.instagram.com/lacavedepeixes/
+Le Port
+
+Vinbar fra Peixes. 8 Rue Catherine Ségurane.
+
+- en: Le Port
+
+Wine bar from Peixes. 8 Rue Catherine Ségurane.
+
 ### L'eau de vie
 - sted: 43.70168, 7.27569
 - google: ChIJ8V2bSaXazRIRQW52wdexwdY
@@ -387,18 +379,6 @@ Moderne fransk. 11 Rue Delille.
 - en: Garibaldi
 
 Modern French. 11 Rue Delille.
-
-### Chez Davia
-- sted: 43.69905, 7.26483
-- google: ChIJqTIC_AnQzRIR96POL-9UfMc
-- nettside: https://www.chezdavia.com/
-Carré d'Or
-
-Niçoise-kjøkken. 11 bis Rue Grimaldi.
-
-- en: Carré d'Or
-
-Niçoise cooking. 11 bis Rue Grimaldi.
 
 ### Magma
 - sted: 43.70071, 7.28409
@@ -414,22 +394,6 @@ Asian fusion from Les Agitateurs. 31 Rue Bonaparte.
 
 ## Kaféer
 
-### La Popote d'Ondine – Rue Blacas ★
-- sted: 43.69979, 7.27089
-- google: ChIJabINg9HbzRIRROD1oaTT7vA
-- nettside: https://lapopotedondine.com/
-Centre-ville
-
-Lunsj. Våre favoritter: salade Cobb, salade Caesar, bagel poulet.
-
-Rue Blacas og Rue de la Liberté er åpne hver dag, Rue Gioffredo mandag til lørdag. Vi foretrekker å sitte på terrassen i Rue Blacas.
-
-- en: Centre-ville
-
-Lunch. Our favourites: salade Cobb, salade Caesar, bagel poulet.
-
-Rue Blacas and Rue de la Liberté are open every day, Rue Gioffredo Monday to Saturday. We prefer the terrace on Rue Blacas.
-
 ### La Popote d'Ondine – Rue Gioffredo
 - sted: 43.70153, 7.27591
 - google: ChIJwxJ4SqXazRIRd0c4_plzmS0
@@ -441,6 +405,207 @@ Lunsj. Våre favoritter: salade Cobb, salade Caesar, bagel poulet.
 Rue Blacas og Rue de la Liberté er åpne hver dag, Rue Gioffredo mandag til lørdag. Vi foretrekker å sitte på terrassen i Rue Blacas.
 
 - en: Garibaldi
+
+Lunch. Our favourites: salade Cobb, salade Caesar, bagel poulet.
+
+Rue Blacas and Rue de la Liberté are open every day, Rue Gioffredo Monday to Saturday. We prefer the terrace on Rue Blacas.
+
+### Pinpin
+- sted: 43.70058, 7.28261
+- google: ChIJl9k1H6fbzRIRZbF1UAi8LnM
+- nettside: https://www.pin-pin.fr/
+Le Petit Marais
+
+Lunsj. 2 Rue Martin Seytour.
+
+- en: Le Petit Marais
+
+Lunch. 2 Rue Martin Seytour.
+
+### Clay – Rue Bonaparte
+- sted: 43.70060, 7.28177
+- google: ChIJHfz3ZK7bzRIR0Ymt-Btfx2k
+- nettside: https://leclay.fr/
+Le Petit Marais
+
+Lunsj. 4 Rue Bonaparte.
+
+- en: Le Petit Marais
+
+Lunch. 4 Rue Bonaparte.
+
+## Barer
+
+### Vibes
+- sted: 43.69924, 7.28381
+- google: ChIJb5hW0yfbzRIRc9OxuKFcR9c
+- nettside: https://www.instagram.com/vibes.bar.nice/
+Le Petit Marais
+
+Cocktailbar. 22 Rue François Guisol.
+
+- en: Le Petit Marais
+
+Cocktail bar. 22 Rue François Guisol.
+
+## Butikker
+
+### Café du Cycliste
+- sted: 43.69639, 7.28621
+- google: ChIJe7daQ7_azRIRisFL66Jl5u8
+- nettside: https://www.cafeducycliste.com/
+Le Port
+
+Sykkelklær og kafé. 16 Quai des Docks, ved havna.
+
+- en: Le Port
+
+Cycling apparel and café. 16 Quai des Docks, by the port.
+
+### Palace
+- sted: 43.70026, 7.28235
+- google: ChIJVTeFm7nazRIRT9CdGsWkfx0
+Le Petit Marais
+
+Butikk. 6 Rue Martin Seytour, ved havna.
+
+- en: Le Petit Marais
+
+Shop. 6 Rue Martin Seytour, near the port.
+
+### Le Panier Gourmand
+- sted: 43.70043, 7.28537
+- google: ChIJmxavQ7jazRIRMomapIeqwBI
+- nettside: https://lepaniergourmand-nice.fr/
+Le Petit Marais
+
+Frukt og grønt. 38 Rue Bonaparte.
+
+- en: Le Petit Marais
+
+Fruit and vegetables. 38 Rue Bonaparte.
+
+### Harper
+- sted: 43.70074, 7.28384
+- nettside: https://www.instagram.com/harper_bonaparte/
+Le Port
+
+Klær. 29 Rue Bonaparte.
+
+- en: Le Port
+
+Clothing. 29 Rue Bonaparte.
+
+# Sentrum
+
+## Nabolag og gater
+
+### Carré d'Or
+- sted: 43.69728, 7.26301
+- google: ChIJ8UDfoKDazRIRfXnUNCW1OOc
+- gater: Rue Alphonse Karr, Rue Paradis, Avenue de Verdun, Avenue de Suède, Rue Longchamp
+Flott område med butikker, restauranter og kaféer mellom Boulevard Victor Hugo og sjøen.
+- en: A lovely area with shops, restaurants and cafés between Boulevard Victor Hugo and the sea.
+
+## Restauranter
+
+### Nespo ★
+- sted: 43.69865, 7.26037
+- google: ChIJh0j648HRzRIR2O7JLHWH22g
+- nettside: https://www.nespo-restaurant.com/
+Musiciens
+
+Middag og lunsj.
+
+Middelhavskjøkken med italiensk preg på Boulevard Victor Hugo. Elegant, men ikke formelt. Konsistent og svært høy kvalitet.
+
+Våre favoritter: assiette de pata negra, vitello tonnato, carpaccio de daurade, carpaccio de thon rouge, friture de calamars, rigatoni à la truffe, filet de bœuf au poivre, sole meunière.
+
+Stengt søndag og mandag.
+
+- en: Musiciens
+
+Dinner and lunch.
+
+Italian-leaning Mediterranean cooking on Boulevard Victor Hugo. Elegant but not formal. Consistent and of very high quality.
+
+Our favourites: assiette de pata negra, vitello tonnato, carpaccio de daurade, carpaccio de thon rouge, friture de calamars, rigatoni à la truffe, filet de bœuf au poivre, sole meunière.
+
+Closed Sunday and Monday.
+
+### Apopino
+- sted: 43.69908, 7.26488
+- google: ChIJjW6jy23RzRIR4RXJ6suyNmI
+- nettside: https://www.apopinorestaurant.com/
+Carré d'Or
+
+Middelhavskjøkken. 11 bis Rue Grimaldi.
+
+- en: Carré d'Or
+
+Mediterranean. 11 bis Rue Grimaldi.
+
+### Le Séjour
+- sted: 43.69895, 7.26495
+- google: ChIJOWwC_AnQzRIRIC5eAiqAv3k
+- nettside: https://www.sejourcafe.fr/
+Carré d'Or
+
+Moderne fransk. 11 Rue Grimaldi.
+
+- en: Carré d'Or
+
+Modern French. 11 Rue Grimaldi.
+
+### L'antidote
+- sted: 43.69649, 7.26166
+- google: ChIJPUu6AgDRzRIROxpWab1RRxM
+- nettside: https://lantidotenice.fr/
+Carré d'Or
+
+Fransk. 3 Rue Dalpozzo.
+
+- en: Carré d'Or
+
+French. 3 Rue Dalpozzo.
+
+### Franchin
+- sted: 43.69643, 7.26413
+- google: ChIJE51pigrQzRIR_x_PzrQ_He0
+- nettside: https://www.franchin.net/
+Carré d'Or
+
+Franske klassikere i art deco-lokale. 10 Rue Massenet.
+
+- en: Carré d'Or
+
+French classics in an art deco room. 10 Rue Massenet.
+
+### Chez Davia
+- sted: 43.69905, 7.26483
+- google: ChIJqTIC_AnQzRIR96POL-9UfMc
+- nettside: https://www.chezdavia.com/
+Carré d'Or
+
+Niçoise-kjøkken. 11 bis Rue Grimaldi.
+
+- en: Carré d'Or
+
+Niçoise cooking. 11 bis Rue Grimaldi.
+
+## Kaféer
+
+### La Popote d'Ondine – Rue Blacas ★
+- sted: 43.69979, 7.27089
+- google: ChIJabINg9HbzRIRROD1oaTT7vA
+- nettside: https://lapopotedondine.com/
+Centre-ville
+
+Lunsj. Våre favoritter: salade Cobb, salade Caesar, bagel poulet.
+
+Rue Blacas og Rue de la Liberté er åpne hver dag, Rue Gioffredo mandag til lørdag. Vi foretrekker å sitte på terrassen i Rue Blacas.
+
+- en: Centre-ville
 
 Lunch. Our favourites: salade Cobb, salade Caesar, bagel poulet.
 
@@ -461,18 +626,6 @@ Rue Blacas og Rue de la Liberté er åpne hver dag, Rue Gioffredo mandag til lø
 Lunch. Our favourites: salade Cobb, salade Caesar, bagel poulet.
 
 Rue Blacas and Rue de la Liberté are open every day, Rue Gioffredo Monday to Saturday. We prefer the terrace on Rue Blacas.
-
-### Pinpin
-- sted: 43.70058, 7.28261
-- google: ChIJl9k1H6fbzRIRZbF1UAi8LnM
-- nettside: https://www.pin-pin.fr/
-Le Petit Marais
-
-Lunsj. 2 Rue Martin Seytour.
-
-- en: Le Petit Marais
-
-Lunch. 2 Rue Martin Seytour.
 
 ### Fino
 - sted: 43.69908, 7.27307
@@ -506,18 +659,6 @@ Our favourites: banh mi, salade poulet, bun chay and, of course, Vietnamese coff
 
 Open Monday to Saturday. Small terrace.
 
-### Clay – Rue Bonaparte
-- sted: 43.70060, 7.28177
-- google: ChIJHfz3ZK7bzRIR0Ymt-Btfx2k
-- nettside: https://leclay.fr/
-Le Petit Marais
-
-Lunsj. 4 Rue Bonaparte.
-
-- en: Le Petit Marais
-
-Lunch. 4 Rue Bonaparte.
-
 ### Clay – Rue Gioffredo
 - sted: 43.69857, 7.27157
 - google: ChIJlTxwUwDbzRIR9Uj9_nHeiGs
@@ -529,18 +670,6 @@ Lunsj. 47 Rue Gioffredo.
 - en: Centre-ville
 
 Lunch. 47 Rue Gioffredo.
-
-### Maranna
-- sted: 43.69637, 7.27671
-- google: ChIJ22rwonPbzRIR_iWefjIZCzI
-- nettside: https://www.maranna.fr/
-Vieux-Nice
-
-Lunsj. 31 Rue Benoît Bunico, Vieux-Nice.
-
-- en: Vieux-Nice
-
-Lunch. 31 Rue Benoît Bunico, Vieux-Nice.
 
 ### Ginette – Rue Pastorelli
 - sted: 43.70015, 7.26904
@@ -635,105 +764,7 @@ Konditori. 15 Rue du Maréchal Joffre.
 
 Pâtisserie. 15 Rue du Maréchal Joffre.
 
-### Cafés Indien – Rue Pairolière
-- sted: 43.69915, 7.27860
-- google: ChIJAbb1CrvazRIRETuBFlnlj-Y
-Vieux-Nice
-
-Kaffebrenneri. 35 Rue Pairolière, Vieux-Nice.
-
-- en: Vieux-Nice
-
-Coffee roaster. 35 Rue Pairolière, Vieux-Nice.
-
-### Cafés Indien – Rue Sainte-Réparate
-- sted: 43.69689, 7.27605
-- google: ChIJpVW5SqPazRIRJNT8abGm6nE
-Vieux-Nice
-
-Kaffebrenneri. 2 bis Rue Sainte-Réparate, Vieux-Nice.
-
-- en: Vieux-Nice
-
-Coffee roaster. 2 bis Rue Sainte-Réparate, Vieux-Nice.
-
-## Barer
-
-### Vibes
-- sted: 43.69924, 7.28381
-- google: ChIJb5hW0yfbzRIRc9OxuKFcR9c
-- nettside: https://www.instagram.com/vibes.bar.nice/
-Le Petit Marais
-
-Cocktailbar. 22 Rue François Guisol.
-
-- en: Le Petit Marais
-
-Cocktail bar. 22 Rue François Guisol.
-
-## Muséer og gallerier
-
-### Musée Matisse
-- sted: 43.71952, 7.27588
-- google: ChIJnz74K1DFzRIRiRaLt2c5MhA
-- nettside: https://www.musee-matisse-nice.org/en/
-- utenfor: ja
-Cimiez
-
-Kunstmuseum. I en villa fra 1600-tallet i Cimiez, 164 Avenue des Arènes de Cimiez.
-
-- en: Cimiez
-
-Art museum. In a 17th-century villa in Cimiez, 164 Avenue des Arènes de Cimiez.
-
 ## Butikker
-
-### Café du Cycliste
-- sted: 43.69639, 7.28621
-- google: ChIJe7daQ7_azRIRisFL66Jl5u8
-- nettside: https://www.cafeducycliste.com/
-Le Port
-
-Sykkelklær og kafé. 16 Quai des Docks, ved havna.
-
-- en: Le Port
-
-Cycling apparel and café. 16 Quai des Docks, by the port.
-
-### Trésors Publics
-- sted: 43.69633, 7.27601
-- google: ChIJpShtU6PazRIRHyPKaG4RDEk
-- nettside: https://www.tresorspublics.com/
-Vieux-Nice
-
-Et lite museum over fransk hverdagsliv der alt er til salgs. Nesten tusen ting – kjøkkenutstyr, toalettartikler, klær, leker og mye annet – alt laget i Frankrike. Fin å finne gaver i.
-
-- en: Vieux-Nice
-
-A small museum of French everyday life where everything is for sale. Nearly a thousand things – kitchenware, toiletries, clothes, toys and much more – all made in France. Good for gifts.
-
-### Palace
-- sted: 43.70026, 7.28235
-- google: ChIJVTeFm7nazRIRT9CdGsWkfx0
-Le Petit Marais
-
-Butikk. 6 Rue Martin Seytour, ved havna.
-
-- en: Le Petit Marais
-
-Shop. 6 Rue Martin Seytour, near the port.
-
-### Le Panier Gourmand
-- sted: 43.70043, 7.28537
-- google: ChIJmxavQ7jazRIRMomapIeqwBI
-- nettside: https://lepaniergourmand-nice.fr/
-Le Petit Marais
-
-Frukt og grønt. 38 Rue Bonaparte.
-
-- en: Le Petit Marais
-
-Fruit and vegetables. 38 Rue Bonaparte.
 
 ### L'Italien
 - sted: 43.69547, 7.25825
@@ -746,31 +777,7 @@ Italiensk delikatesse. 76 Rue de France.
 
 Italian deli. 76 Rue de France.
 
-### Harper
-- sted: 43.70074, 7.28384
-- nettside: https://www.instagram.com/harper_bonaparte/
-Le Port
-
-Klær. 29 Rue Bonaparte.
-
-- en: Le Port
-
-Clothing. 29 Rue Bonaparte.
-
 ## Hoteller
-
-### Hôtel du Couvent
-- sted: 43.69718, 7.27884
-- google: ChIJfUqOdgXPzRIR-8aYHCo-Qxw
-- nettside: https://www.marriott.com/en-us/hotels/ncehc-hotel-du-couvent-a-luxury-collection-hotel-nice-france/overview/
-- les: Financial Times | Inside Hôtel du Couvent, a 400-year-old nunnery turned five-star sanctuary in Nice | https://www.ft.com/content/ef323f7a-af07-45e6-834f-877ff37ca9ad
-Vieux-Nice
-
-Et nonnekloster fra 1600-tallet høyt oppe over gamlebyen Vieux-Nice, som åpnet som hotell i 2024. Terrassehager, romerske bad og et rolig tempo som ellers er sjeldent i sentrum. Basseng, kjøkkenhage og egen urtekyndig. Et nytt topphotell i Nice.
-
-- en: Vieux-Nice
-
-A 17th-century convent high above the old town, Vieux-Nice, opened as a hotel in 2024. Terraced gardens, Roman baths and a calm that is otherwise rare in the centre. Pool, kitchen garden and an in-house herbalist. A new top hotel in Nice.
 
 ### Hôtel Amour
 - sted: 43.69740, 7.25537
@@ -821,6 +828,25 @@ Beach club. [Booking av seng](https://bookings.zenchef.com/results?rid=355682&pi
 - en: Promenade des Anglais
 
 Beach club. [Book a sunbed](https://bookings.zenchef.com/results?rid=355682&pid=1001)
+
+# Utenfor sentrum
+
+## Muséer og gallerier
+
+### Musée Matisse
+- sted: 43.71952, 7.27588
+- google: ChIJnz74K1DFzRIRiRaLt2c5MhA
+- nettside: https://www.musee-matisse-nice.org/en/
+- utenfor: ja
+Cimiez
+
+Kunstmuseum. I en villa fra 1600-tallet i Cimiez, 164 Avenue des Arènes de Cimiez.
+
+- en: Cimiez
+
+Art museum. In a 17th-century villa in Cimiez, 164 Avenue des Arènes de Cimiez.
+
+## Strender og beach clubs
 
 ### Plage de la Fosse
 - sted: 43.68671, 7.33612
