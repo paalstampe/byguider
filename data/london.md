@@ -1478,6 +1478,16 @@ Start øverst i Kinnerton Street og gå ned til Motcomb Street.
 - Ebury Street to Pimlico Road, then along Pimlico Road to Lower Sloane Street.
 - Up Lower Sloane Street to Sloane Square.
 
+### Hyde Park langs vannet
+- navn-en: Hyde Park along the water
+- lengde: 1,9 km
+- varighet: ca. 25 min gange (uten stopp)
+Start ved Queen Anne's Alcove øverst ved Long Water i Kensington Gardens, og gå ned til The Arch av Henry Moore.
+- Videre langs Long Water og Serpentine hele veien til South Carriage Drive.
+
+- en: Start at Queen Anne's Alcove at the top of the Long Water in Kensington Gardens, and walk down to Henry Moore's The Arch.
+- Carry on along the Long Water and the Serpentine all the way to South Carriage Drive.
+
 # North
 
 ## Nabolag og gater
