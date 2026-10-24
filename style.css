@@ -522,6 +522,22 @@ html, body {
   font-size: 12.5px;
   color: var(--dempet);
 }
+.offline-lager {
+  margin: 4px 0 0;
+  font-size: 12.5px;
+  color: var(--dempet);
+}
+.lenkeknapp {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: var(--aksent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+.lenkeknapp:disabled { color: var(--dempet); text-decoration: none; cursor: default; }
 
 /* ---------- Kart ---------- */
 
