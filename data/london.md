@@ -1068,6 +1068,7 @@ Holland Park
 ### Westbourne Grove ★
 - sted: 51.5152, -0.1939
 - google: ChIJw_N_hv0PdkgRpK05Y_aiFNA
+- gater: Westbourne Grove, Ledbury Road
 
 ### Barnes Village
 - sted: 51.4738, -0.2492
