@@ -51,6 +51,7 @@ og kobles hit på navn: type "område", "gate" eller "rute".
 ### Elizabeth Street ★
 - sted: 51.4938, -0.1511
 - google: ChIJqXePdxgFdkgRwVq8eRPm7FU
+- gater: Elizabeth Street
 Lower Belgravia
 
 ### Lamb's Conduit Street ★
@@ -571,6 +572,25 @@ Brutalistisk boligområde og kultursenter med konserthall, teater, kino, galleri
 - en: City
 
 Brutalist housing estate and arts centre with a concert hall, theatre, cinema, gallery and conservatory.
+
+## Gåturer
+
+### Belgravia → Sloane Square
+- lengde: 2,4 km
+- varighet: ca. 30 min gange (uten stopp)
+Start øverst i Kinnerton Street og gå ned til Motcomb Street.
+- Motcomb Street til Lowndes Street, og Lowndes Street ned til Chesham Place.
+- Tur-retur Pont Street til Cadogan Place.
+- Fra Chesham Place ned Lyall Street, over Eaton Square og videre Elizabeth Street til Ebury Street.
+- Ebury Street til Pimlico Road, og Pimlico Road bort til Lower Sloane Street.
+- Lower Sloane Street opp til Sloane Square.
+
+- en: Start at the top of Kinnerton Street and walk down to Motcomb Street.
+- Motcomb Street to Lowndes Street, then down Lowndes Street to Chesham Place.
+- Out and back along Pont Street to Cadogan Place.
+- From Chesham Place down Lyall Street, across Eaton Square and on along Elizabeth Street to Ebury Street.
+- Ebury Street to Pimlico Road, then along Pimlico Road to Lower Sloane Street.
+- Up Lower Sloane Street to Sloane Square.
 
 # North
 
