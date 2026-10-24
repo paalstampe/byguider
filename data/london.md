@@ -1073,6 +1073,7 @@ Holland Park
 ### Barnes Village
 - sted: 51.4738, -0.2492
 - google: ChIJG6sdYVgOdkgRrgKNBvsQTyo
+- gater: Barnes High Street, Church Road
 - utenfor: ja
 Farmers market lørdag
 - en: Farmers’ market on Saturdays
