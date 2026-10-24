@@ -1014,7 +1014,7 @@ Interiørbutikk – nordiske interiørmerker, tekstiler og møbler. Dalsbergstie
 - en: St. Hanshaugen
 Interior shop – Nordic interior brands, textiles and furniture. Dalsbergstien 2.
 
-### Gutta på Haugen – Vika ★
+### Gutta på Haugen – Vika
 - sted: 59.91275, 10.72648
 - google: ChIJbVBTBq5vQUYRV0qTRGwRfM8
 - nettside: https://www.gutta.no/
@@ -1112,15 +1112,6 @@ Sentrum
 Platebutikk. Møllergata 3A.
 - en: Sentrum
 Record shop. Møllergata 3A.
-
-### Kampen Vinyl
-- sted: 59.91192, 10.78068
-- google: ChIJPTNjVwBvQUYRgSQPDiLTvKE
-- nettside: https://kampenvinyl.com/
-Kampen
-Platebutikk. Nannestadgata 10C, inngang fra Bøgata.
-- en: Kampen
-Record shop. Nannestadgata 10C, entrance from Bøgata.
 
 ### Kollekted By
 - sted: 59.92048, 10.76135
