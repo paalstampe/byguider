@@ -1078,11 +1078,11 @@ Holland Park
 Farmers market lørdag
 - en: Farmers’ market on Saturdays
 
-### Chiswick High Road / Turnham Green
+### Turnham Green
 - sted: 51.4920, -0.2663
 - google: ChIJ38-tk2wOdkgRGDMU_F4xZCQ
 - utenfor: ja
-Devonshire Road
+- gater: Chiswick High Road, Devonshire Road
 
 ### Little Venice
 - sted: 51.5233, -0.1838
@@ -1243,3 +1243,16 @@ Start ved Norland Square og gå Holland Park Avenue østover til Clarendon Road.
 - Up Kensington Park Road to Blenheim Crescent, then along Blenheim Crescent across Portobello Road and into Talbot Road.
 - Down Colville Gardens and Colville Road to Westbourne Grove.
 - Westbourne Grove east to Pembridge Villas.
+
+### Chiswick → Hammersmith Bridge
+- utenfor: ja
+- lengde: 3,0 km
+- varighet: ca. 40 min gange (uten stopp)
+Fra Chiswick High Road ned Devonshire Road, over Hogarth Roundabout og bortover Burlington Lane til Powell's Walk.
+- Powell's Walk forbi den gamle kirkegården til St Nicholas Church og Chiswick Mall.
+- Chiswick Mall langs Themsen, videre Hammersmith Terrace, Upper Mall og Lower Mall til Hammersmith Bridge.
+
+- en: From Chiswick High Road down Devonshire Road, across Hogarth Roundabout and along Burlington Lane to Powell's Walk.
+- Powell's Walk past the old churchyard to St Nicholas Church and Chiswick Mall.
+- Chiswick Mall along the Thames, then Hammersmith Terrace, Upper Mall and Lower Mall to Hammersmith Bridge.
+
