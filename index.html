@@ -30,7 +30,7 @@
   <section class="offline-boks" id="offline-boks" hidden>
     <button type="button" class="chip" id="lagre-alle" data-t="lagreAlle"></button>
     <p class="offline-merknad" id="offline-merknad" aria-live="polite"></p>
-    <p class="offline-lager" id="offline-lager" hidden><span id="offline-mengde"></span> · <button type="button" class="lenkeknapp" id="slett-lagret" data-t="slett">Slett</button></p>
+    <p class="offline-lager" id="offline-lager" hidden><span data-t="lagretHer"></span> · <button type="button" class="lenkeknapp" id="slett-lagret" data-t="slett">Slett</button></p>
   </section>
 </main>
 
@@ -54,9 +54,9 @@ const TEKST = {
         ferdig: 'Alle byene er tilgjengelige offline.',
         delvis: 'Noe ble ikke lagret. Prøv igjen.',
         kreverNett: 'Krever nett.',
-        lagretMengde: mb => 'Lagret på denne enheten: ' + mb,
+        lagretHer: 'Byguidene er lagret på denne enheten',
         slett: 'Slett',
-        slettSporsmal: 'Slette alt som er lagret for bruk offline på stam.pe, også reiseplanleggingen? Sidene lastes ned igjen neste gang du åpner dem med nett.',
+        slettSporsmal: 'Slette byguidene fra denne enheten? Kartene lastes ned igjen neste gang du åpner en by med nett.',
         klar: dato => 'Tilgjengelig offline · ' + dato },
   en: { duErHer: 'You are here', sidetittel: 'Pål and Vibeke’s city guides', byguider: 'City guides', tittel: 'Pål and Vibeke’s cities', kicker: 'Opinionated city guides',
         ingress: 'The cities as we use them.', byer: 'Cities', sprak: 'Language',
@@ -66,9 +66,9 @@ const TEKST = {
         ferdig: 'All cities are available offline.',
         delvis: 'Something was not saved. Try again.',
         kreverNett: 'Requires a connection.',
-        lagretMengde: mb => 'Stored on this device: ' + mb,
+        lagretHer: 'The city guides are stored on this device',
         slett: 'Delete',
-        slettSporsmal: 'Delete everything saved for offline use on stam.pe, including the travel planner? The pages will be downloaded again next time you open them online.',
+        slettSporsmal: 'Delete the city guides from this device? The maps will be downloaded again next time you open a city online.',
         klar: dato => 'Available offline · ' + dato }
 };
 
@@ -185,33 +185,26 @@ async function lagreAlle() {
   })) });
 }
 
-/* Plassbruk og Slett, som på stam.pe-forsiden: hele stam.pe deler ett lager (forsiden, byguidene og
-   reiseplanleggingen), så tallet gjelder alt, og Slett tømmer alt. Linja vises fra 1 MB. */
+/* Slett: bare byguidene. stam.pe, byguidene og reiseplanleggingen deler lager, men her slettes bare
+   byguidenes lagre (byguider-*, se sw.js), service workeren for denne mappa og datoene for «Tilgjengelig
+   offline». Plassbruk vises ikke: nettleseren oppgir bare tallet for hele stam.pe. Linja vises når
+   kartene er lagret. «Slett alt» finnes på stam.pe-forsiden. */
 async function visLagring() {
   const linje = document.getElementById('offline-lager');
-  if (lagrer || !navigator.storage || !navigator.storage.estimate) return;
-  let bruk = 0;
-  try { bruk = (await navigator.storage.estimate()).usage || 0; } catch (e) {}
-  const mb = bruk / 1e6;
-  linje.hidden = mb < 1;
-  if (linje.hidden) return;
-  const tall = mb.toLocaleString(sprak === 'en' ? 'en-GB' : 'nb-NO', { maximumFractionDigits: mb < 10 ? 1 : 0 });
-  document.getElementById('offline-mengde').textContent = TEKST[sprak].lagretMengde(tall + ' MB');
+  if (lagrer || !('caches' in window)) return;
+  try { linje.hidden = !(await caches.keys()).some(n => n.startsWith('byguider-kart-')); } catch (e) { linje.hidden = true; }
 }
 
-/* Tømmer alle lagre og avregistrerer alle service workers på stam.pe, og fjerner datoene for
-   «Tilgjengelig offline». Siden lastes på nytt og registrerer sw.js igjen. */
 async function slettLagret() {
   if (lagrer || !confirm(TEKST[sprak].slettSporsmal)) return;
+  const her = new URL('./', location.href).href;
   try {
     const regs = await navigator.serviceWorker.getRegistrations();
-    await Promise.all(regs.map(r => r.unregister()));
-    await Promise.all((await caches.keys()).map(n => caches.delete(n)));
+    await Promise.all(regs.filter(r => r.scope === her).map(r => r.unregister()));
+    await Promise.all((await caches.keys()).filter(n => n.startsWith('byguider-')).map(n => caches.delete(n)));
   } catch (e) {}
   try {
-    Object.keys(localStorage)
-      .filter(k => /^(reiseplanlegging-offline:|byguider-offline:|stampe-byguider-byer$)/.test(k))
-      .forEach(k => localStorage.removeItem(k));
+    Object.keys(localStorage).filter(k => k.startsWith('byguider-offline:')).forEach(k => localStorage.removeItem(k));
   } catch (e) {}
   location.reload();
 }
