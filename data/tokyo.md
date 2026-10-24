@@ -238,9 +238,9 @@ Den brede alleen fra Harajuku mot Aoyama, med arkitekttegnede flaggskipsbutikker
 ### Aoyama ★
 - sted: 35.66948, 139.71922
 - google: ChIJuUZO652MGGARutD_e5u-0Qk
-- gater: Miyuki-dori, Kotto-dori
-Fint, moderne og ungdommelig, i forlengelsen av Omotesando. Motehus, gallerier og kaféer i sidegatene.
-- en: Smart, modern and youthful, continuing on from Omotesando. Fashion houses, galleries and cafés in the side streets.
+- gater: Miyuki-dori, Kotto-dori, Minami-Aoyama 5
+Fint, moderne og ungdommelig, i forlengelsen av Omotesando. Motehus, gallerier og kaféer i smågatene mellom Miyuki-dori og Kotto-dori.
+- en: Smart, modern and youthful, continuing on from Omotesando. Fashion houses, galleries and cafés in the backstreets between Miyuki-dori and Kotto-dori.
 
 ### Harajuku
 - sted: 35.66997, 139.70901
