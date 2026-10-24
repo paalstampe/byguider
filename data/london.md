@@ -1480,13 +1480,13 @@ Start øverst i Kinnerton Street og gå ned til Motcomb Street.
 
 ### Hyde Park langs vannet
 - navn-en: Hyde Park along the water
-- lengde: 1,9 km
+- lengde: 2,0 km
 - varighet: ca. 25 min gange (uten stopp)
 Start ved Queen Anne's Alcove øverst ved Long Water i Kensington Gardens, og gå ned til The Arch av Henry Moore.
-- Videre langs Long Water og Serpentine hele veien til South Carriage Drive.
+- Videre langs Long Water til Serpentine Bridge, og Serpentine Road langs Serpentine helt til enden ved Hyde Park Corner.
 
 - en: Start at Queen Anne's Alcove at the top of the Long Water in Kensington Gardens, and walk down to Henry Moore's The Arch.
-- Carry on along the Long Water and the Serpentine all the way to South Carriage Drive.
+- Carry on along the Long Water to the Serpentine Bridge, then follow Serpentine Road along the Serpentine all the way to its end by Hyde Park Corner.
 
 # North
 
