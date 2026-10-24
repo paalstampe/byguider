@@ -62,7 +62,7 @@ East Bloomsbury
 
 ### Marylebone Village ★
 - sted: 51.5207, -0.1519
-- gater: Marylebone High Street, Chiltern Street
+- gater: Marylebone High Street, Chiltern Street, Marylebone Lane
 - google: ChIJ8fPDaNIadkgRLjwLg3Njj9g
 Marylebone
 
