@@ -3,6 +3,8 @@ tittel: Pål og Vibekes London
 undertittel: Nabolag, gåturer og restauranter verdt en omvei.
 tittel-en: Pål and Vibeke’s London
 undertittel-en: Neighbourhoods, walks and restaurants worth a detour.
+kicker: En høyst subjektiv guide
+kicker-en: An opinionated guide
 senter: 51.5105, -0.1235
 zoom: 11
 senter-mobil: 51.5230, -0.1060
@@ -39,6 +41,7 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
   - en: English note …          engelsk notat, sist i oppføringen. Fri tekst etter denne
                                 linjen hører også til det engelske notatet.
   tittel-en: / undertittel-en:  i frontmatter øverst: engelsk tittel og undertittel.
+  kicker: / kicker-en:         i frontmatter: linja i kursiv under tittelen («En høyst subjektiv guide»).
 
 Områdeskisser, gater og gåturer tegnes i london-geometri.geojson (f.eks. i geojson.io)
 og kobles hit på navn: type "område", "gate" eller "rute".
