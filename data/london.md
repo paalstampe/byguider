@@ -1227,6 +1227,18 @@ Farmers' market in the playground of Salusbury Primary School, Salusbury Road. S
 ## Gåturer
 
 ### Holland Park → Westbourne Grove ★
-Start på Holland Park-stasjonen og gå Holland Park Avenue og så Clarendon Road eller Lansdowne Road til Clarendon Cross. Så Elgin Crescent (via evt. gågate-strekket i Kensington Park Road) til Portobello Road, og så inn Westbourne Grove.
+- lengde: 2,6 km
+- varighet: ca. 35 min gange (uten stopp)
+Start ved Norland Square og gå Holland Park Avenue østover til Clarendon Road.
+- Clarendon Road opp til Clarendon Cross, ned Hippodrome Place og opp igjen til Clarendon Road.
+- Videre opp Clarendon Road og inn Elgin Crescent til Kensington Park Road.
+- Kensington Park Road opp til Blenheim Crescent, og Blenheim Crescent bortover over Portobello Road og inn i Talbot Road.
+- Ned Colville Gardens og Colville Road til Westbourne Grove.
+- Westbourne Grove østover til Pembridge Villas.
 
-- en: Start at Holland Park station and walk along Holland Park Avenue, then Clarendon Road or Lansdowne Road to Clarendon Cross. Then Elgin Crescent (possibly via the pedestrianised stretch of Kensington Park Road) to Portobello Road, and on into Westbourne Grove.
+- en: Start at Norland Square and walk east along Holland Park Avenue to Clarendon Road.
+- Up Clarendon Road to Clarendon Cross, down Hippodrome Place and back up to Clarendon Road.
+- Carry on up Clarendon Road and along Elgin Crescent to Kensington Park Road.
+- Up Kensington Park Road to Blenheim Crescent, then along Blenheim Crescent across Portobello Road and into Talbot Road.
+- Down Colville Gardens and Colville Road to Westbourne Grove.
+- Westbourne Grove east to Pembridge Villas.
