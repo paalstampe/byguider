@@ -81,6 +81,7 @@ Belgravia
 ### Mount Street Neighbourhood ★
 - sted: 51.5097, -0.1508
 - google: ChIJTXRT3i0FdkgR91IToAbIt44
+- gater: Mount Street, South Audley Street
 Mayfair
 
 Butikker, restauranter og gallerier: [mountstreetneighbourhood.com](https://www.mountstreetneighbourhood.com)
@@ -1359,6 +1360,54 @@ Paraplyer, Lamb's Conduit Street 28.
 
 Umbrellas, 28 Lamb's Conduit Street.
 
+### Hedonism Wines
+- sted: 51.51075, -0.14761
+- google: ChIJDxnC6SwFdkgRTYAlUwkFFU4
+- nettside: https://hedonism.co.uk/
+Mayfair
+
+Vinbutikk, Davies Street 3–7.
+
+- en: Mayfair
+
+Wine shop, 3–7 Davies Street.
+
+### Farm Shop
+- sted: 51.50885, -0.15169
+- google: ChIJnerq2r0FdkgRyPiR0o9vmiU
+- nettside: https://dursladefarmshop.co.uk/
+Mayfair
+
+Gårdsbutikk og deli fra Durslade Farm i Somerset, South Audley Street 64.
+
+- en: Mayfair
+
+Farm shop and deli from Durslade Farm in Somerset, 64 South Audley Street.
+
+### Berry Bros. & Rudd
+- sted: 51.50549, -0.13775
+- google: ChIJlx1dcdcEdkgREfYyD5dQbac
+- nettside: https://www.bbr.com/
+St James's
+
+Vinhandel siden 1698, Pall Mall 63.
+
+- en: St James's
+
+Wine merchant since 1698, 63 Pall Mall.
+
+### D. R. Harris & Co.
+- sted: 51.50704, -0.13956
+- google: ChIJAfgxy9cEdkgRqpEvk2fuQVM
+- nettside: https://www.drharris.co.uk/
+St James's
+
+Apotek og parfymeri siden 1790, St James's Street 29.
+
+- en: St James's
+
+Chemist and perfumer since 1790, 29 St James's Street.
+
 ## Verdt en omvei
 
 ### Barbican
@@ -1372,6 +1421,17 @@ Brutalistisk boligområde og kultursenter med konserthall, teater, kino, galleri
 - en: City
 
 Brutalist housing estate and arts centre with a concert hall, theatre, cinema, gallery and conservatory.
+
+### Mount Street Gardens
+- sted: 51.50913, -0.15070
+- google: ChIJW8oafC4FdkgRKzdyh5Xkdqg
+Mayfair
+
+Skjult hage mellom Mount Street, South Audley Street og Farm Street, med benker under store plataner.
+
+- en: Mayfair
+
+Hidden garden between Mount Street, South Audley Street and Farm Street, with benches under tall plane trees.
 
 ## Gåturer
 
