@@ -18,7 +18,8 @@ Sist oppdatert: 24. oktober 2026.
   London: 18 av 43 tegnet om, resten fulgte allerede gatene. New York: alle 10. Nice: begge.
   `kilde` i hver feature sier hvor omrisset kommer fra. `arkiv/` er fjernet fra repoet.
 - 24.10. vedlikeholdsøkt: 90 nettsider oppgradert til https, ønskeliste-kommentaren i byfilene rettet,
-  alle miniatyrer (byguider og stam.pe) tatt på nytt i lys og mørk.
+  alle miniatyrer (byguider og stam.pe) tatt på nytt i lys og mørk. Oslo-omrissene er gjort presise
+  (grensegater sporet i OSM fra kryss til kryss); nå har alle byer `kilde` på hvert omriss.
 - Ingen åpne grener utenom `main`.
 
 ## Neste steg
@@ -32,11 +33,11 @@ Sist oppdatert: 24. oktober 2026.
 
 ## Åpne spørsmål
 
-- Oslo-omrissene (7 nabolag) er fortsatt skisser uten `kilde` — de var ikke med i presisjonsrunden 18.10.
 - 42 nabolag mangler notat (London 27, New York 10, Oslo 5). Første linje i notatet vises i lista.
 - Nice bruker typen («Lunsj», «Moderne fransk») som første linje, ikke området som de andre byene. Nice har heller ingen soner.
 - Oh Dear (Oslo): nettsiden er død (Wix-feil). Stengt?
 - Harper (Nice) mangler Google Place ID. Brixton Village (nabolag) bruker Place ID-en til Brixton Village Market.
+- Hrímnir – Fredensborg ligger øst for Maridalsveien (ved Vulkan), utenfor Fredensborg-omrisset.
 - Undertittel «An opinionated guide» / norsk motstykke — ikke bestemt.
 
 ## Beslutningslogg
@@ -55,3 +56,8 @@ Sist oppdatert: 24. oktober 2026.
 - 2026-10-18: Nabolagsomriss skal være presise i alle byer: offentlige grenser først, ellers grensegater sporet i OSM, med `kilde` i hver feature. Fremgangsmåten står i CLAUDE.md.
 - 2026-10-18: West Village i New York følger byplankontorets NTA-grense, selv om den er smalere i øst enn den gamle skissen (som gikk til 6th Ave).
 - 2026-10-18: `arkiv/` med den gamle London-prototypen er fjernet. Pål flyttet filen ut av repoet.
+- 2026-10-24: Oslo-omrissene følger grensegatene i OSM. Oslo har ingen offentlige nabolagsgrenser (bydelene er for store),
+  så skissenes grensegater og Wikipedia-definisjonene ble brukt. St. Hanshaugen slutter nå ved Bergstien og Stensberggata
+  (uten Fougstads gate-kilen og Pilestredet park-lobben), og kjernen har Hallings gate inni. Gamlebyen går til
+  Tøyenbekken/Klosterenga i nord, og kjernen ligger mellom bekken og Hovedbanen. Fredensborg tar med nordsiden
+  av Fredensborgveien. Grünerløkka og SoSoPa fulgte allerede gatene og fikk bare `kilde`.
