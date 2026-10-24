@@ -64,7 +64,13 @@ East Bloomsbury
 - sted: 51.5207, -0.1519
 - gater: Marylebone High Street, Chiltern Street
 - google: ChIJ8fPDaNIadkgRLjwLg3Njj9g
-- nettside: https://www.marylebonevillage.com
+Marylebone
+
+Butikker, restauranter og kaféer: [marylebonevillage.com](https://www.marylebonevillage.com)
+
+- en: Marylebone
+
+Shops, restaurants and cafés: [marylebonevillage.com](https://www.marylebonevillage.com)
 
 ### Motcomb Street ★
 - sted: 51.4995, -0.1564
@@ -897,18 +903,6 @@ Japansk, Walton Street.
 - en: Knightsbridge
 
 Japanese, Walton Street.
-
-### Vatavaran
-- sted: 51.49772, -0.16478
-- google: ChIJMSY-ZnIFdkgR9Gl8FyLYYjk
-- status: onskeliste
-Knightsbridge
-
-Indisk, Beauchamp Place 14–15.
-
-- en: Knightsbridge
-
-Indian, 14–15 Beauchamp Place.
 
 ### Kioku by Endo
 - sted: 51.50537, -0.12607
