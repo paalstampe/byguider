@@ -11,7 +11,7 @@
 <meta name="robots" content="noindex, nofollow, noarchive">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body class="forside">
@@ -23,6 +23,7 @@
       <span class="sprakvalg" role="group" data-t-aria="sprak"><button type="button" data-sprak="no" lang="no">NO</button><span class="smule-skille">/</span><button type="button" data-sprak="en" lang="en">EN</button></span>
     </nav>
     <h1 class="tittel" data-t="tittel">Pål og Vibekes byer</h1>
+    <p class="kicker" data-t="kicker">Høyst subjektive byguider</p>
     <p class="ingress" data-t="ingress">Byene slik vi bruker dem.</p>
   </header>
   <nav class="by-liste" id="by-liste" data-t-aria="byer"></nav>
@@ -44,7 +45,7 @@ if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catc
    i byer.json. I mørk modus bilder/<id>-mork.webp; mangler den, brukes den lyse. By med status «kommer» eller uten bilde får en tom ramme i samme størrelse. */
 const NOKKEL = 'byguider-sprak';
 const TEKST = {
-  no: { duErHer: 'Du er her', sidetittel: 'Pål og Vibekes byguider', byguider: 'Byguider', tittel: 'Pål og Vibekes byer',
+  no: { duErHer: 'Du er her', sidetittel: 'Pål og Vibekes byguider', byguider: 'Byguider', tittel: 'Pål og Vibekes byer', kicker: 'Høyst subjektive byguider',
         ingress: 'Byene slik vi bruker dem.', byer: 'Byer', sprak: 'Språk',
         lagreAlle: 'Lagre alle byene for bruk offline',
         lagreMerknad: 'Henter kartene for alle byene, ca. 100 MB i alt. Bruk wifi.',
@@ -53,7 +54,7 @@ const TEKST = {
         delvis: 'Noe ble ikke lagret. Prøv igjen.',
         kreverNett: 'Krever nett.',
         klar: dato => 'Tilgjengelig offline · ' + dato },
-  en: { duErHer: 'You are here', sidetittel: 'Pål and Vibeke’s city guides', byguider: 'City guides', tittel: 'Pål and Vibeke’s cities',
+  en: { duErHer: 'You are here', sidetittel: 'Pål and Vibeke’s city guides', byguider: 'City guides', tittel: 'Pål and Vibeke’s cities', kicker: 'Opinionated city guides',
         ingress: 'The cities as we use them.', byer: 'Cities', sprak: 'Language',
         lagreAlle: 'Save all cities for offline use',
         lagreMerknad: 'Downloads the maps for all cities, about 100 MB in total. Use Wi-Fi.',
