@@ -541,6 +541,17 @@ Herreklær, Savile Row 9.
 
 Menswear, 9 Savile Row.
 
+### Segun Adelaja
+- sted: 51.50853, -0.13756
+- google: ChIJSa1ljNYEdkgRcBNFVR1Njjs
+St James's
+
+Herreklær, Princes Arcade 15.
+
+- en: St James's
+
+Menswear, 15 Princes Arcade.
+
 ## Verdt en omvei
 
 ### Barbican
