@@ -7,7 +7,7 @@ Oppdateres ved slutten av hver økt (`/avslutt`).
 
 Sist oppdatert: 24. oktober 2026.
 
-- Live på https://stam.pe/byguider/ med fem byer: London (215 oppføringer, hvorav 94 på ønskelista), Oslo (128, 22 på ønskelista), New York (77), Nice (67), Tokyo (54). Bangkok kommer.
+- Live på https://stam.pe/byguider/ med fem byer: London (215 oppføringer, hvorav 94 på ønskelista), Oslo (128, 22 på ønskelista), New York (77), Nice (67), Tokyo (53). Bangkok kommer.
 - Appen er i hovedsak ferdig: MapLibre med papirpalett og mørk modus, nabolag med omriss, kjerne og gater,
   flyttbar infoboks, gåturer i infoboksen, ønskeliste for alle, norsk og engelsk.
 - Arbeidet nå er data: nye steder, favoritter, beskrivelser og nabolagsomriss. 18.10. fikk Oslo
@@ -28,6 +28,9 @@ Sist oppdatert: 24. oktober 2026.
   Kjerner i blant annet Tomigaya og Yanaka følger gatene. Gatene kommer fra OSM, blant annet Yanaka-firkanten
   (Yanaka Ginza via Yūyake Dandan, Gotenzaka, Hatsune-no-michi, Sansakizaka, Yomise-dori), Cat Street,
   Udagawa-promenaden og smågatene i Minami-Aoyama 5. Miniatyrer i lys og mørk.
+  Senere samme kveld: Keyakizaka og hotellet Park Hyatt fjernet, Marunouchi og Yurakucho er favoritter.
+- 24.10. også: byguide-forsiden har «Byguidene er lagret på denne enheten · Slett» ved «Lagre alle byene»
+  (PR #59 og #60). Slett gjelder bare byguidene; «Slett alt» ligger på stam.pe-forsiden.
 - Ingen åpne grener utenom `main`.
 
 ## Neste steg
@@ -35,6 +38,8 @@ Sist oppdatert: 24. oktober 2026.
 - Fyll på data etter hvert som Pål kommer med steder og navneendringer, i alle byer.
 - Tokyo: flere notater er bare én linje («Sushi.», «Bar.», «Moderne vietnamesisk.»). Fyll på når Pål har tekst.
   Bar Penguin, Apollo Bar, Kihara, Ăn Đi og Kosho SamenoHa mangler nettside.
+- stam.pe-forsiden (repo `paalstampe.github.io`) beskriver byguidene som «London, Nice, Oslo og New York». Tokyo mangler.
+- Slett på byguide-forsiden er testet i Chromium, ikke i Safari på Mac. Pål sjekker der.
 - Nye nabolag trenger alltid et presist omriss i `data/<by>-geometri.geojson`; fremgangsmåten står i CLAUDE.md, Data.
 - Mulig etterarbeid: de 25 London-omrissene som ble beholdt (bl.a. Marylebone, Mayfair, Belgravia, Richmond, Kew Green)
   kan sjekkes mot conservation areas på samme måte hvis Pål ser noe som ikke stemmer.
@@ -74,3 +79,4 @@ Sist oppdatert: 24. oktober 2026.
 - 2026-10-24: «Meguro» i Tokyo er lagt inn som Nakameguro (hipsterområdet langs Meguro River). Yurakucho er eget nabolag ved siden av Ginza.
 - 2026-10-24: Tomigaya tar med Kamiyama-chō, slik at gatene ned mot Shibuya ligger inni. Kjernen er kilen der butikkene og kaféene ligger.
 - 2026-10-24: Gater vises bare der de er verdt å gå. Inokashira-dori (Tomigaya) og Keyakizaka (Roppongi) ble fjernet fordi de er trafikkerte.
+- 2026-10-24: Offline-lagring tilbys både på stam.pe («Lagre alt») og på byguide-forsiden («Lagre alle byene»), hver med sin Slett. Byguide-forsiden kan være egen hjemskjerm-app med eget lager på iPhone, og delte lenker går dit. Slett der sletter bare byguidene og viser ikke MB, siden nettleseren bare oppgir tallet for hele stam.pe.

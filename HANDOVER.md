@@ -290,6 +290,9 @@ git pusher med samme innlogging. Claude kan dermed pushe, åpne PR og flette lok
 - Meldingen sendes når en by åpnes med nett (`forhandslastOffline()` i `app.js`, med det siden har lastet
   som `adresser`), og fra «Lagre alle byene for bruk offline» på forsiden (alle byene, én om gangen;
   `KARTSTIL` og MapLibre-adressene står der også — hold dem like `app.js`).
+- Slett: på byguide-forsiden står «Byguidene er lagret på denne enheten · Slett» når kartlageret finnes. Den sletter
+  bare lagrene `byguider-*`, service workeren for `/byguider/` og datoene `byguider-offline:*`.
+  «Slett alt» (alle lagre på stam.pe, med plassbruk i MB) ligger på stam.pe-forsiden.
 - Status: ved telleren i byen («Lagrer for bruk offline … 45 %», så «Tilgjengelig offline · 13. okt») og
   under hver by på forsiden. Datoen huskes i localStorage, nøkkel `byguider-offline:<sti><by>`.
 - Størrelse 13.10.2026: ca. 105 MB for alle byene, London 75 MB — oppdater `lagreMerknad` i `index.html`
