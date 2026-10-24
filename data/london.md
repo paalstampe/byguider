@@ -100,10 +100,24 @@ Tyburnia
 - sted: 51.5258, -0.1093
 - google: ChIJ03enhkUbdkgRCm2WVIqordU
 - gater: Exmouth Market
+Clerkenwell
+
+Kort gate med restauranter, kaféer og små butikker.
+
+- en: Clerkenwell
+
+Short street with restaurants, cafés and small shops.
 
 ### Shepherd Market
 - sted: 51.5066, -0.1469
 - google: ChIJpfHK0igFdkgR66lvlSSEvWM
+Mayfair
+
+Liten enklave fra 1700-tallet med smale smug, puber og små restauranter.
+
+- en: Mayfair
+
+Small 18th-century enclave of narrow lanes, pubs and small restaurants.
 
 ## Restauranter
 
@@ -1497,10 +1511,24 @@ Start ved Queen Anne's Alcove øverst ved Long Water i Kensington Gardens, og g�
 - google: ChIJdYATLGMcdkgReU8cDcdqaU0
 - gater: Stoke Newington Church Street
 - utenfor: ja
+Stoke Newington
+
+Lang gate med uavhengige butikker, kaféer og restauranter, ned mot Clissold Park.
+
+- en: Stoke Newington
+
+Long street of independent shops, cafés and restaurants, running down to Clissold Park.
 
 ### Upper Street, Islington
 - sted: 51.5383, -0.1024
 - google: ChIJw9C6S2YbdkgRbHBgllY-qmg
+Islington
+
+Hovedgaten i Islington, fra Angel til Highbury Corner, med restauranter, barer og butikker.
+
+- en: Islington
+
+Islington’s high street, from Angel to Highbury Corner, with restaurants, bars and shops.
 
 ### Angel
 - sted: 51.5347, -0.1040
@@ -1512,34 +1540,46 @@ Camden Passage (antikk) og Upper Street opp til Islington Green.
 - sted: 51.5796, -0.1234
 - google: ChIJiTYKy8AbdkgRM_8p51pSGqQ
 - utenfor: ja
+Landsbyaktig sentrum rundt klokketårnet, med kaféer, butikker og viktorianske hus.
+- en: Village-like centre around the clock tower, with cafés, shops and Victorian houses.
 
 ### Hampstead Village
 - sted: 51.5555, -0.1771
 - google: ChIJSat0DIgadkgRZO1szWVa-VQ
 - utenfor: ja
+Bratte gater og smug med butikker og puber, et kort stykke fra Hampstead Heath.
+- en: Steep streets and alleys with shops and pubs, a short walk from Hampstead Heath.
 
 ### Highgate Village
 - sted: 51.5714, -0.1500
 - google: ChIJtSrBgk4adkgRLuoo2Ib8WG4
 - gater: Highgate High Street
 - utenfor: ja
+Landsby på toppen av Highgate Hill, med georgianske hus og puber, nær Highgate Cemetery og Hampstead Heath.
+- en: Village at the top of Highgate Hill, with Georgian houses and pubs, close to Highgate Cemetery and Hampstead Heath.
 
 ### Muswell Hill
 - sted: 51.5914, -0.1427
 - google: ChIJ7WhD4iwadkgRTwEDFT2KkvE
 - utenfor: ja
 - status: onskeliste
+Edwardiansk forstad på en høyde, med kaféer og butikker langs Broadway og Alexandra Palace like ved.
+- en: Edwardian suburb on a hill, with cafés and shops along the Broadway and Alexandra Palace close by.
 
 ### Primrose Hill
 - sted: 51.5413, -0.1533
 - google: ChIJ6V7jzO4adkgRmRjI9lMi07M
 - gater: Regent's Park Road
+Rolig strøk ved parken med samme navn, med kaféer og butikker i Regent’s Park Road og utsikt over sentrum fra toppen av bakken.
+- en: Quiet area by the park of the same name, with cafés and shops on Regent’s Park Road and a view over central London from the top of the hill.
 
 ### Walthamstow Village
 - sted: 51.5834, -0.0176
 - google: ChIJ0ckah1Gn2EcRB3mcysWWvGM
 - utenfor: ja
 - status: onskeliste
+Den gamle landsbykjernen i Walthamstow, rundt Orford Road og St Mary’s Church, med puber og restauranter.
+- en: The old village centre of Walthamstow, around Orford Road and St Mary’s Church, with pubs and restaurants.
 
 ## Restauranter
 
@@ -1639,39 +1679,68 @@ Peckham
 - sted: 51.4625, -0.1122
 - google: ChIJx9r5NWUEdkgRJY0mTciVn-k
 - gater: Atlantic Road, Electric Avenue
+Brixton
+
+Overbygde arkader fra 1930-tallet fulle av små restauranter, og markedet langs Electric Avenue og Atlantic Road.
+
+- en: Brixton
+
+1930s covered arcades full of small restaurants, and the market along Electric Avenue and Atlantic Road.
 
 ### Crystal Palace Triangle
 - sted: 51.4195, -0.0839
 - google: ChIJ79E0xE8BdkgRh0mDf0w1zco
 - gater: Westow Hill, Westow Street, Church Road
 - utenfor: ja
+Crystal Palace
+
+Trekanten mellom Westow Hill, Westow Street og Church Road, med vintagebutikker, kaféer og restauranter, like ved Crystal Palace Park.
+
+- en: Crystal Palace
+
+The triangle formed by Westow Hill, Westow Street and Church Road, with vintage shops, cafés and restaurants, next to Crystal Palace Park.
 
 ### Dulwich Village
 - sted: 51.4506, -0.0855
 - google: ChIJdXaCE_MDdkgRNbsLxUq87W8
 - utenfor: ja
 - status: onskeliste
+Grønn landsby med georgianske hus, Dulwich Picture Gallery og Dulwich Park.
+- en: Leafy village with Georgian houses, Dulwich Picture Gallery and Dulwich Park.
 
 ### East Dulwich
 - sted: 51.4617, -0.0800
 - google: ChIJd4CybJADdkgROOjt-aigvws
 - gater: Lordship Lane, North Cross Road
+Restauranter, delikatesser og butikker langs Lordship Lane, og lørdagsmarked i North Cross Road.
+- en: Restaurants, delis and shops along Lordship Lane, and a Saturday market on North Cross Road.
 
 ### Herne Hill
 - sted: 51.4545, -0.0967
 - google: ChIJ1QO9jYcDdkgRHAlfXDX_ugA
 - utenfor: ja
 - status: onskeliste
+Landsbyaktig strøk ved Brockwell Park, med søndagsmarked ved stasjonen.
+- en: Village-like area by Brockwell Park, with a Sunday market by the station.
 
 ### Northcote Road
 - sted: 51.4572, -0.1656
 - google: ChIJreaLCpYFdkgRlfk2KgbW-Lg
 - gater: Northcote Road
+Battersea
+
+Gaten mellom Clapham Common og Wandsworth Common, med restauranter, butikker og et lite gatemarked.
+
+- en: Battersea
+
+The street between Clapham Common and Wandsworth Common, with restaurants, shops and a small street market.
 
 ### Nunhead
 - sted: 51.4655, -0.0587
 - google: ChIJDWdRh6UDdkgRIZme5IYIHaE
 - status: onskeliste
+Rolig viktoriansk strøk med en liten landsbykjerne og Nunhead Cemetery, en av Londons sju store viktorianske gravlunder.
+- en: Quiet Victorian area with a small village centre and Nunhead Cemetery, one of London’s Magnificent Seven Victorian cemeteries.
 
 ## Restauranter
 
@@ -1949,20 +2018,33 @@ Blomstermarked søndager
 - sted: 51.5418, -0.0602
 - google: ChIJH7vcjOYddkgRQAmHYvUaK-U
 - gater: Wilton Way
+Hackney
+
+Parken og gatene rundt, med Broadway Market og kaféene i Wilton Way.
+
+- en: Hackney
+
+The park and the streets around it, with Broadway Market and the cafés on Wilton Way.
 
 ### Shoreditch ★
 - sted: 51.5243, -0.0773
 - google: ChIJbUUvR7ocdkgRklxuM4jRB2U
 - gater: Redchurch Street, Brick Lane
+Butikker i Redchurch Street, og Brick Lane med vintage, curry og bagels.
+- en: Shops on Redchurch Street, and Brick Lane with vintage, curry and bagels.
 
 ### Hackney Wick
 - sted: 51.5446, -0.0257
 - google: ChIJxzjMzQwddkgR_xrh8DI6Ao8
+Tidligere industriområde ved kanalen og Olympiaparken, med atelierer, bryggerier og barer langs vannet.
+- en: Former industrial area by the canal and the Olympic Park, with studios, breweries and bars along the water.
 
 ### Victoria Park Village
 - sted: 51.5383, -0.0438
 - google: ChIJVV7kax4ddkgRQHrksg4N0oY
 - gater: Lauriston Road
+Lauriston Road og gatene ved Victoria Park, med puber, kaféer og butikker.
+- en: Lauriston Road and the streets by Victoria Park, with pubs, cafés and shops.
 
 ## Restauranter
 
@@ -2187,6 +2269,13 @@ Wilton Way fra Royal Oak Road til Navarino Road, og Navarino Road ned til London
 - sted: 51.4907, -0.1660
 - google: ChIJFx4VGmsFdkgRxEiqdnQDTtg
 - gater: Elystan Street, Cale Street
+Chelsea
+
+Liten trekantet plass med Elystan Street og Cale Street rundt, med butikker, kaféer og restauranter.
+
+- en: Chelsea
+
+Small triangular green framed by Elystan Street and Cale Street, with shops, cafés and restaurants.
 
 ### Clarendon Cross ★
 - sted: 51.5104, -0.2102
@@ -2198,16 +2287,32 @@ Holland Park
 - sted: 51.5226, -0.2075
 - google: ChIJGSXeoBkQdkgRU50dAgixBfk
 - gater: Golborne Road, Portobello Road
+North Kensington
+
+Nordenden av Portobello Road, med marokkanske og portugisiske kaféer, loppemarked og Trellick Tower i enden av gaten.
+
+- en: North Kensington
+
+The northern end of Portobello Road, with Moroccan and Portuguese cafés, a flea market and Trellick Tower at the end of the street.
 
 ### Queen's Park ★
 - sted: 51.5369, -0.2041
 - google: ChIJX2jOw2wQdkgR0P335wB7pI4
 - gater: Salusbury Road, Lonsdale Road
+Kaféer, restauranter og butikker langs Salusbury Road, og parken med samme navn.
+- en: Cafés, restaurants and shops along Salusbury Road, and the park of the same name.
 
 ### Westbourne Grove ★
 - sted: 51.5152, -0.1939
 - google: ChIJw_N_hv0PdkgRpK05Y_aiFNA
 - gater: Westbourne Grove, Ledbury Road
+Notting Hill
+
+Butikker og restauranter langs Westbourne Grove og Ledbury Road, mellom Notting Hill og Bayswater.
+
+- en: Notting Hill
+
+Shops and restaurants along Westbourne Grove and Ledbury Road, between Notting Hill and Bayswater.
 
 ### Barnes Village
 - sted: 51.4738, -0.2492
@@ -2222,15 +2327,31 @@ Farmers market lørdag
 - google: ChIJ38-tk2wOdkgRGDMU_F4xZCQ
 - utenfor: ja
 - gater: Chiswick High Road, Devonshire Road
+Chiswick
+
+Restauranter og butikker langs Chiswick High Road og Devonshire Road, rundt Turnham Green.
+
+- en: Chiswick
+
+Restaurants and shops along Chiswick High Road and Devonshire Road, around Turnham Green.
 
 ### Little Venice
 - sted: 51.5233, -0.1838
 - google: ChIJMdwfuqYadkgRm3PVLSkYM5I
+Maida Vale
+
+Der Grand Union Canal og Regent’s Canal møtes, med husbåter, kanalpuber og båter til Camden.
+
+- en: Maida Vale
+
+Where the Grand Union Canal meets Regent’s Canal, with houseboats, canalside pubs and boats to Camden.
 
 ### Richmond
 - sted: 51.4673, -0.2995
 - google: ChIJ9aBQEyUMdkgRCZSWDFJ3LAw
 - utenfor: ja
+Elveby med Richmond Green, Richmond Park og Themsen. Utsikten fra Richmond Hill er vernet ved lov.
+- en: Riverside town with Richmond Green, Richmond Park and the Thames. The view from Richmond Hill is protected by law.
 
 ## Restauranter
 

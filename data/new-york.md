@@ -52,6 +52,8 @@ og kobles hit på navn: type "område", "gate" eller "rute".
 - sted: 40.77191, -73.96535
 - google: ChIJa49ICL9YwokRDaotFKkGh2E
 - gater: Madison Avenue
+Butikker og gallerier langs Madison Avenue, og museene langs Fifth Avenue og Central Park.
+- en: Shops and galleries along Madison Avenue, and the museums along Fifth Avenue and Central Park.
 
 ## Restauranter
 
@@ -342,29 +344,41 @@ Antiquarian bookshop since 1925, 116 East 59th Street.
 - sted: 40.72352, -73.99467
 - google: ChIJd9PLRY9ZwokRk9g2ewaGdEI
 - gater: Elizabeth Street, Mott Street, Mulberry Street
+Smale gater nord for Little Italy, med små butikker, kaféer og restauranter i Elizabeth, Mott og Mulberry Street.
+- en: Narrow streets north of Little Italy, with small shops, cafés and restaurants on Elizabeth, Mott and Mulberry Streets.
 
 ### SoHo ★
 - sted: 40.72519, -73.99970
 - google: ChIJ8-JRXoxZwokRGPiQ9Ek0L84
 - gater: Prince Street, Spring Street, Wooster Street, Greene Street, Mercer Street
+Støpejernsbygninger fra 1800-tallet, brosteinsgater og butikker i alle prisklasser.
+- en: 19th-century cast-iron buildings, cobbled streets and shops at every price point.
 
 ### West Village ★
 - sted: 40.73520, -74.00490
 - google: ChIJY1SflpRZwokRhLCM-FupOe8
 - gater: Bleecker Street, West 4th Street, Hudson Street
+Lave rekkehus, trær og gater som ikke følger rutenettet, med restauranter, barer og jazzklubber.
+- en: Low townhouses, trees and streets that ignore the grid, with restaurants, bars and jazz clubs.
 
 ### East Village
 - sted: 40.72897, -73.98888
 - google: ChIJRU7M53dZwokR7GgPQPM1qW8
+Tidligere arbeider- og innvandrerstrøk, i dag med små restauranter og barer, og St. Marks Place.
+- en: Former working-class and immigrant neighbourhood, now full of small restaurants and bars, with St. Marks Place.
 
 ### Lower East Side
 - sted: 40.72052, -73.98901
 - google: ChIJ64usFYBZwokRcGprpf5JuFk
 - gater: Orchard Street
+Gamle leiegårder og innvandrerhistorie (Tenement Museum), med butikker, barer og restauranter rundt Orchard Street.
+- en: Old tenements and immigrant history (the Tenement Museum), with shops, bars and restaurants around Orchard Street.
 
 ### Meatpacking District
 - sted: 40.74099, -74.00761
 - google: ChIJSWHWcMBZwokRnuiJh_NVI3A
+Tidligere slakteri- og kjøttpakkerkvarter, nå med Whitney Museum, sørenden av High Line og Little Island.
+- en: Former meatpacking district, now with the Whitney Museum, the southern end of the High Line and Little Island.
 
 ## Restauranter
 
@@ -877,16 +891,22 @@ Tip: Consider walking the other way, from DUMBO, with the Manhattan skyline ahea
 - sted: 40.68450, -73.99488
 - google: ChIJZd-PEVhawokR3JKplgUnNhY
 - gater: Smith Street, Court Street
+Brownstones og forhager, med restauranter, kaféer og butikker langs Smith Street og Court Street.
+- en: Brownstones and front gardens, with restaurants, cafés and shops along Smith Street and Court Street.
 
 ### Brooklyn Heights
 - sted: 40.69593, -73.99555
 - google: ChIJhbEG30dawokR7kJ8wEsjicg
 - gater: Brooklyn Heights Promenade
+New Yorks første historiske distrikt, med rolige gater og Promenaden med utsikt mot Manhattan.
+- en: New York’s first historic district, with quiet streets and the Promenade looking across to Manhattan.
 
 ### Williamsburg
 - sted: 40.71784, -73.95772
 - google: ChIJQSrBBv1bwokRbNfFHCnyeYI
 - gater: Bedford Avenue, Wythe Avenue, Berry Street, North 6th Street
+Tidligere industristrøk ved East River, nå med restauranter, barer, butikker og utsikt mot Manhattan.
+- en: Former industrial neighbourhood on the East River, now with restaurants, bars, shops and views of Manhattan.
 
 ## Restauranter
 

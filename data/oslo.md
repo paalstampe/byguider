@@ -49,16 +49,22 @@ og kobles hit på navn: type "område", "gate" eller "rute".
 - sted: 59.91941, 10.74798
 - google: ChIJWwUYjWRuQUYRpp0393vnWVg
 - gater: Fredensborgveien
+Rolig boligstrøk mellom Hammersborg og Vulkan, rundt Fredensborgveien, med Damstredet og Telthusbakken like ved.
+- en: Quiet residential area between Hammersborg and Vulkan, around Fredensborgveien, with Damstredet and Telthusbakken close by.
 
 ### St. Hanshaugen
 - sted: 59.92875, 10.74168
 - google: ChIJw1U8f99tQUYRScqXxtHUwD4
 - gater: Dalsbergstien, Waldemar Thranes gate, Hallings gate, Ullevålsveien
+Strøket rundt parken med samme navn, med kaféer og restauranter i Waldemar Thranes gate og Ullevålsveien.
+- en: The area around the park of the same name, with cafés and restaurants on Waldemar Thranes gate and Ullevålsveien.
 
 ### Grünerløkka
 - sted: 59.92161, 10.75741
 - google: ChIJo4fNyWhuQUYREmgqeefR9TY
 - gater: Markveien, Thorvald Meyers gate
+Tidligere arbeiderstrøk øst for Akerselva, med restauranter, barer og butikker rundt Markveien og Thorvald Meyers gate.
+- en: Former working-class area east of the Akerselva river, with restaurants, bars and shops around Markveien and Thorvald Meyers gate.
 
 ### SoSoPa
 - sted: 59.92114, 10.76342
@@ -71,12 +77,16 @@ South of Sofienbergparken – kvartalene mellom parken og Trondheimsveien.
 - sted: 59.91298, 10.77940
 - google: ChIJz0yNfVduQUYRZIJROqrdkC4
 - gater: Bøgata, Nannestadgata
+Småhus i tre fra 1800-tallet, smale gater og Kampen park. Thorbjørn Egner bodde her.
+- en: 19th-century wooden houses, narrow streets and Kampen park. Thorbjørn Egner lived here.
 
 ### Gamlebyen
 - sted: 59.90236, 10.77178
 - google: ChIJZ4zz7vBuQUYRW-gCu3C1Bq4
 - gater: Schweigaards gate
 - navn-en: Old Town
+Middelalderens Oslo, med ruinene i Middelalderparken og Schweigaards gate som hovedgate.
+- en: Medieval Oslo, with the ruins in Middelalderparken and Schweigaards gate as its main street.
 
 ## Restauranter
 
@@ -923,7 +933,6 @@ Rock bar. Karl Johans gate 45.
 ### Oh Dear
 - sted: 59.91039, 10.72657
 - google: ChIJyTvW615vQUYREbvfKgiFNP4
-- nettside: http://ohdearoslo.no/
 Aker Brygge
 Holmens gate 4.
 - en: Aker Brygge
