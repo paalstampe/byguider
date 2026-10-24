@@ -57,6 +57,7 @@ Lower Belgravia
 ### Lamb's Conduit Street ★
 - sted: 51.5216, -0.1183
 - google: ChIJjeX5PDYbdkgR-phoN6uICkI
+- gater: Lamb's Conduit Street
 East Bloomsbury
 
 ### Marylebone Village ★
@@ -362,6 +363,17 @@ Bakeri og kafé i en mews, Colonnade 35.
 
 Bakery and café in a mews, 35 Colonnade.
 
+### Conduit Coffee House
+- sted: 51.52217, -0.11878
+- google: ChIJh9zUOTYbdkgRroa8frb2nwE
+East Bloomsbury
+
+Kaffebar, Lamb's Conduit Street 61.
+
+- en: East Bloomsbury
+
+Coffee house, 61 Lamb's Conduit Street.
+
 ## Jazzklubber
 
 ### Ronnie Scott's ★
@@ -558,6 +570,18 @@ Herreklær, Princes Arcade 15.
 - en: St James's
 
 Menswear, 15 Princes Arcade.
+
+### London Undercover
+- sted: 51.52117, -0.11792
+- google: ChIJaa1MuA0bdkgR_hzgmxDO8gM
+- nettside: https://londonundercover.co.uk/
+East Bloomsbury
+
+Paraplyer, Lamb's Conduit Street 28.
+
+- en: East Bloomsbury
+
+Umbrellas, 28 Lamb's Conduit Street.
 
 ## Verdt en omvei
 
