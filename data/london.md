@@ -93,6 +93,7 @@ Shops, restaurants and galleries: [mountstreetneighbourhood.com](https://www.mou
 ### Connaught Village
 - sted: 51.5146, -0.1651
 - google: ChIJ4_o2BdUEdkgRTVk0JSwAVBE
+- gater: Connaught Street
 Tyburnia
 
 ### Exmouth Market
@@ -1122,6 +1123,30 @@ Kaffebar, Lamb's Conduit Street 61.
 - en: East Bloomsbury
 
 Coffee house, 61 Lamb's Conduit Street.
+
+### Boxcar Hyde Park
+- sted: 51.51456, -0.16692
+- google: ChIJ23e1eAAFdkgR6kSpyZHedZM
+- nettside: https://boxcar.co.uk/hyde-park/
+Connaught Village
+
+Bakeri og kafé, Kendal Street 30–31.
+
+- en: Connaught Village
+
+Bakery and café, 30–31 Kendal Street.
+
+### Boxcar Marylebone
+- sted: 51.51954, -0.16153
+- google: ChIJMT4QYUAbdkgR2yhMta8UbRQ
+- nettside: https://boxcar.co.uk/marylebone/
+Marylebone
+
+Bakeri og kafé, Wyndham Place 7A.
+
+- en: Marylebone
+
+Bakery and café, 7A Wyndham Place.
 
 ## Barer
 
