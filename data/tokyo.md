@@ -86,6 +86,18 @@ Utelivsområde, med noen moderne boligområder rundt Roppongi Hills og Tokyo Mid
 
 ## Restauranter
 
+### Sushi Sugawara ★
+- sted: 35.66816, 139.76073
+- google: ChIJEf3MNlaLGGAR4VoP4GjAfGk
+- nettside: https://www.sushi-sugawara.com/
+Ginza
+
+Sushi.
+
+- en: Ginza
+
+Sushi.
+
 ### Roppongi Robataya
 - sted: 35.66512, 139.73229
 - google: ChIJrSGFhIKLGGARgp8shuRGGyk
@@ -280,6 +292,17 @@ Nesten like quintessentially Tokyo som Shibuya. Skyskrapere i vest, smug som Gol
 
 ## Restauranter
 
+### Ăn Đi
+- sted: 35.67191, 139.71390
+- google: ChIJFdxl_5iMGGARfivbysGqglw
+Harajuku
+
+Moderne vietnamesisk.
+
+- en: Harajuku
+
+Modern Vietnamese.
+
 ### Honkaku Mapo Tofu Kakan Tomigaya
 - sted: 35.66643, 139.69239
 - google: ChIJh1bMg2KNGGARK9a7arhILEI
@@ -441,6 +464,18 @@ Lavt kompleks med små, uavhengige butikker og kaféer på den gamle jernbanetra
 A low-rise complex of small independent shops and cafés on the old railway line.
 
 ## Hoteller
+
+### Trunk (Hotel)
+- sted: 35.66432, 139.70393
+- google: ChIJk58S9aaMGGARMDVQui_NxEY
+- nettside: https://catstreet.trunk-hotel.com/
+Omotesando
+
+Hotell ved Cat Street, ned mot Shibuya.
+
+- en: Omotesando
+
+A hotel on Cat Street, down towards Shibuya.
 
 ### Park Hyatt Tokyo
 - sted: 35.68621, 139.69048
