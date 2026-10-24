@@ -5,9 +5,9 @@ Oppdateres ved slutten av hver økt (`/avslutt`).
 
 ## Status nå
 
-Sist oppdatert: 18. oktober 2026.
+Sist oppdatert: 24. oktober 2026.
 
-- Live på https://stam.pe/byguider/ med fire byer: London (111 oppføringer), Oslo (119), New York (76), Nice (65).
+- Live på https://stam.pe/byguider/ med fire byer: London (215 oppføringer, hvorav 94 på ønskelista), Oslo (128, 22 på ønskelista), New York (77), Nice (67). Tokyo og Bangkok kommer.
 - Appen er i hovedsak ferdig: MapLibre med papirpalett og mørk modus, nabolag med omriss, kjerne og gater,
   flyttbar infoboks, gåturer i infoboksen, ønskeliste for alle, norsk og engelsk.
 - Arbeidet nå er data: nye steder, favoritter, beskrivelser og nabolagsomriss. 18.10. fikk Oslo
@@ -17,6 +17,8 @@ Sist oppdatert: 18. oktober 2026.
   (Londons conservation areas; New Yorks NTA 2020 og historiske distrikter), ellers grensegater sporet i OSM.
   London: 18 av 43 tegnet om, resten fulgte allerede gatene. New York: alle 10. Nice: begge.
   `kilde` i hver feature sier hvor omrisset kommer fra. `arkiv/` er fjernet fra repoet.
+- 24.10. vedlikeholdsøkt: 90 nettsider oppgradert til https, ønskeliste-kommentaren i byfilene rettet,
+  alle miniatyrer (byguider og stam.pe) tatt på nytt i lys og mørk.
 - Ingen åpne grener utenom `main`.
 
 ## Neste steg
@@ -30,7 +32,12 @@ Sist oppdatert: 18. oktober 2026.
 
 ## Åpne spørsmål
 
-- Ingen.
+- Oslo-omrissene (7 nabolag) er fortsatt skisser uten `kilde` — de var ikke med i presisjonsrunden 18.10.
+- 42 nabolag mangler notat (London 27, New York 10, Oslo 5). Første linje i notatet vises i lista.
+- Nice bruker typen («Lunsj», «Moderne fransk») som første linje, ikke området som de andre byene. Nice har heller ingen soner.
+- Oh Dear (Oslo): nettsiden er død (Wix-feil). Stengt?
+- Harper (Nice) mangler Google Place ID. Brixton Village (nabolag) bruker Place ID-en til Brixton Village Market.
+- Undertittel «An opinionated guide» / norsk motstykke — ikke bestemt.
 
 ## Beslutningslogg
 
