@@ -3,6 +3,8 @@ tittel: Pål og Vibekes Oslo
 undertittel: Restauranter og barer, pluss litt annet.
 tittel-en: Pål and Vibeke’s Oslo
 undertittel-en: Restaurants and bars, plus a few other things.
+kicker: En høyst subjektiv guide
+kicker-en: An opinionated guide
 senter: 59.9180, 10.7400
 zoom: 13
 oppdatert: 2026-10-23
@@ -38,6 +40,7 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
   - en: English note …          engelsk notat, sist i oppføringen. Fri tekst etter denne
                                 linjen hører også til det engelske notatet.
   tittel-en: / undertittel-en:  i frontmatter øverst: engelsk tittel og undertittel.
+  kicker: / kicker-en:         i frontmatter: linja i kursiv under tittelen («En høyst subjektiv guide»).
 
 Områdeskisser, gater og gåturer tegnes i oslo-geometri.geojson (f.eks. i geojson.io)
 og kobles hit på navn: type "område", "gate" eller "rute".

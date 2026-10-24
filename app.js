@@ -353,7 +353,7 @@ const UKJENT_FARGE = DEMPET;
 
    Hver by er én markdown-fil (data/<by>.md) som er kilden for alt innhold:
 
-     ---                              frontmatter: tittel, kicker, undertittel,
+     ---                              frontmatter: tittel, kicker (linja under tittelen), undertittel,
      tittel: Pål og Vibekes London        senter (breddegrad, lengdegrad), zoom, oppdatert
      ---
      # Central                        sone (rekkefølgen her = rekkefølgen i appen)
@@ -563,7 +563,7 @@ function byggMeta(md) {
   const s = lesKoordinat(m.senter);
   return {
     tittel: m.tittel || '', kicker: m.kicker || '', undertittel: m.undertittel || '',
-    tittelEn: m['tittel-en'] || '', undertittelEn: m['undertittel-en'] || '',
+    tittelEn: m['tittel-en'] || '', kickerEn: m['kicker-en'] || '', undertittelEn: m['undertittel-en'] || '',
     senter: s || undefined,
     zoom: m.zoom ? parseFloat(m.zoom) : undefined,
     senterMobil: lesKoordinat(m['senter-mobil']) || undefined,
@@ -580,7 +580,7 @@ const BASE = new URL('.', SKRIPT.src);          // mappen app.js ligger i
 const BY = SKRIPT.dataset.by;
 
 const RESSURSER = {
-  fonter:  'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Work+Sans:wght@400;500;600&display=swap',
+  fonter:  'https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Work+Sans:wght@400;500;600&display=swap',
   kartCss: 'https://unpkg.com/maplibre-gl@5/dist/maplibre-gl.css',
   kartJs:  'https://unpkg.com/maplibre-gl@5/dist/maplibre-gl.js'
 };
@@ -593,6 +593,7 @@ const SKALL = `
         <a href="/">stam.pe</a><span class="smule-skille">/</span><a href="${new URL('./', BASE).href}" data-t="byguider"></a><span class="smule-skille">/</span><span id="smule-by" aria-current="page"></span>${SPRAKVALG}
       </nav>
       <h1 class="tittel" id="tittel"></h1>
+      <p class="kicker" id="kicker" hidden></p>
       <p class="ingress" id="ingress"></p>
     </header>
     <div class="sok-rad">
@@ -734,6 +735,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     fotTekst:   document.getElementById('fot-tekst'),
     smuleBy:    document.getElementById('smule-by'),
     tittel:     document.getElementById('tittel'),
+    kicker:     document.getElementById('kicker'),
     ingress:    document.getElementById('ingress')
   };
 
@@ -1712,9 +1714,12 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
   function settTekster(meta) {
     const en = SPRAK === 'en';
     const tittel = (en && meta.tittelEn) || meta.tittel || '';
+    const kicker = (en && meta.kickerEn) || meta.kicker || '';
     const undertittel = (en && meta.undertittelEn) || meta.undertittel || '';
     if (tittel) document.title = tittel;
     el.tittel.textContent  = tittel;
+    el.kicker.textContent  = kicker;
+    el.kicker.hidden = !kicker;
     el.ingress.textContent = undertittel;
     el.ingress.hidden = !undertittel;
   }
