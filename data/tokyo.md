@@ -159,7 +159,7 @@ Bokhandel i Ginza Six, med vekt på kunst og japansk kultur.
 
 A bookshop in Ginza Six, focused on art and Japanese culture.
 
-### Ginza Itoya
+### Ginza Itoya ★
 - sted: 35.67313, 139.76721
 - google: ChIJKQAKAOSLGGARwGhpOXWgfYo
 - nettside: https://www.ito-ya.co.jp/
@@ -171,17 +171,17 @@ Papirhandel over mange etasjer, siden 1904.
 
 A stationery shop over many floors, since 1904.
 
-### Tomorrowland
-- sted: 35.67090, 139.76589
-- google: ChIJOTomjuaLGGARlZR-7qhg6kc
+### Tomorrowland ★
+- sted: 35.68028, 139.76316
+- google: ChIJoR8MA_qLGGAR6dlwIv7Xloc
 - nettside: https://www.tomorrowland.co.jp/
-Ginza
+Marunouchi
 
-Japansk motemerke. Butikken ligger i varehuset Ginza Mitsukoshi.
+Japansk motemerke.
 
-- en: Ginza
+- en: Marunouchi
 
-A Japanese fashion label. The shop is in the Ginza Mitsukoshi department store.
+A Japanese fashion label.
 
 ## Hoteller
 
@@ -273,7 +273,7 @@ Bruktbutikker, små teatre, livemusikk og kaféer i smale gater rundt stasjonen.
 ### Tomigaya ★
 - sted: 35.66552, 139.68795
 - google: ChIJryEVsk3zGGARIY2YeTZT5BQ
-- gater: Tomigaya 1-chome-dori, Tomihachi-dori, Inokashira-dori
+- gater: Tomigaya 1-chome-dori, Tomihachi-dori, Udagawa Promenade
 Fint hipsterområde like ved Shibuya. Her ligger Fuglen, den første norske kaféen i Tokyo.
 - en: A nice, hip neighbourhood close to Shibuya. Home to Fuglen, the first Norwegian café in Tokyo.
 
@@ -509,7 +509,7 @@ The crossing where everyone walks at once. The most famous image of Tokyo.
 ### Yanaka ★
 - sted: 35.72504, 139.76904
 - google: ChIJSc8pmtSNGGARGYGlpGJU_GE
-- gater: Yanaka Ginza, Yomise-dori, Sansakizaka, Sakura-dori
+- gater: Yanaka Ginza, Yomise-dori, Sansakizaka, Hatsune-no-michi, Gotenzaka
 Gammelt, tradisjonelt Tokyo – et av få områder som overlevde brannbombingen av Tokyo.
 - en: Old, traditional Tokyo – one of the few areas to survive the firebombing of Tokyo.
 
@@ -535,6 +535,18 @@ Også tradisjonelt Tokyo, rundt tempelet Senso-ji.
 - en: “Electric Town”. Pretty crazy, with geek culture and electronics shops – vintage game machines included.
 
 ## Kaféer
+
+### CIBI
+- sted: 35.72518, 139.76412
+- google: ChIJD4s3QNKNGGARNfsyBQUZT2A
+- nettside: https://www.cibi.jp/ja-jp
+Sendagi
+
+Kafé og butikk like ved Yomise-dori.
+
+- en: Sendagi
+
+A café and shop just off Yomise-dori.
 
 ### Kayaba Coffee
 - sted: 35.72116, 139.77072
