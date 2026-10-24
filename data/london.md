@@ -69,10 +69,16 @@ East Bloomsbury
 - google: ChIJQ1U0ijsFdkgRoPb1VGDhzGY
 Belgravia
 
-### Mount Street ★
+### Mount Street Neighbourhood ★
 - sted: 51.5097, -0.1508
 - google: ChIJTXRT3i0FdkgR91IToAbIt44
 Mayfair
+
+Butikker, restauranter og gallerier: [mountstreetneighbourhood.com](https://www.mountstreetneighbourhood.com)
+
+- en: Mayfair
+
+Shops, restaurants and galleries: [mountstreetneighbourhood.com](https://www.mountstreetneighbourhood.com)
 
 ### Connaught Village
 - sted: 51.5146, -0.1651
