@@ -99,6 +99,7 @@ Tyburnia
 ### Exmouth Market
 - sted: 51.5258, -0.1093
 - google: ChIJ03enhkUbdkgRCm2WVIqordU
+- gater: Exmouth Market
 
 ### Shepherd Market
 - sted: 51.5066, -0.1469
