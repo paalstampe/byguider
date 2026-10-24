@@ -476,18 +476,6 @@ Hotell ved Cat Street, ned mot Shibuya.
 
 A hotel on Cat Street, down towards Shibuya.
 
-### Park Hyatt Tokyo
-- sted: 35.68621, 139.69048
-- google: ChIJJ7La1yzzGGARln2OypSj2Cw
-- nettside: https://www.hyatt.com/park-hyatt/en-US/tyoph-park-hyatt-tokyo
-Shinjuku
-
-Hotellet fra Lost in Translation, øverst i Shinjuku Park Tower. Gjenåpnet i desember 2025 etter renovering.
-
-- en: Shinjuku
-
-The hotel from Lost in Translation, at the top of Shinjuku Park Tower. Reopened in December 2025 after renovation.
-
 ## Verdt en omvei
 
 ### Shibuya Crossing
