@@ -496,7 +496,7 @@ Klær. 29 Rue Bonaparte.
 
 Clothing. 29 Rue Bonaparte.
 
-# Sentrum
+# Centre
 
 ## Nabolag og gater
 
@@ -829,7 +829,7 @@ Beach club. [Booking av seng](https://bookings.zenchef.com/results?rid=355682&pi
 
 Beach club. [Book a sunbed](https://bookings.zenchef.com/results?rid=355682&pid=1001)
 
-# Utenfor sentrum
+# Around Nice
 
 ## Muséer og gallerier
 
