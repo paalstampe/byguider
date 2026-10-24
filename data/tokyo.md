@@ -57,14 +57,14 @@ og kobles hit på navn: type "område", "gate" eller "rute".
 Tokyos svar på Fifth Avenue og Midtown Manhattan, men med det gamle Tokyo flettet inn. Kanskje det beste området å bo i.
 - en: Tokyo’s answer to Fifth Avenue and Midtown Manhattan, but with old Tokyo woven in. Perhaps the best area to stay in.
 
-### Yurakucho
+### Yurakucho ★
 - sted: 35.67460, 139.76201
 - google: ChIJ-fIw6O-LGGARYd7WTcAcSHU
 - gater: Harumi-dori, Naka-dori
 Mellom Ginza og keiserpalasset, med Tokyo International Forum og izakayaer og yakitori-barer under jernbanebuene.
 - en: Between Ginza and the Imperial Palace, with the Tokyo International Forum and izakayas and yakitori bars under the railway arches.
 
-### Marunouchi
+### Marunouchi ★
 - sted: 35.68041, 139.76649
 - google: ChIJdUl5zfuLGGARyfYneysknCM
 - gater: Marunouchi Naka-dori
