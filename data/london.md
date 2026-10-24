@@ -7,7 +7,7 @@ senter: 51.5105, -0.1235
 zoom: 11
 senter-mobil: 51.5230, -0.1060
 zoom-mobil: 11.05
-oppdatert: 2026-10-23
+oppdatert: 2026-10-24
 ---
 
 <!--
@@ -1057,7 +1057,7 @@ Holland Park
 ### Queen's Park ★
 - sted: 51.5369, -0.2041
 - google: ChIJX2jOw2wQdkgR0P335wB7pI4
-Lonsdale / Salusbury Road
+- gater: Salusbury Road, Lonsdale Road
 
 ### Westbourne Grove ★
 - sted: 51.5152, -0.1939
@@ -1127,6 +1127,18 @@ Deli og kafé, Worple Way 2.
 
 Deli and café, 2 Worple Way.
 
+### Don't Tell Dad
+- sted: 51.53735, -0.20339
+- google: ChIJM4CzbeMRdkgR9tHRMt9yZd0
+- nettside: https://www.donttelldad.co.uk/
+Queen's Park
+
+Bakeri og kafé om dagen, restaurant om kvelden, Lonsdale Road 10–14.
+
+- en: Queen's Park
+
+Bakery and café by day, restaurant in the evening, 10–14 Lonsdale Road.
+
 ## Muséer og gallerier
 
 ### Design Museum
@@ -1190,6 +1202,20 @@ Smykker, Godfrey Street 53, rett ved Chelsea Green.
 - en: Chelsea
 
 Jewellery, 53 Godfrey Street, right by Chelsea Green.
+
+## Verdt en omvei
+
+### Queen's Park Farmers' Market
+- sted: 51.53670, -0.20553
+- google: ChIJV8aEu2wQdkgR8imtD6f-mhw
+- nettside: https://www.lfm.org.uk/markets/queens-park/
+Queen's Park
+
+Bondemarked i skolegården på Salusbury Primary School, Salusbury Road. Søndager kl. 10–14. Et av de beste lokale markedene i London — grønnsaker, kjøtt, fisk, ost og brød rett fra produsentene.
+
+- en: Queen's Park
+
+Farmers' market in the playground of Salusbury Primary School, Salusbury Road. Sundays 10am–2pm. One of the best local markets in London — vegetables, meat, fish, cheese and bread straight from the producers.
 
 ## Gåturer
 
