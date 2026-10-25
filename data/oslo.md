@@ -7,7 +7,7 @@ kicker: En høyst subjektiv guide
 kicker-en: An opinionated guide
 senter: 59.9180, 10.7400
 zoom: 13
-oppdatert: 2026-10-23
+oppdatert: 2026-10-25
 ---
 
 <!--
@@ -581,7 +581,6 @@ Pizza. Wilhelm Færdens vei 1A.
 - sted: 59.92146, 10.75753
 - google: ChIJZ9JWHQBvQUYRQCKaPXCH08Y
 - nettside: https://www.pao-oslo.com/
-- status: onskeliste
 Grünerløkka
 Thai bar og grill. Markveien 46A.
 - en: Grünerløkka
