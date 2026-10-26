@@ -7,7 +7,7 @@ kicker: En høyst subjektiv guide
 kicker-en: An opinionated guide
 senter: 35.6850, 139.7400
 zoom: 11.5
-oppdatert: 2026-10-24
+oppdatert: 2026-10-26
 ---
 
 <!--
@@ -96,6 +96,18 @@ Sushi.
 - en: Ginza
 
 Sushi.
+
+### Birdland ★
+- sted: 35.67279, 139.76389
+- google: ChIJVby9v-WLGGARQv0iDzabeGo
+- nettside: https://ginza-birdland.sakura.ne.jp/
+Ginza
+
+Yakitori. Ginza 4-2-15, i kjelleren.
+
+- en: Ginza
+
+Yakitori. Ginza 4-2-15, in the basement.
 
 ### Roppongi Robataya
 - sted: 35.66512, 139.73229

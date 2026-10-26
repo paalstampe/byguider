@@ -7,7 +7,7 @@ kicker: En høyst subjektiv guide
 kicker-en: An opinionated guide
 senter: 59.9180, 10.7400
 zoom: 13
-oppdatert: 2026-10-25
+oppdatert: 2026-10-26
 ---
 
 <!--
@@ -544,6 +544,15 @@ Husmannskost. Storgata 45.
 - en: Sentrum
 Traditional Norwegian home cooking. Storgata 45.
 
+### Aura
+- sted: 59.91595, 10.71686
+- google: ChIJL-voR49tQUYRgj_BVGJU7ZA
+- nettside: https://aurarestaurant.no/
+Frogner
+Moderne indisk. Oscars gate 81.
+- en: Frogner
+Modern Indian. Oscars gate 81.
+
 <!-- Ønskeliste: restauranter vi ikke har besøkt ennå (- status: onskeliste).
      ★ = de vi helst vil til først. Fjern «status»-linja når vi har vært der. -->
 
@@ -857,6 +866,33 @@ Adamstuen
 Kaffe, panini og deli. Ullevålsveien 88A.
 - en: Adamstuen
 Coffee, panini and deli. Ullevålsveien 88A.
+
+### Tim Wendelboe
+- sted: 59.92337, 10.75570
+- google: ChIJ9SVQVG9uQUYRh2k5AHiREC8
+- nettside: https://timwendelboe.no/
+Grünerløkka
+Kaffebar og brenneri. Grüners gate 1.
+- en: Grünerløkka
+Coffee bar and roastery. Grüners gate 1.
+
+### Mocca
+- sted: 59.91943, 10.71863
+- google: ChIJxbvtFdRtQUYRfpR2UhLV46s
+- nettside: https://www.javamocca.no/
+Frogner
+Kaffebar. Niels Juels gate 70.
+- en: Frogner
+Coffee bar. Niels Juels gate 70.
+
+### Java
+- sted: 59.92444, 10.73965
+- google: ChIJvUxVC3puQUYR3yFAyI4fdCM
+- nettside: https://www.javamocca.no/
+St. Hanshaugen
+Kaffebar. Ullevålsveien 47.
+- en: St. Hanshaugen
+Coffee bar. Ullevålsveien 47.
 
 ### Ugly Duckling
 - sted: 59.91646, 10.75251
@@ -1172,6 +1208,15 @@ Bjørvika
 Gå opp på taket. Kirsten Flagstads plass 1.
 - en: Bjørvika
 Walk up onto the roof. Kirsten Flagstads plass 1.
+
+### Oslo Badstuforening
+- sted: 59.90455, 10.75291
+- google: ChIJ8YXARzFvQUYRtjIuOp3j42c
+- nettside: https://oslobadstuforening.no/
+Bjørvika
+Badstuer på vannet, med bad i fjorden mellom øktene.
+- en: Bjørvika
+Saunas on the water, with a dip in the fjord between sessions.
 
 ## Muséer og gallerier
 
