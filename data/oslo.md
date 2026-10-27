@@ -1210,13 +1210,13 @@ Gå opp på taket. Kirsten Flagstads plass 1.
 Walk up onto the roof. Kirsten Flagstads plass 1.
 
 ### Oslo Badstuforening
-- sted: 59.90455, 10.75291
-- google: ChIJ8YXARzFvQUYRtjIuOp3j42c
+- sted: 59.90803, 10.74949
+- google: ChIJ8ff7NERvQUYRhW9QMKuxFG0
 - nettside: https://oslobadstuforening.no/
 Bjørvika
-Badstuer på vannet, med bad i fjorden mellom øktene.
+Badstuer på vannet ved Operaen, med bad i fjorden mellom øktene. Langkaia.
 - en: Bjørvika
-Saunas on the water, with a dip in the fjord between sessions.
+Saunas on the water by the Opera House, with a dip in the fjord between sessions. Langkaia.
 
 ## Muséer og gallerier
 
