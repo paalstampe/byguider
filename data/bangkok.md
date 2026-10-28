@@ -84,18 +84,6 @@ Thai, karrier.
 
 Thai, curries.
 
-### Opium Bar ★
-- sted: 13.73919, 100.50850
-- google: ChIJ95ecsjyZ4jARLm3_GznbJsc
-- nettside: https://www.opiumbarbangkok.com/
-Chinatown
-
-Takbar over Potong, i samme gamle butikkhus.
-
-- en: Chinatown
-
-Rooftop bar above Potong, in the same old shophouse.
-
 ### Restaurant Potong
 - sted: 13.73915, 100.50849
 - google: ChIJd7grWxeZ4jAR8KwClMpGmHo
@@ -110,6 +98,18 @@ Thai-kinesisk smaksmeny i et 120 år gammelt butikkhus.
 Thai-Chinese tasting menu in a 120-year-old shophouse.
 
 ## Barer
+
+### Opium Bar ★
+- sted: 13.73919, 100.50850
+- google: ChIJ95ecsjyZ4jARLm3_GznbJsc
+- nettside: https://www.opiumbarbangkok.com/
+Chinatown
+
+Takbar over Potong, i samme gamle butikkhus.
+
+- en: Chinatown
+
+Rooftop bar above Potong, in the same old shophouse.
 
 ### BKK Social Club
 - sted: 13.71204, 100.51034
@@ -285,7 +285,7 @@ Sør for Sathorn Road: ambassader, Suan Phlu og smågatene rundt, roligere enn S
 ### Pathum Wan ★
 - sted: 13.74618, 100.53078
 - google: ChIJ9dY-MdSe4jAR8E3iXbIAAQM
-- gater: Siam Square Walking Street, Lang Suan, Soi Ton Son
+- gater: Lang Suan, Soi Ton Son
 Sentrum, med Siam, Ratchaprasong og Ploenchit, kunstsenteret BACC og Lumphini-parken.
 - en: The centre, with Siam, Ratchaprasong and Ploenchit, the BACC arts centre and Lumphini Park.
 
