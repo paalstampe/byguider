@@ -234,6 +234,9 @@ const IKONER = {
    (så offline-lageret er det samme), bare med en mørk, varm palett. Fargene i style.css
    byttes i @media (prefers-color-scheme: dark) nederst der. */
 const MORK = !!(window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches);
+/* Fargene bakes inn i kartstilen, lagene og ikonene ved oppstart. Bytter enheten modus mens siden
+   er åpen, lastes siden på nytt, så kartet får riktig palett. */
+if (window.matchMedia) matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => location.reload());
 
 const KARTPALETT = MORK ? {
   bakgrunn:    '#221E19',
