@@ -30,9 +30,12 @@ jobs:
   publiser:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    # Kjøringer står i kø i stedet for å avbryte hverandre. En avbrutt kjøring stopper ikke
+    # opplastingen hos Pages, og da feiler den neste med «in progress deployment»
+    # (skjedde når fletting og sletting av grenen startet hver sin kjøring).
     concurrency:
       group: pages
-      cancel-in-progress: true
+      cancel-in-progress: false
     permissions:
       contents: read
       pages: write
