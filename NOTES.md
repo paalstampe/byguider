@@ -5,9 +5,9 @@ Oppdateres ved slutten av hver økt (`/avslutt`).
 
 ## Status nå
 
-Sist oppdatert: 24. oktober 2026.
+Sist oppdatert: 28. oktober 2026.
 
-- Live på https://stam.pe/byguider/ med fem byer: London (215 oppføringer, hvorav 94 på ønskelista), Oslo (128, 22 på ønskelista), New York (77), Nice (67), Tokyo (53). Bangkok kommer.
+- Live på https://stam.pe/byguider/ med seks byer: London (215 oppføringer, hvorav 94 på ønskelista), Oslo (128, 22 på ønskelista), New York (77), Nice (67), Tokyo (53), Bangkok (36, 2 på ønskelista).
 - Appen er i hovedsak ferdig: MapLibre med papirpalett og mørk modus, nabolag med omriss, kjerne og gater,
   flyttbar infoboks, gåturer i infoboksen, ønskeliste for alle, norsk og engelsk.
 - Arbeidet nå er data: nye steder, favoritter, beskrivelser og nabolagsomriss. 18.10. fikk Oslo
@@ -31,6 +31,12 @@ Sist oppdatert: 24. oktober 2026.
   Senere samme kveld: Keyakizaka og hotellet Park Hyatt fjernet, Marunouchi og Yurakucho er favoritter.
 - 24.10. også: byguide-forsiden har «Byguidene er lagret på denne enheten · Slett» ved «Lagre alle byene»
   (PR #59 og #60). Slett gjelder bare byguidene; «Slett alt» ligger på stam.pe-forsiden.
+- 28.10.: Bangkok publisert (PR #62). Nabolagene ble definert ut fra Påls lagrede liste i Google Maps
+  (delt liste, lest med `maps/preview/entitylist/getlist`). Ni nabolag i sonene Old Town & River (Rattanakosin, Talat Noi,
+  Charoen Krung), Central (Silom, Sathorn, Pathum Wan), North (Ari) og Sukhumvit (Thonglor). Omrissene er kvartaler
+  og distrikter (khwaeng/khet) fra OSM der de passer; Talat Noi tar med Song Wat-stripa mellom elva og Sampheng,
+  og Ari og Thonglor er sporet langs gatene. Gatekunsten i Talat Noi er markert i Soi Charoen Krung 22.
+  Miniatyrer i lys og mørk.
 - Ingen åpne grener utenom `main`.
 
 ## Neste steg
@@ -38,7 +44,10 @@ Sist oppdatert: 24. oktober 2026.
 - Fyll på data etter hvert som Pål kommer med steder og navneendringer, i alle byer.
 - Tokyo: flere notater er bare én linje («Sushi.», «Bar.», «Moderne vietnamesisk.»). Fyll på når Pål har tekst.
   Bar Penguin, Apollo Bar, Kihara, Ăn Đi og Kosho SamenoHa mangler nettside.
-- stam.pe-forsiden (repo `paalstampe.github.io`) beskriver byguidene som «London, Nice, Oslo og New York». Tokyo mangler.
+- stam.pe-forsiden (repo `paalstampe.github.io`) beskriver byguidene som «London, Nice, Oslo og New York». Tokyo og Bangkok mangler.
+- Bangkok: notatene er korte utkast (mange bare «Kafé.»/«Galleri.»). Fyll på når Pål har tekst. Mangler nettside: some time blue cafe,
+  Charoen 43, Siwilai Store og Sarnies Roastery (bare Linktree). Homu (Charoen Krung 44) finnes ikke lenger på adressen; en «HOMU» ved
+  Sathorn/Lumphini kan være samme sted. Balzac har nesten samme adresse som Charoen 43 Art & Eatery; sjekk om Charoen 43 er borte.
 - Slett på byguide-forsiden er testet i Chromium, ikke i Safari på Mac. Pål sjekker der.
 - Nye nabolag trenger alltid et presist omriss i `data/<by>-geometri.geojson`; fremgangsmåten står i CLAUDE.md, Data.
 - Mulig etterarbeid: de 25 London-omrissene som ble beholdt (bl.a. Marylebone, Mayfair, Belgravia, Richmond, Kew Green)
@@ -51,6 +60,11 @@ Sist oppdatert: 24. oktober 2026.
 - Hrímnir – Fredensborg ligger øst for Maridalsveien (ved Vulkan), utenfor Fredensborg-omrisset.
 
 ## Beslutningslogg
+
+- 2026-10-28: Bangkok-nabolagene ble definert ut fra Påls lagrede steder i Google Maps. Bangkok har ingen offisielle nabolag,
+  så kvartalene (khwaeng) og distriktene (khet) brukes der de passer, ellers gater sporet i OSM.
+- 2026-10-28: Song Wat Road skal ligge inni Talat Noi, så nabolaget tar med stripa mellom elva og Sampheng (Soi Wanit 1).
+- 2026-10-28: Gater markeres som én enkel strek (ikke begge kjørebaner), og bare de som er verdt å gå: i Pathum Wan Lang Suan og Soi Ton Son.
 
 - 2026-09-27: Flerbys-arkitektur med én app.js og stubbmapper per by, og Leaflet → MapLibre. Grunnen var at én kodebase skal betjene alle byene, og at CARTO fases ut raster.
 - 2026-10-05: Lokale økter bruker localhost i stedet for forhåndsvisningen. Det er raskere, og ingen push trengs.

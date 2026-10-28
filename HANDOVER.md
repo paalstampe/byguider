@@ -7,7 +7,7 @@ Sist oppdatert: 4. oktober 2026 (New York som fjerde by, grenen `new-york`).
 
 ## 1. Målet
 
-En enkel nettbasert app som viser Pål og Vibekes byer — London først, så Nice, Oslo, New York og Tokyo — på kart,
+En enkel nettbasert app som viser Pål og Vibekes byer — London først, så Nice, Oslo, New York, Tokyo og Bangkok — på kart,
 med nabolag, steder i flere kategorier (kaféer, parker, butikker, markeder, gallerier)
 og markerte gater og gåturer. Skal kunne deles via lenke uten innlogging.
 
@@ -44,13 +44,15 @@ byguider/
 ├── oslo/index.html
 ├── new-york/index.html
 ├── tokyo/index.html
+├── bangkok/index.html
 ├── data/
 │   ├── london.md                 kilden: steder, notater, soner, metadata
 │   ├── london-geometri.geojson   områder, gater, gåturer (koblet på navn)
 │   ├── nice.md / nice-geometri.geojson   tomme, metadata utfylt
 │   ├── oslo.md / oslo-geometri.geojson
 │   ├── new-york.md / new-york-geometri.geojson   soner Uptown, Midtown, Downtown, Brooklyn
-│   └── tokyo.md / tokyo-geometri.geojson         soner Central, West, East
+│   ├── tokyo.md / tokyo-geometri.geojson         soner Central, West, East
+│   └── bangkok.md / bangkok-geometri.geojson     soner Old Town & River, Central, North, Sukhumvit
 ├── README.md
 └── HANDOVER.md             dette dokumentet
 ```
@@ -148,7 +150,9 @@ feature sier hvilken: London — bydelenes conservation areas (planning.data.gov
 Neighborhood Tabulation Areas 2020 og Landmarks-kommisjonens historiske distrikter (NYC Open Data); Oslo — byleksikon
 og kommunale kilder; Nice — ingen offisielle kvartalsgrenser for Carré d'Or/Le Petit Marais, så gategrenser;
 Tokyo — de offisielle chōme-grensene fra folketellingen 2020 (e-Stat, «小地域» shapefiler per bydel), slått sammen
-per nabolag; kjernene i Tomigaya og Yanaka følger gatene i OSM.
+per nabolag; kjernene i Tomigaya og Yanaka følger gatene i OSM. Bangkok — kvartalene (khwaeng) og distriktene (khet)
+som administrative grenser i OSM (Rattanakosin, Talat Noi, Charoen Krung, Silom, Sathorn, Pathum Wan); Song Wat-stripa
+i Talat Noi, Ari og Thonglor er sporet langs gatene i OSM.
 
 Koordinatrekkefølge: **md-fila bruker breddegrad, lengdegrad** (Google-rekkefølge);
 GeoJSON-fila bruker lengdegrad, breddegrad. Parseren snur md-koordinatene.
