@@ -76,7 +76,7 @@ Hver by har også en mørk utgave, `bilder/<id>-mork.webp`, som forsiden viser i
 (mangler den, brukes den lyse). Skriptet lager begge.
 Lag på nytt etter synlige endringer: `.claude/miniatyrer.sh` (alle) eller
 `.claude/miniatyrer.sh https://stam.pe/byguider nice` (én by; tar bildet fra live-siden).
-Vises 120×90 (76×57 på mobil ≤ 600 px). By med `status: "kommer"` eller uten bilde får tom ramme.
+Vises 120×90 (96×72 i to kolonner over 900 px, 76×57 på mobil ≤ 600 px). Lista viser bare bynavnet. By med `status: "kommer"` eller uten bilde får tom ramme.
 
 Designretningene ligger som artboards her:
 https://claude.ai/artifact/StKKz6su1kLPBVyy4bZ9NN
@@ -270,7 +270,8 @@ Cloudflare Pages er et alternativ hvis CDN-hastighet blir viktig.
 
 `.github/workflows/pages.yml` publiserer `main` på `stam.pe/byguider/` og hver annen gren på
 `stam.pe/byguider/forhandsvisning/<gren>/` (f.eks. `…/forhandsvisning/kartstil/london/`), ett–to
-minutter etter push. Slettede grener forsvinner ved neste publisering. Pages-kilden er
+minutter etter push. Slettede grener forsvinner ved neste publisering. Kjøringene står i kø
+(`cancel-in-progress: false`), så fletting og sletting av grenen ikke kolliderer hos Pages. Pages-kilden er
 «GitHub Actions». Arbeidsflyt: data rett i `main`; kode på egen gren, sjekk forhåndsvisningen,
 flett.
 
@@ -458,6 +459,11 @@ Hvert trinn skal kunne committes for seg og fungere alene.
   pulsen helt av; nå en stillestående glorie som toner inn og ut.
 - Liste → kart på mobil (grenen `liste-til-kart`, 30.9.): trykk i lista (≤ 900 px) blar opp til
   kartet med infoboksen/rutekortet åpen, som i Reiseplanlegging.
+- Liggende mobil (PR #70, 28.10.): ≤ 900 px bred og ≤ 500 px høy får menyen i en kolonne på 320 px til
+  venstre og kartet til høyre, som på Mac (`liggendeMobil` i app.js, samme spørring i style.css). Lista hopper
+  ikke til kartet der. `-webkit-text-size-adjust: 100%` hindrer iPhone i å forstørre teksten.
+- «Liste ↓» (PR #73, 28.10.): knapp nederst til venstre i kartet på stående mobil, ruller ned til menyen,
+  siden kartet tar alle fingerbevegelser.
 - Infoboks får plass (grenen `festive-faraday`, 4.10.): stikker popupen ut av kartet (lang tekst,
   lavt kart på mobil), forskyves kartet akkurat nok til at hele boksen synes (`faaPopupInn`);
   er den høyere enn kartet, vises toppen. Venter til en flyTo er ferdig.

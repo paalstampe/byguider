@@ -19,6 +19,7 @@ Hold HANDOVER.md oppdatert når noe vesentlig endres i teknikk eller design (f.e
   og dokumentasjon (CLAUDE.md, HANDOVER.md) — pushes rett til main, uten gren og PR.
 - Kodeendringer (app.js, style.css, index.html, stubber, .claude/) på egen gren.
   Lokal økt: Pål ser endringene på localhost, ikke i forhåndsvisningen — grenen pushes først når den skal flettes.
+  Unntak: skal Pål teste på telefonen (berøring, liggende, iPhone), push grenen og gi ham forhåndsvisningen.
   Skyøkt: push grenen; forhåndsvisningen er https://stam.pe/byguider/forhandsvisning/<gren>/london/
   (klar 1–2 min etter push, bygges av .github/workflows/pages.yml).
 - Sjekk designet selv: .claude/skjermbilde.sh <url> <fil.png> 390 844 (mobil) og 1300 900 (desktop);

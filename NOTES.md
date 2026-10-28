@@ -41,6 +41,12 @@ Sist oppdatert: 28. oktober 2026.
   enn stedene og øverst, og klyngene har fyll i kartets bakgrunnsfarge (PR #64). Nabolagene slås aldri sammen
   i klynger, så de vises på alle zoomnivåer (PR #65). Miniatyrer tatt på nytt overalt,
   og stam.pe-forsiden nevner nå Tokyo og Bangkok.
+- 28.10. kveld, mobil og forside (PR #66–#73): byguide-forsiden har lengre ingress og byene står uten land
+  og beskrivelse (feltene er fjernet fra byer.json); på Mac står byene i to kolonner. Markerte gater er tynne
+  og svake når hele byen vises og får full styrke rundt zoom 13. Liggende mobil har menyen ved siden av kartet
+  som på Mac, og iPhone forstørrer ikke teksten når telefonen ligger. Stående mobil har knappen «Liste ↓»
+  nederst til venstre i kartet. Publiseringen setter kjøringer i kø i stedet for å avbryte dem, og
+  `pkill -f .claude/server.sh` stopper den lokale serveren igjen.
 - Ingen åpne grener utenom `main`.
 
 ## Neste steg
@@ -60,6 +66,8 @@ Sist oppdatert: 28. oktober 2026.
   firkanter ved lav zoom) når Pål har brukt det en stund. Å skjule steder under nabolagene er prøvd og forkastet.
 - KML-eksport for Google My Maps-sporet: scopet i [scope-kml.md](scope-kml.md) (forslag: `?kml` i appen, test med London). Venter på svar fra Pål på de åpne spørsmålene nederst der.
 
+- Sjekk på iPhone at teksten ikke lenger forstørres når telefonen ligger (kan ikke testes i Chromium).
+
 ## Åpne spørsmål
 
 - Hrímnir – Fredensborg ligger øst for Maridalsveien (ved Vulkan), utenfor Fredensborg-omrisset.
@@ -76,6 +84,14 @@ Sist oppdatert: 28. oktober 2026.
   Å skjule steder inni nabolag (eller bare under ikonet) ble prøvd og forkastet: like steder vises da ulikt, og byer
   med få nabolag (Nice) skal vise alt. Firkanten får heller ligge oppå en klynge. Navnet vises fra zoom 12.
 - 2026-10-28: Gater markeres som én enkel strek (ikke begge kjørebaner), og bare de som er verdt å gå: i Pathum Wan Lang Suan og Soi Ton Son.
+- 2026-10-28: Forsiden viser bare bynavnet. Ingressen sier det beskrivelsene og landene sa, og landene er opplagte.
+- 2026-10-28: På Mac står byene i to kolonner med samme rader som på mobil. Kort-rutenett (bilde over navn) ble prøvd,
+  men to kolonner ligner mobilen og passer guidebokstilen bedre.
+- 2026-10-28: Liggende mobil får menyen ved siden av kartet. Stående oppsett ga et kart som fylte skjermen.
+- 2026-10-28: Stående mobil får knappen «Liste ↓» i kartet. To-finger-panorering (cooperativeGestures) ble vurdert,
+  men gjør kartet tregere å bruke.
+- 2026-10-28: Publiseringen setter kjøringer i kø (cancel-in-progress: false). En avbrutt kjøring stoppet ikke
+  opplastingen hos Pages, så neste feilet når fletting og sletting av grenen kom samtidig.
 
 - 2026-09-27: Flerbys-arkitektur med én app.js og stubbmapper per by, og Leaflet → MapLibre. Grunnen var at én kodebase skal betjene alle byene, og at CARTO fases ut raster.
 - 2026-10-05: Lokale økter bruker localhost i stedet for forhåndsvisningen. Det er raskere, og ingen push trengs.
