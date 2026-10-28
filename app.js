@@ -1089,6 +1089,8 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       kart.addLayer(Object.assign({ id: id }, lag[id]));
     });
 
+    kart.on('idle', skjulUnderNabolag);
+
     kart.addSource('onskeliste', { type: 'geojson', data: tomSamling() });
     Object.keys(ONSKELAG).forEach(id => {
       kart.addLayer(Object.assign({ id: id }, ONSKELAG[id]), 'klynger');
@@ -1144,6 +1146,38 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     }
   }
 
+  /* Under nabolagsikonet: på oversikten (under zoom 13) skjules steder og klynger som ville
+     ligget under et nabolagsikon, på samme måte som klyngene slår sammen steder som overlapper.
+     Regnes ut når kartet står stille, og bare filtrene byttes, så klyngene ikke regnes om. */
+  const SKJUL_MAXZOOM = 13;
+  const NABOLAG_HALV = 11.5 * 2.3 / 2 * 0.9;   // halv side på nabolagsfirkanten (som i lagIkon)
+  const STED_RADIUS = 11.5;                    // sirkelen i lagIkon
+  let synligeNabolag = [];
+  let skjulteNokkel = '';
+
+  function skjulUnderNabolag() {
+    const z = kart.getZoom();
+    const skjulte = { steder: [], klynger: [] };
+    if (z < SKJUL_MAXZOOM && synligeNabolag.length) {
+      const str = z <= 10 ? 0.8 : z >= 14 ? 0.95 : 0.8 + (z - 10) / 4 * 0.15;   // icon-size i punkter
+      const ikoner = synligeNabolag.map(f => kart.project(f.geometry.coordinates));
+      const under = (p, r) => ikoner.some(n => Math.hypot(n.x - p.x, n.y - p.y) < (NABOLAG_HALV * str + r) * 0.9);
+      kart.querySourceFeatures('steder').forEach(f => {
+        const pr = f.properties, p = kart.project(f.geometry.coordinates);
+        if (pr.cluster) {
+          const r = pr.point_count < 10 ? 14 : pr.point_count < 25 ? 17 : 20;   // circle-radius i klynger
+          if (under(p, r)) skjulte.klynger.push(pr.cluster_id);
+        } else if (under(p, STED_RADIUS * str)) skjulte.steder.push(pr._id);
+      });
+    }
+    const nokkel = JSON.stringify(skjulte);
+    if (nokkel === skjulteNokkel) return;
+    skjulteNokkel = nokkel;
+    const ikkeKlynge = ['!', ['in', ['get', 'cluster_id'], ['literal', skjulte.klynger]]];
+    ['klynger', 'klyngetall'].forEach(id => kart.setFilter(id, ['all', KARTLAG[id].filter, ikkeKlynge]));
+    kart.setFilter('punkter', ['all', KARTLAG.punkter.filter, ['!', ['in', ['get', '_id'], ['literal', skjulte.steder]]]]);
+  }
+
   /* Filtrering bytter ut dataene, slik at klyngene regnes ut fra det som vises. */
   function filtrerKart(vis) {
     if (!kart.getSource('steder')) return;
@@ -1152,7 +1186,8 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     const linjer = medGeo.filter(o => o.erLinje).map(o => o.f);
     const erNabolag = f => f.properties.kategori === 'nabolag';
     kart.getSource('steder').setData({ type: 'FeatureCollection', features: punkter.filter(f => !erNabolag(f)) });
-    kart.getSource('nabolag').setData({ type: 'FeatureCollection', features: punkter.filter(erNabolag) });
+    synligeNabolag = punkter.filter(erNabolag);
+    kart.getSource('nabolag').setData({ type: 'FeatureCollection', features: synligeNabolag });
     kart.getSource('ruter').setData({ type: 'FeatureCollection', features: linjer });
     const omrader = vis.flatMap(o => {
       const flater = o.fokus.filter(x => x.properties.rolle === 'omrade');
