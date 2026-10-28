@@ -38,7 +38,8 @@ Sist oppdatert: 28. oktober 2026.
   og Ari og Thonglor er sporet langs gatene. Gatekunsten i Talat Noi er markert i Soi Charoen Krung 22.
   Miniatyrer i lys og mørk.
 - 28.10. også: markerte gater vises hele tiden (PR #63). Nabolag er lyse firkanter med kobberkant, litt større
-  enn stedene og øverst, og klyngene har fyll i kartets bakgrunnsfarge (PR #64). Miniatyrer tatt på nytt overalt,
+  enn stedene og øverst, og klyngene har fyll i kartets bakgrunnsfarge (PR #64). Nabolagene slås aldri sammen
+  i klynger, så de vises på alle zoomnivåer (PR #65). Miniatyrer tatt på nytt overalt,
   og stam.pe-forsiden nevner nå Tokyo og Bangkok.
 - Ingen åpne grener utenom `main`.
 
@@ -68,8 +69,10 @@ Sist oppdatert: 28. oktober 2026.
 - 2026-10-28: Song Wat Road skal ligge inni Talat Noi, så nabolaget tar med stripa mellom elva og Sampheng (Soi Wanit 1).
 - 2026-10-28: Nye byer kan bygges fra Påls delte lister i Google Maps (oppskrift i CLAUDE.md, Data).
 - 2026-10-28: Markerte gater vises hele tiden, ikke bare når nabolaget er valgt.
-- 2026-10-28: Nabolag er lyse, større firkanter, men ligger fortsatt i klyngene. Et forsøk med nabolag utenfor klyngene
-  ble rotete når de havnet oppå andre ikoner. Navnet vises fra zoom 13, siden klyngene finnes til zoom 12.
+- 2026-10-28: Nabolag er lyse, større firkanter og slås aldri sammen i klynger, så oversikten viser alle nabolag.
+  Første forsøk med mørke firkanter utenfor klyngene ble rotete; med lyse firkanter og dempede klynger går det.
+  Å skjule steder inni nabolag (eller bare under ikonet) ble prøvd og forkastet: like steder vises da ulikt, og byer
+  med få nabolag (Nice) skal vise alt. Firkanten får heller ligge oppå en klynge. Navnet vises fra zoom 12.
 - 2026-10-28: Gater markeres som én enkel strek (ikke begge kjørebaner), og bare de som er verdt å gå: i Pathum Wan Lang Suan og Soi Ton Son.
 
 - 2026-09-27: Flerbys-arkitektur med én app.js og stubbmapper per by, og Leaflet → MapLibre. Grunnen var at én kodebase skal betjene alle byene, og at CARTO fases ut raster.

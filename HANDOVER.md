@@ -142,7 +142,7 @@ Gåturer har `lengde:` og `varighet:` som fritekst, og kan mangle tegnet rute
 Nabolagsknappen ligger midt i kjernen (polygon nr. 2) når den finnes, ellers midt i området (`punktInni`:
 tyngdepunktet, eller punktet lengst fra kanten når tyngdepunktet havner nær kanten eller utenfor).
 `sted:` brukes bare for nabolag uten omriss. Navnet står under
-nabolagsikonet fra zoom 13 (`NABOLAGSNAVN_MINZOOM`). Klikk på nabolaget
+nabolagsikonet fra zoom 12 (`NABOLAGSNAVN_MINZOOM`). Klikk på nabolaget
 (i lista eller kartet) uthever område og gater og zoomer dit; klikk på tomt kart opphever.
 Gategeometri kan hentes fra OpenStreetMap (Overpass) — Claude kan gjøre det på forespørsel.
 Nabolagsomriss bygger på offentlige kilder der de finnes, og ellers på gategrenser sporet i OSM; `kilde` i hver
@@ -231,14 +231,15 @@ jobben. Nærmer seg en guidebok.
   Kartflaten (`.maplibregl-canvas`) er skjult (`kart-venter`) til byens utsnitt er satt og kartbitene
   er lastet (høyst 0,8 s etter at lagene er lagt på), og tones så inn — ellers vises verdenskartet fra
   startposisjonen et øyeblikk når bydataene kommer etter stilen.
-- To kilder: `steder` (punkter, klynger t.o.m. zoom 12, radius 14 px) med lagene `klynger`,
+- Kilder: `nabolag` (nabolagsikonene, uten klynging), `steder` (punkter, klynger t.o.m. zoom 12, radius 14 px) med lagene `klynger`,
   `klyngetall` og `punkter` (symbol med kategoriikon), og `ruter` med `gater` og `gaaturer`.
   Filtrering bytter ut kildedataene (`setData`), slik at klyngene følger filtrene.
 - Kategoriikonene tegnes på lerret ved oppstart: farget sirkel, papirkant, hvit glyf fra `IKONER`
   (SVG-stier i 24×24). Favoritter har samme størrelse, men en kobberring utenfor papirkanten
   (egne bilder `ikon-fav-<kategori>`).
 - Nabolag skiller seg ut: lys firkant (kartets veifarge) med kobberkant og kobberglyf, litt større
-  enn de runde ikonene (`firkant` i `lagIkon`), og øverst (`symbol-sort-key`). De ligger fortsatt i klyngene.
+  enn de runde ikonene (`firkant` i `lagIkon`). De har egen kilde uten klynging (`nabolag`, laget `nabolag-punkter`)
+  og ligger øverst, så de vises på alle zoomnivåer. Ingenting skjules under dem; de kan ligge oppå en klynge.
 - Klyngene har kobberring og fyll i kartets bakgrunnsfarge (`KARTPALETT.bakgrunn`), så de ikke popper.
 - Kategorifargene ligger i `KATEGORIER` og oversettes til et `match`-uttrykk.
 - Klyngetallet bruker CARTOs egen skriftstabel (`KARTSKRIFT`); andre skrifter finnes ikke
