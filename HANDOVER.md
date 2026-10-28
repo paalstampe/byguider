@@ -136,7 +136,7 @@ Gåturer har `lengde:` og `varighet:` som fritekst, og kan mangle tegnet rute
 | type | geometri | vises |
 |---|---|---|
 | `område` | Polygon | lys flate med stiplet kant, alltid synlig; kjernen (polygon nr. 2) blir mørkere der den ligger oppå |
-| `gate` | LineString | uthevet gate når nabolaget er valgt |
+| `gate` | LineString | kobberstrek, alltid synlig (`omrader-gater`); sterkere når nabolaget er valgt |
 | `rute` | LineString | gåturens stiplede rute, alltid synlig |
 
 Nabolagsknappen ligger midt i kjernen (polygon nr. 2) når den finnes, ellers midt i området (`punktInni`:
@@ -237,6 +237,9 @@ jobben. Nærmer seg en guidebok.
 - Kategoriikonene tegnes på lerret ved oppstart: farget sirkel, papirkant, hvit glyf fra `IKONER`
   (SVG-stier i 24×24). Favoritter har samme størrelse, men en kobberring utenfor papirkanten
   (egne bilder `ikon-fav-<kategori>`).
+- Nabolag skiller seg ut: lys firkant (kartets veifarge) med kobberkant og kobberglyf, litt større
+  enn de runde ikonene (`firkant` i `lagIkon`), og øverst (`symbol-sort-key`). De ligger fortsatt i klyngene.
+- Klyngene har kobberring og fyll i kartets bakgrunnsfarge (`KARTPALETT.bakgrunn`), så de ikke popper.
 - Kategorifargene ligger i `KATEGORIER` og oversettes til et `match`-uttrykk.
 - Klyngetallet bruker CARTOs egen skriftstabel (`KARTSKRIFT`); andre skrifter finnes ikke
   på glyph-serveren.
