@@ -985,7 +985,8 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
   /* Tegner ett ikon per kategori til et lerret: farget sirkel, papirkant, hvit glyf.
      Favoritter får i tillegg en kobberring utenfor papirkanten — samme størrelse ellers.
      Lerretet har luft til ringen også for vanlige ikoner, så alle skaleres likt.
-     Nabolag er firkanter og litt større (R), så de skiller seg ut fra stedene. */
+     Nabolag er lyse firkanter (som klyngene) med kobberkant og kobberglyf, og litt større (R),
+     så de skiller seg ut fra stedene. */
   function lagIkon(farge, glyf, favoritt, firkant) {
     const R = firkant ? 2.3 : 2, D = Math.round(30 * R);
     const c = document.createElement('canvas');
@@ -993,10 +994,10 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     const x = c.getContext('2d');
     if (favoritt === 'ring') return lagRing(x, D, R, glyf, farge || ONSKEFARGE, firkant);
     form(x, D, 11.5 * R, firkant);
-    x.fillStyle = farge;
+    x.fillStyle = firkant ? KARTPALETT.vei : farge;
     x.fill();
     x.lineWidth = 1.5 * R;
-    x.strokeStyle = PAPIR;
+    x.strokeStyle = firkant ? AKSENT : PAPIR;
     x.stroke();
     if (favoritt) {
       form(x, D, 13.25 * R, firkant);
@@ -1010,7 +1011,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     x.lineWidth = 2.2;
     x.lineCap = 'round';
     x.lineJoin = 'round';
-    x.strokeStyle = KORT;
+    x.strokeStyle = firkant ? AKSENT : KORT;
     x.stroke(new Path2D(glyf));
     return x.getImageData(0, 0, D, D);
   }
