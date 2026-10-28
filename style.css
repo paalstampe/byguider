@@ -30,6 +30,9 @@ html, body {
   font-family: 'Work Sans', system-ui, sans-serif;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
+  /* Ellers forstørrer iPhone teksten når telefonen ligger. */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 .app {
@@ -770,6 +773,23 @@ button.pop-lenke {
   .sprakvalg { top: -7px; }
   .sprakvalg button { padding: 6px 5px 3px; }   /* større trykkflate på mobil */
   .by-navn { font-size: 26px; }
+}
+
+/* Liggende mobil: lav og bred skjerm. Menyen i en smal kolonne til venstre som ruller for seg,
+   kartet til høyre i full høyde — som på Mac. Stående oppsett ville gitt et kart som fyller skjermen
+   og menyen utenfor. Samme spørring som liggendeMobil i app.js. */
+@media (max-width: 900px) and (orientation: landscape) and (max-height: 500px) {
+  .app { flex-direction: row; height: 100vh; height: 100dvh; min-height: 0; overflow: hidden; }
+  .sidebar {
+    width: 320px; flex: 0 0 320px; order: 0;
+    border-right: 1px solid var(--kant); border-bottom: 0;
+    overflow-y: auto; overscroll-behavior: contain;
+  }
+  .sidebar > * { flex-shrink: 0; }
+  .liste { flex: 1 0 auto; overflow: visible; }
+  .kartflate { order: 0; flex: 1 1 auto; height: auto; min-height: 0; }
+  .sidebar-head { padding: 18px 20px 12px; }
+  .tittel { font-size: 26px; }
 }
 
 @media (max-width: 600px) {
