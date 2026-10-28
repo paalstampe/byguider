@@ -47,6 +47,7 @@ Sist oppdatert: 28. oktober 2026.
   som på Mac, og iPhone forstørrer ikke teksten når telefonen ligger. Stående mobil har knappen «Liste ↓»
   nederst til venstre i kartet. Publiseringen setter kjøringer i kø i stedet for å avbryte dem, og
   `pkill -f .claude/server.sh` stopper den lokale serveren igjen.
+- 28.10. sent: siden lastes på nytt når enheten bytter mellom lys og mørk modus, så kartet får riktig palett (PR #74).
 - Ingen åpne grener utenom `main`.
 
 ## Neste steg
@@ -66,6 +67,7 @@ Sist oppdatert: 28. oktober 2026.
   firkanter ved lav zoom) når Pål har brukt det en stund. Å skjule steder under nabolagene er prøvd og forkastet.
 - KML-eksport for Google My Maps-sporet: scopet i [scope-kml.md](scope-kml.md) (forslag: `?kml` i appen, test med London). Venter på svar fra Pål på de åpne spørsmålene nederst der.
 - Sjekk på iPhone at teksten ikke lenger forstørres når telefonen ligger (kan ikke testes i Chromium).
+- Sjekk i Safari på Mac at siden lastes på nytt ved modusbytte (testet bare i Chromium).
 
 ## Åpne spørsmål
 
@@ -120,3 +122,5 @@ Sist oppdatert: 28. oktober 2026.
 - 2026-10-24: Tomigaya tar med Kamiyama-chō, slik at gatene ned mot Shibuya ligger inni. Kjernen er kilen der butikkene og kaféene ligger.
 - 2026-10-24: Gater vises bare der de er verdt å gå. Inokashira-dori (Tomigaya) og Keyakizaka (Roppongi) ble fjernet fordi de er trafikkerte.
 - 2026-10-24: Offline-lagring tilbys både på stam.pe («Lagre alt») og på byguide-forsiden («Lagre alle byene»), hver med sin Slett. Byguide-forsiden kan være egen hjemskjerm-app med eget lager på iPhone, og delte lenker går dit. Slett der sletter bare byguidene og viser ikke MB, siden nettleseren bare oppgir tallet for hele stam.pe.
+- 2026-10-28: Ved bytte mellom lys og mørk modus lastes siden på nytt. Å farge kartet om direkte ville kreve
+  at stil, lag og ikoner tegnes på nytt. Omlasting er enklere, men kartutsnitt, infoboks og filtre nullstilles.
