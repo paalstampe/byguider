@@ -7,8 +7,8 @@ kicker: En høyst subjektiv guide
 kicker-en: An opinionated guide
 senter: 51.5105, -0.1235
 zoom: 11
-senter-mobil: 51.5230, -0.1060
-zoom-mobil: 11.05
+senter-mobil: 51.5215, -0.1145
+zoom-mobil: 11.2
 oppdatert: 2026-10-24
 ---
 
@@ -2039,6 +2039,7 @@ Butikker i Redchurch Street, og Brick Lane med vintage, curry og bagels.
 ### Hackney Wick
 - sted: 51.5446, -0.0257
 - google: ChIJxzjMzQwddkgR_xrh8DI6Ao8
+- utenfor: ja
 Tidligere industriområde ved kanalen og Olympiaparken, med atelierer, bryggerier og barer langs vannet.
 - en: Former industrial area by the canal and the Olympic Park, with studios, breweries and bars along the water.
 
@@ -2046,6 +2047,7 @@ Tidligere industriområde ved kanalen og Olympiaparken, med atelierer, bryggerie
 - sted: 51.5383, -0.0438
 - google: ChIJVV7kax4ddkgRQHrksg4N0oY
 - gater: Lauriston Road
+- utenfor: ja
 Lauriston Road og gatene ved Victoria Park, med puber, kaféer og butikker.
 - en: Lauriston Road and the streets by Victoria Park, with pubs, cafés and shops.
 
@@ -2173,6 +2175,7 @@ Greek, 73 Great Eastern Street.
 - sted: 51.53836, -0.04526
 - google: ChIJH2ft-vYddkgRmdbbpzu9hjQ
 - nettside: https://www.pophams.com/
+- utenfor: ja
 Victoria Park Village
 
 Bakeri og kafé, Lauriston Road 110a.
@@ -2225,6 +2228,7 @@ Clothing, 110A Columbia Road.
 - sted: 51.54642, -0.02120
 - google: ChIJDwtf_QwddkgRRQHAFbZNFFM
 - nettside: https://www.vam.ac.uk/east/storehouse
+- utenfor: ja
 Stratford
 
 V&As åpne magasin i Queen Elizabeth Olympic Park — man kan se (og bestille fram) gjenstander fra samlingen.
