@@ -36,7 +36,7 @@ byguider/
 ├── app.js                  all logikk — én kopi for alle byer
 ├── sw.js                   service worker: offline (se punkt 7, «Offline»)
 ├── style.css               all styling — én kopi
-├── byer.json               manifest: id, navn, land, data (md), geometri, beskrivelse, evt. bilde
+├── byer.json               manifest: id, navn, land, data (md), geometri, evt. beskrivelse og bilde
 ├── apple-touch-icon.png    hjemskjerm-ikon (180×180): kobber «b» i Playfair Display på papir
 ├── bilder/<id>.webp        miniatyrer på forsiden (360×270), lages med .claude/miniatyrer.sh
 ├── london/index.html       stubb: <script src="../app.js" data-by="london">
