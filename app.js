@@ -844,11 +844,11 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       type: 'circle',
       filter: ['has', 'point_count'],
       paint: {
-        // Lyse og dempet, så de ikke konkurrerer med nabolagene og stedene
-        'circle-color': KARTPALETT.vei,
+        // Fyll i kartets bakgrunnsfarge, så klyngene ikke konkurrerer med nabolagene og stedene
+        'circle-color': KARTPALETT.bakgrunn,
         'circle-radius': ['step', ['get', 'point_count'], 14, 10, 17, 25, 20],
-        'circle-stroke-color': KARTPALETT.storVeiKant,
-        'circle-stroke-width': 1
+        'circle-stroke-color': AKSENT,
+        'circle-stroke-width': 1.5
       }
     },
     klyngetall: {
@@ -861,7 +861,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
         'text-size': 12,
         'text-allow-overlap': true
       },
-      paint: { 'text-color': DEMPET }
+      paint: { 'text-color': TEKSTFARGE }
     },
     punkter: {
       source: 'steder',
