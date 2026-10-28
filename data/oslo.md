@@ -517,15 +517,6 @@ Fine dining. Henrik Ibsens gate 110.
 - en: Vika
 Fine dining. Henrik Ibsens gate 110.
 
-### Jewel of India
-- sted: 59.91595, 10.71686
-- google: ChIJOzAEv9RtQUYRTWGppDpLDwE
-- nettside: https://www.jewelofindia.no/
-Frogner
-Indisk. Oscars gate 81.
-- en: Frogner
-Indian. Oscars gate 81.
-
 ### Festningen
 - sted: 59.90841, 10.73552
 - google: ChIJLY_ZY4ZuQUYRY4TaMjHPqGE
