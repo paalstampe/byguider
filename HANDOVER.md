@@ -64,7 +64,8 @@ hjemskjerm-ikonet, f.eks. «London»; forsiden heter «Byguider»).
 Mørk modus: følger enhetens innstilling. `@media (prefers-color-scheme: dark)` nederst i `style.css` bytter
 variablene; i `app.js` velger `MORK` en mørk `KARTPALETT` (samme Voyager-stil, så offline-lageret er uendret)
 og mørke utgaver av kobber, papir og tekst til kartlagene (`AKSENT`, `PAPIR`, `KORT`, `TEKSTFARGE`, `DEMPET`).
-Nye farger i kartlagene skal bruke disse, ikke faste verdier.
+Nye farger i kartlagene skal bruke disse, ikke faste verdier. Fargene bakes inn ved oppstart, så bytter enheten modus
+mens siden er åpen, lastes siden på nytt (lytter på `prefers-color-scheme` rett under `MORK`).
 
 Ikke søkbar: forsiden og alle stubbene har `<meta name="robots" content="noindex, nofollow, noarchive">`
 (stubben kopieres med den). KI-innsamlere stenges ute av `robots.txt` i `paalstampe.github.io`, som gjelder hele stam.pe.
