@@ -462,6 +462,7 @@ html, body {
 }
 
 .sidebar-head.forside-head { padding: 0 0 28px; border-bottom: 1px solid var(--kant); }
+.forside-head .ingress { max-width: none; text-wrap: balance; }
 
 .by-lenke {
   display: grid;
@@ -483,13 +484,6 @@ html, body {
   transition: color 0.12s;
 }
 
-.by-meta {
-  display: block;
-  margin-top: 6px;
-  font-size: 13px;
-  color: var(--dempet);
-}
-
 @media (hover: hover) and (pointer: fine) { .by-lenke:hover .by-navn { color: var(--aksent); } }
 
 /* Miniatyr av byens åpningsside, 4:3. Tom ramme når bildet mangler. */
@@ -506,7 +500,6 @@ html, body {
 .by-lenke.er-inaktiv { cursor: default; }
 .by-lenke.er-inaktiv .by-navn,
 .by-lenke.er-inaktiv:hover .by-navn { color: var(--kant); }
-.by-lenke.er-inaktiv .by-meta { color: var(--kant); }
 
 /* Offline: status per by og «Lagre alle byene» under lista */
 .by-offline {
@@ -771,8 +764,8 @@ button.pop-lenke {
 }
 
 @media (max-width: 600px) {
-  .by-lenke { grid-template-columns: 76px 1fr; gap: 0 14px; align-items: start; }
-  .miniatyr { width: 76px; height: 57px; margin-top: 4px; }
+  .by-lenke { grid-template-columns: 76px 1fr; gap: 0 14px; }
+  .miniatyr { width: 76px; height: 57px; }
 }
 
 /* ---------- Mørk modus (prøve) ----------

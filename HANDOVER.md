@@ -36,7 +36,7 @@ byguider/
 ├── app.js                  all logikk — én kopi for alle byer
 ├── sw.js                   service worker: offline (se punkt 7, «Offline»)
 ├── style.css               all styling — én kopi
-├── byer.json               manifest: id, navn, land, data (md), geometri, evt. beskrivelse og bilde
+├── byer.json               manifest: id, navn, data (md), geometri, evt. bilde
 ├── apple-touch-icon.png    hjemskjerm-ikon (180×180): kobber «b» i Playfair Display på papir
 ├── bilder/<id>.webp        miniatyrer på forsiden (360×270), lages med .claude/miniatyrer.sh
 ├── london/index.html       stubb: <script src="../app.js" data-by="london">
@@ -172,7 +172,7 @@ så en engelsk lenke kan deles direkte (`stam.pe/byguider/london/?lang=en`). Sta
   `tittel-en:` og `undertittel-en:` i frontmatter; `- navn-en:` for et engelsk navn;
   `- en:` for engelsk notat. `- en:` settes sist i oppføringen, og fri tekst etter den linja
   hører også til det engelske notatet (flere avsnitt og punktlister går fint).
-- `byer.json`: `land_en`, `beskrivelse_en` og evt. `navn_en`.
+- `byer.json`: evt. `navn_en`.
 - `lengde`/`varighet` oversettes automatisk på engelsk (`ca. 1 t 45 min` → `approx. 1 h 45 min`,
   desimalkomma → punktum).
 - Søket treffer både norsk og engelsk tekst uansett språk. Stedsnavn i bakgrunnskartet

@@ -40,8 +40,8 @@ if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catc
 </script>
 <script>
 /* Språk: samme valg og lagring som i app.js (NO / EN, ?lang=en, husket i nettleseren).
-   Lista bygges fra byer.json — ny by vises her automatisk. Engelske tekster fra
-   feltene land_en, beskrivelse_en og evt. navn_en; mangler de, vises norsk.
+   Lista bygges fra byer.json — ny by vises her automatisk. Engelsk navn fra
+   feltet navn_en hvis det finnes. Lista viser bare navnet, uten land eller beskrivelse.
    Miniatyr: bilder/<id>.webp (360×270, lages med .claude/miniatyrer.sh), eller feltet «bilde»
    i byer.json. I mørk modus bilder/<id>-mork.webp; mangler den, brukes den lyse. By med status «kommer» eller uten bilde får en tom ramme i samme størrelse. */
 const NOKKEL = 'byguider-sprak';
@@ -130,11 +130,7 @@ function tegn() {
     const navn = document.createElement('span');
     navn.className = 'by-navn';
     navn.textContent = (en && b.navn_en) || b.navn;
-    const meta = document.createElement('span');
-    meta.className = 'by-meta';
-    meta.textContent = [(en && b.land_en) || b.land, (en && b.beskrivelse_en) || b.beskrivelse]
-      .filter(Boolean).join(' · ');
-    tekst.append(navn, meta);
+    tekst.append(navn);
     const dato = klar && offlineDato(b.id);
     if (dato) {
       const st = document.createElement('span');
