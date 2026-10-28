@@ -844,10 +844,11 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       type: 'circle',
       filter: ['has', 'point_count'],
       paint: {
+        // Lyse og dempet, så de ikke konkurrerer med nabolagene og stedene
         'circle-color': KARTPALETT.vei,
         'circle-radius': ['step', ['get', 'point_count'], 14, 10, 17, 25, 20],
-        'circle-stroke-color': AKSENT,
-        'circle-stroke-width': 1.5
+        'circle-stroke-color': KARTPALETT.storVeiKant,
+        'circle-stroke-width': 1
       }
     },
     klyngetall: {
@@ -860,7 +861,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
         'text-size': 12,
         'text-allow-overlap': true
       },
-      paint: { 'text-color': TEKSTFARGE }
+      paint: { 'text-color': DEMPET }
     },
     punkter: {
       source: 'steder',
@@ -924,7 +925,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
   /* Alle tegnede nabolag har flate og omriss hele tiden (større område og kjerne), i samme stil som
      når nabolaget er valgt. Flatene er gjennomsiktige, så kjernen — som ligger oppå — blir mørkere. Navnet står under ikonet, men først når man har zoomet inn og
      det er plass. Ingen infoboks — ikonet velger nabolaget som før. */
-  const NABOLAGSNAVN_MINZOOM = 12;
+  const NABOLAGSNAVN_MINZOOM = 13;
   const OMRADELAG = {
     'omrader-flate': {
       source: 'omrader', type: 'fill',
