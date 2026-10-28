@@ -926,7 +926,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
   /* Alle tegnede nabolag har flate og omriss hele tiden (større område og kjerne), i samme stil som
      når nabolaget er valgt. Flatene er gjennomsiktige, så kjernen — som ligger oppå — blir mørkere. Navnet står under ikonet, men først når man har zoomet inn og
      det er plass. Ingen infoboks — ikonet velger nabolaget som før. */
-  const NABOLAGSNAVN_MINZOOM = 13;
+  const NABOLAGSNAVN_MINZOOM = 12;
   const OMRADELAG = {
     'omrader-flate': {
       source: 'omrader', type: 'fill',
