@@ -874,11 +874,12 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
         'icon-size': ['interpolate', ['linear'], ['zoom'], 10, 0.8, 14, 0.95],
         'icon-allow-overlap': true,
         'icon-ignore-placement': true,
-        // Nabolag øverst, så de aldri havner under et sted; deretter favoritter
-        'symbol-sort-key': ['+', ['case', FAV, 1, 0], ['case', ['==', ['get', 'kategori'], 'nabolag'], 2, 0]]
+        'symbol-sort-key': ['case', FAV, 1, 0]
       }
     }
   };
+  /* Nabolag har egen kilde uten klynging, så knappene alltid vises, og ligger øverst. */
+  KARTLAG['nabolag-punkter'] = Object.assign({}, KARTLAG.punkter, { source: 'nabolag', filter: ['==', ['geometry-type'], 'Point'] });
 
   /* Ønskelisten: egen kilde uten klynging, så stedene aldri slås sammen med besøkte steder.
      Ring-ikoner (omriss uten fyll) i dempet farge; gåturer som tynn stiplet linje; nabolag med
@@ -920,7 +921,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     }
   };
 
-  const KLIKKBARE = ['ruter-treff', 'punkter', 'onskeliste-ruter', 'onskeliste-punkter'];
+  const KLIKKBARE = ['ruter-treff', 'punkter', 'nabolag-punkter', 'onskeliste-ruter', 'onskeliste-punkter'];
 
   /* Alle tegnede nabolag har flate og omriss hele tiden (større område og kjerne), i samme stil som
      når nabolaget er valgt. Flatene er gjennomsiktige, så kjernen — som ligger oppå — blir mørkere. Navnet står under ikonet, men først når man har zoomet inn og
@@ -1081,6 +1082,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       clusterMaxZoom: 12,
       clusterRadius: 14      // klynger bare der ikonene ellers ville overlappe
     });
+    kart.addSource('nabolag', { type: 'geojson', data: tomSamling() });
 
     const lag = Object.assign({}, OMRADELAG, FOKUSLAG, KARTLAG);
     Object.keys(lag).forEach(id => {
@@ -1110,8 +1112,9 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     KLIKKBARE.forEach(id => {
       kart.on('click', id, e => {
         // Punkter ligger over linjer: klikk på et punkt skal ikke også velge linjen under.
-        // Ønskelisten ligger under de besøkte stedene på samme måte.
-        if (id !== 'punkter' && kart.queryRenderedFeatures(e.point, { layers: ['punkter', 'klynger'] }).length) return;
+        // Ønskelisten ligger under de besøkte stedene på samme måte, og nabolagene øverst.
+        const over = id === 'nabolag-punkter' ? [] : id === 'punkter' ? ['nabolag-punkter'] : ['nabolag-punkter', 'punkter', 'klynger'];
+        if (over.length && kart.queryRenderedFeatures(e.point, { layers: over }).length) return;
         const o = oppslagFraId(e.features[0].properties._id);
         if (!o) return;
         tips.remove();
@@ -1147,7 +1150,9 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     const medGeo = vis.filter(o => o.f.geometry);
     const punkter = medGeo.filter(o => !o.erLinje).map(o => o.f);
     const linjer = medGeo.filter(o => o.erLinje).map(o => o.f);
-    kart.getSource('steder').setData({ type: 'FeatureCollection', features: punkter });
+    const erNabolag = f => f.properties.kategori === 'nabolag';
+    kart.getSource('steder').setData({ type: 'FeatureCollection', features: punkter.filter(f => !erNabolag(f)) });
+    kart.getSource('nabolag').setData({ type: 'FeatureCollection', features: punkter.filter(erNabolag) });
     kart.getSource('ruter').setData({ type: 'FeatureCollection', features: linjer });
     const omrader = vis.flatMap(o => {
       const flater = o.fokus.filter(x => x.properties.rolle === 'omrade');
