@@ -56,19 +56,72 @@ og kobles hit på navn: type "område", "gate" eller "rute".
 Den gamle kongebyen innenfor kanalene, med Grand Palace, Wat Phra Kaew og Wat Pho.
 - en: The old royal city inside the canals, with the Grand Palace, Wat Phra Kaew and Wat Pho.
 
-### Talat Noi
+### Talat Noi ★
 - sted: 13.73408, 100.51211
 - google: ChIJS7pg-tiY4jARZz6TpYihORk
-- gater: Song Wat Road, Soi Wanit 2
-Gammelt kinesisk kvartal ved elva, med smug, verksteder og kaféer i gamle butikkhus. Song Wat Road fortsetter langs elva mot Chinatown.
-- en: An old Chinese quarter by the river, with alleys, workshops and cafés in old shophouses. Song Wat Road carries on along the river towards Chinatown.
+- gater: Song Wat Road, Soi Charoen Krung 22
+Gammelt kinesisk kvartal ved elva, med smug, verksteder og kaféer i gamle butikkhus. Gatekunsten finnes rundt Soi Charoen Krung 22, og Song Wat Road går langs elva mot Chinatown.
+- en: An old Chinese quarter by the river, with alleys, workshops and cafés in old shophouses. The street art is around Soi Charoen Krung 22, and Song Wat Road runs along the river towards Chinatown.
 
-### Charoen Krung
+### Charoen Krung ★
 - sted: 13.72670, 100.51500
 - google: ChIJn1lCpumY4jARTDuaqvoBwRM
 - gater: Charoen Krung Road
 Bangkoks eldste gate, nå kalt Creative District, med gallerier, designsenteret TCDC og kaféer i gamle lagerbygninger.
 - en: Bangkok’s oldest street, now known as the Creative District, with galleries, the TCDC design centre and cafés in old warehouses.
+
+## Restauranter
+
+### Charmgang ★
+- sted: 13.73278, 100.51509
+- google: ChIJVfEm3omZ4jARgvvkaIhAh7o
+- nettside: https://facebook.com/charmgangcurryshop
+Talat Noi
+
+Thai, karrier.
+
+- en: Talat Noi
+
+Thai, curries.
+
+### Opium Bar ★
+- sted: 13.73919, 100.50850
+- google: ChIJ95ecsjyZ4jARLm3_GznbJsc
+- nettside: https://www.opiumbarbangkok.com/
+Chinatown
+
+Takbar over Potong, i samme gamle butikkhus.
+
+- en: Chinatown
+
+Rooftop bar above Potong, in the same old shophouse.
+
+### Restaurant Potong
+- sted: 13.73915, 100.50849
+- google: ChIJd7grWxeZ4jAR8KwClMpGmHo
+- nettside: http://www.restaurantpotong.com/
+- status: onskeliste
+Chinatown
+
+Thai-kinesisk smaksmeny i et 120 år gammelt butikkhus.
+
+- en: Chinatown
+
+Thai-Chinese tasting menu in a 120-year-old shophouse.
+
+## Barer
+
+### BKK Social Club
+- sted: 13.71204, 100.51034
+- google: ChIJLwlh74qZ4jARfZDqGK5qtE4
+- nettside: https://www.fourseasons.com/bangkok/dining/lounges/bkk-social-club/
+Charoen Krung
+
+Cocktailbar på Four Seasons ved elva.
+
+- en: Charoen Krung
+
+Cocktail bar at the Four Seasons by the river.
 
 ## Kaféer
 
@@ -84,7 +137,7 @@ Kafé.
 
 Café.
 
-### Hēi Jīi
+### Hēi Jīi ★
 - sted: 13.72777, 100.51635
 - google: ChIJzX_x9XCZ4jAR5nV8GeVi-IY
 - nettside: https://www.facebook.com/H%C4%92IJ%C4%ABi-Bangkok-544155406029047
@@ -121,18 +174,6 @@ Designsenter med stort bibliotek og utstillinger, i det gamle hovedpostkontoret.
 
 Design centre with a large library and exhibitions, in the old General Post Office.
 
-### Warehouse 30
-- sted: 13.72837, 100.51458
-- google: ChIJhbRNuNuY4jARnvfgK79ciCM
-- nettside: http://www.warehouse30.com/
-Charoen Krung
-
-Gamle lagerbygninger med gallerier, butikker og kafé.
-
-- en: Charoen Krung
-
-Old warehouses with galleries, shops and a café.
-
 ### ATT 19
 - sted: 13.72891, 100.51514
 - google: ChIJxz7AVBSZ4jARN1_W35voh7M
@@ -145,19 +186,71 @@ Galleri.
 
 Gallery.
 
-### River City Bangkok
-- sted: 13.73021, 100.51327
-- google: ChIJmZkDtcOZ4jAR6EPPQmI_NXg
-- nettside: https://rivercitybangkok.com/
-Talat Noi
+## Butikker
 
-Kunst- og antikksenter ved elva.
+### Balzac ★
+- sted: 13.72780, 100.51644
+- google: ChIJ7RRHPwCZ4jARzqnZzvzVNTU
+- nettside: https://balzacbangkok.com/
+Charoen Krung
 
-- en: Talat Noi
+Butikk i Charoen Krung 43.
 
-Art and antiques centre by the river.
+- en: Charoen Krung
+
+Shop on Charoen Krung 43.
+
+## Hoteller
+
+### Mandarin Oriental ★
+- sted: 13.72362, 100.51432
+- google: ChIJs6CnycSY4jAR5cqJZjPOsgs
+- nettside: https://www.mandarinoriental.com/en/bangkok/chao-phraya-river
+Charoen Krung
+
+Det klassiske hotellet ved elva, fra 1876.
+
+- en: Charoen Krung
+
+The classic hotel by the river, from 1876.
+
+### Capella Bangkok
+- sted: 13.71310, 100.51102
+- google: ChIJqcNXkyaZ4jAR6PgpLK1RNzI
+- nettside: https://www.capellahotels.com/en/capella-bangkok
+Charoen Krung
+
+Hotell ved elva.
+
+- en: Charoen Krung
+
+Hotel by the river.
+
+### The Peninsula Bangkok
+- sted: 13.72312, 100.51080
+- google: ChIJp8e_7NOY4jARN83NYCd7tVc
+- nettside: https://www.peninsula.com/en/bangkok/5-star-luxury-hotel-riverside
+Khlong San
+
+Hotell på Thonburi-siden av elva, med båt over til Charoen Krung.
+
+- en: Khlong San
+
+Hotel on the Thonburi side of the river, with a boat across to Charoen Krung.
 
 ## Verdt en omvei
+
+### Warehouse 30 ★
+- sted: 13.72837, 100.51458
+- google: ChIJhbRNuNuY4jARnvfgK79ciCM
+- nettside: http://www.warehouse30.com/
+Charoen Krung
+
+Gamle lagerbygninger med gallerier, butikker og kafé.
+
+- en: Charoen Krung
+
+Old warehouses with galleries, shops and a café.
 
 ### Asiatique The Riverfront
 - sted: 13.70442, 100.50327
@@ -175,7 +268,7 @@ Night market by the river, with a Ferris wheel.
 
 ## Nabolag og gater
 
-### Silom
+### Silom ★
 - sted: 13.72374, 100.52956
 - google: ChIJueLCUy2f4jAREIniXbIAAQQ
 - gater: Pan Road
@@ -185,19 +278,46 @@ Forretningsstrøket mellom Surawong Road og Sathorn, med gallerier og kaféer i 
 ### Sathorn
 - sted: 13.71504, 100.53354
 - google: ChIJ0QH_PjWf4jARQE_iXbIAAQM
-- gater: Suan Phlu Road, Soi Sathon 1, Soi Ngam Du Phli
+- gater: Suan Phlu Road
 Sør for Sathorn Road: ambassader, Suan Phlu og smågatene rundt, roligere enn Silom.
 - en: South of Sathorn Road: embassies, Suan Phlu and the small streets around it, quieter than Silom.
 
-### Pathum Wan
+### Pathum Wan ★
 - sted: 13.74618, 100.53078
 - google: ChIJ9dY-MdSe4jAR8E3iXbIAAQM
+- gater: Siam Square Walking Street, Lang Suan, Soi Ton Son
 Sentrum, med Siam, Ratchaprasong og Ploenchit, kunstsenteret BACC og Lumphini-parken.
 - en: The centre, with Siam, Ratchaprasong and Ploenchit, the BACC arts centre and Lumphini Park.
 
+## Restauranter
+
+### Samrub Samrub Thai
+- sted: 13.72690, 100.53746
+- google: ChIJP-vfELmZ4jARGlXpoG1esoU
+- nettside: https://samrubsamrubthai.com/
+- status: onskeliste
+Silom
+
+Thai.
+
+- en: Silom
+
+Thai.
+
 ## Kaféer
 
-### Luka Cafe
+### Sarnies Roastery ★
+- sted: 13.74260, 100.54494
+- google: ChIJQ4IxT_ie4jARS959Jzg1ick
+Pathum Wan
+
+Kafé og brenneri i Soi Ton Son.
+
+- en: Pathum Wan
+
+Café and roastery on Soi Ton Son.
+
+### Luka Cafe ★
 - sted: 13.72158, 100.52382
 - google: ChIJhXVods6Y4jAR-rsOEBrSXdI
 - nettside: http://www.lukabangkok.com/
@@ -234,30 +354,6 @@ Galleri for samtidskunst i Soi Ton Son.
 - en: Pathum Wan
 
 Contemporary art gallery on Soi Ton Son.
-
-### Kathmandu Photo Gallery
-- sted: 13.72390, 100.52333
-- google: ChIJ-W1c-9GY4jAR1n1ZlN0PZeQ
-- nettside: http://www.kathmanduphotobkk.com/
-Silom
-
-Fotogalleri i et restaurert butikkhus i Pan Road, drevet av fotografen Manit Sriwanichpoom.
-
-- en: Silom
-
-Photography gallery in a restored shophouse on Pan Road, run by the photographer Manit Sriwanichpoom.
-
-### Bangkok CityCity Gallery
-- sted: 13.72355, 100.54458
-- google: ChIJmUvZ4ySf4jARmRj6t3Ag_Ww
-- nettside: http://bangkokcitycity.com/
-Sathorn
-
-Galleri for samtidskunst.
-
-- en: Sathorn
-
-Contemporary art gallery.
 
 ## Butikker
 
@@ -308,21 +404,6 @@ A library founded in 1869 in a neoclassical building, with English-language book
 - gater: Soi Ari, Soi Ari 1
 Rolig boligstrøk nord for sentrum, med kaféer og små restauranter i soiene rundt Ari-stasjonen.
 - en: A quiet residential area north of the centre, with cafés and small restaurants in the sois around Ari station.
-
-## Restauranter
-
-### Phed Phed cafe
-- sted: 13.81761, 100.56155
-- google: ChIJt2dgjB6c4jARwE5aJT2pRQQ
-- nettside: http://www.phedphed.com/
-- utenfor: ja
-Lat Phrao
-
-Thai, sterkt krydret: nudler og papayasalat.
-
-- en: Lat Phrao
-
-Thai, very spicy: noodles and papaya salad.
 
 ## Kaféer
 
