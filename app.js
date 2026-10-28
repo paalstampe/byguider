@@ -808,6 +808,8 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
   const tips = new maplibregl.Popup({ closeButton: false, closeOnClick: false, offset: 15, className: 'tips' });
   const ekteHover = window.matchMedia('(hover: hover) and (pointer: fine)');
   const smalSkjerm = window.matchMedia('(max-width: 900px)');   // samme brytepunkt som i style.css
+  // Liggende mobil har menyen ved siden av kartet, som på Mac (samme spørring som i style.css).
+  const liggendeMobil = window.matchMedia('(max-width: 900px) and (orientation: landscape) and (max-height: 500px)');
   popup.on('open', () => tips.remove());   // aldri navnelapp og popup oppå hverandre
 
   /* Farger defineres étt sted — KATEGORIER — og oversettes til et match-uttrykk. */
@@ -1650,8 +1652,8 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     tegnListe(synlige());
 
     // Mobil: kartet ligger over lista. Valg fra lista hopper opp til kartet, med infoboksen
-    // åpen — som i Reiseplanlegging.
-    if (flyTil && smalSkjerm.matches) {
+    // åpen — som i Reiseplanlegging. Ikke liggende, der kartet allerede står ved siden av.
+    if (flyTil && smalSkjerm.matches && !liggendeMobil.matches) {
       document.querySelector('.kartflate').scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
