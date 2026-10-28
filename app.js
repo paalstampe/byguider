@@ -72,6 +72,7 @@ const TEKST = {
     sprak: 'Språk',
     duErHer: 'Du er her',
     byguider: 'Byguider',
+    tilLista: 'Liste ↓',
     sok: 'Søk etter navn eller notat',
     sokEtikett: 'Søk',
     tomSok: 'Tøm søket',
@@ -112,6 +113,7 @@ const TEKST = {
     sprak: 'Language',
     duErHer: 'You are here',
     byguider: 'City guides',
+    tilLista: 'List ↓',
     sok: 'Search names and notes',
     sokEtikett: 'Search',
     tomSok: 'Clear search',
@@ -622,6 +624,7 @@ const SKALL = `
   </aside>
   <main class="kartflate">
     <div id="kart"></div>
+    <button type="button" class="til-lista" id="til-lista" data-t="tilLista"></button>
   </main>
 </div>`;
 
@@ -1733,6 +1736,11 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     el.sokTom.hidden = true;
     el.sok.focus();
     tegn();
+  });
+
+  // Mobil, stående: kartet tar alle fingerbevegelser, så knappen nederst i kartet er veien ned til menyen.
+  document.getElementById('til-lista').addEventListener('click', () => {
+    document.querySelector('.sidebar').scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 
   /* ---------- side fra metadata ---------- */
