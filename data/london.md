@@ -7,8 +7,8 @@ kicker: En høyst subjektiv guide
 kicker-en: An opinionated guide
 senter: 51.5105, -0.1235
 zoom: 11
-senter-mobil: 51.5215, -0.1145
-zoom-mobil: 11.2
+senter-mobil: 51.5200, -0.1350
+zoom-mobil: 10.7
 oppdatert: 2026-10-24
 ---
 
