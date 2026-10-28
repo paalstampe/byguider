@@ -5,7 +5,8 @@
 # Bruk: .claude/server.sh [port]      (kjør i bakgrunnen; stopp med pkill -f .claude/server.sh)
 cd "$(dirname "$0")/.." || exit 1
 PORT="${1:-8000}"
-exec python3 - "$PORT" <<'PY'
+# Skriptets sti sendes med (ubrukt), så «pkill -f .claude/server.sh» finner Python-prosessen etter exec.
+exec python3 - "$PORT" "$0" <<'PY'
 import functools, http.server, sys
 class Handler(http.server.SimpleHTTPRequestHandler):
     def end_headers(self):
