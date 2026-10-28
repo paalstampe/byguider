@@ -939,12 +939,17 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       layout: { 'line-join': 'round' },
       paint: { 'line-color': AKSENT, 'line-width': 1.5, 'line-opacity': 0.8, 'line-dasharray': [3, 2] }
     },
-    /* Markerte gater vises hele tiden, i samme stil som når nabolaget er valgt. */
+    /* Markerte gater vises hele tiden. Når hele byen vises, er de tynne og svake, og de får
+       full styrke rundt zoom 13 (samme stil som når nabolaget er valgt). */
     'omrader-gater': {
       source: 'omrader', type: 'line',
       filter: ['==', ['get', 'rolle'], 'gate'],
       layout: { 'line-cap': 'round', 'line-join': 'round' },
-      paint: { 'line-color': AKSENT, 'line-width': ['interpolate', ['linear'], ['zoom'], 12, 3, 16, 6], 'line-opacity': 0.7 }
+      paint: {
+        'line-color': AKSENT,
+        'line-width': ['interpolate', ['linear'], ['zoom'], 10, 1, 13, 3, 16, 6],
+        'line-opacity': ['interpolate', ['linear'], ['zoom'], 10, 0.35, 13, 0.7]
+      }
     },
     'omrader-navn': {
       source: 'omrader', type: 'symbol', minzoom: NABOLAGSNAVN_MINZOOM,
