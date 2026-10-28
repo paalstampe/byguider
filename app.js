@@ -873,7 +873,8 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
         'icon-size': ['interpolate', ['linear'], ['zoom'], 10, 0.8, 14, 0.95],
         'icon-allow-overlap': true,
         'icon-ignore-placement': true,
-        'symbol-sort-key': ['case', FAV, 1, 0]
+        // Nabolag øverst, så de aldri havner under et sted; deretter favoritter
+        'symbol-sort-key': ['+', ['case', FAV, 1, 0], ['case', ['==', ['get', 'kategori'], 'nabolag'], 2, 0]]
       }
     }
   };
@@ -923,7 +924,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
   /* Alle tegnede nabolag har flate og omriss hele tiden (større område og kjerne), i samme stil som
      når nabolaget er valgt. Flatene er gjennomsiktige, så kjernen — som ligger oppå — blir mørkere. Navnet står under ikonet, men først når man har zoomet inn og
      det er plass. Ingen infoboks — ikonet velger nabolaget som før. */
-  const NABOLAGSNAVN_MINZOOM = 13;
+  const NABOLAGSNAVN_MINZOOM = 12;
   const OMRADELAG = {
     'omrader-flate': {
       source: 'omrader', type: 'fill',
@@ -948,7 +949,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       filter: ['==', ['geometry-type'], 'Point'],
       layout: {
         'text-anchor': 'top',
-        'text-offset': [0, 1],
+        'text-offset': [0, 1.2],
         'text-field': ['get', 'navn'],
         'text-font': KARTSKRIFT,
         'text-size': 12,
@@ -983,23 +984,22 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
   /* Tegner ett ikon per kategori til et lerret: farget sirkel, papirkant, hvit glyf.
      Favoritter får i tillegg en kobberring utenfor papirkanten — samme størrelse ellers.
-     Lerretet har luft til ringen også for vanlige ikoner, så alle skaleres likt. */
-  function lagIkon(farge, glyf, favoritt) {
-    const R = 2, D = 30 * R;
+     Lerretet har luft til ringen også for vanlige ikoner, så alle skaleres likt.
+     Nabolag er firkanter og litt større (R), så de skiller seg ut fra stedene. */
+  function lagIkon(farge, glyf, favoritt, firkant) {
+    const R = firkant ? 2.3 : 2, D = Math.round(30 * R);
     const c = document.createElement('canvas');
     c.width = c.height = D;
     const x = c.getContext('2d');
-    if (favoritt === 'ring') return lagRing(x, D, R, glyf, farge || ONSKEFARGE);
-    x.beginPath();
-    x.arc(D / 2, D / 2, 11.5 * R, 0, 2 * Math.PI);
+    if (favoritt === 'ring') return lagRing(x, D, R, glyf, farge || ONSKEFARGE, firkant);
+    form(x, D, 11.5 * R, firkant);
     x.fillStyle = farge;
     x.fill();
     x.lineWidth = 1.5 * R;
     x.strokeStyle = PAPIR;
     x.stroke();
     if (favoritt) {
-      x.beginPath();
-      x.arc(D / 2, D / 2, 13.25 * R, 0, 2 * Math.PI);
+      form(x, D, 13.25 * R, firkant);
       x.lineWidth = 1.5 * R;
       x.strokeStyle = AKSENT;
       x.stroke();
@@ -1017,9 +1017,8 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
   /* Ønskeliste: bare omriss og glyf i dempet farge, uten fyll. En smal papirkant på begge sider
      av strekene holder dem lesbare oppå gater og bygninger. */
-  function lagRing(x, D, R, glyf, farge) {
-    x.beginPath();
-    x.arc(D / 2, D / 2, 11 * R, 0, 2 * Math.PI);
+  function lagRing(x, D, R, glyf, farge, firkant) {
+    form(x, D, 11 * R, firkant);
     x.lineWidth = 4 * R;
     x.strokeStyle = PAPIR;
     x.stroke();
@@ -1040,15 +1039,23 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     return x.getImageData(0, 0, D, D);
   }
 
+  /* Sirkel med radius r, eller firkant med halv side litt under r (så flaten blir omtrent lik). */
+  function form(x, D, r, firkant) {
+    x.beginPath();
+    if (firkant) { const h = r * 0.9; x.rect(D / 2 - h, D / 2 - h, 2 * h, 2 * h); }
+    else x.arc(D / 2, D / 2, r, 0, 2 * Math.PI);
+  }
+
   function registrerIkoner() {
     Object.keys(KATEGORIER).forEach(k => {
       const kat = KATEGORIER[k];
       if (!kat.ikon) return;
       const glyf = IKONER[kat.ikon] || IKONER.prikk;
-      kart.addImage('ikon-' + k, lagIkon(kat.farge, glyf), { pixelRatio: 2 });
-      kart.addImage('ikon-fav-' + k, lagIkon(kat.farge, glyf, true), { pixelRatio: 2 });
-      kart.addImage('ikon-ring-' + k, lagIkon(null, glyf, 'ring'), { pixelRatio: 2 });
-      kart.addImage('ikon-ring-fav-' + k, lagIkon(AKSENT, glyf, 'ring'), { pixelRatio: 2 });
+      const firkant = k === 'nabolag';
+      kart.addImage('ikon-' + k, lagIkon(kat.farge, glyf, false, firkant), { pixelRatio: 2 });
+      kart.addImage('ikon-fav-' + k, lagIkon(kat.farge, glyf, true, firkant), { pixelRatio: 2 });
+      kart.addImage('ikon-ring-' + k, lagIkon(null, glyf, 'ring', firkant), { pixelRatio: 2 });
+      kart.addImage('ikon-ring-fav-' + k, lagIkon(AKSENT, glyf, 'ring', firkant), { pixelRatio: 2 });
     });
     kart.addImage('ikon-ring-ukjent', lagIkon(null, IKONER.prikk, 'ring'), { pixelRatio: 2 });
     kart.addImage('ikon-ring-fav-ukjent', lagIkon(AKSENT, IKONER.prikk, 'ring'), { pixelRatio: 2 });
