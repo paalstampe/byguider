@@ -752,6 +752,9 @@ button.pop-lenke {
   .teller-rad { position: sticky; top: 0; z-index: 2; background: var(--papir); }
 }
 
+/* Knapp nederst til venstre i kartet som ruller ned til menyen. Bare på mobil, stående (se under). */
+.til-lista { display: none; }
+
 /* ---------- Mobil ---------- */
 
 @media (max-width: 900px) {
@@ -773,6 +776,23 @@ button.pop-lenke {
   .sprakvalg { top: -7px; }
   .sprakvalg button { padding: 6px 5px 3px; }   /* større trykkflate på mobil */
   .by-navn { font-size: 26px; }
+  .til-lista {
+    display: block;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    z-index: 2;
+    height: 34px;
+    padding: 0 12px;
+    border: 1px solid var(--kant);
+    border-radius: 3px;
+    background: var(--kort);
+    color: var(--tekst);
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+  }
 }
 
 /* Liggende mobil: lav og bred skjerm. Menyen i en smal kolonne til venstre som ruller for seg,
@@ -790,6 +810,7 @@ button.pop-lenke {
   .kartflate { order: 0; flex: 1 1 auto; height: auto; min-height: 0; }
   .sidebar-head { padding: 18px 20px 12px; }
   .tittel { font-size: 26px; }
+  .til-lista { display: none; }
 }
 
 @media (max-width: 600px) {
