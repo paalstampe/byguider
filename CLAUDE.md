@@ -78,6 +78,9 @@ Playwright med `colorScheme: 'light'` og `'dark'`. Ta bildene fra stam.pe etter 
   !3d<bredde>!4d<lengde>; Place ID = base64url(0a 12 09 + a som 8 byte little-endian + 11 + b som 8 byte LE),
   uten «=». Gir søket en liste, har lenkene ChIJ… direkte i «!19s». Bruk OpenStreetMap bare som reserve,
   og si fra hvis du er usikker på plasseringen.
+- Lagrede lister i Google Maps: be Pål om delt liste-lenke. Fra lista (åpnet i nettleserpanelet) gir
+  fetch('/maps/preview/entitylist/getlist?authuser=0&hl=en&pb=!1m4!1s<liste-id>!2e1!3m1!1e1!2e2!3e2!4i500!16b1')
+  navn, koordinater og 0x<a>:0x<b> for alle stedene. Sjekk at stedene ikke er permanent stengt.
 - Nettside hentes samme sted: lenken «Website» på stedets side i Google Maps (a[data-item-id="authority"]).
   Ta bare med stedets egen side (ev. Instagram) — ikke bookingtjenester eller tredjepartsguider.
 - Restauranter, kaféer, butikker o.l.: første linje i notatet (og i en:) er området/nabolaget stedet ligger i
@@ -86,7 +89,7 @@ Playwright med `colorScheme: 'light'` og `'dark'`. Ta bildene fra stam.pe etter 
   med notat som skisserer hele nabolaget, avgrenset av navngitte gater (koordinater fra OpenStreetMap/Overpass).
   Kjerne er valgfritt — bare der den gir mening; da kommer den som et polygon nr. 2 etter skissen (som i New York),
   Kartet legger nabolagsknappen midt i kjernen, ellers midt i området — sted: (fra Google) brukes ikke til den.
-  Gater Pål ber om å markere legges inn som «gate».
+  Gater Pål ber om å markere legges inn som «gate»: én enkel strek (ikke begge kjørebaner), innenfor nabolaget.
 - Avgrensningen skal være presis, ikke en skisse med rette streker. Fremgangsmåte for nye nabolag:
   1. Finn definisjonen: søk bredt og dypt (byleksikon, Wikipedia, lokale kilder) og se etter offentlige grenser.
      London: bydelenes conservation areas (planning.data.gov.uk, API med geometry=<WKT>). New York: byplankontorets
