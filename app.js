@@ -936,6 +936,13 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       layout: { 'line-join': 'round' },
       paint: { 'line-color': AKSENT, 'line-width': 1.5, 'line-opacity': 0.8, 'line-dasharray': [3, 2] }
     },
+    /* Markerte gater vises hele tiden, i samme stil som når nabolaget er valgt. */
+    'omrader-gater': {
+      source: 'omrader', type: 'line',
+      filter: ['==', ['get', 'rolle'], 'gate'],
+      layout: { 'line-cap': 'round', 'line-join': 'round' },
+      paint: { 'line-color': AKSENT, 'line-width': ['interpolate', ['linear'], ['zoom'], 12, 3, 16, 6], 'line-opacity': 0.7 }
+    },
     'omrader-navn': {
       source: 'omrader', type: 'symbol', minzoom: NABOLAGSNAVN_MINZOOM,
       filter: ['==', ['geometry-type'], 'Point'],
@@ -1135,10 +1142,10 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     kart.getSource('ruter').setData({ type: 'FeatureCollection', features: linjer });
     const omrader = vis.flatMap(o => {
       const flater = o.fokus.filter(x => x.properties.rolle === 'omrade');
-      if (!flater.length) return [];
+      const gater = o.fokus.filter(x => x.properties.rolle === 'gate');
       const navn = { navn: visNavn(o.p) };
-      return flater.map(x => ({ type: 'Feature', geometry: x.geometry, properties: navn }))
-        .concat(o.f.geometry ? [{ type: 'Feature', geometry: o.f.geometry, properties: navn }] : []);
+      return gater.concat(!flater.length ? [] : flater.map(x => ({ type: 'Feature', geometry: x.geometry, properties: navn }))
+        .concat(o.f.geometry ? [{ type: 'Feature', geometry: o.f.geometry, properties: navn }] : []));
     });
     kart.getSource('omrader').setData({ type: 'FeatureCollection', features: omrader });
     if (kart.getSource('onskeliste')) {
