@@ -72,7 +72,7 @@ html, body {
   text-decoration: none;
 }
 
-.smuler a:hover { color: var(--aksent); }
+@media (hover: hover) and (pointer: fine) { .smuler a:hover { color: var(--aksent); } }
 .smuler [aria-current] { color: var(--tekst); }
 .smule-skille { margin: 0 8px; color: var(--kant); font-weight: 400; }
 
@@ -98,7 +98,7 @@ html, body {
   padding: 2px 3px 1px;
   cursor: pointer;
 }
-.sprakvalg button:hover { color: var(--aksent); }
+@media (hover: hover) and (pointer: fine) { .sprakvalg button:hover { color: var(--aksent); } }
 .sprakvalg button[aria-pressed="true"] { color: var(--tekst); border-bottom-color: var(--aksent); }
 .sprakvalg button:focus-visible { outline: 1px solid var(--aksent); outline-offset: 2px; }
 
@@ -226,7 +226,7 @@ html, body {
   transition: border-color 0.12s, color 0.12s, background 0.12s;
 }
 
-.chip:hover { border-color: var(--aksent); color: var(--aksent); }
+@media (hover: hover) and (pointer: fine) { .chip:hover { border-color: var(--aksent); color: var(--aksent); } }
 
 .chip[aria-pressed="true"] {
   background: var(--aksent);
@@ -234,7 +234,7 @@ html, body {
   color: var(--papir);
 }
 
-.chip[aria-pressed="true"]:hover { background: var(--aksent-hover); border-color: var(--aksent-hover); color: var(--papir); }
+@media (hover: hover) and (pointer: fine) { .chip[aria-pressed="true"]:hover { background: var(--aksent-hover); border-color: var(--aksent-hover); color: var(--papir); } }
 
 .chip .prikk {
   width: 7px;
@@ -284,7 +284,7 @@ html, body {
   text-underline-offset: 3px;
 }
 
-.nullstill:hover { color: var(--aksent-hover); }
+@media (hover: hover) and (pointer: fine) { .nullstill:hover { color: var(--aksent-hover); } }
 
 /* ---------- Liste ---------- */
 
@@ -314,7 +314,7 @@ html, body {
   cursor: pointer;
 }
 
-.oppslag:hover .oppslag-navn { color: var(--aksent); }
+@media (hover: hover) and (pointer: fine) { .oppslag:hover .oppslag-navn { color: var(--aksent); } }
 
 .oppslag.er-valgt {
   padding-left: 14px;
@@ -449,7 +449,7 @@ html, body {
 }
 
 .til-byer::before { content: '← '; }
-.til-byer:hover { color: var(--aksent-hover); }
+@media (hover: hover) and (pointer: fine) { .til-byer:hover { color: var(--aksent-hover); } }
 
 /* ---------- Forside: liste over byer ---------- */
 
@@ -490,7 +490,7 @@ html, body {
   color: var(--dempet);
 }
 
-.by-lenke:hover .by-navn { color: var(--aksent); }
+@media (hover: hover) and (pointer: fine) { .by-lenke:hover .by-navn { color: var(--aksent); } }
 
 /* Miniatyr av byens åpningsside, 4:3. Tom ramme når bildet mangler. */
 .miniatyr {
@@ -573,7 +573,7 @@ html, body {
 
 .maplibregl-ctrl-group button { width: 30px; height: 30px; }
 .maplibregl-ctrl-group button + button { border-top: 1px solid var(--kant); }
-.maplibregl-ctrl-group button:hover { background-color: var(--papir) !important; }
+@media (hover: hover) and (pointer: fine) { .maplibregl-ctrl-group button:hover { background-color: var(--papir) !important; } }
 
 .ktrl-hjem { display: flex; align-items: center; justify-content: center; color: var(--tekst); }
 
@@ -669,7 +669,7 @@ html, body {
   background: none;
 }
 
-.pop .maplibregl-popup-close-button:hover { color: var(--aksent); }
+@media (hover: hover) and (pointer: fine) { .pop .maplibregl-popup-close-button:hover { color: var(--aksent); } }
 
 /* Navnelapp ved hover */
 .tips { pointer-events: none; }
@@ -737,7 +737,7 @@ button.pop-lenke {
   text-underline-offset: 3px;
 }
 
-.pop-lenke:hover { color: var(--aksent-hover); }
+@media (hover: hover) and (pointer: fine) { .pop-lenke:hover { color: var(--aksent-hover); } }
 
 /* Desktop: hele sidepanelet ruller (ett rullefelt), tellerlinjen blir liggende øverst. */
 @media (min-width: 901px) {
