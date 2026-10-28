@@ -37,6 +37,9 @@ Sist oppdatert: 28. oktober 2026.
   og distrikter (khwaeng/khet) fra OSM der de passer; Talat Noi tar med Song Wat-stripa mellom elva og Sampheng,
   og Ari og Thonglor er sporet langs gatene. Gatekunsten i Talat Noi er markert i Soi Charoen Krung 22.
   Miniatyrer i lys og mørk.
+- 28.10. også: markerte gater vises hele tiden (PR #63). Nabolag er lyse firkanter med kobberkant, litt større
+  enn stedene og øverst, og klyngene har fyll i kartets bakgrunnsfarge (PR #64). Miniatyrer tatt på nytt overalt,
+  og stam.pe-forsiden nevner nå Tokyo og Bangkok.
 - Ingen åpne grener utenom `main`.
 
 ## Neste steg
@@ -44,7 +47,6 @@ Sist oppdatert: 28. oktober 2026.
 - Fyll på data etter hvert som Pål kommer med steder og navneendringer, i alle byer.
 - Tokyo: flere notater er bare én linje («Sushi.», «Bar.», «Moderne vietnamesisk.»). Fyll på når Pål har tekst.
   Bar Penguin, Apollo Bar, Kihara, Ăn Đi og Kosho SamenoHa mangler nettside.
-- stam.pe-forsiden (repo `paalstampe.github.io`) beskriver byguidene som «London, Nice, Oslo og New York». Tokyo og Bangkok mangler.
 - Bangkok: notatene er korte utkast (mange bare «Kafé.»/«Galleri.»). Fyll på når Pål har tekst. Mangler nettside: some time blue cafe,
   Charoen 43, Siwilai Store og Sarnies Roastery (bare Linktree). Homu (Charoen Krung 44) finnes ikke lenger på adressen; en «HOMU» ved
   Sathorn/Lumphini kan være samme sted. Balzac har nesten samme adresse som Charoen 43 Art & Eatery; sjekk om Charoen 43 er borte.
@@ -65,6 +67,9 @@ Sist oppdatert: 28. oktober 2026.
   så kvartalene (khwaeng) og distriktene (khet) brukes der de passer, ellers gater sporet i OSM.
 - 2026-10-28: Song Wat Road skal ligge inni Talat Noi, så nabolaget tar med stripa mellom elva og Sampheng (Soi Wanit 1).
 - 2026-10-28: Nye byer kan bygges fra Påls delte lister i Google Maps (oppskrift i CLAUDE.md, Data).
+- 2026-10-28: Markerte gater vises hele tiden, ikke bare når nabolaget er valgt.
+- 2026-10-28: Nabolag er lyse, større firkanter, men ligger fortsatt i klyngene. Et forsøk med nabolag utenfor klyngene
+  ble rotete når de havnet oppå andre ikoner. Navnet vises fra zoom 13, siden klyngene finnes til zoom 12.
 - 2026-10-28: Gater markeres som én enkel strek (ikke begge kjørebaner), og bare de som er verdt å gå: i Pathum Wan Lang Suan og Soi Ton Son.
 
 - 2026-09-27: Flerbys-arkitektur med én app.js og stubbmapper per by, og Leaflet → MapLibre. Grunnen var at én kodebase skal betjene alle byene, og at CARTO fases ut raster.
