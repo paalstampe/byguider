@@ -1,10 +1,10 @@
 {
   "byer": [
-    {"id": "london", "navn": "London", "land": "Storbritannia", "land_en": "United Kingdom", "data": "data/london.md", "geometri": "data/london-geometri.geojson"},
-    {"id": "nice", "navn": "Nice", "land": "Frankrike", "land_en": "France", "data": "data/nice.md", "geometri": "data/nice-geometri.geojson"},
-    {"id": "oslo", "navn": "Oslo", "land": "Norge", "land_en": "Norway", "data": "data/oslo.md", "geometri": "data/oslo-geometri.geojson"},
-    {"id": "new-york", "navn": "New York", "land": "USA", "land_en": "United States", "data": "data/new-york.md", "geometri": "data/new-york-geometri.geojson"},
-    {"id": "tokyo", "navn": "Tokyo", "land": "Japan", "land_en": "Japan", "data": "data/tokyo.md", "geometri": "data/tokyo-geometri.geojson"},
-    {"id": "bangkok", "navn": "Bangkok", "land": "Thailand", "land_en": "Thailand", "data": "data/bangkok.md", "geometri": "data/bangkok-geometri.geojson"}
+    {"id": "london", "navn": "London", "data": "data/london.md", "geometri": "data/london-geometri.geojson"},
+    {"id": "nice", "navn": "Nice", "data": "data/nice.md", "geometri": "data/nice-geometri.geojson"},
+    {"id": "oslo", "navn": "Oslo", "data": "data/oslo.md", "geometri": "data/oslo-geometri.geojson"},
+    {"id": "new-york", "navn": "New York", "data": "data/new-york.md", "geometri": "data/new-york-geometri.geojson"},
+    {"id": "tokyo", "navn": "Tokyo", "data": "data/tokyo.md", "geometri": "data/tokyo-geometri.geojson"},
+    {"id": "bangkok", "navn": "Bangkok", "data": "data/bangkok.md", "geometri": "data/bangkok-geometri.geojson"}
   ]
 }
