@@ -24,7 +24,7 @@
     </nav>
     <h1 class="tittel" data-t="tittel">Pål og Vibekes byer</h1>
     <p class="kicker" data-t="kicker">Høyst subjektive byguider</p>
-    <p class="ingress" data-t="ingress">Byene slik vi bruker dem.</p>
+    <p class="ingress" data-t="ingress">Høyst subjektive guider til nabolag, restauranter og annet verdt en omvei. Byene slik vi bruker dem.</p>
   </header>
   <nav class="by-liste" id="by-liste" data-t-aria="byer"></nav>
   <section class="offline-boks" id="offline-boks" hidden>
@@ -47,7 +47,7 @@ if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catc
 const NOKKEL = 'byguider-sprak';
 const TEKST = {
   no: { duErHer: 'Du er her', sidetittel: 'Pål og Vibekes byguider', byguider: 'Byguider', tittel: 'Pål og Vibekes byer', kicker: 'Høyst subjektive byguider',
-        ingress: 'Byene slik vi bruker dem.', byer: 'Byer', sprak: 'Språk',
+        ingress: 'Høyst subjektive guider til nabolag, restauranter og annet verdt en omvei. Byene slik vi bruker dem.', byer: 'Byer', sprak: 'Språk',
         lagreAlle: 'Lagre alle byene for bruk offline',
         lagreMerknad: 'Henter kartene for alle byene, ca. 100 MB i alt. Bruk wifi.',
         lagrer: (by, pst, n, tot) => 'Lagrer ' + by + ' … ' + pst + ' % (' + n + ' av ' + tot + ')',
@@ -59,7 +59,7 @@ const TEKST = {
         slettSporsmal: 'Slette byguidene fra denne enheten? Kartene lastes ned igjen neste gang du åpner en by med nett.',
         klar: dato => 'Tilgjengelig offline · ' + dato },
   en: { duErHer: 'You are here', sidetittel: 'Pål and Vibeke’s city guides', byguider: 'City guides', tittel: 'Pål and Vibeke’s cities', kicker: 'Opinionated city guides',
-        ingress: 'The cities as we use them.', byer: 'Cities', sprak: 'Language',
+        ingress: 'Opinionated guides to neighbourhoods, restaurants and more worth a detour. The cities as we use them.', byer: 'Cities', sprak: 'Language',
         lagreAlle: 'Save all cities for offline use',
         lagreMerknad: 'Downloads the maps for all cities, about 100 MB in total. Use Wi-Fi.',
         lagrer: (by, pst, n, tot) => 'Saving ' + by + ' … ' + pst + '% (' + n + ' of ' + tot + ')',
