@@ -1081,6 +1081,82 @@ Moderne europeisk, Exmouth Market 8–10.
 
 Modern European, 8–10 Exmouth Market.
 
+### Honey & Co. Daily
+- sted: 51.51972, -0.13213
+- google: ChIJRzC4eJYbdkgRxL8U8sXMgak
+- nettside: https://honeyandco.co.uk/
+- status: onskeliste
+Fitzrovia
+
+Midtøstlig bakeri og kjøkken fra Honey & Co., Store Street 19–21.
+
+- en: Fitzrovia
+
+Middle Eastern bakery and kitchen from Honey & Co., 19–21 Store Street.
+
+### Willett's
+- sted: 51.49707, -0.15911
+- google: ChIJgdRjjz4FdkgRnXXelNht0uw
+- nettside: https://www.belmond.com/hotels/europe/uk/london/belmond-cadogan-hotel/dining
+- status: onskeliste
+Chelsea
+
+Restauranten på hotellet Belmond Cadogan, Sloane Street 75.
+
+- en: Chelsea
+
+The restaurant at the Belmond Cadogan hotel, 75 Sloane Street.
+
+### Azzurra
+- sted: 51.49385, -0.15827
+- google: ChIJTyiKcoMFdkgR1TVIAGDlxJk
+- nettside: https://azzurrarestaurant.co.uk/
+- status: onskeliste
+Chelsea
+
+Italiensk, Sloane Street 127–128.
+
+- en: Chelsea
+
+Italian, 127–128 Sloane Street.
+
+### Frescobaldi
+- sted: 51.51238, -0.14104
+- google: ChIJcYnlfyoFdkgRONDVNY-kV4M
+- nettside: https://www.frescobaldi.london/
+- status: onskeliste
+Mayfair
+
+Toskansk, fra vinfamilien Frescobaldi, New Burlington Place 15.
+
+- en: Mayfair
+
+Tuscan, from the Frescobaldi wine family, 15 New Burlington Place.
+
+### Mildreds Soho
+- sted: 51.51303, -0.13640
+- google: ChIJsclcktQEdkgRixfvZ2ewghM
+- nettside: https://www.mildreds.com/soho/
+Soho
+
+Vegetarisk, Lexington Street 45.
+
+- en: Soho
+
+Vegetarian, 45 Lexington Street.
+
+### Monmouth Kitchen
+- sted: 51.51428, -0.12716
+- google: ChIJXUqUJM0EdkgRd4rzBIse6zg
+- nettside: https://www.monmouthkitchen.com/
+Seven Dials
+
+Italiensk og peruansk, Mercer Street 20.
+
+- en: Seven Dials
+
+Italian and Peruvian, 20 Mercer Street.
+
 ## Kaféer
 
 ### Gail's
@@ -1165,6 +1241,153 @@ Bakeri og kafé, Wyndham Place 7A.
 - en: Marylebone
 
 Bakery and café, 7A Wyndham Place.
+
+### Monmouth Coffee Company ★
+- sted: 51.51439, -0.12680
+- google: ChIJa1ukL80EdkgRhI1r9wFYz4g
+- nettside: https://www.monmouthcoffee.co.uk/
+Seven Dials
+
+Kaffebrenneri og kaffebar, Monmouth Street 27.
+
+- en: Seven Dials
+
+Coffee roaster and coffee bar, 27 Monmouth Street.
+
+### Miel Bakery ★
+- sted: 51.52424, -0.13953
+- google: ChIJwYEDBrYFdkgRR1eiBlmtIW4
+- nettside: https://mielbakery.co.uk/
+Fitzrovia
+
+Fransk bakeri, Warren Street 60–61.
+
+- en: Fitzrovia
+
+French bakery, 60–61 Warren Street.
+
+### Qima Café
+- sted: 51.52398, -0.13992
+- google: ChIJtXePX5kbdkgRkSTC1tyoZiI
+- nettside: https://www.qimacafe.com/
+Fitzrovia
+
+Jemenittisk spesialkaffe og konditori, Warren Street 21.
+
+- en: Fitzrovia
+
+Yemeni specialty coffee and pâtisserie, 21 Warren Street.
+
+### Kaffeine
+- sted: 51.51847, -0.14040
+- google: ChIJF0CUcSobdkgRM2Mz_ZJTXgM
+- nettside: https://kaffeine.co.uk/
+Fitzrovia
+
+Kaffebar, Great Titchfield Street 66.
+
+- en: Fitzrovia
+
+Coffee bar, 66 Great Titchfield Street.
+
+### Kronotrop Fitzrovia
+- sted: 51.51791, -0.14048
+- google: ChIJRdIuFtcbdkgRKrqZzsp_YoU
+- nettside: https://www.kronotrop.com/
+Fitzrovia
+
+Spesialkaffe fra Istanbul, Mortimer Street 42.
+
+- en: Fitzrovia
+
+Specialty coffee from Istanbul, 42 Mortimer Street.
+
+### Dal Fiorentino
+- sted: 51.51718, -0.14020
+- google: ChIJbYoaCQAbdkgRS3PYp2rW7wo
+- nettside: https://dalfiorentino.london/
+- status: onskeliste
+Fitzrovia
+
+Florentinske schiacciata-smørbrød, Great Titchfield Street 15.
+
+- en: Fitzrovia
+
+Florentine schiacciata sandwiches, 15 Great Titchfield Street.
+
+### BlackBörk Coffee & Caps
+- sted: 51.51904, -0.13626
+- google: ChIJ5w86QDgbdkgRDNbXvf_o3fc
+- nettside: https://blackborkcoffee.co.uk/
+- status: onskeliste
+Fitzrovia
+
+Kaffe og frokost hele dagen, Charlotte Place 1.
+
+- en: Fitzrovia
+
+Coffee and all-day breakfast, 1 Charlotte Place.
+
+### All'Antico Vinaio
+- sted: 51.51249, -0.13282
+- google: ChIJOdyaJAAFdkgR1w-FnX9K3KY
+- nettside: https://www.allanticovinaio.com/
+Soho
+
+Florentinske schiacciata-smørbrød, Old Compton Street 61.
+
+- en: Soho
+
+Florentine schiacciata sandwiches, 61 Old Compton Street.
+
+### 26 Grains
+- sted: 51.51438, -0.12629
+- google: ChIJLfmSKc0EdkgREBBzI41rysQ
+- nettside: https://www.26grains.com/
+Seven Dials
+
+Grøt og brunsj i Neal's Yard 1.
+
+- en: Seven Dials
+
+Porridge and brunch at 1 Neal's Yard.
+
+### Storyline
+- sted: 51.51595, -0.15250
+- google: ChIJCf87Y6AbdkgR3cJFa96Zrmg
+- status: onskeliste
+Marylebone
+
+Kafé, Duke Street 8.
+
+- en: Marylebone
+
+Café, 8 Duke Street.
+
+### Les Filles Lancaster Gate
+- sted: 51.51260, -0.17830
+- google: ChIJvUjQ38EFdkgRTgQ_6sLEj84
+- nettside: https://www.lesfilles.co.uk/lancaster-gate
+Bayswater
+
+Kafé, Craven Terrace 27.
+
+- en: Bayswater
+
+Café, 27 Craven Terrace.
+
+### Le Café Robuchon
+- sted: 51.50649, -0.14381
+- google: ChIJy3bwIi0FdkgRFncnMhmgoqc
+- nettside: https://robuchonlondon.co.uk/
+- status: onskeliste
+Mayfair
+
+Kafé og konditori fra Joël Robuchon, Piccadilly 82.
+
+- en: Mayfair
+
+Joël Robuchon's café and pâtisserie, 82 Piccadilly.
 
 ## Barer
 
@@ -1451,6 +1674,129 @@ Apotek og parfymeri siden 1790, St James's Street 29.
 
 Chemist and perfumer since 1790, 29 St James's Street.
 
+### Algerian Coffee Stores ★
+- sted: 51.51293, -0.13223
+- google: ChIJN6ouHdMEdkgRtkZxU06vadA
+- nettside: https://www.algeriancoffeestores.com/
+Soho
+
+Kaffe og te siden 1887, Old Compton Street 52.
+
+- en: Soho
+
+Coffee and tea since 1887, 52 Old Compton Street.
+
+### Labour and Wait
+- sted: 51.51951, -0.15538
+- google: ChIJzwknRIkbdkgRYIsMmFZlCzo
+- nettside: https://www.labourandwait.co.uk/
+Marylebone
+
+Tidløse bruksting til hjemmet, Dorset Street 48.
+
+- en: Marylebone
+
+Timeless household goods, 48 Dorset Street.
+
+### Walker Slater
+- sted: 51.51576, -0.12103
+- google: ChIJ13HquqYbdkgRsAI-gd7ExgQ
+- nettside: https://www.walkerslater.com/
+Covent Garden
+
+Skotsk tweed, herreklær, Great Queen Street 19.
+
+- en: Covent Garden
+
+Scottish tweed, menswear, 19 Great Queen Street.
+
+### Walker Slater Ladieswear
+- sted: 51.51506, -0.12188
+- google: ChIJdS6btTQbdkgRHYBV6CbAQYQ
+- nettside: https://www.walkerslater.com/
+Covent Garden
+
+Skotsk tweed, dameklær, Great Queen Street 38.
+
+- en: Covent Garden
+
+Scottish tweed, womenswear, 38 Great Queen Street.
+
+### Choosing Keeping
+- sted: 51.51315, -0.12751
+- google: ChIJ3R8taMccdkgRxJTcc7wtuzk
+- nettside: https://www.choosingkeeping.com/
+Seven Dials
+
+Papir og skrivesaker, Tower Street 21.
+
+- en: Seven Dials
+
+Paper and stationery, 21 Tower Street.
+
+### London Graphic Centre
+- sted: 51.51334, -0.12605
+- google: ChIJL2_m4cwEdkgR2iN-mTV9GN8
+- nettside: https://www.londongraphics.co.uk/
+Seven Dials
+
+Kunst- og tegnemateriell, Shelton Street 16–18.
+
+- en: Seven Dials
+
+Art and design supplies, 16–18 Shelton Street.
+
+### Pentreath & Hall
+- sted: 51.52184, -0.11806
+- google: ChIJ_UKqJjYbdkgRTkEe09HsBRc
+- nettside: https://www.pentreath-hall.com/
+Bloomsbury
+
+Interiør og gaveting, Lamb's Conduit Street 57.
+
+- en: Bloomsbury
+
+Interiors and gifts, 57 Lamb's Conduit Street.
+
+### Present & Correct
+- sted: 51.51846, -0.12420
+- google: ChIJLRTgsUQbdkgROdLFxHlO098
+- nettside: https://www.presentandcorrect.com/
+- status: onskeliste
+Bloomsbury
+
+Skrivesaker og kontorting, Bury Place 12.
+
+- en: Bloomsbury
+
+Stationery and office curiosities, 12 Bury Place.
+
+## Hoteller
+
+### Charlotte Street Hotel ★
+- sted: 51.51845, -0.13488
+- google: ChIJZWQtdiwbdkgRDtcPz5yALlU
+- nettside: https://www.firmdalehotels.com/hotels/charlotte-street-hotel
+Fitzrovia
+
+Firmdale-hotell, Charlotte Street 15–17.
+
+- en: Fitzrovia
+
+Firmdale hotel, 15–17 Charlotte Street.
+
+### The Soho Hotel
+- sted: 51.51399, -0.13375
+- google: ChIJE4E1QdMEdkgRSpJ-bmPNffY
+- nettside: https://www.firmdalehotels.com/hotels/the-soho-hotel
+Soho
+
+Firmdale-hotell, Richmond Mews 4.
+
+- en: Soho
+
+Firmdale hotel, 4 Richmond Mews.
+
 ## Verdt en omvei
 
 ### Barbican
@@ -1475,6 +1821,17 @@ Skjult hage mellom Mount Street, South Audley Street og Farm Street, med benker 
 - en: Mayfair
 
 Hidden garden between Mount Street, South Audley Street and Farm Street, with benches under tall plane trees.
+
+### Cecil Court
+- sted: 51.51072, -0.12784
+- google: ChIJR1QB6s0EdkgRm3yDFB7jlTc
+Covent Garden
+
+Viktoriansk smug mellom Charing Cross Road og St Martin's Lane, med antikvariater og små butikker.
+
+- en: Covent Garden
+
+Victorian passage between Charing Cross Road and St Martin's Lane, with antiquarian bookshops and small shops.
 
 ## Gåturer
 
@@ -1644,6 +2001,18 @@ Bakeri og kafé, Stoke Newington Church Street 161.
 
 Bakery and café, 161 Stoke Newington Church Street.
 
+### Ginger & White
+- sted: 51.55547, -0.17802
+- google: ChIJYc9p6ocadkgRIVlSgDhx3wc
+- nettside: https://www.gingerandwhite.com/
+Hampstead
+
+Kafé, Perrin's Court 4a–5a.
+
+- en: Hampstead
+
+Café, 4a–5a Perrin's Court.
+
 ## Butikker
 
 ### Nook
@@ -1696,6 +2065,20 @@ Boutique, St John's Wood High Street 102.
 
 Boutique, 102 St John's Wood High Street.
 
+## Verdt en omvei
+
+### Abbey Road-fotgjengerfeltet
+- navn-en: Abbey Road crossing
+- sted: 51.53206, -0.17733
+- google: ChIJCUF3TwsbdkgR9J_H_dhgxg0
+St John's Wood
+
+Fotgjengerovergangen fra omslaget til Beatles-albumet «Abbey Road» (1969).
+
+- en: St John's Wood
+
+The zebra crossing from the cover of the Beatles album “Abbey Road” (1969).
+
 # South
 
 ## Nabolag og gater
@@ -1747,6 +2130,14 @@ Overbygde arkader fra 1930-tallet fulle av små restauranter, og markedet langs 
 - en: Brixton
 
 1930s covered arcades full of small restaurants, and the market along Electric Avenue and Atlantic Road.
+
+### Camberwell
+- sted: 51.47408, -0.09301
+- google: ChIJc65Pz3gDdkgRyyYO-sQL93Q
+- gater: Camberwell Church Street, Camberwell Grove
+- status: onskeliste
+Strøket rundt Camberwell Green og Church Street, og georgianske Camberwell Grove opp mot Grove Park.
+- en: The area around Camberwell Green and Church Street, and Georgian Camberwell Grove up towards Grove Park.
 
 ### Clapham Old Town
 - sted: 51.4644, -0.1413
@@ -1951,6 +2342,20 @@ Restaurant og vinbar, Snowsfields 36.
 
 Restaurant and wine bar, 36 Snowsfields.
 
+## Kaféer
+
+### Blue Brick Cafe
+- sted: 51.45687, -0.07334
+- google: ChIJ_0p4K5QDdkgRgp6yhVv2gCY
+- nettside: https://cargocollective.com/bluebrickcafe
+East Dulwich
+
+Vegetarisk kafé, Fellbrigg Road 14.
+
+- en: East Dulwich
+
+Vegetarian café, 14 Fellbrigg Road.
+
 ## Muséer og gallerier
 
 ### White Cube
@@ -2076,6 +2481,30 @@ Antikkmarked med mange forhandlere under samme tak, Northcote Road 155a.
 - en: Battersea
 
 Antiques market with many dealers under one roof, 155a Northcote Road.
+
+### Bussey Building
+- sted: 51.46995, -0.06725
+- google: ChIJNbF5BKEDdkgRy93_ynkjhw0
+Peckham
+
+Gammel fabrikk ved Rye Lane med takbar, klubb og kunstnerverksteder, Rye Lane 133.
+
+- en: Peckham
+
+Former factory off Rye Lane with a rooftop bar, club and artist studios, 133 Rye Lane.
+
+### Graffititunnelen i Leake Street
+- navn-en: The Graffiti Tunnel
+- sted: 51.50183, -0.11554
+- google: ChIJkSkaX7gEdkgRXGkVq9DzCcI
+- nettside: https://www.leakestreetarches.london/
+Waterloo
+
+Graffititunnelen under Waterloo stasjon, der det er lov å male.
+
+- en: Waterloo
+
+The graffiti tunnel under Waterloo station, where painting is allowed.
 
 ## Gåturer
 
@@ -2298,6 +2727,34 @@ Bakeri og kafé, Lauriston Road 110a.
 - en: Victoria Park Village
 
 Bakery and café, 110a Lauriston Road.
+
+### The Dusty Knuckle
+- sted: 51.54709, -0.07409
+- google: ChIJOVkn7o0cdkgRByZ9dlIWeUA
+- nettside: https://www.thedustyknuckle.com/
+- status: onskeliste
+Dalston
+
+Bakeri og kafé, Abbot Street.
+
+- en: Dalston
+
+Bakery and café, Abbot Street.
+
+## Barer
+
+### 107 Wine Bar
+- sted: 51.55209, -0.05256
+- google: ChIJKVm0rv4cdkgR8bD1JUr-SHY
+- nettside: https://www.107wine.co.uk/
+- status: onskeliste
+Lower Clapton
+
+Vinbar, Lower Clapton Road 107.
+
+- en: Lower Clapton
+
+Wine bar, 107 Lower Clapton Road.
 
 ## Butikker
 
@@ -2742,6 +3199,32 @@ Naturhistorisk museum, Cromwell Road.
 
 Natural history museum, Cromwell Road.
 
+### Leighton House
+- sted: 51.49869, -0.20302
+- google: ChIJWcdBO-wPdkgRlEc3EZWbCvo
+- nettside: https://www.rbkc.gov.uk/museums/
+- status: onskeliste
+Holland Park
+
+Maleren Frederic Leightons hus, med den arabiske hallen, Holland Park Road 12.
+
+- en: Holland Park
+
+The painter Frederic Leighton's house, with its Arab Hall, 12 Holland Park Road.
+
+### Museum of Brands
+- sted: 51.51630, -0.21102
+- google: ChIJkUcf6v4PdkgRIN0LQBjlSqs
+- nettside: https://www.museumofbrands.com/
+- status: onskeliste
+Notting Hill
+
+Merkevarer og emballasje gjennom 200 år, Lancaster Road 111–117.
+
+- en: Notting Hill
+
+Brands and packaging through 200 years, 111–117 Lancaster Road.
+
 ## Butikker
 
 ### Sign of the Times
@@ -2768,6 +3251,44 @@ Smykker, Godfrey Street 53, rett ved Chelsea Green.
 
 Jewellery, 53 Godfrey Street, right by Chelsea Green.
 
+### Prezzemolo & Vitale
+- sted: 51.51523, -0.19270
+- google: ChIJawAluXoRdkgRlBGcoynvUow
+- nettside: https://www.prezzemoloevitale.co.uk/
+Westbourne Grove
+
+Siciliansk delikatesse, Westbourne Grove 87.
+
+- en: Westbourne Grove
+
+Sicilian deli, 87 Westbourne Grove.
+
+## Hoteller
+
+### Number Sixteen
+- sted: 51.49308, -0.17550
+- google: ChIJce4gD2gFdkgRoJ_ksh-b_Fw
+- nettside: https://www.firmdalehotels.com/hotels/number-sixteen
+South Kensington
+
+Firmdale-hotell, Sumner Place 16.
+
+- en: South Kensington
+
+Firmdale hotel, 16 Sumner Place.
+
+### The Kensington Hotel
+- sted: 51.49251, -0.17804
+- google: ChIJO6vgkWcFdkgRjLCrLkS_3ak
+- nettside: https://www.doylecollection.com/hotels/the-kensington-hotel
+South Kensington
+
+Queen's Gate 109–113.
+
+- en: South Kensington
+
+109–113 Queen's Gate.
+
 ## Verdt en omvei
 
 ### Queen's Park Farmers' Market
@@ -2781,6 +3302,40 @@ Bondemarked i skolegården på Salusbury Primary School, Salusbury Road. Søndag
 - en: Queen's Park
 
 Farmers' market in the playground of Salusbury Primary School, Salusbury Road. Sundays 10am–2pm. One of the best local markets in London — vegetables, meat, fish, cheese and bread straight from the producers.
+
+### All Saints Road
+- sted: 51.51853, -0.20417
+- google: ChIJF9giRxwQdkgRqv_KIoWgoh8
+Notting Hill
+
+Liten gate med kaféer, restauranter og butikker.
+
+- en: Notting Hill
+
+A short street with cafés, restaurants and shops.
+
+### St Luke's Mews
+- sted: 51.51779, -0.20336
+- google: ChIJXSwpUhwQdkgR4Hd_c7GgQwc
+Notting Hill
+
+Pastellfarget mews kjent fra «Love Actually».
+
+- en: Notting Hill
+
+Pastel-coloured mews known from “Love Actually”.
+
+### Den blå døra fra «Notting Hill»
+- sted: 51.51679, -0.20598
+- google: ChIJCY6ufQARdkgRp8fb-KsbrGc
+- navn-en: The blue door from “Notting Hill”
+Notting Hill
+
+Døra til Hugh Grants leilighet i filmen, Westbourne Park Road 280.
+
+- en: Notting Hill
+
+The door to Hugh Grant's flat in the film, 280 Westbourne Park Road.
 
 ## Gåturer
 
