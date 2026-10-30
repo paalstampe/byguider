@@ -205,6 +205,19 @@ Kaffebrenneri. 2 bis Rue Sainte-Réparate, Vieux-Nice.
 
 Coffee roaster. 2 bis Rue Sainte-Réparate, Vieux-Nice.
 
+### Blend Coffee and Vinyl
+- sted: 43.69681, 7.27674
+- google: ChIJK-LzNCzbzRIRLgbWQwbSVqY
+- nettside: https://www.blendcoffeevinyl.com/
+- status: onskeliste
+Vieux-Nice
+
+Kaffebar og platebutikk, Rue Benoît Bunico 22 ter.
+
+- en: Vieux-Nice
+
+Coffee bar and record shop, 22 ter Rue Benoît Bunico.
+
 ## Butikker
 
 ### Trésors Publics
@@ -763,6 +776,30 @@ Konditori. 15 Rue du Maréchal Joffre.
 - en: Carré d'Or
 
 Pâtisserie. 15 Rue du Maréchal Joffre.
+
+### Bonjour Amour
+- sted: 43.69910, 7.26670
+- google: ChIJqSfrrgvbzRIRrhANfJzhHVw
+- status: onskeliste
+Carré d'Or
+
+Kafé, Rue du Maréchal Joffre 9.
+
+- en: Carré d'Or
+
+Café, 9 Rue du Maréchal Joffre.
+
+### SAVVA Coffee Shop
+- sted: 43.69484, 7.25485
+- google: ChIJGyqF_X5WragRvSskiezq-zA
+- status: onskeliste
+Gambetta
+
+Kaffebar, Rue de France 105.
+
+- en: Gambetta
+
+Coffee bar, 105 Rue de France.
 
 ## Butikker
 
