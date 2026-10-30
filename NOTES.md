@@ -7,7 +7,7 @@ Oppdateres ved slutten av hver økt (`/avslutt`).
 
 Sist oppdatert: 28. oktober 2026.
 
-- Live på https://stam.pe/byguider/ med seks byer: London (215 oppføringer, hvorav 94 på ønskelista), Oslo (128, 22 på ønskelista), New York (77), Nice (67), Tokyo (53), Bangkok (36, 2 på ønskelista).
+- Live på https://stam.pe/byguider/ med seks byer: London (230 oppføringer, hvorav 100 på ønskelista), Oslo (128, 22 på ønskelista), New York (77), Nice (67), Tokyo (53), Bangkok (36, 2 på ønskelista).
 - Appen er i hovedsak ferdig: MapLibre med papirpalett og mørk modus, nabolag med omriss, kjerne og gater,
   flyttbar infoboks, gåturer i infoboksen, ønskeliste for alle, norsk og engelsk.
 - Arbeidet nå er data: nye steder, favoritter, beskrivelser og nabolagsomriss. 18.10. fikk Oslo
@@ -53,6 +53,12 @@ Sist oppdatert: 28. oktober 2026.
   i sonene Mitte & Prenzlauer Berg, Kreuzberg & Neukölln, Friedrichshain og West, pluss Orania.Berlin og fem markeder
   med åpningstider fra Google Maps. Omrissene er Berlins planleggingsrom (LOR 2021, gdi.berlin.de) slått sammen per
   nabolag; gatene er fra Detailnetz Berlin. Filene ble skrevet rett i arbeidstreet (ikke committet ennå).
+- 30.10.: London fikk nabolagene St John's Wood (med Panzer's Delicatessen og The Bank 102), Parsons Green,
+  Clapham Old Town, Coal Drops Yard, Kew Green (lagt tilbake), Sydenham og Blackheath. Markerte gater: St John's Wood
+  High Street og Circus Road, New King's Road (Parsons Green Lane–Bradbourne Street), Tranquil Vale, Montpelier Vale og
+  Lee Road. På ønskelista: Forest Hill, Balham, Streatham Hill, Tooting, Wapping og Lower Clapton.
+  Parsons Green og Kew Green følger conservation areas; Coal Drops Yard og Clapham er sporet i OSM; Sydenham, Blackheath
+  og nabolagene på ønskelista er soner på 40–70 m rundt handlegatene.
 - Ingen åpne grener utenom `main`.
 
 ## Neste steg
@@ -67,6 +73,8 @@ Sist oppdatert: 28. oktober 2026.
 - Nye nabolag trenger alltid et presist omriss i `data/<by>-geometri.geojson`; fremgangsmåten står i CLAUDE.md, Data.
 - Mulig etterarbeid: de 25 London-omrissene som ble beholdt (bl.a. Marylebone, Mayfair, Belgravia, Richmond, Kew Green)
   kan sjekkes mot conservation areas på samme måte hvis Pål ser noe som ikke stemmer.
+- London: omrissene for Sydenham, Blackheath, Forest Hill, Balham, Streatham Hill, Tooting, Wapping og Lower Clapton er
+  grove soner rundt handlegatene. Tegn dem presist (grensegater i OSM) når Pål vil, særlig når et nabolag går av ønskelista.
 - Oppdater miniatyrene når en by endrer utseende merkbart (CLAUDE.md, Miniatyrer).
 - Kart: på mobil ligger nabolagsfirkantene tett på laveste zoom i London. Se om det trengs noe (f.eks. mindre
   firkanter ved lav zoom) når Pål har brukt det en stund. Å skjule steder under nabolagene er prøvd og forkastet.
@@ -76,9 +84,14 @@ Sist oppdatert: 28. oktober 2026.
 ## Åpne spørsmål
 
 - Hrímnir – Fredensborg ligger øst for Maridalsveien (ved Vulkan), utenfor Fredensborg-omrisset.
+- St John's Wood: er «Bank» boutiquen The Bank 102 (102 High Street)? Ingen annen «Bank» funnet i gaten.
+- Parsons Green: er New King's Road fra Parsons Green Lane til Bradbourne Street riktig bit å markere?
 
 ## Beslutningslogg
 
+- 2026-10-30: «Glapham (The Polygon-trekanten)» er lagt inn som Clapham Old Town med Polygon-trekanten som kjerne.
+  Streatham Hill og Balham er to nabolag; «Wapping/Shadwell» er ett (Wapping, med Shadwell Basin).
+- 2026-10-30: Blackheath bruker ikke conservation area, som dekker hele heia; omrisset er landsbykjernen rundt Tranquil Vale.
 - 2026-10-30: En by kan skjules fra byguide-forsiden med `"skjult": true` i byer.json. Guiden virker som før på /<id>/.
 - 2026-10-30: Berlin-omrissene bygger på LOR-planleggingsrommene (Lebensweltlich orientierte Räume 2021), som følger kiez-grensene godt.
 
