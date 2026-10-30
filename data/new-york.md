@@ -607,6 +607,19 @@ Cocktailbar.
 
 Cocktail bar.
 
+### Kabin
+- sted: 40.72573, -74.00796
+- google: ChIJMb9VKtRZwokROJ6W_ZVM-og
+- nettside: https://www.kabin.nyc/
+- status: onskeliste
+Hudson Square
+
+Bar, Spring Street 300.
+
+- en: Hudson Square
+
+Bar, 300 Spring Street.
+
 ## Jazzklubber
 
 ### Blue Note
@@ -942,6 +955,18 @@ Greenwich Village
 
 - en: Greenwich Village
 
+### Essex Market
+- sted: 40.71800, -73.98819
+- google: ChIJ7fydz4BZwokRl6FuOJM5QPU
+- nettside: https://www.essexmarket.nyc/
+Lower East Side
+
+Mathall og marked siden 1940, Essex Street 88.
+
+- en: Lower East Side
+
+Food hall and market since 1940, 88 Essex Street.
+
 ## Gåturer
 
 ### High Line
@@ -1094,6 +1119,19 @@ Cocktailbar, Smith Street 210.
 - en: Cobble Hill
 
 Cocktail bar, 210 Smith Street.
+
+## Butikker
+
+### Crowley Vintage
+- sted: 40.70275, -73.98710
+- google: ChIJRW17vvpawokR4kuQHnK3eO0
+DUMBO
+
+Vintageklær, Front Street 147 (suite 303).
+
+- en: DUMBO
+
+Vintage clothing, 147 Front Street (suite 303).
 
 ## Verdt en omvei
 
