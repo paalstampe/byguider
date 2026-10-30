@@ -7,7 +7,7 @@ kicker: En høyst subjektiv guide
 kicker-en: An opinionated guide
 senter: 43.6990, 7.2620
 zoom: 13
-oppdatert: 2026-10-23
+oppdatert: 2026-10-30
 ---
 
 <!--
@@ -776,6 +776,52 @@ Italiensk delikatesse. 76 Rue de France.
 - en: Carré d'Or
 
 Italian deli. 76 Rue de France.
+
+### La From.
+- sted: 43.70003, 7.26127
+- google: ChIJUYjHLCLRzRIRaPTX_YvDQcw
+Musiciens
+
+Ostebutikk. 9 Avenue Auber.
+
+- en: Musiciens
+
+Cheese shop. 9 Avenue Auber.
+
+### BSIE
+- sted: 43.70504, 7.26889
+- google: ChIJtb6xAYvRzRIRRvXs1hytr4M
+- nettside: https://bsietypewriters.com/
+Centre-ville
+
+Gamle skrivemaskiner. 11 Rue de Paris.
+
+- en: Centre-ville
+
+Vintage typewriters. 11 Rue de Paris.
+
+### Bricolités
+- sted: 43.70516, 7.26826
+- google: ChIJu911-ajazRIRNUCLN4dJb1o
+- nettside: https://www.bricolites-nice.com/
+Centre-ville
+
+Ting til hjemmet. 14 Rue de Paris, rett over gaten for BSIE.
+
+- en: Centre-ville
+
+Home goods. 14 Rue de Paris, across the street from BSIE.
+
+### Evrlst
+- sted: 43.69989, 7.27416
+- google: ChIJ46YWmaXazRIRfnEXL13WnCI
+Centre-ville
+
+Platebutikk. 4 Rue du Lycée.
+
+- en: Centre-ville
+
+Record shop. 4 Rue du Lycée.
 
 ## Hoteller
 
