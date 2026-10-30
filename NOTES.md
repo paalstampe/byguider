@@ -74,6 +74,7 @@ Sist oppdatert: 30. oktober 2026.
   nabolaget Camberwell på ønskelista (omriss: conservation areas Camberwell Green og Camberwell Grove). Cecil Court og All Saints Road
   har gatestrek. Sartoria lå inne fra før. Bangkok fikk Kathmandu Photo Gallery, Tangible og nabolagene Ekkamai og Phra Khanong
   på ønskelista (soner på 60 m rundt gatene). New York fikk Crowley Vintage, Essex Market og Kabin; Nice tre kaféer på ønskelista.
+- 30.10. sent: på stående mobil blir «Liste ↓» til «Kart ↑» og står fast nederst til venstre når kartet er rullet ut av syne (PR #76).
 - Ingen åpne grener utenom `main`.
 
 ## Neste steg
@@ -101,6 +102,7 @@ Sist oppdatert: 30. oktober 2026.
   firkanter ved lav zoom) når Pål har brukt det en stund. Å skjule steder under nabolagene er prøvd og forkastet.
 - KML-eksport for Google My Maps-sporet: scopet i [scope-kml.md](scope-kml.md) (forslag: `?kml` i appen, test med London). Venter på svar fra Pål på de åpne spørsmålene nederst der.
 - Sjekk på iPhone at teksten ikke lenger forstørres når telefonen ligger (kan ikke testes i Chromium).
+- Sjekk på iPhone at «Kart ↑»-knappen holder seg over adresselinja i Safari når den skjules og vises.
 
 ## Åpne spørsmål
 
