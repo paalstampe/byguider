@@ -793,6 +793,15 @@ button.pop-lenke {
     font-weight: 500;
     cursor: pointer;
   }
+  /* Kartet er rullet ut av syne: knappen står fast nederst til venstre og fører tilbake til kartet. */
+  .til-lista--kart {
+    position: fixed;
+    z-index: 5;
+    left: max(10px, env(safe-area-inset-left));
+    bottom: max(10px, env(safe-area-inset-bottom));
+  }
+  /* Plass under siste rad, så den faste knappen ikke dekker bunnteksten. */
+  .sidebar-fot { padding-bottom: 60px; }
 }
 
 /* Liggende mobil: lav og bred skjerm. Menyen i en smal kolonne til venstre som ruller for seg,
@@ -811,6 +820,7 @@ button.pop-lenke {
   .sidebar-head { padding: 18px 20px 12px; }
   .tittel { font-size: 26px; }
   .til-lista { display: none; }
+  .sidebar-fot { padding-bottom: 15px; }
 }
 
 @media (max-width: 600px) {

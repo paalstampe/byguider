@@ -73,6 +73,7 @@ const TEKST = {
     duErHer: 'Du er her',
     byguider: 'Byguider',
     tilLista: 'Liste ↓',
+    tilKartet: 'Kart ↑',
     sok: 'Søk etter navn eller notat',
     sokEtikett: 'Søk',
     tomSok: 'Tøm søket',
@@ -114,6 +115,7 @@ const TEKST = {
     duErHer: 'You are here',
     byguider: 'City guides',
     tilLista: 'List ↓',
+    tilKartet: 'Map ↑',
     sok: 'Search names and notes',
     sokEtikett: 'Search',
     tomSok: 'Clear search',
@@ -1742,9 +1744,29 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
   });
 
   // Mobil, stående: kartet tar alle fingerbevegelser, så knappen nederst i kartet er veien ned til menyen.
-  document.getElementById('til-lista').addEventListener('click', () => {
-    document.querySelector('.sidebar').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  // Når kartet er rullet ut av syne, blir den «Kart ↑» og står fast i hjørnet, så man kommer raskt tilbake.
+  const tilListaKnapp = document.getElementById('til-lista');
+  const kartflate = document.querySelector('.kartflate');
+  let kartModus = false;
+  tilListaKnapp.addEventListener('click', () => {
+    const maal = kartModus ? kartflate : document.querySelector('.sidebar');
+    maal.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
+  function oppdaterTilListaKnapp() {
+    // Bytter når knappens plass nederst i kartet har rullet ut av skjermen.
+    const nyModus = kartflate.getBoundingClientRect().bottom < 54;
+    if (nyModus === kartModus) return;
+    kartModus = nyModus;
+    tilListaKnapp.classList.toggle('til-lista--kart', kartModus);
+    tilListaKnapp.dataset.t = kartModus ? 'tilKartet' : 'tilLista';
+    tilListaKnapp.textContent = t(tilListaKnapp.dataset.t);
+  }
+  let tilListaRamme = 0;
+  window.addEventListener('scroll', () => {
+    if (tilListaRamme) return;
+    tilListaRamme = requestAnimationFrame(() => { tilListaRamme = 0; oppdaterTilListaKnapp(); });
+  }, { passive: true });
+  window.addEventListener('resize', oppdaterTilListaKnapp);
 
   /* ---------- side fra metadata ---------- */
 
