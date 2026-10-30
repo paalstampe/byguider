@@ -92,6 +92,80 @@ Kollwitzkiez
 
 Organic market on Thursdays, 12–7 pm.
 
+## Butikker
+
+### do you read me?!
+- sted: 52.52710, 13.39776
+- google: ChIJL7hzfOZRqEcRGPs5Zv4Md3M
+- nettside: https://doyoureadme.de/
+Spandauer Vorstadt
+
+Magasiner og bøker om mote, kunst, design, fotografi og arkitektur. Auguststraße 28.
+- en: Spandauer Vorstadt
+
+Magazines and books on fashion, art, design, photography and architecture. Auguststraße 28.
+
+### R.S.V.P. Papier
+- sted: 52.52743, 13.40508
+- google: ChIJ9USjw-NRqEcRqc5L443AYWs
+- nettside: https://rsvp-berlin.de/
+Spandauer Vorstadt
+
+Papirhandel med notatbøker, kort og skrivesaker. Mulackstraße 26.
+- en: Spandauer Vorstadt
+
+Stationery shop with notebooks, cards and writing supplies. Mulackstraße 26.
+
+### LUIBAN Papeterie
+- sted: 52.52568, 13.41110
+- google: ChIJT4ZScx5OqEcRNEJSXvN65cY
+- nettside: https://luiban.com/
+Mitte
+
+Papirhandel ved Rosa-Luxemburg-Platz. Rosa-Luxemburg-Straße 28.
+- en: Mitte
+
+Stationery shop near Rosa-Luxemburg-Platz. Rosa-Luxemburg-Straße 28.
+
+## Muséer og gallerier
+
+### Anne Frank Zentrum
+- navn-en: Anne Frank Centre
+- sted: 52.52442, 13.40193
+- google: ChIJRyQVKOFRqEcRjDujTBBGgS8
+- nettside: https://www.annefrank.de/
+Spandauer Vorstadt
+
+Utstilling om Anne Frank i Haus Schwarzenberg ved Hackesche Höfe. Rosenthaler Straße 39.
+- en: Spandauer Vorstadt
+
+Exhibition about Anne Frank in Haus Schwarzenberg next to the Hackesche Höfe. Rosenthaler Straße 39.
+
+## Verdt en omvei
+
+### Nikolaiviertel
+- sted: 52.51740, 13.40703
+- google: ChIJ-ZLUyQRPqEcRROL55NvWHJ8
+- nettside: https://berlin-nikolaiviertel.com/
+Mitte
+
+Berlins eldste kvarter, rundt Nikolaikirche ved Spree. Gjenoppbygd av DDR på 1980-tallet.
+- en: Mitte
+
+Berlin’s oldest quarter, around the Nikolaikirche by the Spree. Rebuilt by the GDR in the 1980s.
+
+### Holocaust-minnesmerket
+- navn-en: Memorial to the Murdered Jews of Europe
+- sted: 52.51395, 13.37871
+- google: ChIJW2oZB8ZRqEcRyFvuEpCnNBQ
+- nettside: https://www.stiftung-denkmal.de/
+Mitte
+
+Minnesmerket over Europas myrdede jøder: Peter Eisenmans felt med 2711 betongsteler ved Brandenburger Tor, med informasjonssenter under bakken.
+- en: Mitte
+
+The Memorial to the Murdered Jews of Europe: Peter Eisenman’s field of 2,711 concrete stelae near the Brandenburg Gate, with an information centre underground.
+
 # Kreuzberg & Neukölln
 
 ## Nabolag og gater
@@ -124,6 +198,19 @@ Bergmannstraße med butikker, kaféer og Marheineke Markthalle, og Chamissoplatz
 - gater: Weserstraße, Maybachufer
 «Kreuzkölln» – Neuköllns hjørne mot Kreuzberg, med barene i Weserstraße og markedet langs kanalen på Maybachufer.
 - en: “Kreuzkölln” – the corner of Neukölln next to Kreuzberg, with the bars on Weserstraße and the canal-side market on Maybachufer.
+
+## Kaféer
+
+### Nano Kaffee
+- sted: 52.50494, 13.39315
+- google: ChIJ6666ZdViJWURAVyK35sXTKs
+- nettside: https://nano-kaffee.de/
+Kreuzberg
+
+Kaffebrenneri og kafé i Besselstraße, ved Jüdisches Museum.
+- en: Kreuzberg
+
+Coffee roastery and café on Besselstraße, near the Jewish Museum.
 
 ## Hoteller
 
@@ -187,6 +274,32 @@ Bondemarked lørdag 9–15.30. Loppemarked på samme plass søndag 10–18.
 
 Farmers’ market on Saturdays, 9 am–3.30 pm. Flea market on the same square on Sundays, 10 am–6 pm.
 
+## Butikker
+
+### Vintage Vélo Berlin
+- sted: 52.52166, 13.44951
+- google: ChIJm-jmrV5OqEcR3oHKQi1-Syw
+- nettside: https://vintageveloberlin.de/
+Friedrichshain
+
+Sykkelbutikk med klassiske sykler ved Petersburger Platz.
+- en: Friedrichshain
+
+Bicycle shop with classic bikes on Petersburger Platz.
+
+## Verdt en omvei
+
+### East Side Gallery
+- sted: 52.50502, 13.43970
+- google: ChIJS6_t9aZHqEcRGCiRSnvpm94
+- nettside: https://www.stiftung-berliner-mauer.de/de/east-side-gallery
+Friedrichshain
+
+Den lengste bevarte delen av Muren, ca. 1,3 km langs Spree i Mühlenstraße, malt av kunstnere fra hele verden i 1990.
+- en: Friedrichshain
+
+The longest surviving stretch of the Wall, about 1.3 km along the Spree on Mühlenstraße, painted by artists from around the world in 1990.
+
 # West
 
 ## Nabolag og gater
@@ -225,3 +338,33 @@ Onsdag 8–14 og lørdag 8–16. Lørdag er den store dagen.
 - en: Winterfeldtplatz and Potsdamer Straße
 
 Wednesday 8 am–2 pm and Saturday 8 am–4 pm. Saturday is the big day.
+
+## Butikker
+
+### Bücherbogen am Savignyplatz
+- sted: 52.50502, 13.32187
+- google: ChIJUaWsLeNQqEcRyCSTDe2B2SY
+- nettside: https://www.buecherbogen.com/
+Savignyplatz
+
+Bokhandel for kunst, arkitektur, design og fotografi under S-Bahn-buene ved Savignyplatz.
+- en: Savignyplatz
+
+Bookshop for art, architecture, design and photography under the S-Bahn arches by Savignyplatz.
+
+# Around Berlin
+
+## Muséer og gallerier
+
+### Gedenkstätte Sachsenhausen
+- navn-en: Sachsenhausen Memorial and Museum
+- sted: 52.76590, 13.26422
+- google: ChIJBeQpGRdOqEcRIjFSs-2d684
+- nettside: https://www.sachsenhausen-sbg.de/
+- utenfor: ja
+Oranienburg
+
+Minnested og museum i den tidligere konsentrasjonsleiren, ca. 35 km nord for sentrum. S1 til Oranienburg.
+- en: Oranienburg
+
+Memorial and museum at the former concentration camp, about 35 km north of the centre. S1 to Oranienburg.
