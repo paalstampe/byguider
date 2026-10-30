@@ -160,6 +160,17 @@ Kunst og mat.
 
 Art and food.
 
+### Tangible Bangkok
+- sted: 13.69912, 100.49887
+- google: ChIJDXHZa8yZ4jARDrurkYx497A
+Bang Kho Laem
+
+Kafé, Mahai Sawan 6.
+
+- en: Bang Kho Laem
+
+Café, Mahai Sawan 6.
+
 ## Muséer og gallerier
 
 ### Thailand Creative & Design Center (TCDC)
@@ -355,6 +366,18 @@ Galleri for samtidskunst i Soi Ton Son.
 
 Contemporary art gallery on Soi Ton Son.
 
+### Kathmandu Photo Gallery
+- sted: 13.72389, 100.52331
+- google: ChIJ-W1c-9GY4jAR1n1ZlN0PZeQ
+- nettside: https://www.kathmanduphotobkk.com/
+Silom
+
+Fotogalleri i et gammelt butikkhus, Pan Road 87.
+
+- en: Silom
+
+Photography gallery in an old shophouse, 87 Pan Road.
+
 ## Butikker
 
 ### Siwilai Store
@@ -454,6 +477,22 @@ A small community mall with shops and cafés.
 - gater: Thong Lo
 Sukhumvit Soi 55 og sidegatene, med restauranter, barer og kaféer.
 - en: Sukhumvit Soi 55 and its side streets, with restaurants, bars and cafés.
+
+### Ekkamai
+- sted: 13.72342, 100.58461
+- google: ChIJt0N_v7Kf4jARfaq8_0UC7Xg
+- gater: Ekkamai (Sukhumvit Soi 63)
+- status: onskeliste
+Ekkamai Road (Sukhumvit Soi 63) og sidegatene, med kaféer, barer og restauranter.
+- en: Ekkamai Road (Sukhumvit Soi 63) and its side streets, with cafés, bars and restaurants.
+
+### Phra Khanong
+- sted: 13.69027, 100.60861
+- google: ChIJpVT4xvuf4jAREE7iXbIAAQM
+- gater: Sukhumvit Road, Sukhumvit Soi 71
+- status: onskeliste
+Rundt Phra Khanong-stasjonen og markedet, der Sukhumvit Soi 71 går nordover, med kaféer, barer og gatemat.
+- en: Around Phra Khanong station and market, where Sukhumvit Soi 71 heads north, with cafés, bars and street food.
 
 ## Butikker
 
