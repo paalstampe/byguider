@@ -1539,6 +1539,17 @@ Islington’s high street, from Angel to Highbury Corner, with restaurants, bars
 Camden Passage (antikk) og Upper Street opp til Islington Green.
 - en: Camden Passage (antiques) and Upper Street up to Islington Green.
 
+### Coal Drops Yard
+- sted: 51.5360, -0.1266
+- google: ChIJXbS71BcbdkgRCxCAKCgSJ2E
+King's Cross
+
+Kullagrene fra 1850-tallet, bygd om til butikker og restauranter, ved Granary Square og Regent's Canal.
+
+- en: King's Cross
+
+The 1850s coal drops, converted into shops and restaurants, by Granary Square and Regent's Canal.
+
 ### Crouch End
 - sted: 51.5796, -0.1234
 - google: ChIJiTYKy8AbdkgRM_8p51pSGqQ
@@ -1575,6 +1586,13 @@ Edwardiansk forstad på en høyde, med kaféer og butikker langs Broadway og Ale
 - gater: Regent's Park Road
 Rolig strøk ved parken med samme navn, med kaféer og butikker i Regent’s Park Road og utsikt over sentrum fra toppen av bakken.
 - en: Quiet area by the park of the same name, with cafés and shops on Regent’s Park Road and a view over central London from the top of the hill.
+
+### St John's Wood
+- sted: 51.5324, -0.1693
+- google: ChIJZQvbk74adkgRDVYIpKBmBQQ
+- gater: St John's Wood High Street, Circus Road
+Landsbyaktig hovedgate med butikker og kaféer, mellom Lord's og Regent's Park.
+- en: Village-like high street with shops and cafés, between Lord's and Regent's Park.
 
 ### Walthamstow Village
 - sted: 51.5834, -0.0176
@@ -1654,6 +1672,30 @@ Gaver og design, Stoke Newington Church Street 129.
 
 Gifts and design, 129 Stoke Newington Church Street.
 
+### Panzer's Delicatessen
+- sted: 51.53348, -0.17219
+- google: ChIJg6a5rbwadkgRWVh5xzAWGNY
+- nettside: https://panzers.co.uk/
+St John's Wood
+
+Delikatesser og matvarer, Circus Road 13–19.
+
+- en: St John's Wood
+
+Delicatessen and grocer, 13–19 Circus Road.
+
+### The Bank 102
+- sted: 51.53337, -0.17016
+- google: ChIJqa7EhNsbdkgRgGcsc1aGVw0
+- nettside: https://www.thebank102.com/
+St John's Wood
+
+Boutique, St John's Wood High Street 102.
+
+- en: St John's Wood
+
+Boutique, 102 St John's Wood High Street.
+
 # South
 
 ## Nabolag og gater
@@ -1672,11 +1714,27 @@ Clapham
 Bermondsey Street med White Cube og Fashion and Textile Museum, og Maltby Street Market på Ropewalk.
 - en: Bermondsey Street with White Cube and the Fashion and Textile Museum, and Maltby Street Market on Ropewalk.
 
+### Balham
+- sted: 51.4433, -0.1529
+- google: ChIJLXc3ZcUFdkgRFBBY0UTkQcw
+- utenfor: ja
+- status: onskeliste
+Balham High Road og Bedford Hill rundt stasjonen, med Hildreth Street Market.
+- en: Balham High Road and Bedford Hill around the station, with Hildreth Street Market.
+
 ### Bellenden Road
 - sted: 51.4697, -0.0729
 - google: ChIJQaCs254DdkgR6M6hbzLHVwM
 - gater: Maxted Road, Bellenden Road, Blenheim Grove
 Peckham
+
+### Blackheath
+- sted: 51.4658, 0.0091
+- google: ChIJWzRGqdGp2EcReUEAUHC3gZc
+- gater: Tranquil Vale, Montpelier Vale, Lee Road
+- utenfor: ja
+Landsbyen på kanten av heia, med butikker, puber og kaféer i Tranquil Vale og Montpelier Vale og ned mot stasjonen.
+- en: The village on the edge of the heath, with shops, pubs and cafés on Tranquil Vale and Montpelier Vale and down towards the station.
 
 ### Brixton Village
 - sted: 51.4625, -0.1122
@@ -1689,6 +1747,17 @@ Overbygde arkader fra 1930-tallet fulle av små restauranter, og markedet langs 
 - en: Brixton
 
 1930s covered arcades full of small restaurants, and the market along Electric Avenue and Atlantic Road.
+
+### Clapham Old Town
+- sted: 51.4644, -0.1413
+- google: ChIJJbMqMa0FdkgR17qUwCO7Bdo
+Clapham
+
+Den gamle landsbykjernen ved Clapham Common, rundt trekanten ved The Polygon, med puber, kaféer og restauranter.
+
+- en: Clapham
+
+The old village centre by Clapham Common, around the triangle at The Polygon, with pubs, cafés and restaurants.
 
 ### Crystal Palace Triangle
 - sted: 51.4195, -0.0839
@@ -1718,6 +1787,14 @@ Grønn landsby med georgianske hus, Dulwich Picture Gallery og Dulwich Park.
 Restauranter, delikatesser og butikker langs Lordship Lane, og lørdagsmarked i North Cross Road.
 - en: Restaurants, delis and shops along Lordship Lane, and a Saturday market on North Cross Road.
 
+### Forest Hill
+- sted: 51.4393, -0.0533
+- google: ChIJB85IhNEDdkgRHXAtUc4Kjvc
+- utenfor: ja
+- status: onskeliste
+Sentrum rundt stasjonen, med kaféene i Devonshire Road og Horniman Museum et stykke opp i bakken.
+- en: The centre around the station, with the cafés on Devonshire Road and the Horniman Museum a short walk up the hill.
+
 ### Herne Hill
 - sted: 51.4545, -0.0967
 - google: ChIJ1QO9jYcDdkgRHAlfXDX_ugA
@@ -1744,6 +1821,29 @@ The street between Clapham Common and Wandsworth Common, with restaurants, shops
 - status: onskeliste
 Rolig viktoriansk strøk med en liten landsbykjerne og Nunhead Cemetery, en av Londons sju store viktorianske gravlunder.
 - en: Quiet Victorian area with a small village centre and Nunhead Cemetery, one of London’s Magnificent Seven Victorian cemeteries.
+
+### Streatham Hill
+- sted: 51.4380, -0.1272
+- google: ChIJNcXWLTsEdkgRe4LJH4-bOWI
+- utenfor: ja
+- status: onskeliste
+Streatham Hill rundt stasjonen, med art deco-teatret og restauranter langs hovedgaten.
+- en: Streatham Hill around the station, with the art deco theatre and restaurants along the high road.
+
+### Sydenham
+- sted: 51.4290, -0.0560
+- google: ChIJEfA3_NgDdkgRx0nTHt6S6K8
+- utenfor: ja
+Kirkdale og Sydenham Road rundt Cobb's Corner, med uavhengige butikker, kaféer og restauranter.
+- en: Kirkdale and Sydenham Road around Cobb's Corner, with independent shops, cafés and restaurants.
+
+### Tooting
+- sted: 51.4279, -0.1679
+- google: ChIJ3_GgeW0GdkgRvGKkXK21NPk
+- utenfor: ja
+- status: onskeliste
+Tooting Broadway, med de overbygde markedene Tooting Market og Broadway Market og mange sørasiatiske restauranter.
+- en: Tooting Broadway, with the covered Tooting Market and Broadway Market and many South Asian restaurants.
 
 ## Restauranter
 
@@ -2051,6 +2151,21 @@ Tidligere industriområde ved kanalen og Olympiaparken, med atelierer, bryggerie
 Lauriston Road og gatene ved Victoria Park, med puber, kaféer og butikker.
 - en: Lauriston Road and the streets by Victoria Park, with pubs, cafés and shops.
 
+### Lower Clapton
+- sted: 51.5530, -0.0545
+- google: ChIJ2QHi1lscdkgRe6whcOsGJXA
+- utenfor: ja
+- status: onskeliste
+Lower Clapton Road og Clapton Square, med georgianske hus, kaféer og restauranter.
+- en: Lower Clapton Road and Clapton Square, with Georgian houses, cafés and restaurants.
+
+### Wapping
+- sted: 51.5042, -0.0564
+- google: ChIJWXJL-DYDdkgRW_VnDdHbG_I
+- status: onskeliste
+Gamle lagerbygninger langs Themsen i Wapping High Street og Wapping Wall, med Shadwell Basin og puben Prospect of Whitby.
+- en: Old warehouses along the Thames on Wapping High Street and Wapping Wall, with Shadwell Basin and the Prospect of Whitby pub.
+
 ## Restauranter
 
 ### Dishoom Shoreditch
@@ -2329,6 +2444,13 @@ Shops and restaurants along Westbourne Grove and Ledbury Road, between Notting H
 Farmers market lørdag
 - en: Farmers’ market on Saturdays
 
+### Kew Green
+- sted: 51.4852, -0.2880
+- google: ChIJMevjjNkNdkgRtEdyVHdNdko
+- utenfor: ja
+Georgianske hus rundt den store grønten, med St Anne's Church og hovedporten til Kew Gardens.
+- en: Georgian houses around the large green, with St Anne's Church and the main gate to Kew Gardens.
+
 ### Turnham Green
 - sted: 51.4920, -0.2663
 - google: ChIJ38-tk2wOdkgRGDMU_F4xZCQ
@@ -2352,6 +2474,18 @@ Der Grand Union Canal og Regent’s Canal møtes, med husbåter, kanalpuber og b
 - en: Maida Vale
 
 Where the Grand Union Canal meets Regent’s Canal, with houseboats, canalside pubs and boats to Camden.
+
+### Parsons Green
+- sted: 51.4748, -0.2003
+- google: ChIJN0lz8pwPdkgRYRJ80S9AVUM
+- gater: New King's Road
+Fulham
+
+Den trekantede plenen med puben The White Horse, og butikker og kaféer langs New King's Road.
+
+- en: Fulham
+
+The triangular green with the White Horse pub, and shops and cafés along New King's Road.
 
 ### Richmond
 - sted: 51.4673, -0.2995
