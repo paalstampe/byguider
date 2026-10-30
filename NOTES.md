@@ -80,6 +80,7 @@ Sist oppdatert: 30. oktober 2026.
 - Bangkok: notatene er korte utkast (mange bare «Kafé.»/«Galleri.»). Fyll på når Pål har tekst. Mangler nettside: some time blue cafe,
   Charoen 43, Siwilai Store og Sarnies Roastery (bare Linktree). Homu (Charoen Krung 44) finnes ikke lenger på adressen; en «HOMU» ved
   Sathorn/Lumphini kan være samme sted. Balzac har nesten samme adresse som Charoen 43 Art & Eatery; sjekk om Charoen 43 er borte.
+- New York: notatene til de tolv nye stedene fra 30.10. er korte utkast (område, type, adresse). Fyll på når Pål har tekst.
 - Slett på byguide-forsiden er testet i Chromium, ikke i Safari på Mac. Pål sjekker der.
 - Nye nabolag trenger alltid et presist omriss i `data/<by>-geometri.geojson`; fremgangsmåten står i CLAUDE.md, Data.
 - Mulig etterarbeid: de 25 London-omrissene som ble beholdt (bl.a. Marylebone, Mayfair, Belgravia, Richmond, Kew Green)
@@ -97,9 +98,12 @@ Sist oppdatert: 30. oktober 2026.
 - Hrímnir – Fredensborg ligger øst for Maridalsveien (ved Vulkan), utenfor Fredensborg-omrisset.
 - St John's Wood: er «Bank» boutiquen The Bank 102 (102 High Street)? Ingen annen «Bank» funnet i gaten.
 - Parsons Green: er New King's Road fra Parsons Green Lane til Bradbourne Street riktig bit å markere?
+- Park Slope: skal 7th Avenue være markert i tillegg til 5th Avenue, eller bare 5th?
 
 ## Beslutningslogg
 
+- 2026-10-30: Park Slope lagt tilbake i New York med byplankontorets NTA-grense (Flatbush Ave–15th St, 4th Ave–Prospect Park West),
+  som passer nabolaget. 5th og 7th Avenue er markert som de to handlegatene. Mandarin Oriental er lagt i Midtown (Columbus Circle).
 - 2026-10-30: «Glapham (The Polygon-trekanten)» er lagt inn som Clapham Old Town med Polygon-trekanten som kjerne.
   Streatham Hill og Balham er to nabolag; «Wapping/Shadwell» er ett (Wapping, med Shadwell Basin).
 - 2026-10-30: Blackheath bruker ikke conservation area, som dekker hele heia; omrisset er landsbykjernen rundt Tranquil Vale.
