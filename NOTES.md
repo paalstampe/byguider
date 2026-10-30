@@ -7,7 +7,7 @@ Oppdateres ved slutten av hver økt (`/avslutt`).
 
 Sist oppdatert: 30. oktober 2026.
 
-- Live på https://stam.pe/byguider/ med seks byer: London (230 oppføringer, hvorav 100 på ønskelista), Oslo (131, 22 på ønskelista), New York (90, 1 på ønskelista), Nice (67), Tokyo (86, 7 på ønskelista), Bangkok (36, 2 på ønskelista).
+- Live på https://stam.pe/byguider/ med seks byer: London (275 oppføringer, hvorav 114 på ønskelista), Oslo (131, 22 på ønskelista), New York (93, 2 på ønskelista), Nice (74, 3 på ønskelista), Tokyo (86, 7 på ønskelista), Bangkok (40, 4 på ønskelista).
 - Appen er i hovedsak ferdig: MapLibre med papirpalett og mørk modus, nabolag med omriss, kjerne og gater,
   flyttbar infoboks, gåturer i infoboksen, ønskeliste for alle, norsk og engelsk.
 - Arbeidet nå er data: nye steder, favoritter, beskrivelser og nabolagsomriss. 18.10. fikk Oslo
@@ -69,6 +69,11 @@ Sist oppdatert: 30. oktober 2026.
 - 30.10. også: New York fikk Park Slope tilbake (omriss fra NTA 2020, markert 5th og 7th Avenue), to hoteller (Mandarin Oriental,
   The High Line Hotel) og ti steder fra Påls lenker, blant annet Clover Club, Brooklyn Farmacy, Warren Street Mews og ICP.
   Brooklyn fikk Kaféer, Barer og Verdt en omvei; Glasserie er på ønskelista.
+- 30.10. sent: Påls liste med nye steder. London fikk 44 steder (kaféer og butikker i Fitzrovia, Soho og Seven Dials, Firmdale-hotellene
+  og The Kensington Hotel som ny kategori Hoteller, Notting Hill-stedene, Abbey Road, Bussey Building, Graffititunnelen m.fl.) og
+  nabolaget Camberwell på ønskelista (omriss: conservation areas Camberwell Green og Camberwell Grove). Cecil Court og All Saints Road
+  har gatestrek. Sartoria lå inne fra før. Bangkok fikk Kathmandu Photo Gallery, Tangible og nabolagene Ekkamai og Phra Khanong
+  på ønskelista (soner på 60 m rundt gatene). New York fikk Crowley Vintage, Essex Market og Kabin; Nice tre kaféer på ønskelista.
 - Ingen åpne grener utenom `main`.
 
 ## Neste steg
@@ -81,6 +86,10 @@ Sist oppdatert: 30. oktober 2026.
   Charoen 43, Siwilai Store og Sarnies Roastery (bare Linktree). Homu (Charoen Krung 44) finnes ikke lenger på adressen; en «HOMU» ved
   Sathorn/Lumphini kan være samme sted. Balzac har nesten samme adresse som Charoen 43 Art & Eatery; sjekk om Charoen 43 er borte.
 - New York: notatene til de tolv nye stedene fra 30.10. er korte utkast (område, type, adresse). Fyll på når Pål har tekst.
+- Stedene fra Påls liste 30.10. kveld (London, Bangkok, New York, Nice) har korte utkast til notater skrevet av Claude. Usikre: Azzurra
+  («italiensk»), Monmouth Kitchen («italiensk og peruansk»), Tangible Bangkok (bare «Kafé»). Mangler nettside: Storyline, Tangible,
+  Crowley Vintage, Bonjour Amour og SAVVA.
+- Bangkok: Ekkamai og Phra Khanong er grove soner rundt gatene. Tegn dem presist (khwaeng eller grensegater i OSM) når de går av ønskelista.
 - Slett på byguide-forsiden er testet i Chromium, ikke i Safari på Mac. Pål sjekker der.
 - Nye nabolag trenger alltid et presist omriss i `data/<by>-geometri.geojson`; fremgangsmåten står i CLAUDE.md, Data.
 - Mulig etterarbeid: de 25 London-omrissene som ble beholdt (bl.a. Marylebone, Mayfair, Belgravia, Richmond, Kew Green)
