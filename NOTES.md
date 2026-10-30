@@ -5,9 +5,9 @@ Oppdateres ved slutten av hver økt (`/avslutt`).
 
 ## Status nå
 
-Sist oppdatert: 28. oktober 2026.
+Sist oppdatert: 30. oktober 2026.
 
-- Live på https://stam.pe/byguider/ med seks byer: London (230 oppføringer, hvorav 100 på ønskelista), Oslo (128, 22 på ønskelista), New York (77), Nice (67), Tokyo (53), Bangkok (36, 2 på ønskelista).
+- Live på https://stam.pe/byguider/ med seks byer: London (230 oppføringer, hvorav 100 på ønskelista), Oslo (131, 22 på ønskelista), New York (77), Nice (67), Tokyo (86, 7 på ønskelista), Bangkok (36, 2 på ønskelista).
 - Appen er i hovedsak ferdig: MapLibre med papirpalett og mørk modus, nabolag med omriss, kjerne og gater,
   flyttbar infoboks, gåturer i infoboksen, ønskeliste for alle, norsk og engelsk.
 - Arbeidet nå er data: nye steder, favoritter, beskrivelser og nabolagsomriss. 18.10. fikk Oslo
@@ -52,19 +52,27 @@ Sist oppdatert: 28. oktober 2026.
   nås på stam.pe/byguider/berlin/. Elleve nabolag foreslått av Claude ut fra smaken i de andre guidene (ingen ★),
   i sonene Mitte & Prenzlauer Berg, Kreuzberg & Neukölln, Friedrichshain og West, pluss Orania.Berlin og fem markeder
   med åpningstider fra Google Maps. Omrissene er Berlins planleggingsrom (LOR 2021, gdi.berlin.de) slått sammen per
-  nabolag; gatene er fra Detailnetz Berlin. Filene ble skrevet rett i arbeidstreet (ikke committet ennå).
+  nabolag; gatene er fra Detailnetz Berlin.
+- 30.10. kveld: Berlin fikk 32 kaféer, barer og butikker plukket fra lokale guider (Mit Vergnügen, iHeartBerlin, Späti Stories,
+  Tracks and the City, The Infatuation, visitBerlin, Highsnobiety) og sjekket i Google Maps. Mange tips i eldre guider var
+  stengt (særlig i Graefekiez: Kaffeekirsche, Tosoni, Umbras, Frida, Minibar, Moeon) og er utelatt; Café im Literaturhaus er
+  midlertidig stengt. Seks nabolag har fått «les:»-lenke til guiden stedene kom fra.
 - 30.10.: London fikk nabolagene St John's Wood (med Panzer's Delicatessen og The Bank 102), Parsons Green,
   Clapham Old Town, Coal Drops Yard, Kew Green (lagt tilbake), Sydenham og Blackheath. Markerte gater: St John's Wood
   High Street og Circus Road, New King's Road (Parsons Green Lane–Bradbourne Street), Tranquil Vale, Montpelier Vale og
   Lee Road. På ønskelista: Forest Hill, Balham, Streatham Hill, Tooting, Wapping og Lower Clapton.
   Parsons Green og Kew Green følger conservation areas; Coal Drops Yard og Clapham er sporet i OSM; Sydenham, Blackheath
   og nabolagene på ønskelista er soner på 40–70 m rundt handlegatene.
+- 30.10. også: Oslo fikk barene Bar Boca, Chair og Den Gamle Skobutikken. Tokyo fikk 33 steder fra Påls Google Maps-lenker
+  (butikker og muséer i Aoyama, Omotesando, Ginza, Yanaka, Daikanyama m.fl., pluss Sensō-ji, Meiji Jingu, Omoide Yokocho),
+  sju av dem på ønskelista. Central fikk Kaféer og Muséer og gallerier. Notatene er korte utkast skrevet av Claude.
 - Ingen åpne grener utenom `main`.
 
 ## Neste steg
 
 - Fyll på data etter hvert som Pål kommer med steder og navneendringer, i alle byer.
-- Tokyo: flere notater er bare én linje («Sushi.», «Bar.», «Moderne vietnamesisk.»). Fyll på når Pål har tekst.
+- Tokyo: flere notater er bare én linje («Sushi.», «Bar.», «Moderne vietnamesisk.»), og de 33 nye fra 30.10. er Claudes utkast.
+  Fyll på når Pål har tekst. Nettsiden til Jimbocho Book Center svarte 503 30.10.; sjekk senere.
   Bar Penguin, Apollo Bar, Kihara, Ăn Đi og Kosho SamenoHa mangler nettside.
 - Bangkok: notatene er korte utkast (mange bare «Kafé.»/«Galleri.»). Fyll på når Pål har tekst. Mangler nettside: some time blue cafe,
   Charoen 43, Siwilai Store og Sarnies Roastery (bare Linktree). Homu (Charoen Krung 44) finnes ikke lenger på adressen; en «HOMU» ved
@@ -93,6 +101,8 @@ Sist oppdatert: 28. oktober 2026.
   Streatham Hill og Balham er to nabolag; «Wapping/Shadwell» er ett (Wapping, med Shadwell Basin).
 - 2026-10-30: Blackheath bruker ikke conservation area, som dekker hele heia; omrisset er landsbykjernen rundt Tranquil Vale.
 - 2026-10-30: En by kan skjules fra byguide-forsiden med `"skjult": true` i byer.json. Guiden virker som før på /<id>/.
+- 2026-10-30: Nanzen-ji (Kyoto) tas ikke med i Tokyo-guiden.
+- 2026-10-30: Meguro River og Yūyake Dandan har egen «Verdt en omvei»-oppføring i tillegg til gatestreken, fordi Pål ba om dem.
 - 2026-10-30: Berlin-omrissene bygger på LOR-planleggingsrommene (Lebensweltlich orientierte Räume 2021), som følger kiez-grensene godt.
 
 - 2026-10-28: Bangkok-nabolagene ble definert ut fra Påls lagrede steder i Google Maps. Bangkok har ingen offisielle nabolag,

@@ -79,6 +79,9 @@ Playwright med `colorScheme: 'light'` og `'dark'`. Ta bildene fra stam.pe etter 
   !3d<bredde>!4d<lengde>; Place ID = base64url(0a 12 09 + a som 8 byte little-endian + 11 + b som 8 byte LE),
   uten «=». Gir søket en liste, har lenkene ChIJ… direkte i «!19s». Bruk OpenStreetMap bare som reserve,
   og si fra hvis du er usikker på plasseringen.
+- Kortlenker (maps.app.goo.gl) løses uten nettleser: curl -sI gir plass-URL-en i Location. Nettside og adresse:
+  åpne google.com/maps/place/?q=place_id:<id>&hl=en i nettleserpanelet, vent 3 s, ta et lite skjermbilde
+  (ellers tegnes ikke panelet), og bruk find «Website:» / «Address:» / «ermanently» (stengt).
 - Lagrede lister i Google Maps: be Pål om delt liste-lenke. Fra lista (åpnet i nettleserpanelet) gir
   fetch('/maps/preview/entitylist/getlist?authuser=0&hl=en&pb=!1m4!1s<liste-id>!2e1!3m1!1e1!2e2!3e2!4i500!16b1')
   navn, koordinater og 0x<a>:0x<b> for alle stedene. Sjekk at stedene ikke er permanent stengt.
