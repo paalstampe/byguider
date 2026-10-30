@@ -5,7 +5,7 @@ Oppdateres ved slutten av hver økt (`/avslutt`).
 
 ## Status nå
 
-Sist oppdatert: 30. oktober 2026.
+Sist oppdatert: 31. oktober 2026.
 
 - Live på https://stam.pe/byguider/ med seks byer: London (275 oppføringer, hvorav 114 på ønskelista), Oslo (131, 22 på ønskelista), New York (93, 2 på ønskelista), Nice (74, 3 på ønskelista), Tokyo (86, 7 på ønskelista), Bangkok (40, 4 på ønskelista).
 - Appen er i hovedsak ferdig: MapLibre med papirpalett og mørk modus, nabolag med omriss, kjerne og gater,
@@ -113,6 +113,9 @@ Sist oppdatert: 30. oktober 2026.
 
 ## Beslutningslogg
 
+- 2026-10-31: Stående mobil får én knapp som bytter mellom «Liste ↓» og «Kart ↑» på samme plass. Fane som henger fast
+  øverst tar plass hele tiden og ligner mer en app; lista som ark over kartet (som Google Maps) er en stor ombygging.
+  Den faste knappen står 20 px inn og 24 px opp, fordi 10 px havnet i den runde skjermkanten på telefonen.
 - 2026-10-30: Camberwell (ønskelista) følger conservation areas Camberwell Green og Camberwell Grove slått sammen, slik at
   både grønten med Church Street og Camberwell Grove kommer med.
 - 2026-10-30: Ekkamai og Phra Khanong (Bangkok, ønskelista) er soner på 60 m rundt hovedgatene, som de andre nabolagene på ønskelista.

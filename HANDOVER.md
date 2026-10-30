@@ -464,7 +464,9 @@ Hvert trinn skal kunne committes for seg og fungere alene.
   venstre og kartet til høyre, som på Mac (`liggendeMobil` i app.js, samme spørring i style.css). Lista hopper
   ikke til kartet der. `-webkit-text-size-adjust: 100%` hindrer iPhone i å forstørre teksten.
 - «Liste ↓» (PR #73, 28.10.): knapp nederst til venstre i kartet på stående mobil, ruller ned til menyen,
-  siden kartet tar alle fingerbevegelser.
+  siden kartet tar alle fingerbevegelser. Når kartets nederste kant er rullet ut av skjermen, blir den «Kart ↑»
+  (klassen `til-lista--kart`, PR #76–#77): står fast 20 px inn og 24 px opp (pluss safe area), utenfor den runde
+  skjermkanten, og ruller tilbake til kartet. Byttet styres av en scroll-lytter (`oppdaterTilListaKnapp`).
 - Infoboks får plass (grenen `festive-faraday`, 4.10.): stikker popupen ut av kartet (lang tekst,
   lavt kart på mobil), forskyves kartet akkurat nok til at hele boksen synes (`faaPopupInn`);
   er den høyere enn kartet, vises toppen. Venter til en flyTo er ferdig.
