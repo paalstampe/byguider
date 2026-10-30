@@ -7,7 +7,7 @@ Oppdateres ved slutten av hver økt (`/avslutt`).
 
 Sist oppdatert: 30. oktober 2026.
 
-- Live på https://stam.pe/byguider/ med seks byer: London (230 oppføringer, hvorav 100 på ønskelista), Oslo (131, 22 på ønskelista), New York (77), Nice (67), Tokyo (86, 7 på ønskelista), Bangkok (36, 2 på ønskelista).
+- Live på https://stam.pe/byguider/ med seks byer: London (230 oppføringer, hvorav 100 på ønskelista), Oslo (131, 22 på ønskelista), New York (90, 1 på ønskelista), Nice (67), Tokyo (86, 7 på ønskelista), Bangkok (36, 2 på ønskelista).
 - Appen er i hovedsak ferdig: MapLibre med papirpalett og mørk modus, nabolag med omriss, kjerne og gater,
   flyttbar infoboks, gåturer i infoboksen, ønskeliste for alle, norsk og engelsk.
 - Arbeidet nå er data: nye steder, favoritter, beskrivelser og nabolagsomriss. 18.10. fikk Oslo
@@ -66,6 +66,9 @@ Sist oppdatert: 30. oktober 2026.
 - 30.10. også: Oslo fikk barene Bar Boca, Chair og Den Gamle Skobutikken. Tokyo fikk 33 steder fra Påls Google Maps-lenker
   (butikker og muséer i Aoyama, Omotesando, Ginza, Yanaka, Daikanyama m.fl., pluss Sensō-ji, Meiji Jingu, Omoide Yokocho),
   sju av dem på ønskelista. Central fikk Kaféer og Muséer og gallerier. Notatene er korte utkast skrevet av Claude.
+- 30.10. også: New York fikk Park Slope tilbake (omriss fra NTA 2020, markert 5th og 7th Avenue), to hoteller (Mandarin Oriental,
+  The High Line Hotel) og ti steder fra Påls lenker, blant annet Clover Club, Brooklyn Farmacy, Warren Street Mews og ICP.
+  Brooklyn fikk Kaféer, Barer og Verdt en omvei; Glasserie er på ønskelista.
 - Ingen åpne grener utenom `main`.
 
 ## Neste steg

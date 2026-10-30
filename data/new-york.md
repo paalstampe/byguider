@@ -339,6 +339,20 @@ Antikvariat siden 1925, East 59th Street 116.
 
 Antiquarian bookshop since 1925, 116 East 59th Street.
 
+## Hoteller
+
+### Mandarin Oriental
+- sted: 40.76888, -73.98304
+- google: ChIJL83lHfZYwokRnd7wA8PLD1E
+- nettside: https://www.mandarinoriental.com/en/new-york/manhattan
+Columbus Circle
+
+Hotell høyt over Columbus Circle med utsikt over Central Park, Columbus Circle 80.
+
+- en: Columbus Circle
+
+Hotel high above Columbus Circle with views over Central Park, 80 Columbus Circle.
+
 # Downtown
 
 ## Nabolag og gater
@@ -621,6 +635,18 @@ Legendary basement jazz club, 178 Seventh Avenue South.
 
 ## Muséer og gallerier
 
+### International Center of Photography
+- sted: 40.71823, -73.98917
+- google: ChIJ5YRc6oVZwokRcRC4WKbR6_s
+- nettside: https://www.icp.org/
+Lower East Side
+
+Fotografimuseum, Ludlow Street 84.
+
+- en: Lower East Side
+
+Museum of photography, 84 Ludlow Street.
+
 ### Whitney Museum
 - sted: 40.73959, -74.00886
 - google: ChIJN3MJ6pRYwokRiXg91flSP8Y
@@ -634,6 +660,30 @@ Amerikansk kunst fra 1900-tallet til i dag, Gansevoort Street 99.
 20th-century and contemporary American art, 99 Gansevoort Street.
 
 ## Butikker
+
+### Dashwood Books
+- sted: 40.72610, -73.99353
+- google: ChIJHwq2RoVZwokR4Tlp8WRfoIE
+- nettside: https://www.dashwoodbooks.com/
+NoHo
+
+Fotobokhandel, Bond Street 33.
+
+- en: NoHo
+
+Photobook shop, 33 Bond Street.
+
+### Dot Reeder
+- sted: 40.73084, -74.00653
+- google: ChIJQ2y9DdtZwokRXofW_iph1A0
+- nettside: https://www.dotreeder.com/
+West Village
+
+Dameklær, Hudson Street 436.
+
+- en: West Village
+
+Womenswear, 436 Hudson Street.
 
 ### Goods for the Study
 - sted: 40.72264, -73.99590
@@ -695,6 +745,18 @@ Interiør og bruksting, mye japansk håndverk, Extra Place 2.
 
 Homeware, much of it Japanese craft, 2 Extra Place.
 
+### Pageant Print Shop
+- sted: 40.72676, -73.99056
+- google: ChIJ1aESNptZwokRCVDaVcWiFMI
+- nettside: https://www.pageantprintshop.nyc/
+East Village
+
+Gamle kart og trykk, East 4th Street 69.
+
+- en: East Village
+
+Antique maps and prints, 69 East 4th Street.
+
 ### Paragon Sports
 - sted: 40.73771, -73.99042
 - google: ChIJNb8JQKJZwokRUfwoS6rHX0M
@@ -706,6 +768,18 @@ Sportsbutikk, Broadway 867.
 - en: Union Square
 
 Sporting goods, 867 Broadway.
+
+### SHW (Still House) Jewelry
+- sted: 40.72909, -73.98666
+- google: ChIJTdRDR51ZwokRunXIT6bhhlk
+- nettside: https://www.shwjewelry.com/
+East Village
+
+Smykker, East 9th Street 307.
+
+- en: East Village
+
+Jewellery, 307 East 9th Street.
 
 ### The Strand
 - sted: 40.73325, -73.99095
@@ -768,6 +842,18 @@ Designhotell, Howard Street 11.
 - en: SoHo
 
 Design hotel, 11 Howard Street.
+
+### The High Line Hotel
+- sted: 40.74599, -74.00500
+- google: ChIJ-1XDX7hZwokRHLjn63mDetU
+- nettside: https://thehighlinehotel.com/
+Chelsea
+
+Hotell i en nygotisk seminarbygning fra 1800-tallet ved High Line, 10th Avenue 180.
+
+- en: Chelsea
+
+Hotel in a 19th-century Gothic Revival seminary building by the High Line, 180 Tenth Avenue.
 
 ## Verdt en omvei
 
@@ -904,6 +990,13 @@ Brownstones og forhager, med restauranter, kaféer og butikker langs Smith Stree
 New Yorks første historiske distrikt, med rolige gater og Promenaden med utsikt mot Manhattan.
 - en: New York’s first historic district, with quiet streets and the Promenade looking across to Manhattan.
 
+### Park Slope
+- sted: 40.67100, -73.98000
+- google: ChIJ4TnckwFbwokR5KGK5JUDPgA
+- gater: 5th Avenue, 7th Avenue
+Brownstones mellom 4th Avenue og Prospect Park, med restauranter, kaféer og butikker langs 5th Avenue og 7th Avenue.
+- en: Brownstones between Fourth Avenue and Prospect Park, with restaurants, cafés and shops along Fifth Avenue and Seventh Avenue.
+
 ### Williamsburg
 - sted: 40.71784, -73.95772
 - google: ChIJQSrBBv1bwokRbNfFHCnyeYI
@@ -948,3 +1041,69 @@ Legendarisk, romantisk old school-restaurant med Michelin-stjerne, rett under Br
 - en: DUMBO
 
 A legendary, romantic old-school Michelin-starred restaurant right under the Brooklyn Bridge.
+
+### Glasserie
+- sted: 40.73772, -73.95618
+- google: ChIJf9j4STxZwokRc9PDhX2eoHw
+- nettside: https://www.glasserie.com/
+- status: onskeliste
+Greenpoint
+
+Middelhavs- og Midtøsten-inspirert, i en gammel glassfabrikk, Commercial Street 95.
+
+- en: Greenpoint
+
+Mediterranean and Middle Eastern, in an old glass factory, 95 Commercial Street.
+
+## Kaféer
+
+### Brooklyn Farmacy & Soda Fountain
+- sted: 40.68401, -73.99931
+- google: ChIJEfQ86FtawokRL5EWcuqDo7g
+- nettside: https://www.brooklynfarmacyandsodafountain.com/
+Carroll Gardens
+
+Gammeldags soda fountain i et gammelt apotek, Henry Street 513.
+
+- en: Carroll Gardens
+
+Old-fashioned soda fountain in a former pharmacy, 513 Henry Street.
+
+### L'Albero Dei Gelati
+- sted: 40.67193, -73.98368
+- google: ChIJ40WDEP5awokRBzVrvzdHHww
+- nettside: https://www.alberodeigelati.com/
+Park Slope
+
+Italiensk gelato, 5th Avenue 341.
+
+- en: Park Slope
+
+Italian gelato, 341 Fifth Avenue.
+
+## Barer
+
+### Clover Club
+- sted: 40.68459, -73.99214
+- google: ChIJD1nl_lBawokRmefauQpPr7Q
+- nettside: https://www.cloverclubny.com/
+Cobble Hill
+
+Cocktailbar, Smith Street 210.
+
+- en: Cobble Hill
+
+Cocktail bar, 210 Smith Street.
+
+## Verdt en omvei
+
+### Warren Street Mews
+- sted: 40.68794, -73.99857
+- google: ChIJ84AgH9NbwokRCXfsytZZ3Cw
+Cobble Hill
+
+Smal gågate med små arbeiderboliger fra 1879, Warren Place mellom Warren Street og Baltic Street.
+
+- en: Cobble Hill
+
+Narrow pedestrian mews of small workers’ cottages from 1879, Warren Place between Warren Street and Baltic Street.
