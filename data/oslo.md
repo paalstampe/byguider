@@ -985,6 +985,32 @@ Cocktailbar. Trondheimsveien 2.
 - en: Grünerløkka
 Cocktail bar. Trondheimsveien 2.
 
+### Bar Boca
+- sted: 59.92524, 10.75938
+- google: ChIJqUdI5mhuQUYRPOB95OBV3G4
+Grünerløkka
+Liten cocktailbar. Thorvald Meyers gate 30.
+- en: Grünerløkka
+Tiny cocktail bar. Thorvald Meyers gate 30.
+
+### Chair
+- sted: 59.92430, 10.75907
+- google: ChIJx5CplGhuQUYRUEvs6DEgIao
+- nettside: https://www.chairoslo.no/
+Grünerløkka
+Bar. Thorvald Meyers gate 45.
+- en: Grünerløkka
+Bar. Thorvald Meyers gate 45.
+
+### Den Gamle Skobutikken
+- sted: 59.91383, 10.74855
+- google: ChIJpYGSQ2JuQUYRytM9IcPrCoM
+- nettside: https://www.instagram.com/gamleskobutikken/
+Sentrum
+Bar. Torggata 9B.
+- en: Sentrum
+Bar. Torggata 9B.
+
 ## Jazzklubber
 
 ### Herr Nilsen

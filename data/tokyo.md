@@ -132,6 +132,34 @@ Izakaya i et stort trehus. Restauranten var modellen for restauranten i scenen �
 
 An izakaya in a large wooden house. The restaurant was the model for the restaurant in the “Bride vs. the Crazy 88” scene in Kill Bill.
 
+### bills Ginza
+- sted: 35.67324, 139.76670
+- google: ChIJ4wnkFeSLGGARliQwUPoODeY
+- nettside: https://www.billsjapan.com/jp/locations/ginza
+- status: onskeliste
+Ginza
+
+Bill Grangers australske frokoststed, kjent for ricotta-pannekakene. Ginza 2-6-12, 12. etasje.
+
+- en: Ginza
+
+Bill Granger’s Australian breakfast place, known for its ricotta pancakes. Ginza 2-6-12, 12th floor.
+
+## Kaféer
+
+### Café de L’ambre
+- sted: 35.66792, 139.76229
+- google: ChIJZxiNeeiLGGARH3hUjIwOpSs
+- nettside: https://cafedelambre.com/
+- status: onskeliste
+Ginza
+
+Kaffe og ingenting annet, siden 1948. Ginza 8-10-15.
+
+- en: Ginza
+
+Coffee and nothing else, since 1948. Ginza 8-10-15.
+
 ## Barer
 
 ### Bar Penguin ★
@@ -155,6 +183,45 @@ Bar.
 - en: Ginza
 
 Bar.
+
+### Virtù
+- sted: 35.68799, 139.76322
+- google: ChIJlbohVy2NGGARYM9c0wZX34I
+- nettside: https://www.fourseasons.com/otemachi/dining/restaurants/virtu/
+Otemachi
+
+Cocktailbar i Four Seasons Hotel Tokyo at Otemachi. Otemachi 1-2-1.
+
+- en: Otemachi
+
+Cocktail bar in the Four Seasons Hotel Tokyo at Otemachi. Otemachi 1-2-1.
+
+### Rock Fish
+- sted: 35.67021, 139.76019
+- google: ChIJvbSR2e6LGGARMnnAkVibS-Q
+- nettside: https://maguchikazunari.jp/
+- status: onskeliste
+Ginza
+
+Highball-bar. Ginza 7-3-13, 7. etasje.
+
+- en: Ginza
+
+Highball bar. Ginza 7-3-13, 7th floor.
+
+## Muséer og gallerier
+
+### Ginza Graphic Gallery
+- sted: 35.66970, 139.76248
+- google: ChIJYfHMoeiLGGARAd_uQ2KIKmo
+- nettside: https://www.dnpfcp.jp/gallery/ggg/
+Ginza
+
+Galleri for grafisk design. Ginza 7-7-2.
+
+- en: Ginza
+
+Gallery of graphic design. Ginza 7-7-2.
 
 ## Butikker
 
@@ -193,6 +260,42 @@ Japansk motemerke.
 - en: Marunouchi
 
 A Japanese fashion label.
+
+### kindal Ginza
+- sted: 35.67007, 139.76495
+- google: ChIJw4WzSuSLGGAR_0vjJCqFNxA
+- nettside: https://www.kind.co.jp/ginza/
+Ginza
+
+Brukte designerklær. Ginza 5-9-15.
+
+- en: Ginza
+
+Second-hand designer clothes. Ginza 5-9-15.
+
+### Takumi
+- sted: 35.66959, 139.76036
+- google: ChIJNxnO0OiLGGARvSZSoNWUS_k
+- nettside: http://www.ginza-takumi.co.jp/
+Ginza
+
+Japansk folkehåndverk (mingei). Ginza 8-4-2.
+
+- en: Ginza
+
+Japanese folk crafts (mingei). Ginza 8-4-2.
+
+### Jimbocho Book Center
+- sted: 35.69574, 139.75755
+- google: ChIJebJT_ROMGGARV_jAAmMVIFY
+- nettside: http://www.jimbocho-book.jp/
+Jimbocho
+
+Bokhandel og kafé i bokhandlerstrøket Jimbocho. Kanda-Jimbocho 2-3-1.
+
+- en: Jimbocho
+
+Bookshop and café in Jimbocho, the booksellers’ quarter. Kanda-Jimbocho 2-3-1.
 
 ## Hoteller
 
@@ -337,6 +440,19 @@ Shinjuku
 
 At the top of the Park Hyatt, known from Lost in Translation. The New York Bar is on the same floor.
 
+### Two Rooms
+- sted: 35.66383, 139.71068
+- google: ChIJLcQt9l-LGGARmEwh2ybCuv0
+- nettside: https://tworooms.jp/
+- status: onskeliste
+Aoyama
+
+Restaurant og bar med terrasse. Kita-Aoyama 3-11-7, 5. etasje.
+
+- en: Aoyama
+
+Restaurant and bar with a terrace. Kita-Aoyama 3-11-7, 5th floor.
+
 ## Barer
 
 ### The SG Club ★
@@ -413,6 +529,106 @@ Espressobar.
 
 An espresso bar.
 
+### Hyvää Matkaa!
+- sted: 35.66559, 139.70553
+- google: ChIJJ6P57zeNGGARYax-q5xnpFo
+- nettside: https://www.nordic.co.jp/hmc/
+Omotesando
+
+Nordisk kafé og butikk. Jingumae 5-18-10.
+
+- en: Omotesando
+
+Nordic café and shop. Jingumae 5-18-10.
+
+### Nicolai Bergmann NOMU
+- sted: 35.66304, 139.71278
+- google: ChIJ157OaWCLGGARxqe_g5zq4ZA
+- nettside: https://nicolaibergmannnomu.com/
+Aoyama
+
+Kafé hos den danske blomsterkunstneren. Minami-Aoyama 5-7-2.
+
+- en: Aoyama
+
+Café at the Danish flower artist’s shop. Minami-Aoyama 5-7-2.
+
+### Starbucks Reserve Roastery Tokyo
+- sted: 35.64926, 139.69259
+- google: ChIJq_fYt4iLGGARrOojmQ4IMyE
+- nettside: https://store.starbucks.co.jp/detail-2381/
+Nakameguro
+
+Starbucks’ kaffebrenneri, tegnet av Kengo Kuma, ved Meguro River. Aobadai 2-19-23.
+
+- en: Nakameguro
+
+Starbucks’ roastery, designed by Kengo Kuma, by the Meguro River. Aobadai 2-19-23.
+
+### Light Up Coffee
+- sted: 35.65813, 139.66257
+- google: ChIJd_ppeG7zGGARRscN4OftxJg
+- nettside: https://lightupcoffee.com/
+Shimokitazawa
+
+Kaffebrenneri. Daita 2-29-12.
+
+- en: Shimokitazawa
+
+Coffee roaster. Daita 2-29-12.
+
+## Muséer og gallerier
+
+### Nezu Museum
+- sted: 35.66226, 139.71709
+- google: ChIJxU48-2OLGGARHMtB5RAhytA
+- nettside: https://www.nezu-muse.or.jp/
+- status: onskeliste
+Aoyama
+
+Japansk og østasiatisk kunst i et bygg av Kengo Kuma, med stor hage. Minami-Aoyama 6-5-1.
+
+- en: Aoyama
+
+Japanese and East Asian art in a building by Kengo Kuma, with a large garden. Minami-Aoyama 6-5-1.
+
+### Taro Okamoto Memorial Museum
+- sted: 35.66130, 139.71558
+- google: ChIJJbavS2GLGGARFLUeTte2lt0
+- nettside: https://taro-okamoto.or.jp/
+Aoyama
+
+Kunstnerens hjem og atelier. Minami-Aoyama 6-1-19.
+
+- en: Aoyama
+
+The artist’s home and studio. Minami-Aoyama 6-1-19.
+
+### Espace Louis Vuitton
+- sted: 35.66650, 139.70910
+- google: ChIJy9k-yDqNGGARfkUcaxSSRXM
+- nettside: https://www.espacelouisvuittontokyo.com/
+- status: onskeliste
+Omotesando
+
+Kunsthall øverst i Louis Vuitton-bygget. Jingumae 5-7-5, 7. etasje.
+
+- en: Omotesando
+
+Exhibition space at the top of the Louis Vuitton building. Jingumae 5-7-5, 7th floor.
+
+### d47 Museum
+- sted: 35.65910, 139.70374
+- google: ChIJd7kNUViLGGARlW46j_NJizY
+- nettside: https://www.d-department.com/ext/shop/d47.html
+Shibuya
+
+Design og håndverk fra Japans 47 prefekturer. Shibuya Hikarie, 8. etasje.
+
+- en: Shibuya
+
+Design and crafts from Japan’s 47 prefectures. Shibuya Hikarie, 8th floor.
+
 ## Butikker
 
 ### Daikanyama T-Site – Tsutaya Books ★
@@ -474,6 +690,42 @@ Lavt kompleks med små, uavhengige butikker og kaféer på den gamle jernbanetra
 
 A low-rise complex of small independent shops and cafés on the old railway line.
 
+### FRAME Aoyama
+- sted: 35.66171, 139.71300
+- google: ChIJV2OxfDSLGGAR_PtvlzxL8Ds
+- nettside: https://www.frame.jp/
+Aoyama
+
+Klær. Minami-Aoyama 5-12-2.
+
+- en: Aoyama
+
+Clothes. Minami-Aoyama 5-12-2.
+
+### Blamink Tokyo
+- sted: 35.66101, 139.71631
+- google: ChIJmYBOrGaLGGARvriNUvVsIwg
+- nettside: https://store.united-arrows.co.jp/brand/bl/stores/blay.html
+Aoyama
+
+Klær. Minami-Aoyama 6-3-16, i Blue Note-bygget.
+
+- en: Aoyama
+
+Clothes. Minami-Aoyama 6-3-16, in the Blue Note building.
+
+### Auralee
+- sted: 35.66116, 139.71641
+- google: ChIJJQ9cqWaLGGARsbQzwwUDAnU
+- nettside: https://auralee.jp/
+Aoyama
+
+Japansk klesmerke. Minami-Aoyama 6-3-2.
+
+- en: Aoyama
+
+Japanese clothing label. Minami-Aoyama 6-3-2.
+
 ## Hoteller
 
 ### Trunk (Hotel)
@@ -500,6 +752,89 @@ Krysset der alle går samtidig. Det mest kjente bildet fra Tokyo.
 - en: Shibuya
 
 The crossing where everyone walks at once. The most famous image of Tokyo.
+
+### Meguro River
+- sted: 35.64389, 139.70092
+- google: ChIJNVZtkB-LGGAR6Pz2MxHkSFY
+Nakameguro
+
+Elva gjennom Nakameguro, med kirsebærtrær, kaféer og butikker langs bredden.
+
+- en: Nakameguro
+
+The river through Nakameguro, lined with cherry trees, cafés and shops.
+
+### Log Road Daikanyama
+- sted: 35.64994, 139.70475
+- google: ChIJQWWf8kSLGGARRLlvZLJrL-I
+- nettside: https://www.instagram.com/logroaddaikanyama/
+Daikanyama
+
+Butikker og restauranter langs det gamle sporet til Tōyoko-linjen.
+
+- en: Daikanyama
+
+Shops and restaurants along the old Tōyoko Line track.
+
+### Kyu Asakura House
+- sted: 35.64719, 139.70153
+- google: ChIJPULLZU-LGGARsv8E3tigyqQ
+- nettside: https://www.city.shibuya.tokyo.jp/shisetsu/bunka-shisetsu/asakura/asakura_00004.html
+- status: onskeliste
+Daikanyama
+
+Trehus og hage fra 1919. Sarugakucho 29-20.
+
+- en: Daikanyama
+
+Wooden house and garden from 1919. Sarugakucho 29-20.
+
+### GYRE
+- sted: 35.66739, 139.70691
+- google: ChIJuXF5-qOMGGARIrnf_yRlzOQ
+- nettside: https://gyre-omotesando.com/
+Omotesando
+
+Butikkbygg av MVRDV, med butikker og galleri. Jingumae 5-10-1.
+
+- en: Omotesando
+
+Shopping building by MVRDV, with shops and a gallery. Jingumae 5-10-1.
+
+### Omohara Forest
+- sted: 35.66866, 139.70593
+- google: ChIJ_WQFfaSMGGARrxwjKDNcpX0
+Omotesando
+
+Takterrasse med trær over krysset Omotesando og Meiji-dori. Jingumae 4-30-3, 6. etasje.
+
+- en: Omotesando
+
+Roof terrace with trees above the Omotesando and Meiji-dori crossing. Jingumae 4-30-3, 6th floor.
+
+### Meiji Jingu
+- sted: 35.67639, 139.69932
+- google: ChIJ5SZMmreMGGARcz8QSTiJyo8
+- nettside: https://www.meijijingu.or.jp/
+Harajuku
+
+Shinto-helligdom i en stor skog, like ved Harajuku stasjon.
+
+- en: Harajuku
+
+Shinto shrine in a large forest, next to Harajuku Station.
+
+### Omoide Yokocho
+- sted: 35.69270, 139.69957
+- google: ChIJP9eKBdeMGGAR0zzBXJNVj5A
+- nettside: http://shinjuku-omoide.com/
+Shinjuku
+
+Smale smug med små yakitori-barer ved Shinjuku stasjon.
+
+- en: Shinjuku
+
+Narrow alleys of tiny yakitori bars by Shinjuku Station.
 
 # East
 
@@ -571,6 +906,20 @@ Kafé og galleri i et gammelt trehus.
 
 A café and gallery in an old wooden house.
 
+## Muséer og gallerier
+
+### SCAI The Bathhouse
+- sted: 35.72177, 139.77049
+- google: ChIJq1ynUyqMGGARJw9kwdVUyXE
+- nettside: https://www.scaithebathhouse.com/
+Yanaka
+
+Samtidskunst i et gammelt badehus. Yanaka 6-1-23.
+
+- en: Yanaka
+
+Contemporary art in an old bathhouse. Yanaka 6-1-23.
+
 ## Butikker
 
 ### Shinimonogurui
@@ -620,6 +969,18 @@ Manga, anime og samleobjekter over åtte etasjer.
 
 Manga, anime and collectibles over eight floors.
 
+### Expo
+- sted: 35.72011, 139.76949
+- google: ChIJCdTcxCuMGGARKcHg6J0tLk8
+- nettside: https://konoike.org/expo/
+Nezu
+
+Antikviteter. Ikenohata 4-26-30.
+
+- en: Nezu
+
+Antiques. Ikenohata 4-26-30.
+
 ## Verdt en omvei
 
 ### Ueno zoo
@@ -634,3 +995,51 @@ Japans eldste dyrehage, i Ueno-parken.
 - en: Ueno
 
 Japan’s oldest zoo, in Ueno Park.
+
+### Tennōji
+- sted: 35.72671, 139.77130
+- google: ChIJ8fH0kNSNGGARRqPAgLpngyc
+- nettside: http://www.tendaitokyo.jp/jiinmei/tennoji/
+Yanaka
+
+Tempel ved Yanaka-kirkegården, med en stor Buddha i bronse.
+
+- en: Yanaka
+
+Temple by Yanaka Cemetery, with a large bronze Buddha.
+
+### Yanaka Ginza Yūyake Dandan
+- sted: 35.72764, 139.76708
+- google: ChIJrw6t4tONGGARm4SASOVzzLc
+- nettside: https://www.city.arakawa.tokyo.jp/a022/shisetsuannai/kankouspot/nippori010.html
+Yanaka
+
+Trappa ned til Yanaka Ginza, kjent for solnedgangen.
+
+- en: Yanaka
+
+The steps down to Yanaka Ginza, known for its sunsets.
+
+### Sensō-ji
+- sted: 35.71476, 139.79665
+- google: ChIJ8T1GpMGOGGARDYGSgpooDWw
+- nettside: https://www.senso-ji.jp/
+Asakusa
+
+Tokyos eldste tempel, med Kaminarimon-porten og Nakamise-dori.
+
+- en: Asakusa
+
+Tokyo’s oldest temple, with the Kaminarimon gate and Nakamise-dori.
+
+### Kappabashi
+- sted: 35.71057, 139.78796
+- google: ChIJXYV-6JWOGGAR85vIZbM1RCE
+- nettside: http://www.kappabashi.or.jp/
+Asakusa
+
+Gata med kjøkkenutstyr: kniver, keramikk og plastmat.
+
+- en: Asakusa
+
+The kitchenware street: knives, ceramics and plastic food.
