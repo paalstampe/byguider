@@ -104,6 +104,7 @@ Sist oppdatert: 30. oktober 2026.
 
 ## Åpne spørsmål
 
+- Azzurra og Monmouth Kitchen: stemmer kjøkkenet i notatene (italiensk; italiensk og peruansk)?
 - Hrímnir – Fredensborg ligger øst for Maridalsveien (ved Vulkan), utenfor Fredensborg-omrisset.
 - St John's Wood: er «Bank» boutiquen The Bank 102 (102 High Street)? Ingen annen «Bank» funnet i gaten.
 - Parsons Green: er New King's Road fra Parsons Green Lane til Bradbourne Street riktig bit å markere?
@@ -111,6 +112,11 @@ Sist oppdatert: 30. oktober 2026.
 
 ## Beslutningslogg
 
+- 2026-10-30: Camberwell (ønskelista) følger conservation areas Camberwell Green og Camberwell Grove slått sammen, slik at
+  både grønten med Church Street og Camberwell Grove kommer med.
+- 2026-10-30: Ekkamai og Phra Khanong (Bangkok, ønskelista) er soner på 60 m rundt hovedgatene, som de andre nabolagene på ønskelista.
+  Ekkamai overlapper Thonglors østkant, fordi Ekkamai Road er grensen der.
+- 2026-10-30: London har fått kategorien Hoteller (Central og West). Sartoria lå inne fra før og ble ikke lagt inn på nytt.
 - 2026-10-30: Park Slope lagt tilbake i New York med byplankontorets NTA-grense (Flatbush Ave–15th St, 4th Ave–Prospect Park West),
   som passer nabolaget. 5th og 7th Avenue er markert som de to handlegatene. Mandarin Oriental er lagt i Midtown (Columbus Circle).
 - 2026-10-30: «Glapham (The Polygon-trekanten)» er lagt inn som Clapham Old Town med Polygon-trekanten som kjerne.
