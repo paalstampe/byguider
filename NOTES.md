@@ -48,6 +48,11 @@ Sist oppdatert: 28. oktober 2026.
   nederst til venstre i kartet. Publiseringen setter kjøringer i kø i stedet for å avbryte dem, og
   `pkill -f .claude/server.sh` stopper den lokale serveren igjen.
 - 28.10. sent: siden lastes på nytt når enheten bytter mellom lys og mørk modus, så kartet får riktig palett (PR #74).
+- 30.10.: Berlin lagt inn som skjult by (`"skjult": true` i byer.json; forsiden og «Lagre alle byene» hopper over den),
+  nås på stam.pe/byguider/berlin/. Elleve nabolag foreslått av Claude ut fra smaken i de andre guidene (ingen ★),
+  i sonene Mitte & Prenzlauer Berg, Kreuzberg & Neukölln, Friedrichshain og West, pluss Orania.Berlin og fem markeder
+  med åpningstider fra Google Maps. Omrissene er Berlins planleggingsrom (LOR 2021, gdi.berlin.de) slått sammen per
+  nabolag; gatene er fra Detailnetz Berlin. Filene ble skrevet rett i arbeidstreet (ikke committet ennå).
 - Ingen åpne grener utenom `main`.
 
 ## Neste steg
@@ -73,6 +78,9 @@ Sist oppdatert: 28. oktober 2026.
 - Hrímnir – Fredensborg ligger øst for Maridalsveien (ved Vulkan), utenfor Fredensborg-omrisset.
 
 ## Beslutningslogg
+
+- 2026-10-30: En by kan skjules fra byguide-forsiden med `"skjult": true` i byer.json. Guiden virker som før på /<id>/.
+- 2026-10-30: Berlin-omrissene bygger på LOR-planleggingsrommene (Lebensweltlich orientierte Räume 2021), som følger kiez-grensene godt.
 
 - 2026-10-28: Bangkok-nabolagene ble definert ut fra Påls lagrede steder i Google Maps. Bangkok har ingen offisielle nabolag,
   så kvartalene (khwaeng) og distriktene (khet) brukes der de passer, ellers gater sporet i OSM.
