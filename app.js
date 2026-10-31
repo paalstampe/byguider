@@ -817,6 +817,8 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       trackUserLocation: true,
       showAccuracyCircle: true
     }), 'top-left');
+    posisjonKtrl.on('geolocate', huskPosisjon);
+    posisjonKtrl.on('error', e => { if (e.code === 1) glemPosisjon(); });
   }
 
   const kartKlar = new Promise(res => kart.once('load', res));
@@ -1767,6 +1769,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     state.naerMeg = paa;
     if (paa && posisjonVakt === null) {
       posisjonVakt = navigator.geolocation.watchPosition(pos => {
+        huskPosisjon();
         const ny = { lng: pos.coords.longitude, lat: pos.coords.latitude };
         if (!posisjonPrikk) {
           const prikk = document.createElement('div');
@@ -1790,20 +1793,36 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
   }
 
   /* Er du i byen, åpner kartet der du er, med prikken som følger deg (som knappen for egen posisjon).
-     Bare når siden allerede har lov til å bruke posisjonen — ingen spørsmål ved oppstart. «I byen» er
+     Bare når siden har lov til å bruke posisjonen, eller posisjonen har virket her før — ellers ingen
+     spørsmål ved oppstart. «I byen» er
      innenfor utsnittet med alle stedene (også «utenfor: ja»), med litt slingringsmonn. */
+  /* Safari på iPhone avviser ofte spørringen etter tillatelse, eller svarer «prompt» selv om man har sagt ja
+     (Safari spør på nytt per økt). Derfor huskes det i nettleseren at posisjonen har virket her før. */
+  const POSISJON_NOKKEL = 'byguider-posisjon';
+  function huskPosisjon() { try { localStorage.setItem(POSISJON_NOKKEL, '1'); } catch (e) {} }
+  function glemPosisjon() { try { localStorage.removeItem(POSISJON_NOKKEL); } catch (e) {} }
+  function posisjonVirketFor() { try { return localStorage.getItem(POSISJON_NOKKEL) === '1'; } catch (e) { return false; } }
+
   function aapneHer(oppslag) {
-    if (!posisjonKtrl || !oppslag.length || !navigator.permissions) return;
+    if (!posisjonKtrl || !oppslag.length) return;
     const [x0, y0, x1, y1] = bbox(oppslag.flatMap(o => [o.bbox.slice(0, 2), o.bbox.slice(2)]));
     const slark = 0.02;
-    navigator.permissions.query({ name: 'geolocation' }).then(tillatelse => {
-      if (tillatelse.state !== 'granted') return;
-      navigator.geolocation.getCurrentPosition(pos => {
-        const { longitude: lng, latitude: lat } = pos.coords;
-        if (lng < x0 - slark || lng > x1 + slark || lat < y0 - slark || lat > y1 + slark) return;
-        kartKlar.then(() => { if (!state.valgtId) posisjonKtrl.trigger(); });
-      }, () => {}, { maximumAge: 300000, timeout: 10000 });
-    }).catch(() => {});
+    const hent = () => navigator.geolocation.getCurrentPosition(pos => {
+      huskPosisjon();
+      const { longitude: lng, latitude: lat } = pos.coords;
+      if (lng < x0 - slark || lng > x1 + slark || lat < y0 - slark || lat > y1 + slark) return;
+      // Knappen er klar først når MapLibre har sjekket støtten for posisjon; prøv igjen til den er det.
+      let forsok = 0;
+      const trykk = () => {
+        if (state.valgtId) return;
+        if (posisjonKtrl.trigger() === false && ++forsok < 20) setTimeout(trykk, 250);
+      };
+      kartKlar.then(trykk);
+    }, e => { if (e.code === 1) glemPosisjon(); }, { maximumAge: 300000, timeout: 15000 });
+    const sporring = navigator.permissions ? navigator.permissions.query({ name: 'geolocation' }) : Promise.reject();
+    sporring.then(tillatelse => {
+      if (tillatelse.state === 'granted' || (tillatelse.state === 'prompt' && posisjonVirketFor())) hent();
+    }, () => { if (posisjonVirketFor()) hent(); });
   }
 
   /* Avstand i meter mellom to { lng, lat } (haversine). */
