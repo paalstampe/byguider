@@ -481,6 +481,16 @@ Analog fotoautomat i svart-hvitt. Friedrichstraße 49, ved Checkpoint Charlie.
 
 Analogue black-and-white photo booth. Friedrichstraße 49, near Checkpoint Charlie.
 
+### Schönhauser Allee
+- sted: 52.54157, 13.41233
+- google: ChIJr7v_b_9RqEcRfOH0HJvkHO8
+Prenzlauer Berg
+
+Hovedgaten gjennom Prenzlauer Berg, med U2 på viadukt over gaten. Butikker og kaféer, og Konnopke’s Imbiss under viadukten ved Eberswalder Straße.
+- en: Prenzlauer Berg
+
+The main street through Prenzlauer Berg, with the U2 running on a viaduct above it. Shops and cafés, and Konnopke’s Imbiss under the viaduct at Eberswalder Straße.
+
 ### silent green Kulturquartier
 - sted: 52.54499, 13.36658
 - google: ChIJ_4cWH4dRqEcRkwDOHgzjQ9c
@@ -1158,3 +1168,23 @@ Nedlagt fornøyelsespark fra DDR-tiden i Plänterwald, med pariserhjulet som st�
 - en: Plänterwald
 
 Abandoned GDR-era amusement park in the Plänterwald, with its Ferris wheel still standing. Guided tours while the park is being redeveloped.
+
+### Florastraße 87
+- sted: 52.56601, 13.39931
+- google: ChIJxwLesGpSqEcRtV8U8PDTnaE
+Pankow
+
+Florastraße 87 i Florakiez.
+- en: Pankow
+
+Florastraße 87 in the Florakiez.
+
+### Tschaikowskistraße 47
+- sted: 52.57595, 13.39521
+- google: ChIJYU5-WENSqEcRcDrb8V3e5Bg
+Pankow
+
+Tschaikowskistraße 47 i Niederschönhausen.
+- en: Pankow
+
+Tschaikowskistraße 47 in Niederschönhausen.

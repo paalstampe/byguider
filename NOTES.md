@@ -80,7 +80,7 @@ Sist oppdatert: 31. oktober 2026.
 - 31.10.: Berlin heter nå «Pål og Heddas Berlin» (bare Berlin). 36 nye steder fra Heddas delte liste i Google Maps pluss COOP Anti-War Café
   og b-ware Ladenkino: kaféer og barer, muséer (DDR Museum, Designpanoptikum, Museum der Dinge, Synthesizer Museum, Stasi-museet m.fl.),
   kinoene Kino International, Delphi og Odeon, Modulor, Liquidrom, Spreepark. Ny kategori Restauranter (Burgermeister). Seks steder i lista
-  lå inne fra før. Notatene er korte utkast skrevet av Claude. Lista ble lest med curl (getlist og maps/preview/place, uten nettleser).
+  lå inne fra før. Schönhauser Allee og to adresser i Pankow kom med etter Påls ja. Notatene er korte utkast skrevet av Claude. Lista ble lest med curl (getlist og maps/preview/place, uten nettleser).
 - Ingen åpne grener utenom `main`.
 
 ## Neste steg
@@ -110,7 +110,7 @@ Sist oppdatert: 31. oktober 2026.
 
 ## Åpne spørsmål
 
-- Berlin: Heddas liste har også Schönhauser Allee (gate) og to adresser i Pankow (Florastraße 87, Tschaikowskistraße 47). Ikke lagt inn – skal de med, og som hva?
+- Berlin: Florastraße 87 og Tschaikowskistraße 47 (Pankow, Around Berlin · Verdt en omvei) ser ut som bolighus. Hva er de? Notatet er bare adressen.
 - Azzurra og Monmouth Kitchen: stemmer kjøkkenet i notatene (italiensk; italiensk og peruansk)?
 - Hrímnir – Fredensborg ligger øst for Maridalsveien (ved Vulkan), utenfor Fredensborg-omrisset.
 - St John's Wood: er «Bank» boutiquen The Bank 102 (102 High Street)? Ingen annen «Bank» funnet i gaten.
