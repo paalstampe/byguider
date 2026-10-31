@@ -3,7 +3,8 @@
 
 «Del» i infoboksen lenker hit (…/london/conduit-coffee-house/). Siden har og:-tagger med stedets navn,
 kategori og nabolag, så delingskortet i Meldinger, Slack og e-post viser stedet, ikke bare byen.
-Den har ikke og:image, så Meldinger viser et lite kort med hjemskjermikonet (frimerket med «b»).
+Den har ikke og:image, så Meldinger viser et lite kort med hjemskjermikonet: byens frimerke
+(bilder/ikon-<by>.png) når det finnes, ellers «b»-frimerket.
 Åpnes siden i en nettleser, går den videre til ../?sted=<slug> (pluss ?lang=en), som før.
 
 Kjøres av .github/workflows/pages.yml ved publisering, for main og hver forhåndsvisning;
@@ -60,13 +61,13 @@ def forste_linje(notat):
     return ''
 
 
-def side(navn, beskrivelse, tittel, url, sti_slug):
+def side(navn, beskrivelse, tittel, url, sti_slug, ikon):
     e = lambda s: html.escape(s, quote=True)
     return f'''<!DOCTYPE html>
 <html lang="no">
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(navn)} · {e(tittel)}</title>
-<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="apple-touch-icon" href="{ikon}">
 <meta name="robots" content="noindex, nofollow, noarchive">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{e(url)}">
@@ -93,6 +94,7 @@ def main(rot):
         meta, steder = les_markdown(open(datafil, encoding='utf-8').read())
         tittel = meta.get('tittel') or by['navn']
         brukt = set()
+        ikon = f"../../bilder/ikon-{by['id']}.png" if os.path.exists(os.path.join(rot, 'bilder', f"ikon-{by['id']}.png")) else '../../apple-touch-icon.png'
         for st in steder:
             s = slug(st['navn'])
             # Tom slug (f.eks. bare japanske tegn) eller samme slug to ganger: Del faller tilbake på ?sted=.
@@ -110,7 +112,7 @@ def main(rot):
                 print(f"  {by['id']}/{s}/ finnes fra før; hoppet over")
                 continue
             os.makedirs(mappe)
-            open(os.path.join(mappe, 'index.html'), 'w', encoding='utf-8').write(side(st['navn'], beskrivelse, tittel, url, s))
+            open(os.path.join(mappe, 'index.html'), 'w', encoding='utf-8').write(side(st['navn'], beskrivelse, tittel, url, s, ikon))
             totalt += 1
     print(f'Stedssider: {totalt} i {rot}')
 
