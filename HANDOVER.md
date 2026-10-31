@@ -11,11 +11,10 @@ En enkel nettbasert app som viser Pål og Vibekes byer — London først, så Ni
 med nabolag, steder i flere kategorier (kaféer, parker, butikker, markeder, gallerier)
 og markerte gater og gåturer. Skal kunne deles via lenke uten innlogging.
 
-Todelt strategi:
-
-- **Webappen** — for planlegging, lesing og deling. Hostes på GitHub Pages.
-- **Google My Maps** — parallelt spor for bruk i felt, siden My Maps-kart dukker
-  opp i Google Maps-appen på mobil med navigasjon. Mates fra samme data via KML.
+Webappen brukes både til planlegging og deling og i felt. Den hostes på GitHub Pages, kan lagres
+offline, og «Åpne i Google Maps» i infoboksen åpner det ekte stedet (Place ID) i Google Maps-appen,
+med åpningstider og navigasjon. Eksport til Google My Maps (KML) og til lister i Google Maps er vurdert
+og droppet (31.10.2026): for omstendelig for andre å bruke.
 
 ---
 
