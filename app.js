@@ -90,7 +90,7 @@ const TEKST = {
     gatur: 'Gåtur',
     ruteIkkeTegnet: 'rute ikke tegnet',
     zoomInn: 'Zoom inn',
-    aapneMaps: 'Åpne i Google Maps',
+    aapneMaps: 'Google Maps',
     veibeskrivelse: 'Veibeskrivelse',
     del: 'Del',
     lenkeKopiert: 'Lenke kopiert',
@@ -137,7 +137,7 @@ const TEKST = {
     gatur: 'Walk',
     ruteIkkeTegnet: 'route not drawn',
     zoomInn: 'Zoom in',
-    aapneMaps: 'Open in Google Maps',
+    aapneMaps: 'Google Maps',
     veibeskrivelse: 'Directions',
     del: 'Share',
     lenkeKopiert: 'Link copied',
@@ -1435,13 +1435,17 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     const o = id && oppslagFraId(id);
     const start = o && o.erLinje && o.f.geometry ? o.f.geometry.coordinates[0] : null;
     const vei = start ? veiLenke(p, { lng: start[0], lat: start[1] }, true) : veiLenke(p, latlng);
-    const lenker = [
-      id ? '<button type="button" class="pop-lenke pop-zoom" data-id="' + esc(id) + '">' + t('zoomInn') + '</button>' : '',
+    // To linjer som hver får plass i boksen: lenkene ut av guiden, så lenkene i kartet.
+    const ut = [
       vei ? '<a class="pop-lenke" href="' + vei + '" target="_blank" rel="noopener">' + t('veibeskrivelse') + '</a>' : '',
       lenke ? '<a class="pop-lenke" href="' + lenke + '" target="_blank" rel="noopener">' + t('aapneMaps') + '</a>' : '',
-      p.nettside ? '<a class="pop-lenke" href="' + esc(p.nettside) + '" target="_blank" rel="noopener">' + t('nettside') + '</a>' : '',
-      id ? '<button type="button" class="pop-lenke pop-del" data-id="' + esc(id) + '">' + t('del') + '</button>' : ''
+      p.nettside ? '<a class="pop-lenke" href="' + esc(p.nettside) + '" target="_blank" rel="noopener">' + t('nettside') + '</a>' : ''
     ].filter(Boolean);
+    const inne = id ? [
+      '<button type="button" class="pop-lenke pop-zoom" data-id="' + esc(id) + '">' + t('zoomInn') + '</button>',
+      '<button type="button" class="pop-lenke pop-del" data-id="' + esc(id) + '">' + t('del') + '</button>'
+    ] : [];
+    const linje = l => l.length ? '<p class="pop-lenker">' + l.join('<span class="pop-skille">·</span>') + '</p>' : '';
     // «Artikkel fra Financial Times: Tittel» — tittelen er lenken
     const les = (p.les || []).map(l =>
       '<p class="pop-les">' + esc(l.kilde ? t('artikkelFra') + ' ' + l.kilde : t('artikkel')) + ': ' +
@@ -1458,7 +1462,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       (p.gater && p.gater.length ? '<p class="pop-gater">' + esc(p.gater.join(' · ')) + '</p>' : '') +
       (notat ? '<p class="pop-notat">' + notatHtml(notat) + '</p>' : '') +
       les +
-      (lenker.length ? '<p class="pop-lenker">' + lenker.join('<span class="pop-skille">·</span>') + '</p>' : '');
+      linje(ut) + linje(inne);
   }
 
   /* ---------- oppslag fra data ---------- */

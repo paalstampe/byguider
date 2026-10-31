@@ -716,12 +716,15 @@ html, body {
 .pop-les a, .pop-notat a { color: var(--aksent); text-decoration: underline; text-underline-offset: 3px; }
 @media (hover: hover) and (pointer: fine) { .pop-les a:hover, .pop-notat a:hover { color: var(--aksent-hover); } }
 
+/* To linjer: lenkene ut (veibeskrivelse, Google Maps, nettside), så lenkene i kartet (zoom inn, del). */
 .pop-lenker {
   margin: 10px 0 0;
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
 }
+
+.pop-lenker + .pop-lenker { margin-top: 6px; }
 
 .pop-skille { margin: 0 8px; color: var(--kant); }
 
