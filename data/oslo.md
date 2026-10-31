@@ -21,7 +21,7 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
   ### Navn ★        ett sted. ★ bak navnet = favoritt.
   - sted: 51.5207, -0.1519      breddegrad, lengdegrad — som Google Maps viser det
                                 (høyreklikk i Google Maps og klikk på tallene for å kopiere)
-  - google: <Place ID eller lenke fra Google Maps>   gjør at «Åpne i Google Maps» viser stedets side
+  - google: <Place ID eller lenke fra Google Maps>   gjør at «Google Maps» i infoboksen viser stedets side
                                 (uten: søk på navnet ved koordinaten). Claude kan hente Place ID-er.
   - nettside: https://…          stedets egen side — gir lenken «Nettside» i infoboksen
   - les: Financial Times | Tittel | https://…   artikkel: «Artikkel fra Financial Times: Tittel» sist i infoboksen. Kan gjentas.

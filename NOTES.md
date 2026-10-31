@@ -88,11 +88,11 @@ Sist oppdatert: 31. oktober 2026.
 - 31.10. kveld (PR #82–#83): åpning der du er virker nå på iPhone. Safari avviste spørringen etter tillatelse, så nå huskes det
   i nettleseren (`byguider-posisjon`) at posisjonen har virket før. Infoboksen har «Del», og `?sted=<navn>` åpner kartet zoomet
   inn på stedet med infoboksen. Testet av Pål på telefonen.
+  Lenkene i infoboksen står på to faste linjer: Veibeskrivelse · Google Maps · Nettside, så Zoom inn · Del (PR #84).
 - Ingen åpne grener utenom `main`.
 
 ## Neste steg
 
-- Felt: Lenkene i infoboksen (nå også «Del») bryter linja med «·» sist på første linje; vurder om «Åpne i Google Maps» skal forkortes.
 - Fyll på data etter hvert som Pål kommer med steder og navneendringer, i alle byer.
 - Tokyo: flere notater er bare én linje («Sushi.», «Bar.», «Moderne vietnamesisk.»), og de 33 nye fra 30.10. er Claudes utkast.
   Fyll på når Pål har tekst. Nettsiden til Jimbocho Book Center svarte 503 30.10.; sjekk senere.

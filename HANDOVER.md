@@ -12,7 +12,7 @@ med nabolag, steder i flere kategorier (kaféer, parker, butikker, markeder, gal
 og markerte gater og gåturer. Skal kunne deles via lenke uten innlogging.
 
 Webappen brukes både til planlegging og deling og i felt. Den hostes på GitHub Pages, kan lagres
-offline, og «Åpne i Google Maps» i infoboksen åpner det ekte stedet (Place ID) i Google Maps-appen,
+offline, og «Google Maps» i infoboksen åpner det ekte stedet (Place ID) i Google Maps-appen,
 med åpningstider og navigasjon. Eksport til Google My Maps (KML) og til lister i Google Maps er vurdert
 og droppet (31.10.2026): for omstendelig for andre å bruke.
 
