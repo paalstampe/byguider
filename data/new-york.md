@@ -593,6 +593,18 @@ Kafé og vinbar, West 10th Street 183.
 
 Café and wine bar, 183 West 10th Street.
 
+### Starbucks Reserve Roastery New York
+- sted: 40.7416, -74.0053
+- google: ChIJIQDZbb9ZwokRNRez4RviXGQ
+- nettside: https://www.starbucksreserve.com/locations/new-york-roastery
+Meatpacking District
+
+Starbucks’ kaffebrenneri, rett ved Chelsea Market. 9th Avenue 61.
+
+- en: Meatpacking District
+
+Starbucks’ coffee roastery, next to Chelsea Market. 61 Ninth Avenue.
+
 ## Barer
 
 ### Death & Co ★
