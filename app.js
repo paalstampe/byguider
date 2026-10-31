@@ -1334,14 +1334,16 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
      …/london/?sted=conduit-coffee-house åpner kartet med infoboksen for stedet (også nabolag og gåturer).
      «Del» i infoboksen åpner delingsarket på mobil (Meldinger, WhatsApp …), ellers kopieres lenken.
      Den delte lenken er …/london/conduit-coffee-house/: en delingsside med stedets navn i delingskortet,
-     laget ved publisering av .github/stedsider.py, som går videre til ?sted=. Navn uten latinske
+     laget ved publisering av .github/stedsider.py. Den er en stubb som bysidene, med data-sted="<slug>",
+     og viser kartet selv. Den sender ikke videre: Meldinger på iPhone kjører JavaScript når den lager
+     forhåndsvisningen, og fulgte da omdirigeringen til byens delingskort. Navn uten latinske
      bokstaver (tom slug) deles som ?sted=. */
 
   const stedSlug = navn => normaliser(navn).replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || String(navn || '');
 
   function stedLenke(p) {
     const slug = stedSlug(p.navn);
-    const mappe = new URL('.', location.href.split(/[?#]/)[0]);
+    const mappe = new URL(BY + '/', BASE);   // bysiden, også når vi står på en delingsside
     const u = /^[a-z0-9-]+$/.test(slug) ? new URL(slug + '/', mappe) : new URL(mappe);
     if (u.href === mappe.href) u.searchParams.set('sted', slug);
     if (SPRAK === 'en') u.searchParams.set('lang', 'en');
@@ -1366,7 +1368,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
   /* Åpner stedet fra ?sted= når dataene er lastet. Gir true når et sted ble åpnet. */
   function aapneStedFraAdresse() {
-    const q = new URLSearchParams(location.search).get('sted');
+    const q = new URLSearchParams(location.search).get('sted') || SKRIPT.dataset.sted;
     if (!q) return false;
     const o = state.oppslag.concat(state.onskeliste).find(x => stedSlug(x.p.navn) === stedSlug(q));
     if (!o) return false;
@@ -1960,7 +1962,8 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     const tittel = (en && meta.tittelEn) || meta.tittel || '';
     const kicker = (en && meta.kickerEn) || meta.kicker || '';
     const undertittel = (en && meta.undertittelEn) || meta.undertittel || '';
-    if (tittel) document.title = tittel;
+    // Delingssiden beholder stedets tittel, så forhåndsvisningen i Meldinger viser stedet
+    if (tittel && !SKRIPT.dataset.sted) document.title = tittel;
     el.tittel.textContent  = tittel;
     el.kicker.textContent  = kicker;
     el.kicker.hidden = !kicker;
