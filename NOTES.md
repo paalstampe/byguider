@@ -75,6 +75,8 @@ Sist oppdatert: 31. oktober 2026.
   har gatestrek. Sartoria lå inne fra før. Bangkok fikk Kathmandu Photo Gallery, Tangible og nabolagene Ekkamai og Phra Khanong
   på ønskelista (soner på 60 m rundt gatene). New York fikk Crowley Vintage, Essex Market og Kabin; Nice tre kaféer på ønskelista.
 - 30.10. sent: på stående mobil blir «Liste ↓» til «Kart ↑» og står fast nederst til venstre når kartet er rullet ut av syne (PR #76), godt inn fra den runde skjermkanten (PR #77).
+- 31.10.: egen 404-side (kopi av den på stam.pe, PR #78). Ukjente adresser under stam.pe/byguider/ viste før GitHubs standardside.
+  Endres 404.html, gjøres det i paalstampe.github.io og kopieres hit.
 - Ingen åpne grener utenom `main`.
 
 ## Neste steg
