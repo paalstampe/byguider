@@ -1174,17 +1174,17 @@ Abandoned GDR-era amusement park in the Plänterwald, with its Ferris wheel stil
 - google: ChIJxwLesGpSqEcRtV8U8PDTnaE
 Pankow
 
-Florastraße 87 i Florakiez.
+Verdt en omvei.
 - en: Pankow
 
-Florastraße 87 in the Florakiez.
+Worth a detour.
 
 ### Tschaikowskistraße 47
 - sted: 52.57595, 13.39521
 - google: ChIJYU5-WENSqEcRcDrb8V3e5Bg
 Pankow
 
-Tschaikowskistraße 47 i Niederschönhausen.
+Verdt en omvei.
 - en: Pankow
 
-Tschaikowskistraße 47 in Niederschönhausen.
+Worth a detour.

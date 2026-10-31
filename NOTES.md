@@ -110,7 +110,7 @@ Sist oppdatert: 31. oktober 2026.
 
 ## Åpne spørsmål
 
-- Berlin: Florastraße 87 og Tschaikowskistraße 47 (Pankow, Around Berlin · Verdt en omvei) ser ut som bolighus. Hva er de? Notatet er bare adressen.
+- Berlin: Florastraße 87 og Tschaikowskistraße 47 (Pankow, Around Berlin · Verdt en omvei) ser ut som bolighus. Hva er de? Notatet sier foreløpig bare «Verdt en omvei».
 - Azzurra og Monmouth Kitchen: stemmer kjøkkenet i notatene (italiensk; italiensk og peruansk)?
 - Hrímnir – Fredensborg ligger øst for Maridalsveien (ved Vulkan), utenfor Fredensborg-omrisset.
 - St John's Wood: er «Bank» boutiquen The Bank 102 (102 High Street)? Ingen annen «Bank» funnet i gaten.
