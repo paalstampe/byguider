@@ -81,10 +81,16 @@ Sist oppdatert: 31. oktober 2026.
   og b-ware Ladenkino: kaféer og barer, muséer (DDR Museum, Designpanoptikum, Museum der Dinge, Synthesizer Museum, Stasi-museet m.fl.),
   kinoene Kino International, Delphi og Odeon, Modulor, Liquidrom, Spreepark. Ny kategori Restauranter (Burgermeister). Seks steder i lista
   lå inne fra før. Schönhauser Allee og to adresser i Pankow kom med etter Påls ja. Notatene er korte utkast skrevet av Claude. Lista ble lest med curl (getlist og maps/preview/place, uten nettleser).
+- 31.10.: bedre i felt (PR #79–#81). Infoboksen har «Veibeskrivelse», som starter Google Maps rett til stedet: til fots,
+  kollektivt for `utenfor: ja` og til startpunktet for gåturer. «Nær meg» ved «Kun favoritter» sorterer lista etter avstand,
+  med «350 m · 5 min å gå». Kartet åpner der du er når du er i byen og siden allerede har lov til å bruke posisjonen.
+  Eksport til My Maps og Google Maps er droppet.
 - Ingen åpne grener utenom `main`.
 
 ## Neste steg
 
+- Felt: test «Nær meg», Veibeskrivelse og åpning der du er på iPhone i en by (Oslo går fint). Lenkene i infoboksen bryter linja med «·» sist på første linje når Veibeskrivelse er med; vurder om «Åpne i Google Maps» skal forkortes.
+- Mulig neste: lenke til ett sted (`?sted=…`) som åpner kartet med infoboksen, for å dele et tips på melding.
 - Fyll på data etter hvert som Pål kommer med steder og navneendringer, i alle byer.
 - Tokyo: flere notater er bare én linje («Sushi.», «Bar.», «Moderne vietnamesisk.»), og de 33 nye fra 30.10. er Claudes utkast.
   Fyll på når Pål har tekst. Nettsiden til Jimbocho Book Center svarte 503 30.10.; sjekk senere.
@@ -119,6 +125,7 @@ Sist oppdatert: 31. oktober 2026.
 
 ## Beslutningslogg
 
+- 2026-10-31: Kartet åpner der du er bare når siden allerede har lov til å bruke posisjonen (Permissions API), så ingen får spørsmål om posisjon ved oppstart. «Nær meg» slås ikke på av seg selv.
 - 2026-10-31: KML-eksport til Google My Maps og eksport til lister i Google Maps er droppet. Begge er for omstendelige for andre å bruke.
   Appen er verktøyet i felt også: offline-lagring og «Åpne i Google Maps» med Place ID. scope-kml.md er slettet (finnes i git-historikken).
 - 2026-10-31: Berlin-guiden heter «Pål og Heddas Berlin»; de andre byene heter fortsatt «Pål og Vibekes».

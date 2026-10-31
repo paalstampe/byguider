@@ -500,6 +500,11 @@ Hvert trinn skal kunne committes for seg og fungere alene.
   er fjernet. Gåturer åpner den vanlige popupen — dermed flyttbar — der ruten ble klikket, eller
   fra lista på rutepunktet nærmest midten av ruteboksen (`ruteAnker`). Metalinjen er
   «Gåtur · lengde · varighet · sone».
+- I felt (PR #79–#81, 31.10.): «Veibeskrivelse» i infoboksen (`veiLenke`: Google Maps dir-URL med
+  `destination_place_id`, walking eller transit for `utenfor`, startpunktet for gåturer). «Nær meg» i
+  `filter-status` (`settNaerMeg`): watchPosition, sortering etter `avstandTil` (haversine; linjer: nærmeste
+  rutepunkt), `avstandTekst` med gangtid (luftlinje × 1,25, 80 m/min), egen prikk. `aapneHer`: har siden
+  allerede tillatelse og du er innenfor utsnittet med alle stedene (± 0,02°), trykkes knappen for egen posisjon.
 - Neste: data. Pål kommer med navneendringer (som Marylebone High Street → Marylebone Village)
   og nye steder. Områdeskisser: alle nabolag i London og New York er tegnet (London 5.10.,
   langs gatene i OpenStreetMap); nye nabolag trenger skisse. Eksempelstedene er merket EKSEMPEL.
