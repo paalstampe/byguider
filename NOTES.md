@@ -100,6 +100,9 @@ Sist oppdatert: 31. oktober 2026.
   «kategori · nabolag — guide» i delingskortet, uten stort bilde. Sidene (812) lages ved publisering av `.github/stedsider.py`
   og committes ikke. Hver by har eget hjemskjermikon, frimerke med «BYGUIDE» og bynavnet (`bilder/ikon-<by>.png`, PR #87),
   som også brukes i det lille delingskortet. Forsiden beholder «b». Live og sjekket med curl.
+- 31.10. sent: på iPhone viste et delt sted fortsatt byens store kort, fordi Meldinger kjører JavaScript og fulgte
+  omdirigeringen fra delingssiden. Delingssiden viser nå kartet selv (stubb med `data-sted`), uten å sende videre (PR #88).
+  Live og sjekket i Chromium; ikke sett i Meldinger ennå.
 - Ingen åpne grener utenom `main`.
 
 ## Neste steg
@@ -145,6 +148,8 @@ Sist oppdatert: 31. oktober 2026.
 
 ## Beslutningslogg
 
+- 2026-10-31: Delingssiden sender ikke videre til `?sted=`; den er en stubb som viser kartet selv. Meldinger på iPhone
+  kjører JavaScript og fulgte omdirigeringen til byens kort.
 - 2026-10-31: Ett sted deles med egen delingsside (`<by>/<slug>/`) laget ved publisering, ikke committet. Byens store postkort
   var for voldsomt når man deler ett sted og nevnte ikke stedet. Hjemskjermikonet per by er variant D: «BYGUIDE» og bynavnet
   mellom to linjer, valgt av Pål blant fire skisser.
