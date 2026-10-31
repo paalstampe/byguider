@@ -6,6 +6,8 @@ Gjeldende status (lastes inn automatisk):
 Pål og Vibekes byguider (London, Nice, Oslo, New York, Tokyo, Bangkok) på kart. Live på https://stam.pe/byguider/.
 Løpende status, neste steg, åpne spørsmål og beslutningslogg: NOTES.md (oppdateres ved slutten av hver økt).
 Les HANDOVER.md før større endringer — den har datamodell, design og teknikk.
+Foreslår du steder selv (ny by eller påfyll uten Påls tips): les SMAK.md, smaksprofilen per kategori,
+i stedet for å analysere de andre byene. Hold den oppdatert når Pål setter ★ eller sier hva han liker.
 Hold HANDOVER.md oppdatert når noe vesentlig endres i teknikk eller design (f.eks. punkt 10.5).
 
 ## Språk
