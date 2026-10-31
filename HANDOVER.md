@@ -36,8 +36,9 @@ byguider/
 ├── sw.js                   service worker: offline (se punkt 7, «Offline»)
 ├── style.css               all styling — én kopi
 ├── byer.json               manifest: id, navn, data (md), geometri, evt. bilde
-├── apple-touch-icon.png    hjemskjerm-ikon (180×180): kobber «b» i Playfair Display på papir
+├── apple-touch-icon.png    hjemskjerm-ikon (180×180): frimerke med «b», lages med .claude/delingsbilder.sh
 ├── bilder/<id>.webp        miniatyrer på forsiden (360×270), lages med .claude/miniatyrer.sh
+├── bilder/deling-<id>.png  delingsbilde per by (og:image, 1200×630), og bilder/deling.png for forsiden
 ├── london/index.html       stubb: <script src="../app.js" data-by="london">
 ├── nice/index.html
 ├── oslo/index.html
@@ -59,6 +60,15 @@ byguider/
 Ny by = én linje i `byer.json`, én md-fil (+ tom geometri-fil), én stubbmappe
 (kopier `london/index.html` og bytt `data-by` og `apple-mobile-web-app-title` — navnet under
 hjemskjerm-ikonet, f.eks. «London»; forsiden heter «Byguider»).
+Bytt også `<title>` og og:-taggene (url, tittel, beskrivelse, bilde, alt) til den nye byen, og kjør
+`.claude/delingsbilder.sh`, som lager `bilder/deling-<id>.png` og lager forsidebildet på nytt.
+
+Deling: stubbene og forsiden har Open Graph-tagger, så lenker får kort i Meldinger, Slack og e-post.
+Kortet er per by: lenker med `?sted=` får byens kort, fordi delingskort leses uten JavaScript.
+Bildene tegnes i `.claude/delingsbilder.html` (identisk kopi i reiseplanlegging; endres den, kopier dit):
+postkort med «b»-frimerke og bynavnet i poststempelet, og «Pål og Vibekes» + bynavn fra `tittel` og
+`kicker` i frontmatter. Forsiden har en postkortbunke med de synlige byene. Familien på stam.pe:
+konvolutt med PS-frimerke (stam.pe), postkort (byguidene), luftpostkonvolutt (reiseplanleggingen).
 
 Mørk modus: følger enhetens innstilling. `@media (prefers-color-scheme: dark)` nederst i `style.css` bytter
 variablene; i `app.js` velger `MORK` en mørk `KARTPALETT` (samme Voyager-stil, så offline-lageret er uendret)
