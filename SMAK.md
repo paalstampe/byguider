@@ -10,8 +10,9 @@ ikke steder han har valgt. Pål retter profilen når han er uenig — det er han
 
 ## Felles for alle kategorier
 
-- **Uavhengig og stedegent foran kjeder.** Unntak: flaggskip og steder med særpreg (Starbucks Reserve Roastery
-  av Kengo Kuma, Firmdale-hotellene, Dishoom, Gail's) og kjeder Pål selv har lagt inn.
+- **Uavhengig og stedegent foran kjeder.** Kjeder prioriteres ikke. Vanlig Starbucks aldri; Starbucks Reserve
+  Roastery (Tokyo, og den i Meatpacking District) er greie unntak. Dishoom er i grenseland. Samme eier av noen få
+  steder er greit så lenge kvaliteten holder (The Hart og The Hero). Firmdale-hotellene er et eget unntak (se Hoteller).
 - **Klassisk kvalitet med karakter.** Ordene som går igjen: «legendarisk», «klassiker», «old school»,
   «halvjålete», «ujålete», «elegant, men ikke formelt», «konsistent». Det motsatte: hypet, masete, turistfeller.
 - **Gamle bygninger med nytt innhold** er et sterkt pluss: kloster blir hotell, badehus blir galleri,
@@ -42,6 +43,8 @@ Favorittene er små og avgrensede — én gate eller noen kvartaler — ikke hel
 
 ## Restauranter
 
+- **Kokkeeide restauranter er klart best.** Når et sted er solgt til en profesjonell eier eller en kjede,
+  faller kvaliteten gjerne etter hvert. Velg stedet der kokken eier og står på kjøkkenet.
 - **Klassiske institusjoner med stil**: The Grill (New York, «vår favorittrestaurant på verdensbasis»),
   Sant Ambroeus, Scott's, Arlington, Brasserie Hansken, Minetta Tavern, Peter Luger, Franchin.
   Power dining og old school-dining rooms er et pluss.
@@ -52,8 +55,9 @@ Favorittene er små og avgrensede — én gate eller noen kvartaler — ikke hel
 - **Indisk på høyt nivå**: Gymkhana, Trishna, Aura, GupShup.
 - **Pub med spisesal** (London): The Hart, The Hero, Mount St Restaurant over The Audley.
 - **Vinbar med mat**: Noble Rot, Nektar, Sparta Matbar, Lavomatique, Vintage Kitchen.
-- **Fine dining** i hjembyene og favorittbyene: Panu, Palace Grill, Per Se, Jan, Les Agitateurs, Épicentre.
-  Én til tre per by holder; Michelin-stjerner er ikke et mål i seg selv (Eleven Madison Park: «varierende»).
+- **Fine dining** er ikke det Pål går etter, men av og til er det bra. Én til tre per by, bare de beste
+  (Panu, Palace Grill, Per Se, Jan, Les Agitateurs, Épicentre). Michelin-stjerner er ikke et mål i seg selv
+  (Eleven Madison Park: «varierende»).
 - **Ett mesterlig enkeltfag**: ramen (Hrímnir), pizza (Zio, Bronx, John's of Bleecker Street), grill (Norum),
   sushi (Sushi Sugawara), yakitori (Birdland), mapo tofu, thaikarri (Charmgang), banh mi.
 - **Moderne, ujålete og god stemning** for det lokale kjøkkenet: Oxomoco, La Esquina, Danji, Pao.
@@ -116,7 +120,10 @@ Den mest personlige kategorien. Sterke signaler (mange ★):
 
 ## Hoteller
 
-- **Firmdale** (Kit Kemp) er standarden: Charlotte Street Hotel ★, The Soho Hotel, Number Sixteen,
+Den vanskeligste kategorien: få hoteller treffer. Best er **boutiquehoteller av svært høy kvalitet uten at det
+blir overdådig**.
+
+- **Firmdale** (Kit Kemp) er en god målestokk: Charlotte Street Hotel ★, The Soho Hotel, Number Sixteen,
   Crosby Street Hotel. Finnes Firmdale i byen, ta det med.
 - **Grand old ladies med karakter**: The Carlyle, Le Negresco, Mandarin Oriental Bangkok ★, The Peninsula.
 - **Historiske bygg gjort om**: Hôtel du Couvent (kloster), The High Line Hotel (seminar), The Hotel Chelsea.
