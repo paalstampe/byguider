@@ -807,8 +807,9 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
   }, 'top-left');
 
   /* Egen posisjon: sentrerer kartet og følger posisjonen til knappen trykkes igjen. */
+  let posisjonKtrl = null;
   if ('geolocation' in navigator) {
-    kart.addControl(new maplibregl.GeolocateControl({
+    kart.addControl(posisjonKtrl = new maplibregl.GeolocateControl({
       positionOptions: { enableHighAccuracy: true },
       fitBoundsOptions: { maxZoom: 16 },
       trackUserLocation: true,
@@ -1773,6 +1774,23 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     tegnListe(synlige());
   }
 
+  /* Er du i byen, åpner kartet der du er, med prikken som følger deg (som knappen for egen posisjon).
+     Bare når siden allerede har lov til å bruke posisjonen — ingen spørsmål ved oppstart. «I byen» er
+     innenfor utsnittet med alle stedene (også «utenfor: ja»), med litt slingringsmonn. */
+  function aapneHer(oppslag) {
+    if (!posisjonKtrl || !oppslag.length || !navigator.permissions) return;
+    const [x0, y0, x1, y1] = bbox(oppslag.flatMap(o => [o.bbox.slice(0, 2), o.bbox.slice(2)]));
+    const slark = 0.02;
+    navigator.permissions.query({ name: 'geolocation' }).then(tillatelse => {
+      if (tillatelse.state !== 'granted') return;
+      navigator.geolocation.getCurrentPosition(pos => {
+        const { longitude: lng, latitude: lat } = pos.coords;
+        if (lng < x0 - slark || lng > x1 + slark || lat < y0 - slark || lat > y1 + slark) return;
+        kartKlar.then(() => { if (!state.valgtId) posisjonKtrl.trigger(); });
+      }, () => {}, { maximumAge: 300000, timeout: 10000 });
+    }).catch(() => {});
+  }
+
   /* Avstand i meter mellom to { lng, lat } (haversine). */
   function meter(a, b) {
     const r = Math.PI / 180;
@@ -1955,6 +1973,8 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
         setTimeout(() => { kart.off('render', naarLastet); visKart(); }, 800);
         kart.once('idle', forhandslastOffline);
       });
+
+      aapneHer(alleMedBbox);
 
       fot = () => t('fot', '<code>' + esc(DATA_NAVN) + '</code>', esc(meta.oppdatert || ''));
       el.fotTekst.innerHTML = fot();
