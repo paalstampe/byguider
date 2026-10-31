@@ -92,6 +92,8 @@ const TEKST = {
     zoomInn: 'Zoom inn',
     aapneMaps: 'Åpne i Google Maps',
     veibeskrivelse: 'Veibeskrivelse',
+    del: 'Del',
+    lenkeKopiert: 'Lenke kopiert',
     nettside: 'Nettside',
     artikkelFra: 'Artikkel fra',
     artikkel: 'Artikkel',
@@ -137,6 +139,8 @@ const TEKST = {
     zoomInn: 'Zoom in',
     aapneMaps: 'Open in Google Maps',
     veibeskrivelse: 'Directions',
+    del: 'Share',
+    lenkeKopiert: 'Link copied',
     nettside: 'Website',
     artikkelFra: 'Article from',
     artikkel: 'Article',
@@ -1323,6 +1327,48 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     if (o) zoomInn(o);
   });
 
+  /* ---------- lenke til ett sted ----------
+
+     …/london/?sted=conduit-coffee-house åpner kartet med infoboksen for stedet (også nabolag og gåturer).
+     «Del» i infoboksen åpner delingsarket på mobil (Meldinger, WhatsApp …), ellers kopieres lenken. */
+
+  const stedSlug = navn => normaliser(navn).replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || String(navn || '');
+
+  function stedLenke(p) {
+    const u = new URL(location.href.split(/[?#]/)[0]);
+    u.searchParams.set('sted', stedSlug(p.navn));
+    if (SPRAK === 'en') u.searchParams.set('lang', 'en');
+    return u.href;
+  }
+
+  document.addEventListener('click', e => {
+    const knapp = e.target.closest && e.target.closest('.pop-del');
+    if (!knapp) return;
+    const o = oppslagFraId(knapp.dataset.id);
+    if (!o) return;
+    const url = stedLenke(o.p);
+    if (navigator.share && ekteHover.matches === false) {
+      navigator.share({ title: visNavn(o.p), url: url }).catch(() => {});
+    } else if (navigator.clipboard) {
+      navigator.clipboard.writeText(url).then(() => {
+        knapp.textContent = t('lenkeKopiert');
+        setTimeout(() => { if (knapp.isConnected) knapp.textContent = t('del'); }, 2000);
+      }).catch(() => {});
+    }
+  });
+
+  /* Åpner stedet fra ?sted= når dataene er lastet. Gir true når et sted ble åpnet. */
+  function aapneStedFraAdresse() {
+    const q = new URLSearchParams(location.search).get('sted');
+    if (!q) return false;
+    const o = state.oppslag.concat(state.onskeliste).find(x => stedSlug(x.p.navn) === stedSlug(q));
+    if (!o) return false;
+    state.valgtId = o.id;   // så åpning der du er ikke tar over
+    // Zoomer helt inn (som «Zoom inn»), og infoboksen åpnes når kartet er framme
+    kartKlar.then(() => { zoomInn(o); velg(o.id, false); });
+    return true;
+  }
+
   /* ---------- hjelpere ---------- */
 
   const katInfo = k => KATEGORIER[k]
@@ -1391,7 +1437,8 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       id ? '<button type="button" class="pop-lenke pop-zoom" data-id="' + esc(id) + '">' + t('zoomInn') + '</button>' : '',
       vei ? '<a class="pop-lenke" href="' + vei + '" target="_blank" rel="noopener">' + t('veibeskrivelse') + '</a>' : '',
       lenke ? '<a class="pop-lenke" href="' + lenke + '" target="_blank" rel="noopener">' + t('aapneMaps') + '</a>' : '',
-      p.nettside ? '<a class="pop-lenke" href="' + esc(p.nettside) + '" target="_blank" rel="noopener">' + t('nettside') + '</a>' : ''
+      p.nettside ? '<a class="pop-lenke" href="' + esc(p.nettside) + '" target="_blank" rel="noopener">' + t('nettside') + '</a>' : '',
+      id ? '<button type="button" class="pop-lenke pop-del" data-id="' + esc(id) + '">' + t('del') + '</button>' : ''
     ].filter(Boolean);
     // «Artikkel fra Financial Times: Tittel» — tittelen er lenken
     const les = (p.les || []).map(l =>
@@ -1989,7 +2036,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
         kart.once('idle', forhandslastOffline);
       });
 
-      aapneHer(alleMedBbox);
+      if (!aapneStedFraAdresse()) aapneHer(alleMedBbox);
 
       fot = () => t('fot', '<code>' + esc(DATA_NAVN) + '</code>', esc(meta.oppdatert || ''));
       el.fotTekst.innerHTML = fot();
