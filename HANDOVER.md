@@ -505,6 +505,10 @@ Hvert trinn skal kunne committes for seg og fungere alene.
   `filter-status` (`settNaerMeg`): watchPosition, sortering etter `avstandTil` (haversine; linjer: nærmeste
   rutepunkt), `avstandTekst` med gangtid (luftlinje × 1,25, 80 m/min), egen prikk. `aapneHer`: har siden
   allerede tillatelse og du er innenfor utsnittet med alle stedene (± 0,02°), trykkes knappen for egen posisjon.
+  Safari på iPhone avviser `permissions.query` eller svarer «prompt» selv etter ja, så `localStorage`-nøkkelen
+  `byguider-posisjon` husker at posisjonen har virket (PR #82). Lenke til ett sted (PR #83): `?sted=<stedSlug(navn)>`
+  (`aapneStedFraAdresse`, zoomer som «Zoom inn»); «Del» i infoboksen bruker `navigator.share` på berøringsskjerm,
+  ellers utklippstavlen.
 - Neste: data. Pål kommer med navneendringer (som Marylebone High Street → Marylebone Village)
   og nye steder. Områdeskisser: alle nabolag i London og New York er tegnet (London 5.10.,
   langs gatene i OpenStreetMap); nye nabolag trenger skisse. Eksempelstedene er merket EKSEMPEL.

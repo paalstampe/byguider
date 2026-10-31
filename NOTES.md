@@ -85,12 +85,14 @@ Sist oppdatert: 31. oktober 2026.
   kollektivt for `utenfor: ja` og til startpunktet for gåturer. «Nær meg» ved «Kun favoritter» sorterer lista etter avstand,
   med «350 m · 5 min å gå». Kartet åpner der du er når du er i byen og siden allerede har lov til å bruke posisjonen.
   Eksport til My Maps og Google Maps er droppet.
+- 31.10. kveld (PR #82–#83): åpning der du er virker nå på iPhone. Safari avviste spørringen etter tillatelse, så nå huskes det
+  i nettleseren (`byguider-posisjon`) at posisjonen har virket før. Infoboksen har «Del», og `?sted=<navn>` åpner kartet zoomet
+  inn på stedet med infoboksen. Testet av Pål på telefonen.
 - Ingen åpne grener utenom `main`.
 
 ## Neste steg
 
-- Felt: test «Nær meg», Veibeskrivelse og åpning der du er på iPhone i en by (Oslo går fint). Lenkene i infoboksen bryter linja med «·» sist på første linje når Veibeskrivelse er med; vurder om «Åpne i Google Maps» skal forkortes.
-- Mulig neste: lenke til ett sted (`?sted=…`) som åpner kartet med infoboksen, for å dele et tips på melding.
+- Felt: Lenkene i infoboksen (nå også «Del») bryter linja med «·» sist på første linje; vurder om «Åpne i Google Maps» skal forkortes.
 - Fyll på data etter hvert som Pål kommer med steder og navneendringer, i alle byer.
 - Tokyo: flere notater er bare én linje («Sushi.», «Bar.», «Moderne vietnamesisk.»), og de 33 nye fra 30.10. er Claudes utkast.
   Fyll på når Pål har tekst. Nettsiden til Jimbocho Book Center svarte 503 30.10.; sjekk senere.
