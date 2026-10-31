@@ -1228,8 +1228,9 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
   /* Lang tekst kan få infoboksen til å stikke ut av kartet (særlig på mobil, der kartet er lavt).
      Flytt kartet akkurat så mye at hele boksen synes; er den høyere enn kartet, vises toppen.
-     Knappene øverst til venstre (zoom, hele byen, posisjon) skal heller ikke dekke boksen:
-     da flyttes den til høyre for dem, eller ned under dem hvis den ikke får plass i bredden. */
+     Knappene øverst til venstre (zoom, hele byen, posisjon) og «Liste ↓» nederst til venstre (stående mobil)
+     skal heller ikke dekke boksen: da flyttes den til høyre for dem, eller forbi dem i høyden
+     (ned under knappene øverst, opp over knappen nederst) hvis den ikke får plass i bredden. */
   function faaPopupInn() {
     if (!popup.isOpen()) return;
     const boks = popup.getElement().getBoundingClientRect();
@@ -1241,16 +1242,23 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       : 0;
     let dx = forskyv(boks.left, boks.right, ramme.left, ramme.right);
     let dy = forskyv(boks.top, boks.bottom, ramme.top, ramme.bottom);
-    const knapper = kart.getContainer().querySelector('.maplibregl-ctrl-top-left');
-    const k = knapper && knapper.getBoundingClientRect();
-    if (k && k.width && k.height) {
+    const listeKnapp = document.getElementById('til-lista');
+    const hindringer = [
+      { el: kart.getContainer().querySelector('.maplibregl-ctrl-top-left'), nede: false },
+      // Når kartet er rullet bort, står knappen fast utenfor kartet og er ikke i veien.
+      { el: listeKnapp && !listeKnapp.classList.contains('til-lista--kart') ? listeKnapp : null, nede: true }
+    ];
+    hindringer.forEach(({ el, nede }) => {
+      const k = el && el.getBoundingClientRect();
+      if (!k || !k.width || !k.height) return;
       const venstre = boks.left - dx, topp = boks.top - dy;
       const hoyre = venstre + boks.width, bunn = topp + boks.height;
       if (venstre < k.right && topp < k.bottom && hoyre > k.left && bunn > k.top) {
         if (boks.width <= ramme.right - k.right - 2 * marg) dx += venstre - (k.right + marg);
+        else if (nede) dy += bunn - (k.top - marg);
         else dy += topp - k.bottom;
       }
-    }
+    });
     if (Math.abs(dx) > 1 || Math.abs(dy) > 1) kart.panBy([dx, dy], { duration: 400 });
   }
 
