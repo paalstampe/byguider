@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fant ikke siden · stam.pe</title>
+<!-- Samme 404-side ligger i paalstampe.github.io, byguider og reiseplanlegging: GitHub Pages viser
+     den fra repoet som eier stien, så en ukjent adresse under stam.pe/byguider/ bruker byguider sin.
+     Endres den ett sted, kopier til de to andre. Absolutte adresser (stilarket hentes fra forsiden).
+     Bare de faste klassene fra style.css. -->
+<link rel="icon" type="image/png" href="/ikon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#F7F4EE" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1B1814" media="(prefers-color-scheme: dark)">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mork.css" media="(prefers-color-scheme: dark)">
+</head>
+<body>
+
+<main class="side">
+
+  <header class="hode">
+    <div class="topp">
+      <p class="kicker"><a href="/" style="color:inherit;text-decoration:none">stam.pe</a></p>
+    </div>
+    <h1 class="tittel" data-t="tittel">Fant ikke siden</h1>
+    <p class="ingress" data-t="ingress">Adressen finnes ikke på stam.pe. Kanskje du lette etter en av disse?</p>
+  </header>
+
+  <nav class="liste" aria-label="Apper" data-t-aria="apper">
+
+    <a class="oppslag" href="/byguider/" data-lang-lenke>
+      <picture><source srcset="/bilder/byguider-mork.webp" media="(prefers-color-scheme: dark)"><img class="miniatyr" src="/bilder/byguider.webp" alt="" width="120" height="90"></picture>
+      <span class="innhold">
+        <span class="oppslag-kicker" data-t="byguiderKicker">Nabolag &amp; gåturer</span>
+        <span class="oppslag-navn" data-t="byguiderNavn">Pål og Vibekes byguider</span>
+      </span>
+      <span class="pil" aria-hidden="true">&rarr;</span>
+    </a>
+
+    <a class="oppslag" href="/reiseplanlegging/" data-lang-lenke>
+      <picture><source srcset="/bilder/reiseplanlegging-mork.webp" media="(prefers-color-scheme: dark)"><img class="miniatyr" src="/bilder/reiseplanlegging.webp" alt="" width="120" height="90"></picture>
+      <span class="innhold">
+        <span class="oppslag-kicker" data-t="reiseKicker">Reisekart &amp; reisekalender</span>
+        <span class="oppslag-navn" data-t="reiseNavn">Reiseplanlegging</span>
+      </span>
+      <span class="pil" aria-hidden="true">&rarr;</span>
+    </a>
+
+  </nav>
+
+  <p class="ingress"><a href="/" data-t="forside" style="color:var(--aksent)">← Til forsiden</a></p>
+
+</main>
+
+<script>
+/* Samme språkvalg som forsiden (nøkkelen byguider-sprak, ?lang=en overstyrer), men uten knapper. */
+const TEKST = {
+  no: {
+    apper: 'Apper', tittel: 'Fant ikke siden',
+    ingress: 'Adressen finnes ikke på stam.pe. Kanskje du lette etter en av disse?',
+    byguiderKicker: 'Nabolag & gåturer', byguiderNavn: 'Pål og Vibekes byguider',
+    reiseKicker: 'Reisekart & reisekalender', reiseNavn: 'Reiseplanlegging',
+    forside: '← Til forsiden'
+  },
+  en: {
+    apper: 'Apps', tittel: 'Page not found',
+    ingress: 'This address doesn’t exist on stam.pe. Perhaps you were looking for one of these?',
+    byguiderKicker: 'Neighbourhoods & walks', byguiderNavn: 'Pål and Vibeke’s city guides',
+    reiseKicker: 'Travel map & travel calendar', reiseNavn: 'Travel planning',
+    forside: '← Go to the front page'
+  }
+};
+const sprak = (() => {
+  const q = new URLSearchParams(location.search).get('lang');
+  if (q === 'en' || q === 'no') return q;
+  try { if (localStorage.getItem('byguider-sprak') === 'en') return 'en'; } catch (e) {}
+  return 'no';
+})();
+if (sprak === 'en') {
+  const T = TEKST.en;
+  document.documentElement.lang = 'en';
+  document.title = T.tittel + ' · stam.pe';
+  document.querySelectorAll('[data-t]').forEach(e => { e.textContent = T[e.dataset.t]; });
+  document.querySelectorAll('[data-t-aria]').forEach(e => { e.setAttribute('aria-label', T[e.dataset.tAria]); });
+  document.querySelectorAll('[data-lang-lenke]').forEach(a => { a.href = a.getAttribute('href') + '?lang=en'; });
+}
+</script>
+
+</body>
+</html>
