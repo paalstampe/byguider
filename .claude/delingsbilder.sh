@@ -2,7 +2,8 @@
 # Lager delingsbildene (og:image, 1200×630) og hjemskjermikonet fra .claude/delingsbilder.html:
 #   bilder/deling-<by>.png  postkort med bynavnet i poststempelet, én per by i byer.json (også skjulte)
 #   bilder/deling.png       postkortbunke for byguide-forsiden, med de synlige byene
-#   apple-touch-icon.png    frimerke med «b» (180×180)
+#   apple-touch-icon.png    frimerke med «b» (180×180), for byguide-forsiden
+#   bilder/ikon-<by>.png    hjemskjermikon per by: frimerke med «BYGUIDE» og bynavnet (180×180)
 # Tittel og kicker hentes fra frontmatter i data/<by>.md. Kjør på nytt når en by kommer til
 # eller bytter navn, og legg og:-taggene inn i den nye stubben (kopier fra london/index.html).
 # Bruk: .claude/delingsbilder.sh   (fra roten av repoet; krever Node og Playwright, se skjermbilde.sh)
@@ -32,7 +33,7 @@ const liste = navn => navn.length < 2 ? navn.join('') : navn.slice(0, -1).join('
   side.on('pageerror', f => feil.push('JS: ' + f.message));
   const ta = async (parametre, fil) => {
     await side.goto(side0 + '?' + new URLSearchParams(parametre), { waitUntil: 'networkidle' });
-    await side.evaluate(() => document.fonts.ready);
+    await side.waitForSelector('body[data-klar]');
     await side.locator('#flate > *').screenshot({ path: fil });
     console.log('Lagret ' + fil);
   };
@@ -44,6 +45,7 @@ const liste = navn => navn.length < 2 ? navn.join('') : navn.slice(0, -1).join('
     const eier = tittel.endsWith(by.navn) ? tittel.slice(0, -by.navn.length).trim() : '';
     await ta({ motiv: 'postkort', by: by.navn.toUpperCase(), eier, navn: by.navn,
       kicker: 'stam.pe · Byguider', under: fm.kicker || '' }, `bilder/deling-${by.id}.png`);
+    await ta({ motiv: 'byikon', by: by.navn }, `bilder/ikon-${by.id}.png`);
   }
   await ta({ motiv: 'postkortbunke', tittel: 'Byguider', kicker: 'stam.pe',
     under: liste(byer.filter(b => !b.skjult).map(b => b.navn.replace(/ /g, '\u00a0'))) }, 'bilder/deling.png');

@@ -36,7 +36,8 @@ byguider/
 ├── sw.js                   service worker: offline (se punkt 7, «Offline»)
 ├── style.css               all styling — én kopi
 ├── byer.json               manifest: id, navn, data (md), geometri, evt. bilde
-├── apple-touch-icon.png    hjemskjerm-ikon (180×180): frimerke med «b», lages med .claude/delingsbilder.sh
+├── apple-touch-icon.png    hjemskjerm-ikon for forsiden (180×180): frimerke med «b», lages med .claude/delingsbilder.sh
+├── bilder/ikon-<id>.png    hjemskjerm-ikon per by: frimerke med «BYGUIDE» og bynavnet mellom to linjer
 ├── bilder/<id>.webp        miniatyrer på forsiden (360×270), lages med .claude/miniatyrer.sh
 ├── bilder/deling-<id>.png  delingsbilde per by (og:image, 1200×630), og bilder/deling.png for forsiden
 ├── london/index.html       stubb: <script src="../app.js" data-by="london">
@@ -60,8 +61,9 @@ byguider/
 Ny by = én linje i `byer.json`, én md-fil (+ tom geometri-fil), én stubbmappe
 (kopier `london/index.html` og bytt `data-by` og `apple-mobile-web-app-title` — navnet under
 hjemskjerm-ikonet, f.eks. «London»; forsiden heter «Byguider»).
-Bytt også `<title>` og og:-taggene (url, tittel, beskrivelse, bilde, alt) til den nye byen, og kjør
-`.claude/delingsbilder.sh`, som lager `bilder/deling-<id>.png` og lager forsidebildet på nytt.
+Bytt også `<title>`, `apple-touch-icon` (`../bilder/ikon-<id>.png`) og og:-taggene (url, tittel, beskrivelse, bilde, alt)
+til den nye byen, og kjør `.claude/delingsbilder.sh`, som lager `bilder/deling-<id>.png` og `bilder/ikon-<id>.png`
+og lager forsidebildet på nytt.
 
 Deling: stubbene og forsiden har Open Graph-tagger, så lenker får kort i Meldinger, Slack og e-post.
 Kortet er per by: lenker med `?sted=` får byens kort, fordi delingskort leses uten JavaScript.

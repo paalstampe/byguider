@@ -11,6 +11,7 @@
     ?motiv=postkortbunke&tittel=Byguider&kicker=…&under=…
     ?motiv=luftpost&tittel=Reiseplanlegging&kicker=…&under=…
     ?motiv=ikon&bokstav=b
+    ?motiv=byikon&by=New York
   Familien: stam.pe er en konvolutt med PS-frimerke, byguidene postkort med bynavnet i poststempelet,
   reiseplanleggingen en luftpostkonvolutt med klode-frimerke.
 -->
@@ -141,6 +142,23 @@ function ikon(bokstav) {
   return `<svg class="ikon" viewBox="0 0 180 180"><rect width="180" height="180" fill="${P}"/>${s}</svg>`;
 }
 
+/* Hjemskjermikon for én by: «BYGUIDE» i små versaler, og bynavnet i Playfair mellom to tynne linjer,
+   som landnavnet på et klassisk frimerke. Navn med mellomrom (New York) går over to linjer.
+   Skriftstørrelsen krympes etter måling, så lange navn (Bangkok) holder seg innenfor rammen. */
+function byikon(by) {
+  const fb = 112, fh = 132, x = fb / 2;
+  const tekst = (t, y, maks, str, attr) => `<text x="${x}" y="${y}" text-anchor="middle" data-maks="${maks}" font-size="${str}" fill="${P}" ${attr}>${esc(t)}</text>`;
+  const linje = y => `<line x1="${fb * 0.22}" x2="${fb * 0.78}" y1="${y}" y2="${y}" stroke="${P}" stroke-opacity=".6" stroke-width="1.2"/>`;
+  const navn = 'font-family="Playfair Display" font-weight="700"';
+  const d = by.split(' ');
+  let innhold = tekst('BYGUIDE', fh * 0.3, fb * 0.6, 9, 'font-family="Work Sans" font-weight="600" letter-spacing="2" fill-opacity=".8"') + linje(fh * 0.38);
+  innhold += d.length > 1
+    ? tekst(d[0], fh * 0.55, fb * 0.7, 26, navn) + tekst(d.slice(1).join(' '), fh * 0.73, fb * 0.7, 26, navn)
+    : tekst(by, fh * 0.64, fb * 0.7, 34, navn);
+  innhold += linje(fh * 0.8);
+  return `<svg class="ikon" viewBox="0 0 180 180"><rect width="180" height="180" fill="${P}"/>${frimerke(34, 24, fb, fh, innhold, -4)}</svg>`;
+}
+
 const q = new URLSearchParams(location.search), v = n => q.get(n) || '';
 const flate = document.getElementById('flate');
 switch (v('motiv')) {
@@ -159,7 +177,17 @@ switch (v('motiv')) {
   case 'ikon':
     flate.innerHTML = ikon(v('bokstav'));
     break;
+  case 'byikon':
+    flate.innerHTML = byikon(v('by'));
+    break;
 }
+document.fonts.ready.then(() => {
+  document.querySelectorAll('text[data-maks]').forEach(t => {
+    const maks = +t.dataset.maks, b = t.getComputedTextLength();
+    if (b > maks) t.setAttribute('font-size', +t.getAttribute('font-size') * maks / b);
+  });
+  document.body.dataset.klar = '1';
+});
 </script>
 </body>
 </html>
