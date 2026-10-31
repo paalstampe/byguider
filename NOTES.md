@@ -94,6 +94,8 @@ Sist oppdatert: 31. oktober 2026.
   på nytt; CLAUDE.md viser til den. New York fikk Starbucks Reserve Roastery i Meatpacking District.
 - 31.10.: Berlin fikk sju restauranter i gangavstand fra Orania, foreslått av Claude ut fra SMAK.md og sjekket i Google Maps: ORA, Max und Moritz,
   Horváth, Jolesch, Cocolo Ramen X-berg, Sale e Tabacchi og Tulus Lotrek. Lode & Stijn og Richard er stengt for godt. Notatene er Claudes utkast.
+- 31.10.: delingskort (PR #85). Hver by har eget delingsbilde, et postkort med bynavnet i poststempelet (`bilder/deling-<by>.png`), og forsiden
+  en postkortbunke. Stubbene har og:-tagger og heter som guiden. Hjemskjermikonet er et frimerke med «b». Lages med `.claude/delingsbilder.sh`.
 - Ingen åpne grener utenom `main`.
 
 ## Neste steg
@@ -135,6 +137,8 @@ Sist oppdatert: 31. oktober 2026.
 
 ## Beslutningslogg
 
+- 2026-10-31: Delingsbildene er en postal familie: konvolutt med PS-frimerke (stam.pe), postkort (byguidene), luftpost (reiseplanleggingen).
+  Kortet er per by, ikke per sted: delingskort leses uten JavaScript, så `?sted=` kan ikke gi eget bilde. Stempelet har ikke årstall.
 - 2026-10-31: Smaksprofilen ligger i SMAK.md, så nye byer bygges uten å analysere de andre byene hver gang.
   Pål: kokkeeide restauranter er best (kvaliteten faller gjerne etter salg til kjede eller profesjonell eier);
   kjeder prioriteres ikke (vanlig Starbucks aldri, Starbucks Reserve greit, Dishoom i grenseland); fine dining
