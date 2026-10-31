@@ -64,7 +64,12 @@ Bytt også `<title>` og og:-taggene (url, tittel, beskrivelse, bilde, alt) til d
 `.claude/delingsbilder.sh`, som lager `bilder/deling-<id>.png` og lager forsidebildet på nytt.
 
 Deling: stubbene og forsiden har Open Graph-tagger, så lenker får kort i Meldinger, Slack og e-post.
-Kortet er per by: lenker med `?sted=` får byens kort, fordi delingskort leses uten JavaScript.
+Kortet er per by. Ett sted deles med egen delingsside, `<by>/<slug>/` (f.eks. `london/conduit-coffee-house/`): «Del» i
+infoboksen lenker dit (`stedLenke`). Sidene lages ved publisering av `.github/stedsider.py` (i `pages.yml`, for main og
+hver forhåndsvisning) og committes ikke. De har og:-tittel = stedsnavnet og beskrivelse = kategori · første linje i notatet
+— guidens tittel, uten og:image, så Meldinger viser et lite kort med frimerke-ikonet. Siden går videre til `../?sted=<slug>`
+(og `?lang=en`). Skriptet speiler `lesMarkdown()` og `stedSlug()` i app.js; endres de, endre skriptet også.
+Navn uten latinske bokstaver (tom slug) deles som `?sted=`. Gamle `?sted=`-lenker virker fortsatt.
 Bildene tegnes i `.claude/delingsbilder.html` (identisk kopi i reiseplanlegging; endres den, kopier dit):
 postkort med «b»-frimerke og bynavnet i poststempelet, og «Pål og Vibekes» + bynavn fra `tittel` og
 `kicker` i frontmatter. Forsiden har en postkortbunke med de synlige byene. Familien på stam.pe:

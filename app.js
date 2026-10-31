@@ -1332,13 +1332,18 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
   /* ---------- lenke til ett sted ----------
 
      …/london/?sted=conduit-coffee-house åpner kartet med infoboksen for stedet (også nabolag og gåturer).
-     «Del» i infoboksen åpner delingsarket på mobil (Meldinger, WhatsApp …), ellers kopieres lenken. */
+     «Del» i infoboksen åpner delingsarket på mobil (Meldinger, WhatsApp …), ellers kopieres lenken.
+     Den delte lenken er …/london/conduit-coffee-house/: en delingsside med stedets navn i delingskortet,
+     laget ved publisering av .github/stedsider.py, som går videre til ?sted=. Navn uten latinske
+     bokstaver (tom slug) deles som ?sted=. */
 
   const stedSlug = navn => normaliser(navn).replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || String(navn || '');
 
   function stedLenke(p) {
-    const u = new URL(location.href.split(/[?#]/)[0]);
-    u.searchParams.set('sted', stedSlug(p.navn));
+    const slug = stedSlug(p.navn);
+    const mappe = new URL('.', location.href.split(/[?#]/)[0]);
+    const u = /^[a-z0-9-]+$/.test(slug) ? new URL(slug + '/', mappe) : new URL(mappe);
+    if (u.href === mappe.href) u.searchParams.set('sted', slug);
     if (SPRAK === 'en') u.searchParams.set('lang', 'en');
     return u.href;
   }

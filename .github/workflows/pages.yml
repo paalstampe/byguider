@@ -59,6 +59,12 @@ jobs:
             git archive "$ref" | tar -x -C "_site/forhandsvisning/$gren"
             echo "Forhåndsvisning: $gren"
           done
+          # Delingsside per sted (<by>/<slug>/), med stedets navn i delingskortet. Feiler den for en
+          # forhåndsvisning, publiseres resten likevel.
+          python3 .github/stedsider.py _site
+          find _site/forhandsvisning -name byer.json -not -path '*/data/*' 2>/dev/null | while read -r f; do
+            python3 .github/stedsider.py "$(dirname "$f")" || echo "Stedssider feilet: $f"
+          done
           rm -rf _site/.github
           touch _site/.nojekyll
 
