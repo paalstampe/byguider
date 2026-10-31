@@ -81,6 +81,8 @@ const TEKST = {
     kategori: 'Kategori',
     alle: 'Alle',
     kunFavoritter: 'Kun favoritter',
+    naerMeg: 'Nær meg',
+    gange: min => min + ' min å gå',
     favoritt: 'Favoritt',
     utenSone: 'Uten sone',
     ukjent: 'Ukjent',
@@ -124,6 +126,8 @@ const TEKST = {
     kategori: 'Category',
     alle: 'All',
     kunFavoritter: 'Favourites only',
+    naerMeg: 'Near me',
+    gange: min => min + ' min walk',
     favoritt: 'Favourite',
     utenSone: 'No area',
     ukjent: 'Unknown',
@@ -724,6 +728,8 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     soner: new Set(),            // tom = alle
     kategorier: new Set(),       // tom = alle
     kunFavoritter: false,
+    naerMeg: false,              // lista sortert etter avstand fra egen posisjon
+    minPosisjon: null,           // { lng, lat } mens «Nær meg» er på
     sok: '',
     valgtId: null,
     soneRekkefolge: [],          // fra metadata.soner, ellers rekkefølgen i dataene
@@ -1557,9 +1563,11 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     }
 
     const rekkefolge = state.soneRekkefolge;
-    const medSoner = state.brukteSoner.size > 0;
+    const naer = state.naerMeg && state.minPosisjon;
+    const medSoner = state.brukteSoner.size > 0 && !naer;
     vis.slice()
       .sort((a, b) => {
+        if (naer) return avstandTil(a) - avstandTil(b);
         const sa = rekkefolge.indexOf(a.p.sone), sb = rekkefolge.indexOf(b.p.sone);
         if (sa !== sb) return (sa < 0 ? 99 : sa) - (sb < 0 ? 99 : sb);
         if (!!b.p.favoritt !== !!a.p.favoritt) return b.p.favoritt ? 1 : -1;
@@ -1597,9 +1605,10 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     el.liste.appendChild(hode);
     if (!state.onskelisteApen) return;
 
-    // Førstevalg (★) øverst, så alfabetisk
+    // Førstevalg (★) øverst, så alfabetisk. Med «Nær meg»: nærmest først.
     vis.slice()
-      .sort((a, b) => (!!b.p.favoritt - !!a.p.favoritt) ||
+      .sort((a, b) => (state.naerMeg && state.minPosisjon ? avstandTil(a) - avstandTil(b) : 0) ||
+        (!!b.p.favoritt - !!a.p.favoritt) ||
         visNavn(a.p).localeCompare(visNavn(b.p), SPRAK === 'en' ? 'en' : 'nb'))
       .forEach(o => el.liste.appendChild(oppslagEl(o)));
   }
@@ -1624,7 +1633,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       '</div>' +
       '<p class="oppslag-meta">' +
         '<span class="prikk" style="background:' + info.farge + '"></span>' +
-        esc(metaLinje(p) || ruteMeta(p)) +
+        esc([metaLinje(p) || ruteMeta(p), avstandTekst(o)].filter(Boolean).join(' · ')) +
       '</p>' +
       (notat ? '<p class="oppslag-notat">' + esc(kortNotat(notat)) + '</p>' : '');
 
@@ -1741,6 +1750,72 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       byggFiltre();
       tegn();
     }));
+    if ('geolocation' in navigator) {
+      el.fStatus.appendChild(lagChip(t('naerMeg'), null, state.naerMeg, () => settNaerMeg(!state.naerMeg)));
+    }
+  }
+
+  /* ---------- nær meg ----------
+
+     «Nær meg» følger posisjonen og sorterer lista etter avstand, nærmest først, med avstand og
+     gangtid på hvert sted. Sonene slås sammen så lenge den er på. Egen prikk i kartet. */
+
+  let posisjonVakt = null, posisjonPrikk = null;
+
+  function settNaerMeg(paa) {
+    state.naerMeg = paa;
+    if (paa && posisjonVakt === null) {
+      posisjonVakt = navigator.geolocation.watchPosition(pos => {
+        const ny = { lng: pos.coords.longitude, lat: pos.coords.latitude };
+        if (!posisjonPrikk) {
+          const prikk = document.createElement('div');
+          prikk.className = 'maplibregl-user-location-dot';
+          posisjonPrikk = new maplibregl.Marker({ element: prikk });
+        }
+        posisjonPrikk.setLngLat(ny).addTo(kart);
+        // Lista tegnes på nytt bare når man har flyttet seg et stykke
+        if (state.minPosisjon && meter(state.minPosisjon, ny) < 25) return;
+        state.minPosisjon = ny;
+        if (state.naerMeg) tegnListe(synlige());
+      }, () => settNaerMeg(false), { enableHighAccuracy: true, maximumAge: 30000, timeout: 30000 });
+    } else if (!paa) {
+      if (posisjonVakt !== null) navigator.geolocation.clearWatch(posisjonVakt);
+      posisjonVakt = null;
+      state.minPosisjon = null;
+      if (posisjonPrikk) posisjonPrikk.remove();
+    }
+    byggFiltre();
+    tegnListe(synlige());
+  }
+
+  /* Avstand i meter mellom to { lng, lat } (haversine). */
+  function meter(a, b) {
+    const r = Math.PI / 180;
+    const x = Math.sin((b.lat - a.lat) * r / 2) ** 2 +
+      Math.cos(a.lat * r) * Math.cos(b.lat * r) * Math.sin((b.lng - a.lng) * r / 2) ** 2;
+    return 12742000 * Math.asin(Math.sqrt(x));
+  }
+
+  /* Fra egen posisjon til stedet; gåturer og andre linjer: til nærmeste punkt på ruten. */
+  function avstandTil(o) {
+    const pos = state.minPosisjon;
+    if (!pos) return Infinity;
+    if (o.punkt) return meter(pos, o.punkt);
+    const g = o.f.geometry;
+    if (!g || g.type !== 'LineString') return Infinity;
+    return Math.min.apply(null, g.coordinates.map(c => meter(pos, { lng: c[0], lat: c[1] })));
+  }
+
+  /* «350 m · 5 min å gå», «2,4 km · 35 min å gå», over 5 km bare «12 km». Gangtiden regner med
+     at gatene er en fjerdedel lengre enn luftlinja, og 80 m i minuttet. */
+  function avstandTekst(o) {
+    if (!state.naerMeg || !state.minPosisjon) return '';
+    const m = avstandTil(o);
+    if (!isFinite(m)) return '';
+    const km = (x, des) => x.toFixed(des).replace('.', SPRAK === 'en' ? '.' : ',') + ' km';
+    if (m >= 5000) return km(m / 1000, 0);
+    const tekst = m < 1000 ? Math.round(m / 10) * 10 + ' m' : km(m / 1000, 1);
+    return tekst + ' · ' + t('gange', Math.max(1, Math.round(m * 1.25 / 80)));
   }
 
   el.sok.addEventListener('input', e => {
