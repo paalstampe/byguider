@@ -89,6 +89,7 @@ const TEKST = {
     ruteIkkeTegnet: 'rute ikke tegnet',
     zoomInn: 'Zoom inn',
     aapneMaps: 'Åpne i Google Maps',
+    veibeskrivelse: 'Veibeskrivelse',
     nettside: 'Nettside',
     artikkelFra: 'Artikkel fra',
     artikkel: 'Artikkel',
@@ -131,6 +132,7 @@ const TEKST = {
     ruteIkkeTegnet: 'route not drawn',
     zoomInn: 'Zoom in',
     aapneMaps: 'Open in Google Maps',
+    veibeskrivelse: 'Directions',
     nettside: 'Website',
     artikkelFra: 'Article from',
     artikkel: 'Article',
@@ -1363,10 +1365,24 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     return null;
   }
 
+  /* Veibeskrivelse i Google Maps, rett til stedet (Place ID når vi har det). Til fots i byen;
+     for steder utenfor byen («utenfor: ja») kollektivt. Gåturer: til startpunktet av ruten. */
+  function veiLenke(p, latlng, utenPlaceId) {
+    if (!latlng) return null;
+    return 'https://www.google.com/maps/dir/?api=1&destination=' +
+      (p.place_id && !utenPlaceId ? encodeURIComponent(p.navn) + '&destination_place_id=' + encodeURIComponent(p.place_id)
+        : latlng.lat + ',' + latlng.lng) +
+      '&travelmode=' + (p.utenfor ? 'transit' : 'walking');
+  }
+
   function popupHtml(p, latlng, id) {
     const lenke = mapsLenke(p, latlng);
+    const o = id && oppslagFraId(id);
+    const start = o && o.erLinje && o.f.geometry ? o.f.geometry.coordinates[0] : null;
+    const vei = start ? veiLenke(p, { lng: start[0], lat: start[1] }, true) : veiLenke(p, latlng);
     const lenker = [
       id ? '<button type="button" class="pop-lenke pop-zoom" data-id="' + esc(id) + '">' + t('zoomInn') + '</button>' : '',
+      vei ? '<a class="pop-lenke" href="' + vei + '" target="_blank" rel="noopener">' + t('veibeskrivelse') + '</a>' : '',
       lenke ? '<a class="pop-lenke" href="' + lenke + '" target="_blank" rel="noopener">' + t('aapneMaps') + '</a>' : '',
       p.nettside ? '<a class="pop-lenke" href="' + esc(p.nettside) + '" target="_blank" rel="noopener">' + t('nettside') + '</a>' : ''
     ].filter(Boolean);
@@ -1376,7 +1392,6 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       '<a href="' + esc(l.url) + '" target="_blank" rel="noopener">' + esc(l.tittel) + '</a></p>'
     ).join('');
     const notat = visNotat(p);
-    const o = id && oppslagFraId(id);
     const meta = o && o.erLinje
       ? [t('gatur'), ruteMeta(p), o.f.geometry ? '' : t('ruteIkkeTegnet')].filter(Boolean).join(' · ')
       : metaLinje(p) || ruteMeta(p);
