@@ -77,6 +77,10 @@ Sist oppdatert: 31. oktober 2026.
 - 30.10. sent: på stående mobil blir «Liste ↓» til «Kart ↑» og står fast nederst til venstre når kartet er rullet ut av syne (PR #76), godt inn fra den runde skjermkanten (PR #77).
 - 31.10.: egen 404-side (kopi av den på stam.pe, PR #78). Ukjente adresser under stam.pe/byguider/ viste før GitHubs standardside.
   Endres 404.html, gjøres det i paalstampe.github.io og kopieres hit.
+- 31.10.: Berlin heter nå «Pål og Heddas Berlin» (bare Berlin). 36 nye steder fra Heddas delte liste i Google Maps pluss COOP Anti-War Café
+  og b-ware Ladenkino: kaféer og barer, muséer (DDR Museum, Designpanoptikum, Museum der Dinge, Synthesizer Museum, Stasi-museet m.fl.),
+  kinoene Kino International, Delphi og Odeon, Modulor, Liquidrom, Spreepark. Ny kategori Restauranter (Burgermeister). Seks steder i lista
+  lå inne fra før. Notatene er korte utkast skrevet av Claude. Lista ble lest med curl (getlist og maps/preview/place, uten nettleser).
 - Ingen åpne grener utenom `main`.
 
 ## Neste steg
@@ -107,6 +111,7 @@ Sist oppdatert: 31. oktober 2026.
 
 ## Åpne spørsmål
 
+- Berlin: Heddas liste har også Schönhauser Allee (gate) og to adresser i Pankow (Florastraße 87, Tschaikowskistraße 47). Ikke lagt inn – skal de med, og som hva?
 - Azzurra og Monmouth Kitchen: stemmer kjøkkenet i notatene (italiensk; italiensk og peruansk)?
 - Hrímnir – Fredensborg ligger øst for Maridalsveien (ved Vulkan), utenfor Fredensborg-omrisset.
 - St John's Wood: er «Bank» boutiquen The Bank 102 (102 High Street)? Ingen annen «Bank» funnet i gaten.
@@ -115,6 +120,7 @@ Sist oppdatert: 31. oktober 2026.
 
 ## Beslutningslogg
 
+- 2026-10-31: Berlin-guiden heter «Pål og Heddas Berlin»; de andre byene heter fortsatt «Pål og Vibekes».
 - 2026-10-31: Stående mobil får én knapp som bytter mellom «Liste ↓» og «Kart ↑» på samme plass. Fane som henger fast
   øverst tar plass hele tiden og ligner mer en app; lista som ark over kartet (som Google Maps) er en stor ombygging.
   Den faste knappen står 20 px inn og 24 px opp, fordi 10 px havnet i den runde skjermkanten på telefonen.

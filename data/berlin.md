@@ -1,13 +1,13 @@
 ---
-tittel: Pål og Vibekes Berlin
+tittel: Pål og Heddas Berlin
 undertittel: Nabolag, gater og steder verdt en omvei.
-tittel-en: Pål and Vibeke’s Berlin
+tittel-en: Pål and Hedda’s Berlin
 undertittel-en: Neighbourhoods, streets and places worth a detour.
 kicker: En høyst subjektiv guide
 kicker-en: An opinionated guide
 senter: 52.5050, 13.3900
 zoom: 12
-oppdatert: 2026-10-30
+oppdatert: 2026-10-31
 ---
 
 <!--
@@ -127,6 +127,70 @@ En av pionerene for spesialkaffe i Berlin, med eget brenneri. Den opprinnelige b
 
 One of Berlin’s speciality-coffee pioneers, with its own roastery. The original bar on Oderberger Straße 35.
 
+### Einstein Unter den Linden
+- sted: 52.51725, 13.38606
+- google: ChIJhbDljsRRqEcRFZtUstV1Zf4
+- nettside: https://einstein-udl.com/
+Mitte
+
+Wienerkafé på Unter den Linden, med schnitzel, strudel og egen kaffe. Unter den Linden 42.
+- en: Mitte
+
+Viennese-style café on Unter den Linden, with schnitzel, strudel and its own coffee. Unter den Linden 42.
+
+### LAP Coffee
+- sted: 52.52766, 13.40353
+- google: ChIJZStJ7KFRqEcRzRngO3uVeHI
+- nettside: https://www.lap.coffee/
+Spandauer Vorstadt
+
+Liten kaffebar i en kjede som selger god kaffe til lav pris. Rosenthaler Straße 62.
+- en: Spandauer Vorstadt
+
+Small coffee bar from a chain selling good coffee at low prices. Rosenthaler Straße 62.
+
+### COOP Anti-War Café
+- sted: 52.52403, 13.40741
+- google: ChIJ0QjXzeFRqEcRSXr7OJD88KQ
+- nettside: http://coopcafeberlin.de/
+Spandauer Vorstadt
+
+Kafé og bar ved Hackescher Markt, med kunst, konserter og debattkvelder. Rochstraße 3.
+- en: Spandauer Vorstadt
+
+Café and bar near Hackescher Markt, with art, concerts and talks. Rochstraße 3.
+
+### Steel Vintage Bikes Café
+- sted: 52.51271, 13.38223
+- google: ChIJWcEkQ2ZOqEcR_kuVEJM_5zk
+- nettside: https://www.thebikecafe.de/
+Mitte
+
+Kafé i en butikk for gamle racersykler, med frokost og brunch. Wilhelmstraße 91.
+- en: Mitte
+
+Café in a vintage racing-bike shop, serving breakfast and brunch. Wilhelmstraße 91.
+
+### Material
+- sted: 52.53741, 13.41191
+- google: ChIJXahNpkJRqEcRnfAYHgdHh3o
+Kastanienallee
+
+Kafé på Schönhauser Allee 156.
+- en: Kastanienallee
+
+Café at Schönhauser Allee 156.
+
+### Nonna Café & Co
+- sted: 52.52903, 13.42425
+- google: ChIJZ3q3ymVPqEcRuFCrLqp3OWo
+Prenzlauer Berg
+
+Kafé i Greifswalder Straße 229.
+- en: Prenzlauer Berg
+
+Café at Greifswalder Straße 229.
+
 ## Barer
 
 ### An einem Sonntag im August
@@ -139,6 +203,27 @@ Gammel Kastanienallee-bar med slitte møbler, øl og longdrinks – et sted for 
 - en: Kastanienallee
 
 An old Kastanienallee bar with worn furniture, beer and long drinks – a place for the last one of the night. Kastanienallee 103.
+
+### Bellboy Bar
+- sted: 52.51216, 13.39206
+- google: ChIJ0b0eHkBRqEcRHMXQiCDjKnE
+- nettside: https://bellboyberlin.com/
+Mitte
+
+Cocktailbar og restaurant nær Gendarmenmarkt. Anton-Wilhelm-Amo-Straße 30.
+- en: Mitte
+
+Cocktail bar and restaurant near the Gendarmenmarkt. Anton-Wilhelm-Amo-Straße 30.
+
+### Berliner Bürgerstuben
+- sted: 52.54586, 13.42017
+- google: ChIJTdZVRP9NqEcRtqpdy_XvoA0
+Prenzlauer Berg
+
+Gammeldags Kneipe med berlinsk mat og øl. Stargarder Straße 64.
+- en: Prenzlauer Berg
+
+Old-fashioned Kneipe with Berlin food and beer. Stargarder Straße 64.
 
 ## Markeder
 
@@ -255,6 +340,17 @@ Familiedrevet herrebutikk med undertøy og klær i 1920-tallsstil, delvis sydd a
 
 Family-run menswear shop with underwear and clothes in a 1920s style, some made from old textiles. Kastanienallee 91/92.
 
+### Absinthdepot
+- sted: 52.52536, 13.40503
+- google: ChIJL3N7C-FRqEcRlz-AbriEvhU
+- nettside: https://absinthdepot.de/
+Spandauer Vorstadt
+
+Butikk med flere hundre sorter absint, og en liten bar der man kan smake. Weinmeisterstraße 4.
+- en: Spandauer Vorstadt
+
+Shop with several hundred kinds of absinthe, and a small bar for tasting. Weinmeisterstraße 4.
+
 ## Muséer og gallerier
 
 ### Anne Frank Zentrum
@@ -268,6 +364,63 @@ Utstilling om Anne Frank i Haus Schwarzenberg ved Hackesche Höfe. Rosenthaler S
 - en: Spandauer Vorstadt
 
 Exhibition about Anne Frank in Haus Schwarzenberg next to the Hackesche Höfe. Rosenthaler Straße 39.
+
+### DDR Museum
+- sted: 52.51934, 13.40231
+- google: ChIJVzpGU95RqEcRZJgnyr-ZDC0
+- nettside: https://www.ddr-museum.de/
+Mitte
+
+Interaktivt museum om hverdagslivet i DDR, ved Spree rett overfor Berliner Dom. Karl-Liebknecht-Straße 1.
+- en: Mitte
+
+Hands-on museum about everyday life in the GDR, on the Spree opposite the Berliner Dom. Karl-Liebknecht-Straße 1.
+
+### Designpanoptikum
+- sted: 52.51691, 13.40604
+- google: ChIJt5sBKulRqEcRn8KyFbqELIs
+- nettside: https://www.designpanoptikum.com/
+Mitte
+
+Surrealistisk museum for industrielle gjenstander: maskiner, medisinsk utstyr og rariteter satt sammen på nye måter. Poststraße 7 i Nikolaiviertel.
+- en: Mitte
+
+Surreal museum of industrial objects: machines, medical equipment and oddities put together in new ways. Poststraße 7 in the Nikolaiviertel.
+
+### Museum der Dinge
+- navn-en: Museum of Things
+- sted: 52.51156, 13.40002
+- google: ChIJKWR6eTROqEcRcdqpF-zSrsE
+- nettside: https://museumderdinge.de/
+Mitte
+
+Werkbundarchivets museum for design og hverdagsting fra 1900-tallet. Leipziger Straße 54.
+- en: Mitte
+
+The Werkbundarchiv’s museum of 20th-century design and everyday objects. Leipziger Straße 54.
+
+### Disgusting Food Museum
+- sted: 52.50880, 13.39148
+- google: ChIJFbA9mPhRqEcRRK_v1dunxbE
+- nettside: https://disgustingfoodmuseum.berlin/
+Mitte
+
+Museum for verdens mest motbydelige mat, med smaksprøver. Schützenstraße 70.
+- en: Mitte
+
+Museum of the world’s most disgusting food, with tastings. Schützenstraße 70.
+
+### Museum der Stille
+- navn-en: Museum of Silence
+- sted: 52.52759, 13.39373
+- google: ChIJDRY4ruhRqEcRb3FiPdOo5E0
+- nettside: http://museum-der-stille.de/
+Spandauer Vorstadt
+
+Lite, stille rom med malerier av Nikolai Makarov. Linienstraße 154A.
+- en: Spandauer Vorstadt
+
+Small, quiet room with paintings by Nikolai Makarov. Linienstraße 154A.
 
 ## Verdt en omvei
 
@@ -293,6 +446,51 @@ Minnesmerket over Europas myrdede jøder: Peter Eisenmans felt med 2711 betongst
 - en: Mitte
 
 The Memorial to the Murdered Jews of Europe: Peter Eisenman’s field of 2,711 concrete stelae near the Brandenburg Gate, with an information centre underground.
+
+### St. Marienkirche
+- sted: 52.52061, 13.40712
+- google: ChIJS4MKBSBOqEcRgXI8kWHFOvw
+- nettside: https://www.marienkirche-berlin.de/
+Mitte
+
+Middelalderkirke ved Alexanderplatz, under TV-tårnet, med dødsdansen Totentanz fra 1400-tallet. Karl-Liebknecht-Straße 8.
+- en: Mitte
+
+Medieval church by Alexanderplatz, beneath the TV tower, with a 15th-century Dance of Death mural. Karl-Liebknecht-Straße 8.
+
+### Kino International
+- sted: 52.52047, 13.42284
+- google: ChIJH7q9khdOqEcR_AFoi_omA0w
+- nettside: https://www.yorck.de/kinos/kino-international
+Mitte
+
+DDR-kino fra 1963 på Karl-Marx-Allee, med en stor salong over salen. Karl-Marx-Allee 33.
+- en: Mitte
+
+GDR cinema from 1963 on Karl-Marx-Allee, with a large lounge above the auditorium. Karl-Marx-Allee 33.
+
+### Photokabine (Friedrichstraße)
+- navn-en: Photo booth (Friedrichstraße)
+- sted: 52.50817, 13.39054
+- google: ChIJJQU3YF5RqEcRsLkLpB-mcYU
+- nettside: https://www.photokabine.de/
+Mitte
+
+Analog fotoautomat i svart-hvitt. Friedrichstraße 49, ved Checkpoint Charlie.
+- en: Mitte
+
+Analogue black-and-white photo booth. Friedrichstraße 49, near Checkpoint Charlie.
+
+### silent green Kulturquartier
+- sted: 52.54499, 13.36658
+- google: ChIJ_4cWH4dRqEcRkwDOHgzjQ9c
+- nettside: https://www.silent-green.net/
+Wedding
+
+Kulturhus i et gammelt krematorium, med konserter, film og kafé i hagen. Gerichtstraße 35.
+- en: Wedding
+
+Arts centre in a former crematorium, with concerts, films and a café in the garden. Gerichtstraße 35.
 
 # Kreuzberg & Neukölln
 
@@ -328,6 +526,19 @@ Bergmannstraße med butikker, kaféer og Marheineke Markthalle, og Chamissoplatz
 - les: visitBerlin | Reuterkiez: Berlin Christmas shopping on the cutting edge | https://www.visitberlin.de/en/reuterkiez-berlin-christmas-shopping-cutting-edge
 «Kreuzkölln» – Neuköllns hjørne mot Kreuzberg, med barene i Weserstraße og markedet langs kanalen på Maybachufer.
 - en: “Kreuzkölln” – the corner of Neukölln next to Kreuzberg, with the bars on Weserstraße and the canal-side market on Maybachufer.
+
+## Restauranter
+
+### Burgermeister Schlesisches Tor
+- sted: 52.50109, 13.44242
+- google: ChIJ2Uh9Bk5OqEcREoy9N1LxImw
+- nettside: https://www.burgermeister.com/
+Kreuzberg
+
+Burgere fra et gammelt offentlig toalett under U-Bahn-viadukten ved Schlesisches Tor. Oberbaumstraße 8.
+- en: Kreuzberg
+
+Burgers from a former public toilet under the U-Bahn viaduct at Schlesisches Tor. Oberbaumstraße 8.
 
 ## Kaféer
 
@@ -398,6 +609,61 @@ Gammel kneipe med jukeboks ved Landwehrkanal, på hjørnet ved Kottbusser Brück
 
 Old-school pub with a jukebox on the Landwehrkanal, on the corner by the Kottbusser Brücke and the Maybachufer market. Kottbusser Damm 104.
 
+### Cafe Kreuzberg
+- sted: 52.49462, 13.42968
+- google: ChIJaenH-rRPqEcRrcz4pOaXKcw
+Kreuzberg
+
+Cocktailbar i Ohlauer Straße 37.
+- en: Kreuzberg
+
+Cocktail bar at Ohlauer Straße 37.
+
+### Ritchie
+- sted: 52.50139, 13.41856
+- google: ChIJ99HXXctPqEcR9us0USQXozc
+Oranienstraße og Wrangelkiez
+
+Cocktailbar i Oranienstraße 174.
+- en: Oranienstraße and Wrangelkiez
+
+Cocktail bar at Oranienstraße 174.
+
+### Nathanja & Heinrich
+- sted: 52.48738, 13.43676
+- google: ChIJl_A_1q9PqEcRQglgqf_zUJk
+- nettside: https://nathanja-heinrich.de/
+Reuterkiez
+
+Bar med cocktailer og vin. Weichselstraße 44.
+- en: Reuterkiez
+
+Bar with cocktails and wine. Weichselstraße 44.
+
+### Honey Lou
+- sted: 52.48017, 13.43808
+- google: ChIJ84OcmV1PqEcRP-99fakpAMk
+- nettside: https://www.honeylou.bar/
+Neukölln
+
+Bar i Anzengruberstraße 3.
+- en: Neukölln
+
+Bar at Anzengruberstraße 3.
+
+## Muséer og gallerier
+
+### Synthesizer Museum
+- sted: 52.49934, 13.41877
+- google: ChIJ9YKw7ANPqEcR_Gxab6T2N_s
+- nettside: https://synthesizermuseum.info/
+Oranienstraße og Wrangelkiez
+
+Synthesizere man kan spille på selv, ved Kottbusser Tor. Inngang ved REWE, ståldøra til høyre. Skalitzer Straße 135a.
+- en: Oranienstraße and Wrangelkiez
+
+Synthesizers you can play yourself, by Kottbusser Tor. Entrance by the REWE supermarket, steel door on the right. Skalitzer Straße 135a.
+
 ## Butikker
 
 ### Voo Store
@@ -465,6 +731,17 @@ Vintagebutikk med designerklær fra slutten av 90-tallet og 2000-tallet. Sanders
 
 Vintage shop with designer clothes from the late 1990s and 2000s. Sanderstraße 11.
 
+### Modulor
+- sted: 52.50338, 13.41011
+- google: ChIJzy9iLSxOqEcRQEcMzbuDYiY
+- nettside: https://www.modulor.de/
+Kreuzberg
+
+Stort varehus for kunstmateriell, papir, verktøy og alt til modellbygging, ved Moritzplatz. Prinzenstraße 85.
+- en: Kreuzberg
+
+Large store for art supplies, paper, tools and model-making materials, at Moritzplatz. Prinzenstraße 85.
+
 ## Hoteller
 
 ### Orania.Berlin
@@ -502,6 +779,30 @@ Det tyrkiske markedet langs Landwehrkanal: tirsdag og fredag 11–18.30, lørdag
 - en: Reuterkiez
 
 The Turkish market along the Landwehrkanal: Tuesday and Friday 11 am–6.30 pm, Saturday 11 am–5 pm.
+
+## Verdt en omvei
+
+### Liquidrom
+- sted: 52.50158, 13.38116
+- google: ChIJM60oqdJRqEcRy8_3DSb5_JI
+- nettside: https://www.liquidrom-berlin.de/
+Kreuzberg
+
+Spa ved Tempodrom med et basseng med saltvann, lys og musikk under vann. Möckernstraße 10.
+- en: Kreuzberg
+
+Spa by the Tempodrom with a saltwater pool, light and underwater music. Möckernstraße 10.
+
+### Prinzessinnengarten
+- sted: 52.46923, 13.42974
+- google: ChIJ6arRH7NPqEcRooAcvw6a_ek
+- nettside: https://www.prinzessinnengarten-kollektiv.net/
+Neukölln
+
+Felleshage på en del av St. Jacobi-kirkegården, med kafé om sommeren. Hermannstraße 99–105.
+- en: Neukölln
+
+Community garden on part of the St Jacobi cemetery, with a café in summer. Hermannstraße 99–105.
 
 # Friedrichshain
 
@@ -588,6 +889,17 @@ Den lengste bevarte delen av Muren, ca. 1,3 km langs Spree i Mühlenstraße, mal
 
 The longest surviving stretch of the Wall, about 1.3 km along the Spree on Mühlenstraße, painted by artists from around the world in 1990.
 
+### b-ware Ladenkino
+- sted: 52.51186, 13.46165
+- google: ChIJbRmdW_lOqEcR5HPpJoIMPuA
+- nettside: https://www.ladenkino.de/
+Boxhagener Platz
+
+Lite kino i en gammel butikk, med mye film på originalspråket. Gärtnerstraße 19.
+- en: Boxhagener Platz
+
+Small cinema in a former shop, with many films in their original language. Gärtnerstraße 19.
+
 # West
 
 ## Nabolag og gater
@@ -663,6 +975,31 @@ Kneipe på hjørnet av Savignyplatz siden 1967, med gamle Vest-Berlin-plakater o
 
 Pub on the corner of Savignyplatz since 1967, with old West Berlin posters and open until late. Savignyplatz 7–8.
 
+### Rum Trader
+- sted: 52.49839, 13.32671
+- google: ChIJn_Ul-vlQqEcRGSo1Dir8bSU
+- nettside: https://rumtrader.com/
+Ludwigkirchplatz
+
+Bitteliten cocktailbar med plass til en håndfull gjester. Bartenderen lager drinken etter hva man liker. Fasanenstraße 40.
+- en: Ludwigkirchplatz
+
+Tiny cocktail bar with room for a handful of guests. The bartender mixes to your taste. Fasanenstraße 40.
+
+## Muséer og gallerier
+
+### Museum der unerhörten Dinge
+- navn-en: Museum of Unheard (of) Things
+- sted: 52.48705, 13.35868
+- google: ChIJ6VomnEBQqEcR22RgcbggjLY
+- nettside: https://www.museumderunerhoertendinge.de/
+Schöneberg
+
+Lite museum med rare gjenstander og historiene som (kanskje) hører til. Crellestraße 5–6.
+- en: Schöneberg
+
+Small museum of odd objects and the stories that (perhaps) belong to them. Crellestraße 5–6.
+
 ## Markeder
 
 ### Wochenmarkt Winterfeldtplatz
@@ -733,6 +1070,53 @@ Bokhandel for kunst, arkitektur, design og fotografi under S-Bahn-buene ved Savi
 
 Bookshop for art, architecture, design and photography under the S-Bahn arches by Savignyplatz.
 
+### Mimi
+- sted: 52.49076, 13.35345
+- google: ChIJp4wymUZQqEcRWg6A3tINkfE
+- nettside: https://mimi.berlin/
+Winterfeldtplatz og Potsdamer Straße
+
+Vintageklær, særlig kjoler. Goltzstraße 5.
+- en: Winterfeldtplatz and Potsdamer Straße
+
+Vintage clothing, especially dresses. Goltzstraße 5.
+
+## Verdt en omvei
+
+### Delphi Filmpalast
+- sted: 52.50603, 13.32851
+- google: ChIJm6SNNPxQqEcRq8bcTLwe7y0
+- nettside: https://www.yorck.de/kinos/delphi-filmpalast
+Charlottenburg
+
+Stor kino fra 1949 ved Zoo, brukt under Berlinale. Kantstraße 12a.
+- en: Charlottenburg
+
+Grand cinema from 1949 by the Zoo, used during the Berlinale. Kantstraße 12a.
+
+### Odeon
+- sted: 52.48216, 13.34950
+- google: ChIJAza0KGpQqEcRhqmME_bfEmo
+- nettside: https://www.yorck.de/kinos/odeon
+Schöneberg
+
+Nabolagskino i Schöneberg som viser film på engelsk. Hauptstraße 116.
+- en: Schöneberg
+
+Neighbourhood cinema in Schöneberg showing films in English. Hauptstraße 116.
+
+### Photokabine (Bikini Berlin)
+- navn-en: Photo booth (Bikini Berlin)
+- sted: 52.50560, 13.33831
+- google: ChIJs_SDahdRqEcRAZvZeCiaFDo
+- nettside: https://www.photokabine.de/
+Charlottenburg
+
+Analog fotoautomat i svart-hvitt i første etasje i Bikini Berlin. Budapester Straße 38–50.
+- en: Charlottenburg
+
+Analogue black-and-white photo booth on the ground floor of Bikini Berlin. Budapester Straße 38–50.
+
 # Around Berlin
 
 ## Muséer og gallerier
@@ -749,3 +1133,28 @@ Minnested og museum i den tidligere konsentrasjonsleiren, ca. 35 km nord for sen
 - en: Oranienburg
 
 Memorial and museum at the former concentration camp, about 35 km north of the centre. S1 to Oranienburg.
+
+### Stasi-museet
+- navn-en: Stasi Museum
+- sted: 52.51453, 13.48728
+- google: ChIJKeccmpNOqEcRHQ7hqU7JhnY
+- nettside: https://www.stasimuseum.de/
+Lichtenberg
+
+I det gamle hovedkvarteret til Stasi, med Erich Mielkes kontor slik det var. Normannenstraße 20, Haus 1.
+- en: Lichtenberg
+
+In the former Stasi headquarters, with Erich Mielke’s office as it was. Normannenstraße 20, Haus 1.
+
+## Verdt en omvei
+
+### Spreepark
+- sted: 52.48410, 13.49110
+- google: ChIJo8NAJSRPqEcRUZxTK-spns0
+- nettside: https://www.spreepark.berlin/
+Plänterwald
+
+Nedlagt fornøyelsespark fra DDR-tiden i Plänterwald, med pariserhjulet som står igjen. Guidede turer mens parken bygges om.
+- en: Plänterwald
+
+Abandoned GDR-era amusement park in the Plänterwald, with its Ferris wheel still standing. Guided tours while the park is being redeveloped.
