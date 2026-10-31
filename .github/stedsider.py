@@ -5,7 +5,9 @@
 kategori og nabolag, så delingskortet i Meldinger, Slack og e-post viser stedet, ikke bare byen.
 Den har ikke og:image, så Meldinger viser et lite kort med hjemskjermikonet: byens frimerke
 (bilder/ikon-<by>.png) når det finnes, ellers «b»-frimerket.
-Åpnes siden i en nettleser, går den videre til ../?sted=<slug> (pluss ?lang=en), som før.
+Siden er en stubb som bysidene (app.js med data-by og data-sted) og viser kartet med infoboksen for stedet.
+Den sender ikke videre til ../?sted=: Meldinger på iPhone kjører JavaScript når den lager forhåndsvisningen,
+og fulgte da omdirigeringen og viste byens store delingskort.
 
 Kjøres av .github/workflows/pages.yml ved publisering, for main og hver forhåndsvisning;
 sidene committes ikke. Lesingen av md-filene speiler lesMarkdown() i app.js, og slug-en stedSlug().
@@ -61,13 +63,16 @@ def forste_linje(notat):
     return ''
 
 
-def side(navn, beskrivelse, tittel, url, sti_slug, ikon):
+def side(navn, beskrivelse, tittel, url, sti_slug, ikon, by, bynavn):
     e = lambda s: html.escape(s, quote=True)
     return f'''<!DOCTYPE html>
 <html lang="no">
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(navn)} · {e(tittel)}</title>
 <link rel="apple-touch-icon" href="{ikon}">
+<meta name="apple-mobile-web-app-title" content="{e(bynavn)}">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#F7F4EE">
 <meta name="robots" content="noindex, nofollow, noarchive">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{e(url)}">
@@ -76,12 +81,8 @@ def side(navn, beskrivelse, tittel, url, sti_slug, ikon):
 <meta property="og:description" content="{e(beskrivelse)}">
 <meta property="og:locale" content="nb_NO">
 <meta name="twitter:card" content="summary">
-<script>
-  /* Delingsside for ett sted (laget av .github/stedsider.py). Går videre til kartet med infoboksen åpen. */
-  var q = location.search.replace(/^\\?/, '');
-  location.replace('../?sted={sti_slug}' + (q ? '&' + q : '') + location.hash);
-</script>
-<p><a href="../?sted={sti_slug}">{e(navn)}</a></p>
+<!-- Delingsside for ett sted, laget av .github/stedsider.py ved publisering. -->
+<script src="../../app.js" data-by="{by}" data-sted="{sti_slug}"></script>
 </html>
 '''
 
@@ -112,7 +113,7 @@ def main(rot):
                 print(f"  {by['id']}/{s}/ finnes fra før; hoppet over")
                 continue
             os.makedirs(mappe)
-            open(os.path.join(mappe, 'index.html'), 'w', encoding='utf-8').write(side(st['navn'], beskrivelse, tittel, url, s, ikon))
+            open(os.path.join(mappe, 'index.html'), 'w', encoding='utf-8').write(side(st['navn'], beskrivelse, tittel, url, s, ikon, by['id'], by['navn']))
             totalt += 1
     print(f'Stedssider: {totalt} i {rot}')
 
