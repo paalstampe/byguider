@@ -96,6 +96,10 @@ Sist oppdatert: 31. oktober 2026.
   Horváth, Jolesch, Cocolo Ramen X-berg, Sale e Tabacchi og Tulus Lotrek. Lode & Stijn og Richard er stengt for godt. Notatene er Claudes utkast.
 - 31.10.: delingskort (PR #85). Hver by har eget delingsbilde, et postkort med bynavnet i poststempelet (`bilder/deling-<by>.png`), og forsiden
   en postkortbunke. Stubbene har og:-tagger og heter som guiden. Hjemskjermikonet er et frimerke med «b». Lages med `.claude/delingsbilder.sh`.
+- 31.10. kveld: delingsside per sted (PR #86). «Del» lenker til `…/<by>/<slug>/`, en liten side med stedets navn og
+  «kategori · nabolag — guide» i delingskortet, uten stort bilde. Sidene (812) lages ved publisering av `.github/stedsider.py`
+  og committes ikke. Hver by har eget hjemskjermikon, frimerke med «BYGUIDE» og bynavnet (`bilder/ikon-<by>.png`, PR #87),
+  som også brukes i det lille delingskortet. Forsiden beholder «b». Live og sjekket med curl.
 - Ingen åpne grener utenom `main`.
 
 ## Neste steg
@@ -123,7 +127,9 @@ Sist oppdatert: 31. oktober 2026.
   grove soner rundt handlegatene. Tegn dem presist (grensegater i OSM) når Pål vil, særlig når et nabolag går av ønskelista.
 - Oppdater miniatyrene når en by endrer utseende merkbart (CLAUDE.md, Miniatyrer).
 - Ny by eller navneendring: kjør `.claude/delingsbilder.sh` og legg og:-taggene i stubben (HANDOVER, «Ny by»).
-- Sjekk at delingskortet vises i Meldinger, Slack og e-post (bildene er live, men ikke sett i en app ennå).
+- Sjekk på iPhone at delingskortene vises i Meldinger (by: stort postkort; sted: lite kort med byens frimerke) og at
+  «Legg til på Hjem-skjerm» på en byside gir byens frimerke. Ikke sett i en app ennå.
+- Et sted som bytter navn får ny lenke; delte lenker til det gamle navnet gir 404-siden.
 - Kart: på mobil ligger nabolagsfirkantene tett på laveste zoom i London. Se om det trengs noe (f.eks. mindre
   firkanter ved lav zoom) når Pål har brukt det en stund. Å skjule steder under nabolagene er prøvd og forkastet.
 - Sjekk på iPhone at teksten ikke lenger forstørres når telefonen ligger (kan ikke testes i Chromium).
@@ -139,6 +145,9 @@ Sist oppdatert: 31. oktober 2026.
 
 ## Beslutningslogg
 
+- 2026-10-31: Ett sted deles med egen delingsside (`<by>/<slug>/`) laget ved publisering, ikke committet. Byens store postkort
+  var for voldsomt når man deler ett sted og nevnte ikke stedet. Hjemskjermikonet per by er variant D: «BYGUIDE» og bynavnet
+  mellom to linjer, valgt av Pål blant fire skisser.
 - 2026-10-31: Delingsbildene er en postal familie: konvolutt med PS-frimerke (stam.pe), postkort (byguidene), luftpost (reiseplanleggingen).
   Kortet er per by, ikke per sted: delingskort leses uten JavaScript, så `?sted=` kan ikke gi eget bilde. Stempelet har ikke årstall.
 - 2026-10-31: Smaksprofilen ligger i SMAK.md, så nye byer bygges uten å analysere de andre byene hver gang.
