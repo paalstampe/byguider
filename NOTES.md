@@ -122,6 +122,8 @@ Sist oppdatert: 31. oktober 2026.
 - London: omrissene for Sydenham, Blackheath, Forest Hill, Balham, Streatham Hill, Tooting, Wapping og Lower Clapton er
   grove soner rundt handlegatene. Tegn dem presist (grensegater i OSM) når Pål vil, særlig når et nabolag går av ønskelista.
 - Oppdater miniatyrene når en by endrer utseende merkbart (CLAUDE.md, Miniatyrer).
+- Ny by eller navneendring: kjør `.claude/delingsbilder.sh` og legg og:-taggene i stubben (HANDOVER, «Ny by»).
+- Sjekk at delingskortet vises i Meldinger, Slack og e-post (bildene er live, men ikke sett i en app ennå).
 - Kart: på mobil ligger nabolagsfirkantene tett på laveste zoom i London. Se om det trengs noe (f.eks. mindre
   firkanter ved lav zoom) når Pål har brukt det en stund. Å skjule steder under nabolagene er prøvd og forkastet.
 - Sjekk på iPhone at teksten ikke lenger forstørres når telefonen ligger (kan ikke testes i Chromium).
