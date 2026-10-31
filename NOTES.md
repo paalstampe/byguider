@@ -92,6 +92,8 @@ Sist oppdatert: 31. oktober 2026.
 - 31.10.: SMAK.md er smaksprofilen per kategori (nabolag, restauranter, kaféer, barer, muséer, butikker, hoteller m.fl.),
   utledet fra de seks byene og rettet av Pål. Den brukes når Claude foreslår steder selv, i stedet for å analysere byene
   på nytt; CLAUDE.md viser til den. New York fikk Starbucks Reserve Roastery i Meatpacking District.
+- 31.10.: Berlin fikk sju restauranter i gangavstand fra Orania, foreslått av Claude ut fra SMAK.md og sjekket i Google Maps: ORA, Max und Moritz,
+  Horváth, Jolesch, Cocolo Ramen X-berg, Sale e Tabacchi og Tulus Lotrek. Lode & Stijn og Richard er stengt for godt. Notatene er Claudes utkast.
 - Ingen åpne grener utenom `main`.
 
 ## Neste steg
@@ -109,6 +111,7 @@ Sist oppdatert: 31. oktober 2026.
 - Stedene fra Påls liste 30.10. kveld (London, Bangkok, New York, Nice) har korte utkast til notater skrevet av Claude. Usikre: Azzurra
   («italiensk»), Monmouth Kitchen («italiensk og peruansk»), Tangible Bangkok (bare «Kafé»). Mangler nettside: Storyline, Tangible,
   Crowley Vintage, Bonjour Amour og SAVVA.
+- Berlin: notatene til de sju restaurantene fra 31.10. er Claudes utkast. Sjekk stjerner og kokker (Horváth, Tulus Lotrek) når Pål har vært der.
 - Bangkok: Ekkamai og Phra Khanong er grove soner rundt gatene. Tegn dem presist (khwaeng eller grensegater i OSM) når de går av ønskelista.
 - Slett på byguide-forsiden er testet i Chromium, ikke i Safari på Mac. Pål sjekker der.
 - Nye nabolag trenger alltid et presist omriss i `data/<by>-geometri.geojson`; fremgangsmåten står i CLAUDE.md, Data.

@@ -550,6 +550,83 @@ Burgere fra et gammelt offentlig toalett under U-Bahn-viadukten ved Schlesisches
 
 Burgers from a former public toilet under the U-Bahn viaduct at Schlesisches Tor. Oberbaumstraße 8.
 
+### ORA
+- sted: 52.50136, 13.41592
+- google: ChIJCwbEVjJOqEcRlFGm69_dBJk
+- nettside: https://www.ora.berlin/
+Oranienstraße og Wrangelkiez
+
+Restaurant og vinbar i et apotek fra 1800-tallet ved Oranienplatz, med det gamle inventaret bevart. Sesongbaserte småretter og lang vinliste. Rett over plassen fra Orania. Oranienplatz 14.
+- en: Oranienstraße and Wrangelkiez
+
+Restaurant and wine bar in a 19th-century pharmacy on Oranienplatz, with the old fittings intact. Seasonal small plates and a long wine list. Across the square from Orania. Oranienplatz 14.
+
+### Max und Moritz
+- sted: 52.50260, 13.41399
+- google: ChIJbUbbajJOqEcRawilLsv27Wk
+- nettside: https://maxundmoritzberlin.de/
+Kreuzberg
+
+Gammel Berlin-gaststätte fra 1902 med klassisk Berlin-mat som Königsberger Klopse og Eisbein. Old school og ujålete. Oranienstraße 162.
+- en: Kreuzberg
+
+Old Berlin Gaststätte from 1902, serving classic Berlin food such as Königsberger Klopse and Eisbein. Old-school and unpretentious. Oranienstraße 162.
+
+### Horváth
+- sted: 52.49646, 13.42088
+- google: ChIJ74LRF8tPqEcRNeBJAS2qxaQ
+- nettside: https://www.restaurant-horvath.de/
+Kreuzberg
+
+Sebastian Franks restaurant ved Landwehrkanal, med to Michelin-stjerner og grønnsakene i sentrum. Bestill i god tid. Paul-Lincke-Ufer 44a.
+- en: Kreuzberg
+
+Sebastian Frank’s restaurant on the Landwehrkanal, with two Michelin stars and vegetables at the centre. Book well ahead. Paul-Lincke-Ufer 44a.
+
+### Jolesch
+- sted: 52.50073, 13.43400
+- google: ChIJkUK660tOqEcRuCui4omy28c
+- nettside: https://jolesch.de/
+Oranienstraße og Wrangelkiez
+
+Østerriksk restaurant med wienerschnitzel, elegant uten å være formell. En Kreuzberg-klassiker. Muskauer Straße 1.
+- en: Oranienstraße and Wrangelkiez
+
+Austrian restaurant known for its Wiener schnitzel, elegant without being formal. A Kreuzberg classic. Muskauer Straße 1.
+
+### Cocolo Ramen X-berg
+- sted: 52.49382, 13.41803
+- google: ChIJCUmw4MpPqEcRjuEofFrRt0M
+- nettside: https://kuchi.de/restaurant/cocolo-x-berg/
+Graefekiez
+
+Ramen, og bare det. Graefestraße 11.
+- en: Graefekiez
+
+Ramen, and nothing else. Graefestraße 11.
+
+### Sale e Tabacchi
+- sted: 52.50659, 13.39144
+- google: ChIJCYBSVNFRqEcR6x9hA_gZsQc
+- nettside: https://sale-e-tabacchi.de/
+Kreuzberg
+
+Italiensk klassiker der journalister og avisfolk fra strøket spiser, med hage om sommeren. Rudi-Dutschke-Straße 25.
+- en: Kreuzberg
+
+Italian classic where the area’s journalists and newspaper people eat, with a garden in summer. Rudi-Dutschke-Straße 25.
+
+### Tulus Lotrek
+- sted: 52.48968, 13.41360
+- google: ChIJ95zYL89PqEcRlyKANk7ORQQ
+- nettside: https://www.tuluslotrek.de/
+Graefekiez
+
+Kokkeeid restaurant med én Michelin-stjerne, leken og uformell. Fichtestraße 24.
+- en: Graefekiez
+
+Chef-owned restaurant with one Michelin star, playful and informal. Fichtestraße 24.
+
 ## Kaféer
 
 ### Nano Kaffee
