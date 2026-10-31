@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<title>Delingsbilder</title>
+<!--
+  Tegner delingsbildene (1200×630, og:image) og hjemskjermikonene (180×180) for app-ene på stam.pe.
+  Brukes av .claude/delingsbilder.sh, som åpner siden med parametre og tar bilde av #flate.
+  Identisk kopi i byguider og reiseplanlegging; endres den, kopier til begge.
+    ?motiv=postkort&by=LONDON&eier=Pål og Vibekes&navn=London&kicker=…&under=…
+    ?motiv=postkortbunke&tittel=Byguider&kicker=…&under=…
+    ?motiv=luftpost&tittel=Reiseplanlegging&kicker=…&under=…
+    ?motiv=ikon&bokstav=b
+  Familien: stam.pe er en konvolutt med PS-frimerke, byguidene postkort med bynavnet i poststempelet,
+  reiseplanleggingen en luftpostkonvolutt med klode-frimerke.
+-->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root { --papir:#F7F4EE; --tekst:#241F19; --dempet:#6B5D4A; --kobber:#8A5A2B; }
+  body { margin:0; background:var(--papir); color:var(--tekst); }
+  .kort { width:1200px; height:630px; background:var(--papir); position:relative; overflow:hidden; }
+  .kort .ramme { position:absolute; inset:28px; border:1px solid #E2D9CA; }
+  .kort svg.motiv { overflow:visible; position:absolute; left:70px; top:105px; width:440px; height:420px; }
+  .kort .tekst { position:absolute; left:560px; top:0; bottom:0; right:60px; display:flex; flex-direction:column; justify-content:center; }
+  .kicker { font:600 18px 'Work Sans'; letter-spacing:.16em; text-transform:uppercase; color:var(--kobber); margin-bottom:18px; }
+  .tittel { font:700 76px/1.04 'Playfair Display'; margin:0 0 22px; letter-spacing:-.01em; }
+  .tittel.lang { font-size:64px; }
+  .tittel em { font-style:italic; font-weight:500; display:block; font-size:.62em; color:var(--dempet); margin-bottom:6px; letter-spacing:0; }
+  .under { font:400 28px/1.35 'Work Sans'; color:var(--dempet); text-wrap:balance; }
+  .ikon { width:180px; height:180px; }
+</style>
+</head>
+<body>
+<div id="flate"></div>
+<script>
+const K = '#8A5A2B', P = '#F7F4EE', LYS = '#CDB9A0', DEMPET = '#6B5D4A';
+let teller = 0;
+const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+
+/* Frimerke: kobberflate med takket kant (papirfargede sirkler langs kanten) og tynn innerramme. */
+function frimerke(x, y, b, h, innhold, vinkel = 0) {
+  const r = Math.max(3, b / 22), steg = r * 2.6, deler = [];
+  deler.push(`<rect x="0" y="0" width="${b}" height="${h}" fill="${K}"/>`);
+  for (let i = steg / 2; i < b; i += steg) {
+    deler.push(`<circle cx="${i}" cy="0" r="${r}" fill="${P}"/><circle cx="${i}" cy="${h}" r="${r}" fill="${P}"/>`);
+  }
+  for (let j = steg / 2; j < h; j += steg) {
+    deler.push(`<circle cx="0" cy="${j}" r="${r}" fill="${P}"/><circle cx="${b}" cy="${j}" r="${r}" fill="${P}"/>`);
+  }
+  for (const [cx, cy] of [[0, 0], [b, 0], [0, h], [b, h]]) deler.push(`<circle cx="${cx}" cy="${cy}" r="${r * 1.3}" fill="${P}"/>`);
+  const m = b * 0.1;
+  deler.push(`<rect x="${m}" y="${m}" width="${b - 2 * m}" height="${h - 2 * m}" fill="none" stroke="${P}" stroke-opacity=".55" stroke-width="${Math.max(1, b / 90)}"/>`);
+  deler.push(innhold);
+  return `<g transform="translate(${x} ${y}) rotate(${vinkel} ${b / 2} ${h / 2})">${deler.join('')}</g>`;
+}
+
+/* Poststempel: dobbel ring med tekst oppe og nede, og bølgestreker til venstre. */
+function stempel(cx, cy, r, tekstOppe, tekstNede) {
+  const id = 'sti' + (teller++), ri = r * 0.78;
+  const deler = [`<g opacity=".75" fill="none" stroke="${DEMPET}" stroke-width="2.4">`];
+  deler.push(`<circle cx="${cx}" cy="${cy}" r="${r}"/><circle cx="${cx}" cy="${cy}" r="${r * 0.56}"/>`);
+  for (let k = -1; k <= 1; k++) {
+    const yy = cy + k * r * 0.32, x0 = cx - r * 2.9, x1 = cx - r * 1.05;
+    let d = `M${x0} ${yy}`;
+    for (let x = x0; x < x1; x += r * 0.6) d += ` q${r * 0.15} ${-r * 0.14} ${r * 0.3} 0 t${r * 0.3} 0`;
+    deler.push(`<path d="${d}"/>`);
+  }
+  deler.push('</g>');
+  deler.push(`<defs><path id="${id}o" d="M${cx - ri} ${cy} A${ri} ${ri} 0 0 1 ${cx + ri} ${cy}"/>
+    <path id="${id}n" d="M${cx - ri - r * 0.1} ${cy} A${ri + r * 0.1} ${ri + r * 0.1} 0 0 0 ${cx + ri + r * 0.1} ${cy}"/></defs>`);
+  /* Lange navn (NEW YORK, BANGKOK) får mindre skrift, så de holder seg på øvre halvdel av ringen. */
+  const fs = r * Math.min(0.27, 1.9 / Math.max(tekstOppe.length, 1));
+  deler.push(`<g opacity=".75" fill="${DEMPET}" font-family="Work Sans" font-weight="600" font-size="${fs}" letter-spacing="${fs * 0.18}">
+    <text text-anchor="middle"><textPath href="#${id}o" startOffset="50%">${esc(tekstOppe)}</textPath></text>
+    <text text-anchor="middle" font-size="${r * 0.22}"><textPath href="#${id}n" startOffset="50%">${esc(tekstNede)}</textPath></text></g>`);
+  return deler.join('');
+}
+
+/* Postkort: papir med kobberkant, skillelinje, håndskrift til venstre, adresse og frimerke til høyre. */
+function postkort(by, vinkel, x = 20, y = 70, b = 400, h = 270, medStempel = true) {
+  const mid = b * 0.54;
+  let s = `<g transform="translate(${x} ${y}) rotate(${vinkel} ${b / 2} ${h / 2})">`;
+  s += `<rect x="0" y="0" width="${b}" height="${h}" fill="${P}" stroke="${K}" stroke-width="6"/>`;
+  s += `<line x1="${mid}" y1="${h * 0.16}" x2="${mid}" y2="${h * 0.86}" stroke="${LYS}" stroke-width="2.5"/>`;
+  for (let i = 0; i < 4; i++) {
+    const yy = h * 0.34 + i * h * 0.14, slutt = mid - 24 - (i === 3 ? b * 0.18 : (i % 2) * 18);
+    let d = `M${b * 0.07} ${yy}`;
+    for (let xx = b * 0.07; xx < slutt; xx += 22) d += ' c4 -9 8 -9 11 0 s7 9 11 0';
+    s += `<path d="${d}" fill="none" stroke="${LYS}" stroke-width="2.6" stroke-linecap="round"/>`;
+  }
+  for (let i = 0; i < 3; i++) {
+    const yy = h * 0.6 + i * h * 0.11;
+    s += `<line x1="${mid + 20}" y1="${yy}" x2="${b - 26 - (i === 2 ? 40 : 0)}" y2="${yy}" stroke="${LYS}" stroke-width="3" stroke-linecap="round"/>`;
+  }
+  const fb = b * 0.2, fh = fb * 1.18;
+  s += frimerke(b - fb - 22, 20, fb, fh,
+    `<text x="${fb / 2}" y="${fh * 0.69}" text-anchor="middle" font-family="Playfair Display" font-weight="700" font-size="${fb * 0.62}" fill="${P}">b</text>`, 3);
+  if (medStempel) s += stempel(b - fb - 22 - fb * 0.42, 20 + fh * 0.72, fb * 0.6, by, '· STAM.PE ·');
+  return s + '</g>';
+}
+
+/* Luftpostkonvolutt: skrå striper langs kanten, PAR AVION-merke, frimerke med klode. */
+function luftpost(x = 10, y = 80, b = 420, h = 270) {
+  const id = 'st' + (teller++);
+  let s = `<defs><pattern id="${id}" width="44" height="44" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="44" height="44" fill="${P}"/><rect width="14" height="44" fill="${K}"/><rect x="22" width="14" height="44" fill="${LYS}"/></pattern></defs>`;
+  s += `<g transform="translate(${x} ${y}) rotate(-3 ${b / 2} ${h / 2})">`;
+  s += `<rect x="0" y="0" width="${b}" height="${h}" fill="url(#${id})"/>`;
+  s += `<rect x="16" y="16" width="${b - 32}" height="${h - 32}" fill="${P}"/>`;
+  s += `<rect x="0" y="0" width="${b}" height="${h}" fill="none" stroke="${K}" stroke-width="3"/>`;
+  s += `<g transform="translate(40 44)"><rect width="128" height="40" fill="none" stroke="${K}" stroke-width="2.5"/>
+    <text x="64" y="27" text-anchor="middle" font-family="Work Sans" font-weight="600" font-size="15" letter-spacing="2.4" fill="${K}">PAR AVION</text></g>`;
+  for (let i = 0; i < 3; i++) {
+    const yy = h * 0.6 + i * h * 0.1;
+    s += `<line x1="${b * 0.36}" y1="${yy}" x2="${b * 0.84 - (i === 2 ? 50 : 0)}" y2="${yy}" stroke="${LYS}" stroke-width="3" stroke-linecap="round"/>`;
+  }
+  const fb = 88, fh = 104, kr = 25, kx = fb / 2, ky = fh / 2;
+  const klode = `<g fill="none" stroke="${P}" stroke-width="2.2">
+      <circle cx="${kx}" cy="${ky}" r="${kr}"/>
+      <ellipse cx="${kx}" cy="${ky}" rx="${kr * 0.45}" ry="${kr}"/>
+      <line x1="${kx}" y1="${ky - kr}" x2="${kx}" y2="${ky + kr}"/>
+      <line x1="${kx - kr}" y1="${ky}" x2="${kx + kr}" y2="${ky}"/>
+      <path d="M${kx - kr * 0.86} ${ky - kr * 0.5} Q${kx} ${ky - kr * 0.35} ${kx + kr * 0.86} ${ky - kr * 0.5}"/>
+      <path d="M${kx - kr * 0.86} ${ky + kr * 0.5} Q${kx} ${ky + kr * 0.35} ${kx + kr * 0.86} ${ky + kr * 0.5}"/></g>`;
+  s += frimerke(b - fb - 36, 36, fb, fh, klode, 4);
+  s += stempel(b - fb - 36 - 34, 36 + fh * 0.74, 52, 'UKE 12', '· STAM.PE ·');
+  return s + '</g>';
+}
+
+function kort(motiv, kicker, tittel, under, lang = false) {
+  return `<div class="kort"><div class="ramme"></div><svg class="motiv" viewBox="0 0 440 420">${motiv}</svg>
+     <div class="tekst"><div class="kicker">${esc(kicker)}</div><h1 class="tittel${lang ? ' lang' : ''}">${tittel}</h1>
+     <div class="under">${esc(under).replace(/\|/g, '<br>')}</div></div></div>`;
+}
+
+/* Hjemskjermikon: frimerke med bokstaven, litt på skrå, på papir. iOS runder hjørnene selv. */
+function ikon(bokstav) {
+  const fb = 112, fh = 132;
+  const s = frimerke(34, 24, fb, fh,
+    `<text x="${fb / 2}" y="${fh * 0.7}" text-anchor="middle" font-family="Playfair Display" font-weight="700" font-size="${fb * 0.7}" fill="${P}">${esc(bokstav)}</text>`, -4);
+  return `<svg class="ikon" viewBox="0 0 180 180"><rect width="180" height="180" fill="${P}"/>${s}</svg>`;
+}
+
+const q = new URLSearchParams(location.search), v = n => q.get(n) || '';
+const flate = document.getElementById('flate');
+switch (v('motiv')) {
+  case 'postkort':
+    flate.innerHTML = kort(postkort(v('by'), -4), v('kicker'),
+      `<em>${esc(v('eier'))}</em>${esc(v('navn'))}`, v('under'));
+    break;
+  case 'postkortbunke':
+    flate.innerHTML = kort(
+      postkort('', -9, -10, 50, 340, 229, false) + postkort('', 7, 90, 0, 340, 229, false) + postkort(v('by') || 'LONDON', -2, 30, 150, 380, 256),
+      v('kicker'), esc(v('tittel')), v('under'));
+    break;
+  case 'luftpost':
+    flate.innerHTML = kort(luftpost(), v('kicker'), esc(v('tittel')), v('under'), v('tittel').length > 12);
+    break;
+  case 'ikon':
+    flate.innerHTML = ikon(v('bokstav'));
+    break;
+}
+</script>
+</body>
+</html>
