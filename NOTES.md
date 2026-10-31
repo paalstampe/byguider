@@ -7,7 +7,7 @@ Oppdateres ved slutten av hver økt (`/avslutt`).
 
 Sist oppdatert: 31. oktober 2026.
 
-- Live på https://stam.pe/byguider/ med seks byer: London (275 oppføringer, hvorav 114 på ønskelista), Oslo (131, 22 på ønskelista), New York (93, 2 på ønskelista), Nice (74, 3 på ønskelista), Tokyo (86, 7 på ønskelista), Bangkok (40, 4 på ønskelista).
+- Live på https://stam.pe/byguider/ med seks byer: London (275 oppføringer, hvorav 114 på ønskelista), Oslo (131, 22 på ønskelista), New York (94, 2 på ønskelista), Nice (74, 3 på ønskelista), Tokyo (86, 7 på ønskelista), Bangkok (40, 4 på ønskelista).
 - Appen er i hovedsak ferdig: MapLibre med papirpalett og mørk modus, nabolag med omriss, kjerne og gater,
   flyttbar infoboks, gåturer i infoboksen, ønskeliste for alle, norsk og engelsk.
 - Arbeidet nå er data: nye steder, favoritter, beskrivelser og nabolagsomriss. 18.10. fikk Oslo
@@ -89,11 +89,16 @@ Sist oppdatert: 31. oktober 2026.
   i nettleseren (`byguider-posisjon`) at posisjonen har virket før. Infoboksen har «Del», og `?sted=<navn>` åpner kartet zoomet
   inn på stedet med infoboksen. Testet av Pål på telefonen.
   Lenkene i infoboksen står på to faste linjer: Veibeskrivelse · Google Maps · Nettside, så Zoom inn · Del (PR #84).
+- 31.10.: SMAK.md er smaksprofilen per kategori (nabolag, restauranter, kaféer, barer, muséer, butikker, hoteller m.fl.),
+  utledet fra de seks byene og rettet av Pål. Den brukes når Claude foreslår steder selv, i stedet for å analysere byene
+  på nytt; CLAUDE.md viser til den. New York fikk Starbucks Reserve Roastery i Meatpacking District.
 - Ingen åpne grener utenom `main`.
 
 ## Neste steg
 
 - Fyll på data etter hvert som Pål kommer med steder og navneendringer, i alle byer.
+- SMAK.md: Pål kan gi en liste over hoteller de liker godt; legg dem inn som eksempler under Hoteller.
+  Oppdater profilen når Pål setter ★ eller sier hva han liker.
 - Tokyo: flere notater er bare én linje («Sushi.», «Bar.», «Moderne vietnamesisk.»), og de 33 nye fra 30.10. er Claudes utkast.
   Fyll på når Pål har tekst. Nettsiden til Jimbocho Book Center svarte 503 30.10.; sjekk senere.
   Bar Penguin, Apollo Bar, Kihara, Ăn Đi og Kosho SamenoHa mangler nettside.
@@ -127,6 +132,10 @@ Sist oppdatert: 31. oktober 2026.
 
 ## Beslutningslogg
 
+- 2026-10-31: Smaksprofilen ligger i SMAK.md, så nye byer bygges uten å analysere de andre byene hver gang.
+  Pål: kokkeeide restauranter er best (kvaliteten faller gjerne etter salg til kjede eller profesjonell eier);
+  kjeder prioriteres ikke (vanlig Starbucks aldri, Starbucks Reserve greit, Dishoom i grenseland); fine dining
+  bare én til tre per by; hoteller er boutique av svært høy kvalitet uten å bli overdådig, med Firmdale som målestokk.
 - 2026-10-31: Kartet åpner der du er bare når siden allerede har lov til å bruke posisjonen (Permissions API), så ingen får spørsmål om posisjon ved oppstart. «Nær meg» slås ikke på av seg selv.
 - 2026-10-31: KML-eksport til Google My Maps og eksport til lister i Google Maps er droppet. Begge er for omstendelige for andre å bruke.
   Appen er verktøyet i felt også: offline-lagring og «Åpne i Google Maps» med Place ID. scope-kml.md er slettet (finnes i git-historikken).
