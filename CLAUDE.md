@@ -48,8 +48,8 @@ Hold HANDOVER.md oppdatert når noe vesentlig endres i teknikk eller design (f.e
   én for localhost og 127.0.0.1. Fra andre opphav blir kartet blankt — det er ikke en feil.
   Ikke commit endringer i nøklene.
 - Kategorier, farger og ikoner defineres ett sted: KATEGORIER og IKONER øverst i app.js.
-- Delingskort (og:image) og hjemskjermikon lages med .claude/delingsbilder.sh (postkort per by, frimerke med «b»).
-  Ny by: kjør skriptet og kopier og:-taggene fra london/index.html til stubben. delingsbilder.html finnes også i reiseplanlegging.
+- Delingskort (og:image) og hjemskjermikoner lages med .claude/delingsbilder.sh (postkort per by, frimerke med bynavnet
+  per by, «b» på forsiden). Ny by: kjør skriptet og kopier og:-taggene og ikonlenken fra london/index.html til stubben. delingsbilder.html finnes også i reiseplanlegging.
 - Faste tekster finnes på norsk og engelsk i TEKST i app.js (og egen TEKST i index.html).
   Nye UI-tekster skal alltid ha begge språk.
 - Koordinater: md-filene bruker breddegrad, lengdegrad (Google-rekkefølge);
