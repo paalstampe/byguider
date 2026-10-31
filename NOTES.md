@@ -103,6 +103,8 @@ Sist oppdatert: 31. oktober 2026.
 - 31.10. sent: på iPhone viste et delt sted fortsatt byens store kort, fordi Meldinger kjører JavaScript og fulgte
   omdirigeringen fra delingssiden. Delingssiden viser nå kartet selv (stubb med `data-sted`), uten å sende videre (PR #88).
   Live og sjekket i Chromium; ikke sett i Meldinger ennå.
+- 31.10. sent: på stående mobil flyttes infoboksen forbi «Liste ↓» som den gjør med kartknappene øverst til venstre:
+  til høyre for knappen, eller opp over den hvis den ikke får plass i bredden (PR #89). Sjekket i Chromium, ikke på iPhone.
 - Ingen åpne grener utenom `main`.
 
 ## Neste steg
