@@ -7,7 +7,7 @@ kicker: En høyst subjektiv guide
 kicker-en: An opinionated guide
 senter: 43.6990, 7.2620
 zoom: 13
-oppdatert: 2026-10-30
+oppdatert: 2026-10-31
 ---
 
 <!--
@@ -460,6 +460,18 @@ Cocktailbar. 22 Rue François Guisol.
 - en: Le Petit Marais
 
 Cocktail bar. 22 Rue François Guisol.
+
+### Rouge
+- sted: 43.69724, 7.28276
+- google: ChIJ83tK63XbzRIRh0IcqhKbdBc
+- nettside: https://rouge-restaurant.fr/
+Le Port
+
+Vinbar ved havnen. 2 Rue de Foresta.
+
+- en: Le Port
+
+Wine bar by the port. 2 Rue de Foresta.
 
 ## Butikker
 
