@@ -5,8 +5,10 @@ Oppdateres ved slutten av hver økt (`/avslutt`).
 
 ## Status nå
 
-Sist oppdatert: 31. oktober 2026.
+Sist oppdatert: 1. november 2026.
 
+- 1.11.: frimerke-ikonet heter nå `ikon-frimerke.png` (PR #90). Med samme filnavn kunne iOS vise det gamle
+  «b»-ikonet ved deling. `apple-touch-icon.png` ligger igjen som kopi for gamle lenker.
 - Live på https://stam.pe/byguider/ med seks byer: London (275 oppføringer, hvorav 114 på ønskelista), Oslo (131, 22 på ønskelista), New York (94, 2 på ønskelista), Nice (74, 3 på ønskelista), Tokyo (86, 7 på ønskelista), Bangkok (40, 4 på ønskelista).
 - Appen er i hovedsak ferdig: MapLibre med papirpalett og mørk modus, nabolag med omriss, kjerne og gater,
   flyttbar infoboks, gåturer i infoboksen, ønskeliste for alle, norsk og engelsk.
@@ -150,6 +152,8 @@ Sist oppdatert: 31. oktober 2026.
 
 ## Beslutningslogg
 
+- 2026-11-01: Et ikon eller delingsbilde som byttes, får nytt filnavn (se HANDOVER). iOS viste det gamle bokstavikonet
+  ved deling, fordi frimerket hadde overtatt samme fil.
 - 2026-10-31: Delingssiden sender ikke videre til `?sted=`; den er en stubb som viser kartet selv. Meldinger på iPhone
   kjører JavaScript og fulgte omdirigeringen til byens kort.
 - 2026-10-31: Ett sted deles med egen delingsside (`<by>/<slug>/`) laget ved publisering, ikke committet. Byens store postkort

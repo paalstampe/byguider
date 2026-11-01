@@ -50,6 +50,7 @@ Hold HANDOVER.md oppdatert når noe vesentlig endres i teknikk eller design (f.e
 - Kategorier, farger og ikoner defineres ett sted: KATEGORIER og IKONER øverst i app.js.
 - Delingskort (og:image) og hjemskjermikoner lages med .claude/delingsbilder.sh (postkort per by, frimerke med bynavnet
   per by, «b» på forsiden). Ny by: kjør skriptet og kopier og:-taggene og ikonlenken fra london/index.html til stubben. delingsbilder.html finnes også i reiseplanlegging.
+- Ikoner og delingsbilder som byttes, får nytt filnavn (iOS husker gamle bilder etter adresse). Se HANDOVER.
 - «Del» lenker til en delingsside per sted (<by>/<slug>/), laget ved publisering av .github/stedsider.py (ikke committet).
   Siden er en stubb med data-sted, uten omdirigering (Meldinger kjører JS). Skriptet speiler lesMarkdown() og stedSlug()
   i app.js — endres de, endre skriptet også.
