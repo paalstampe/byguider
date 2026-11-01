@@ -756,6 +756,14 @@ Neo-filippinsk bistro. Hammersborggata 9.
 - en: Hammersborg
 Neo-Filipino bistro. Hammersborggata 9.
 
+### Vesle Nektar
+- sted: 59.91993, 10.74830
+- status: onskeliste
+Fredensborg
+Lillesøsteren til Nektar, i Arnos gamle lokaler et lite stykke bortenfor. Åpner etter planen innen 1. desember 2026. Fredensborgveien 30B.
+- en: Fredensborg
+Nektar's little sister, in Arno's former premises a few steps along the street. Due to open by 1 December 2026. Fredensborgveien 30B.
+
 ## Kaféer
 
 ### Fuglen – Universitetsgata
