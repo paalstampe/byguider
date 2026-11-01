@@ -36,7 +36,8 @@ byguider/
 ├── sw.js                   service worker: offline (se punkt 7, «Offline»)
 ├── style.css               all styling — én kopi
 ├── byer.json               manifest: id, navn, data (md), geometri, evt. bilde
-├── apple-touch-icon.png    hjemskjerm-ikon for forsiden (180×180): frimerke med «b», lages med .claude/delingsbilder.sh
+├── ikon-frimerke.png       hjemskjerm-ikon for forsiden (180×180): frimerke med «b», lages med .claude/delingsbilder.sh
+├── apple-touch-icon.png    kopi av ikon-frimerke.png for gamle lenker og lagre; brukes ikke av sidene
 ├── bilder/ikon-<id>.png    hjemskjerm-ikon per by: frimerke med «BYGUIDE» og bynavnet mellom to linjer
 ├── bilder/<id>.webp        miniatyrer på forsiden (360×270), lages med .claude/miniatyrer.sh
 ├── bilder/deling-<id>.png  delingsbilde per by (og:image, 1200×630), og bilder/deling.png for forsiden
@@ -78,6 +79,9 @@ Bildene tegnes i `.claude/delingsbilder.html` (identisk kopi i reiseplanlegging;
 postkort med «b»-frimerke og bynavnet i poststempelet, og «Pål og Vibekes» + bynavn fra `tittel` og
 `kicker` i frontmatter. Forsiden har en postkortbunke med de synlige byene. Familien på stam.pe:
 konvolutt med PS-frimerke (stam.pe), postkort (byguidene), luftpostkonvolutt (reiseplanleggingen).
+Byttes et ikon eller delingsbilde, gi den nye filen et **nytt filnavn** og oppdater lenkene (og `sw.js`).
+Samme navn gjør at iOS kan vise den gamle versjonen i delingsarket og forhåndsvisninger lenge etterpå:
+1.11. dukket det gamle «b»-ikonet opp ved deling, fordi frimerket hadde overtatt `apple-touch-icon.png`.
 
 Mørk modus: følger enhetens innstilling. `@media (prefers-color-scheme: dark)` nederst i `style.css` bytter
 variablene; i `app.js` velger `MORK` en mørk `KARTPALETT` (samme Voyager-stil, så offline-lageret er uendret)

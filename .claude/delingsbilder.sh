@@ -2,7 +2,7 @@
 # Lager delingsbildene (og:image, 1200×630) og hjemskjermikonet fra .claude/delingsbilder.html:
 #   bilder/deling-<by>.png  postkort med bynavnet i poststempelet, én per by i byer.json (også skjulte)
 #   bilder/deling.png       postkortbunke for byguide-forsiden, med de synlige byene
-#   apple-touch-icon.png    frimerke med «b» (180×180), for byguide-forsiden
+#   ikon-frimerke.png       frimerke med «b» (180×180), for byguide-forsiden
 #   bilder/ikon-<by>.png    hjemskjermikon per by: frimerke med «BYGUIDE» og bynavnet (180×180)
 # Tittel og kicker hentes fra frontmatter i data/<by>.md. Kjør på nytt når en by kommer til
 # eller bytter navn, og legg og:-taggene inn i den nye stubben (kopier fra london/index.html).
@@ -49,7 +49,7 @@ const liste = navn => navn.length < 2 ? navn.join('') : navn.slice(0, -1).join('
   }
   await ta({ motiv: 'postkortbunke', tittel: 'Byguider', kicker: 'stam.pe',
     under: liste(byer.filter(b => !b.skjult).map(b => b.navn.replace(/ /g, '\u00a0'))) }, 'bilder/deling.png');
-  await ta({ motiv: 'ikon', bokstav: 'b' }, 'apple-touch-icon.png');
+  await ta({ motiv: 'ikon', bokstav: 'b' }, 'ikon-frimerke.png');
 
   await nettleser.close();
   for (const f of feil) console.error('Feil: ' + f);
