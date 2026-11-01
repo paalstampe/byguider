@@ -7,7 +7,7 @@ kicker: En høyst subjektiv guide
 kicker-en: An opinionated guide
 senter: 43.6990, 7.2620
 zoom: 13
-oppdatert: 2026-10-31
+oppdatert: 2026-11-01
 ---
 
 <!--
@@ -405,6 +405,19 @@ Asiatisk fusjon fra Les Agitateurs. 31 Rue Bonaparte.
 
 Asian fusion from Les Agitateurs. 31 Rue Bonaparte.
 
+### Pialha
+- sted: 43.70456, 7.29241
+- google: ChIJyYrGk3DbzRIRp3gf_oEuNvk
+- nettside: https://www.restaurantpialha.fr/
+- status: onskeliste
+Mont Boron
+
+Liten restaurant der kokken også serverer. 247 Boulevard du Mont-Boron.
+
+- en: Mont Boron
+
+Small restaurant where the chef also serves. 247 Boulevard du Mont-Boron.
+
 ## Kaféer
 
 ### La Popote d'Ondine – Rue Gioffredo
@@ -617,6 +630,19 @@ Niçoise-kjøkken. 11 bis Rue Grimaldi.
 - en: Carré d'Or
 
 Niçoise cooking. 11 bis Rue Grimaldi.
+
+### Kōyō
+- sted: 43.70319, 7.26728
+- google: ChIJX5-OZZ_bzRIRMSFq4pEScfw
+- nettside: https://www.koyonice.com/
+- status: onskeliste
+Jean Médecin
+
+Japansk. 14 Rue Emma et Philippe Tiranty.
+
+- en: Jean Médecin
+
+Japanese. 14 Rue Emma et Philippe Tiranty.
 
 ## Kaféer
 
