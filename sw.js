@@ -32,7 +32,7 @@ self.addEventListener('install', e => {
   // Alle byenes sider og data, så lista virker for hver by; kartet lagres når byen åpnes.
   e.waitUntil((async () => {
     const lager = await caches.open(EGNE);
-    const filer = ['./', 'app.js', 'style.css', 'byer.json', 'apple-touch-icon.png'];
+    const filer = ['./', 'app.js', 'style.css', 'byer.json', 'ikon-frimerke.png'];
     try {
       const r = await fetch('byer.json', { cache: 'no-store' });
       const byer = (await r.json()).byer || [];

@@ -95,7 +95,7 @@ def main(rot):
         meta, steder = les_markdown(open(datafil, encoding='utf-8').read())
         tittel = meta.get('tittel') or by['navn']
         brukt = set()
-        ikon = f"../../bilder/ikon-{by['id']}.png" if os.path.exists(os.path.join(rot, 'bilder', f"ikon-{by['id']}.png")) else '../../apple-touch-icon.png'
+        ikon = f"../../bilder/ikon-{by['id']}.png" if os.path.exists(os.path.join(rot, 'bilder', f"ikon-{by['id']}.png")) else '../../ikon-frimerke.png'
         for st in steder:
             s = slug(st['navn'])
             # Tom slug (f.eks. bare japanske tegn) eller samme slug to ganger: Del faller tilbake på ?sted=.
