@@ -7,6 +7,9 @@ Oppdateres ved slutten av hver økt (`/avslutt`).
 
 Sist oppdatert: 1. november 2026.
 
+- 1.11.: kartet åpner der du er også når du svarer sent på spørsmålet om posisjon (PR #91). Fristen på 15 s
+  telte med tiden spørsmålet stod fremme i Chrome, så posisjonen kom aldri. Fristen er fjernet; har du flyttet
+  kartet selv i mellomtiden, blir det stående. «Allow this time» i Chrome gir nytt spørsmål ved hvert besøk.
 - 1.11.: frimerke-ikonet heter nå `ikon-frimerke.png` (PR #90). Med samme filnavn kunne iOS vise det gamle
   «b»-ikonet ved deling. `apple-touch-icon.png` ligger igjen som kopi for gamle lenker.
 - Live på https://stam.pe/byguider/ med seks byer: London (275 oppføringer, hvorav 114 på ønskelista), Oslo (131, 22 på ønskelista), New York (94, 2 på ønskelista), Nice (74, 3 på ønskelista), Tokyo (86, 7 på ønskelista), Bangkok (40, 4 på ønskelista).
@@ -152,6 +155,8 @@ Sist oppdatert: 1. november 2026.
 
 ## Beslutningslogg
 
+- 2026-11-01: Posisjonen ved oppstart hentes uten tidsfrist, og kartet hopper ikke hvis du har flyttet det selv.
+  Chrome tok med tiden spørsmålet om tillatelse stod fremme i fristen, så kartet åpnet seg ikke der Pål var.
 - 2026-11-01: Et ikon eller delingsbilde som byttes, får nytt filnavn (se HANDOVER). iOS viste det gamle bokstavikonet
   ved deling, fordi frimerket hadde overtatt samme fil.
 - 2026-10-31: Delingssiden sender ikke videre til `?sted=`; den er en stubb som viser kartet selv. Meldinger på iPhone

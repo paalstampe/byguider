@@ -529,7 +529,8 @@ Hvert trinn skal kunne committes for seg og fungere alene.
   rutepunkt), `avstandTekst` med gangtid (luftlinje × 1,25, 80 m/min), egen prikk. `aapneHer`: har siden
   allerede tillatelse og du er innenfor utsnittet med alle stedene (± 0,02°), trykkes knappen for egen posisjon.
   Safari på iPhone avviser `permissions.query` eller svarer «prompt» selv etter ja, så `localStorage`-nøkkelen
-  `byguider-posisjon` husker at posisjonen har virket (PR #82). Lenke til ett sted (PR #83): `?sted=<stedSlug(navn)>`
+  `byguider-posisjon` husker at posisjonen har virket (PR #82). Oppslaget har ingen tidsfrist: Chrome teller tiden
+  spørsmålet om tillatelse står fremme; har du flyttet kartet selv før posisjonen kommer, blir det stående (PR #91). Lenke til ett sted (PR #83): `?sted=<stedSlug(navn)>`
   (`aapneStedFraAdresse`, zoomer som «Zoom inn»); «Del» i infoboksen bruker `navigator.share` på berøringsskjerm,
   ellers utklippstavlen.
 - Neste: data. Pål kommer med navneendringer (som Marylebone High Street → Marylebone Village)
