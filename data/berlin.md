@@ -81,6 +81,19 @@ Restaurerte bygårder fra 1800-tallet rundt Kollwitzplatz, med kaféer og restau
 Kastanienallee og Oderberger Straße med kaféer, små butikker og Prater, Berlins eldste ølhage. Arkonaplatz har loppemarked på søndager, og Mauerpark ligger like nord for.
 - en: Kastanienallee and Oderberger Straße, with cafés, small shops and the Prater, Berlin’s oldest beer garden. Arkonaplatz has a flea market on Sundays, and the Mauerpark is just to the north.
 
+## Restauranter
+
+### Katz Orange
+- sted: 52.53144, 13.39462
+- google: ChIJQ2g8mO9RqEcRpOSC8NXG7io
+- nettside: https://katzorange.com/
+Mitte
+
+Restaurant og bar i et teglsteinsbygg fra 1800-tallet, med gårdsplass. Bergstraße 22.
+- en: Mitte
+
+Restaurant and bar in a 19th-century brick building, with a courtyard. 22 Bergstraße.
+
 ## Kaféer
 
 ### The Barn
@@ -421,6 +434,19 @@ Lite, stille rom med malerier av Nikolai Makarov. Linienstraße 154A.
 - en: Spandauer Vorstadt
 
 Small, quiet room with paintings by Nikolai Makarov. Linienstraße 154A.
+
+## Hoteller
+
+### Soho House Berlin
+- sted: 52.52760, 13.41547
+- google: ChIJ7QGeQxxOqEcRFvDmifxqZO8
+- nettside: https://www.sohohouse.com/houses/soho-house-berlin
+Mitte
+
+Hotell og medlemsklubb i det tidligere varehuset Jonass fra 1928, med basseng på taket. Torstraße 1.
+- en: Mitte
+
+Hotel and members' club in the former Jonass department store from 1928, with a rooftop pool. 1 Torstraße.
 
 ## Verdt en omvei
 
