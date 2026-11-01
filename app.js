@@ -1873,6 +1873,9 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     if (!posisjonKtrl || !oppslag.length) return;
     const [x0, y0, x1, y1] = bbox(oppslag.flatMap(o => [o.bbox.slice(0, 2), o.bbox.slice(2)]));
     const slark = 0.02;
+    // Har du selv flyttet kartet før posisjonen kom, blir det stående.
+    let flyttet = false;
+    kart.on('movestart', e => { if (e.originalEvent) flyttet = true; });
     const hent = () => navigator.geolocation.getCurrentPosition(pos => {
       huskPosisjon();
       const { longitude: lng, latitude: lat } = pos.coords;
@@ -1880,11 +1883,13 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       // Knappen er klar først når MapLibre har sjekket støtten for posisjon; prøv igjen til den er det.
       let forsok = 0;
       const trykk = () => {
-        if (state.valgtId) return;
+        if (state.valgtId || flyttet) return;
         if (posisjonKtrl.trigger() === false && ++forsok < 20) setTimeout(trykk, 250);
       };
       kartKlar.then(trykk);
-    }, e => { if (e.code === 1) glemPosisjon(); }, { maximumAge: 300000, timeout: 15000 });
+    // Ingen tidsfrist: Chrome teller tiden spørsmålet om tillatelse står fremme, og svarer du ja etter
+    // fristen, kommer posisjonen aldri.
+    }, e => { if (e.code === 1) glemPosisjon(); }, { maximumAge: 300000 });
     const sporring = navigator.permissions ? navigator.permissions.query({ name: 'geolocation' }) : Promise.reject();
     sporring.then(tillatelse => {
       if (tillatelse.state === 'granted' || (tillatelse.state === 'prompt' && posisjonVirketFor())) hent();
