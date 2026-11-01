@@ -1207,6 +1207,18 @@ Bakeri og kafé i en mews, Colonnade 35.
 
 Bakery and café in a mews, 35 Colonnade.
 
+### Fred Bakery ★
+- sted: 51.51648, -0.14148
+- google: ChIJtQDsFQAbdkgRoiq729V8YhI
+- nettside: https://fredbakery.com/
+Fitzrovia
+
+Bakeri og kafé, Margaret Street 52–53.
+
+- en: Fitzrovia
+
+Bakery and café, 52–53 Margaret Street.
+
 ### Conduit Coffee House
 - sted: 51.52217, -0.11878
 - google: ChIJh9zUOTYbdkgRroa8frb2nwE
