@@ -1277,22 +1277,25 @@ Nedlagt fornøyelsespark fra DDR-tiden i Plänterwald, med pariserhjulet som st�
 
 Abandoned GDR-era amusement park in the Plänterwald, with its Ferris wheel still standing. Guided tours while the park is being redeveloped.
 
-### Florastraße 87
+### Pocketpark Florastraße 87
 - sted: 52.56601, 13.39931
 - google: ChIJxwLesGpSqEcRtV8U8PDTnaE
+- les: Kunst im öffentlichen Raum Pankow | Pocketpark Florastraße 87 | https://www.kunst-im-oeffentlichen-raum-pankow.de/kioer_kw/pocketpark-florastrasse-87/
 Pankow
 
-Verdt en omvei.
+Lommepark der et lite hus stod før krigen. Grunnmuren er tegnet opp igjen, og møblene står der de stod, i mosaikk: lenestol, sofa, seng, krakk, lampe og øreklappstol for stue, kjøkken, soverom og lesekrok. Christine Gersch og Igor Jerschov, 2005. I grøntarealet til høyre for barnebokhandelen.
 - en: Pankow
 
-Worth a detour.
+Pocket park where a small house stood before the war. Its floor plan is traced out again, with mosaic furniture where the rooms were: armchair, sofa, bed, stool, lamp and wing chair for living room, kitchen, bedroom and reading corner. Christine Gersch and Igor Jerschov, 2005. In the green triangle to the right of the children's bookshop.
 
-### Tschaikowskistraße 47
+### Svanesjøen, Tschaikowskistraße 47
+- navn-en: Swan Lake, Tschaikowskistraße 47
 - sted: 52.57595, 13.39521
 - google: ChIJYU5-WENSqEcRcDrb8V3e5Bg
+- les: Vagabundler | Streetart Berlin – Pankow – Tschaikowsky 47 | https://vagabundler.com/germany/streetart-map-berlin/pankow-tschaikowsky-47/
 Pankow
 
-Verdt en omvei.
+Gatekunst av Potsdam-kollektivet ART EFX: Tsjajkovskijs Svanesjøen, i gata som er oppkalt etter ham.
 - en: Pankow
 
-Worth a detour.
+Street art by the Potsdam collective ART EFX: Tchaikovsky's Swan Lake, on the street named after him.
