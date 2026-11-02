@@ -90,6 +90,9 @@ const TEKST = {
     gatur: 'Gåtur',
     ruteIkkeTegnet: 'rute ikke tegnet',
     zoomInn: 'Zoom inn',
+    zoomUt: 'Zoom ut',
+    finnMeg: 'Vis hvor jeg er',
+    posisjonUtilgjengelig: 'Posisjonen er ikke tilgjengelig',
     aapneMaps: 'Google Maps',
     veibeskrivelse: 'Veibeskrivelse',
     del: 'Del',
@@ -137,6 +140,9 @@ const TEKST = {
     gatur: 'Walk',
     ruteIkkeTegnet: 'route not drawn',
     zoomInn: 'Zoom in',
+    zoomUt: 'Zoom out',
+    finnMeg: 'Find my location',
+    posisjonUtilgjengelig: 'Location not available',
     aapneMaps: 'Google Maps',
     veibeskrivelse: 'Directions',
     del: 'Share',
@@ -763,6 +769,23 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
   /* Startvisningen settes fra metadata når dataene er lastet.
      Zoom er i MapLibre-skala: én lavere enn Leaflet for samme målestokk. */
+  /* MapLibres egne knapper: tekstene gis ved oppstart og byttes på knappene ved språkbytte. */
+  const KARTTEKSTER = {
+    'NavigationControl.ZoomIn': 'zoomInn',
+    'NavigationControl.ZoomOut': 'zoomUt',
+    'GeolocateControl.FindMyLocation': 'finnMeg',
+    'GeolocateControl.LocationNotAvailable': 'posisjonUtilgjengelig'
+  };
+  sprakLyttere.push(() => {
+    const knapp = (velger, tekst) => kartBoks.querySelectorAll(velger).forEach(b => {
+      b.title = t(tekst);
+      b.setAttribute('aria-label', t(tekst));
+    });
+    knapp('.maplibregl-ctrl-zoom-in', 'zoomInn');
+    knapp('.maplibregl-ctrl-zoom-out', 'zoomUt');
+    knapp('.maplibregl-ctrl-geolocate:not(:disabled)', 'finnMeg');
+    knapp('.maplibregl-ctrl-geolocate:disabled', 'posisjonUtilgjengelig');
+  });
   const kart = new maplibregl.Map({
     container: 'kart',
     center: [0, 20],
@@ -771,7 +794,8 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     dragRotate: false,
     pitchWithRotate: false,
     touchPitch: false,
-    attributionControl: { compact: false }
+    attributionControl: { compact: false },
+    locale: Object.fromEntries(Object.entries(KARTTEKSTER).map(([k, v]) => [k, t(v)]))
   });
   kart.touchZoomRotate.disableRotation();
   /* Kartflaten holdes skjult (kun --kartflate synes) til byens utsnitt og stedene er på plass —
@@ -817,7 +841,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
   if ('geolocation' in navigator) {
     kart.addControl(posisjonKtrl = new maplibregl.GeolocateControl({
       positionOptions: { enableHighAccuracy: true },
-      fitBoundsOptions: { maxZoom: 16 },
+      fitBoundsOptions: { maxZoom: 15 },
       trackUserLocation: true,
       showAccuracyCircle: true
     }), 'top-left');
