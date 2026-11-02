@@ -5,7 +5,7 @@ Oppdateres ved slutten av hver økt (`/avslutt`).
 
 ## Status nå
 
-Sist oppdatert: 1. november 2026.
+Sist oppdatert: 2. november 2026.
 
 - 1.11.: kartet åpner der du er også når du svarer sent på spørsmålet om posisjon (PR #91). Fristen på 15 s
   telte med tiden spørsmålet stod fremme i Chrome, så posisjonen kom aldri. Fristen er fjernet; har du flyttet
@@ -110,7 +110,13 @@ Sist oppdatert: 1. november 2026.
   Live og sjekket i Chromium; ikke sett i Meldinger ennå.
 - 31.10. sent: på stående mobil flyttes infoboksen forbi «Liste ↓» som den gjør med kartknappene øverst til venstre:
   til høyre for knappen, eller opp over den hvis den ikke får plass i bredden (PR #89). Sjekket i Chromium, ikke på iPhone.
-- Ingen åpne grener utenom `main`.
+- 2.11.: Berlin, Påls endringer i West. Nye: kaféene Winterfeldt Schokoladen ★ og Stulle mit Brot, restaurantene Cassambalis
+  og The Catch (ønskeliste) og butikkene FALKE og TYPE Bike (notatene er Claudes utkast fra stedenes egne sider).
+  Fjernet: Zwiebelfisch, Schwarzes Café, begge Photokabine, Museum der unerhörten Dinge og Odeon. ★ på Bücherbogen og Modulor.
+  Til ønskelista: Delphi Filmpalast, Rum Trader, The Goods, Salut!, Mimi, Andreas Murkudis og ZEIT Café.
+  Nabolaget heter nå bare «Winterfeldtplatz»: Potsdamer Straße er ute av tekst og gater, og omrisset er krympet til
+  planleggingsrommene Kalckreuthstraße + Barbarossaplatz (uten egen kjerne). Andreas Murkudis står under Tiergarten.
+- Åpen gren: `kart-posisjonsknapp` (en annen økt jobber på den, ikke flettet). Øvrige grener er flettet.
 
 ## Neste steg
 
@@ -155,6 +161,9 @@ Sist oppdatert: 1. november 2026.
 
 ## Beslutningslogg
 
+- 2026-11-02: Winterfeldtplatz markerer bare Goltzstraße. Pål ville ikke ha Potsdamer Straße med, og lot
+  Kalckreuthstraße og Barbarossaplatz være umarkert (de er navn på planleggingsrom, ikke gater å gå etter).
+- 2026-11-02: Data-endringer gjøres i en egen arbeidskopi på main når en annen økt har byttet gren i mappa.
 - 2026-11-01: Posisjonen ved oppstart hentes uten tidsfrist, og kartet hopper ikke hvis du har flyttet det selv.
   Chrome tok med tiden spørsmålet om tillatelse stod fremme i fristen, så kartet åpnet seg ikke der Pål var.
 - 2026-11-01: Et ikon eller delingsbilde som byttes, får nytt filnavn (se HANDOVER). iOS viste det gamle bokstavikonet
