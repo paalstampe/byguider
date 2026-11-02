@@ -7,6 +7,8 @@ Oppdateres ved slutten av hver økt (`/avslutt`).
 
 Sist oppdatert: 2. november 2026.
 
+- 2.11.: kartknappene fra MapLibre har norsk tekst (PR #92): «Vis hvor jeg er», «Zoom inn» og «Zoom ut», og
+  teksten bytter ved språkbytte. Posisjonsknappen zoomer til maks 15 i stedet for 16 (halvparten så langt inn).
 - 1.11.: kartet åpner der du er også når du svarer sent på spørsmålet om posisjon (PR #91). Fristen på 15 s
   telte med tiden spørsmålet stod fremme i Chrome, så posisjonen kom aldri. Fristen er fjernet; har du flyttet
   kartet selv i mellomtiden, blir det stående. «Allow this time» i Chrome gir nytt spørsmål ved hvert besøk.
@@ -161,6 +163,7 @@ Sist oppdatert: 2. november 2026.
 
 ## Beslutningslogg
 
+- 2026-11-02: Posisjonsknappen zoomer til maks 15, ikke 16. Pål syntes 16 gikk for langt inn.
 - 2026-11-02: Winterfeldtplatz markerer bare Goltzstraße. Pål ville ikke ha Potsdamer Straße med, og lot
   Kalckreuthstraße og Barbarossaplatz være umarkert (de er navn på planleggingsrom, ikke gater å gå etter).
 - 2026-11-02: Data-endringer gjøres i en egen arbeidskopi på main når en annen økt har byttet gren i mappa.
