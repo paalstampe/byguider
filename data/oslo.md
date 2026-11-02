@@ -1033,7 +1033,7 @@ Jazz club and bar. C. J. Hambros plass 5.
 ## Butikker
 
 ### Lush Dive ★
-- sted: 59.92459, 10.75580
+- sted: 59.92764, 10.75897
 - google: ChIJ-8kIRmluQUYRwmChqOib1qM
 - nettside: https://www.lushdive.no/
 Grünerløkka
