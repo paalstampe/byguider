@@ -1001,15 +1001,6 @@ Liten cocktailbar. Thorvald Meyers gate 30.
 - en: Grünerløkka
 Tiny cocktail bar. Thorvald Meyers gate 30.
 
-### Chair
-- sted: 59.92430, 10.75907
-- google: ChIJx5CplGhuQUYRUEvs6DEgIao
-- nettside: https://www.chairoslo.no/
-Grünerløkka
-Bar. Thorvald Meyers gate 45.
-- en: Grünerløkka
-Bar. Thorvald Meyers gate 45.
-
 ### Den Gamle Skobutikken
 - sted: 59.91383, 10.74855
 - google: ChIJpYGSQ2JuQUYRytM9IcPrCoM
@@ -1018,6 +1009,28 @@ Sentrum
 Bar. Torggata 9B.
 - en: Sentrum
 Bar. Torggata 9B.
+
+<!-- Ønskeliste: barer vi ikke har besøkt ennå (- status: onskeliste). -->
+
+### Chair
+- sted: 59.92430, 10.75907
+- google: ChIJx5CplGhuQUYRUEvs6DEgIao
+- nettside: https://www.chairoslo.no/
+- status: onskeliste
+Grünerløkka
+Bar. Thorvald Meyers gate 45.
+- en: Grünerløkka
+Bar. Thorvald Meyers gate 45.
+
+### Langt Langt Borte
+- sted: 59.92955, 10.78151
+- google: ChIJycdt8NdvQUYRqMjCQd-Alps
+- nettside: https://langtlangtborte.no/
+- status: onskeliste
+Carl Berner
+Vinbar. Sinsenveien 6.
+- en: Carl Berner
+Wine bar. Sinsenveien 6.
 
 ## Jazzklubber
 
