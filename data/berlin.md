@@ -7,7 +7,7 @@ kicker: En høyst subjektiv guide
 kicker-en: An opinionated guide
 senter: 52.5050, 13.3900
 zoom: 12
-oppdatert: 2026-10-31
+oppdatert: 2026-11-02
 ---
 
 <!--
@@ -49,7 +49,7 @@ og kobles hit på navn: type "område", "gate" eller "rute".
 
 <!--
 Berlin er ikke lenket fra byguide-forsiden («skjult»: true i byer.json). Nås direkte på stam.pe/byguider/berlin/.
-Nabolagene er forslag ut fra de andre guidene, ikke steder Pål har lagt inn selv — ingen ★ ennå.
+Nabolagene er forslag ut fra de andre guidene, ikke steder Pål har lagt inn selv.
 Kaféer, barer og butikker (30.10.) er plukket fra lokale guider (Mit Vergnügen, iHeartBerlin, Späti Stories,
 Tracks and the City, The Infatuation, visitBerlin m.fl.) og sjekket mot Google Maps (åpne, Place ID, koordinater).
 Omrissene er Berlins offisielle planleggingsrom (LOR 2021), slått sammen per nabolag; gatene er fra Detailnetz Berlin.
@@ -495,18 +495,6 @@ DDR-kino fra 1963 på Karl-Marx-Allee, med en stor salong over salen. Karl-Marx-
 
 GDR cinema from 1963 on Karl-Marx-Allee, with a large lounge above the auditorium. Karl-Marx-Allee 33.
 
-### Photokabine (Friedrichstraße)
-- navn-en: Photo booth (Friedrichstraße)
-- sted: 52.50817, 13.39054
-- google: ChIJJQU3YF5RqEcRsLkLpB-mcYU
-- nettside: https://www.photokabine.de/
-Mitte
-
-Analog fotoautomat i svart-hvitt. Friedrichstraße 49, ved Checkpoint Charlie.
-- en: Mitte
-
-Analogue black-and-white photo booth. Friedrichstraße 49, near Checkpoint Charlie.
-
 ### Schönhauser Allee
 - sted: 52.54157, 13.41233
 - google: ChIJr7v_b_9RqEcRfOH0HJvkHO8
@@ -844,7 +832,7 @@ Vintagebutikk med designerklær fra slutten av 90-tallet og 2000-tallet. Sanders
 
 Vintage shop with designer clothes from the late 1990s and 2000s. Sanderstraße 11.
 
-### Modulor
+### Modulor ★
 - sted: 52.50338, 13.41011
 - google: ChIJzy9iLSxOqEcRQEcMzbuDYiY
 - nettside: https://www.modulor.de/
@@ -1017,14 +1005,13 @@ Small cinema in a former shop, with many films in their original language. Gärt
 
 ## Nabolag og gater
 
-### Winterfeldtplatz og Potsdamer Straße
-- navn-en: Winterfeldtplatz and Potsdamer Straße
+### Winterfeldtplatz
 - sted: 52.49574, 13.35448
 - google: ChIJ6SMeOU9QqEcRiNDJ-4hFyps
-- gater: Goltzstraße, Potsdamer Straße
+- gater: Goltzstraße
 - les: Späti Stories | Kiez Guides #4: What to do in Berlin Schöneberg | https://spaetistories.substack.com/p/kiez-guides-4-what-to-do-in-berlin-582
-Schönebergs beste hjørne: Winterfeldtplatz med Berlins mest kjente marked, kaféene i Goltzstraße, og Potsdamer Straße med gallerier og konseptbutikken Andreas Murkudis.
-- en: Schöneberg’s best corner: Winterfeldtplatz with Berlin’s best-known market, the cafés on Goltzstraße, and Potsdamer Straße with galleries and the concept store Andreas Murkudis.
+Schönebergs beste hjørne: Winterfeldtplatz med Berlins mest kjente marked, og kaféene og de små butikkene i Goltzstraße.
+- en: Schöneberg’s best corner: Winterfeldtplatz with Berlin’s best-known market, and the cafés and small shops on Goltzstraße.
 
 ### Savignyplatz
 - sted: 52.50579, 13.32175
@@ -1041,28 +1028,65 @@ Det borgerlige Vest-Berlin rundt plassen: bokhandler under S-Bahn-buene, Paris B
 Stille plass med trær rundt St. Ludwig-kirken, med kaféer og restauranter, og Fasanenstraße med villaer og gallerier. Vest-Berlins svar på Motcomb Street.
 - en: A quiet, tree-lined square around St Ludwig’s church, with cafés and restaurants, and Fasanenstraße with villas and galleries. West Berlin’s answer to Motcomb Street.
 
+## Restauranter
+
+### Cassambalis
+- sted: 52.50348, 13.32409
+- google: ChIJ_au8f_tQqEcRikAGBGRhutc
+- nettside: https://cassambalis.de/
+- status: onskeliste
+Savignyplatz
+
+Gresk-middelhavsk restaurant med kunst på veggene. Grolmanstraße 35.
+- en: Savignyplatz
+
+Greek-Mediterranean restaurant with art on the walls. Grolmanstraße 35.
+
+### The Catch
+- sted: 52.50310, 13.31999
+- google: ChIJxU0HPxdRqEcRCW0jD8AnWbg
+- nettside: https://thecatch.berlin/
+- status: onskeliste
+Savignyplatz
+
+Moderne izakaya med sashimi, sushi og robata-grill. Bleibtreustraße 41.
+- en: Savignyplatz
+
+Modern izakaya with sashimi, sushi and robata grill. Bleibtreustraße 41.
+
 ## Kaféer
+
+### Winterfeldt Schokoladen ★
+- sted: 52.49460, 13.35419
+- google: ChIJRWaE90VQqEcRSCMCEXxk1yg
+- nettside: https://www.winterfeldt-schokoladen.de/
+Winterfeldtplatz
+
+Sjokoladebutikk og kafé med sjokolade fra over 50 produsenter. Goltzstraße 23.
+- en: Winterfeldtplatz
+
+Chocolate shop and café with chocolate from more than 50 makers. Goltzstraße 23.
+
+### Stulle mit Brot
+- sted: 52.50457, 13.32489
+- google: ChIJsegD9fxQqEcRCwVYuJ5N5Kg
+- nettside: https://stullemitbrot.com/
+Savignyplatz
+
+Berlinske smørbrød, supper og gryter og hjemmebakt kake, under S-Bahn-buene. Jeanne-Mammen-Bogen 575.
+- en: Savignyplatz
+
+Berlin open sandwiches, soups, stews and home-baked cake, under the S-Bahn arches. Jeanne-Mammen-Bogen 575.
 
 ### ZEIT Café
 - sted: 52.49798, 13.35974
 - google: ChIJNbecVBdRqEcR3q-KRMmMGo4
-Winterfeldtplatz og Potsdamer Straße
+Winterfeldtplatz
 
 Kafé i en tidligere Shell-stasjon fra 1950-tallet, med det gamle taket over uteserveringen. Bülowstraße 18.
-- en: Winterfeldtplatz and Potsdamer Straße
+- en: Winterfeldtplatz
 
 Café in a former 1950s Shell petrol station, with the old canopy over the outdoor seating. Bülowstraße 18.
-
-### Schwarzes Café
-- sted: 52.50553, 13.32422
-- google: ChIJq1vO5fxQqEcRq29raPLZpKg
-- nettside: http://www.schwarzescafe-berlin.de/
-Savignyplatz
-
-Vest-Berlin-institusjon fra 1978, åpent døgnet rundt. Bowie og Iggy Pop var stamgjester. Kantstraße 148.
-- en: Savignyplatz
-
-West Berlin institution from 1978, open around the clock. Bowie and Iggy Pop were regulars. Kantstraße 148.
 
 ## Barer
 
@@ -1070,28 +1094,19 @@ West Berlin institution from 1978, open around the clock. Bowie and Iggy Pop wer
 - sted: 52.49110, 13.35349
 - google: ChIJOwX4nEZQqEcRNZqMdesNSII
 - nettside: https://www.salut-berlin.de/
-Winterfeldtplatz og Potsdamer Straße
+- status: onskeliste
+Winterfeldtplatz
 
 Cocktailbar med klassikere fra 1920- og 30-tallet og art déco-fliser på fasaden. Goltzstraße 7.
-- en: Winterfeldtplatz and Potsdamer Straße
+- en: Winterfeldtplatz
 
 Cocktail bar with classics from the 1920s and 30s and Art Deco tiles on the façade. Goltzstraße 7.
-
-### Zwiebelfisch
-- sted: 52.50648, 13.32163
-- google: ChIJ5-QdKuNQqEcRCefgeaDiaQQ
-- nettside: http://www.zwiebelfisch-berlin.de/
-Savignyplatz
-
-Kneipe på hjørnet av Savignyplatz siden 1967, med gamle Vest-Berlin-plakater og åpent til langt på natt. Savignyplatz 7–8.
-- en: Savignyplatz
-
-Pub on the corner of Savignyplatz since 1967, with old West Berlin posters and open until late. Savignyplatz 7–8.
 
 ### Rum Trader
 - sted: 52.49839, 13.32671
 - google: ChIJn_Ul-vlQqEcRGSo1Dir8bSU
 - nettside: https://rumtrader.com/
+- status: onskeliste
 Ludwigkirchplatz
 
 Bitteliten cocktailbar med plass til en håndfull gjester. Bartenderen lager drinken etter hva man liker. Fasanenstraße 40.
@@ -1099,30 +1114,16 @@ Bitteliten cocktailbar med plass til en håndfull gjester. Bartenderen lager dri
 
 Tiny cocktail bar with room for a handful of guests. The bartender mixes to your taste. Fasanenstraße 40.
 
-## Muséer og gallerier
-
-### Museum der unerhörten Dinge
-- navn-en: Museum of Unheard (of) Things
-- sted: 52.48705, 13.35868
-- google: ChIJ6VomnEBQqEcR22RgcbggjLY
-- nettside: https://www.museumderunerhoertendinge.de/
-Schöneberg
-
-Lite museum med rare gjenstander og historiene som (kanskje) hører til. Crellestraße 5–6.
-- en: Schöneberg
-
-Small museum of odd objects and the stories that (perhaps) belong to them. Crellestraße 5–6.
-
 ## Markeder
 
 ### Wochenmarkt Winterfeldtplatz
 - navn-en: Winterfeldtplatz market
 - sted: 52.49681, 13.35427
 - google: ChIJmc0fhyJRqEcRi7DS771JiKs
-Winterfeldtplatz og Potsdamer Straße
+Winterfeldtplatz
 
 Onsdag 8–14 og lørdag 8–16. Lørdag er den store dagen.
-- en: Winterfeldtplatz and Potsdamer Straße
+- en: Winterfeldtplatz
 
 Wednesday 8 am–2 pm and Saturday 8 am–4 pm. Saturday is the big day.
 
@@ -1132,10 +1133,11 @@ Wednesday 8 am–2 pm and Saturday 8 am–4 pm. Saturday is the big day.
 - sted: 52.50188, 13.36553
 - google: ChIJfS6OhUpQqEcRQSiYEOA7a1I
 - nettside: http://andreasmurkudis.com/
-Winterfeldtplatz og Potsdamer Straße
+- status: onskeliste
+Tiergarten
 
 Berlins mest kjente konseptbutikk, i det gamle trykkeriet til Tagesspiegel: mote, møbler, parfyme og keramikk, nøye kuratert. Potsdamer Straße 81.
-- en: Winterfeldtplatz and Potsdamer Straße
+- en: Tiergarten
 
 Berlin’s best-known concept store, in the former Tagesspiegel printworks: fashion, furniture, perfume and ceramics, carefully curated. Potsdamer Straße 81.
 
@@ -1143,12 +1145,35 @@ Berlin’s best-known concept store, in the former Tagesspiegel printworks: fash
 - sted: 52.49246, 13.35361
 - google: ChIJ4Xxl10VQqEcR4Nfh7AKe0Ao
 - nettside: http://www.the-goods.de/
-Winterfeldtplatz og Potsdamer Straße
+- status: onskeliste
+Winterfeldtplatz
 
 Interiørbutikk med håndlaget keramikk, kurver og tekstiler. Goltzstraße 13.
-- en: Winterfeldtplatz and Potsdamer Straße
+- en: Winterfeldtplatz
 
 Homeware shop with handmade ceramics, baskets and textiles. Goltzstraße 13.
+
+### FALKE
+- sted: 52.50244, 13.32317
+- google: ChIJbUj4bftQqEcRaZXaIRuk4Ng
+- nettside: https://www.falke.com/de_de/store/de/berlin-ku-damm
+Kurfürstendamm
+
+Strømper, strikk og sportsklær fra det tyske merket. Kurfürstendamm 36.
+- en: Kurfürstendamm
+
+Socks, knitwear and sportswear from the German brand. Kurfürstendamm 36.
+
+### TYPE Bike
+- sted: 52.49271, 13.35317
+- google: ChIJRf9dSFdRqEcRaCDz0JycIvY
+- nettside: https://www.type.bike/
+Winterfeldtplatz
+
+Showroom for en liten Berlin-produsent av sykler, mest for barn og unge, og spesialutgaver for voksne. Goltzstraße 40a.
+- en: Winterfeldtplatz
+
+Showroom for a small Berlin bicycle maker, mostly for children and teenagers, with special editions for adults. Goltzstraße 40a.
 
 ### Marga Schoeller Bücherstube
 - sted: 52.50439, 13.32179
@@ -1172,7 +1197,7 @@ Galleri og butikk for møbler og lamper fra midten av 1900-tallet. Mommsenstraß
 
 Gallery and shop for mid-century furniture and lighting. Mommsenstraße 3.
 
-### Bücherbogen am Savignyplatz
+### Bücherbogen am Savignyplatz ★
 - sted: 52.50502, 13.32187
 - google: ChIJUaWsLeNQqEcRyCSTDe2B2SY
 - nettside: https://www.buecherbogen.com/
@@ -1187,10 +1212,11 @@ Bookshop for art, architecture, design and photography under the S-Bahn arches b
 - sted: 52.49076, 13.35345
 - google: ChIJp4wymUZQqEcRWg6A3tINkfE
 - nettside: https://mimi.berlin/
-Winterfeldtplatz og Potsdamer Straße
+- status: onskeliste
+Winterfeldtplatz
 
 Vintageklær, særlig kjoler. Goltzstraße 5.
-- en: Winterfeldtplatz and Potsdamer Straße
+- en: Winterfeldtplatz
 
 Vintage clothing, especially dresses. Goltzstraße 5.
 
@@ -1200,35 +1226,13 @@ Vintage clothing, especially dresses. Goltzstraße 5.
 - sted: 52.50603, 13.32851
 - google: ChIJm6SNNPxQqEcRq8bcTLwe7y0
 - nettside: https://www.yorck.de/kinos/delphi-filmpalast
+- status: onskeliste
 Charlottenburg
 
 Stor kino fra 1949 ved Zoo, brukt under Berlinale. Kantstraße 12a.
 - en: Charlottenburg
 
 Grand cinema from 1949 by the Zoo, used during the Berlinale. Kantstraße 12a.
-
-### Odeon
-- sted: 52.48216, 13.34950
-- google: ChIJAza0KGpQqEcRhqmME_bfEmo
-- nettside: https://www.yorck.de/kinos/odeon
-Schöneberg
-
-Nabolagskino i Schöneberg som viser film på engelsk. Hauptstraße 116.
-- en: Schöneberg
-
-Neighbourhood cinema in Schöneberg showing films in English. Hauptstraße 116.
-
-### Photokabine (Bikini Berlin)
-- navn-en: Photo booth (Bikini Berlin)
-- sted: 52.50560, 13.33831
-- google: ChIJs_SDahdRqEcRAZvZeCiaFDo
-- nettside: https://www.photokabine.de/
-Charlottenburg
-
-Analog fotoautomat i svart-hvitt i første etasje i Bikini Berlin. Budapester Straße 38–50.
-- en: Charlottenburg
-
-Analogue black-and-white photo booth on the ground floor of Bikini Berlin. Budapester Straße 38–50.
 
 # Around Berlin
 
