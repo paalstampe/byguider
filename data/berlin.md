@@ -1081,6 +1081,7 @@ Berlin open sandwiches, soups, stews and home-baked cake, under the S-Bahn arche
 ### ZEIT Café
 - sted: 52.49798, 13.35974
 - google: ChIJNbecVBdRqEcR3q-KRMmMGo4
+- status: onskeliste
 Winterfeldtplatz
 
 Kafé i en tidligere Shell-stasjon fra 1950-tallet, med det gamle taket over uteserveringen. Bülowstraße 18.
