@@ -764,6 +764,16 @@ Lillesøsteren til Nektar, i Arnos gamle lokaler et lite stykke bortenfor. Åpne
 - en: Fredensborg
 Nektar's little sister, in Arno's former premises a few steps along the street. Due to open by 1 December 2026. Fredensborgveien 30B.
 
+### Way Down South
+- sted: 59.91897, 10.75508
+- google: ChIJmUBylGhuQUYRe42DKUnkpEs
+- nettside: https://www.waydownsouth.no/
+- status: onskeliste
+Vulkan
+Barbecue fra sørstatene ved Akerselva. Østre Elvebakke 7.
+- en: Vulkan
+Southern barbecue by the Akerselva river. Østre Elvebakke 7.
+
 ## Kaféer
 
 ### Fuglen – Universitetsgata
