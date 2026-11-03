@@ -5,7 +5,7 @@ Oppdateres ved slutten av hver økt (`/avslutt`).
 
 ## Status nå
 
-Sist oppdatert: 2. november 2026.
+Sist oppdatert: 3. november 2026.
 
 - 2.11.: kartknappene fra MapLibre har norsk tekst (PR #92): «Vis hvor jeg er», «Zoom inn» og «Zoom ut», og
   teksten bytter ved språkbytte. Posisjonsknappen zoomer til maks 15 i stedet for 16 (halvparten så langt inn).
@@ -118,6 +118,12 @@ Sist oppdatert: 2. november 2026.
   Til ønskelista: Delphi Filmpalast, Rum Trader, The Goods, Salut!, Mimi, Andreas Murkudis og ZEIT Café.
   Nabolaget heter nå bare «Winterfeldtplatz»: Potsdamer Straße er ute av tekst og gater, og omrisset er krympet til
   planleggingsrommene Kalckreuthstraße + Barbarossaplatz (uten egen kjerne). Andreas Murkudis står under Tiergarten.
+- 3.11.: Berlin, Påls endringer i Mitte og Prenzlauer Berg. ★ på nabolagene Savignyplatz, Winterfeldtplatz, Kollwitzkiez og
+  Spandauer Vorstadt, og på Material. Nye gatestreker (OSM): Mommsenstraße (Bleibtreu–Knesebeck), Mulackstraße og Sophienstraße,
+  Kollwitzstraße (Knaackstraße–Danziger Straße) og Rykestraße. Savignyplatz har fått kjerne: Kantstraße/plassen ned til
+  Kurfürstendamm, mellom Bleibtreustraße og Grolmanstraße. Nye: VEB Orange ★, NOVEMBER Brasserie og Samurai Museum (ønskeliste),
+  ACID Mitte og Hackesche Höfe (notatene er Claudes utkast). Elleve steder til ønskelista (Pocketpark, silent green og
+  Svanesjøen også `utenfor: ja`). Fjernet: Berliner Bürgerstuben, Weinladen Schmidt, Designpanoptikum og St. Marienkirche.
 - Åpen gren: `kart-posisjonsknapp` (en annen økt jobber på den, ikke flettet). Øvrige grener er flettet.
 
 ## Neste steg

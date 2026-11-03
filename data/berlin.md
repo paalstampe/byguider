@@ -7,7 +7,7 @@ kicker: En høyst subjektiv guide
 kicker-en: An opinionated guide
 senter: 52.5050, 13.3900
 zoom: 12
-oppdatert: 2026-11-02
+oppdatert: 2026-11-03
 ---
 
 <!--
@@ -59,17 +59,17 @@ Omrissene er Berlins offisielle planleggingsrom (LOR 2021), slått sammen per na
 
 ## Nabolag og gater
 
-### Spandauer Vorstadt
+### Spandauer Vorstadt ★
 - sted: 52.52601, 13.40376
 - google: ChIJCxmB1OBRqEcRPuvqsIj_eLY
-- gater: Auguststraße, Alte Schönhauser Straße
+- gater: Auguststraße, Alte Schönhauser Straße, Mulackstraße, Sophienstraße
 Mittes gamle jødiske kvarter og Scheunenviertel, med bakgårder som Hackesche Höfe, gallerier i Auguststraße og små motebutikker i Alte Schönhauser Straße. Det nærmeste Berlin kommer Marylebone og Nolita.
 - en: Mitte’s old Jewish quarter and the Scheunenviertel, with courtyards such as the Hackesche Höfe, galleries on Auguststraße and small fashion shops on Alte Schönhauser Straße. The closest Berlin gets to Marylebone and Nolita.
 
-### Kollwitzkiez
+### Kollwitzkiez ★
 - sted: 52.53185, 13.41535
 - google: ChIJWZxSEgJOqEcRcPWv3cEDfCY
-- gater: Husemannstraße, Wörther Straße
+- gater: Husemannstraße, Wörther Straße, Kollwitzstraße, Rykestraße
 Restaurerte bygårder fra 1800-tallet rundt Kollwitzplatz, med kaféer og restauranter langs plassen. Økologisk marked på plassen torsdag ettermiddag og stort marked lørdag.
 - en: Restored 19th-century tenements around Kollwitzplatz, with cafés and restaurants along the square. Organic market on the square on Thursday afternoons and a large market on Saturdays.
 
@@ -93,6 +93,18 @@ Restaurant og bar i et teglsteinsbygg fra 1800-tallet, med gårdsplass. Bergstra
 - en: Mitte
 
 Restaurant and bar in a 19th-century brick building, with a courtyard. 22 Bergstraße.
+
+### NOVEMBER Brasserie
+- sted: 52.53821, 13.41737
+- google: ChIJB9cvwi9PqEcRhxxkPEIBI7I
+- nettside: https://november-brasserie.com/
+- status: onskeliste
+Kollwitzkiez
+
+Moderne japansk brasserie med fisk og sjømat hentet rett fra fiskemarkedene, i et lokale i mid-century-stil. Husemannstraße 15.
+- en: Kollwitzkiez
+
+Contemporary Japanese brasserie with fish and seafood sourced straight from the fish markets, in a mid-century modern setting. Husemannstraße 15.
 
 ## Kaféer
 
@@ -122,6 +134,7 @@ Speciality coffee with an Arabic twist in a courtyard off Sophienstraße: coffee
 - sted: 52.53413, 13.41592
 - google: ChIJDeR-eXxPqEcRKmDhNPByf3c
 - nettside: https://www.zacharias-berlin.com/de/kaffeebar
+- status: onskeliste
 Kollwitzkiez
 
 Liten, enkel kaffebar som Mit Vergnügen kaller en favoritt i kiezen. God kaffe, matcha og bakverk. Kollwitzstraße 44.
@@ -133,6 +146,7 @@ Small, simple coffee bar that Mit Vergnügen calls a neighbourhood favourite. Go
 - sted: 52.53997, 13.40534
 - google: ChIJyWdFA_lRqEcRPDXaiTYiPmk
 - nettside: http://www.bonanzacoffee.de/
+- status: onskeliste
 Kastanienallee
 
 En av pionerene for spesialkaffe i Berlin, med eget brenneri. Den opprinnelige baren i Oderberger Straße 35.
@@ -184,7 +198,7 @@ Kafé i en butikk for gamle racersykler, med frokost og brunch. Wilhelmstraße 9
 
 Café in a vintage racing-bike shop, serving breakfast and brunch. Wilhelmstraße 91.
 
-### Material
+### Material ★
 - sted: 52.53741, 13.41191
 - google: ChIJXahNpkJRqEcRnfAYHgdHh3o
 Kastanienallee
@@ -197,6 +211,7 @@ Café at Schönhauser Allee 156.
 ### Nonna Café & Co
 - sted: 52.52903, 13.42425
 - google: ChIJZ3q3ymVPqEcRuFCrLqp3OWo
+- status: onskeliste
 Prenzlauer Berg
 
 Kafé i Greifswalder Straße 229.
@@ -204,12 +219,24 @@ Kafé i Greifswalder Straße 229.
 
 Café at Greifswalder Straße 229.
 
+### ACID Mitte
+- sted: 52.52791, 13.40246
+- google: ChIJzYySW_xRqEcRYYPetW4aEAg
+- nettside: https://www.instagram.com/acid.cafe
+Spandauer Vorstadt
+
+Kafé og bakeri ved Rosenthaler Platz. Rosenthaler Straße 9.
+- en: Spandauer Vorstadt
+
+Café and bakery near Rosenthaler Platz. Rosenthaler Straße 9.
+
 ## Barer
 
 ### An einem Sonntag im August
 - sted: 52.53996, 13.41150
 - google: ChIJt5AxG_9RqEcR4P2Ricm8tv8
 - nettside: http://www.an-einem-sonntag-im-august.de/
+- status: onskeliste
 Kastanienallee
 
 Gammel Kastanienallee-bar med slitte møbler, øl og longdrinks – et sted for siste glass. Kastanienallee 103.
@@ -227,16 +254,6 @@ Cocktailbar og restaurant nær Gendarmenmarkt. Anton-Wilhelm-Amo-Straße 30.
 - en: Mitte
 
 Cocktail bar and restaurant near the Gendarmenmarkt. Anton-Wilhelm-Amo-Straße 30.
-
-### Berliner Bürgerstuben
-- sted: 52.54586, 13.42017
-- google: ChIJTdZVRP9NqEcRtqpdy_XvoA0
-Prenzlauer Berg
-
-Gammeldags Kneipe med berlinsk mat og øl. Stargarder Straße 64.
-- en: Prenzlauer Berg
-
-Old-fashioned Kneipe with Berlin food and beer. Stargarder Straße 64.
 
 ## Markeder
 
@@ -309,17 +326,6 @@ Liten herrebutikk med smale merker fra Europa, USA og Japan. Linienstraße 40.
 
 Small menswear shop with niche labels from Europe, the US and Japan. Linienstraße 40.
 
-### Weinladen Schmidt
-- sted: 52.53460, 13.41645
-- google: ChIJ47qHTgJOqEcR_XFZ0gL1S0w
-- nettside: https://weinladen.com/filialen/prenzlauer-berg/
-Kollwitzkiez
-
-Vinhandel ved Kollwitzplatz med terrasse der man kan smake. Kollwitzstraße 50.
-- en: Kollwitzkiez
-
-Wine shop by Kollwitzplatz with a terrace for tasting. Kollwitzstraße 50.
-
 ### ting
 - sted: 52.53723, 13.42089
 - google: ChIJLQ2mPwFOqEcRScqry8Uy0Eg
@@ -335,6 +341,7 @@ Homeware from Sweden, Japan and Korea: tableware, lamps, rugs and candles. Rykes
 - sted: 52.53599, 13.42112
 - google: ChIJ38zbWQFOqEcRXNHFZb-BcWc
 - nettside: http://www.saintgeorgesbookshop.com/
+- status: onskeliste
 Kollwitzkiez
 
 Engelskspråklig bokhandel med nye og brukte bøker og god plass til å bla. Wörther Straße 27.
@@ -346,6 +353,7 @@ English-language bookshop with new and second-hand books and plenty of room to b
 - sted: 52.53830, 13.40966
 - google: ChIJzY-5lf5RqEcRnM0dmE-4rCU
 - nettside: https://www.feinundripp.de/
+- status: onskeliste
 Kastanienallee
 
 Familiedrevet herrebutikk med undertøy og klær i 1920-tallsstil, delvis sydd av gamle tekstiler. Kastanienallee 91/92.
@@ -363,6 +371,17 @@ Butikk med flere hundre sorter absint, og en liten bar der man kan smake. Weinme
 - en: Spandauer Vorstadt
 
 Shop with several hundred kinds of absinthe, and a small bar for tasting. Weinmeisterstraße 4.
+
+### VEB Orange ★
+- sted: 52.54035, 13.40563
+- google: ChIJX1jS4vhRqEcRSdT5dSdn7zU
+- nettside: http://www.veborange.de/
+Kastanienallee
+
+Vintagebutikk med møbler, lamper, klær og ting fra 60-, 70- og 80-tallet, øst og vest, fra Panton til DDR-design. Oderberger Straße 29.
+- en: Kastanienallee
+
+Vintage shop with furniture, lamps, clothes and objects from the 60s, 70s and 80s, East and West, from Panton to GDR design. Oderberger Straße 29.
 
 ## Muséer og gallerier
 
@@ -382,23 +401,13 @@ Exhibition about Anne Frank in Haus Schwarzenberg next to the Hackesche Höfe. R
 - sted: 52.51934, 13.40231
 - google: ChIJVzpGU95RqEcRZJgnyr-ZDC0
 - nettside: https://www.ddr-museum.de/
+- status: onskeliste
 Mitte
 
 Interaktivt museum om hverdagslivet i DDR, ved Spree rett overfor Berliner Dom. Karl-Liebknecht-Straße 1.
 - en: Mitte
 
 Hands-on museum about everyday life in the GDR, on the Spree opposite the Berliner Dom. Karl-Liebknecht-Straße 1.
-
-### Designpanoptikum
-- sted: 52.51691, 13.40604
-- google: ChIJt5sBKulRqEcRn8KyFbqELIs
-- nettside: https://www.designpanoptikum.com/
-Mitte
-
-Surrealistisk museum for industrielle gjenstander: maskiner, medisinsk utstyr og rariteter satt sammen på nye måter. Poststraße 7 i Nikolaiviertel.
-- en: Mitte
-
-Surreal museum of industrial objects: machines, medical equipment and oddities put together in new ways. Poststraße 7 in the Nikolaiviertel.
 
 ### Museum der Dinge
 - navn-en: Museum of Things
@@ -434,6 +443,18 @@ Lite, stille rom med malerier av Nikolai Makarov. Linienstraße 154A.
 - en: Spandauer Vorstadt
 
 Small, quiet room with paintings by Nikolai Makarov. Linienstraße 154A.
+
+### Samurai Museum Berlin
+- sted: 52.52681, 13.39529
+- google: ChIJJ7T1BFVQqEcR1Xze1phIANg
+- nettside: https://samuraimuseum.de/
+- status: onskeliste
+Spandauer Vorstadt
+
+Europas eneste samuraimuseum, med rustninger, sverd og en samling fra over tusen år av Japans historie. Auguststraße 68.
+- en: Spandauer Vorstadt
+
+Europe’s only samurai museum, with armour, swords and a collection spanning more than a thousand years of Japanese history. Auguststraße 68.
 
 ## Hoteller
 
@@ -473,21 +494,11 @@ Minnesmerket over Europas myrdede jøder: Peter Eisenmans felt med 2711 betongst
 
 The Memorial to the Murdered Jews of Europe: Peter Eisenman’s field of 2,711 concrete stelae near the Brandenburg Gate, with an information centre underground.
 
-### St. Marienkirche
-- sted: 52.52061, 13.40712
-- google: ChIJS4MKBSBOqEcRgXI8kWHFOvw
-- nettside: https://www.marienkirche-berlin.de/
-Mitte
-
-Middelalderkirke ved Alexanderplatz, under TV-tårnet, med dødsdansen Totentanz fra 1400-tallet. Karl-Liebknecht-Straße 8.
-- en: Mitte
-
-Medieval church by Alexanderplatz, beneath the TV tower, with a 15th-century Dance of Death mural. Karl-Liebknecht-Straße 8.
-
 ### Kino International
 - sted: 52.52047, 13.42284
 - google: ChIJH7q9khdOqEcR_AFoi_omA0w
 - nettside: https://www.yorck.de/kinos/kino-international
+- status: onskeliste
 Mitte
 
 DDR-kino fra 1963 på Karl-Marx-Allee, med en stor salong over salen. Karl-Marx-Allee 33.
@@ -509,12 +520,25 @@ The main street through Prenzlauer Berg, with the U2 running on a viaduct above 
 - sted: 52.54499, 13.36658
 - google: ChIJ_4cWH4dRqEcRkwDOHgzjQ9c
 - nettside: https://www.silent-green.net/
+- status: onskeliste
+- utenfor: ja
 Wedding
 
 Kulturhus i et gammelt krematorium, med konserter, film og kafé i hagen. Gerichtstraße 35.
 - en: Wedding
 
 Arts centre in a former crematorium, with concerts, films and a café in the garden. Gerichtstraße 35.
+
+### Hackesche Höfe
+- sted: 52.52402, 13.40241
+- google: ChIJ7ySn3eBRqEcROAlFzu1GfPE
+- nettside: https://www.hackesche-hoefe.de/
+Spandauer Vorstadt
+
+Åtte sammenhengende bakgårder fra 1906 mellom Rosenthaler Straße og Sophienstraße, med jugendfasader i glasert tegl i første gård, butikker, kino og teater. Rosenthaler Straße 40–41.
+- en: Spandauer Vorstadt
+
+Eight linked courtyards from 1906 between Rosenthaler Straße and Sophienstraße, with Art Nouveau glazed-brick façades in the first courtyard, shops, a cinema and a theatre. Rosenthaler Straße 40–41.
 
 # Kreuzberg & Neukölln
 
@@ -1005,7 +1029,7 @@ Small cinema in a former shop, with many films in their original language. Gärt
 
 ## Nabolag og gater
 
-### Winterfeldtplatz
+### Winterfeldtplatz ★
 - sted: 52.49574, 13.35448
 - google: ChIJ6SMeOU9QqEcRiNDJ-4hFyps
 - gater: Goltzstraße
@@ -1013,10 +1037,10 @@ Small cinema in a former shop, with many films in their original language. Gärt
 Schönebergs beste hjørne: Winterfeldtplatz med Berlins mest kjente marked, og kaféene og de små butikkene i Goltzstraße.
 - en: Schöneberg’s best corner: Winterfeldtplatz with Berlin’s best-known market, and the cafés and small shops on Goltzstraße.
 
-### Savignyplatz
+### Savignyplatz ★
 - sted: 52.50579, 13.32175
 - google: ChIJCeEX0vxQqEcRpojmC6V0bbI
-- gater: Bleibtreustraße, Knesebeckstraße
+- gater: Bleibtreustraße, Knesebeckstraße, Mommsenstraße
 - les: Berlin Unwrapped | The coolest of squares | https://www.berlinunwrapped.com/2016/09/12/the-coolest-of-squares/
 Det borgerlige Vest-Berlin rundt plassen: bokhandler under S-Bahn-buene, Paris Bar i Kantstraße og butikker i sidegatene ned mot Kurfürstendamm.
 - en: Bourgeois West Berlin around the square: bookshops under the S-Bahn arches, the Paris Bar on Kantstraße and shops in the side streets down to the Kurfürstendamm.
@@ -1281,6 +1305,8 @@ Abandoned GDR-era amusement park in the Plänterwald, with its Ferris wheel stil
 - sted: 52.56601, 13.39931
 - google: ChIJxwLesGpSqEcRtV8U8PDTnaE
 - les: Kunst im öffentlichen Raum Pankow | Pocketpark Florastraße 87 | https://www.kunst-im-oeffentlichen-raum-pankow.de/kioer_kw/pocketpark-florastrasse-87/
+- status: onskeliste
+- utenfor: ja
 Pankow
 
 Lommepark der et lite hus stod før krigen. Grunnmuren er tegnet opp igjen, og møblene står der de stod, i mosaikk: lenestol, sofa, seng, krakk, lampe og øreklappstol for stue, kjøkken, soverom og lesekrok. Christine Gersch og Igor Jerschov, 2005. I grøntarealet til høyre for barnebokhandelen.
@@ -1293,6 +1319,8 @@ Pocket park where a small house stood before the war. Its floor plan is traced o
 - sted: 52.57595, 13.39521
 - google: ChIJYU5-WENSqEcRcDrb8V3e5Bg
 - les: Vagabundler | Streetart Berlin – Pankow – Tschaikowsky 47 | https://vagabundler.com/germany/streetart-map-berlin/pankow-tschaikowsky-47/
+- status: onskeliste
+- utenfor: ja
 Pankow
 
 Gatekunst av Potsdam-kollektivet ART EFX: Tsjajkovskijs Svanesjøen, i gata som er oppkalt etter ham.
