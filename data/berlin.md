@@ -347,6 +347,7 @@ Family-run menswear shop with underwear and clothes in a 1920s style, some made 
 - sted: 52.52536, 13.40503
 - google: ChIJL3N7C-FRqEcRlz-AbriEvhU
 - nettside: https://absinthdepot.de/
+- status: onskeliste
 Spandauer Vorstadt
 
 Butikk med flere hundre sorter absint, og en liten bar der man kan smake. Weinmeisterstraße 4.
