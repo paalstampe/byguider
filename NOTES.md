@@ -124,6 +124,8 @@ Sist oppdatert: 3. november 2026.
   Kurfürstendamm, mellom Bleibtreustraße og Grolmanstraße. Nye: VEB Orange ★, NOVEMBER Brasserie og Samurai Museum (ønskeliste),
   ACID Mitte og Hackesche Höfe (notatene er Claudes utkast). Elleve steder til ønskelista (Pocketpark, silent green og
   Svanesjøen også `utenfor: ja`). Fjernet: Berliner Bürgerstuben, Weinladen Schmidt, Designpanoptikum og St. Marienkirche.
+  Senere: ★ på do you read me?!, LUIBAN Papeterie og R.S.V.P. Papier; The Barn, Ben Rahim, LAP Coffee, Das Neue Schwarz og
+  Museum der Stille til ønskelista; Firmament og COOP Anti-War Café fjernet.
 - Åpen gren: `kart-posisjonsknapp` (en annen økt jobber på den, ikke flettet). Øvrige grener er flettet.
 
 ## Neste steg

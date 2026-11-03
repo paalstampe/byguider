@@ -112,6 +112,7 @@ Contemporary Japanese brasserie with fish and seafood sourced straight from the 
 - sted: 52.52744, 13.39818
 - google: ChIJC-EDf-ZRqEcRiVrnNG31igA
 - nettside: https://thebarn.de/
+- status: onskeliste
 Spandauer Vorstadt
 
 Den opprinnelige kaféen til The Barn, et av brenneriene som satte standarden for spesialkaffe i Berlin. Liten og stille, uten musikk. Auguststraße 58.
@@ -123,6 +124,7 @@ The original café of The Barn, one of the roasters that set the standard for sp
 - sted: 52.52504, 13.40187
 - google: ChIJ9wBfMOFRqEcRLuSC8Tu_yBM
 - nettside: http://www.benrahim.de/
+- status: onskeliste
 Spandauer Vorstadt
 
 Spesialkaffe med arabisk vri i en bakgård i Sophienstraße: kaffe kokt i cezve, tunisisk myntete og baklava. Sophienstraße 7A.
@@ -169,23 +171,13 @@ Viennese-style café on Unter den Linden, with schnitzel, strudel and its own co
 - sted: 52.52766, 13.40353
 - google: ChIJZStJ7KFRqEcRzRngO3uVeHI
 - nettside: https://www.lap.coffee/
+- status: onskeliste
 Spandauer Vorstadt
 
 Liten kaffebar i en kjede som selger god kaffe til lav pris. Rosenthaler Straße 62.
 - en: Spandauer Vorstadt
 
 Small coffee bar from a chain selling good coffee at low prices. Rosenthaler Straße 62.
-
-### COOP Anti-War Café
-- sted: 52.52403, 13.40741
-- google: ChIJ0QjXzeFRqEcRSXr7OJD88KQ
-- nettside: http://coopcafeberlin.de/
-Spandauer Vorstadt
-
-Kafé og bar ved Hackescher Markt, med kunst, konserter og debattkvelder. Rochstraße 3.
-- en: Spandauer Vorstadt
-
-Café and bar near Hackescher Markt, with art, concerts and talks. Rochstraße 3.
 
 ### Steel Vintage Bikes Café
 - sted: 52.51271, 13.38223
@@ -271,7 +263,7 @@ Organic market on Thursdays, 12–7 pm.
 
 ## Butikker
 
-### do you read me?!
+### do you read me?! ★
 - sted: 52.52710, 13.39776
 - google: ChIJL7hzfOZRqEcRGPs5Zv4Md3M
 - nettside: https://doyoureadme.de/
@@ -282,7 +274,7 @@ Magasiner og bøker om mote, kunst, design, fotografi og arkitektur. Auguststra�
 
 Magazines and books on fashion, art, design, photography and architecture. Auguststraße 28.
 
-### R.S.V.P. Papier
+### R.S.V.P. Papier ★
 - sted: 52.52743, 13.40508
 - google: ChIJ9USjw-NRqEcRqc5L443AYWs
 - nettside: https://rsvp-berlin.de/
@@ -293,7 +285,7 @@ Papirhandel med notatbøker, kort og skrivesaker. Mulackstraße 26.
 
 Stationery shop with notebooks, cards and writing supplies. Mulackstraße 26.
 
-### LUIBAN Papeterie
+### LUIBAN Papeterie ★
 - sted: 52.52568, 13.41110
 - google: ChIJT4ZScx5OqEcRNEJSXvN65cY
 - nettside: https://luiban.com/
@@ -308,23 +300,13 @@ Stationery shop near Rosa-Luxemburg-Platz. Rosa-Luxemburg-Straße 28.
 - sted: 52.52705, 13.40707
 - google: ChIJlS5sL-JRqEcRLR0Qwq_6QeU
 - nettside: http://www.dasneueschwarz.de/
+- status: onskeliste
 Spandauer Vorstadt
 
 Arkivmote og vintage fra designere som Margiela, Comme des Garçons og Yohji Yamamoto. Mulackstraße 38.
 - en: Spandauer Vorstadt
 
 Archive fashion and vintage from designers such as Margiela, Comme des Garçons and Yohji Yamamoto. Mulackstraße 38.
-
-### Firmament
-- sted: 52.52829, 13.40980
-- google: ChIJBRV0euJRqEcRPTWRF7JlXco
-- nettside: http://www.firmamentberlin.com/
-Mitte
-
-Liten herrebutikk med smale merker fra Europa, USA og Japan. Linienstraße 40.
-- en: Mitte
-
-Small menswear shop with niche labels from Europe, the US and Japan. Linienstraße 40.
 
 ### ting
 - sted: 52.53723, 13.42089
@@ -437,6 +419,7 @@ Museum of the world’s most disgusting food, with tastings. Schützenstraße 70
 - sted: 52.52759, 13.39373
 - google: ChIJDRY4ruhRqEcRb3FiPdOo5E0
 - nettside: http://museum-der-stille.de/
+- status: onskeliste
 Spandauer Vorstadt
 
 Lite, stille rom med malerier av Nikolai Makarov. Linienstraße 154A.
