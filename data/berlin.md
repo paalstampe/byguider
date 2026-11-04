@@ -7,7 +7,7 @@ kicker: En høyst subjektiv guide
 kicker-en: An opinionated guide
 senter: 52.5050, 13.3900
 zoom: 12
-oppdatert: 2026-11-03
+oppdatert: 2026-11-04
 ---
 
 <!--
@@ -368,6 +368,17 @@ Vintage shop with furniture, lamps, clothes and objects from the 60s, 70s and 80
 
 ## Muséer og gallerier
 
+### Fotografiska Berlin ★
+- sted: 52.52576, 13.38882
+- google: ChIJ07ZATaZRqEcRh_R0sR6T2Yw
+- nettside: https://berlin.fotografiska.com/
+Spandauer Vorstadt
+
+Fotomuseum i det tidligere kunstnerhuset Tacheles, med skiftende utstillinger, restaurant og bar. Åpent til sent. Oranienburger Straße 54.
+- en: Spandauer Vorstadt
+
+Photography museum in the former Tacheles art house, with changing exhibitions, a restaurant and a bar. Open late. Oranienburger Straße 54.
+
 ### Anne Frank Zentrum
 - navn-en: Anne Frank Centre
 - sted: 52.52442, 13.40193
@@ -528,13 +539,12 @@ Eight linked courtyards from 1906 between Rosenthaler Straße and Sophienstraße
 
 ## Nabolag og gater
 
-### Oranienstraße og Wrangelkiez
-- navn-en: Oranienstraße and Wrangelkiez
-- sted: 52.50312, 13.41265
+### Oranienstraße
+- sted: 52.50190, 13.41660
 - google: ChIJVRYs8i1OqEcR30M-o3FXUFc
-- gater: Oranienstraße, Wrangelstraße
-Kjernen i gamle SO36: barer, kebab og musikk langs Oranienstraße fra Oranienplatz, Markthalle Neun i Eisenbahnstraße og smågatene i Wrangelkiez ned mot Spree og Oberbaumbrücke.
-- en: The heart of old SO36: bars, kebabs and music along Oranienstraße from Oranienplatz, Markthalle Neun on Eisenbahnstraße and the side streets of the Wrangelkiez down towards the Spree and the Oberbaumbrücke.
+- gater: Oranienstraße
+Kjernen i gamle SO36: barer, kebab og musikk langs Oranienstraße fra Oranienplatz østover mot Lausitzer Platz, med Markthalle Neun i Eisenbahnstraße.
+- en: The heart of old SO36: bars, kebabs and music along Oranienstraße from Oranienplatz east towards Lausitzer Platz, with Markthalle Neun on Eisenbahnstraße.
 
 ### Graefekiez
 - sted: 52.49170, 13.41673
@@ -565,6 +575,7 @@ Bergmannstraße med butikker, kaféer og Marheineke Markthalle, og Chamissoplatz
 - sted: 52.50109, 13.44242
 - google: ChIJ2Uh9Bk5OqEcREoy9N1LxImw
 - nettside: https://www.burgermeister.com/
+- status: onskeliste
 Kreuzberg
 
 Burgere fra et gammelt offentlig toalett under U-Bahn-viadukten ved Schlesisches Tor. Oberbaumstraße 8.
@@ -576,10 +587,10 @@ Burgers from a former public toilet under the U-Bahn viaduct at Schlesisches Tor
 - sted: 52.50136, 13.41592
 - google: ChIJCwbEVjJOqEcRlFGm69_dBJk
 - nettside: https://www.ora.berlin/
-Oranienstraße og Wrangelkiez
+Oranienstraße
 
 Restaurant og vinbar i et apotek fra 1800-tallet ved Oranienplatz, med det gamle inventaret bevart. Sesongbaserte småretter og lang vinliste. Rett over plassen fra Orania. Oranienplatz 14.
-- en: Oranienstraße and Wrangelkiez
+- en: Oranienstraße
 
 Restaurant and wine bar in a 19th-century pharmacy on Oranienplatz, with the old fittings intact. Seasonal small plates and a long wine list. Across the square from Orania. Oranienplatz 14.
 
@@ -598,6 +609,7 @@ Old Berlin Gaststätte from 1902, serving classic Berlin food such as Königsber
 - sted: 52.49646, 13.42088
 - google: ChIJ74LRF8tPqEcRNeBJAS2qxaQ
 - nettside: https://www.restaurant-horvath.de/
+- status: onskeliste
 Kreuzberg
 
 Sebastian Franks restaurant ved Landwehrkanal, med to Michelin-stjerner og grønnsakene i sentrum. Bestill i god tid. Paul-Lincke-Ufer 44a.
@@ -609,10 +621,11 @@ Sebastian Frank’s restaurant on the Landwehrkanal, with two Michelin stars and
 - sted: 52.50073, 13.43400
 - google: ChIJkUK660tOqEcRuCui4omy28c
 - nettside: https://jolesch.de/
-Oranienstraße og Wrangelkiez
+- status: onskeliste
+Oranienstraße
 
 Østerriksk restaurant med wienerschnitzel, elegant uten å være formell. En Kreuzberg-klassiker. Muskauer Straße 1.
-- en: Oranienstraße and Wrangelkiez
+- en: Oranienstraße
 
 Austrian restaurant known for its Wiener schnitzel, elegant without being formal. A Kreuzberg classic. Muskauer Straße 1.
 
@@ -620,6 +633,7 @@ Austrian restaurant known for its Wiener schnitzel, elegant without being formal
 - sted: 52.49382, 13.41803
 - google: ChIJCUmw4MpPqEcRjuEofFrRt0M
 - nettside: https://kuchi.de/restaurant/cocolo-x-berg/
+- status: onskeliste
 Graefekiez
 
 Ramen, og bare det. Graefestraße 11.
@@ -642,6 +656,7 @@ Italian classic where the area’s journalists and newspaper people eat, with a 
 - sted: 52.48968, 13.41360
 - google: ChIJ95zYL89PqEcRlyKANk7ORQQ
 - nettside: https://www.tuluslotrek.de/
+- status: onskeliste
 Graefekiez
 
 Kokkeeid restaurant med én Michelin-stjerne, leken og uformell. Fichtestraße 24.
@@ -677,6 +692,7 @@ Café and coffee roastery opened by Cynthia Barcomi in 1994, known for its cakes
 - sted: 52.49343, 13.43834
 - google: ChIJqx7ojrJPqEcRXeGCeoYq5fE
 - nettside: http://www.fiveelephant.com/
+- status: onskeliste
 Kreuzberg
 
 Brenneri og kafé ved Görlitzer Park, mest kjent for cheesecaken. Reichenberger Straße 101.
@@ -689,6 +705,7 @@ Roastery and café by Görlitzer Park, best known for its cheesecake. Reichenber
 ### Wax On
 - sted: 52.48818, 13.42986
 - google: ChIJMQDojRFPqEcRBpat7o3A57s
+- status: onskeliste
 Reuterkiez
 
 Cocktailbar i Weserstraße som The Infatuation (2025) trekker fram som noe annet enn resten av gata, og som er kåret til Tysklands beste bar. Weserstraße 208.
@@ -696,31 +713,10 @@ Cocktailbar i Weserstraße som The Infatuation (2025) trekker fram som noe annet
 
 Cocktail bar on Weserstraße that The Infatuation (2025) singles out as different from the rest of the street, and that has been named the best bar in Germany. Weserstraße 208.
 
-### Jaja
-- sted: 52.48422, 13.43315
-- google: ChIJJ7CUv7pPqEcRgor_TkgqYWM
-- nettside: https://jajawein.de/
-Neukölln
-
-Vinbar og bistro med naturvin og en liten meny som skifter daglig. Weichselstraße 7.
-- en: Neukölln
-
-Wine bar and bistro with natural wine and a small menu that changes daily. Weichselstraße 7.
-
-### Ankerklause
-- sted: 52.49584, 13.42056
-- google: ChIJHwunA8tPqEcRzdgaAEx7K4M
-- nettside: http://www.ankerklause.de/
-Neukölln
-
-Gammel kneipe med jukeboks ved Landwehrkanal, på hjørnet ved Kottbusser Brücke og markedet på Maybachufer. Kottbusser Damm 104.
-- en: Neukölln
-
-Old-school pub with a jukebox on the Landwehrkanal, on the corner by the Kottbusser Brücke and the Maybachufer market. Kottbusser Damm 104.
-
 ### Cafe Kreuzberg
 - sted: 52.49462, 13.42968
 - google: ChIJaenH-rRPqEcRrcz4pOaXKcw
+- status: onskeliste
 Kreuzberg
 
 Cocktailbar i Ohlauer Straße 37.
@@ -731,10 +727,10 @@ Cocktail bar at Ohlauer Straße 37.
 ### Ritchie
 - sted: 52.50139, 13.41856
 - google: ChIJ99HXXctPqEcR9us0USQXozc
-Oranienstraße og Wrangelkiez
+Oranienstraße
 
 Cocktailbar i Oranienstraße 174.
-- en: Oranienstraße and Wrangelkiez
+- en: Oranienstraße
 
 Cocktail bar at Oranienstraße 174.
 
@@ -742,6 +738,7 @@ Cocktail bar at Oranienstraße 174.
 - sted: 52.48738, 13.43676
 - google: ChIJl_A_1q9PqEcRQglgqf_zUJk
 - nettside: https://nathanja-heinrich.de/
+- status: onskeliste
 Reuterkiez
 
 Bar med cocktailer og vin. Weichselstraße 44.
@@ -753,6 +750,7 @@ Bar with cocktails and wine. Weichselstraße 44.
 - sted: 52.48017, 13.43808
 - google: ChIJ84OcmV1PqEcRP-99fakpAMk
 - nettside: https://www.honeylou.bar/
+- status: onskeliste
 Neukölln
 
 Bar i Anzengruberstraße 3.
@@ -766,10 +764,10 @@ Bar at Anzengruberstraße 3.
 - sted: 52.49934, 13.41877
 - google: ChIJ9YKw7ANPqEcR_Gxab6T2N_s
 - nettside: https://synthesizermuseum.info/
-Oranienstraße og Wrangelkiez
+Oranienstraße
 
 Synthesizere man kan spille på selv, ved Kottbusser Tor. Inngang ved REWE, ståldøra til høyre. Skalitzer Straße 135a.
-- en: Oranienstraße and Wrangelkiez
+- en: Oranienstraße
 
 Synthesizers you can play yourself, by Kottbusser Tor. Entrance by the REWE supermarket, steel door on the right. Skalitzer Straße 135a.
 
@@ -779,10 +777,10 @@ Synthesizers you can play yourself, by Kottbusser Tor. Entrance by the REWE supe
 - sted: 52.50116, 13.42133
 - google: ChIJ_UsTezROqEcRckmsnn3PMDk
 - nettside: https://www.voostore.com/
-Oranienstraße og Wrangelkiez
+Oranienstraße
 
 Berlins kanskje beste konseptbutikk, i en bakgård i Oranienstraße: mote (Prada, Dries Van Noten), design, kunstbøker og kaffe. Oranienstraße 24.
-- en: Oranienstraße and Wrangelkiez
+- en: Oranienstraße
 
 Perhaps Berlin’s best concept store, in a courtyard on Oranienstraße: fashion (Prada, Dries Van Noten), design, art books and coffee. Oranienstraße 24.
 
@@ -790,6 +788,7 @@ Perhaps Berlin’s best concept store, in a courtyard on Oranienstraße: fashion
 - sted: 52.49157, 13.41691
 - google: ChIJ68bBWMlPqEcR2FKijl7-a_I
 - nettside: https://www.kado.de/
+- status: onskeliste
 Graefekiez
 
 Lakrisbutikk siden 1997, med flere hundre slags lakris. Graefestraße 68.
@@ -801,6 +800,7 @@ Liquorice shop since 1997, with several hundred kinds of liquorice. Graefestraß
 - sted: 52.49080, 13.39451
 - google: ChIJ3VvujtdPqEcRtD1uCaa_ypM
 - nettside: http://www.spacehall.de/
+- status: onskeliste
 Bergmannkiez
 
 Stor platebutikk for elektronisk musikk og mer, med lyttestasjoner. Zossener Straße 35.
@@ -812,6 +812,7 @@ Large record shop for electronic music and more, with listening stations. Zossen
 - sted: 52.48922, 13.40292
 - google: ChIJh1WusgxRqEcR6bwZo9G7r1I
 - nettside: https://form-projekt.com/
+- status: onskeliste
 Bergmannkiez
 
 Konseptbutikk med interiør, vesker og tilbehør. Bergmannstraße 59.
@@ -823,22 +824,13 @@ Concept store with homeware, bags and accessories. Bergmannstraße 59.
 - sted: 52.48949, 13.42629
 - google: ChIJUUL8-LZPqEcReqe33f7_7CY
 - nettside: https://www.buchkoenigin.de/
+- status: onskeliste
 Reuterkiez
 
 Liten, personlig bokhandel i Hobrechtstraße, like ved Weserstraße. Hobrechtstraße 65.
 - en: Reuterkiez
 
 Small, personal bookshop on Hobrechtstraße, just off Weserstraße. Hobrechtstraße 65.
-
-### Sing Blackbird
-- sted: 52.49235, 13.42620
-- google: ChIJ0zIj27VPqEcRVrh8xvyFOQ8
-Reuterkiez
-
-Vintagebutikk med designerklær fra slutten av 90-tallet og 2000-tallet. Sanderstraße 11.
-- en: Reuterkiez
-
-Vintage shop with designer clothes from the late 1990s and 2000s. Sanderstraße 11.
 
 ### Modulor ★
 - sted: 52.50338, 13.41011
@@ -857,10 +849,10 @@ Large store for art supplies, paper, tools and model-making materials, at Moritz
 - sted: 52.50212, 13.41697
 - google: ChIJhVPKSjJOqEcR1tXn7XhIBH0
 - nettside: https://www.orania.berlin/
-Oranienstraße og Wrangelkiez
+Oranienstraße
 
 Hotell i et hjørnebygg ved Oranienplatz, med restaurant og bar.
-- en: Oranienstraße and Wrangelkiez
+- en: Oranienstraße
 
 Hotel in a corner building on Oranienplatz, with a restaurant and bar.
 
@@ -870,10 +862,10 @@ Hotel in a corner building on Oranienplatz, with a restaurant and bar.
 - sted: 52.50214, 13.43160
 - google: ChIJvaZWgElOqEcRElWjL2P9AZg
 - nettside: https://www.markthalleneun.de/
-Oranienstraße og Wrangelkiez
+Oranienstraße
 
 Markedshall fra 1891 med matboder og bakeri. Street Food Thursday hver torsdag 17–22.
-- en: Oranienstraße and Wrangelkiez
+- en: Oranienstraße
 
 Market hall from 1891 with food stalls and a bakery. Street Food Thursday every Thursday, 5–10 pm.
 
@@ -882,6 +874,7 @@ Market hall from 1891 with food stalls and a bakery. Street Food Thursday every 
 - sted: 52.49509, 13.42290
 - google: ChIJvzvzRIlPqEcRr1cbvI4twJk
 - nettside: https://www.maybachufer.de/
+- status: onskeliste
 Reuterkiez
 
 Det tyrkiske markedet langs Landwehrkanal: tirsdag og fredag 11–18.30, lørdag 11–17.
