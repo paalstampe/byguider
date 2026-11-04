@@ -75,8 +75,12 @@ jobs:
           path: _site
       # Pages kan regne forrige publisering som pågående lenge etter at den kjøringen er ferdig
       # (28.10., og 18+ minutter 4.11.), og avviser da med «in progress deployment», eller
-      # publiseringen henger til tidsavbruddet (10 min). Da avbryter vi det som henger, venter
-      # 5 minutter og prøver igjen, opptil tre forsøk i alt.
+      # publiseringen henger til tidsavbruddet (10 min). Derfor avbryter vi det som henger før
+      # hvert forsøk, venter 5 minutter mellom forsøkene, og prøver opptil tre ganger i alt.
+      - name: Rydd før første forsøk
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: .github/rydd-pages.sh 0
       - id: deploy
         uses: actions/deploy-pages@v4
         continue-on-error: true

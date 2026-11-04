@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
-# Avbryter Pages-publiseringer som henger, før et nytt forsøk, og venter så litt.
+# Avbryter Pages-publiseringer som henger, før et forsøk, og venter så litt.
 #
 # Pages kan regne en publisering som pågående lenge etter at kjøringen som startet den er ferdig
 # (18+ minutter i byguider 4.11.), og avviser da nye med «in progress deployment ... Please cancel
 # <sha> first». Kjøringene står i kø (concurrency: pages), så ingen annen kjøring publiserer nå:
 # alt Pages fortsatt regner som pågående, er rester og kan trygt avbrytes.
 #
-# Bruk: rydd-pages.sh <sekunder å vente>   (krever GH_TOKEN og GITHUB_REPOSITORY)
+# Bruk: rydd-pages.sh <sekunder å vente, 0 før første forsøk>   (krever GH_TOKEN og GITHUB_REPOSITORY)
 set -uo pipefail
 
 repo="$GITHUB_REPOSITORY"
@@ -25,5 +25,7 @@ for sha in $shaer; do
   esac
 done
 
-echo "Venter ${1}s før nytt forsøk"
-sleep "$1"
+if [ "$1" -gt 0 ]; then
+  echo "Venter ${1}s før nytt forsøk"
+  sleep "$1"
+fi
