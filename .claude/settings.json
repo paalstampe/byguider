@@ -25,7 +25,7 @@
     ],
     "PostToolUse": [
       {
-        "matcher": "Write|Edit",
+        "matcher": "Write|Edit|Bash",
         "hooks": [
           {
             "type": "command",
@@ -41,7 +41,8 @@
           {
             "type": "command",
             "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/sky-push.sh",
-            "timeout": 20
+            "timeout": 20,
+            "onFailure": "block"
           }
         ]
       }
