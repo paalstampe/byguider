@@ -1695,7 +1695,10 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       settOnskelag(state.onskelisteApen);   // laget følger seksjonen: åpne = på, lukke = av
       tegnListe(synlige());
     });
-    el.liste.appendChild(hode);
+    const rad = document.createElement('div');   // lista har role="list", så knappen må ligge i et listitem
+    rad.setAttribute('role', 'listitem');
+    rad.appendChild(hode);
+    el.liste.appendChild(rad);
     if (!state.onskelisteApen) return;
 
     // Førstevalg (★) øverst, så alfabetisk. Med «Nær meg»: nærmest først.
