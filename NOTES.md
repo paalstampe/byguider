@@ -7,6 +7,12 @@ Oppdateres ved slutten av hver økt (`/avslutt`).
 
 Sist oppdatert: 4. november 2026.
 
+- 4.11.: Claude-oppsett. `.claude/launch.json` lar Claude-appen starte serveren i den innebygde nettleseren (8000 byguider,
+  8001 reiseplanlegging, 8002 stam.pe). Hooks: `.claude/oppstart.sh` sjekker ved oppstart om repoet ligger bak eller foran origin
+  (henter selv når det er trygt) og om /avslutt avviker fra claude-oppsett; `.claude/valider.sh` sjekker JSON/GeoJSON/Python
+  etter hver filendring; `.claude/sky-push.sh` holder skyøkter igjen til committede endringer er pushet.
+  Claude kjører /code-review og /simplify selv før fletting av kodeendringer.
+  Ny skill /ny-by (`.claude/skills/ny-by/`) brukes automatisk når en ny by skal lages eller lanseres.
 - 4.11.: ukentlig skyjobb (routine) sjekker hver mandag kl. 06 om steder har stengt for godt og om nettsider virker, og skriver
   «Ukentlig sjekk <dato>» under Neste steg. Den retter bare flyttede nettsider selv. Styres på https://claude.ai/code/routines/trig_01DvX7PTCcLcRy2QmYL2Jrcj
 - 4.11. kveld: Pål bekrefter at delingskortene vises i Meldinger. Nettsider lagt inn for Bar Penguin, Apollo Bar, Kihara, Ăn Đi,
@@ -180,6 +186,8 @@ Sist oppdatert: 4. november 2026.
 
 ## Beslutningslogg
 
+- 2026-11-04: Claude kjører /code-review og /simplify selv før fletting av kodeendringer, så Pål slipper å be om det.
+- 2026-11-04: Git-sjekk ved oppstart og push-vakt i sky ligger som hooks i repoet (ikke bare som regel), så de virker både lokalt og i skyøkter.
 - 2026-11-04: London-sentrene (Sydenham, Blackheath, Forest Hill, Balham, Streatham Hill, Tooting, Lower Clapton) beholder sonene.
   Prøvd: kvartalene langs handlegaten fra OSM-gatenettet. Kvartalene bak handlegatene er så dype at omrisset enten blir mye
   større enn nabolaget eller ender som en sone igjen. Wapping (elvebredden) og Ekkamai ble bedre og er byttet.
