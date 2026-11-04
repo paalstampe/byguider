@@ -854,7 +854,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
   const popup = new maplibregl.Popup({ closeButton: true, closeOnClick: false, focusAfterOpen: false, maxWidth: '300px', offset: 15, className: 'pop' });
   const tips = new maplibregl.Popup({ closeButton: false, closeOnClick: false, offset: 15, className: 'tips' });
   const ekteHover = window.matchMedia('(hover: hover) and (pointer: fine)');
-  const smalSkjerm = window.matchMedia('(max-width: 900px)');   // samme brytepunkt som i style.css
+  const smalSkjerm = window.matchMedia('(max-width: 699px)');   // samme brytepunkt som i style.css
   // Liggende mobil har menyen ved siden av kartet, som på Mac (samme spørring som i style.css).
   const liggendeMobil = window.matchMedia('(orientation: landscape) and (max-height: 500px)');   // samme som i style.css
   popup.on('open', () => tips.remove());   // aldri navnelapp og popup oppå hverandre
