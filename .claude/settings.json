@@ -2,7 +2,49 @@
   "permissions": {
     "allow": [
       "Bash(.claude/skjermbilde.sh:*)",
-      "Bash(.claude/server.sh:*)"
+      "Bash(.claude/server.sh:*)",
+      "mcp__Claude_Browser__find",
+      "mcp__Claude_Browser__get_page_text",
+      "mcp__Claude_Browser__read_console_messages",
+      "mcp__Claude_Browser__read_page",
+      "mcp__Claude_Browser__tabs_context"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/oppstart.sh",
+            "timeout": 30,
+            "statusMessage": "Sjekker git og /avslutt"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/valider.sh",
+            "timeout": 20
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/sky-push.sh",
+            "timeout": 20
+          }
+        ]
+      }
     ]
   }
 }
