@@ -6,7 +6,9 @@
 IFS='
 '  # filnavn skilles bare på linjeskift
 inndata=$(cat)
-verktoy=$(printf '%s' "$inndata" | python3 -c 'import json,sys; print(json.load(sys.stdin).get("tool_name",""))' 2>/dev/null)
+# Første linje: verktøyet, andre: filen Write/Edit skrev.
+les=$(printf '%s' "$inndata" | python3 -c 'import json,sys; d=json.load(sys.stdin); print(d.get("tool_name","")); print((d.get("tool_input") or {}).get("file_path",""))' 2>/dev/null)
+verktoy=${les%%"$IFS"*}
 
 sjekk() { # fil — skriver feilmeldingen og gir status ≠ 0 hvis filen er ugyldig
   case "$1" in
@@ -46,7 +48,7 @@ except Exception: gammel = {}
 print("\n".join(f for f in sys.stdin.read().splitlines() if os.path.isfile(f) and gammel.get(f) != os.stat(f).st_mtime_ns))
 ' "$tilstand")
 else
-  filer=$(printf '%s' "$inndata" | python3 -c 'import json,sys; print((json.load(sys.stdin).get("tool_input") or {}).get("file_path",""))' 2>/dev/null)
+  filer=${les#*"$IFS"}
 fi
 
 status=0
