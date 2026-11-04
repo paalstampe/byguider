@@ -61,8 +61,9 @@ Hold HANDOVER.md oppdatert når noe vesentlig endres i teknikk eller design (f.e
   Nye UI-tekster skal alltid ha begge språk.
 - Koordinater: md-filene bruker breddegrad, lengdegrad (Google-rekkefølge);
   GeoJSON bruker lengdegrad, breddegrad.
-- Mobil (≤ 900 px) er like viktig som desktop. Hover-effekter bare under
-  (hover: hover) and (pointer: fine). Respekter prefers-reduced-motion.
+- Mobil (< 700 px) er like viktig som desktop; 700–1023 px er nettbrett (meny 340 px ved siden av kartet).
+  `viewport-fit=cover`: bruk env(safe-area-inset-*) der innhold kan havne under notch/Dynamic Island.
+  Hover-effekter bare under (hover: hover) and (pointer: fine). Respekter prefers-reduced-motion.
 
 ## Design (retning A — redaksjonell)
 - Playfair Display til navn og titler, Work Sans til brødtekst.

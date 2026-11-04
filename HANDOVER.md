@@ -117,7 +117,7 @@ Instruksjonene står som kommentar øverst i hver fil.
 ---
 tittel: Pål og Vibekes London       frontmatter: tittel, undertittel,
 senter: 51.5105, -0.1235            senter (breddegrad, lengdegrad), zoom, oppdatert
-senter-mobil: 51.5230, -0.1060     valgfritt: startutsnitt på mobil (≤ 900 px) med zoom-mobil,
+senter-mobil: 51.5230, -0.1060     valgfritt: startutsnitt på mobil (< 700 px) med zoom-mobil,
                                     i stedet for utsnittet med alle stedene (for vidt på smal skjerm);
                                     «Vis hele byen» går også dit på mobil
 ---
@@ -485,6 +485,10 @@ Hvert trinn skal kunne committes for seg og fungere alene.
 - Liggende mobil (PR #70, 28.10.): ≤ 900 px bred og ≤ 500 px høy får menyen i en kolonne på 320 px til
   venstre og kartet til høyre, som på Mac (`liggendeMobil` i app.js, samme spørring i style.css). Lista hopper
   ikke til kartet der. `-webkit-text-size-adjust: 100%` hindrer iPhone i å forstørre teksten.
+  Fra PR #93 (4.11.) uten breddegrense, `(orientation: landscape) and (max-height: 500px)`, fordi alle sider har
+  `viewport-fit=cover` og iPhone Air da er 912 px bred liggende. Menyen er `320px + safe-area-inset-left`.
+- Nettbrett (PR #94, 4.11.): mobilbrytepunktet er 699 px (`smalSkjerm` i app.js, samme i style.css).
+  700–1023 px har menyen på 340 px ved siden av kartet med mobilens marger (stående iPad, ⅔ delt skjerm).
 - «Liste ↓» (PR #73, 28.10.): knapp nederst til venstre i kartet på stående mobil, ruller ned til menyen,
   siden kartet tar alle fingerbevegelser. Når kartets nederste kant er rullet ut av skjermen, blir den «Kart ↑»
   (klassen `til-lista--kart`, PR #76–#77): står fast 20 px inn og 24 px opp (pluss safe area), utenfor den runde
