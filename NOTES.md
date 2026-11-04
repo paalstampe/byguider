@@ -161,12 +161,10 @@ Sist oppdatert: 4. november 2026.
 
 ## Neste steg
 
-- Publiseringen: felles workflow `publiser.yml` ligger i paalstampe.github.io (#23) og publiserer stam.pe. Første forsøk ble
-  blokkert i rundt 30 min (21:22–ca. 21:55) av 61535b4, som ifølge API-et var ferdig og ikke kunne avbrytes («as it's finished»);
-  tredje forsøk i kjøringen fra 21:46 gikk gjennom. Neste: flytt byguider og
-  reiseplanlegging over: `pages.yml` kaller `paalstampe/paalstampe.github.io/.github/workflows/publiser.yml@main` med
-  permissions actions: write, contents: read, pages: write, id-token: write, deployments: read; byguider flytter stedsider-linjene
-  til `.github/etter-sammensetting.sh` og sletter `.github/rydd-pages.sh`.
+- Publiseringen er felles for alle tre: `pages.yml` kaller `paalstampe/paalstampe.github.io/.github/workflows/publiser.yml@main`
+  (paalstampe.github.io #23, byguider #105, reiseplanlegging #35). Endringer gjøres der og gjelder alle tre fra neste kjøring.
+  Byguiders delingssider lages av `.github/etter-sammensetting.sh`. Første publisering på stam.pe ble blokkert i rundt 30 min
+  (21:22–ca. 21:55) av en publisering som ifølge API-et var ferdig og ikke kunne avbrytes; tredje forsøk gikk gjennom.
 - Mistanke (ikke bekreftet): det som henger er alltid en commit som er publisert to eller flere ganger like etter hverandre
   (a44b14d, 0adc444, 61535b4). Hver push til en gren publiserer main på nytt, også når main er uendret. Kan løses med å hoppe over
   publisering når innholdet er likt, eller ved å samle grenpusher.
@@ -214,6 +212,8 @@ Sist oppdatert: 4. november 2026.
 
 ## Beslutningslogg
 
+- 2026-11-04: Publiseringen bruker den felles workflowen i paalstampe.github.io (`publiser.yml@main`), så kø, rydding og forsøk
+  bare vedlikeholdes ett sted. Ulempen er at en feil der rammer alle tre.
 - 2026-11-04: Publiseringen rydder Pages-publiseringer som henger og prøver tre ganger med 5 min pause. Ferdige publiseringer
   («succeed») kan ikke avbrytes, selv når Pages sier de blokkerer; da hjelper bare venting. Lengre pauser er ikke lagt inn, siden
   blokkeringen 4.11. varte over 22 min og må løses ved årsaken.
