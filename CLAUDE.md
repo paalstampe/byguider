@@ -118,6 +118,7 @@ Playwright med `colorScheme: 'light'` og `'dark'`. Ta bildene fra stam.pe etter 
   3. Ellers: velg grensegatene og spor dem i OSM (Overpass) fra kryss til kryss, så omrisset følger gatene og
      kystlinjen. Hovedgaten skal ligge inni, ikke være kanten, når butikkene ligger på begge sider.
   Overpass (overpass-api.de) avviser kall uten User-Agent (406) og er ofte full (502): send `-A` og prøv igjen med pause.
+  Elv eller kyst som grense: klipp mot vannflaten i OSM. Themsen er en relasjon med water=river, ikke natural=coastline.
   4. Forenkle til ca. 3–6 m, fjern pigger og brygger, sjekk at polygonet er gyldig, og se på resultatet på kartet
      (lokalt) før commit.
   5. Sett `kilde` (f.eks. «Islington Council (conservation area), planning.data.gov.uk» eller «OpenStreetMap»)
