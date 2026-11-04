@@ -811,13 +811,27 @@ button.pop-lenke {
 /* Liggende mobil: lav og bred skjerm. Menyen i en smal kolonne til venstre som ruller for seg,
    kartet til høyre i full høyde — som på Mac. Stående oppsett ville gitt et kart som fyller skjermen
    og menyen utenfor. Samme spørring som liggendeMobil i app.js. */
-@media (max-width: 900px) and (orientation: landscape) and (max-height: 500px) {
+/* Uten breddegrense: med viewport-fit=cover er de største iPhonene over 900 px brede liggende.
+   Kartet går helt ut til kantene; menyen vokser med innfellingen når Dynamic Island er til venstre. */
+@media (orientation: landscape) and (max-height: 500px) {
   .app { flex-direction: row; height: 100vh; height: 100dvh; min-height: 0; overflow: hidden; }
   .sidebar {
-    width: 320px; flex: 0 0 320px; order: 0;
+    width: calc(320px + env(safe-area-inset-left)); flex: 0 0 calc(320px + env(safe-area-inset-left)); order: 0;
+    padding-left: env(safe-area-inset-left);
     border-right: 1px solid var(--kant); border-bottom: 0;
     overflow-y: auto; overscroll-behavior: contain;
   }
+  /* Som på mobil, også når skjermen er bredere enn 900 px. */
+  .sok { font-size: 16px; }
+  .chip { height: 34px; }
+  .sok-rad, .filtre, .liste { padding-left: 20px; padding-right: 20px; }
+  .sok-tom { right: 20px; }
+  .teller-rad { margin-left: 20px; margin-right: 20px; }
+  .sidebar-fot { padding-left: 20px; padding-right: 20px; }
+  .sprakvalg { top: -7px; }
+  .sprakvalg button { padding: 6px 5px 3px; }
+  /* Kildehenvisningen holdes klar av Dynamic Island og den runde hjørnet når øya er til høyre. */
+  .maplibregl-ctrl-bottom-right { right: env(safe-area-inset-right); bottom: env(safe-area-inset-bottom); }
   .sidebar > * { flex-shrink: 0; }
   .liste { flex: 1 0 auto; overflow: visible; }
   .kartflate { order: 0; flex: 1 1 auto; height: auto; min-height: 0; }
