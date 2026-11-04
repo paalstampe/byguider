@@ -165,6 +165,7 @@ Coffee and nothing else, since 1948. Ginza 8-10-15.
 ### Bar Penguin ★
 - sted: 35.67435, 139.76682
 - google: ChIJ54gkKbmLGGARI0pwvu9OezE
+- nettside: https://www.instagram.com/barpenguintokyo/
 Ginza
 
 Liten cocktailbar i kjelleren.
@@ -176,6 +177,7 @@ A small basement cocktail bar.
 ### Apollo Bar Ginza
 - sted: 35.66977, 139.75952
 - google: ChIJyZF_ze6LGGARhd_Q5DpJyYk
+- nettside: https://www.apollo-bar.net/
 Ginza
 
 Bar.
@@ -409,6 +411,7 @@ Nesten like quintessentially Tokyo som Shibuya. Skyskrapere i vest, smug som Gol
 ### Ăn Đi
 - sted: 35.67191, 139.71390
 - google: ChIJFdxl_5iMGGARfivbysGqglw
+- nettside: http://andivietnamese.com/
 Harajuku
 
 Moderne vietnamesisk.
@@ -658,6 +661,7 @@ A kitchen and homeware shop from the porcelain maker Nikko.
 ### Kihara Tokyo
 - sted: 35.66667, 139.69164
 - google: ChIJ6bL9QkaNGGARKstJFWtLLZ0
+- nettside: https://store.e-kihara.co.jp/
 Tomigaya
 
 Porselen fra Arita.
@@ -937,6 +941,7 @@ Handmade stamps (hanko), many featuring cats, by Yanaka Ginza.
 ### Kosho SamenoHa Books
 - sted: 35.72409, 139.76917
 - google: ChIJcbkdy9SNGGARldtJbQypiv4
+- nettside: https://www.instagram.com/kosho_samenoha/
 Yanaka
 
 Antikvariat.
