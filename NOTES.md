@@ -7,6 +7,11 @@ Oppdateres ved slutten av hver økt (`/avslutt`).
 
 Sist oppdatert: 4. november 2026.
 
+- 4.11. kveld: Pål bekrefter at delingskortene vises i Meldinger. Nettsider lagt inn for Bar Penguin, Apollo Bar, Kihara, Ăn Đi,
+  Kosho SamenoHa, Siwilai, Sarnies (sarnies.com) og Crowley Vintage (Instagram @crowley_vintage, én kilde).
+  Jimbocho Book Center svarer igjen. Charoen 43 finnes fortsatt (Time Out omtaler et marked der i april 2026); Homu er ikke i dataene.
+  Nye omriss: Wapping følger nå Themsens bredd (OSM-elveflaten), Ekkamai er kvartalene øst for Soi 63 og gaten selv, inntil Thonglor.
+  iPad-rotasjon og pinch i Reiseplanlegger testet i simulatoren tidligere samme dag, uten feil.
 - 4.11.: testet i iOS-simulatoren (Xcode er nå installert; CLAUDE.md sier når simulatoren brukes).
   Liggende iPhone: kartet går helt ut til skjermkantene (`viewport-fit=cover`, PR #93). Før lot Safari 68 pt stå
   tomt på hver side. Liggende-oppsettet gjelder nå uten breddegrense, siden iPhone Air er 912 px bred liggende;
@@ -140,27 +145,25 @@ Sist oppdatert: 4. november 2026.
 - SMAK.md: Pål kan gi en liste over hoteller de liker godt; legg dem inn som eksempler under Hoteller.
   Oppdater profilen når Pål setter ★ eller sier hva han liker.
 - Tokyo: flere notater er bare én linje («Sushi.», «Bar.», «Moderne vietnamesisk.»), og de 33 nye fra 30.10. er Claudes utkast.
-  Fyll på når Pål har tekst. Nettsiden til Jimbocho Book Center svarte 503 30.10.; sjekk senere.
-  Bar Penguin, Apollo Bar, Kihara, Ăn Đi og Kosho SamenoHa mangler nettside.
-- Bangkok: notatene er korte utkast (mange bare «Kafé.»/«Galleri.»). Fyll på når Pål har tekst. Mangler nettside: some time blue cafe,
-  Charoen 43, Siwilai Store og Sarnies Roastery (bare Linktree). Homu (Charoen Krung 44) finnes ikke lenger på adressen; en «HOMU» ved
-  Sathorn/Lumphini kan være samme sted. Balzac har nesten samme adresse som Charoen 43 Art & Eatery; sjekk om Charoen 43 er borte.
+  Fyll på når Pål har tekst.
+- Bangkok: notatene er korte utkast (mange bare «Kafé.»/«Galleri.»). Fyll på når Pål har tekst. Mangler nettside: Charoen 43
+  (bare Facebook) og some time blue cafe (bare Linktree).
 - New York: notatene til de tolv nye stedene fra 30.10. er korte utkast (område, type, adresse). Fyll på når Pål har tekst.
 - Stedene fra Påls liste 30.10. kveld (London, Bangkok, New York, Nice) har korte utkast til notater skrevet av Claude. Usikre: Azzurra
-  («italiensk»), Monmouth Kitchen («italiensk og peruansk»), Tangible Bangkok (bare «Kafé»). Mangler nettside: Storyline, Tangible,
-  Crowley Vintage, Bonjour Amour og SAVVA.
+  («italiensk»), Monmouth Kitchen («italiensk og peruansk»), Tangible Bangkok (bare «Kafé»). Mangler nettside (finnes ikke i Google eller
+  ved søk 4.11.): Storyline, Tangible, Bonjour Amour og SAVVA.
 - Berlin: notatene til de sju restaurantene fra 31.10. er Claudes utkast. Sjekk stjerner og kokker (Horváth, Tulus Lotrek) når Pål har vært der.
-- Bangkok: Ekkamai og Phra Khanong er grove soner rundt gatene. Tegn dem presist (khwaeng eller grensegater i OSM) når de går av ønskelista.
+- Bangkok: Phra Khanong er en grov sone rundt Sukhumvit Road og Soi 71. Tegn den presist når den går av ønskelista.
 - Slett på byguide-forsiden er testet i Chromium, ikke i Safari på Mac. Pål sjekker der.
 - Nye nabolag trenger alltid et presist omriss i `data/<by>-geometri.geojson`; fremgangsmåten står i CLAUDE.md, Data.
 - Mulig etterarbeid: de 25 London-omrissene som ble beholdt (bl.a. Marylebone, Mayfair, Belgravia, Richmond, Kew Green)
   kan sjekkes mot conservation areas på samme måte hvis Pål ser noe som ikke stemmer.
-- London: omrissene for Sydenham, Blackheath, Forest Hill, Balham, Streatham Hill, Tooting, Wapping og Lower Clapton er
-  grove soner rundt handlegatene. Tegn dem presist (grensegater i OSM) når Pål vil, særlig når et nabolag går av ønskelista.
+- London: omrissene for Sydenham, Blackheath, Forest Hill, Balham, Streatham Hill, Tooting og Lower Clapton er soner rundt
+  handlegatene. Prøvd tegnet etter kvartaler 4.11. uten at det ble bedre (se beslutningsloggen); la dem være med mindre Pål ser noe galt.
 - Oppdater miniatyrene når en by endrer utseende merkbart (CLAUDE.md, Miniatyrer).
 - Ny by eller navneendring: kjør `.claude/delingsbilder.sh` og legg og:-taggene i stubben (HANDOVER, «Ny by»).
-- Sjekk på iPhone at delingskortene vises i Meldinger (by: stort postkort; sted: lite kort med byens frimerke) og at
-  «Legg til på Hjem-skjerm» på en byside gir byens frimerke. Ikke sett i en app ennå.
+- «Legg til på Hjem-skjerm» på en byside: ikonfilene (180×180, ett frimerke per by) er sjekket 4.11., men selve
+  hjem-skjermen er ikke sett (Del-arket åpnet seg ikke i simulatoren). Pål kan prøve én by på telefonen.
 - Et sted som bytter navn får ny lenke; delte lenker til det gamle navnet gir 404-siden.
 - Kart: på mobil ligger nabolagsfirkantene tett på laveste zoom i London. Se om det trengs noe (f.eks. mindre
   firkanter ved lav zoom) når Pål har brukt det en stund. Å skjule steder under nabolagene er prøvd og forkastet.
@@ -175,6 +178,9 @@ Sist oppdatert: 4. november 2026.
 
 ## Beslutningslogg
 
+- 2026-11-04: London-sentrene (Sydenham, Blackheath, Forest Hill, Balham, Streatham Hill, Tooting, Lower Clapton) beholder sonene.
+  Prøvd: kvartalene langs handlegaten fra OSM-gatenettet. Kvartalene bak handlegatene er så dype at omrisset enten blir mye
+  større enn nabolaget eller ender som en sone igjen. Wapping (elvebredden) og Ekkamai ble bedre og er byttet.
 - 2026-11-04: Nettbrett (700–1023 px) får menyen ved siden av kartet, smalere enn på Mac (340 px). Stående iPad fikk
   telefonoppsettet med kartet over en lang liste i full bredde. Mobil er nå under 700 px; halv delt skjerm (590 px) er mobil.
 - 2026-11-04: `viewport-fit=cover` på alle sider. Uten den fylte Safari sidene i liggende med bakgrunnsfarge og
