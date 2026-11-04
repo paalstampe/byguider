@@ -31,6 +31,8 @@ Hold HANDOVER.md oppdatert når noe vesentlig endres i teknikk eller design (f.e
 - iPhone-spesifikt (liggende, notch/Dynamic Island, safe area, Safaris verktøylinje, rotasjon): bruk
   iOS-simulatoren (Xcode er installert på Macen) via simulatorverktøyet, f.eks. åpne URL i Safari og rotere.
   Playwright holder for vanlige layoutsjekker og er raskere; simulatoren er sluttsjekken for iPhone. Ikke i skyøkter.
+- Før fletting av kodeendringer: kjør /code-review (standardnivå) og /simplify på grenen selv, uten at Pål ber om det.
+  Rett funnene som holder, nevn kort i PR-beskrivelsen hva som ble funnet og rettet. Gjelder ikke rene data- og tekstendringer.
 - Fletting: Kan du selv verifisere at alt er i orden (skjermbilder mobil + desktop, ingen JS-feil),
   åpne PR og flett uten å spørre. Er det noe Pål bør se på (designvalg, smak, usikkerhet), vis ham det
   (lokalt: localhost; sky: push grenen og oppgi forhåndsvisningen) og vent — flett når han sier ok.
@@ -40,6 +42,10 @@ Hold HANDOVER.md oppdatert når noe vesentlig endres i teknikk eller design (f.e
 - Desktop-appen: .claude/launch.json starter serveren på port 8000 i appens innebygde nettleser
   (preview_start), der du kan se, klikke og lese konsollen selv. Portene er 8000 byguider, 8001 reiseplanlegging,
   8002 stam.pe, så alle tre kan kjøre samtidig.
+- Hooks i .claude/settings.json: ved oppstart sjekker .claude/oppstart.sh om grenen ligger bak eller foran origin
+  (henter selv med pull --ff-only når det er trygt) og om /avslutt avviker fra claude-oppsett — følg det den sier.
+  .claude/valider.sh sjekker JSON/GeoJSON/Python etter hver Write/Edit (filer endret med sed i Bash sjekkes ikke).
+  I skyøkter stopper .claude/sky-push.sh ikke før committede endringer er pushet.
 - Lokal eller sky velges når Pål starter økta. Kode- og designarbeid går raskest lokalt på Macen;
   data og dokumentasjon går like bra i sky. Får du en kode- eller designoppgave i en skyøkt,
   si fra tidlig at den egner seg bedre lokalt (fortsett hvis Pål vil).
