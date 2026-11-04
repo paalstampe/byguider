@@ -11,6 +11,8 @@ Sist oppdatert: 4. november 2026.
   ferdig («in progress deployment … Please cancel <sha> first»), eller hang til tidsavbruddet. GitHub hadde hendelser med
   Actions og Pages samme kveld. Alle tre repoene har nå kø (`cancel-in-progress: false`), rydding av Pages-publiseringer som
   henger, og tre forsøk med 5 min pause (byguider #102, reiseplanlegging #32, paalstampe.github.io #22).
+  Ryddingen kan tørrkjøres med `RYDD_TORR=1`, og `.claude/valider.sh` sjekker YAML og avviser dupliserte nøkler i JSON og YAML
+  (byguider #103–#104, reiseplanlegging #33–#34, paalstampe.github.io #24–#25).
 - 4.11. kveld: verktøyoversikten (claude-oppsett#1). `.claude/valider.sh` sjekker nå også filer endret i Bash
   (sed, skript): JSON/GeoJSON/Python som git ser som endret siden forrige godkjenning, og melder en ødelagt fil til den er rettet.
   Stop-hooken `sky-push.sh` har `onFailure: block`. CLAUDE.md: vent med `gh run watch` før skjermbilder av forhåndsvisningen,
@@ -159,9 +161,9 @@ Sist oppdatert: 4. november 2026.
 
 ## Neste steg
 
-- Publiseringen: felles workflow `publiser.yml` ligger i paalstampe.github.io (#23), men har ikke fått publisert ennå. Pages blokkerte
-  i over 22 min (21:22–21:44) på 61535b4, som ifølge API-et er ferdig og ikke kan avbrytes («as it's finished»). Sjekk først at
-  stam.pe publiserer igjen (`gh workflow run pages.yml -R paalstampe/paalstampe.github.io`). Gjør den det, flytt byguider og
+- Publiseringen: felles workflow `publiser.yml` ligger i paalstampe.github.io (#23) og publiserer stam.pe. Første forsøk ble
+  blokkert i rundt 30 min (21:22–ca. 21:55) av 61535b4, som ifølge API-et var ferdig og ikke kunne avbrytes («as it's finished»);
+  tredje forsøk i kjøringen fra 21:46 gikk gjennom. Neste: flytt byguider og
   reiseplanlegging over: `pages.yml` kaller `paalstampe/paalstampe.github.io/.github/workflows/publiser.yml@main` med
   permissions actions: write, contents: read, pages: write, id-token: write, deployments: read; byguider flytter stedsider-linjene
   til `.github/etter-sammensetting.sh` og sletter `.github/rydd-pages.sh`.
