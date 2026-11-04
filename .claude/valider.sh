@@ -17,11 +17,12 @@ if f.endswith('.geojson'):
         for poly in ringer:
             for r in poly:
                 assert len(r) >= 4 and r[0] == r[-1], f'GeoJSON: feature {i} ({ft.get("properties", {}).get("navn", "?")}) har en ring som ikke er lukket'
-                for x, y in r:
+                for pos in r:
+                    x, y = pos[0], pos[1]
                     assert -180 <= x <= 180 and -90 <= y <= 90, f'GeoJSON: feature {i} har ugyldig koordinat {x},{y} (lengde, bredde?)'
 PY
 ) || { echo "Ugyldig fil $fil: $(echo "$feil" | tail -1)" >&2; exit 2; } ;;
   *.py)
-    feil=$(python3 -m py_compile "$fil" 2>&1) || { echo "Python-feil i $fil: $feil" >&2; exit 2; } ;;
+    feil=$(python3 -c "import ast,sys; ast.parse(open(sys.argv[1], encoding='utf-8').read(), sys.argv[1])" "$fil" 2>&1) || { echo "Python-feil i $fil: $feil" >&2; exit 2; } ;;
 esac
 exit 0
