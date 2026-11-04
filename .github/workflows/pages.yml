@@ -40,9 +40,10 @@ jobs:
       contents: read
       pages: write
       id-token: write
+      deployments: read   # rydd-pages.sh finner publiseringene som henger
     environment:
       name: github-pages
-      url: ${{ steps.deploy.outputs.page_url || steps.deploy2.outputs.page_url }}
+      url: ${{ steps.deploy.outputs.page_url || steps.deploy2.outputs.page_url || steps.deploy3.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -72,15 +73,31 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
-      # Pages kan regne forrige publisering som pågående en stund etter at den kjøringen er
-      # ferdig, og avviser da med «in progress deployment» (skjedde 28.10. i byguider).
-      # Da venter vi og prøver én gang til.
+      # Pages kan regne forrige publisering som pågående lenge etter at den kjøringen er ferdig
+      # (28.10., og 18+ minutter 4.11.), og avviser da med «in progress deployment», eller
+      # publiseringen henger til tidsavbruddet (10 min). Derfor avbryter vi det som henger før
+      # hvert forsøk, venter 5 minutter mellom forsøkene, og prøver opptil tre ganger i alt.
+      - name: Rydd før første forsøk
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: .github/rydd-pages.sh 0
       - id: deploy
         uses: actions/deploy-pages@v4
         continue-on-error: true
-      - name: Vent før nytt forsøk
+      - name: Rydd og vent før forsøk 2
         if: steps.deploy.outcome == 'failure'
-        run: sleep 60
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: .github/rydd-pages.sh 300
       - id: deploy2
         if: steps.deploy.outcome == 'failure'
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+      - name: Rydd og vent før forsøk 3
+        if: steps.deploy2.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: .github/rydd-pages.sh 300
+      - id: deploy3
+        if: steps.deploy2.outcome == 'failure'
         uses: actions/deploy-pages@v4
