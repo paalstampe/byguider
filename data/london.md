@@ -235,7 +235,7 @@ Seafood, 17 Bruton Street.
 ### Scott's ★
 - sted: 51.50990, -0.15083
 - google: ChIJcf7z3i0FdkgRp8viwzBRRn8
-- nettside: https://www.scotts-restaurant.com/
+- nettside: https://scotts-mayfair.com/
 Mayfair
 
 Sjømat, Mount Street 20–22.
@@ -1305,7 +1305,7 @@ Coffee bar, 66 Great Titchfield Street.
 ### Kronotrop Fitzrovia
 - sted: 51.51791, -0.14048
 - google: ChIJRdIuFtcbdkgRKrqZzsp_YoU
-- nettside: https://www.kronotrop.com/
+- nettside: https://kronotrop.com.tr/
 Fitzrovia
 
 Spesialkaffe fra Istanbul, Mortimer Street 42.
@@ -1653,7 +1653,7 @@ Wine shop, 3–7 Davies Street.
 ### Farm Shop
 - sted: 51.50885, -0.15169
 - google: ChIJnerq2r0FdkgRyPiR0o9vmiU
-- nettside: https://dursladefarmshop.co.uk/
+- nettside: https://farmshop.co.uk/
 Mayfair
 
 Gårdsbutikk og deli fra Durslade Farm i Somerset, South Audley Street 64.

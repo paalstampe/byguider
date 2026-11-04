@@ -304,7 +304,7 @@ Italian. Niels Juels gate 51.
 ### Vesuvio Café & Pizzeria
 - sted: 59.92508, 10.74575
 - google: ChIJffDoEHBuQUYRXFpOCIHgcK0
-- nettside: https://www.vesuviocafe.no/
+- nettside: https://vesuviopizza.no/
 St. Hanshaugen
 Napolitansk pizza. Bjerregaards gate 29B.
 - en: St. Hanshaugen
@@ -918,7 +918,7 @@ Sandwiches. Torggata 21B.
 ### Café Rouleur
 - sted: 59.92389, 10.74048
 - google: ChIJVS-zcXpuQUYRskn1VIzlKfk
-- nettside: https://www.rouleuroslo.no/
+- nettside: https://www.rouleuroslo.com/
 St. Hanshaugen
 Ullevålsveien 16A.
 - en: St. Hanshaugen

@@ -149,6 +149,13 @@ Sist oppdatert: 4. november 2026.
 
 ## Neste steg
 
+- Ukentlig sjekk 2026-11-04 (første kjøring, 607 nettsider; Instagram/Facebook hoppet over; Google-sjekk av stengte steder ble ikke gjort, kun nettsider + WebSearch):
+  - Stengt for godt: ingen funnet.
+  - Midlertidig stengt: ingen funnet.
+  - Ødelagt nettside: London, V&A East Storehouse (404 på vam.ac.uk/east/storehouse; ny adresse ser ut til å være https://www.vam.ac.uk/east/storehouse/visit — ikke endret, Pål bestemmer).
+  - Uklart (skymiljøet nådde dem ikke, trolig proxy/TLS og ikke brudd; sjekk gjerne selv): Spence Bakery (spencebakery.co.uk), Minetta Tavern (minettatavernny.com), Old Spitalfields Market, Le Panier Gourmand (lepaniergourmand-nice.fr), Maltby Street, Maguchi Kazunari, Arakawa-kommunens Nippori-side, TCDC (web.tcdc.or.th; www.tcdc.or.th virker).
+  - Oppdatert (301 til ny adresse): Scott's (scotts-mayfair.com), Kronotrop (kronotrop.com.tr), Farm Shop (farmshop.co.uk), Rouleur Oslo (rouleuroslo.com), Vesuvio (vesuviopizza.no).
+  - Ikke endret: Bellboy Berlin, Café Lavery og Beauty & Essex videresender til andre/overordnede sider.
 - Fyll på data etter hvert som Pål kommer med steder og navneendringer, i alle byer.
 - SMAK.md: Pål kan gi en liste over hoteller de liker godt; legg dem inn som eksempler under Hoteller.
   Oppdater profilen når Pål setter ★ eller sier hva han liker.
