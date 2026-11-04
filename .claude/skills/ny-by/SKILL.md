@@ -40,7 +40,8 @@ Stubb og bilder er kode → egen gren `ny-by-<id>`. Data og tekst kan ligge på 
 - `.claude/miniatyrer.sh` for `bilder/<id>.webp` og `bilder/<id>-mork.webp` (lys og mørk).
 
 ## 5. Sjekk
-- Start serveren (launch.json, «byguider») og åpne `http://localhost:8000/<id>/`: kartet, sonene, nabolagene,
+- Start serveren (`.claude/server.sh`, i Desktop-appen «byguider» i launch.json) og åpne `http://localhost:8000/<id>/`
+  (i skyøkt: forhåndsvisningen av grenen): kartet, sonene, nabolagene,
   infoboksen og lista, på mobil (390×844) og desktop (1300×900), lys og mørk modus, ingen JS-feil.
 - Byen skal ikke vises på forsiden så lenge den er skjult, men nås direkte på `/<id>/`.
 - Kjør /code-review og /simplify før fletting (se CLAUDE.md, Fletting). Flett når alt er i orden,
