@@ -7,10 +7,13 @@
 # alt Pages fortsatt regner som pågående, er rester og kan trygt avbrytes.
 #
 # Bruk: rydd-pages.sh <sekunder å vente>   (krever GH_TOKEN og GITHUB_REPOSITORY)
-set -u
+set -uo pipefail
 
 repo="$GITHUB_REPOSITORY"
-for sha in $(gh api "repos/$repo/deployments?environment=github-pages&per_page=10" --jq '.[].sha' | sort -u); do
+# Hver kjøring lager opptil tre publiseringer, så se langt nok bakover.
+shaer=$(gh api "repos/$repo/deployments?environment=github-pages&per_page=30" --jq '.[].sha' | sort -u) \
+  || echo "Fant ikke publiseringene (se feilen over); prøver uten å rydde"
+for sha in $shaer; do
   status=$(gh api "repos/$repo/pages/deployments/$sha" --jq .status 2>/dev/null) || continue
   case "$status" in
     # Tom status: Pages følger ikke lenger publiseringen.
