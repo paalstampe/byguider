@@ -7,6 +7,8 @@ Oppdateres ved slutten av hver økt (`/avslutt`).
 
 Sist oppdatert: 4. november 2026.
 
+- 4.11.: ukentlig skyjobb (routine) sjekker hver mandag kl. 06 om steder har stengt for godt og om nettsider virker, og skriver
+  «Ukentlig sjekk <dato>» under Neste steg. Den retter bare flyttede nettsider selv. Styres på https://claude.ai/code/routines/trig_01DvX7PTCcLcRy2QmYL2Jrcj
 - 4.11. kveld: Pål bekrefter at delingskortene vises i Meldinger. Nettsider lagt inn for Bar Penguin, Apollo Bar, Kihara, Ăn Đi,
   Kosho SamenoHa, Siwilai, Sarnies (sarnies.com) og Crowley Vintage (Instagram @crowley_vintage, én kilde).
   Jimbocho Book Center svarer igjen. Charoen 43 finnes fortsatt (Time Out omtaler et marked der i april 2026); Homu er ikke i dataene.
