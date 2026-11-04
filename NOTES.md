@@ -12,7 +12,7 @@ Sist oppdatert: 4. november 2026.
   tomt på hver side. Liggende-oppsettet gjelder nå uten breddegrense, siden iPhone Air er 912 px bred liggende;
   menyen vokser med innfellingen ved Dynamic Island, og kildehenvisningen holdes klar av øya.
 - 4.11.: nettbrett (PR #94). Stående iPad og ⅔ delt skjerm (700–1023 px) har menyen på 340 px ved siden av kartet.
-  Mobilbrytepunktet er flyttet fra 900 til 699 px. Testet i simulatoren (iPad Air 11" stående) og med Playwright.
+  Mobilbrytepunktet er flyttet fra 900 til 699 px. Testet i simulatoren (iPad Air 11" stående, og rotert til liggende og tilbake med siden åpen) og med Playwright.
 - 2.11.: kartknappene fra MapLibre har norsk tekst (PR #92): «Vis hvor jeg er», «Zoom inn» og «Zoom ut», og
   teksten bytter ved språkbytte. Posisjonsknappen zoomer til maks 15 i stedet for 16 (halvparten så langt inn).
 - 1.11.: kartet åpner der du er også når du svarer sent på spørsmålet om posisjon (PR #91). Fristen på 15 s
@@ -164,8 +164,6 @@ Sist oppdatert: 4. november 2026.
 - Et sted som bytter navn får ny lenke; delte lenker til det gamle navnet gir 404-siden.
 - Kart: på mobil ligger nabolagsfirkantene tett på laveste zoom i London. Se om det trengs noe (f.eks. mindre
   firkanter ved lav zoom) når Pål har brukt det en stund. Å skjule steder under nabolagene er prøvd og forkastet.
-- iPad: rotasjon med siden åpen (bytte mellom nettbrett- og desktopoppsett) er ikke testet. Simulatorpanelet
-  trenger tilgang til iPad Air 11" (lenken «Let Claude use it»), ellers kan Pål sjekke på sin iPad.
 
 ## Åpne spørsmål
 
