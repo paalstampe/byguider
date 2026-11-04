@@ -1,12 +1,11 @@
-# Publiserer siden på GitHub Pages:
+# Publiserer siden på GitHub Pages med den felles publiseringen i paalstampe.github.io
+# (.github/workflows/publiser.yml, som også stam.pe og reiseplanlegging bruker):
 #   main                -> stam.pe/byguider/
 #   alle andre grener   -> stam.pe/byguider/forhandsvisning/<gren>/
-#
-# Krever Settings -> Pages -> Source: «GitHub Actions».
-#
-# GitHub lar bare main publisere til Pages. En push til en annen gren
-# publiserer derfor ikke selv, men starter denne arbeidsflyten på main,
-# som så samler main og alle grener og publiserer alt samlet.
+# Kø, rydding av publiseringer som henger og nye forsøk står der.
+# Delingssidene per sted lages av .github/etter-sammensetting.sh.
+
+# Filen må hete pages.yml: ved push til en gren starter publiser.yml den på main ved navn.
 
 name: Publiser
 
@@ -16,88 +15,11 @@ on:
   workflow_dispatch:
 
 jobs:
-  utlos:
-    if: github.ref != 'refs/heads/main'
-    runs-on: ubuntu-latest
+  publiser:
+    uses: paalstampe/paalstampe.github.io/.github/workflows/publiser.yml@main
     permissions:
       actions: write
-    steps:
-      - name: Start publisering fra main
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: gh workflow run pages.yml --repo "${{ github.repository }}" --ref main
-
-  publiser:
-    if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    # Kjøringer står i kø i stedet for å avbryte hverandre. En avbrutt kjøring stopper ikke
-    # opplastingen hos Pages, og da feiler den neste med «in progress deployment»
-    # (skjedde når fletting og sletting av grenen startet hver sin kjøring).
-    concurrency:
-      group: pages
-      cancel-in-progress: false
-    permissions:
       contents: read
       pages: write
       id-token: write
-      deployments: read   # rydd-pages.sh finner publiseringene som henger
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy.outputs.page_url || steps.deploy2.outputs.page_url || steps.deploy3.outputs.page_url }}
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Sett sammen main og forhåndsvisninger
-        run: |
-          mkdir -p _site
-          git archive origin/main | tar -x -C _site
-          for ref in $(git for-each-ref --format='%(refname:short)' refs/remotes/origin/); do
-            gren="${ref#origin/}"
-            case "$gren" in main|HEAD|origin) continue ;; esac
-            mkdir -p "_site/forhandsvisning/$gren"
-            git archive "$ref" | tar -x -C "_site/forhandsvisning/$gren"
-            echo "Forhåndsvisning: $gren"
-          done
-          # Delingsside per sted (<by>/<slug>/), med stedets navn i delingskortet. Feiler den for en
-          # forhåndsvisning, publiseres resten likevel.
-          python3 .github/stedsider.py _site
-          find _site/forhandsvisning -name byer.json -not -path '*/data/*' 2>/dev/null | while read -r f; do
-            python3 .github/stedsider.py "$(dirname "$f")" || echo "Stedssider feilet: $f"
-          done
-          rm -rf _site/.github
-          touch _site/.nojekyll
-
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: _site
-      # Pages kan regne forrige publisering som pågående lenge etter at den kjøringen er ferdig
-      # (28.10., og 18+ minutter 4.11.), og avviser da med «in progress deployment», eller
-      # publiseringen henger til tidsavbruddet (10 min). Derfor avbryter vi det som henger før
-      # hvert forsøk, venter 5 minutter mellom forsøkene, og prøver opptil tre ganger i alt.
-      - name: Rydd før første forsøk
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: .github/rydd-pages.sh 0
-      - id: deploy
-        uses: actions/deploy-pages@v4
-        continue-on-error: true
-      - name: Rydd og vent før forsøk 2
-        if: steps.deploy.outcome == 'failure'
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: .github/rydd-pages.sh 300
-      - id: deploy2
-        if: steps.deploy.outcome == 'failure'
-        uses: actions/deploy-pages@v4
-        continue-on-error: true
-      - name: Rydd og vent før forsøk 3
-        if: steps.deploy2.outcome == 'failure'
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: .github/rydd-pages.sh 300
-      - id: deploy3
-        if: steps.deploy2.outcome == 'failure'
-        uses: actions/deploy-pages@v4
+      deployments: read

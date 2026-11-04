@@ -68,7 +68,7 @@ og lager forsidebildet på nytt.
 
 Deling: stubbene og forsiden har Open Graph-tagger, så lenker får kort i Meldinger, Slack og e-post.
 Kortet er per by. Ett sted deles med egen delingsside, `<by>/<slug>/` (f.eks. `london/conduit-coffee-house/`): «Del» i
-infoboksen lenker dit (`stedLenke`). Sidene lages ved publisering av `.github/stedsider.py` (i `pages.yml`, for main og
+infoboksen lenker dit (`stedLenke`). Sidene lages ved publisering av `.github/stedsider.py` (via `.github/etter-sammensetting.sh`, for main og
 hver forhåndsvisning) og committes ikke. De har og:-tittel = stedsnavnet og beskrivelse = kategori · første linje i notatet
 — guidens tittel, uten og:image, så Meldinger viser et lite kort med byens frimerke-ikon. Siden er en stubb som bysidene
 (`app.js` med `data-by` og `data-sted`) og viser kartet med infoboksen selv; den sender ikke videre, fordi Meldinger på
@@ -294,8 +294,9 @@ Cloudflare Pages er et alternativ hvis CDN-hastighet blir viktig.
 `.github/workflows/pages.yml` publiserer `main` på `stam.pe/byguider/` og hver annen gren på
 `stam.pe/byguider/forhandsvisning/<gren>/` (f.eks. `…/forhandsvisning/kartstil/london/`), ett–to
 minutter etter push. Slettede grener forsvinner ved neste publisering. Kjøringene står i kø
-(`cancel-in-progress: false`), så fletting og sletting av grenen ikke kolliderer hos Pages. Henger en publisering hos Pages,
-avbryter `.github/rydd-pages.sh` den før neste forsøk; det er tre forsøk med 5 min pause. Pages-kilden er
+(`cancel-in-progress: false`), så fletting og sletting av grenen ikke kolliderer hos Pages. Selve publiseringen er felles for
+stam.pe, byguider og reiseplanlegging: `pages.yml` kaller `publiser.yml` i paalstampe.github.io, som rydder publiseringer som henger
+hos Pages og prøver tre ganger med 5 min pause. Delingssidene per sted lages av `.github/etter-sammensetting.sh`. Pages-kilden er
 «GitHub Actions». Arbeidsflyt: data rett i `main`; kode på egen gren, sjekk forhåndsvisningen,
 flett.
 
