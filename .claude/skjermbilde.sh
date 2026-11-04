@@ -1,9 +1,11 @@
 #!/bin/bash
 # Skjermbilde av en side på stam.pe eller en lokal kopi. Virker både i Claude Code-containeren
 # i skyen og lokalt (Mac).
-# Bruk: .claude/skjermbilde.sh <url> <fil.png> [bredde] [høyde] [hel]
+# Bruk: .claude/skjermbilde.sh <url> <fil.png> [bredde] [høyde] [hel] [mork]
+#   hel = hele siden, mork = mørk modus (prefers-color-scheme: dark); i valgfri rekkefølge.
 #   f.eks. .claude/skjermbilde.sh https://stam.pe/byguider/oslo/ oslo.png 390 844        (mobil)
 #          .claude/skjermbilde.sh https://stam.pe/byguider/oslo/ oslo.png 1300 900 hel  (hele siden)
+#          .claude/skjermbilde.sh https://stam.pe/byguider/oslo/ oslo-mork.png 390 844 mork  (mørk modus)
 #          .claude/skjermbilde.sh http://localhost:8000/oslo/ oslo.png 390 844          (lokalt)
 # Lokal kopi: kjør først .claude/server.sh. Kartet virker fordi app.js
 # bruker den egne localhost-nøkkelen til CARTO.
@@ -26,7 +28,15 @@ url="${1:?url mangler}"
 fil="${2:?utfil mangler}"
 bredde="${3:-1300}"
 hoyde="${4:-900}"
-hel="${5:-}"
+hel=""
+mork=""
+for valg in "${@:5}"; do
+  case "$valg" in
+    hel) hel=hel ;;
+    mork) mork=mork ;;
+    *) echo "Ukjent valg «$valg» (bruk hel og/eller mork)" >&2; exit 1 ;;
+  esac
+done
 
 case "$url" in
   https://stam.pe/*|http://localhost:*|http://127.0.0.1:*) ;;
@@ -54,7 +64,7 @@ if [ -n "${HTTPS_PROXY:-}" ] && [ -f "$ca" ]; then
   done | sort -u | paste -sd, -)
 fi
 
-URL="$url" FIL="$fil" BREDDE="$bredde" HOYDE="$hoyde" HEL="$hel" PROXY="$proxy" SPKI="$spki" \
+URL="$url" FIL="$fil" BREDDE="$bredde" HOYDE="$hoyde" HEL="$hel" MORK="$mork" PROXY="$proxy" SPKI="$spki" \
 NODE_PATH="$(npm root -g)" node - <<'JS'
 const { chromium } = require('playwright');
 (async () => {
@@ -67,7 +77,8 @@ const { chromium } = require('playwright');
        '--use-gl=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist']
     : [];
   const nettleser = await chromium.launch({ args });
-  const side = await nettleser.newPage({ viewport: { width: +e.BREDDE, height: +e.HOYDE } });
+  const side = await nettleser.newPage({ viewport: { width: +e.BREDDE, height: +e.HOYDE },
+    colorScheme: e.MORK ? 'dark' : 'light' });
   const feil = [];
   side.on('requestfailed', r => feil.push(r.url() + ' ' + r.failure()?.errorText));
   side.on('pageerror', f => feil.push('JS: ' + f.message));
