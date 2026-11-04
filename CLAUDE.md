@@ -28,6 +28,9 @@ Hold HANDOVER.md oppdatert når noe vesentlig endres i teknikk eller design (f.e
   legg til «hel» for hele siden. Tillatt: https://stam.pe/... og http://localhost:<port>/... (eller 127.0.0.1)
   (kjør .claude/server.sh i bakgrunnen først — gir rask sjekk før push). Virker i skyen og på Macen;
   på Macen kreves Node og Playwright (installasjon øverst i skriptet).
+- iPhone-spesifikt (liggende, notch/Dynamic Island, safe area, Safaris verktøylinje, rotasjon): bruk
+  iOS-simulatoren (Xcode er installert på Macen) via simulatorverktøyet, f.eks. åpne URL i Safari og rotere.
+  Playwright holder for vanlige layoutsjekker og er raskere; simulatoren er sluttsjekken for iPhone. Ikke i skyøkter.
 - Fletting: Kan du selv verifisere at alt er i orden (skjermbilder mobil + desktop, ingen JS-feil),
   åpne PR og flett uten å spørre. Er det noe Pål bør se på (designvalg, smak, usikkerhet), vis ham det
   (lokalt: localhost; sky: push grenen og oppgi forhåndsvisningen) og vent — flett når han sier ok.
