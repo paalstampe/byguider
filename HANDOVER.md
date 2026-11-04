@@ -27,7 +27,7 @@ Se NOTES.md (Status nå). Historikken over hva som er bygget står i punkt 10.5.
 ## 3. Filer
 
 Arbeidskatalogen er den lokale klonen av repoet `paalstampe/byguider`:
-`/Users/palstampe/Documents/GitHub/byguider/`. Dette er eneste gjeldende kopi.
+`/Users/palstampe/Developer/byguider/`. Dette er eneste gjeldende kopi.
 
 ```
 byguider/
