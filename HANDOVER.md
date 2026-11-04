@@ -294,7 +294,8 @@ Cloudflare Pages er et alternativ hvis CDN-hastighet blir viktig.
 `.github/workflows/pages.yml` publiserer `main` på `stam.pe/byguider/` og hver annen gren på
 `stam.pe/byguider/forhandsvisning/<gren>/` (f.eks. `…/forhandsvisning/kartstil/london/`), ett–to
 minutter etter push. Slettede grener forsvinner ved neste publisering. Kjøringene står i kø
-(`cancel-in-progress: false`), så fletting og sletting av grenen ikke kolliderer hos Pages. Pages-kilden er
+(`cancel-in-progress: false`), så fletting og sletting av grenen ikke kolliderer hos Pages. Henger en publisering hos Pages,
+avbryter `.github/rydd-pages.sh` den før neste forsøk; det er tre forsøk med 5 min pause. Pages-kilden er
 «GitHub Actions». Arbeidsflyt: data rett i `main`; kode på egen gren, sjekk forhåndsvisningen,
 flett.
 

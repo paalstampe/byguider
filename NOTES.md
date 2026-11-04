@@ -7,6 +7,10 @@ Oppdateres ved slutten av hver økt (`/avslutt`).
 
 Sist oppdatert: 4. november 2026.
 
+- 4.11. kveld: publiseringen feilet gjentatte ganger fordi Pages regnet en publisering som pågående lenge etter at den var
+  ferdig («in progress deployment … Please cancel <sha> first»), eller hang til tidsavbruddet. GitHub hadde hendelser med
+  Actions og Pages samme kveld. Alle tre repoene har nå kø (`cancel-in-progress: false`), rydding av Pages-publiseringer som
+  henger, og tre forsøk med 5 min pause (byguider #102, reiseplanlegging #32, paalstampe.github.io #22).
 - 4.11. kveld: verktøyoversikten (claude-oppsett#1). `.claude/valider.sh` sjekker nå også filer endret i Bash
   (sed, skript): JSON/GeoJSON/Python som git ser som endret siden forrige godkjenning, og melder en ødelagt fil til den er rettet.
   Stop-hooken `sky-push.sh` har `onFailure: block`. CLAUDE.md: vent med `gh run watch` før skjermbilder av forhåndsvisningen,
@@ -155,6 +159,15 @@ Sist oppdatert: 4. november 2026.
 
 ## Neste steg
 
+- Publiseringen: felles workflow `publiser.yml` ligger i paalstampe.github.io (#23), men har ikke fått publisert ennå. Pages blokkerte
+  i over 22 min (21:22–21:44) på 61535b4, som ifølge API-et er ferdig og ikke kan avbrytes («as it's finished»). Sjekk først at
+  stam.pe publiserer igjen (`gh workflow run pages.yml -R paalstampe/paalstampe.github.io`). Gjør den det, flytt byguider og
+  reiseplanlegging over: `pages.yml` kaller `paalstampe/paalstampe.github.io/.github/workflows/publiser.yml@main` med
+  permissions actions: write, contents: read, pages: write, id-token: write, deployments: read; byguider flytter stedsider-linjene
+  til `.github/etter-sammensetting.sh` og sletter `.github/rydd-pages.sh`.
+- Mistanke (ikke bekreftet): det som henger er alltid en commit som er publisert to eller flere ganger like etter hverandre
+  (a44b14d, 0adc444, 61535b4). Hver push til en gren publiserer main på nytt, også når main er uendret. Kan løses med å hoppe over
+  publisering når innholdet er likt, eller ved å samle grenpusher.
 - Ukentlig sjekk 2026-11-04 (første kjøring, 607 nettsider; Instagram/Facebook hoppet over; Google-sjekk av stengte steder ble ikke gjort, kun nettsider + WebSearch):
   - Stengt for godt: ingen funnet.
   - Midlertidig stengt: ingen funnet.
@@ -199,6 +212,9 @@ Sist oppdatert: 4. november 2026.
 
 ## Beslutningslogg
 
+- 2026-11-04: Publiseringen rydder Pages-publiseringer som henger og prøver tre ganger med 5 min pause. Ferdige publiseringer
+  («succeed») kan ikke avbrytes, selv når Pages sier de blokkerer; da hjelper bare venting. Lengre pauser er ikke lagt inn, siden
+  blokkeringen 4.11. varte over 22 min og må løses ved årsaken.
 - 2026-11-04: valider.sh kjører også etter Bash, siden auto mode ofte endrer filer med sed og skript, som før gikk utenom sjekken.
 - 2026-11-04: UI-endringer sjekkes med axe-core (lys og mørk) før fletting. Brudd som krever nye farger tas med Pål.
 - 2026-11-04: Claude kjører /code-review og /simplify selv før fletting av kodeendringer, så Pål slipper å be om det.
