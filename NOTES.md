@@ -269,8 +269,6 @@ Sist oppdatert: 4. november 2026.
 - 2026-10-17: Nabolagsikonet ligger midt i kjernen, ellers midt i området, ikke på `sted:` fra Google.
 - 2026-10-18: Løpende status flyttes fra HANDOVER.md (punkt 2 og 8) til NOTES.md. HANDOVER.md blir referanse.
 - 2026-10-18: De to EKSEMPEL-oppføringene i London (Hermanos Coffee Roasters og WWT London Wetland Centre) er fjernet.
-- 2026-10-18: KML-eksport er fortsatt aktuelt, men skal scopes før vi setter i gang.
-- 2026-10-18: Notatet om å rette eksempel-linjene i geojson er utdatert. De to linjene (én gate, én gåtur) lå i den opprinnelige london.geojson fra 20.9. og finnes ikke lenger.
 - 2026-10-18: «Tips til nabolag i London.md» er slettet. Innholdet ligger i data/london.md, og Pål har notert de få tipsene som ikke kom med.
 - 2026-10-18: «Claude outputs/github-pages-oppsett-reiseplanlegger.md» er slettet. Den var en kopi av et utdatert oppsettnotat fra reiseplanlegging.
 - 2026-10-18: Nabolagsomriss skal være presise i alle byer: offentlige grenser først, ellers grensegater sporet i OSM, med `kilde` i hver feature. Fremgangsmåten står i CLAUDE.md.
