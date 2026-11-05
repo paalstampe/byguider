@@ -1,4 +1,5 @@
 #!/bin/sh
+# Originalen ligger i claude-oppsett/repo-filer; endre den der og kjør synk-repoer.sh.
 # Stop-hook, bare i skyøkter (CLAUDE_CODE_REMOTE=true): stopper ikke før committede endringer er pushet,
 # så ingenting blir liggende igjen i skycontaineren.
 [ "$CLAUDE_CODE_REMOTE" = "true" ] || exit 0
