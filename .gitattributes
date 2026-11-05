@@ -1,0 +1,11 @@
+# Hører til repoet, ikke nettsiden: git archive tar dem ikke med, og publiseringen
+# (paalstampe.github.io/.github/workflows/publiser.yml) bygger nettsiden med git archive.
+# Gjelder også forhåndsvisningene. Ny fil som ikke skal på nettsiden: legg den til her.
+/.gitattributes export-ignore
+/.github export-ignore
+/.claude export-ignore
+/CLAUDE.md export-ignore
+/NOTES.md export-ignore
+/HANDOVER.md export-ignore
+/SMAK.md export-ignore
+/README.md export-ignore
