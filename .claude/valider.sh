@@ -1,4 +1,5 @@
 #!/bin/sh
+# Originalen ligger i claude-oppsett/repo-filer; endre den der og kjør synk-repoer.sh.
 # PostToolUse-hook (Write|Edit|Bash): sjekker at JSON/GeoJSON/YAML er gyldig, uten dupliserte nøkler, og at Python kompilerer.
 # Dupliserte nøkler godtas stille av vanlige parsere (siste vinner), og ga 4.11. en workflow med to like jobber.
 # Write/Edit: filen som ble skrevet. Bash: filer git ser som endret eller nye, og som er endret siden forrige

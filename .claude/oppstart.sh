@@ -1,5 +1,6 @@
 #!/bin/sh
-# SessionStart-hook: forteller Claude om repoet må pulles eller pushes, og om /avslutt er lik originalen.
+# SessionStart-hook: forteller Claude om repoet må pulles eller pushes, og om de felles filene er like originalene.
+# Originalen til denne filen ligger i claude-oppsett/repo-filer; endre den der og kjør synk-repoer.sh.
 # Utdata legges i Claudes kontekst ved oppstart. Henter automatisk (pull --ff-only) når det er trygt:
 # arbeidstreet er rent og grenen bare ligger bak origin.
 cd "$(git rev-parse --show-toplevel 2>/dev/null)" 2>/dev/null || exit 0
@@ -19,9 +20,11 @@ else
   echo "Git-sjekk: grenen $gren har ingen oppstrøm på origin."
 fi
 [ "$endret" -gt 0 ] && echo "Git-sjekk: $endret fil(er) har ucommittede endringer fra før."
-# /avslutt: originalen ligger i claude-oppsett (symlenket til ~/.claude/skills/avslutt). Finnes bare lokalt.
-original="$HOME/.claude/skills/avslutt/SKILL.md"
-if [ -f "$original" ] && ! cmp -s "$original" .claude/skills/avslutt/SKILL.md; then
-  echo "Avslutt-sjekk: .claude/skills/avslutt/SKILL.md avviker fra originalen i claude-oppsett. Finn ut hvilken som er nyest, oppdater originalen ved behov og kjør ~/Developer/claude-oppsett/synk-avslutt.sh."
+# Felles filer (hooks og /avslutt) har originalen i claude-oppsett, ved siden av ~/.claude/CLAUDE.md. Finnes bare lokalt.
+oppsett=$(dirname "$(readlink "$HOME/.claude/CLAUDE.md" 2>/dev/null || echo /finnes/ikke)")
+[ -x "$oppsett/synk-repoer.sh" ] || oppsett="$HOME/Developer/claude-oppsett"
+if [ -x "$oppsett/synk-repoer.sh" ]; then
+  avvik=$("$oppsett/synk-repoer.sh" --sjekk "$PWD" 2>/dev/null | tr '\n' ' ')
+  [ -n "$avvik" ] && echo "Synk-sjekk: ${avvik}avviker fra originalen i claude-oppsett. Finn ut hvilken som er nyest, oppdater originalen ved behov og kjør $oppsett/synk-repoer.sh \"kort beskrivelse\"."
 fi
 exit 0
