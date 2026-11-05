@@ -51,7 +51,8 @@ Hold HANDOVER.md oppdatert når noe vesentlig endres i teknikk eller design (f.e
   (preview_start), der du kan se, klikke og lese konsollen selv. Portene er 8000 byguider, 8001 reiseplanlegging,
   8002 stam.pe, så alle tre kan kjøre samtidig.
 - Hooks i .claude/settings.json: ved oppstart sjekker .claude/oppstart.sh om grenen ligger bak eller foran origin
-  (henter selv med pull --ff-only når det er trygt) og om /avslutt avviker fra claude-oppsett — følg det den sier.
+  (henter selv med pull --ff-only når det er trygt) og om felles filer avviker fra claude-oppsett — følg det den sier. oppstart.sh, valider.sh, sky-push.sh og /avslutt
+  er kopier: endre originalen i claude-oppsett og kjør synk-repoer.sh der.
   .claude/valider.sh sjekker JSON/GeoJSON/YAML/Python (også dupliserte nøkler) etter hver Write/Edit, og etter Bash-kommandoer filene git ser som endret.
   I skyøkter stopper .claude/sky-push.sh ikke før committede endringer er pushet.
 - Lokal eller sky velges når Pål starter økta. Kode- og designarbeid går raskest lokalt på Macen;
