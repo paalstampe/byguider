@@ -7,6 +7,9 @@ Oppdateres ved slutten av hver økt (`/avslutt`).
 
 Sist oppdatert: 5. november 2026.
 
+- 5.11.: publiseringen er samlet og gjort robust. Én felles workflow for alle tre repoene (publiser.yml i paalstampe.github.io),
+  som hopper over uendret innhold, og dokumentasjon og .claude/ publiseres ikke lenger (`.gitattributes`). Verifisert i alle tre:
+  en commit som bare endrer dokumentasjon gir ingen ny publisering. Detaljer under Neste steg og i beslutningsloggen.
 - 4.11. kveld: publiseringen feilet gjentatte ganger fordi Pages regnet en publisering som pågående lenge etter at den var
   ferdig («in progress deployment … Please cancel <sha> first»), eller hang til tidsavbruddet. GitHub hadde hendelser med
   Actions og Pages samme kveld. Alle tre repoene har nå kø (`cancel-in-progress: false`), rydding av Pages-publiseringer som

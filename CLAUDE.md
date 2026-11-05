@@ -24,6 +24,9 @@ Hold HANDOVER.md oppdatert når noe vesentlig endres i teknikk eller design (f.e
   Unntak: skal Pål teste på telefonen (berøring, liggende, iPhone), push grenen og gi ham forhåndsvisningen.
   Skyøkt: push grenen; forhåndsvisningen er https://stam.pe/byguider/forhandsvisning/<gren>/london/
   (klar 1–2 min etter push, bygges av .github/workflows/pages.yml).
+- Publiseringen er felles for stam.pe, byguider og reiseplanlegging: `.github/workflows/pages.yml` kaller `publiser.yml` i
+  paalstampe.github.io (endres der, gjelder alle tre). Den hopper over uendret innhold (`publisert.txt`), rydder Pages-publiseringer
+  som henger og prøver tre ganger. Filer som ikke skal på nettsiden (dokumentasjon, .claude/), merkes `export-ignore` i `.gitattributes`.
 - Etter push av en gren: vent på publiseringen før skjermbilder av forhåndsvisningen, i bakgrunnen med
   `gh run watch $(gh run list --commit $(git rev-parse HEAD) -L1 --json databaseId -q '.[0].databaseId') --exit-status`
   (kjøringen dukker opp noen sekunder etter push).
@@ -49,7 +52,7 @@ Hold HANDOVER.md oppdatert når noe vesentlig endres i teknikk eller design (f.e
   8002 stam.pe, så alle tre kan kjøre samtidig.
 - Hooks i .claude/settings.json: ved oppstart sjekker .claude/oppstart.sh om grenen ligger bak eller foran origin
   (henter selv med pull --ff-only når det er trygt) og om /avslutt avviker fra claude-oppsett — følg det den sier.
-  .claude/valider.sh sjekker JSON/GeoJSON/Python etter hver Write/Edit, og etter Bash-kommandoer filene git ser som endret.
+  .claude/valider.sh sjekker JSON/GeoJSON/YAML/Python (også dupliserte nøkler) etter hver Write/Edit, og etter Bash-kommandoer filene git ser som endret.
   I skyøkter stopper .claude/sky-push.sh ikke før committede endringer er pushet.
 - Lokal eller sky velges når Pål starter økta. Kode- og designarbeid går raskest lokalt på Macen;
   data og dokumentasjon går like bra i sky. Får du en kode- eller designoppgave i en skyøkt,
