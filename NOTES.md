@@ -5,7 +5,7 @@ Oppdateres ved slutten av hver økt (`/avslutt`).
 
 ## Status nå
 
-Sist oppdatert: 4. november 2026.
+Sist oppdatert: 5. november 2026.
 
 - 4.11. kveld: publiseringen feilet gjentatte ganger fordi Pages regnet en publisering som pågående lenge etter at den var
   ferdig («in progress deployment … Please cancel <sha> first»), eller hang til tidsavbruddet. GitHub hadde hendelser med
@@ -165,9 +165,13 @@ Sist oppdatert: 4. november 2026.
   (paalstampe.github.io #23, byguider #105, reiseplanlegging #35). Endringer gjøres der og gjelder alle tre fra neste kjøring.
   Byguiders delingssider lages av `.github/etter-sammensetting.sh`. Første publisering på stam.pe ble blokkert i rundt 30 min
   (21:22–ca. 21:55) av en publisering som ifølge API-et var ferdig og ikke kunne avbrytes; tredje forsøk gikk gjennom.
-- Mistanke (ikke bekreftet): det som henger er alltid en commit som er publisert to eller flere ganger like etter hverandre
-  (a44b14d, 0adc444, 61535b4). Hver push til en gren publiserer main på nytt, også når main er uendret. Kan løses med å hoppe over
-  publisering når innholdet er likt, eller ved å samle grenpusher.
+- Publiseringen hopper over når innholdet er det samme som det som ligger ute (paalstampe.github.io #26, 5.11.): et avtrykk av
+  alle filene ligger som `publisert.txt` og sammenlignes. Verifisert: første kjøring publiserte og neste hoppet over, i alle tre;
+  ved fletting publiserte push-kjøringen og sletting av grenen hoppet over. Pages kan likevel henge på én enkelt publisering:
+  4.11. kl. 22:20 tidsavbrøt alle tre forsøkene på stam.pe (en NOTES-commit). Fikk dette ofte, er neste skritt lengre ventetid.
+- Mulig: hold dokumentasjonen (CLAUDE.md, NOTES.md, HANDOVER.md, SMAK.md, .claude/) utenfor nettsiden. Den publiseres i dag
+  (f.eks. stam.pe/NOTES.md), så hver NOTES-commit gir en ny publisering. Repoene er offentlige, så det er ingen hemmelighet.
+  OBS: byguiders data/*.md må publiseres.
 - Ukentlig sjekk 2026-11-04 (første kjøring, 607 nettsider; Instagram/Facebook hoppet over; Google-sjekk av stengte steder ble ikke gjort, kun nettsider + WebSearch):
   - Stengt for godt: ingen funnet.
   - Midlertidig stengt: ingen funnet.
@@ -212,6 +216,8 @@ Sist oppdatert: 4. november 2026.
 
 ## Beslutningslogg
 
+- 2026-11-05: Publiseringen hopper over når innholdet er likt det som er ute (avtrykk i `publisert.txt`). Gjentatte
+  publiseringer av samme innhold var det som oftest hang hos Pages 4.11.
 - 2026-11-04: Publiseringen bruker den felles workflowen i paalstampe.github.io (`publiser.yml@main`), så kø, rydding og forsøk
   bare vedlikeholdes ett sted. Ulempen er at en feil der rammer alle tre.
 - 2026-11-04: Publiseringen rydder Pages-publiseringer som henger og prøver tre ganger med 5 min pause. Ferdige publiseringer
