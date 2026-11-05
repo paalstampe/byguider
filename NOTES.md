@@ -166,6 +166,9 @@ Sist oppdatert: 5. november 2026.
 
 ## Neste steg
 
+- Gjøremål (Pål sa ja 5.11.): endre `oppstart.sh` i claude-oppsett så den i skyøkter tilbakestiller lokal `main` til
+  origin/main når den har gått fra hverandre og ikke har egne commits som mangler på origin. 5.11. hadde skykopien
+  67 commits hver vei og `pull --ff-only` feilet. Kjør `synk-repoer.sh` etterpå.
 - Zoom på mobil etter større kart: sjekk lokalt i iOS-simulatoren (stående og liggende, alle byer). Funn så langt:
   bare London har fast mobilutsnitt (`senter-mobil`/`zoom-mobil: 10.7`), og det brukes bare under 700 px bredde (stående).
   Andre byer, liggende og nettbrett bruker `fitBounds` med padding 50, som tilpasser seg kartstørrelsen av seg selv.
