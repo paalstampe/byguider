@@ -7,6 +7,8 @@ Oppdateres ved slutten av hver økt (`/avslutt`).
 
 Sist oppdatert: 5. november 2026.
 
+- 5.11. (skyøkt): Pål spurte om zoom på mobil fortsatt stemmer etter at kartet ble større. Ikke sjekket ferdig;
+  flyttet til Desktop med Xcode (se Neste steg).
 - 5.11.: publiseringen er samlet og gjort robust. Én felles workflow for alle tre repoene (publiser.yml i paalstampe.github.io),
   som hopper over uendret innhold, og dokumentasjon og .claude/ publiseres ikke lenger (`.gitattributes`). Verifisert i alle tre:
   en commit som bare endrer dokumentasjon gir ingen ny publisering. Detaljer under Neste steg og i beslutningsloggen.
@@ -164,6 +166,11 @@ Sist oppdatert: 5. november 2026.
 
 ## Neste steg
 
+- Zoom på mobil etter større kart: sjekk lokalt i iOS-simulatoren (stående og liggende, alle byer). Funn så langt:
+  bare London har fast mobilutsnitt (`senter-mobil`/`zoom-mobil: 10.7`), og det brukes bare under 700 px bredde (stående).
+  Andre byer, liggende og nettbrett bruker `fitBounds` med padding 50, som tilpasser seg kartstørrelsen av seg selv.
+  Stående mobilkart er 58vh (min. 340 px) i main; endringen av mobilrammene var ikke committet i byguider da dette ble sjekket.
+  Er London-kartet for vidt, øk `zoom-mobil` (f.eks. 10.9–11) i data/london.md.
 - Publiseringen er felles for alle tre: `pages.yml` kaller `paalstampe/paalstampe.github.io/.github/workflows/publiser.yml@main`
   (paalstampe.github.io #23, byguider #105, reiseplanlegging #35). Endringer gjøres der og gjelder alle tre fra neste kjøring.
   Byguiders delingssider lages av `.github/etter-sammensetting.sh`. Første publisering på stam.pe ble blokkert i rundt 30 min
