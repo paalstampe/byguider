@@ -171,7 +171,8 @@ Sist oppdatert: 5. november 2026.
   4.11. kl. 22:20 tidsavbrøt alle tre forsøkene på stam.pe (en NOTES-commit). Fikk dette ofte, er neste skritt lengre ventetid.
 - Dokumentasjon og Claude-oppsett (CLAUDE.md, NOTES.md, HANDOVER.md, SMAK.md, README.md, .claude/, .github/) publiseres ikke
   lenger, heller ikke i forhåndsvisningene (paalstampe.github.io #27, 5.11.). En commit som bare endrer dokumentasjon gir da ingen
-  ny publisering. Byguidenes data/*.md publiseres som før. Ny dokumentasjonsfil: legg navnet inn i `uten_dokumentasjon` i publiser.yml.
+  ny publisering. Byguidenes data/*.md publiseres som før. Hvert repo bestemmer selv hva som ikke publiseres, med `export-ignore` i `.gitattributes`
+  (byguider #106, reiseplanlegging #36, paalstampe.github.io #28); ny fil som ikke skal på nettsiden legges inn der.
 - Ukentlig sjekk 2026-11-04 (første kjøring, 607 nettsider; Instagram/Facebook hoppet over; Google-sjekk av stengte steder ble ikke gjort, kun nettsider + WebSearch):
   - Stengt for godt: ingen funnet.
   - Midlertidig stengt: ingen funnet.
@@ -216,6 +217,8 @@ Sist oppdatert: 5. november 2026.
 
 ## Beslutningslogg
 
+- 2026-11-05: Hva som ikke publiseres, står i hvert repos `.gitattributes` (`export-ignore`), ikke i den felles workflowen.
+  git archive respekterer det, også for forhåndsvisningene. Bieffekt: GitHubs «Download ZIP» mangler dokumentasjonen.
 - 2026-11-05: Dokumentasjonen publiseres ikke. Det er ikke for å skjule noe (repoene er offentlige), men så commits som bare
   endrer dokumentasjon ikke gir nye publiseringer, som er det som henger hos Pages.
 - 2026-11-05: Publiseringen hopper over når innholdet er likt det som er ute (avtrykk i `publisert.txt`). Gjentatte
