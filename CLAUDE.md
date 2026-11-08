@@ -3,7 +3,7 @@ Gjeldende status (lastes inn automatisk):
 
 # Byguider — arbeidsregler for Claude
 
-Pål og Vibekes byguider (London, Nice, Oslo, New York, Tokyo, Bangkok) på kart. Live på https://stam.pe/byguider/.
+Pål og Vibekes byguider (London, Nice, Oslo, New York, Tokyo, Bangkok; Berlin og Mexico City skjult) på kart. Live på https://stam.pe/byguider/.
 Løpende status, neste steg, åpne spørsmål og beslutningslogg: NOTES.md (oppdateres ved slutten av hver økt).
 Les HANDOVER.md før større endringer — den har datamodell, design og teknikk.
 Foreslår du steder selv (ny by eller påfyll uten Påls tips): les SMAK.md, smaksprofilen per kategori,
@@ -109,6 +109,8 @@ Playwright med `colorScheme: 'light'` og `'dark'`. Ta bildene fra stam.pe etter 
   !3d<bredde>!4d<lengde>; Place ID = base64url(0a 12 09 + a som 8 byte little-endian + 11 + b som 8 byte LE),
   uten «=». Gir søket en liste, har lenkene ChIJ… direkte i «!19s». Bruk OpenStreetMap bare som reserve,
   og si fra hvis du er usikker på plasseringen.
+- Mange steder samtidig (ny by, lang liste fra Pål): bruk `.claude/skills/ny-by/slaopp.js` i nettleserpanelet på google.com/maps.
+  Ett kall per sted gir navn, område, koordinater, Place ID, vurdering, nettside og om stedet er stengt.
 - Kortlenker (maps.app.goo.gl) løses uten nettleser: curl -sI gir plass-URL-en i Location. Nettside og adresse:
   åpne google.com/maps/place/?q=place_id:<id>&hl=en i nettleserpanelet, vent 3 s, ta et lite skjermbilde
   (ellers tegnes ikke panelet), og bruk find «Website:» / «Address:» / «ermanently» (stengt).
@@ -132,6 +134,8 @@ Playwright med `colorScheme: 'light'` og `'dark'`. Ta bildene fra stam.pe etter 
      Tokyo: chōme-grensene fra folketellingen 2020 (e-Stat, statmap-search, shapefil per bydel, JGD2011 ≈ WGS84),
      slått sammen per nabolag.
      Bangkok: kvartalene (khwaeng) og distriktene (khet) som administrative grenser i OpenStreetMap (Overpass).
+     Mexico City: coloniene som administrative grenser i OSM (admin_level 10); Centro Histórico som «Perímetro A»
+     (protected_area). Mangler en colonia, kan postnummer-relasjonene i OSM brukes (de følger coloniene). datos.cdmx.gob.mx svarte ikke.
   2. Passer en offentlig grense med nabolaget, bruk den (gjerne som kjerne hvis den er smalere enn nabolaget).
   3. Ellers: velg grensegatene og spor dem i OSM (Overpass) fra kryss til kryss, så omrisset følger gatene og
      kystlinjen. Hovedgaten skal ligge inni, ikke være kanten, når butikkene ligger på begge sider.
