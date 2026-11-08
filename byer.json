@@ -6,6 +6,7 @@
     {"id": "new-york", "navn": "New York", "data": "data/new-york.md", "geometri": "data/new-york-geometri.geojson"},
     {"id": "tokyo", "navn": "Tokyo", "data": "data/tokyo.md", "geometri": "data/tokyo-geometri.geojson"},
     {"id": "bangkok", "navn": "Bangkok", "data": "data/bangkok.md", "geometri": "data/bangkok-geometri.geojson"},
-    {"id": "berlin", "navn": "Berlin", "data": "data/berlin.md", "geometri": "data/berlin-geometri.geojson", "skjult": true}
+    {"id": "berlin", "navn": "Berlin", "data": "data/berlin.md", "geometri": "data/berlin-geometri.geojson", "skjult": true},
+    {"id": "mexico-city", "navn": "Mexico City", "data": "data/mexico-city.md", "geometri": "data/mexico-city-geometri.geojson", "skjult": true}
   ]
 }
