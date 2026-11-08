@@ -7,6 +7,8 @@
     {"id": "tokyo", "navn": "Tokyo", "data": "data/tokyo.md", "geometri": "data/tokyo-geometri.geojson"},
     {"id": "bangkok", "navn": "Bangkok", "data": "data/bangkok.md", "geometri": "data/bangkok-geometri.geojson"},
     {"id": "berlin", "navn": "Berlin", "data": "data/berlin.md", "geometri": "data/berlin-geometri.geojson", "skjult": true},
-    {"id": "mexico-city", "navn": "Mexico City", "data": "data/mexico-city.md", "geometri": "data/mexico-city-geometri.geojson", "skjult": true}
+    {"id": "mexico-city", "navn": "Mexico City", "data": "data/mexico-city.md", "geometri": "data/mexico-city-geometri.geojson", "skjult": true},
+    {"id": "kairo", "navn": "Kairo", "navn_en": "Cairo", "data": "data/kairo.md", "geometri": "data/kairo-geometri.geojson", "skjult": true},
+    {"id": "luxor", "navn": "Luxor", "data": "data/luxor.md", "geometri": "data/luxor-geometri.geojson", "skjult": true}
   ]
 }

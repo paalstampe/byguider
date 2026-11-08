@@ -3,7 +3,7 @@ Gjeldende status (lastes inn automatisk):
 
 # Byguider — arbeidsregler for Claude
 
-Pål og Vibekes byguider (London, Nice, Oslo, New York, Tokyo, Bangkok; Berlin og Mexico City skjult) på kart. Live på https://stam.pe/byguider/.
+Pål og Vibekes byguider (London, Nice, Oslo, New York, Tokyo, Bangkok; Berlin, Mexico City, Kairo og Luxor skjult) på kart. Live på https://stam.pe/byguider/.
 Løpende status, neste steg, åpne spørsmål og beslutningslogg: NOTES.md (oppdateres ved slutten av hver økt).
 Les HANDOVER.md før større endringer — den har datamodell, design og teknikk.
 Foreslår du steder selv (ny by eller påfyll uten Påls tips): les SMAK.md, smaksprofilen per kategori,
@@ -136,6 +136,8 @@ Playwright med `colorScheme: 'light'` og `'dark'`. Ta bildene fra stam.pe etter 
      Bangkok: kvartalene (khwaeng) og distriktene (khet) som administrative grenser i OpenStreetMap (Overpass).
      Mexico City: coloniene som administrative grenser i OSM (admin_level 10); Centro Histórico som «Perímetro A»
      (protected_area). Mangler en colonia, kan postnummer-relasjonene i OSM brukes (de følger coloniene). datos.cdmx.gob.mx svarte ikke.
+     Kairo og Luxor: shiakhaene (minste administrative enhet) ligger i OSM som `place=neighbourhood`-flater, ikke som
+     admin-grenser; slå dem sammen per nabolag. De kan ta med Nilen, så klipp mot elveflaten (relasjon water=river).
   2. Passer en offentlig grense med nabolaget, bruk den (gjerne som kjerne hvis den er smalere enn nabolaget).
   3. Ellers: velg grensegatene og spor dem i OSM (Overpass) fra kryss til kryss, så omrisset følger gatene og
      kystlinjen. Hovedgaten skal ligge inni, ikke være kanten, når butikkene ligger på begge sider.
