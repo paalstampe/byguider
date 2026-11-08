@@ -1,7 +1,7 @@
 ---
-tittel: Pål og Vibekes Mexico City
+tittel: Pål, Vibeke og Heddas Mexico City
 undertittel: Nabolag, gater og steder verdt en omvei.
-tittel-en: Pål and Vibeke’s Mexico City
+tittel-en: Pål, Vibeke and Hedda’s Mexico City
 undertittel-en: Neighbourhoods, streets and places worth a detour.
 kicker: En høyst subjektiv guide
 kicker-en: An opinionated guide

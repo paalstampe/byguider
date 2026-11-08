@@ -7,7 +7,7 @@ Oppdateres ved slutten av hver økt (`/avslutt`).
 
 Sist oppdatert: 8. november 2026.
 
-- 8.11.: Mexico City lagt inn som skjult by (`"skjult": true`), nås på stam.pe/byguider/mexico-city/. 95 oppføringer i sonene
+- 8.11.: Mexico City («Pål, Vibeke og Heddas Mexico City») lagt inn som skjult by (`"skjult": true`), nås på stam.pe/byguider/mexico-city/. 95 oppføringer i sonene
   Roma & Condesa, Centro & Juárez, Polanco & Chapultepec og Coyoacán & San Ángel, pluss gåturen Roma → Condesa (4,5 km, rutet
   til fots i OSM). 18 restauranter og Hotel Dama er fra Påls Obsidian-notat «Restauranter og hoteller Mexico» («Fra Påls liste»,
   de booket forrige gang er merket); resten er Claudes forslag ut fra SMAK.md, alle sjekket i Google Maps (åpne, Place ID, vurdering).
@@ -238,6 +238,7 @@ Sist oppdatert: 8. november 2026.
 
 ## Beslutningslogg
 
+- 2026-11-08: Mexico City-guiden heter «Pål, Vibeke og Heddas Mexico City». Delingsbildet beholdt filnavnet, siden byen var skjult og ikke delt ennå.
 - 2026-11-05: Hva som ikke publiseres, står i hvert repos `.gitattributes` (`export-ignore`), ikke i den felles workflowen.
   git archive respekterer det, også for forhåndsvisningene. Bieffekt: GitHubs «Download ZIP» mangler dokumentasjonen.
 - 2026-11-05: Dokumentasjonen publiseres ikke. Det er ikke for å skjule noe (repoene er offentlige), men så commits som bare
