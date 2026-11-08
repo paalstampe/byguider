@@ -7,6 +7,13 @@ Oppdateres ved slutten av hver økt (`/avslutt`).
 
 Sist oppdatert: 8. november 2026.
 
+- 8.11.: Kairo og Luxor («Pål, Vibeke og Heddas Kairo/Luxor») lagt inn som to skjulte byer, nås på stam.pe/byguider/kairo/ og /luxor/.
+  Kairo: 90 oppføringer i sonene Zamalek & Garden City, Downtown, Islamsk & koptisk Kairo, Giza og Heliopolis & Maadi, med gåturene
+  Downtown → Zamalek (4 km) og Al-Muizz → Sultan Hassan (3 km). Luxor: 31 oppføringer i sonene Østbredden, Vestbredden og Utenfor Luxor,
+  med Sfinksalléen (3 km). Alt er Claudes forslag ut fra SMAK.md, sjekket i Google Maps (åpne, Place ID, vurdering); El Horreya,
+  Villa Fayoum og Al Moudira kommer fra FT-artikler i Påls Obsidian (med `les:`). Notatene er Claudes utkast; ingen ★.
+  Omriss: shiakhaene i OSM slått sammen (Garden City, Downtown med kjerne, Gamaliya, Darb al-Ahmar, Heliopolis/Al-Muntazah, Al-Bairat
+  klippet mot Nilen), Zamalek er øya, Koptisk Kairo OSMs historiske distrikt, Luxor sentrum sporet langs gatene.
 - 8.11.: Mexico City («Pål, Vibeke og Heddas Mexico City») lagt inn som skjult by (`"skjult": true`), nås på stam.pe/byguider/mexico-city/. 95 oppføringer i sonene
   Roma & Condesa, Centro & Juárez, Polanco & Chapultepec og Coyoacán & San Ángel, pluss gåturen Roma → Condesa (4,5 km, rutet
   til fots i OSM). 18 restauranter og Hotel Dama er fra Påls Obsidian-notat «Restauranter og hoteller Mexico» («Fra Påls liste»,
@@ -228,6 +235,10 @@ Sist oppdatert: 8. november 2026.
 
 ## Åpne spørsmål
 
+- Kairo/Luxor: Winter Palace (Luxor) står på ønskelista, stengt for restaurering til Mandarin Oriental åpner (ventet 2027).
+  Gaddis & Co. (bokhandel siden 1907 i Winter Palace-arkaden) er utelatt fordi det er uklart om den er åpen under restaureringen.
+  Villa Fayoum finnes ikke i Google Maps ennå; kartet viser landsbyen Tunis. Abydos og Nye Gurna mangler Place ID (koordinater fra kart).
+  Al-Bairat er en stor landsbyenhet (hele vestbredden mellom elva og fjellet), ikke et lite strøk.
 - Mexico City: «Baleia» og «Tortillería» fra Påls liste finnes ikke i Google Maps i byen. Hvilke steder er det
   (kanskje i en annen by, eller Molino El Pujol / Siembra Tortillería)? LINA og Gaba mangler kjøkkentype i notatet.
 - Azzurra og Monmouth Kitchen: stemmer kjøkkenet i notatene (italiensk; italiensk og peruansk)?
