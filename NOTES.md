@@ -5,8 +5,14 @@ Oppdateres ved slutten av hver økt (`/avslutt`).
 
 ## Status nå
 
-Sist oppdatert: 5. november 2026.
+Sist oppdatert: 8. november 2026.
 
+- 8.11.: Mexico City lagt inn som skjult by (`"skjult": true`), nås på stam.pe/byguider/mexico-city/. 95 oppføringer i sonene
+  Roma & Condesa, Centro & Juárez, Polanco & Chapultepec og Coyoacán & San Ángel, pluss gåturen Roma → Condesa (4,5 km, rutet
+  til fots i OSM). 18 restauranter og Hotel Dama er fra Påls Obsidian-notat «Restauranter og hoteller Mexico» («Fra Påls liste»,
+  de booket forrige gang er merket); resten er Claudes forslag ut fra SMAK.md, alle sjekket i Google Maps (åpne, Place ID, vurdering).
+  Ni nabolag med omriss fra coloniene i OSM (admin_level 10); Centro Histórico er perímetro A, Coyoacán postnumrene 04000 + 04100.
+  Notatene er Claudes korte utkast; ingen ★.
 - 5.11. (skyøkt): Pål spurte om zoom på mobil fortsatt stemmer etter at kartet ble større. Ikke sjekket ferdig;
   flyttet til Desktop med Xcode (se Neste steg).
 - 5.11.: publiseringen er samlet og gjort robust. Én felles workflow for alle tre repoene (publiser.yml i paalstampe.github.io),
@@ -222,6 +228,8 @@ Sist oppdatert: 5. november 2026.
 
 ## Åpne spørsmål
 
+- Mexico City: «Baleia» og «Tortillería» fra Påls liste finnes ikke i Google Maps i byen. Hvilke steder er det
+  (kanskje i en annen by, eller Molino El Pujol / Siembra Tortillería)? LINA og Gaba mangler kjøkkentype i notatet.
 - Azzurra og Monmouth Kitchen: stemmer kjøkkenet i notatene (italiensk; italiensk og peruansk)?
 - Hrímnir – Fredensborg ligger øst for Maridalsveien (ved Vulkan), utenfor Fredensborg-omrisset.
 - St John's Wood: er «Bank» boutiquen The Bank 102 (102 High Street)? Ingen annen «Bank» funnet i gaten.
