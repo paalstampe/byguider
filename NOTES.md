@@ -238,6 +238,9 @@ Sist oppdatert: 8. november 2026.
 
 ## Beslutningslogg
 
+- 2026-11-08: Ingen ekte iPhone-app nå. Nettsidene dekker offline, hjem-skjerm og deling. En app lønner seg først
+  for varsler når vi er nær et sted, eller «Legg til i byguiden» fra delingsmenyen. Blir det aktuelt: liten app
+  for bare det, som leser de samme md-filene, og nettsidene beholdes. Xcode 27.2 har MCP-verktøy (mcpbridge) for det.
 - 2026-11-08: Mexico City-guiden heter «Pål, Vibeke og Heddas Mexico City». Delingsbildet beholdt filnavnet, siden byen var skjult og ikke delt ennå.
 - 2026-11-05: Hva som ikke publiseres, står i hvert repos `.gitattributes` (`export-ignore`), ikke i den felles workflowen.
   git archive respekterer det, også for forhåndsvisningene. Bieffekt: GitHubs «Download ZIP» mangler dokumentasjonen.
