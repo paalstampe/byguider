@@ -410,6 +410,9 @@ html, body {
 
 .oppslag--onskeliste { opacity: 0.55; }
 .oppslag--onskeliste.er-valgt { opacity: 0.8; }
+/* Stengt den valgte dagen (filteret «Åpent»): tonet ned og lagt sist. */
+.oppslag--stengt { opacity: 0.45; }
+.oppslag--stengt.er-valgt { opacity: 0.75; }
 
 .merke-ikke-besokt {
   display: inline-block;
@@ -713,6 +716,9 @@ html, body {
 
 .pop-notat { margin: 8px 0 0; font-size: 13px; line-height: 1.45; white-space: pre-line; max-height: 220px; overflow-y: auto; }
 .pop-les { margin: 8px 0 0; font-size: 13px; line-height: 1.45; }
+/* Åpningstider: i dag uthevet, så hele uka i dempet tekst. */
+.pop-tider { margin: 8px 0 0; font-size: 12px; line-height: 1.5; color: var(--dempet); }
+.pop-tider strong { font-weight: 600; color: var(--tekst); }
 .pop-les a, .pop-notat a { color: var(--aksent); text-decoration: underline; text-underline-offset: 3px; }
 @media (hover: hover) and (pointer: fine) { .pop-les a:hover, .pop-notat a:hover { color: var(--aksent-hover); } }
 

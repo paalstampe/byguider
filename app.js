@@ -82,6 +82,17 @@ const TEKST = {
     alle: 'Alle',
     kunFavoritter: 'Kun favoritter',
     naerMeg: 'Nær meg',
+    aapent: 'Åpent',
+    aapentNaa: 'Nå',
+    lordag: 'Lørdag',
+    sondag: 'Søndag',
+    stengtNaa: 'Stengt nå',
+    stengtDag: d => 'Stengt ' + ['mandag', 'tirsdag', 'onsdag', 'torsdag', 'fredag', 'lørdag', 'søndag'][d],
+    dagKort: ['ma', 'ti', 'on', 'to', 'fr', 'lø', 'sø'],
+    iDag: 'I dag',
+    stengtIDag: 'Stengt i dag',
+    stengt: 'Stengt',
+    midlertidigStengt: 'Midlertidig stengt',
     gange: min => min + ' min å gå',
     favoritt: 'Favoritt',
     utenSone: 'Uten sone',
@@ -132,6 +143,17 @@ const TEKST = {
     alle: 'All',
     kunFavoritter: 'Favourites only',
     naerMeg: 'Near me',
+    aapent: 'Open',
+    aapentNaa: 'Now',
+    lordag: 'Saturday',
+    sondag: 'Sunday',
+    stengtNaa: 'Closed now',
+    stengtDag: d => 'Closed on ' + ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'][d] + 's',
+    dagKort: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+    iDag: 'Today',
+    stengtIDag: 'Closed today',
+    stengt: 'Closed',
+    midlertidigStengt: 'Temporarily closed',
     gange: min => min + ' min walk',
     favoritt: 'Favourite',
     utenSone: 'No area',
@@ -404,13 +426,42 @@ function finnKategori(tekst) {
   return k || n.replace(/[^a-z0-9]+/g, '-');
 }
 
+/* åpent: «ti–to 17–23, fr–lø 17–01, sø 12–15 + 17–22» -> sju dager (0 = mandag), hver med intervaller
+   [fra, til] i minutter etter midnatt. til ≤ fra betyr over midnatt; til null = ukjent stengetid («16–»).
+   Dager som ikke er nevnt, er stengt. «midlertidig stengt» gir sju stengte dager. */
+const UKEDAGER = ['ma', 'ti', 'on', 'to', 'fr', 'lø', 'sø'];
+
+function lesAapent(tekst) {
+  const s = String(tekst || '').trim().toLowerCase();
+  if (!s) return null;
+  const dager = [[], [], [], [], [], [], []];
+  if (/stengt/.test(s)) return { dager: dager, midlertidig: true };
+  const minutter = x => {
+    const m = String(x || '').match(/^(\d{1,2})(?:[.:](\d{2}))?$/);
+    return m ? +m[1] * 60 + +(m[2] || 0) : null;
+  };
+  s.split(',').forEach(del => {
+    const m = del.trim().match(/^(\S{2})(?:\s*[–-]\s*(\S{2}))?\s+(.+)$/);
+    if (!m) return;
+    const a = UKEDAGER.indexOf(m[1]), b = m[2] ? UKEDAGER.indexOf(m[2]) : a;
+    if (a < 0 || b < 0) return;
+    const tider = m[3].split('+').map(x => x.trim().split(/\s*[–-]\s*/))
+      .map(([fra, til]) => [minutter(fra), minutter(til)]).filter(x => x[0] != null);
+    for (let d = a; ; d = (d + 1) % 7) {
+      dager[d].push(...tider);
+      if (d === b) break;
+    }
+  });
+  return { dager: dager };
+}
+
 /* "51.5207, -0.1519" (breddegrad, lengdegrad) -> [-0.1519, 51.5207] */
 function lesKoordinat(tekst) {
   const m = String(tekst || '').match(/(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)/);
   return m ? [parseFloat(m[2]), parseFloat(m[1])] : null;
 }
 
-const FELT = ['sted', 'besokt', 'status', 'google', 'nettside', 'gater', 'lengde', 'varighet', 'utenfor', 'en', 'navn-en', 'les'];  // besokt leses, men vises ikke
+const FELT = ['sted', 'besokt', 'status', 'google', 'nettside', 'gater', 'lengde', 'varighet', 'utenfor', 'en', 'navn-en', 'les', 'apent', 'apent-kilde'];  // besokt leses, men vises ikke
 
 function lesMarkdown(tekst) {
   const linjer = String(tekst).replace(/\r/g, '').replace(/<!--[\s\S]*?-->/g, '').split('\n');
@@ -501,7 +552,9 @@ function byggFeatures(md, geo) {
       // utenfor: ja — stedet holdes utenfor startutsnittet (og «Vis hele byen»)
       utenfor: /^(ja|j|yes|x|true)$/.test(normaliser(st.felt.utenfor)),
       // les: «Kilde | Tittel | https://…» — vises sist i infoboksen
-      les: (st.felt.les || []).map(lesLenke).filter(Boolean)
+      les: (st.felt.les || []).map(lesLenke).filter(Boolean),
+      // åpent: ukens åpningstider (se lesAapent); åpent-kilde leses, men vises ikke
+      aapent: lesAapent(st.felt.apent)
     };
 
     const omrade = finnGeo(st.navn, 'omrade').map(f => ({ type: 'Feature', geometry: f.geometry, properties: { rolle: 'omrade' } }));
@@ -632,6 +685,10 @@ const SKALL = `
         <p class="filter-etikett" id="etikett-kategori" data-t="kategori"></p>
         <div class="filtergruppe" id="filter-kategori" aria-labelledby="etikett-kategori"></div>
       </div>
+      <div class="filterblokk" hidden>
+        <p class="filter-etikett" id="etikett-aapent" data-t="aapent"></p>
+        <div class="filtergruppe" id="filter-aapent" aria-labelledby="etikett-aapent"></div>
+      </div>
       <div class="filtergruppe filtergruppe--smal" id="filter-status"></div>
     </div>
     <div class="teller-rad">
@@ -738,6 +795,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     soner: new Set(),            // tom = alle
     kategorier: new Set(),       // tom = alle
     kunFavoritter: false,
+    aapent: null,                // null | 'naa' | 5 (lørdag) | 6 (søndag): stengte steder tones ned
     naerMeg: false,              // lista sortert etter avstand fra egen posisjon
     minPosisjon: null,           // { lng, lat } mens «Nær meg» er på
     sok: '',
@@ -758,6 +816,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     fSone:      document.getElementById('filter-sone'),
     fKategori:  document.getElementById('filter-kategori'),
     fStatus:    document.getElementById('filter-status'),
+    fAapent:    document.getElementById('filter-aapent'),
     fotTekst:   document.getElementById('fot-tekst'),
     smuleBy:    document.getElementById('smule-by'),
     tittel:     document.getElementById('tittel'),
@@ -865,6 +924,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     .concat([UKJENT_FARGE]);
 
   const FAV = ['==', ['get', 'favoritt'], true];
+  const STENGT = ['==', ['get', 'stengt'], true];
 
   const KARTLAG = {
     /* Usynlig, bred strek under gater og gåturer: gjør dem lette å treffe, særlig med fingeren. */
@@ -923,8 +983,9 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
         'icon-size': ['interpolate', ['linear'], ['zoom'], 10, 0.8, 14, 0.95],
         'icon-allow-overlap': true,
         'icon-ignore-placement': true,
-        'symbol-sort-key': ['case', FAV, 1, 0]
-      }
+        'symbol-sort-key': ['case', STENGT, -1, FAV, 1, 0]
+      },
+      paint: { 'icon-opacity': ['case', STENGT, 0.3, 1] }
     }
   };
   /* Nabolag har egen kilde uten klynging, så knappene alltid vises, og ligger øverst. */
@@ -961,12 +1022,13 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
         'icon-image': ['coalesce',
           ['image', ['concat', 'ikon-ring-', ['case', FAV, 'fav-', ''], ['get', 'kategori']]],
           ['image', ['case', FAV, 'ikon-ring-fav-ukjent', 'ikon-ring-ukjent']]],
-        'symbol-sort-key': ['case', FAV, 1, 0],
+        'symbol-sort-key': ['case', STENGT, -1, FAV, 1, 0],
         'icon-size': ['interpolate', ['linear'], ['zoom'], 10, 0.8, 14, 0.95],
         'icon-allow-overlap': true,
         'icon-ignore-placement': true,
         visibility: 'none'
-      }
+      },
+      paint: { 'icon-opacity': ['case', STENGT, 0.3, 1] }
     }
   };
 
@@ -1198,11 +1260,16 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     }
   }
 
+  /* Stengte steder (se «Åpent») får stengt: true, så kartet kan tone dem ned. */
+  function medStengt(o) {
+    return erStengt(o.p) ? Object.assign({}, o.f, { properties: Object.assign({}, o.f.properties, { stengt: true }) }) : o.f;
+  }
+
   /* Filtrering bytter ut dataene, slik at klyngene regnes ut fra det som vises. */
   function filtrerKart(vis) {
     if (!kart.getSource('steder')) return;
     const medGeo = vis.filter(o => o.f.geometry);
-    const punkter = medGeo.filter(o => !o.erLinje).map(o => o.f);
+    const punkter = medGeo.filter(o => !o.erLinje).map(medStengt);
     const linjer = medGeo.filter(o => o.erLinje).map(o => o.f);
     const erNabolag = f => f.properties.kategori === 'nabolag';
     kart.getSource('steder').setData({ type: 'FeatureCollection', features: punkter.filter(f => !erNabolag(f)) });
@@ -1221,7 +1288,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       const flater = onske.flatMap(o => o.fokus.filter(x => x.properties.rolle === 'omrade')
         .map(x => ({ type: 'Feature', geometry: x.geometry, properties: {} })));
       kart.getSource('onskeliste').setData({ type: 'FeatureCollection',
-        features: flater.concat(onske.filter(o => o.f.geometry).map(o => o.f)) });
+        features: flater.concat(onske.filter(o => o.f.geometry).map(medStengt)) });
     }
   }
 
@@ -1500,6 +1567,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       '<p class="pop-meta">' + esc(meta) + '</p>' +
       (p.gater && p.gater.length ? '<p class="pop-gater">' + esc(p.gater.join(' · ')) + '</p>' : '') +
       (notat ? '<p class="pop-notat">' + notatHtml(notat) + '</p>' : '') +
+      aapentHtml(p) +
       les +
       linje(ut) + linje(inne);
   }
@@ -1591,6 +1659,63 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     return state.oppslag.find(x => x.id === id) || state.onskeliste.find(x => x.id === id);
   }
 
+  /* ---------- åpningstider ----------
+
+     «Åpent» nå/lørdag/søndag skjuler ingenting: steder vi vet er stengt, tones ned i kartet og lista
+     og legges sist. Steder uten åpningstider vises som vanlig. «Nå» bruker enhetens klokke. */
+
+  function ukedag(dato) {
+    return (dato.getDay() + 6) % 7;   // 0 = mandag
+  }
+
+  function aapenNaa(a, naa) {
+    const d = ukedag(naa), m = naa.getHours() * 60 + naa.getMinutes();
+    const iDag = a.dager[d].some(([fra, til]) => m >= fra && (til == null || til <= fra || m < til));
+    const fraIGaar = a.dager[(d + 6) % 7].some(([fra, til]) => til != null && til <= fra && m < til);
+    return iDag || fraIGaar;
+  }
+
+  function erStengt(p) {
+    const a = p.aapent;
+    if (!a || state.aapent == null) return false;
+    return state.aapent === 'naa' ? !aapenNaa(a, new Date()) : !a.dager[state.aapent].length;
+  }
+
+  function stengtTekst(p) {
+    if (!erStengt(p)) return '';
+    if (p.aapent.midlertidig) return t('midlertidigStengt');
+    return state.aapent === 'naa' ? t('stengtNaa') : t('stengtDag', state.aapent);
+  }
+
+  const klokke = m => {
+    m = m % 1440;
+    const h = String(Math.floor(m / 60)).padStart(2, '0'), min = m % 60;
+    return min ? h + '.' + String(min).padStart(2, '0') : h;
+  };
+  const tidTekst = tider => tider.map(([fra, til]) => klokke(fra) + '–' + (til == null ? '' : klokke(til))).join(', ');
+
+  /* Uka slått sammen: dager på rad med like tider blir «ti–to 17–23». Stengte dager til slutt. */
+  function ukeTekst(a) {
+    const dag = t('dagKort'), grupper = [], stengt = [];
+    a.dager.forEach((tider, d) => {
+      if (!tider.length) { stengt.push(dag[d]); return; }
+      const tekst = tidTekst(tider), siste = grupper[grupper.length - 1];
+      if (siste && siste.tekst === tekst && siste.til === d - 1) siste.til = d;
+      else grupper.push({ fra: d, til: d, tekst: tekst });
+    });
+    return grupper.map(g => dag[g.fra] + (g.til > g.fra ? '–' + dag[g.til] : '') + ' ' + g.tekst)
+      .concat(stengt.length ? [t('stengt') + ' ' + stengt.join(', ')] : []).join(' · ');
+  }
+
+  function aapentHtml(p) {
+    const a = p.aapent;
+    if (!a) return '';
+    if (a.midlertidig) return '<p class="pop-tider"><strong>' + t('midlertidigStengt') + '</strong></p>';
+    const iDag = a.dager[ukedag(new Date())];
+    return '<p class="pop-tider"><strong>' + (iDag.length ? t('iDag') + ' ' + tidTekst(iDag) : t('stengtIDag')) + '</strong>' +
+      '<br>' + esc(ukeTekst(a)) + '</p>';
+  }
+
   /* ---------- filtrering ---------- */
 
   function synlige() {
@@ -1660,9 +1785,10 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     const medSoner = state.brukteSoner.size > 0 && !naer;
     vis.slice()
       .sort((a, b) => {
-        if (naer) return avstandTil(a) - avstandTil(b);
+        if (naer) return (erStengt(a.p) - erStengt(b.p)) || avstandTil(a) - avstandTil(b);
         const sa = rekkefolge.indexOf(a.p.sone), sb = rekkefolge.indexOf(b.p.sone);
         if (sa !== sb) return (sa < 0 ? 99 : sa) - (sb < 0 ? 99 : sb);
+        if (erStengt(a.p) !== erStengt(b.p)) return erStengt(a.p) ? 1 : -1;
         if (!!b.p.favoritt !== !!a.p.favoritt) return b.p.favoritt ? 1 : -1;
         return visNavn(a.p).localeCompare(visNavn(b.p), SPRAK === 'en' ? 'en' : 'nb');
       })
@@ -1703,7 +1829,8 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
     // Førstevalg (★) øverst, så alfabetisk. Med «Nær meg»: nærmest først.
     vis.slice()
-      .sort((a, b) => (state.naerMeg && state.minPosisjon ? avstandTil(a) - avstandTil(b) : 0) ||
+      .sort((a, b) => (erStengt(a.p) - erStengt(b.p)) ||
+        (state.naerMeg && state.minPosisjon ? avstandTil(a) - avstandTil(b) : 0) ||
         (!!b.p.favoritt - !!a.p.favoritt) ||
         visNavn(a.p).localeCompare(visNavn(b.p), SPRAK === 'en' ? 'en' : 'nb'))
       .forEach(o => el.liste.appendChild(oppslagEl(o)));
@@ -1718,7 +1845,8 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     const notat = onske ? visNotat(p).split('\n')[0].trim() : visNotat(p);
 
     const div = document.createElement('div');
-    div.className = 'oppslag' + (onske ? ' oppslag--onskeliste' : '') + (state.valgtId === o.id ? ' er-valgt' : '');
+    const stengt = stengtTekst(p);
+    div.className = 'oppslag' + (onske ? ' oppslag--onskeliste' : '') + (stengt ? ' oppslag--stengt' : '') + (state.valgtId === o.id ? ' er-valgt' : '');
     div.setAttribute('role', 'listitem');
     div.tabIndex = 0;
 
@@ -1729,7 +1857,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       '</div>' +
       '<p class="oppslag-meta">' +
         '<span class="prikk" style="background:' + info.farge + '"></span>' +
-        esc([metaLinje(p) || ruteMeta(p), avstandTekst(o)].filter(Boolean).join(' · ')) +
+        esc([metaLinje(p) || ruteMeta(p), avstandTekst(o), stengt].filter(Boolean).join(' · ')) +
       '</p>' +
       (notat ? '<p class="oppslag-notat">' + esc(kortNotat(notat)) + '</p>' : '');
 
@@ -1837,6 +1965,20 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     byggGruppe(el.fSone, state.soneRekkefolge.filter(s => state.brukteSoner.has(s)), state.soner, s => s);
     byggGruppe(el.fKategori, state.brukteKategorier, state.kategorier,
       k => katInfo(k).navn, k => katInfo(k).farge);
+
+    // åpent nå / lørdag / søndag — bare når byen har åpningstider
+    el.fAapent.innerHTML = '';
+    const blokk = el.fAapent.closest('.filterblokk');
+    blokk.hidden = !state.oppslag.concat(state.onskeliste).some(o => o.p.aapent);
+    if (!blokk.hidden) {
+      [['naa', 'aapentNaa'], [5, 'lordag'], [6, 'sondag']].forEach(([verdi, tekst]) => {
+        el.fAapent.appendChild(lagChip(t(tekst), null, state.aapent === verdi, () => {
+          state.aapent = state.aapent === verdi ? null : verdi;
+          byggFiltre();
+          tegn();
+        }));
+      });
+    }
 
     // status
     el.fStatus.innerHTML = '';
