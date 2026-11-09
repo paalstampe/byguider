@@ -382,7 +382,7 @@ Sri Lankan, 77 Wigmore Street.
 ### Rosa's Thai
 - sted: 51.52063, -0.15662
 - google: ChIJCfnKpkcbdkgRyMV_n8aHLQA
-- nettside: https://rosasthai.com/locations/rosas-thai-restaurant-delivery-takeaway-baker-street
+- nettside: https://rosasthai.com/locations/baker-street-restaurant
 - status: onskeliste
 Marylebone
 
@@ -395,7 +395,7 @@ Thai, 100 Baker Street.
 ### St. JOHN Marylebone
 - sted: 51.51759, -0.15058
 - google: ChIJHUUaWNIadkgRWnUcXiCAYYk
-- nettside: https://stjohnrestaurant.com/a/restaurants/marylebone
+- nettside: https://stjohnrestaurant.com/restaurants/marylebone/
 - status: onskeliste
 Marylebone
 
@@ -720,7 +720,7 @@ Detroit-style pizza, 29 Foubert's Place.
 ### Tattu
 - sted: 51.51555, -0.12991
 - google: ChIJHdd94hwbdkgRihDCyn0FD1Y
-- nettside: https://tattu.co.uk/locations/tattu-london/
+- nettside: https://tattu.co.uk/locations/soho/
 - status: onskeliste
 Soho
 
@@ -1097,7 +1097,7 @@ Middle Eastern bakery and kitchen from Honey & Co., 19–21 Store Street.
 ### Willett's
 - sted: 51.49707, -0.15911
 - google: ChIJgdRjjz4FdkgRnXXelNht0uw
-- nettside: https://www.belmond.com/hotels/europe/uk/london/belmond-cadogan-hotel/dining
+- nettside: https://www.belmond.com/en/hotels/europe/uk/the-cadogan-london/restaurants-and-bars
 - status: onskeliste
 Chelsea
 

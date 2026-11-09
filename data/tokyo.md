@@ -331,7 +331,7 @@ Just south of Ginza, overlooking the Hamarikyu Gardens and Tokyo Bay.
 - navn-en: Toyosu Market
 - sted: 35.64409, 139.78428
 - google: ChIJW4-7z_iJGGAR3DNQUg6tv9Y
-- nettside: https://www.shijou.metro.tokyo.lg.jp/toyosu/kenngaku/index.html
+- nettside: https://www.shijou.metro.tokyo.lg.jp/info/0/kenngaku
 Toyosu
 
 Det nye fiskemarkedet, som overtok etter Tsukiji. Muligens bedre å besøke enn det gamle.

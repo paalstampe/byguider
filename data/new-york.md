@@ -823,7 +823,7 @@ New, used and rare books, 828 Broadway.
 ### Crosby Street Hotel
 - sted: 40.72301, -73.99742
 - google: ChIJpYIgKY9ZwokRMt2wXGRZ1fg
-- nettside: https://www.firmdalehotels.com/hotels/new-york/crosby-street-hotel/
+- nettside: https://www.firmdalehotels.com/hotels/crosby-street-hotel
 SoHo
 
 Firmdale-hotell, Crosby Street 79.

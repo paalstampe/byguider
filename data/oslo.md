@@ -629,7 +629,7 @@ Asian fusion. Rostockgata 35.
 ### Byssa
 - sted: 59.91126, 10.74333
 - google: ChIJl7Q6MQBvQUYRsIDsNKeNQuw
-- nettside: https://www.prinsenoslo.no/no/byssa
+- nettside: https://www.prinsenoslo.no/sjomatbar-byssa
 - status: onskeliste
 Kvadraturen
 Sjømat. Prinsens gate 18.
@@ -825,7 +825,7 @@ Bakery and café. Damplassen 24–25.
 ### Stockfleths – Homansbyen
 - sted: 59.92316, 10.72608
 - google: ChIJhaCRVRxtQUYRo38W3JvsvWI
-- nettside: https://stockfleths.as/kaffebarene/homansbyen
+- nettside: https://stockfleths.as/kaffebar/homansbyen/
 Homansbyen
 Kaffebar. Josefines gate 23.
 - en: Homansbyen

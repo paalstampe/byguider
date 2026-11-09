@@ -1006,7 +1006,7 @@ Fra Bab al-Futuh til Sultan Hassan-moskeen, gjennom hele den gamle byen.
 ### Khufu’s
 - sted: 29.97833, 31.12427
 - google: ChIJES6Cx_hPWBQR0pU4NDzaCDg
-- nettside: https://khufus.com/khufus/
+- nettside: https://khufus.com/
 Pyramidene
 
 Mostafa Seifs moderne egyptiske restaurant på selve pyramideplatået, med terrasse mot pyramidene. Kokkeeid, og på MENA’s 50 Best. Bestill bord til lunsj etter besøket.

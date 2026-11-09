@@ -195,13 +195,13 @@ Sist oppdatert: 8. november 2026.
   lenger, heller ikke i forhåndsvisningene (paalstampe.github.io #27, 5.11.). En commit som bare endrer dokumentasjon gir da ingen
   ny publisering. Byguidenes data/*.md publiseres som før. Hvert repo bestemmer selv hva som ikke publiseres, med `export-ignore` i `.gitattributes`
   (byguider #106, reiseplanlegging #36, paalstampe.github.io #28); ny fil som ikke skal på nettsiden legges inn der.
-- Ukentlig sjekk 2026-11-04 (første kjøring, 607 nettsider; Instagram/Facebook hoppet over; Google-sjekk av stengte steder ble ikke gjort, kun nettsider + WebSearch):
-  - Stengt for godt: ingen funnet.
-  - Midlertidig stengt: ingen funnet.
-  - Ødelagt nettside: London, V&A East Storehouse (404 på vam.ac.uk/east/storehouse; ny adresse ser ut til å være https://www.vam.ac.uk/east/storehouse/visit — ikke endret, Pål bestemmer).
-  - Uklart (skymiljøet nådde dem ikke, trolig proxy/TLS og ikke brudd; sjekk gjerne selv): Spence Bakery (spencebakery.co.uk), Minetta Tavern (minettatavernny.com), Old Spitalfields Market, Le Panier Gourmand (lepaniergourmand-nice.fr), Maltby Street, Maguchi Kazunari, Arakawa-kommunens Nippori-side, TCDC (web.tcdc.or.th; www.tcdc.or.th virker).
-  - Oppdatert (301 til ny adresse): Scott's (scotts-mayfair.com), Kronotrop (kronotrop.com.tr), Farm Shop (farmshop.co.uk), Rouleur Oslo (rouleuroslo.com), Vesuvio (vesuviopizza.no).
-  - Ikke endret: Bellboy Berlin, Café Lavery og Beauty & Essex videresender til andre/overordnede sider.
+- Ukentlig sjekk 2026-11-09 (753 nettsider; Instagram/Facebook hoppet over; Google-sjekk av stengte steder gikk ikke fra skyen, ingen WebSearch gjort):
+  - Stengt for godt / midlertidig stengt: ingen funnet (ikke sjekket mot Google).
+  - Ødelagt nettside: London, V&A East Storehouse (404 på vam.ac.uk/east/storehouse; ser ut til å være https://www.vam.ac.uk/east/storehouse/visit, Pål bestemmer, uendret fra 4.11.). Mexico City, Blanco Colima (404 på /es, forsiden svarer 200).
+  - Uklart (proxy/TLS i skymiljøet, trolig ikke brudd): Spence Bakery, Maltby Street, Old Spitalfields Market, Le Panier Gourmand, Maguchi Kazunari, TCDC (web.tcdc.or.th), Mexico City: bibliotecacentral.unam.mx, bibliotecavasconcelos.gob.mx, palacio.inba.gob.mx, estudiodiegorivera.bellasartes.gob.mx, looseblues.mx.
+  - Videresender til annen adresse, ikke endret: Harraz (Kairo, til harrazonline.com), Café Lavery (til thelavery.co.uk/cafe), Quentin (Mexico City, til myshopify), Beit Sabee (Luxor, til wpengine-adresse), Das Neue Schwarz, Café Nín, Langt Langt Borte (til Instagram), Bellboy Berlin, Beauty & Essex.
+  - Oppdatert (301 til ny adresse): St. John Marylebone, Rosa's Thai Baker Street, Tattu, Belmond Cadogan, Crosby Street Hotel, Stockfleths Homansbyen, Prinsen Byssa, Tokyo Toyosu-fiskemarkedet, Khufu's (Kairo).
+  - Gjentar seg fra forrige sjekk: kun V&A East Storehouse. 403/429/5xx (hoteller, museer m.fl.) regnes som usikre.
 - Fyll på data etter hvert som Pål kommer med steder og navneendringer, i alle byer.
 - SMAK.md: Pål kan gi en liste over hoteller de liker godt; legg dem inn som eksempler under Hoteller.
   Oppdater profilen når Pål setter ★ eller sier hva han liker.
