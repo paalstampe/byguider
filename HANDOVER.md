@@ -548,8 +548,9 @@ Hvert trinn skal kunne committes for seg og fungere alene.
   minutter. Filterblokken «Åpent: Nå · Lørdag · Søndag» (`state.aapent`: null, 'naa', 5 eller 6) vises bare når byen
   har åpningstider. Den skjuler ingenting: steder vi vet er stengt (`erStengt`), får `stengt: true` i kartdataene
   (`medStengt`, `icon-opacity` 0,3 og lavest `symbol-sort-key`), tones ned i lista (`.oppslag--stengt`, «Stengt søndag»
-  i metalinjen) og legges sist i hver sone. Steder uten åpningstider vises som vanlig. «Nå» bruker enhetens klokke
-  (og gårsdagens intervaller som går over midnatt). Infoboksen viser «I dag 17–23» og uka slått sammen (`ukeTekst`).
+  i metalinjen) og legges sist i hver sone. Steder uten åpningstider vises som vanlig. «Nå» regner i byens tid
+  (`tidssone: Europe/Oslo` i frontmatter, ellers enhetens klokke; `byTid`), tar med gårsdagens intervaller som går
+  over midnatt og tegnes på nytt hvert minutt. Med Lørdag/Søndag viser infoboksen den dagen i stedet for i dag. Infoboksen viser «I dag 17–23» og uka slått sammen (`ukeTekst`).
 - Neste: data. Pål kommer med navneendringer (som Marylebone High Street → Marylebone Village)
   og nye steder. Områdeskisser: alle nabolag i London og New York er tegnet (London 5.10.,
   langs gatene i OpenStreetMap); nye nabolag trenger skisse. Eksempelstedene er merket EKSEMPEL.

@@ -435,7 +435,7 @@ function lesAapent(tekst) {
   const s = String(tekst || '').trim().toLowerCase();
   if (!s) return null;
   const dager = [[], [], [], [], [], [], []];
-  if (/stengt/.test(s)) return { dager: dager, midlertidig: true };
+  if (/^midlertidig stengt$/.test(s)) return { dager: dager, midlertidig: true };
   const minutter = x => {
     const m = String(x || '').match(/^(\d{1,2})(?:[.:](\d{2}))?$/);
     return m ? +m[1] * 60 + +(m[2] || 0) : null;
@@ -645,6 +645,7 @@ function byggMeta(md) {
     senterMobil: lesKoordinat(m['senter-mobil']) || undefined,
     zoomMobil: m['zoom-mobil'] ? parseFloat(m['zoom-mobil']) : undefined,
     oppdatert: m.oppdatert || '',
+    tidssone: m.tidssone || '',   // f.eks. Europe/Oslo — «Åpent nå» regner i byens tid
     soner: md.soner
   };
 }
@@ -1664,21 +1665,35 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
      «Åpent» nå/lørdag/søndag skjuler ingenting: steder vi vet er stengt, tones ned i kartet og lista
      og legges sist. Steder uten åpningstider vises som vanlig. «Nå» bruker enhetens klokke. */
 
-  function ukedag(dato) {
-    return (dato.getDay() + 6) % 7;   // 0 = mandag
+  /* Ukedag (0 = mandag) og minutter etter midnatt i byens tidssone (frontmatter tidssone:), ellers enhetens. */
+  function byTid() {
+    const naa = new Date();
+    let dag = naa.getDay(), timer = naa.getHours(), min = naa.getMinutes();
+    try {
+      if (sideMeta && sideMeta.tidssone) {
+        const deler = {};
+        new Intl.DateTimeFormat('en-GB', { timeZone: sideMeta.tidssone, weekday: 'short', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' })
+          .formatToParts(naa).forEach(x => { deler[x.type] = x.value; });
+        dag = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(deler.weekday);
+        timer = +deler.hour; min = +deler.minute;
+      }
+    } catch (e) { /* ukjent tidssone: enhetens klokke */ }
+    return { dag: (dag + 6) % 7, min: timer * 60 + min };
   }
 
-  function aapenNaa(a, naa) {
-    const d = ukedag(naa), m = naa.getHours() * 60 + naa.getMinutes();
+  function aapenNaa(a) {
+    const { dag: d, min: m } = byTid();
     const iDag = a.dager[d].some(([fra, til]) => m >= fra && (til == null || til <= fra || m < til));
     const fraIGaar = a.dager[(d + 6) % 7].some(([fra, til]) => til != null && til <= fra && m < til);
     return iDag || fraIGaar;
   }
 
+  let naaVakt = null;
+
   function erStengt(p) {
     const a = p.aapent;
     if (!a || state.aapent == null) return false;
-    return state.aapent === 'naa' ? !aapenNaa(a, new Date()) : !a.dager[state.aapent].length;
+    return state.aapent === 'naa' ? !aapenNaa(a) : !a.dager[state.aapent].length;
   }
 
   function stengtTekst(p) {
@@ -1711,8 +1726,11 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     const a = p.aapent;
     if (!a) return '';
     if (a.midlertidig) return '<p class="pop-tider"><strong>' + t('midlertidigStengt') + '</strong></p>';
-    const iDag = a.dager[ukedag(new Date())];
-    return '<p class="pop-tider"><strong>' + (iDag.length ? t('iDag') + ' ' + tidTekst(iDag) : t('stengtIDag')) + '</strong>' +
+    const valgt = typeof state.aapent === 'number' ? state.aapent : null;
+    const tider = a.dager[valgt != null ? valgt : byTid().dag];
+    const navn = valgt != null ? t(valgt === 5 ? 'lordag' : 'sondag') : t('iDag');
+    const linje = tider.length ? navn + ' ' + tidTekst(tider) : (valgt != null ? t('stengtDag', valgt) : t('stengtIDag'));
+    return '<p class="pop-tider"><strong>' + esc(linje) + '</strong>' +
       '<br>' + esc(ukeTekst(a)) + '</p>';
   }
 
@@ -1974,6 +1992,8 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       [['naa', 'aapentNaa'], [5, 'lordag'], [6, 'sondag']].forEach(([verdi, tekst]) => {
         el.fAapent.appendChild(lagChip(t(tekst), null, state.aapent === verdi, () => {
           state.aapent = state.aapent === verdi ? null : verdi;
+          clearInterval(naaVakt);
+          if (state.aapent === 'naa') naaVakt = setInterval(tegn, 60000);   // «Nå» følger klokka
           byggFiltre();
           tegn();
         }));

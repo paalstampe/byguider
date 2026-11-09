@@ -8,6 +8,7 @@ kicker-en: An opinionated guide
 senter: 59.9180, 10.7400
 zoom: 13
 oppdatert: 2026-10-26
+tidssone: Europe/Oslo
 ---
 
 <!--
@@ -37,6 +38,7 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
                                 Over midnatt: 17–01. Ukjent stengetid: 16–. «midlertidig stengt» går også.
                                 Gir filteret «Åpent: Nå · Lørdag · Søndag» og timene i infoboksen.
   - åpent-kilde: nettside, nov. 2026   hvor timene kommer fra (nettside foran Google); vises ikke
+  (frontmatter tidssone: Europe/Oslo gjør at «Åpent nå» regner i byens tid, også hjemmefra)
   Fri tekst under feltene blir notatet. Første avsnitt vises i lista, alt i popupen.
   [tekst](https://…) i notatet blir en lenke.
 
