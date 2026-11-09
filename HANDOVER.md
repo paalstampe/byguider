@@ -142,6 +142,11 @@ med tittelen som lenke (kan gjentas; uten kilde: «Artikkel: Tittel»).
 `- utenfor: ja` holder et sted (eller en gåtur) utenfor utsnittet kartet åpner med og som
 «Vis hele byen» går til — for strender, beach clubs og turer et stykke utenfor byen.
 
+`- åpent: ti–to 17–23, fr–lø 17–01, sø 12–15 + 17–22` er ukens åpningstider (dagene ma ti on to fr lø sø;
+dager som ikke er nevnt er stengt; `17–01` går over midnatt, `16–` har ukjent stengetid; `midlertidig stengt`).
+`- åpent-kilde: nettside, nov. 2026` sier hvor de kommer fra og vises ikke. Nettsiden går foran Google, som ofte
+er utdatert. Foreløpig bare Oslos restauranter (nov. 2026).
+
 `- status: onskeliste` merker et sted som ikke besøkt ennå (ønskeliste). Slike steder vises for alle
 (tidligere bare med `?onskeliste`, som nå ikke gjør noe), holdt utenfor hovedlista og tellingen:
 sammenslått seksjon «Ikke besøkt ennå (n)» nederst
@@ -539,6 +544,14 @@ Hvert trinn skal kunne committes for seg og fungere alene.
   spørsmålet om tillatelse står fremme; har du flyttet kartet selv før posisjonen kommer, blir det stående (PR #91). Lenke til ett sted (PR #83): `?sted=<stedSlug(navn)>`
   (`aapneStedFraAdresse`, zoomer som «Zoom inn»); «Del» i infoboksen bruker `navigator.share` på berøringsskjerm,
   ellers utklippstavlen.
+- Åpningstider (grenen `apningstider`, nov. 2026): `lesAapent` gjør `åpent:` om til sju dager med intervaller i
+  minutter. Filterblokken «Åpent: Nå · Søndag · Mandag» (`state.aapent`: null, 'naa', 6 eller 0; da er mange stengt) vises bare når byen
+  har åpningstider. «Kun favoritter» og «Nær meg» står i egen blokk «Vis» under. Den skjuler ingenting: steder vi vet er stengt (`erStengt`), får `stengt: true` på stedet, regnet ut én gang
+  per opptegning (`oppdaterStengte`; kartlagene bruker `TONET` = `icon-opacity` 0,3 og `SORTERING`), tones ned i lista (`.oppslag--stengt`, «Stengt søndag»
+  i metalinjen) og legges sist i hver sone. Steder uten åpningstider vises som vanlig. «Nå» regner i byens tid
+  (`tidssone: Europe/Oslo` i frontmatter, ellers enhetens klokke; `byTid`), tar med gårsdagens intervaller som går
+  over midnatt og tegnes på nytt hvert minutt. Med Søndag/Mandag viser infoboksen den dagen i stedet for i dag. Klynger der alle stedene er stengt,
+  tones ned (`clusterProperties.aapne`, `KLYNGE_TONET`). Infoboksen viser «I dag 17–23» og uka slått sammen (`ukeTekst`).
 - Neste: data. Pål kommer med navneendringer (som Marylebone High Street → Marylebone Village)
   og nye steder. Områdeskisser: alle nabolag i London og New York er tegnet (London 5.10.,
   langs gatene i OpenStreetMap); nye nabolag trenger skisse. Eksempelstedene er merket EKSEMPEL.

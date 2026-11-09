@@ -8,6 +8,7 @@ kicker-en: An opinionated guide
 senter: 59.9180, 10.7400
 zoom: 13
 oppdatert: 2026-10-26
+tidssone: Europe/Oslo
 ---
 
 <!--
@@ -32,6 +33,12 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
   - lengde: 2,5 km              gåturer
   - varighet: ca. 1 t           gåturer
   - utenfor: ja                 holder stedet utenfor utsnittet kartet åpner med (og «Vis hele byen»)
+  - åpent: ti–to 17–23, fr–lø 17–01, sø 12–15 + 17–22
+                                åpningstider: ma ti on to fr lø sø, dager som ikke er nevnt er stengt.
+                                Over midnatt: 17–01. Ukjent stengetid: 16–. «midlertidig stengt» går også.
+                                Gir filteret «Åpent: Nå · Søndag · Mandag» og timene i infoboksen.
+  - åpent-kilde: nettside, nov. 2026   hvor timene kommer fra (nettside foran Google); vises ikke
+  (frontmatter tidssone: Europe/Oslo gjør at «Åpent nå» regner i byens tid, også hjemmefra)
   Fri tekst under feltene blir notatet. Første avsnitt vises i lista, alt i popupen.
   [tekst](https://…) i notatet blir en lenke.
 
@@ -97,6 +104,8 @@ Middelalderens Oslo, med ruinene i Middelalderparken og Schweigaards gate som ho
 - sted: 59.91871, 10.75801
 - google: ChIJFwDK4GZuQUYRh78N3NETWWQ
 - nettside: https://www.lebenjamin.no/
+- åpent: ti–sø 16–
+- åpent-kilde: nettside, nov. 2026
 Grünerløkka
 Fransk bar og bistro. Søndre gate 6.
 - en: Grünerløkka
@@ -106,6 +115,8 @@ French bar and bistro. Søndre gate 6.
 - sted: 59.93123, 10.74274
 - google: ChIJXVikAQBvQUYRDAUBGdtdTQs
 - nettside: https://www.littlewolfoslo.com/
+- åpent: ti–to 16–23, fr 16–00, lø 12–00, sø 12–22
+- åpent-kilde: nettside, nov. 2026
 St. Hanshaugen
 Middelhavskjøkken. Geitmyrsveien 57.
 - en: St. Hanshaugen
@@ -115,6 +126,8 @@ Mediterranean. Geitmyrsveien 57.
 - sted: 59.91799, 10.74070
 - google: ChIJcdoojjhvQUYR8aMYGP5Rbnk
 - nettside: https://www.restaurant-panu.com/
+- åpent: on–to 17.30–00, fr–lø 17.30–01
+- åpent-kilde: nettside og Google, nov. 2026
 Sentrum
 Fine dining. St. Olavs plass 3.
 - en: Sentrum
@@ -124,6 +137,8 @@ Fine dining. St. Olavs plass 3.
 - sted: 59.92042, 10.74908
 - google: ChIJh7RxrqBvQUYRQyeMWJKNAC0
 - nettside: https://www.nektarvinbar.no/
+- åpent: ti–to 17–00, fr–lø 17–00.30
+- åpent-kilde: nettside, nov. 2026
 Fredensborg
 Vinbar med mat. Fredensborgveien 42.
 - en: Fredensborg
@@ -133,6 +148,8 @@ Wine bar with food. Fredensborgveien 42.
 - sted: 59.91526, 10.71931
 - google: ChIJAZ2m2XhuQUYRPAT1khX_A_E
 - nettside: https://www.plah.no/
+- åpent: on–lø 18.30–00
+- åpent-kilde: nettside og Google, nov. 2026
 Vika
 Thai, fine dining. Sommerrogata 1.
 - en: Vika
@@ -142,6 +159,8 @@ Thai, fine dining. Sommerrogata 1.
 - sted: 59.92290, 10.73530
 - google: ChIJh202oihvQUYRPfBspCtatRE
 - nettside: https://kolonialenbislett.no/
+- åpent: ma–fr 17–00, lø 12–00
+- åpent-kilde: nettside, nov. 2026
 Bislett
 Moderne europeisk. Sofies gate 16.
 - en: Bislett
@@ -151,6 +170,8 @@ Modern European. Sofies gate 16.
 - sted: 59.91436, 10.72045
 - google: ChIJR33azCpsQUYRr_9ZUzIKtpw
 - nettside: https://palacegrill.no/
+- åpent: ma–lø 17–03
+- åpent-kilde: Google, nov. 2026
 Vika
 Fine dining. Solligata 2.
 - en: Vika
@@ -160,6 +181,8 @@ Fine dining. Solligata 2.
 - sted: 59.92046, 10.74913
 - google: ChIJpYsC_GRuQUYR6ExBDG0vDxE
 - nettside: https://www.chezcolin.no/
+- åpent: ti–to 16–22, fr–lø 16–23, sø 16–22
+- åpent-kilde: nettside og Google, nov. 2026
 Fredensborg
 Fransk. Fredensborgveien 44.
 - en: Fredensborg
@@ -169,6 +192,8 @@ French. Fredensborgveien 44.
 - sted: 59.91696, 10.76252
 - google: ChIJA3sxAF5uQUYRJ-xMVd5xIPM
 - nettside: https://vintagekitchen.no/
+- åpent: ti–fr 11–00, lø 12–00
+- åpent-kilde: nettside og Google, nov. 2026
 Grønland
 Dansk, med smørbrød og vinbar. Lakkegata 55.
 - en: Grønland
@@ -178,6 +203,8 @@ Danish, with smørrebrød and a wine bar. Lakkegata 55.
 - sted: 59.92138, 10.75144
 - google: ChIJc41X4YduQUYRsXHstRp-S3M
 - nettside: https://www.hrimnir-ramen.no/
+- åpent: ma–lø 13–22.30, sø 13–21.30
+- åpent-kilde: nettside, nov. 2026
 Fredensborg
 Ramen. Maridalsveien 9A.
 - en: Fredensborg
@@ -187,6 +214,8 @@ Ramen. Maridalsveien 9A.
 - sted: 59.91497, 10.75402
 - google: ChIJBQoA4-FvQUYRFRwk0Fvo6IU
 - nettside: https://www.hrimnir-ramen.no/
+- åpent: sø–to 12–22, fr–lø 12–23
+- åpent-kilde: nettside, nov. 2026
 Sentrum
 Ramen. Storgata 37.
 - en: Sentrum
@@ -196,6 +225,8 @@ Ramen. Storgata 37.
 - sted: 59.91831, 10.70585
 - google: ChIJ2_gDbABtQUYRyni5yytLnlA
 - nettside: https://norumgrill.no/
+- åpent: ma–lø 17–22
+- åpent-kilde: nettside, nov. 2026
 Frogner
 Grill. Bygdøy allé 53.
 - en: Frogner
@@ -205,6 +236,8 @@ Grill. Bygdøy allé 53.
 - sted: 59.91052, 10.73955
 - google: ChIJNUctz4duQUYRft4pW7dWnMI
 - nettside: https://www.brasseriehansken.no/
+- åpent: ti–fr 11.30–23, lø 13–23
+- åpent-kilde: nettside, nov. 2026
 Kvadraturen
 Klassisk brasserie. Christiania torv 4.
 - en: Kvadraturen
@@ -214,6 +247,8 @@ Classic brasserie. Christiania torv 4.
 - sted: 59.90642, 10.75937
 - google: ChIJ5XKFeB5vQUYRN-s3zQz545k
 - nettside: https://restaurantbetong.no/
+- åpent: ti–lø 17–00
+- åpent-kilde: nettside og Google, nov. 2026
 Bjørvika
 Norsk. Operagata 77D.
 - en: Bjørvika
@@ -224,6 +259,8 @@ Norwegian. Operagata 77D.
 - google: ChIJQ0YIJfVvQUYRImW8QJ7PlmU
 - nettside: https://liminaloslo.no/
 - utenfor: ja
+- åpent: ma 16–20, on–fr 17–22, lø 12–15 + 17–22, sø 16–20
+- åpent-kilde: nettside, nov. 2026
 Torshov
 Liten restaurant med nordisk settmeny. Torshovgata 15.
 - en: Torshov
@@ -233,6 +270,8 @@ Small restaurant with a Nordic set menu. Torshovgata 15.
 - sted: 59.91653, 10.71340
 - google: ChIJxXO1XgBtQUYRijFcke-LXAU
 - nettside: https://www.cordial.no/
+- åpent: ti–lø 16.30–23
+- åpent-kilde: nettside, nov. 2026
 Frogner
 Moderne bistro. Frognerveien 12B.
 - en: Frogner
@@ -242,6 +281,8 @@ Modern bistro. Frognerveien 12B.
 - sted: 59.91705, 10.73851
 - google: ChIJ2y4Hwz1vQUYR_Z2_kblubOY
 - nettside: https://kafeteriaaugust.no/
+- åpent: ti–to 11–23, fr–lø 11–01
+- åpent-kilde: nettside, nov. 2026
 Sentrum
 Småretter. Universitetsgata 9.
 - en: Sentrum
@@ -251,6 +292,8 @@ Small plates. Universitetsgata 9.
 - sted: 59.90954, 10.74026
 - google: ChIJoYdyGlVvQUYRQiTpfSvhOQs
 - nettside: https://www.restaurantsavage.no/
+- åpent: ti–lø 18–00
+- åpent-kilde: nettside og Google, nov. 2026
 Kvadraturen
 Fine dining. Nedre Slottsgate 2.
 - en: Kvadraturen
@@ -260,6 +303,8 @@ Fine dining. Nedre Slottsgate 2.
 - sted: 59.91404, 10.73389
 - google: ChIJKUfL-n1uQUYRBQem1qv03-8
 - nettside: https://www.theatercafeen.no/
+- åpent: ma–lø 11–23, sø 16–22
+- åpent-kilde: nettside, nov. 2026
 Sentrum
 Wienerkafé og brasserie på Hotel Continental. Stortingsgata 24.
 - en: Sentrum
@@ -269,6 +314,8 @@ Viennese café and brasserie at Hotel Continental. Stortingsgata 24.
 - sted: 59.91499, 10.72045
 - google: ChIJwVibOhttQUYR7FaSj6yfax8
 - nettside: https://www.brasseriecoucou.no/
+- åpent: ma–lø 17–00
+- åpent-kilde: nettside, nov. 2026
 Vika
 Fransk. Henrik Ibsens gate 60C.
 - en: Vika
@@ -278,6 +325,8 @@ French. Henrik Ibsens gate 60C.
 - sted: 59.92129, 10.76379
 - google: ChIJEYOIclZvQUYRp4xIMswDgSw
 - nettside: https://www.restaurant-apostrophe.com/
+- åpent: on–to 16–22, fr 16–23, lø 14–23
+- åpent-kilde: Google, nov. 2026
 Grünerløkka
 Lofthus Samvirkelags restaurant ved Rathkes plass. Kirkegårdsgata 7A.
 - en: Grünerløkka
@@ -287,6 +336,8 @@ Lofthus Samvirkelag’s restaurant on Rathkes plass. Kirkegårdsgata 7A.
 - sted: 59.90595, 10.77508
 - google: ChIJS30OxvlvQUYRwHb4EwQRq7o
 - nettside: https://www.zz.pizza/
+- åpent: ti–fr 16–22, lø 12–22, sø 12–21
+- åpent-kilde: nettside, nov. 2026
 Gamlebyen
 Pizza. St. Halvards gate 33.
 - en: Gamlebyen
@@ -296,6 +347,8 @@ Pizza. St. Halvards gate 33.
 - sted: 59.91909, 10.71886
 - google: ChIJ8wEu3qltQUYROW3r9gtz_QQ
 - nettside: https://www.antonietta.no/
+- åpent: ti–lø 17–22
+- åpent-kilde: nettside, nov. 2026
 Frogner
 Italiensk. Niels Juels gate 51.
 - en: Frogner
@@ -305,6 +358,8 @@ Italian. Niels Juels gate 51.
 - sted: 59.92508, 10.74575
 - google: ChIJffDoEHBuQUYRXFpOCIHgcK0
 - nettside: https://vesuviopizza.no/
+- åpent: ti–to 15–21, fr–lø 15–22, sø 15–21
+- åpent-kilde: Google, nov. 2026
 St. Hanshaugen
 Napolitansk pizza. Bjerregaards gate 29B.
 - en: St. Hanshaugen
@@ -314,6 +369,8 @@ Neapolitan pizza. Bjerregaards gate 29B.
 - sted: 59.90904, 10.74233
 - google: ChIJ5aUOZvlvQUYRp6izA8_HWGI
 - nettside: https://izakayabyvladimirpak.omakasegroup.no/
+- åpent: ti–to 16–23, fr–lø 11.30–15 + 16–23
+- åpent-kilde: nettside, nov. 2026
 Kvadraturen
 Japansk izakaya. Kirkegata 1.
 - en: Kvadraturen
@@ -323,6 +380,8 @@ Japanese izakaya. Kirkegata 1.
 - sted: 59.91831, 10.70612
 - google: ChIJ-ys2HABtQUYR69q3BYZhLK4
 - nettside: https://camposteria.no/
+- åpent: ma 16–21, ti–fr 16–22, lø 12–22, sø 14–21
+- åpent-kilde: nettside, nov. 2026
 Frogner
 Italiensk. Bygdøy allé 53.
 - en: Frogner
@@ -332,6 +391,8 @@ Italian. Bygdøy allé 53.
 - sted: 59.91874, 10.70618
 - google: ChIJ-6UJg81tQUYRNIX8xkm68LU
 - nettside: https://www.brasserieouest.no/
+- åpent: ti–fr 17–23, lø 14–23, sø 16–21.30
+- åpent-kilde: nettside, nov. 2026
 Frogner
 Fransk. Elisenbergveien 19.
 - en: Frogner
@@ -341,6 +402,8 @@ French. Elisenbergveien 19.
 - sted: 59.91609, 10.71421
 - google: ChIJy6xvXNNtQUYR0z3_IDYQem4
 - nettside: https://www.facebook.com/BONOoslo/
+- åpent: ti–fr 17.30–22.30, lø 14–22.30
+- åpent-kilde: Google, nov. 2026
 Frogner
 Italiensk. Niels Juels gate 25.
 - en: Frogner
@@ -350,6 +413,8 @@ Italian. Niels Juels gate 25.
 - sted: 59.91703, 10.75253
 - google: ChIJLa_z_GNuQUYRRhUe7WvM-Lk
 - nettside: https://koieramen.no/
+- åpent: ma–sø 11–22
+- åpent-kilde: nettside og Google, nov. 2026
 Sentrum
 Ramen. Osterhaus' gate 13.
 - en: Sentrum
@@ -359,6 +424,8 @@ Ramen. Osterhaus' gate 13.
 - sted: 59.91637, 10.75062
 - google: ChIJ3Ume7GNuQUYRdpKwDiAdbLw
 - nettside: https://www.arakataka.no/
+- åpent: ma–lø 16–22
+- åpent-kilde: nettside, nov. 2026
 Sentrum
 Nordisk sesongmat. Mariboes gate 7B.
 - en: Sentrum
@@ -368,6 +435,8 @@ Seasonal Nordic. Mariboes gate 7B.
 - sted: 59.92654, 10.73115
 - google: ChIJd0nD6nduQUYRhBLG8jKcEpg
 - nettside: https://www.stlars.no/
+- åpent: ma–lø 16.30–00
+- åpent-kilde: nettside, nov. 2026
 Bislett
 Grill. Thereses gate 45.
 - en: Bislett
@@ -377,6 +446,8 @@ Grill. Thereses gate 45.
 - sted: 59.92203, 10.73914
 - google: ChIJMy9cVtRvQUYRnd0T4CBpVyc
 - nettside: https://www.grottooslo.no/
+- åpent: ti–sø 17–23.30
+- åpent-kilde: nettside, nov. 2026
 Bislett
 Moderne fransk. Hallings gate 5.
 - en: Bislett
@@ -386,6 +457,8 @@ Modern French. Hallings gate 5.
 - sted: 59.92218, 10.75373
 - google: ChIJJZIg6WVuQUYR4glnL2osba4
 - nettside: https://www.nedrefossgaard.no/
+- åpent: ma–lø 12–21.30, sø 12–20
+- åpent-kilde: Google, nov. 2026
 Grünerløkka
 Norsk, i en gammel gård ved Akerselva. Nordre gate 2.
 - en: Grünerløkka
@@ -395,6 +468,8 @@ Norwegian, in an old farmhouse by the Akerselva. Nordre gate 2.
 - sted: 59.91651, 10.73862
 - google: ChIJ14-S6T1vQUYRea2IV0MFpdU
 - nettside: https://www.katlaoslo.no/
+- åpent: ti–fr 17–23, lø 13–23
+- åpent-kilde: nettside, nov. 2026
 Sentrum
 Nordiske råvarer med smaker fra Asia og Latin-Amerika. Universitetsgata 12.
 - en: Sentrum
@@ -404,6 +479,8 @@ Nordic produce with flavours from Asia and Latin America. Universitetsgata 12.
 - sted: 59.92317, 10.77167
 - google: ChIJX7AYPENuQUYRZDu9flbGRZE
 - nettside: https://www.szechuanrestaurant.no/
+- åpent: ma–sø 14–21.30
+- åpent-kilde: nettside, nov. 2026
 Grünerløkka
 Sichuan-kinesisk. Trondheimsveien 64.
 - en: Grünerløkka
@@ -413,6 +490,8 @@ Sichuan Chinese. Trondheimsveien 64.
 - sted: 59.91856, 10.76034
 - google: ChIJCYv3p6VvQUYRDPLSZNgeJdY
 - nettside: https://www.b-vin.no/
+- åpent: ti–lø 17–23
+- åpent-kilde: nettside, nov. 2026
 Grünerløkka
 Bistro og vinbar. Trondheimsveien 2.
 - en: Grünerløkka
@@ -422,6 +501,8 @@ Bistro and wine bar. Trondheimsveien 2.
 - sted: 59.91985, 10.71801
 - google: ChIJH9mEVGhtQUYRSs08c_ew8Ag
 - nettside: https://www.vadio-oslo.com/
+- åpent: ti–lø 16–23, sø 13–18
+- åpent-kilde: Google, nov. 2026
 Briskeby
 Portugisisk. Briskebyveien 26A.
 - en: Briskeby
@@ -431,6 +512,8 @@ Portuguese. Briskebyveien 26A.
 - sted: 59.91434, 10.72921
 - google: ChIJyZ1OK35uQUYRs_kHgYhPRqE
 - nettside: https://www.omakaseoslo.no/
+- åpent: on–to 19–23, fr–lø 17–23
+- åpent-kilde: nettside og Google, nov. 2026
 Vika
 Sushi, omakase. Ruseløkkveien 3.
 - en: Vika
@@ -440,6 +523,8 @@ Omakase sushi. Ruseløkkveien 3.
 - sted: 59.91825, 10.74030
 - google: ChIJgZh-hHxuQUYRfIGWf8WIqac
 - nettside: https://happolati.no/
+- åpent: ti–lø 16–23
+- åpent-kilde: nettside og Google, nov. 2026
 Sentrum
 Asiatisk. St. Olavs plass 2.
 - en: Sentrum
@@ -449,6 +534,8 @@ Asian. St. Olavs plass 2.
 - sted: 59.91705, 10.73891
 - google: ChIJF6SOh3dvQUYRf3c7twtZWVA
 - nettside: https://mononcle.no/
+- åpent: ti–fr 18–23.30, lø 12.30–15 + 18.30–23.30
+- åpent-kilde: Google, nov. 2026
 Sentrum
 Fine dining. Universitetsgata 9.
 - en: Sentrum
@@ -458,6 +545,8 @@ Fine dining. Universitetsgata 9.
 - sted: 59.91848, 10.70794
 - google: ChIJfWKXYtJtQUYRFpCx84qAQtg
 - nettside: https://www.feinschmecker.no/
+- åpent: ti–fr 17–00, lø 18–00
+- åpent-kilde: nettside og Google, nov. 2026
 Frogner
 Fine dining, fransk-nordisk. Balchens gate 5.
 - en: Frogner
@@ -467,6 +556,8 @@ Fine dining, French-Nordic. Balchens gate 5.
 - sted: 59.91306, 10.74280
 - google: ChIJfZiTrmJuQUYRo3gKwWWXWBY
 - nettside: https://www.brasseriefrance.no/
+- åpent: ma 16–22, ti–fr 11.30–22, lø 12–22
+- åpent-kilde: nettside og Google, nov. 2026
 Kvadraturen
 Fransk. Øvre Slottsgate 16.
 - en: Kvadraturen
@@ -476,6 +567,8 @@ French. Øvre Slottsgate 16.
 - sted: 59.92343, 10.72571
 - google: ChIJ_5gpzNdtQUYR1rdew28Fbiw
 - nettside: https://www.blanche.no/
+- åpent: ti–lø 17–22, sø 16–21
+- åpent-kilde: nettside, nov. 2026
 Homansbyen
 Fransk. Josefines gate 23.
 - en: Homansbyen
@@ -485,6 +578,8 @@ French. Josefines gate 23.
 - sted: 59.90754, 10.75818
 - google: ChIJhyP_qopuQUYRwvq5k9QGIy8
 - nettside: https://www.maaemo.no/
+- åpent: ti–to 18–00, fr–lø 17–00
+- åpent-kilde: Google, nov. 2026
 Bjørvika
 Fine dining, tre Michelin-stjerner. Dronning Eufemias gate 23.
 - en: Bjørvika
@@ -494,6 +589,8 @@ Fine dining, three Michelin stars. Dronning Eufemias gate 23.
 - sted: 59.91632, 10.75005
 - google: ChIJMyUhSwBvQUYRJxQRz1b9kmk
 - nettside: https://www.spartaoslo.no/
+- åpent: ma 16–22.30, on–sø 16–00.30
+- åpent-kilde: nettside, nov. 2026
 Sentrum
 Matbar og vinbar. Mariboes gate 2B.
 - en: Sentrum
@@ -503,6 +600,8 @@ Food and wine bar. Mariboes gate 2B.
 - sted: 59.92844, 10.75740
 - google: ChIJjeu0Y9NvQUYRs7HTbF_gxWE
 - nettside: https://rodeooslo.no/
+- åpent: ti–on 17–23.30, to 17–00, fr 17–01, lø 12–01
+- åpent-kilde: nettside og Google, nov. 2026
 Grünerløkka
 Moderne europeisk. Sannergata 2.
 - en: Grünerløkka
@@ -512,6 +611,8 @@ Modern European. Sannergata 2.
 - sted: 59.91431, 10.71732
 - google: ChIJj2nrhZwxbUYR9u_gaKC89IE
 - nettside: https://restaurantcredo.no/
+- åpent: on–fr 17.30–00, lø 14–19
+- åpent-kilde: Google, nov. 2026
 Vika
 Fine dining. Henrik Ibsens gate 110.
 - en: Vika
@@ -521,6 +622,8 @@ Fine dining. Henrik Ibsens gate 110.
 - sted: 59.90841, 10.73552
 - google: ChIJLY_ZY4ZuQUYRY4TaMjHPqGE
 - nettside: https://www.festningenrestaurant.no/
+- åpent: ma–lø 12–23.30
+- åpent-kilde: nettside og Google, nov. 2026
 Kvadraturen
 Ved Akershus festning. Myntgata 9.
 - en: Kvadraturen
@@ -530,6 +633,8 @@ By Akershus Fortress. Myntgata 9.
 - sted: 59.91528, 10.75556
 - google: ChIJzX7OEGFuQUYRlFFEGe5Xjwc
 - nettside: https://grytelokket.no/
+- åpent: ma–to 11–00.30, fr–lø 11–03.30, sø 12–00.30
+- åpent-kilde: nettside, nov. 2026
 Sentrum
 Husmannskost. Storgata 45.
 - en: Sentrum
@@ -539,6 +644,8 @@ Traditional Norwegian home cooking. Storgata 45.
 - sted: 59.91595, 10.71686
 - google: ChIJL-voR49tQUYRgj_BVGJU7ZA
 - nettside: https://aurarestaurant.no/
+- åpent: ma 16–23, on–lø 16–23, sø 15–22
+- åpent-kilde: nettside, nov. 2026
 Frogner
 Moderne indisk. Oscars gate 81.
 - en: Frogner
@@ -552,6 +659,8 @@ Modern Indian. Oscars gate 81.
 - google: ChIJzwYbgMlvQUYR7Z2-SeCYje4
 - nettside: https://www.lasarett.no/
 - status: onskeliste
+- åpent: ma–fr 16.30–23, lø 10–23, sø 14.30–19.30
+- åpent-kilde: nettside, nov. 2026
 Torshov
 Liten matbar med mye vin. Torshovgata 15.
 - en: Torshov
@@ -562,6 +671,8 @@ Small food bar with plenty of wine. Torshovgata 15.
 - google: ChIJWzscAZ1vQUYR4wxlWWvTMJU
 - nettside: https://thelittlepickle.no/
 - status: onskeliste
+- åpent: on–fr 9–15 + 17–22, lø 10–15 + 17–22, sø 10–17.30
+- åpent-kilde: nettside, nov. 2026
 Tøyen
 Nabolagsrestaurant med lokale råvarer. Jens Bjelkes gate 9a.
 - en: Tøyen
@@ -572,6 +683,8 @@ Neighbourhood restaurant with local produce. Jens Bjelkes gate 9a.
 - google: ChIJkQkYdXNtQUYRKamtTrKg_nA
 - nettside: https://ziopizza.no/
 - status: onskeliste
+- åpent: ti–sø 15–22
+- åpent-kilde: nettside, nov. 2026
 Marienlyst
 Pizza. Wilhelm Færdens vei 1A.
 - en: Marienlyst
@@ -581,6 +694,8 @@ Pizza. Wilhelm Færdens vei 1A.
 - sted: 59.92146, 10.75753
 - google: ChIJZ9JWHQBvQUYRQCKaPXCH08Y
 - nettside: https://www.pao-oslo.com/
+- åpent: ti–on 17–21, to–fr 17–22, lø 14–22, sø 13–18
+- åpent-kilde: nettside, nov. 2026
 Grünerløkka
 Thai bar og grill. Markveien 46A.
 - en: Grünerløkka
@@ -591,6 +706,8 @@ Thai bar and barbecue. Markveien 46A.
 - google: ChIJw0UHBQNvQUYROJfvo6M630o
 - nettside: https://stranden30.no/
 - status: onskeliste
+- åpent: ma 11–16, ti–fr 11–00, lø 12–00
+- åpent-kilde: nettside og Google, nov. 2026
 Aker Brygge
 Del av Stranden 30.
 - en: Aker Brygge
@@ -601,6 +718,8 @@ Part of Stranden 30.
 - google: ChIJUWBWNABtQUYRHIGwNlcKRl0
 - nettside: https://www.bronxoslo.no/
 - status: onskeliste
+- åpent: on–fr 16–00, lø 14–00, sø 14–18
+- åpent-kilde: nettside, nov. 2026
 Frogner
 Pizza. Behrens' gate 2.
 - en: Frogner
@@ -611,6 +730,8 @@ Pizza. Behrens' gate 2.
 - google: ChIJ9d0Gj0ZvQUYRA5u22RAqof0
 - nettside: https://www.restaurant-sabotage.no/
 - status: onskeliste
+- åpent: on–lø 17.30–00
+- åpent-kilde: nettside, nov. 2026
 Fredensborg
 Norsk, fransk og polsk. Rosteds gate 15b.
 - en: Fredensborg
@@ -621,6 +742,8 @@ Norwegian, French and Polish. Rosteds gate 15b.
 - google: ChIJvYp6lZ1vQUYRig2VpObLCWE
 - nettside: https://tabuno.no/
 - status: onskeliste
+- åpent: ti–to 18–23, fr–lø 17–00
+- åpent-kilde: Google, nov. 2026
 Bjørvika
 Asiatisk fusjon. Rostockgata 35.
 - en: Bjørvika
@@ -631,6 +754,8 @@ Asian fusion. Rostockgata 35.
 - google: ChIJl7Q6MQBvQUYRsIDsNKeNQuw
 - nettside: https://www.prinsenoslo.no/sjomatbar-byssa
 - status: onskeliste
+- åpent: on–lø 17–23
+- åpent-kilde: nettside og Google, nov. 2026
 Kvadraturen
 Sjømat. Prinsens gate 18.
 - en: Kvadraturen
@@ -641,6 +766,8 @@ Seafood. Prinsens gate 18.
 - google: ChIJRXSbLY5vQUYRSFH3Gn-cMSY
 - nettside: https://www.coderestaurant.no/
 - status: onskeliste
+- åpent: ma–fr 11–23, lø 15–23
+- åpent-kilde: nettside, nov. 2026
 Bjørvika
 Moderne europeisk. Dronning Eufemias gate 18.
 - en: Bjørvika
@@ -651,6 +778,8 @@ Modern European. Dronning Eufemias gate 18.
 - google: ChIJMyUxzWNuQUYRNDH6hd1976s
 - nettside: https://lulu.no/
 - status: onskeliste
+- åpent: ti–to 17–00, fr–lø 17–01
+- åpent-kilde: nettside, nov. 2026
 Youngstorget
 Omakase med fisk og sjømat. Youngs gate 7.
 - en: Youngstorget
@@ -661,6 +790,8 @@ Omakase with fish and seafood. Youngs gate 7.
 - google: ChIJycrEbQBvQUYREW53VmAigng
 - nettside: https://restaurantsubstans.no/
 - status: onskeliste
+- åpent: on–lø 17–00
+- åpent-kilde: nettside, nov. 2026
 Kvadraturen
 Asiatisk fusjon. Rådhusgata 27.
 - en: Kvadraturen
@@ -671,6 +802,8 @@ Asian fusion. Rådhusgata 27.
 - google: ChIJrxOTnAhvQUYRD-xVzBHRTVE
 - nettside: https://fourrage.no/
 - status: onskeliste
+- åpent: ma–fr 16–23, lø 14–21.30
+- åpent-kilde: nettside, nov. 2026
 Grünerløkka
 Fransk. Storgata 97.
 - en: Grünerløkka
@@ -681,6 +814,8 @@ French. Storgata 97.
 - google: ChIJ2yxNOWZvQUYRFFD7MZ6IK8U
 - nettside: http://www.pillefyken.no/
 - status: onskeliste
+- åpent: midlertidig stengt
+- åpent-kilde: Google, nov. 2026
 Kampen
 Monrads gate 1.
 - en: Kampen
@@ -691,6 +826,8 @@ Monrads gate 1.
 - google: ChIJW3ema0VvQUYRuYHm0lqr8qE
 - nettside: https://www.thonhotels.no/hoteller/norge/oslo/thon-hotel-slottsparken/grotten-ol-og-vinbar/
 - status: onskeliste
+- åpent: ti–lø 16.30–00
+- åpent-kilde: nettside, nov. 2026
 Homansbyen
 Øl- og vinbar. Wergelandsveien 5.
 - en: Homansbyen
@@ -701,6 +838,8 @@ Beer and wine bar. Wergelandsveien 5.
 - google: ChIJjRqf7J1tQUYRDe_X6hAJPdc
 - nettside: https://www.fagerbistro.no/
 - status: onskeliste
+- åpent: on–sø 16–23
+- åpent-kilde: nettside, nov. 2026
 Fagerborg
 Fransk bistro. Fagerborggata 1.
 - en: Fagerborg
@@ -711,6 +850,8 @@ French bistro. Fagerborggata 1.
 - google: ChIJl3mVyIluQUYRGVHhVr8vZ0o
 - nettside: https://www.mantra.no/
 - status: onskeliste
+- åpent: ma–lø 16–21.30
+- åpent-kilde: nettside, nov. 2026
 Kvadraturen
 Indisk. Dronningens gate 19.
 - en: Kvadraturen
@@ -721,6 +862,8 @@ Indian. Dronningens gate 19.
 - google: ChIJ3cwTgSNvQUYR3hgSK6jYO40
 - nettside: https://www.flavour.no/
 - status: onskeliste
+- åpent: ma–sø 15–23
+- åpent-kilde: nettside, nov. 2026
 Grønland
 Kinesisk. Heimdalsgata 37.
 - en: Grønland
@@ -731,6 +874,8 @@ Chinese. Heimdalsgata 37.
 - google: ChIJL8ijAJFvQUYRECyoVqQZoDA
 - nettside: https://www.kanpai.no/
 - status: onskeliste
+- åpent: ti–lø 16–23, sø 16–22
+- åpent-kilde: nettside, nov. 2026
 Bislett
 Japansk izakaya. Parkveien 1b.
 - en: Bislett
@@ -741,6 +886,8 @@ Japanese izakaya. Parkveien 1b.
 - google: ChIJh6moMYhuQUYRHi1nFHBpbPw
 - nettside: https://www.shanghai2k18.no/
 - status: onskeliste
+- åpent: ma–sø 14–22
+- åpent-kilde: nettside, nov. 2026
 Kvadraturen
 Kinesisk. Kirkegata 30.
 - en: Kvadraturen
@@ -751,6 +898,8 @@ Chinese. Kirkegata 30.
 - google: ChIJm8kNSnxvQUYRkUTym_x4F2Q
 - nettside: https://www.kain-oslo.com/
 - status: onskeliste
+- åpent: ti–fr 16–22, lø 16–23
+- åpent-kilde: nettside, nov. 2026
 Hammersborg
 Neo-filippinsk bistro. Hammersborggata 9.
 - en: Hammersborg
@@ -769,6 +918,8 @@ Nektar's little sister, in Arno's former premises a few steps along the street. 
 - google: ChIJmUBylGhuQUYRe42DKUnkpEs
 - nettside: https://www.waydownsouth.no/
 - status: onskeliste
+- åpent: ti–to 16–21, fr 16–21.30, lø 14–21.30
+- åpent-kilde: nettside, nov. 2026
 Vulkan
 Barbecue fra sørstatene ved Akerselva. Østre Elvebakke 7.
 - en: Vulkan
