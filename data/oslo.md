@@ -36,7 +36,7 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
   - åpent: ti–to 17–23, fr–lø 17–01, sø 12–15 + 17–22
                                 åpningstider: ma ti on to fr lø sø, dager som ikke er nevnt er stengt.
                                 Over midnatt: 17–01. Ukjent stengetid: 16–. «midlertidig stengt» går også.
-                                Gir filteret «Åpent: Nå · Lørdag · Søndag» og timene i infoboksen.
+                                Gir filteret «Åpent: Nå · Søndag · Mandag» og timene i infoboksen.
   - åpent-kilde: nettside, nov. 2026   hvor timene kommer fra (nettside foran Google); vises ikke
   (frontmatter tidssone: Europe/Oslo gjør at «Åpent nå» regner i byens tid, også hjemmefra)
   Fri tekst under feltene blir notatet. Første avsnitt vises i lista, alt i popupen.

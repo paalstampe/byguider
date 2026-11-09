@@ -25,6 +25,7 @@ Stubb og bilder er kode → egen gren `ny-by-<id>`. Data og tekst kan ligge på 
 1. `byer.json`: ny linje `{"id": "<id>", "navn": "<By>", "data": "data/<id>.md", "geometri": "data/<id>-geometri.geojson", "skjult": true}`.
 2. `data/<id>.md`: kopier frontmatter og formatkommentaren fra den nyeste byen (f.eks. `data/berlin.md`). Sett tittel,
    undertittel, -en-variantene, kicker, `senter` (bredde, lengde), `zoom` og `oppdatert` (dagens dato).
+   Sett også `tidssone` (IANA-navn, f.eks. `Europe/Berlin`), så «Åpent nå» regner i byens tid.
 3. `data/<id>-geometri.geojson`: `{"type": "FeatureCollection", "features": []}` til nabolagene er tegnet.
 4. `<id>/index.html`: kopier `london/index.html`. Bytt `data-by`, `<title>`, `apple-mobile-web-app-title` (bare bynavnet),
    `apple-touch-icon` (`../bilder/ikon-<id>.png`) og alle og:-taggene (url, tittel, bilde `deling-<id>.png`, alt).
@@ -35,6 +36,12 @@ Stubb og bilder er kode → egen gren `ny-by-<id>`. Data og tekst kan ligge på 
   koordinater, Place ID, vurdering, nettside, adresse og om stedet er stengt, uten å åpne hvert sted. 80–100 steder tar
   noen minutter. Sjekk at navn og område stemmer, og ta bare med stedets egen nettside (ev. Instagram) – fjern utm-parametre.
   Steder fra Pål som ikke finnes i byen, legges ikke inn: spør Pål og skriv dem under Åpne spørsmål i NOTES.md.
+- Åpningstider for restauranter (og gjerne kaféer og barer): `- åpent:` og `- åpent-kilde:` (format i Oslo-fila og HANDOVER).
+  Stedets egen nettside går foran Google, som ofte er utdatert; Google brukes når nettsiden mangler tider.
+  `slaopp.js` gir Googles tider i feltet `tider` (allerede i `åpent:`-format). Nettsidene: `curl` først; sider som bygges
+  med JavaScript (Wix, Squarespace) hentes med Playwright (`npm root -g`/playwright), også undersider som «Åpningstider»/«Info».
+  Sett `åpent-kilde: nettside, <mnd. år>` / `Google, …` / `nettside og Google, …`. Steder Google melder som midlertidig
+  stengt: `- åpent: midlertidig stengt` og si fra til Pål.
 - Notatformat for steder (ikke nabolag og gåturer), som i New York – området er eget avsnitt, også på engelsk:
   ```
   Roma Norte
