@@ -5,8 +5,13 @@ Oppdateres ved slutten av hver økt (`/avslutt`).
 
 ## Status nå
 
-Sist oppdatert: 8. november 2026.
+Sist oppdatert: 9. november 2026.
 
+- 9.11.: åpningstider i Oslo (PR #112). Alle 72 restauranter har `åpent:` og `åpent-kilde:`: tidene er fra egen nettside der de finnes
+  (curl, eller Playwright for Wix/Squarespace), ellers Google (13 steder). Filteret «Åpent: Nå · Søndag · Mandag» toner ned stengte steder
+  i kart, klynger og liste; infoboksen viser dagens/valgt dags tider og uka. «Nå» regner i `tidssone: Europe/Oslo`. «Kun favoritter» og
+  «Nær meg» står i egen blokk «Vis». /ny-by tar med tidssone og åpningstider, og `slaopp.js` gir Googles tider i `åpent:`-format.
+  Live og sjekket. Pillefyken er midlertidig stengt ifølge Google; Vesle Nektar har ikke åpnet.
 - 8.11.: Kairo og Luxor («Pål, Vibeke og Heddas Kairo/Luxor») lagt inn som to skjulte byer, nås på stam.pe/byguider/kairo/ og /luxor/.
   Kairo: 90 oppføringer i sonene Zamalek & Garden City, Downtown, Islamsk & koptisk Kairo, Giza og Heliopolis & Maadi, med gåturene
   Downtown → Zamalek (4 km) og Al-Muizz → Sultan Hassan (3 km). Luxor: 31 oppføringer i sonene Østbredden, Vestbredden og Utenfor Luxor,
@@ -180,6 +185,8 @@ Sist oppdatert: 8. november 2026.
 
 ## Neste steg
 
+- Åpningstider: kaféer og barer i Oslo, deretter de andre byene (sett `tidssone:` i frontmatter). Tidene bør sjekkes et par ganger
+  i året (sommerstengt, nye tider); den ukentlige skyjobben kan sammenligne med Google og melde avvik.
 - Gjøremål (Pål sa ja 5.11.): endre `oppstart.sh` i claude-oppsett så den i skyøkter tilbakestiller lokal `main` til
   origin/main når den har gått fra hverandre og ikke har egne commits som mangler på origin. 5.11. hadde skykopien
   67 commits hver vei og `pull --ff-only` feilet. Kjør `synk-repoer.sh` etterpå.
