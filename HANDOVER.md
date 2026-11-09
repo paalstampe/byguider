@@ -546,8 +546,8 @@ Hvert trinn skal kunne committes for seg og fungere alene.
   ellers utklippstavlen.
 - Åpningstider (grenen `apningstider`, nov. 2026): `lesAapent` gjør `åpent:` om til sju dager med intervaller i
   minutter. Filterblokken «Åpent: Nå · Lørdag · Søndag» (`state.aapent`: null, 'naa', 5 eller 6) vises bare når byen
-  har åpningstider. Den skjuler ingenting: steder vi vet er stengt (`erStengt`), får `stengt: true` i kartdataene
-  (`medStengt`, `icon-opacity` 0,3 og lavest `symbol-sort-key`), tones ned i lista (`.oppslag--stengt`, «Stengt søndag»
+  har åpningstider. Den skjuler ingenting: steder vi vet er stengt (`erStengt`), får `stengt: true` på stedet, regnet ut én gang
+  per opptegning (`oppdaterStengte`; kartlagene bruker `TONET` = `icon-opacity` 0,3 og `SORTERING`), tones ned i lista (`.oppslag--stengt`, «Stengt søndag»
   i metalinjen) og legges sist i hver sone. Steder uten åpningstider vises som vanlig. «Nå» regner i byens tid
   (`tidssone: Europe/Oslo` i frontmatter, ellers enhetens klokke; `byTid`), tar med gårsdagens intervaller som går
   over midnatt og tegnes på nytt hvert minutt. Med Lørdag/Søndag viser infoboksen den dagen i stedet for i dag. Infoboksen viser «I dag 17–23» og uka slått sammen (`ukeTekst`).
