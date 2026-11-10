@@ -1694,6 +1694,15 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
   let naaVakt = null;
 
+  /* «Åpent» gir bare mening når stedene vi viser har åpningstider: én kategori er valgt, og minst 80 % av
+     stedene i den har åpent:. Steder uten tider ville ellers sett åpne ut. Styres av dataene, så nye
+     kategorier med tider (kaféer, barer) får knappene av seg selv. */
+  function aapentMulig() {
+    if (state.kategorier.size !== 1) return false;
+    const steder = state.oppslag.concat(state.onskeliste).filter(o => state.kategorier.has(o.p.kategori));
+    return steder.length > 0 && steder.filter(o => o.p.aapent).length >= 0.8 * steder.length;
+  }
+
   /* Regner ut én gang per opptegning om hvert sted er stengt, og lagrer det som stengt på stedet
      (properties, så kartlagene leser det direkte). Svarer om noe endret seg. */
   function oppdaterStengte() {
@@ -2000,10 +2009,15 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     byggGruppe(el.fKategori, state.brukteKategorier, state.kategorier,
       k => katInfo(k).navn, k => katInfo(k).farge);
 
-    // åpent nå / søndag / mandag — bare når byen har åpningstider
+    // åpent nå / søndag / mandag — bare når valgt kategori har åpningstider (se aapentMulig).
+    // Byttes kategorien til en uten, slås filteret av, så det ikke står igjen skjult.
     el.fAapent.innerHTML = '';
     const blokk = el.fAapent.closest('.filterblokk');
-    blokk.hidden = !state.oppslag.concat(state.onskeliste).some(o => o.p.aapent);
+    blokk.hidden = !aapentMulig();
+    if (blokk.hidden && state.aapent != null) {
+      state.aapent = null;
+      clearInterval(naaVakt);
+    }
     if (!blokk.hidden) {
       ['naa', 6, 0].forEach(verdi => {   // søndag og mandag: da er mange stengt
         const tekst = verdi === 'naa' ? t('aapentNaa') : t('dagNavn')[verdi];
