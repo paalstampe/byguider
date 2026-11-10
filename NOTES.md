@@ -11,6 +11,7 @@ Sist oppdatert: 9. november 2026.
   (curl, eller Playwright for Wix/Squarespace), ellers Google (13 steder). Filteret «Åpent: Nå · Søndag · Mandag» toner ned stengte steder
   i kart, klynger og liste; infoboksen viser dagens/valgt dags tider og uka. «Nå» regner i `tidssone: Europe/Oslo`. «Kun favoritter» og
   «Nær meg» står i egen blokk «Vis». /ny-by tar med tidssone og åpningstider, og `slaopp.js` gir Googles tider i `åpent:`-format.
+  10.11.: «Åpent» vises bare når valgt kategori har åpningstider (nå Restauranter), så butikker o.l. ikke ser åpne ut.
   Live og sjekket. Pillefyken er midlertidig stengt ifølge Google; Vesle Nektar har ikke åpnet.
 - 8.11.: Kairo og Luxor («Pål, Vibeke og Heddas Kairo/Luxor») lagt inn som to skjulte byer, nås på stam.pe/byguider/kairo/ og /luxor/.
   Kairo: 90 oppføringer i sonene Zamalek & Garden City, Downtown, Islamsk & koptisk Kairo, Giza og Heliopolis & Maadi, med gåturene

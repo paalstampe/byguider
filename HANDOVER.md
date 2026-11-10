@@ -545,8 +545,8 @@ Hvert trinn skal kunne committes for seg og fungere alene.
   (`aapneStedFraAdresse`, zoomer som «Zoom inn»); «Del» i infoboksen bruker `navigator.share` på berøringsskjerm,
   ellers utklippstavlen.
 - Åpningstider (grenen `apningstider`, nov. 2026): `lesAapent` gjør `åpent:` om til sju dager med intervaller i
-  minutter. Filterblokken «Åpent: Nå · Søndag · Mandag» (`state.aapent`: null, 'naa', 6 eller 0; da er mange stengt) vises bare når byen
-  har åpningstider. «Kun favoritter» og «Nær meg» står i egen blokk «Vis» under. Den skjuler ingenting: steder vi vet er stengt (`erStengt`), får `stengt: true` på stedet, regnet ut én gang
+  minutter. Filterblokken «Åpent: Nå · Søndag · Mandag» (`state.aapent`: null, 'naa', 6 eller 0; da er mange stengt) vises bare når én kategori er valgt
+  og minst 80 % av stedene i den har åpningstider (`aapentMulig`); byttes kategorien til en uten, slås filteret av. «Kun favoritter» og «Nær meg» står i egen blokk «Vis» under. Den skjuler ingenting: steder vi vet er stengt (`erStengt`), får `stengt: true` på stedet, regnet ut én gang
   per opptegning (`oppdaterStengte`; kartlagene bruker `TONET` = `icon-opacity` 0,3 og `SORTERING`), tones ned i lista (`.oppslag--stengt`, «Stengt søndag»
   i metalinjen) og legges sist i hver sone. Steder uten åpningstider vises som vanlig. «Nå» regner i byens tid
   (`tidssone: Europe/Oslo` i frontmatter, ellers enhetens klokke; `byTid`), tar med gårsdagens intervaller som går
