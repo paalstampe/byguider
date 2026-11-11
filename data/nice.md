@@ -8,6 +8,7 @@ kicker-en: An opinionated guide
 senter: 43.6990, 7.2620
 zoom: 13
 oppdatert: 2026-11-01
+tidssone: Europe/Paris
 ---
 
 <!--
@@ -53,6 +54,8 @@ og kobles hit på navn: type "område", "gate" eller "rute".
 ### Lavomatique ★
 - sted: 43.69756, 7.27619
 - google: ChIJXypbOnvbzRIRlNgKVjfYNq8
+- åpent: ma 19–22, ti–fr 12–13.45 + 19–22
+- åpent-kilde: Google, nov. 2026
 Vieux-Nice
 
 Småretter til deling. 11 Rue du Pont-Vieux.
@@ -65,6 +68,8 @@ Small plates to share. 11 Rue du Pont-Vieux.
 - sted: 43.69562, 7.27049
 - google: ChIJv78aqqrbzRIRv43Z2SPIznE
 - nettside: https://noto-nice.com/
+- åpent: ma–sø 12–15 + 19.30–02
+- åpent-kilde: Google, nov. 2026
 Vieux-Nice
 
 Siciliansk. 20 Rue Saint-François de Paule.
@@ -77,6 +82,8 @@ Sicilian. 20 Rue Saint-François de Paule.
 - sted: 43.69605, 7.27188
 - google: ChIJEzRKyqPazRIRJGVgSPuxt5g
 - nettside: https://www.finegueule.fr/
+- åpent: ti–lø 12–14 + 19.30–22
+- åpent-kilde: nettside, nov. 2026
 Vieux-Nice
 
 Fransk og niçoise. 2 Rue de l'Hôtel de Ville.
@@ -89,6 +96,8 @@ French and Niçoise. 2 Rue de l'Hôtel de Ville.
 - sted: 43.69584, 7.27093
 - google: ChIJU7N6KqLazRIRY837PEcbJAs
 - nettside: https://www.instagram.com/lapetitemaison_nice/
+- åpent: ma–lø 12–14.30 + 19.30–23.30
+- åpent-kilde: Google, nov. 2026
 Vieux-Nice
 
 Niçoise- og middelhavskjøkken. 11 Rue Saint-François de Paule.
@@ -101,6 +110,8 @@ Niçoise and Mediterranean. 11 Rue Saint-François de Paule.
 - sted: 43.69746, 7.27838
 - google: ChIJje0pesTbzRIR2yKcPzPf1cM
 - nettside: https://www.marriott.com/en-us/hotels/ncehc-hotel-du-couvent-a-luxury-collection-hotel-nice-france/dining/
+- åpent: ma–sø 12–14.30 + 18.30–22
+- åpent-kilde: Google, nov. 2026
 Vieux-Nice
 
 Bistro på Hôtel du Couvent. 16 Rue des Serruriers.
@@ -113,6 +124,8 @@ Bistro at Hôtel du Couvent. 16 Rue des Serruriers.
 - sted: 43.69693, 7.27487
 - google: ChIJPbZSQaPazRIRJJ75fBP1XE8
 - nettside: https://www.instagram.com/bar_des_oiseaux_nice
+- åpent: ti–lø 12–13.30 + 19–21.45
+- åpent-kilde: Google, nov. 2026
 Vieux-Nice
 
 Fransk med internasjonale innslag. 5 Rue Saint-Vincent.
@@ -125,6 +138,8 @@ French with global touches. 5 Rue Saint-Vincent.
 - sted: 43.69748, 7.27497
 - google: ChIJR2xXXaPazRIRkzg4n7-k-sY
 - nettside: https://www.comptoirdumarche.fr/
+- åpent: ti–lø 12–14 + 19–22
+- åpent-kilde: nettside, nov. 2026
 Vieux-Nice
 
 Bistro, middelhavskjøkken. 8 Rue du Marché.
@@ -137,6 +152,8 @@ Bistro, Mediterranean. 8 Rue du Marché.
 - sted: 43.69638, 7.27631
 - google: ChIJaSzDzLzazRIRCRtNrjEbXvk
 - nettside: https://www.facebook.com/pages/Le-Bistro-D-Antoine/174404542628277
+- åpent: ti 12–13.30 + 19–21.30, on 12–14 + 19–21.30, to–lø 12–13.30 + 19–21.30
+- åpent-kilde: Google, nov. 2026
 Vieux-Nice
 
 Bistro. 27 Rue de la Préfecture.
@@ -161,6 +178,8 @@ Fish and seafood with a South American twist. 4 Rue Jacques Médecin.
 - sted: 43.69649, 7.27599
 - google: ChIJpU2cM6PazRIRqHWfuvZTVkI
 - nettside: https://guide.michelin.com/gb/en/provence-alpes-cote-dazur/nice/restaurant/olive-et-artichaut
+- åpent: ti–lø 12–13.30 + 19–21.30
+- åpent-kilde: Google, nov. 2026
 Vieux-Nice
 
 Middelhavskjøkken. 6 Rue Sainte-Réparate.
@@ -265,6 +284,8 @@ Kvarteret mellom Place Garibaldi og havnen, kalt Le Petit Marais. Smale gater me
 - sted: 43.69980, 7.28484
 - google: ChIJ4z-TInPbzRIRTk5V0X5EZ8k
 - nettside: https://janonline.com/le-bistrot-de-jan/
+- åpent: ma–sø 12–15 + 19–00.30
+- åpent-kilde: Google, nov. 2026
 Le Petit Marais
 
 Middag og lunsj.
@@ -289,6 +310,8 @@ Open every day.
 - sted: 43.70042, 7.28501
 - google: ChIJB7NnzyHbzRIRtO8fkFwdBl0
 - nettside: https://lesagitateurs.com/pirouette
+- åpent: ma 18.30–23.30, to–fr 18.30–23.30, lø–sø 12–15 + 18.30–23.30
+- åpent-kilde: nettside, nov. 2026
 Le Petit Marais
 
 Bistro fra Les Agitateurs. 34 Rue Bonaparte.
@@ -301,6 +324,8 @@ Bistro from Les Agitateurs. 34 Rue Bonaparte.
 - sted: 43.69986, 7.28490
 - google: ChIJ7cguWLjazRIR0sVOtnZhvUM
 - nettside: https://janonline.com/restaurantjan/
+- åpent: ti–lø 19–22
+- åpent-kilde: Google, nov. 2026
 Le Petit Marais
 
 Fine dining.
@@ -309,6 +334,8 @@ Fine dining.
 - sted: 43.70052, 7.28435
 - google: ChIJk76xaCnbzRIRZRqji8u5qxc
 - nettside: https://www.lesagitateurs.com/
+- åpent: ma 19–21.30, to–fr 19–21.30, lø–sø 12–14 + 19–21.30
+- åpent-kilde: Google, nov. 2026
 Le Petit Marais
 
 Fine dining.
@@ -317,6 +344,8 @@ Fine dining.
 - sted: 43.69904, 7.28570
 - google: ChIJC-GpTdnbzRIRyzHwhjXfYuU
 - nettside: https://restaurant-epicentre.com/
+- åpent: ma 19.30–22.30, to–sø 19.30–22.30
+- åpent-kilde: Google, nov. 2026
 Le Petit Marais
 
 Fine dining.
@@ -325,6 +354,8 @@ Fine dining.
 - sted: 43.69979, 7.28439
 - google: ChIJRfplVQjbzRIRpBldOM3IXjE
 - nettside: https://tinatrattoria.com/tina-trattoria
+- åpent: on–sø 12–14.30 + 19–22.30
+- åpent-kilde: nettside, nov. 2026
 Le Petit Marais
 
 Italiensk trattoria. 16 Rue Lascaris.
@@ -337,6 +368,8 @@ Italian trattoria. 16 Rue Lascaris.
 - sted: 43.70151, 7.27940
 - google: ChIJj0UwwrXbzRIR-tCPIbLPlYY
 - nettside: https://www.zenirorestaurants.com/
+- åpent: ma–sø 19–22.30
+- åpent-kilde: nettside, nov. 2026
 Le Port
 
 Japansk restaurant og bar. 64 Boulevard Risso.
@@ -349,6 +382,8 @@ Japanese restaurant and bar. 64 Boulevard Risso.
 - sted: 43.70008, 7.28428
 - google: ChIJ6W_m91HbzRIRKRypInZwg5k
 - nettside: https://lesagitateurs.com/cagnard
+- åpent: ma 10–14 + 18.30–21.30, to–sø 10–14 + 18.30–21.30
+- åpent-kilde: nettside, nov. 2026
 Le Petit Marais
 
 Sesongretter til deling, fra Les Agitateurs. 11 Rue François Guisol.
@@ -361,6 +396,8 @@ Seasonal sharing plates, from Les Agitateurs. 11 Rue François Guisol.
 - sted: 43.70068, 7.28469
 - google: ChIJn3fG3QDbzRIR_18otd8PNn4
 - nettside: https://www.salette-restaurant.fr/
+- åpent: ti 19.15–21.30, on 12–13.30 + 19.15–21.30, to–fr 19.15–21.30, lø 12–13.30 + 19.15–21.30
+- åpent-kilde: Google, nov. 2026
 Le Port
 
 Fransk bistronomi. 35a Rue Bonaparte.
@@ -373,6 +410,8 @@ French bistronomy. 35a Rue Bonaparte.
 - sted: 43.69980, 7.28109
 - google: ChIJw63H7FfbzRIRcgsFc3Fb5cs
 - nettside: https://www.instagram.com/lacavedepeixes/
+- åpent: ma–lø 12–14 + 18.30–23
+- åpent-kilde: Google, nov. 2026
 Le Port
 
 Vinbar fra Peixes. 8 Rue Catherine Ségurane.
@@ -385,6 +424,8 @@ Wine bar from Peixes. 8 Rue Catherine Ségurane.
 - sted: 43.70168, 7.27569
 - google: ChIJ8V2bSaXazRIRQW52wdexwdY
 - nettside: https://restaurant-eau-de-vie-nice.fr/
+- åpent: ma–to 12–13.30 + 19–21.30, fr 12–13.30 + 19–22, lø 19–22
+- åpent-kilde: nettside, nov. 2026
 Garibaldi
 
 Moderne fransk. 11 Rue Delille.
@@ -397,6 +438,8 @@ Modern French. 11 Rue Delille.
 - sted: 43.70071, 7.28409
 - google: ChIJi8Q6NtnbzRIRU8p6NkexOrk
 - nettside: https://lesagitateurs.com/magma
+- åpent: ti–to 18.30–21.30, fr–lø 12–14 + 18.30–21.30
+- åpent-kilde: nettside, nov. 2026
 Le Port
 
 Asiatisk fusjon fra Les Agitateurs. 31 Rue Bonaparte.
@@ -410,6 +453,8 @@ Asian fusion from Les Agitateurs. 31 Rue Bonaparte.
 - google: ChIJyYrGk3DbzRIRp3gf_oEuNvk
 - nettside: https://www.restaurantpialha.fr/
 - status: onskeliste
+- åpent: ma 11.45–13.30, ti–fr 11.45–13.30 + 19–21
+- åpent-kilde: nettside, nov. 2026
 Mont Boron
 
 Liten restaurant der kokken også serverer. 247 Boulevard du Mont-Boron.
@@ -551,6 +596,8 @@ Flott område med butikker, restauranter og kaféer mellom Boulevard Victor Hugo
 - sted: 43.69865, 7.26037
 - google: ChIJh0j648HRzRIR2O7JLHWH22g
 - nettside: https://www.nespo-restaurant.com/
+- åpent: ti–lø 12–15 + 19.30–00.30
+- åpent-kilde: nettside, nov. 2026
 Musiciens
 
 Middag og lunsj.
@@ -575,6 +622,8 @@ Closed Sunday and Monday.
 - sted: 43.69908, 7.26488
 - google: ChIJjW6jy23RzRIR4RXJ6suyNmI
 - nettside: https://www.apopinorestaurant.com/
+- åpent: ma–fr 12–14 + 18.30–22
+- åpent-kilde: Google, nov. 2026
 Carré d'Or
 
 Middelhavskjøkken. 11 bis Rue Grimaldi.
@@ -587,6 +636,8 @@ Mediterranean. 11 bis Rue Grimaldi.
 - sted: 43.69895, 7.26495
 - google: ChIJOWwC_AnQzRIRIC5eAiqAv3k
 - nettside: https://www.sejourcafe.fr/
+- åpent: ti–lø 12–13.30 + 19.30–21.30
+- åpent-kilde: nettside, nov. 2026
 Carré d'Or
 
 Moderne fransk. 11 Rue Grimaldi.
@@ -599,6 +650,8 @@ Modern French. 11 Rue Grimaldi.
 - sted: 43.69649, 7.26166
 - google: ChIJPUu6AgDRzRIROxpWab1RRxM
 - nettside: https://lantidotenice.fr/
+- åpent: ma–sø 18–22
+- åpent-kilde: Google, nov. 2026
 Carré d'Or
 
 Fransk. 3 Rue Dalpozzo.
@@ -611,6 +664,8 @@ French. 3 Rue Dalpozzo.
 - sted: 43.69643, 7.26413
 - google: ChIJE51pigrQzRIR_x_PzrQ_He0
 - nettside: https://www.franchin.net/
+- åpent: on–sø 12–13.30 + 19–21.30
+- åpent-kilde: nettside, nov. 2026
 Carré d'Or
 
 Franske klassikere i art deco-lokale. 10 Rue Massenet.
@@ -623,6 +678,8 @@ French classics in an art deco room. 10 Rue Massenet.
 - sted: 43.69905, 7.26483
 - google: ChIJqTIC_AnQzRIR96POL-9UfMc
 - nettside: https://www.chezdavia.com/
+- åpent: ti 19–21.30, on–sø 12–13.30 + 19–21.30
+- åpent-kilde: nettside, nov. 2026
 Carré d'Or
 
 Niçoise-kjøkken. 11 bis Rue Grimaldi.
@@ -636,6 +693,8 @@ Niçoise cooking. 11 bis Rue Grimaldi.
 - google: ChIJX5-OZZ_bzRIRMSFq4pEScfw
 - nettside: https://www.koyonice.com/
 - status: onskeliste
+- åpent: on–sø 18–23.15
+- åpent-kilde: Google, nov. 2026
 Jean Médecin
 
 Japansk. 14 Rue Emma et Philippe Tiranty.

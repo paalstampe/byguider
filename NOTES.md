@@ -11,6 +11,9 @@ Sist oppdatert: 9. november 2026.
   (curl, eller Playwright for Wix/Squarespace), ellers Google (13 steder). Filteret «Åpent: Nå · Søndag · Mandag» toner ned stengte steder
   i kart, klynger og liste; infoboksen viser dagens/valgt dags tider og uka. «Nå» regner i `tidssone: Europe/Oslo`. «Kun favoritter» og
   «Nær meg» står i egen blokk «Vis». /ny-by tar med tidssone og åpningstider, og `slaopp.js` gir Googles tider i `åpent:`-format.
+  11.11.: London (113 av 114) og Nice (29 av 30) har åpningstider for restaurantene, med `tidssone:` (Europe/London, Europe/Paris).
+  Nettsiden for 69 i London og 13 i Nice, Google for resten. Mangler: Willett's og Peixes (ikke i Google-søket, nettsiden uten tider).
+  Le Séjour (Nice) står som stengt for godt hos Google, men nettsiden har vanlige åpningstider; sjekk.
   10.11.: «Åpent» vises bare når valgt kategori har åpningstider (nå Restauranter), så butikker o.l. ikke ser åpne ut.
   Live og sjekket. Pillefyken er midlertidig stengt ifølge Google; Vesle Nektar har ikke åpnet.
 - 8.11.: Kairo og Luxor («Pål, Vibeke og Heddas Kairo/Luxor») lagt inn som to skjulte byer, nås på stam.pe/byguider/kairo/ og /luxor/.
@@ -186,7 +189,7 @@ Sist oppdatert: 9. november 2026.
 
 ## Neste steg
 
-- Åpningstider: kaféer og barer i Oslo, deretter de andre byene (sett `tidssone:` i frontmatter). Tidene bør sjekkes et par ganger
+- Åpningstider: kaféer og barer i Oslo, deretter New York, Tokyo, Bangkok og de skjulte byene (sett `tidssone:` i frontmatter). Tidene bør sjekkes et par ganger
   i året (sommerstengt, nye tider); den ukentlige skyjobben kan sammenligne med Google og melde avvik.
 - Gjøremål (Pål sa ja 5.11.): endre `oppstart.sh` i claude-oppsett så den i skyøkter tilbakestiller lokal `main` til
   origin/main når den har gått fra hverandre og ikke har egne commits som mangler på origin. 5.11. hadde skykopien
