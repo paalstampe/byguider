@@ -7,7 +7,7 @@ kicker: En høyst subjektiv guide
 kicker-en: An opinionated guide
 senter: 59.9180, 10.7400
 zoom: 13
-oppdatert: 2026-10-26
+oppdatert: 2026-11-11
 tidssone: Europe/Oslo
 ---
 
@@ -652,6 +652,28 @@ Moderne indisk. Oscars gate 81.
 - en: Frogner
 Modern Indian. Oscars gate 81.
 
+### Kolonihagen Frogner ★
+- sted: 59.91888, 10.71002
+- google: ChIJZxeP-UZuQUYR9KlaL7Ji9GY
+- nettside: http://www.kolonihagenfrogner.no/
+- åpent: ti–to 12–15 + 17–22, fr 12–15 + 17–23, lø 13–16 + 17–23
+- åpent-kilde: Google, nov. 2026
+Frogner
+Økologisk og sesongbasert. Frognerveien 33.
+- en: Frogner
+Organic and seasonal. Frognerveien 33.
+
+### 200
+- sted: 59.92223, 10.76141
+- google: ChIJc0hmnglvQUYR8w_qj9a52R4
+- nettside: https://200oslo.com/
+- åpent: ma–ti 16–23.30, on–fr 16–00.30, lø 13–00.30, sø 16–23.30
+- åpent-kilde: Google, nov. 2026
+Sofienberg
+Gastrobar i store lokaler, liten men variert meny. Schnitzelen er favoritten (Aftenposten). Hunder er velkomne. Sofienberggata 17.
+- en: Sofienberg
+Gastro bar in large premises, small but varied menu. The schnitzel is the favourite (Aftenposten). Dogs welcome. Sofienberggata 17.
+
 <!-- Ønskeliste: restauranter vi ikke har besøkt ennå (- status: onskeliste).
      ★ = de vi helst vil til først. Fjern «status»-linja når vi har vært der. -->
 
@@ -926,6 +948,42 @@ Barbecue fra sørstatene ved Akerselva. Østre Elvebakke 7.
 - en: Vulkan
 Southern barbecue by the Akerselva river. Østre Elvebakke 7.
 
+### Dōzo
+- sted: 59.91531, 10.71573
+- google: ChIJDdAbd19tQUYRfCRwzz-w_4o
+- nettside: https://dozo.no/
+- status: onskeliste
+- åpent: on–lø 17–22
+- åpent-kilde: Google, nov. 2026
+Frogner
+Nytt. Bygdøy allé 9A.
+- en: Frogner
+New. Bygdøy allé 9A.
+
+### Fat City
+- sted: 59.92521, 10.75940
+- google: ChIJicIMORhvQUYR9kxZwhAsZ30
+- nettside: http://www.oslofatcity.no/
+- status: onskeliste
+- åpent: ti–to 14–23, fr 14–01, lø 12–01
+- åpent-kilde: Google, nov. 2026
+Grünerløkka
+Ansjostoast er et must, lang vinliste, trangt. Fra Aftenpostens dateguide. Thorvald Meyers gate 30.
+- en: Grünerløkka
+Anchovy toast is a must, long wine list, cramped. From Aftenposten’s date guide. Thorvald Meyers gate 30.
+
+### Happy Ending
+- sted: 59.91931, 10.75121
+- google: ChIJU2gBWQBvQUYRfpUQ70KDwUA
+- nettside: https://www.happyending.no/
+- status: onskeliste
+- åpent: ti 17–23, on–to 17–01, fr–lø 17–02
+- åpent-kilde: Google, nov. 2026
+Fredensborg
+Kebab og deleretter, shawarma med lam eller hallomø. Fra Aftenpostens dateguide. Rosteds gate 1.
+- en: Fredensborg
+Kebab and sharing plates, shawarma with lamb or hallomø. From Aftenposten’s date guide. Rosteds gate 1.
+
 ## Kaféer
 
 ### Fuglen – Universitetsgata
@@ -1172,6 +1230,28 @@ Bar. Torggata 9B.
 - en: Sentrum
 Bar. Torggata 9B.
 
+### Albatross ★
+- sted: 59.93393, 10.76295
+- google: ChIJMySPNmtuQUYRCEEC6idcsoQ
+- nettside: https://www.facebook.com/baralbatrossoslo/
+- åpent: ma–to 16–01, fr–lø 14–01, sø 16–01
+- åpent-kilde: Google, nov. 2026
+Torshov
+Nabolagsbar med gode cocktails. Torshovgata 5.
+- en: Torshov
+Neighbourhood bar with good cocktails. Torshovgata 5.
+
+### Bukken
+- sted: 59.92286, 10.73913
+- google: ChIJrVzd5TVvQUYR87dLZvZflAM
+- nettside: https://bukkenvinbar.no/
+- åpent: ti–on 17–00, to–fr 17–01, lø 13–01
+- åpent-kilde: Google, nov. 2026
+Bislett
+Vinbar med snacks, enkeltretter eller full meny. Hallings gate 1A.
+- en: Bislett
+Wine bar with snacks, small plates or a full menu. Hallings gate 1A.
+
 <!-- Ønskeliste: barer vi ikke har besøkt ennå (- status: onskeliste). -->
 
 ### Chair
@@ -1193,6 +1273,88 @@ Carl Berner
 Vinbar. Sinsenveien 6.
 - en: Carl Berner
 Wine bar. Sinsenveien 6.
+
+### Grus Grus
+- sted: 59.92817, 10.74905
+- google: ChIJhfeL2ChvQUYRWnSMQlss-ns
+- status: onskeliste
+- åpent: on–to 18–23, fr–lø 18–00
+- åpent-kilde: Google, nov. 2026
+St. Hanshaugen
+Vinbar med småretter og rødt lys, vegg i vegg med Tranen. Fra Aftenpostens dateguide. Waldemar Thranes gate 70.
+- en: St. Hanshaugen
+Wine bar with small plates and red lighting, next door to Tranen. From Aftenposten’s date guide. Waldemar Thranes gate 70.
+
+### Radegast
+- sted: 59.92210, 10.75393
+- google: ChIJp6we5mVuQUYRO80eCfw3xEM
+- nettside: http://www.nedrefossgaard.no/radegast
+- status: onskeliste
+- åpent: ti–to 17–00, fr 16–01, lø 13–01
+- åpent-kilde: Google, nov. 2026
+Grünerløkka
+Vinbar i Nedre Foss Gård, med ost og spekemat. Fra Aftenpostens dateguide. Nordre gate 2.
+- en: Grünerløkka
+Wine bar in Nedre Foss Gård, with cheese and charcuterie. From Aftenposten’s date guide. Nordre gate 2.
+
+### Becco
+- sted: 59.91713, 10.73820
+- google: ChIJ8fW4RJFvQUYR3FOyXdlSIso
+- nettside: https://becco.no/
+- status: onskeliste
+- åpent: ma 16–22, ti–to 16–01, fr–lø 16–03
+- åpent-kilde: Google, nov. 2026
+Tullinløkka
+Vinbar med snacks og DJ om kvelden. Fra Aftenpostens dateguide. Kristian Augusts gate 11.
+- en: Tullinløkka
+Wine bar with snacks and a DJ in the evenings. From Aftenposten’s date guide. Kristian Augusts gate 11.
+
+### Frances
+- sted: 59.91512, 10.72325
+- google: ChIJbztDhN9tQUYRLR-XMgaSe1s
+- nettside: https://www.frances.no/
+- status: onskeliste
+- åpent: ma 07.30–15, ti–fr 07.30–00, lø 12–00
+- åpent-kilde: Google, nov. 2026
+Solli plass
+Musserende vin og Midtøsten-inspirert mat. Fra Aftenpostens dateguide. Henrik Ibsens gate 48.
+- en: Solli plass
+Sparkling wine and Middle Eastern–inspired food. From Aftenposten’s date guide. Henrik Ibsens gate 48.
+
+### Makulator
+- sted: 59.91619, 10.73971
+- google: ChIJxUfB9aFvQUYRY7NZJNNgFgA
+- status: onskeliste
+- åpent: ma–lø 15–03.30
+- åpent-kilde: Google, nov. 2026
+Tullinløkka
+Dempet belysning og stor bakgård. Fra Aftenpostens dateguide. Kristian Augusts gate 7A.
+- en: Tullinløkka
+Dim lighting and a big back courtyard. From Aftenposten’s date guide. Kristian Augusts gate 7A.
+
+### Meyers
+- sted: 59.92694, 10.75897
+- google: ChIJD4oABWduQUYRcIa3ObqzF2w
+- nettside: https://www.facebook.com/meyersbar/
+- status: onskeliste
+- åpent: ma–ti 15–01, on–to 15–02, fr 14–03, lø 13–03, sø 14–01
+- åpent-kilde: Google, nov. 2026
+Grünerløkka
+Cocktails, vinyl og Bloody Meyers. Fra Aftenpostens dateguide. Thorvald Meyers gate 25.
+- en: Grünerløkka
+Cocktails, vinyl and the Bloody Meyers. From Aftenposten’s date guide. Thorvald Meyers gate 25.
+
+### Perla
+- sted: 59.92261, 10.76952
+- google: ChIJ4UMY1kJuQUYRrm7RZzGhq3s
+- nettside: http://perlabar.no/
+- status: onskeliste
+- åpent: ma–to 17–00.30, fr–lø 15–00.30, sø 17–00.30
+- åpent-kilde: Google, nov. 2026
+Rodeløkka
+Oslos første mezcalbar, ofte DJ i helgene. Fra Aftenpostens dateguide. Helgesens gate 66.
+- en: Rodeløkka
+Oslo’s first mezcal bar, often a DJ at weekends. From Aftenposten’s date guide. Helgesens gate 66.
 
 ## Jazzklubber
 
@@ -1417,6 +1579,17 @@ Bjørvika
 Badstuer på vannet ved Operaen, med bad i fjorden mellom øktene. Langkaia.
 - en: Bjørvika
 Saunas on the water by the Opera House, with a dip in the fjord between sessions. Langkaia.
+
+### pust ★
+- sted: 59.90799, 10.74921
+- google: ChIJQ6RVTGRvQUYRGoJAZ4wdMx4
+- nettside: https://www.pust.io/lokasjon/oslo/
+- åpent: ma–sø 06–23
+- åpent-kilde: Google, nov. 2026
+Bjørvika
+Badstue på Langkaia. Langkaia 1.
+- en: Bjørvika
+Sauna on Langkaia. Langkaia 1.
 
 ## Muséer og gallerier
 
