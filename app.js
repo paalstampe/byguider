@@ -1271,10 +1271,11 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     }
   }
 
-  /* Filtrering bytter ut dataene, slik at klyngene regnes ut fra det som vises. */
-  function filtrerKart() {
+  /* Filtrering bytter ut dataene, slik at klyngene regnes ut fra det som vises.
+     visning er iVisning(): ønskelisten i sin egen kilde, ellers de besøkte stedene. */
+  function filtrerKart(visning) {
     if (!kart.getSource('steder')) return;
-    const vis = state.visOnskeliste ? [] : synlige();
+    const vis = state.visOnskeliste ? [] : visning;
     const medGeo = vis.filter(o => o.f.geometry);
     const punkter = medGeo.filter(o => !o.erLinje).map(o => o.f);
     const linjer = medGeo.filter(o => o.erLinje).map(o => o.f);
@@ -1291,7 +1292,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     });
     kart.getSource('omrader').setData({ type: 'FeatureCollection', features: omrader });
     if (kart.getSource('onskeliste')) {
-      const onske = synligeOnskeliste();
+      const onske = state.visOnskeliste ? visning : [];
       const flater = onske.flatMap(o => o.fokus.filter(x => x.properties.rolle === 'omrade')
         .map(x => ({ type: 'Feature', geometry: x.geometry, properties: {} })));
       kart.getSource('onskeliste').setData({ type: 'FeatureCollection',
@@ -1801,7 +1802,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     oppdaterStengte();
     const vis = iVisning();
 
-    filtrerKart();
+    filtrerKart(vis);
 
     const antSteder = vis.filter(o => !o.erLinje).length;
     const antLinjer = vis.length - antSteder;
@@ -2288,7 +2289,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       // Lista virker uavhengig av kartet; lagene legges på når stilen er lastet.
       kartKlar.then(() => {
         leggTilKartlag();
-        filtrerKart();
+        filtrerKart(iVisning());
         // Tones inn når kartbitene for utsnittet er lastet, så stedene ikke kommer før gatene.
         // Venter høyst 0,8 s (å vente på «idle» tar for lang tid mens offline-lagringen går).
         const naarLastet = () => { if (kart.areTilesLoaded()) { kart.off('render', naarLastet); visKart(); } };
