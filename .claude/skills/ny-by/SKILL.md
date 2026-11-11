@@ -38,7 +38,8 @@ Stubb og bilder er kode → egen gren `ny-by-<id>`. Data og tekst kan ligge på 
   Steder fra Pål som ikke finnes i byen, legges ikke inn: spør Pål og skriv dem under Åpne spørsmål i NOTES.md.
 - Åpningstider for restauranter (og gjerne kaféer og barer): `- åpent:` og `- åpent-kilde:` (format i Oslo-fila og HANDOVER).
   Stedets egen nettside går foran Google, som ofte er utdatert; Google brukes når nettsiden mangler tider.
-  `slaopp.js` gir Googles tider i feltet `tider` (allerede i `åpent:`-format). Nettsidene: `curl` først; sider som bygges
+  `slaopp.js` gir Googles tider i feltet `tider` (allerede i `åpent:`-format). Lange lister kjøres med `start()`/`resultat()`
+  (fire oppslag om gangen); `kjor()` bare for korte, siden javascript_tool gir opp etter 45 s. Nettsidene: `curl` først; sider som bygges
   med JavaScript (Wix, Squarespace) hentes med Playwright (`npm root -g`/playwright), også undersider som «Åpningstider»/«Info».
   Sett `åpent-kilde: nettside, <mnd. år>` / `Google, …` / `nettside og Google, …`. Steder Google melder som midlertidig
   stengt: `- åpent: midlertidig stengt` og si fra til Pål.
