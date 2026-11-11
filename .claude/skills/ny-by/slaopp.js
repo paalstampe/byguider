@@ -2,6 +2,7 @@
 // Bruk: åpne https://www.google.com/maps?hl=en i nettleserpanelet (avvis informasjonskapsler),
 // lim inn denne fila med javascript_tool, og kjør så f.eks.
 //   await kjor(['Contramar, Durango 200', 'Rosetta, Colima 166'], 'Ciudad de México')
+// Mange steder: start([...], 'By'), så resultat() til svaret kommer (se nederst).
 // Svaret er én linje per søk:
 //   søk ¦ navn ¦ område ¦ vurdering ¦ antall ¦ STENGT/MIDL ¦ bredde ¦ lengde ¦ Place ID ¦ nettside ¦ adresse ¦ type ¦ tider ¦ feil
 // tider er Googles åpningstider i åpent:-format («ti–fr 17–23, lø 12–23»); sjekk dem mot stedets egen nettside.
@@ -61,10 +62,28 @@ window.slaOpp = async (q, by = '') => {
   } catch (e) { return { q, feil: String(e) }; }
 };
 
-window.kjor = async (sok, by = '') => {
-  const ut = [];
-  for (const q of sok) { ut.push(await slaOpp(q, by)); await new Promise(r => setTimeout(r, 300)); }
+/* Fire oppslag om gangen og ingen pauser: setTimeout strupes når nettleserpanelet er skjult (ned til ett kall
+   i minuttet), så pauser mellom oppslagene gjorde 144 steder til et kvarter. Rekkefølgen i svaret følger sok. */
+async function slaOppAlle(sok, by) {
+  const ut = new Array(sok.length);
+  let neste = 0;
+  await Promise.all(Array.from({ length: 4 }, async () => {
+    while (neste < sok.length) { const i = neste++; ut[i] = await slaOpp(sok[i], by); }
+  }));
   window.__res = (window.__res || []).concat(ut);
-  return ut.map(o => [o.q, o.navn, o.omr, o.vurd, o.antall, o.stengt, o.lat?.toFixed(5), o.lng?.toFixed(5),
-    o.id, o.web, o.adr, o.typer, o.tider, o.feil].map(v => v ?? '').join(' ¦ ')).join('\n');
+  return ut;
+}
+
+const linje = o => [o.q, o.navn, o.omr, o.vurd, o.antall, o.stengt, o.lat?.toFixed(5), o.lng?.toFixed(5),
+  o.id, o.web, o.adr, o.typer, o.tider, o.feil].map(v => v ?? '').join(' ¦ ');
+
+window.kjor = async (sok, by = '') => (await slaOppAlle(sok, by)).map(linje).join('\n');
+
+/* Lange lister (mer enn ca. 60 steder) rekker ikke å bli ferdige innen javascript_tool gir opp (45 s).
+   start() kjører i bakgrunnen; hent svaret med resultat() når window.__ferdig er true. */
+window.start = (sok, by = '') => {
+  window.__ferdig = false;
+  slaOppAlle(sok, by).then(ut => { window.__siste = ut; window.__ferdig = true; });
+  return 'startet ' + sok.length;
 };
+window.resultat = () => window.__ferdig ? window.__siste.map(linje).join('\n') : 'ikke ferdig: ' + (window.__res || []).length;
