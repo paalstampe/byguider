@@ -199,8 +199,8 @@ Indian seafood, 15–17 Blandford Street.
 - sted: 51.51845, -0.15199
 - google: ChIJb46nPwAbdkgRe8rg5yiLYsA
 - nettside: https://josephinebistro.com/
-- åpent: ma–fr 07.30–11 + 12–22, lø 09–11 + 12–22, sø 09–11 + 12–21.30
-- åpent-kilde: Google, nov. 2026
+- åpent: ma–fr 12–14.30 + 17.30–21.30, lø–sø 12–21.30
+- åpent-kilde: nettside, nov. 2026
 Marylebone
 
 Claude Bosis franske bistro, Blandford Street 6–8.
@@ -339,7 +339,7 @@ A classic at 20 Arlington Street (the old Le Caprice).
 - sted: 51.50801, -0.13829
 - google: ChIJgyJHWdYEdkgRX_4TkG1PT9o
 - nettside: https://45jermynst.com/
-- åpent: ma–fr 07.30–21.45, lø 08–21.45, sø 08–
+- åpent: ma–fr 07.30–21.45, lø 08–21.45, sø 08–15.45
 - åpent-kilde: nettside, nov. 2026
 St James's
 
@@ -1252,6 +1252,8 @@ Middle Eastern bakery and kitchen from Honey & Co., 19–21 Store Street.
 - google: ChIJgdRjjz4FdkgRnXXelNht0uw
 - nettside: https://www.belmond.com/en/hotels/europe/uk/the-cadogan-london/restaurants-and-bars
 - status: onskeliste
+- åpent: ma–sø 07–22.30
+- åpent-kilde: nettside, nov. 2026
 Chelsea
 
 Restauranten på hotellet Belmond Cadogan, Sloane Street 75.

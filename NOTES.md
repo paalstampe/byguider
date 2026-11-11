@@ -5,15 +5,16 @@ Oppdateres ved slutten av hver økt (`/avslutt`).
 
 ## Status nå
 
-Sist oppdatert: 9. november 2026.
+Sist oppdatert: 11. november 2026.
 
 - 9.11.: åpningstider i Oslo (PR #112). Alle 72 restauranter har `åpent:` og `åpent-kilde:`: tidene er fra egen nettside der de finnes
   (curl, eller Playwright for Wix/Squarespace), ellers Google (13 steder). Filteret «Åpent: Nå · Søndag · Mandag» toner ned stengte steder
   i kart, klynger og liste; infoboksen viser dagens/valgt dags tider og uka. «Nå» regner i `tidssone: Europe/Oslo`. «Kun favoritter» og
   «Nær meg» står i egen blokk «Vis». /ny-by tar med tidssone og åpningstider, og `slaopp.js` gir Googles tider i `åpent:`-format.
   11.11.: London (113 av 114) og Nice (29 av 30) har åpningstider for restaurantene, med `tidssone:` (Europe/London, Europe/Paris).
-  Nettsiden for 69 i London og 13 i Nice, Google for resten. Mangler: Willett's og Peixes (ikke i Google-søket, nettsiden uten tider).
-  Le Séjour (Nice) står som stengt for godt hos Google, men nettsiden har vanlige åpningstider; sjekk.
+  Nettsiden for 72 i London og 13 i Nice, Google for resten. Mangler: Peixes (ikke i Google-søket, nettsiden uten tider).
+  Le Séjour (Nice) står som stengt for godt hos Google, men er åpen ifølge Pål (Google er ofte utdatert i Frankrike).
+  `slaopp.js` gjør fire oppslag om gangen uten pauser (`start()`/`resultat()` for lange lister): 8 steder på 0,7 s.
   10.11.: «Åpent» vises bare når valgt kategori har åpningstider (nå Restauranter), så butikker o.l. ikke ser åpne ut.
   Live og sjekket. Pillefyken er midlertidig stengt ifølge Google; Vesle Nektar har ikke åpnet.
 - 8.11.: Kairo og Luxor («Pål, Vibeke og Heddas Kairo/Luxor») lagt inn som to skjulte byer, nås på stam.pe/byguider/kairo/ og /luxor/.
