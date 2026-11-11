@@ -166,6 +166,8 @@ Bistro. 27 Rue de la Préfecture.
 - sted: 43.69603, 7.27102
 - google: ChIJcypl1KPazRIRiHefCSt4GJQ
 - nettside: https://www.peixes.fr/
+- åpent: ma–sø 12–22
+- åpent-kilde: nettside, nov. 2026
 Vieux-Nice
 
 Fisk og sjømat med søramerikansk preg. 4 Rue Jacques Médecin.
