@@ -397,6 +397,21 @@ html, body {
   color: var(--dempet);
 }
 
+.treff-onskeliste {
+  margin: 20px 0 8px;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--aksent);
+  cursor: pointer;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .treff-onskeliste:hover { text-decoration: underline; }
+}
+
 /* ---------- Sidefot ---------- */
 
 .sidebar-fot {

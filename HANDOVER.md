@@ -152,8 +152,9 @@ er utdatert. Foreløpig bare Oslos restauranter (nov. 2026).
 under «Vis» (mellom «Kun favoritter» og «Nær meg») bytter lista, tellingen og kartet til ønskelisten alene
 (første linje av notatet i lista; egen kartkilde uten klynging med ring-ikoner i dempet farge), og
 merkelappen «Ikke besøkt ennå» står i infoboksen. Sone-, kategori-, favoritt- og søkefiltrene gjelder også her.
+Søker man i vanlig visning og søket treffer på ønskelisten, står «n treff på ønskelisten →» nederst i lista.
 Et ønskelistested åpnet fra adressen (`?sted=`) slår på visningen. (Før nov. 2026: sammenslått seksjon nederst i lista.)
-★ på et ønskelistested betyr førstevalg: «Førstevalg» / «Top pick» i lista (sortert øverst),
+★ på et ønskelistested betyr førstevalg: «Førstevalg» / «Top pick» i lista (sortert øverst i sin sone),
 kobberfarget ring på kartet og «Ikke besøkt ennå · Førstevalg» i infoboksen.
 
 Gåturer har `lengde:` og `varighet:` som fritekst, og kan mangle tegnet rute

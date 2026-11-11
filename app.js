@@ -116,6 +116,7 @@ const TEKST = {
     forhandsvisning: 'forhåndsvisning',
     ingenTreff: 'Ingen treff. Juster filtrene eller søket.',
     ikkeBesokt: 'Ikke besøkt ennå',
+    treffOnskeliste: n => n + ' treff på ønskelisten →',
     forstevalg: 'Førstevalg',
     ingenSteder: 'Ingen steder lagt inn ennå.',
     ingenData: 'Ingen data',
@@ -177,6 +178,7 @@ const TEKST = {
     forhandsvisning: 'preview',
     ingenTreff: 'No matches. Adjust the filters or the search.',
     ikkeBesokt: 'Not yet visited',
+    treffOnskeliste: n => n + (n === 1 ? ' match' : ' matches') + ' on the wishlist →',
     forstevalg: 'Top pick',
     ingenSteder: 'No places added yet.',
     ingenData: 'No data',
@@ -1826,6 +1828,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
         ? t('ingenTreff')
         : t('ingenSteder');
       el.liste.appendChild(tomt);
+      visTreffOnskeliste();
       return;
     }
 
@@ -1851,6 +1854,23 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
         el.liste.appendChild(oppslagEl(o));
       });
 
+    visTreffOnskeliste();
+  }
+
+  /* Søker man i vanlig visning, sier en lenke nederst om søket også treffer på ønskelisten. */
+  function visTreffOnskeliste() {
+    if (state.visOnskeliste || !state.sok.trim()) return;
+    const n = synligeOnskeliste().length;
+    if (!n) return;
+    const knapp = document.createElement('button');
+    knapp.type = 'button';
+    knapp.className = 'treff-onskeliste';
+    knapp.textContent = t('treffOnskeliste', n);
+    knapp.addEventListener('click', () => settOnskeliste(true));
+    const rad = document.createElement('div');   // lista har role="list", så knappen må ligge i et listitem
+    rad.setAttribute('role', 'listitem');
+    rad.appendChild(knapp);
+    el.liste.appendChild(rad);
   }
 
   function oppslagEl(o) {
@@ -1905,9 +1925,9 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
   function velg(id, flyTil, klikkPunkt) {
     const o = oppslagFraId(id);
     if (!o) return;
+    settOnskeliste(erOnskeliste(o.p));   // et sted fra adressen kan ligge i den andre visningen
     state.valgtId = id;
     visFokus(o);
-    settOnskeliste(erOnskeliste(o.p));   // et sted fra adressen kan ligge i den andre visningen
 
     if (o.erLinje) {
       if (flyTil && o.bbox) kart.fitBounds(o.bbox, { padding: 70, maxZoom: 15, duration: 600 });
