@@ -148,10 +148,11 @@ dager som ikke er nevnt er stengt; `17–01` går over midnatt, `16–` har ukje
 er utdatert. Foreløpig bare Oslos restauranter (nov. 2026).
 
 `- status: onskeliste` merker et sted som ikke besøkt ennå (ønskeliste). Slike steder vises for alle
-(tidligere bare med `?onskeliste`, som nå ikke gjør noe), holdt utenfor hovedlista og tellingen:
-sammenslått seksjon «Ikke besøkt ennå (n)» nederst
-i lista (dempet, første linje av notatet; å åpne den viser stedene på kartet), egen kartkilde
-uten klynging med ring-ikoner i dempet farge, og merkelappen «Ikke besøkt ennå» i infoboksen.
+(tidligere bare med `?onskeliste`, som nå ikke gjør noe), men bare i egen visning: knappen «Ønskeliste» / «Wishlist»
+under «Vis» (mellom «Kun favoritter» og «Nær meg») bytter lista, tellingen og kartet til ønskelisten alene
+(første linje av notatet i lista; egen kartkilde uten klynging med ring-ikoner i dempet farge), og
+merkelappen «Ikke besøkt ennå» står i infoboksen. Sone-, kategori-, favoritt- og søkefiltrene gjelder også her.
+Et ønskelistested åpnet fra adressen (`?sted=`) slår på visningen. (Før nov. 2026: sammenslått seksjon nederst i lista.)
 ★ på et ønskelistested betyr førstevalg: «Førstevalg» / «Top pick» i lista (sortert øverst),
 kobberfarget ring på kartet og «Ikke besøkt ennå · Førstevalg» i infoboksen.
 
