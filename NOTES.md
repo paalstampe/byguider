@@ -11,7 +11,7 @@ Sist oppdatert: 11. november 2026.
   (curl, eller Playwright for Wix/Squarespace), ellers Google (13 steder). Filteret «Åpent: Nå · Søndag · Mandag» toner ned stengte steder
   i kart, klynger og liste; infoboksen viser dagens/valgt dags tider og uka. «Nå» regner i `tidssone: Europe/Oslo`. «Kun favoritter» og
   «Nær meg» står i egen blokk «Vis». /ny-by tar med tidssone og åpningstider, og `slaopp.js` gir Googles tider i `åpent:`-format.
-  11.11.: London (113 av 114) og Nice (29 av 30) har åpningstider for restaurantene, med `tidssone:` (Europe/London, Europe/Paris).
+  11.11.: London (alle 114) og Nice (29 av 30) har åpningstider for restaurantene, med `tidssone:` (Europe/London, Europe/Paris).
   Nettsiden for 72 i London og 13 i Nice, Google for resten. Mangler: Peixes (ikke i Google-søket, nettsiden uten tider).
   Le Séjour (Nice) står som stengt for godt hos Google, men er åpen ifølge Pål (Google er ofte utdatert i Frankrike).
   `slaopp.js` gjør fire oppslag om gangen uten pauser (`start()`/`resultat()` for lange lister): 8 steder på 0,7 s.
