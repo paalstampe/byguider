@@ -832,18 +832,6 @@ Fransk. Storgata 97.
 - en: Grünerløkka
 French. Storgata 97.
 
-### Pillefyken
-- sted: 59.91525, 10.77334
-- google: ChIJ2yxNOWZvQUYRFFD7MZ6IK8U
-- nettside: http://www.pillefyken.no/
-- status: onskeliste
-- åpent: midlertidig stengt
-- åpent-kilde: Google, nov. 2026
-Kampen
-Monrads gate 1.
-- en: Kampen
-Monrads gate 1.
-
 ### Grotten
 - sted: 59.91846, 10.73220
 - google: ChIJW3ema0VvQUYRuYHm0lqr8qE

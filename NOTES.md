@@ -17,7 +17,7 @@ Sist oppdatert: 11. november 2026.
   `slaopp.js` gjør fire oppslag om gangen uten pauser (`start()`/`resultat()` for lange lister): 8 steder på 0,7 s.
   Står Google på samtykkesiden, stopper `slaopp.js` og ber om å avvise informasjonskapsler først.
   10.11.: «Åpent» vises bare når valgt kategori har åpningstider (nå Restauranter), så butikker o.l. ikke ser åpne ut.
-  Live og sjekket. Pillefyken er midlertidig stengt ifølge Google; Vesle Nektar har ikke åpnet.
+  Live og sjekket. Pillefyken er fjernet (stengt for godt, 11.11.); Vesle Nektar har ikke åpnet.
 - 8.11.: Kairo og Luxor («Pål, Vibeke og Heddas Kairo/Luxor») lagt inn som to skjulte byer, nås på stam.pe/byguider/kairo/ og /luxor/.
   Kairo: 90 oppføringer i sonene Zamalek & Garden City, Downtown, Islamsk & koptisk Kairo, Giza og Heliopolis & Maadi, med gåturene
   Downtown → Zamalek (4 km) og Al-Muizz → Sultan Hassan (3 km). Luxor: 31 oppføringer i sonene Østbredden, Vestbredden og Utenfor Luxor,
@@ -198,7 +198,6 @@ Sist oppdatert: 11. november 2026.
 
 - Åpningstider: kaféer og barer i Oslo, deretter New York, Tokyo, Bangkok og de skjulte byene (sett `tidssone:` i frontmatter). Tidene bør sjekkes et par ganger
   i året (sommerstengt, nye tider); den halvårlige tidssjekken (15.3. og 15.9.) gjør det.
-- Pillefyken (Oslo, ønskeliste) står som «Permanently closed» i Google (11.11.), vi har «midlertidig stengt». Pål bestemmer.
 - Gjøremål (Pål sa ja 5.11.): endre `oppstart.sh` i claude-oppsett så den i skyøkter tilbakestiller lokal `main` til
   origin/main når den har gått fra hverandre og ikke har egne commits som mangler på origin. 5.11. hadde skykopien
   67 commits hver vei og `pull --ff-only` feilet. Kjør `synk-repoer.sh` etterpå.
@@ -215,7 +214,7 @@ Sist oppdatert: 11. november 2026.
   ny publisering. Byguidenes data/*.md publiseres som før. Hvert repo bestemmer selv hva som ikke publiseres, med `export-ignore` i `.gitattributes`
   (byguider #106, reiseplanlegging #36, paalstampe.github.io #28); ny fil som ikke skal på nettsiden legges inn der.
 - Månedlig sjekk 2026-11-11 (733 nettsider; Instagram/Facebook hoppet over; Google-sjekk av 1030 steder gikk fra skyen):
-  - Stengt for godt hos Google: Oslo, Pillefyken (vi har «midlertidig stengt», ønskeliste; Pål bestemmer). Ingen med annen status eller ikke funnet.
+  - Stengt for godt hos Google: Oslo, Pillefyken (fjernet 11.11.). Ingen med annen status eller ikke funnet.
   - Ødelagt nettside: London, V&A East Storehouse (404 på vam.ac.uk/east/storehouse; trolig https://www.vam.ac.uk/east/storehouse/visit, uendret siden 4.11.). Mexico City, Blanco Colima (404 på /es, forsiden svarer 200; uendret). Oslo, Berre Lekkert (berrelekkert.no): DNS finnes ikke fra skymiljøet, trolig nedlagt domene; ny sjekk neste gang.
   - Uklart (proxy/TLS i skymiljøet, trolig ikke brudd): Spence Bakery, Maltby Street, Old Spitalfields Market, Kudu Collective, Le Panier Gourmand, Maguchi Kazunari, TCDC, Jungsik, Mexico City: bibliotecacentral.unam.mx, bibliotecavasconcelos.gob.mx, palacio.inba.gob.mx, estudiodiegorivera.bellasartes.gob.mx, looseblues.mx; 500/520/402 hos Andreas Murkudis, UTVBKS og Hardcover. 403/429 (hoteller, museer m.fl.) regnes som usikre.
   - Videresender til annen adresse, ikke endret: Harraz, Café Lavery, Quentin, Beit Sabee, Das Neue Schwarz, Café Nín, Langt Langt Borte, Bellboy Berlin, Beauty & Essex, Oslo Fat City (til canva.site), Corinthia New York (bare portnummer/språkbane).
