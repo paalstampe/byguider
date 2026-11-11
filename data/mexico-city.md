@@ -853,7 +853,7 @@ Large hotel built around a hacienda-style courtyard on Reforma, near Chapultepec
 - navn-en: The Zócalo and the cathedral
 - sted: 19.43439, -99.13308
 - google: ChIJ4a8nxjL50YURJ19RJ_A9T5E
-- nettside: https://catedralmetropolitana.mx/
+- nettside: https://www.catedralmetropolitanacdmx.com/
 Centro Histórico
 
 Et av verdens største torg, med katedralen, Palacio Nacional og Templo Mayor ved siden av. Kanskje ikke spesielt trivelig, men man må ha vært der (og det er her åpningsscenen i «Spectre» er filmet).
