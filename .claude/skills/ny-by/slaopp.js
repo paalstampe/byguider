@@ -6,6 +6,7 @@
 // Svaret er én linje per søk:
 //   søk ¦ navn ¦ område ¦ vurdering ¦ antall ¦ STENGT/MIDL ¦ bredde ¦ lengde ¦ Place ID ¦ nettside ¦ adresse ¦ type ¦ tider ¦ feil
 // tider er Googles åpningstider i åpent:-format («ti–fr 17–23, lø 12–23»); sjekk dem mot stedets egen nettside.
+// Står Google på samtykkesiden, stopper oppslagene og svaret sier fra (avvis informasjonskapsler og kjør igjen).
 // Alt lagres også i window.__res (JSON.stringify(window.__res) gir hele lista).
 // «ingen» betyr at Google ga en treffliste eller ingenting: legg til adresse eller nabolag i søket og prøv igjen.
 // Sjekk alltid at navn og område stemmer – første treff kan være feil sted, og et sted Google ikke kjenner
@@ -46,10 +47,16 @@ function aapentFelt(uke) {
   return ut.join(', ');
 }
 
+// Google sender til samtykkesiden (consent.google.com) i hver ny økt. Da svarer søket med HTML i stedet for data.
+const SAMTYKKE = 'samtykke: avvis informasjonskapsler («Reject all») på google.com/maps og kjør på nytt';
+
 window.slaOpp = async (q, by = '') => {
   try {
+    if (location.hostname.startsWith('consent.')) return { q, feil: SAMTYKKE };
     const r = await fetch('/search?tbm=map&authuser=0&hl=en&q=' + encodeURIComponent(by ? `${q}, ${by}` : q));
-    const d = JSON.parse((await r.text()).slice(5));
+    const tekst = await r.text();
+    if (!tekst.startsWith(")]}'")) return { q, feil: /consent/i.test(r.url + tekst.slice(0, 2000)) ? SAMTYKKE : 'uventet svar fra Google' };
+    const d = JSON.parse(tekst.slice(5));
     const i = ((d[0] && d[0][1]) || []).filter(x => x && x[14]).map(x => x[14])[0];
     if (!i) return { q, feil: 'ingen' };
     const s = JSON.stringify(i);
@@ -68,16 +75,22 @@ async function slaOppAlle(sok, by) {
   const ut = new Array(sok.length);
   let neste = 0;
   await Promise.all(Array.from({ length: 4 }, async () => {
-    while (neste < sok.length) { const i = neste++; ut[i] = await slaOpp(sok[i], by); }
+    while (neste < sok.length) {
+      const i = neste++;
+      ut[i] = await slaOpp(sok[i], by);
+      if (ut[i].feil === SAMTYKKE) neste = sok.length;   // resten ville feilet likt
+    }
   }));
-  window.__res = (window.__res || []).concat(ut);
+  window.__res = (window.__res || []).concat(ut.filter(Boolean));
   return ut;
 }
 
 const linje = o => [o.q, o.navn, o.omr, o.vurd, o.antall, o.stengt, o.lat?.toFixed(5), o.lng?.toFixed(5),
   o.id, o.web, o.adr, o.typer, o.tider, o.feil].map(v => v ?? '').join(' ¦ ');
 
-window.kjor = async (sok, by = '') => (await slaOppAlle(sok, by)).map(linje).join('\n');
+const svar = ut => ut.some(o => o?.feil === SAMTYKKE) ? SAMTYKKE : ut.filter(Boolean).map(linje).join('\n');
+
+window.kjor = async (sok, by = '') => svar(await slaOppAlle(sok, by));
 
 /* Lange lister (mer enn ca. 60 steder) rekker ikke å bli ferdige innen javascript_tool gir opp (45 s).
    start() kjører i bakgrunnen; hent svaret med resultat() når window.__ferdig er true. */
@@ -86,4 +99,4 @@ window.start = (sok, by = '') => {
   slaOppAlle(sok, by).then(ut => { window.__siste = ut; window.__ferdig = true; });
   return 'startet ' + sok.length;
 };
-window.resultat = () => window.__ferdig ? window.__siste.map(linje).join('\n') : 'ikke ferdig: ' + (window.__res || []).length;
+window.resultat = () => window.__ferdig ? svar(window.__siste) : 'ikke ferdig: ' + (window.__res || []).length;
