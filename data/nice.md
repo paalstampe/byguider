@@ -190,6 +190,21 @@ Middelhavskjøkken. 6 Rue Sainte-Réparate.
 
 Mediterranean. 6 Rue Sainte-Réparate.
 
+### Moult
+- sted: 43.69734, 7.27475
+- google: ChIJmyrDq67bzRIRGc0mR_v_3fk
+- nettside: https://www.instagram.com/moult/
+- status: onskeliste
+- åpent: on–ma 18–00
+- åpent-kilde: Google, nov. 2026
+Vieux-Nice
+
+Naturvinbar og vinbutikk med småretter. 4 Rue du Pontin.
+
+- en: Vieux-Nice
+
+Natural wine bar and shop with small plates. 4 Rue du Pontin.
+
 ## Kaféer
 
 ### Maranna
