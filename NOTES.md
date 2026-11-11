@@ -55,8 +55,8 @@ Sist oppdatert: 11. november 2026.
   etter hver filendring; `.claude/sky-push.sh` holder skyøkter igjen til committede endringer er pushet.
   Claude kjører /code-review og /simplify selv før fletting av kodeendringer.
   Ny skill /ny-by (`.claude/skills/ny-by/`) brukes automatisk når en ny by skal lages eller lanseres.
-- 4.11.: ukentlig skyjobb (routine) sjekker hver mandag kl. 06 om steder har stengt for godt og om nettsider virker, og skriver
-  «Ukentlig sjekk <dato>» under Neste steg. Den retter bare flyttede nettsider selv. Styres på https://claude.ai/code/routines/trig_01DvX7PTCcLcRy2QmYL2Jrcj
+- 4.11.: månedlig skyjobb (routine, ukentlig fram til 11.11.) sjekker den 1. hver måned kl. 06 om steder har stengt for godt og om nettsider virker, og skriver
+  «Månedlig sjekk <dato>» under Neste steg. Den retter bare flyttede nettsider selv. Styres på https://claude.ai/code/routines/trig_01DvX7PTCcLcRy2QmYL2Jrcj
 - 4.11. kveld: Pål bekrefter at delingskortene vises i Meldinger. Nettsider lagt inn for Bar Penguin, Apollo Bar, Kihara, Ăn Đi,
   Kosho SamenoHa, Siwilai, Sarnies (sarnies.com) og Crowley Vintage (Instagram @crowley_vintage, én kilde).
   Jimbocho Book Center svarer igjen. Charoen 43 finnes fortsatt (Time Out omtaler et marked der i april 2026); Homu er ikke i dataene.
@@ -192,7 +192,7 @@ Sist oppdatert: 11. november 2026.
 ## Neste steg
 
 - Åpningstider: kaféer og barer i Oslo, deretter New York, Tokyo, Bangkok og de skjulte byene (sett `tidssone:` i frontmatter). Tidene bør sjekkes et par ganger
-  i året (sommerstengt, nye tider); den ukentlige skyjobben kan sammenligne med Google og melde avvik.
+  i året (sommerstengt, nye tider); den månedlige skyjobben kan sammenligne med Google og melde avvik.
 - Gjøremål (Pål sa ja 5.11.): endre `oppstart.sh` i claude-oppsett så den i skyøkter tilbakestiller lokal `main` til
   origin/main når den har gått fra hverandre og ikke har egne commits som mangler på origin. 5.11. hadde skykopien
   67 commits hver vei og `pull --ff-only` feilet. Kjør `synk-repoer.sh` etterpå.
