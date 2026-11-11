@@ -78,3 +78,6 @@ Sist oppdatert: 11. november 2026. Historikk per dato står i ARKIV.md.
 ## Beslutningslogg
 
 Hele loggen står i ARKIV.md. Nye beslutninger skrives her og flyttes dit ved neste opprydding.
+
+- 2026-11-11: Kontekst spares ved oppstart: NOTES.md holdes under ca. 10 KB (/avslutt passer på det), eldre status og beslutninger ligger i ARKIV.md. Før lastet byguider ca. 57 KB (~15k tokens) i hver økt.
+- 2026-11-11: Ingen Read-sperre på geojson eller app.js, siden de redigeres og Edit krever Read. CLAUDE.md sier at de leses i utsnitt.
