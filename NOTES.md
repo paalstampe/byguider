@@ -61,7 +61,7 @@ Sist oppdatert: 11. november 2026.
   (1030 steder på ca. 4,5 min, ingen blokkering). Felt 88[0] = «CLOSED» er «Permanently closed» (sjekket i nettleseren).
   Ny halvårlig skyjobb 15. mars og 15. september kl. 06 sjekker åpningstidene: den melder bare tider som er endret hos Google
   siden øyeblikksbildet (.claude/google-tider.json, grunnlag 11.11.), sjekker dem mot stedets nettside, retter `åpent:` og
-  skriver «Tidssjekk <dato>» under Neste steg. Våre tider avviker ofte fra Google uten at noe er endret (kjøkken/bar, bordsetninger).
+  skriver «Tidssjekk <dato>» under Neste steg. Styres på https://claude.ai/code/routines/trig_012amhPG41tyfMW5ic5vLbG6 Våre tider avviker ofte fra Google uten at noe er endret (kjøkken/bar, bordsetninger).
 - 4.11. kveld: Pål bekrefter at delingskortene vises i Meldinger. Nettsider lagt inn for Bar Penguin, Apollo Bar, Kihara, Ăn Đi,
   Kosho SamenoHa, Siwilai, Sarnies (sarnies.com) og Crowley Vintage (Instagram @crowley_vintage, én kilde).
   Jimbocho Book Center svarer igjen. Charoen 43 finnes fortsatt (Time Out omtaler et marked der i april 2026); Homu er ikke i dataene.
