@@ -9,6 +9,9 @@ Les HANDOVER.md før større endringer — den har datamodell, design og teknikk
 Foreslår du steder selv (ny by eller påfyll uten Påls tips): les SMAK.md, smaksprofilen per kategori,
 i stedet for å analysere de andre byene. Hold den oppdatert når Pål setter ★ eller sier hva han liker.
 Hold HANDOVER.md oppdatert når noe vesentlig endres i teknikk eller design (f.eks. punkt 10.5).
+Spar kontekst: NOTES.md holdes under ca. 10 KB (den lastes i hver økt); eldre status og beslutningslogg ligger i ARKIV.md.
+Store filer (app.js ~100 KB, data/london.md ~90 KB, data/*-geometri.geojson): finn stedet med grep og les utsnitt
+(offset/limit), aldri hele filen. GeoJSON leses og endres med python3/jq, ikke Read.
 
 ## Språk
 - Svar Pål på norsk, direkte og konsist. Ikke forklar grunnleggende git- eller webbegreper.
