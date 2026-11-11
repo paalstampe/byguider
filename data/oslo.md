@@ -984,6 +984,18 @@ Kebab og deleretter, shawarma med lam eller hallomø. Fra Aftenpostens dateguide
 - en: Fredensborg
 Kebab and sharing plates, shawarma with lamb or hallomø. From Aftenposten’s date guide. Rosteds gate 1.
 
+### Bar Lupo
+- sted: 59.92215, 10.75748
+- google: ChIJF4eL1G9vQUYRGTPg4QFtWeQ
+- nettside: http://www.barlupo-oslo.com/
+- status: onskeliste
+- åpent: ti–to 16–23, fr 16–00, lø 14–00, sø 16–22
+- åpent-kilde: Google, nov. 2026
+Grünerløkka
+Små- og hovedretter og gode drinker. Begynn med focacciaen og stracciatellaen. Fra Aftenpostens dateguide. Olaf Ryes plass 3.
+- en: Grünerløkka
+Small and main plates and good drinks. Start with the focaccia and the stracciatella. From Aftenposten’s date guide. Olaf Ryes plass 3.
+
 ## Kaféer
 
 ### Fuglen – Universitetsgata
