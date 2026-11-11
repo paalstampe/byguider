@@ -81,6 +81,7 @@ const TEKST = {
     kategori: 'Kategori',
     alle: 'Alle',
     kunFavoritter: 'Kun favoritter',
+    onskeliste: 'Ønskeliste',
     naerMeg: 'Nær meg',
     aapent: 'Åpent',
     vis: 'Vis',
@@ -115,7 +116,7 @@ const TEKST = {
     forhandsvisning: 'forhåndsvisning',
     ingenTreff: 'Ingen treff. Juster filtrene eller søket.',
     ikkeBesokt: 'Ikke besøkt ennå',
-    ikkeBesoktAntall: n => 'Ikke besøkt ennå (' + n + ')',
+    treffOnskeliste: n => n + ' treff på ønskelisten →',
     forstevalg: 'Førstevalg',
     ingenSteder: 'Ingen steder lagt inn ennå.',
     ingenData: 'Ingen data',
@@ -142,6 +143,7 @@ const TEKST = {
     kategori: 'Category',
     alle: 'All',
     kunFavoritter: 'Favourites only',
+    onskeliste: 'Wishlist',
     naerMeg: 'Near me',
     aapent: 'Open',
     vis: 'Show',
@@ -176,7 +178,7 @@ const TEKST = {
     forhandsvisning: 'preview',
     ingenTreff: 'No matches. Adjust the filters or the search.',
     ikkeBesokt: 'Not yet visited',
-    ikkeBesoktAntall: n => 'Not yet visited (' + n + ')',
+    treffOnskeliste: n => n + (n === 1 ? ' match' : ' matches') + ' on the wishlist →',
     forstevalg: 'Top pick',
     ingenSteder: 'No places added yet.',
     ingenData: 'No data',
@@ -207,8 +209,8 @@ function maal(s) {
     .replace(/(\d)\s*t\b/g, '$1 h');
 }
 
-/* Ønskeliste: steder med «- status: onskeliste» er ikke besøkt ennå. De vises for alle,
-   sammenslått nederst i lista og som eget kartlag som er av til man slår det på. */
+/* Ønskeliste: steder med «- status: onskeliste» er ikke besøkt ennå. De vises for alle, men bare
+   i egen visning («Vis: Ønskeliste»), som bytter ut både lista og kartet. */
 const erOnskeliste = p => normaliser(p.status) === 'onskeliste';
 
 const SPRAKVALG =
@@ -794,8 +796,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
   const state = {
     oppslag: [],                 // { id, f, p, erLinje, punkt, bbox }
     onskeliste: [],              // ikke besøkt ennå — holdes utenfor oppslag
-    visOnskeliste: false,        // kartlaget
-    onskelisteApen: false,       // seksjonen nederst i lista
+    visOnskeliste: false,        // visningen «Ønskeliste»: lista og kartet viser bare ønskelisten
     soner: new Set(),            // tom = alle
     kategorier: new Set(),       // tom = alle
     kunFavoritter: false,
@@ -1270,9 +1271,11 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     }
   }
 
-  /* Filtrering bytter ut dataene, slik at klyngene regnes ut fra det som vises. */
-  function filtrerKart(vis) {
+  /* Filtrering bytter ut dataene, slik at klyngene regnes ut fra det som vises.
+     visning er iVisning(): ønskelisten i sin egen kilde, ellers de besøkte stedene. */
+  function filtrerKart(visning) {
     if (!kart.getSource('steder')) return;
+    const vis = state.visOnskeliste ? [] : visning;
     const medGeo = vis.filter(o => o.f.geometry);
     const punkter = medGeo.filter(o => !o.erLinje).map(o => o.f);
     const linjer = medGeo.filter(o => o.erLinje).map(o => o.f);
@@ -1289,7 +1292,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     });
     kart.getSource('omrader').setData({ type: 'FeatureCollection', features: omrader });
     if (kart.getSource('onskeliste')) {
-      const onske = synligeOnskeliste();
+      const onske = state.visOnskeliste ? visning : [];
       const flater = onske.flatMap(o => o.fokus.filter(x => x.properties.rolle === 'omrade')
         .map(x => ({ type: 'Feature', geometry: x.geometry, properties: {} })));
       kart.getSource('onskeliste').setData({ type: 'FeatureCollection',
@@ -1303,10 +1306,12 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     });
   }
 
-  function settOnskelag(paa) {
+  function settOnskeliste(paa) {
     if (state.visOnskeliste === paa) return;
     state.visOnskeliste = paa;
     visOnskelag();
+    byggFiltre();
+    tegn();
   }
 
   function visFokus(o) {
@@ -1764,6 +1769,11 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     return filtrer(state.oppslag);
   }
 
+  /* Det lista og telleren viser: ønskelisten eller de besøkte stedene. */
+  function iVisning() {
+    return state.visOnskeliste ? synligeOnskeliste() : synlige();
+  }
+
   /* Ønskelisten følger samme sone-, kategori- og søkefilter som resten av lista. */
   function synligeOnskeliste() {
     return filtrer(state.onskeliste);
@@ -1790,7 +1800,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
   function tegn() {
     oppdaterStengte();
-    const vis = synlige();
+    const vis = iVisning();
 
     filtrerKart(vis);
 
@@ -1802,7 +1812,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
     tegnListe(vis);
 
-    if (state.valgtId && !vis.concat(synligeOnskeliste()).some(o => o.id === state.valgtId)) {
+    if (state.valgtId && !vis.some(o => o.id === state.valgtId)) {
       state.valgtId = null;
       popup.remove();
       visFokus(null);
@@ -1819,7 +1829,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
         ? t('ingenTreff')
         : t('ingenSteder');
       el.liste.appendChild(tomt);
-      tegnOnskeliste();
+      visTreffOnskeliste();
       return;
     }
 
@@ -1845,38 +1855,23 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
         el.liste.appendChild(oppslagEl(o));
       });
 
-    tegnOnskeliste();
+    visTreffOnskeliste();
   }
 
-  /* Egen seksjon nederst: «Ikke besøkt ennå (n)», sammenslått til den åpnes.
-     Å åpne den slår på kartlaget, å lukke den slår det av. */
-  function tegnOnskeliste() {
-    const vis = synligeOnskeliste();
-    if (!vis.length) return;
-
-    const hode = document.createElement('button');
-    hode.type = 'button';
-    hode.className = 'onskeliste-hode';
-    hode.setAttribute('aria-expanded', state.onskelisteApen ? 'true' : 'false');
-    hode.textContent = t('ikkeBesoktAntall', vis.length);
-    hode.addEventListener('click', () => {
-      state.onskelisteApen = !state.onskelisteApen;
-      settOnskelag(state.onskelisteApen);   // laget følger seksjonen: åpne = på, lukke = av
-      tegnListe(synlige());
-    });
+  /* Søker man i vanlig visning, sier en lenke nederst om søket også treffer på ønskelisten. */
+  function visTreffOnskeliste() {
+    if (state.visOnskeliste || !state.sok.trim()) return;
+    const n = synligeOnskeliste().length;
+    if (!n) return;
+    const knapp = document.createElement('button');
+    knapp.type = 'button';
+    knapp.className = 'treff-onskeliste';
+    knapp.textContent = t('treffOnskeliste', n);
+    knapp.addEventListener('click', () => settOnskeliste(true));
     const rad = document.createElement('div');   // lista har role="list", så knappen må ligge i et listitem
     rad.setAttribute('role', 'listitem');
-    rad.appendChild(hode);
+    rad.appendChild(knapp);
     el.liste.appendChild(rad);
-    if (!state.onskelisteApen) return;
-
-    // Førstevalg (★) øverst, så alfabetisk. Med «Nær meg»: nærmest først.
-    vis.slice()
-      .sort((a, b) => stengtSist(a, b) ||
-        (state.naerMeg && state.minPosisjon ? avstandTil(a) - avstandTil(b) : 0) ||
-        (!!b.p.favoritt - !!a.p.favoritt) ||
-        visNavn(a.p).localeCompare(visNavn(b.p), SPRAK === 'en' ? 'en' : 'nb'))
-      .forEach(o => el.liste.appendChild(oppslagEl(o)));
   }
 
   function oppslagEl(o) {
@@ -1889,7 +1884,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
     const div = document.createElement('div');
     const stengt = stengtTekst(p);
-    div.className = 'oppslag' + (onske ? ' oppslag--onskeliste' : '') + (stengt ? ' oppslag--stengt' : '') + (state.valgtId === o.id ? ' er-valgt' : '');
+    div.className = 'oppslag' + (stengt ? ' oppslag--stengt' : '') + (state.valgtId === o.id ? ' er-valgt' : '');
     div.setAttribute('role', 'listitem');
     div.tabIndex = 0;
 
@@ -1931,9 +1926,9 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
   function velg(id, flyTil, klikkPunkt) {
     const o = oppslagFraId(id);
     if (!o) return;
+    settOnskeliste(erOnskeliste(o.p));   // et sted fra adressen kan ligge i den andre visningen
     state.valgtId = id;
     visFokus(o);
-    if (erOnskeliste(o.p)) settOnskelag(true);
 
     if (o.erLinje) {
       if (flyTil && o.bbox) kart.fitBounds(o.bbox, { padding: 70, maxZoom: 15, duration: 600 });
@@ -1948,7 +1943,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     }
 
     // Lista markerer valget, men blar ikke — man blir værende i kartet.
-    tegnListe(synlige());
+    tegnListe(iVisning());
 
     // Mobil: kartet ligger over lista. Valg fra lista hopper opp til kartet, med infoboksen
     // åpen — som i Reiseplanlegging. Ikke liggende, der kartet allerede står ved siden av.
@@ -1961,7 +1956,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     if (!state.valgtId) return;
     state.valgtId = null;
     visFokus(null);
-    tegnListe(synlige());
+    tegnListe(iVisning());
   }
 
   /* ---------- filterknapper ---------- */
@@ -2034,12 +2029,15 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
     // status
     el.fStatus.innerHTML = '';
-    el.fStatus.closest('.filterblokk').hidden = !state.oppslag.length;
+    el.fStatus.closest('.filterblokk').hidden = !state.oppslag.length && !state.onskeliste.length;
     el.fStatus.appendChild(lagChip(t('kunFavoritter'), null, state.kunFavoritter, () => {
       state.kunFavoritter = !state.kunFavoritter;
       byggFiltre();
       tegn();
     }));
+    if (state.onskeliste.length) {
+      el.fStatus.appendChild(lagChip(t('onskeliste'), null, state.visOnskeliste, () => settOnskeliste(!state.visOnskeliste)));
+    }
     if ('geolocation' in navigator) {
       el.fStatus.appendChild(lagChip(t('naerMeg'), null, state.naerMeg, () => settNaerMeg(!state.naerMeg)));
     }
@@ -2067,7 +2065,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
         // Lista tegnes på nytt bare når man har flyttet seg et stykke
         if (state.minPosisjon && meter(state.minPosisjon, ny) < 25) return;
         state.minPosisjon = ny;
-        if (state.naerMeg) tegnListe(synlige());
+        if (state.naerMeg) tegnListe(iVisning());
       }, () => settNaerMeg(false), { enableHighAccuracy: true, maximumAge: 30000, timeout: 30000 });
     } else if (!paa) {
       if (posisjonVakt !== null) navigator.geolocation.clearWatch(posisjonVakt);
@@ -2076,7 +2074,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       if (posisjonPrikk) posisjonPrikk.remove();
     }
     byggFiltre();
-    tegnListe(synlige());
+    tegnListe(iVisning());
   }
 
   /* Er du i byen, åpner kartet der du er, med prikken som følger deg (som knappen for egen posisjon).
@@ -2291,7 +2289,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       // Lista virker uavhengig av kartet; lagene legges på når stilen er lastet.
       kartKlar.then(() => {
         leggTilKartlag();
-        filtrerKart(synlige());
+        filtrerKart(iVisning());
         // Tones inn når kartbitene for utsnittet er lastet, så stedene ikke kommer før gatene.
         // Venter høyst 0,8 s (å vente på «idle» tar for lang tid mens offline-lagringen går).
         const naarLastet = () => { if (kart.areTilesLoaded()) { kart.off('render', naarLastet); visKart(); } };
