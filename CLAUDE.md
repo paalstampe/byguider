@@ -113,6 +113,9 @@ Playwright med `colorScheme: 'light'` og `'dark'`. Ta bildene fra stam.pe etter 
   og si fra hvis du er usikker på plasseringen.
 - Mange steder samtidig (ny by, lang liste fra Pål): bruk `.claude/skills/ny-by/slaopp.js` i nettleserpanelet på google.com/maps.
   Ett kall per sted gir navn, område, koordinater, Place ID, vurdering, nettside og om stedet er stengt.
+- Status og åpningstider for mange steder uten nettleser (også i skyøkter): `python3 .claude/googlesjekk.py` slår opp alle
+  steder med Place ID og melder dem Google viser som stengt for godt; `--tider` melder steder med `åpent:` der Google har
+  endret tidene siden øyeblikksbildet i `.claude/google-tider.json` (`--lagre` oppdaterer det; skyjobben committer det rett til main). Se toppen av skriptet.
 - Kortlenker (maps.app.goo.gl) løses uten nettleser: curl -sI gir plass-URL-en i Location. Nettside og adresse:
   åpne google.com/maps/place/?q=place_id:<id>&hl=en i nettleserpanelet, vent 3 s, ta et lite skjermbilde
   (ellers tegnes ikke panelet), og bruk find «Website:» / «Address:» / «ermanently» (stengt).
