@@ -5,6 +5,12 @@ description: Avslutt en arbeidsøkt – oppdater NOTES.md og ev. CLAUDE.md, comm
 
 Avslutt arbeidsøkten:
 
+- Én kjøring dekker alle repoene økta har endret: gå gjennom stegene for hvert av dem. Skillen finnes som lik kopi i
+  prosjektrepoene, så du trenger ikke kjøre hver variant for seg.
+- Har /avslutt allerede kjørt i økta, ta bare med det som er gjort siden sist (se på commits etter forrige /avslutt).
+  Ikke gjenta oppsummeringen eller forslag som er gjennomført eller avslått. Steg uten noe nytt hoppes over, og svaret blir tilsvarende kort.
+
+
 1. Oppdater NOTES.md (lag den hvis den mangler, med seksjonene Status nå, Neste steg, Åpne spørsmål, Beslutningslogg):
    - Hva som ble gjort i denne økten
    - Ny status, neste steg og åpne spørsmål
