@@ -85,8 +85,6 @@ const TEKST = {
     naerMeg: 'Nær meg',
     aapent: 'Åpent',
     vis: 'Vis',
-    aapentNaa: 'Nå',
-    stengtNaa: 'Stengt nå',
     dagNavn: ['Mandag', 'Tirsdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lørdag', 'Søndag'],
     stengtDag: d => 'Stengt ' + TEKST.no.dagNavn[d].toLowerCase(),
     dagKort: ['ma', 'ti', 'on', 'to', 'fr', 'lø', 'sø'],   // også dagene i åpent: (UKEDAGER)
@@ -147,8 +145,6 @@ const TEKST = {
     naerMeg: 'Near me',
     aapent: 'Open',
     vis: 'Show',
-    aapentNaa: 'Now',
-    stengtNaa: 'Closed now',
     dagNavn: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
     stengtDag: d => 'Closed on ' + TEKST.en.dagNavn[d] + 's',
     dagKort: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
@@ -800,9 +796,10 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     soner: new Set(),            // tom = alle
     kategorier: new Set(),       // tom = alle
     kunFavoritter: false,
-    aapent: null,                // null | 'naa' | 6 (søndag) | 0 (mandag): stengte steder tones ned
+    aapent: null,                // null | 6 (søndag) | 0 (mandag): stengte steder tones ned
     naerMeg: false,              // lista sortert etter avstand fra egen posisjon
     minPosisjon: null,           // { lng, lat } mens «Nær meg» er på
+    utenforByen: false,          // siste kjente posisjon er utenfor byen: «Nær meg» skjules
     sok: '',
     valgtId: null,
     soneRekkefolge: [],          // fra metadata.soner, ellers rekkefølgen i dataene
@@ -909,7 +906,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       trackUserLocation: true,
       showAccuracyCircle: true
     }), 'top-left');
-    posisjonKtrl.on('geolocate', huskPosisjon);
+    posisjonKtrl.on('geolocate', e => posisjonFunnet(e.coords.longitude, e.coords.latitude));
     posisjonKtrl.on('error', e => { if (e.code === 1) glemPosisjon(); });
   }
 
@@ -1671,8 +1668,8 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
   /* ---------- åpningstider ----------
 
-     «Åpent» nå/søndag/mandag skjuler ingenting: steder vi vet er stengt, tones ned i kartet og lista
-     og legges sist. Steder uten åpningstider vises som vanlig. «Nå» bruker enhetens klokke. */
+     «Åpent» søndag/mandag skjuler ingenting: steder vi vet er stengt, tones ned i kartet og lista
+     og legges sist. Steder uten åpningstider vises som vanlig. */
 
   /* Ukedag (0 = mandag) og minutter etter midnatt i byens tidssone (frontmatter tidssone:), ellers enhetens. */
   function byTid() {
@@ -1690,15 +1687,6 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     return { dag: (dag + 6) % 7, min: timer * 60 + min };
   }
 
-  function aapenNaa(a, tid) {
-    const { dag: d, min: m } = tid;
-    const iDag = a.dager[d].some(([fra, til]) => m >= fra && (til == null || til <= fra || m < til));
-    const fraIGaar = a.dager[(d + 6) % 7].some(([fra, til]) => til != null && til <= fra && m < til);
-    return iDag || fraIGaar;
-  }
-
-  let naaVakt = null;
-
   /* «Åpent» gir bare mening når stedene vi viser har åpningstider: én kategori er valgt, og minst 80 % av
      stedene i den har åpent:. Steder uten tider ville ellers sett åpne ut. Styres av dataene, så nye
      kategorier med tider (kaféer, barer) får knappene av seg selv. */
@@ -1711,12 +1699,10 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
   /* Regner ut én gang per opptegning om hvert sted er stengt, og lagrer det som stengt på stedet
      (properties, så kartlagene leser det direkte). Svarer om noe endret seg. */
   function oppdaterStengte() {
-    const tid = state.aapent === 'naa' ? byTid() : null;
     let endret = false;
     state.oppslag.concat(state.onskeliste).forEach(o => {
       const a = o.p.aapent;
-      const stengt = !!a && state.aapent != null &&
-        (tid ? !aapenNaa(a, tid) : !a.dager[state.aapent].length);
+      const stengt = !!a && state.aapent != null && !a.dager[state.aapent].length;
       if (!!o.p.stengt !== stengt) { o.p.stengt = stengt; endret = true; }
     });
     return endret;
@@ -1728,7 +1714,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
   function stengtTekst(p) {
     if (!erStengt(p)) return '';
     if (p.aapent.midlertidig) return t('midlertidigStengt');
-    return state.aapent === 'naa' ? t('stengtNaa') : t('stengtDag', state.aapent);
+    return t('stengtDag', state.aapent);
   }
 
   const klokke = m => {
@@ -1755,7 +1741,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     const a = p.aapent;
     if (!a) return '';
     if (a.midlertidig) return '<p class="pop-tider"><strong>' + t('midlertidigStengt') + '</strong></p>';
-    const [d, navn, stengtLinje] = typeof state.aapent === 'number'
+    const [d, navn, stengtLinje] = state.aapent != null
       ? [state.aapent, t('dagNavn')[state.aapent], t('stengtDag', state.aapent)]
       : [byTid().dag, t('iDag'), t('stengtIDag')];
     const linje = a.dager[d].length ? navn + ' ' + tidTekst(a.dager[d]) : stengtLinje;
@@ -2004,23 +1990,16 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     byggGruppe(el.fKategori, state.brukteKategorier, state.kategorier,
       k => katInfo(k).navn, k => katInfo(k).farge);
 
-    // åpent nå / søndag / mandag — bare når valgt kategori har åpningstider (se aapentMulig).
+    // åpent søndag / mandag — bare når valgt kategori har åpningstider (se aapentMulig).
     // Byttes kategorien til en uten, slås filteret av, så det ikke står igjen skjult.
     el.fAapent.innerHTML = '';
     const blokk = el.fAapent.closest('.filterblokk');
     blokk.hidden = !aapentMulig();
-    if (blokk.hidden && state.aapent != null) {
-      state.aapent = null;
-      clearInterval(naaVakt);
-    }
-    if (!blokk.hidden) {
-      ['naa', 6, 0].forEach(verdi => {   // søndag og mandag: da er mange stengt
-        const tekst = verdi === 'naa' ? t('aapentNaa') : t('dagNavn')[verdi];
-        el.fAapent.appendChild(lagChip(tekst, null, state.aapent === verdi, () => {
+    if (blokk.hidden) state.aapent = null;
+    else {
+      [6, 0].forEach(verdi => {   // søndag og mandag: da er mange stengt
+        el.fAapent.appendChild(lagChip(t('dagNavn')[verdi], null, state.aapent === verdi, () => {
           state.aapent = state.aapent === verdi ? null : verdi;
-          clearInterval(naaVakt);
-          // «Nå» følger klokka, men tegner bare på nytt når et sted åpner eller stenger
-          if (state.aapent === 'naa') naaVakt = setInterval(() => { if (oppdaterStengte()) tegn(); }, 60000);
           byggFiltre();
           tegn();
         }));
@@ -2038,7 +2017,8 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     if (state.onskeliste.length) {
       el.fStatus.appendChild(lagChip(t('onskeliste'), null, state.visOnskeliste, () => settOnskeliste(!state.visOnskeliste)));
     }
-    if ('geolocation' in navigator) {
+    // Vet vi at du er utenfor byen, gir «Nær meg» ingen mening og vises ikke.
+    if ('geolocation' in navigator && !state.utenforByen) {
       el.fStatus.appendChild(lagChip(t('naerMeg'), null, state.naerMeg, () => settNaerMeg(!state.naerMeg)));
     }
   }
@@ -2046,16 +2026,34 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
   /* ---------- nær meg ----------
 
      «Nær meg» følger posisjonen og sorterer lista etter avstand, nærmest først, med avstand og
-     gangtid på hvert sted. Sonene slås sammen så lenge den er på. Egen prikk i kartet. */
+     gangtid på hvert sted. Sonene slås sammen så lenge den er på. Egen prikk i kartet.
+     Er du utenfor byen, slås den av og skjules (se posisjonFunnet). */
 
   let posisjonVakt = null, posisjonPrikk = null;
+
+  /* «I byen» er innenfor utsnittet med alle stedene (også «utenfor: ja»), med litt slingringsmonn.
+     Settes ved oppstart; før det regnes alt som i byen. */
+  let byRamme = null;
+  const iByen = (lng, lat) => !byRamme ||
+    (lng >= byRamme[0] && lng <= byRamme[2] && lat >= byRamme[1] && lat <= byRamme[3]);
+
+  /* Hver gang vi får en posisjon: husk at den virker, og skjul «Nær meg» (og slå den av) utenfor byen. */
+  function posisjonFunnet(lng, lat) {
+    huskPosisjon();
+    const utenfor = !iByen(lng, lat);
+    if (utenfor === state.utenforByen) return utenfor;
+    state.utenforByen = utenfor;
+    if (utenfor && state.naerMeg) settNaerMeg(false);
+    else byggFiltre();
+    return utenfor;
+  }
 
   function settNaerMeg(paa) {
     state.naerMeg = paa;
     if (paa && posisjonVakt === null) {
       posisjonVakt = navigator.geolocation.watchPosition(pos => {
-        huskPosisjon();
         const ny = { lng: pos.coords.longitude, lat: pos.coords.latitude };
+        if (posisjonFunnet(ny.lng, ny.lat)) return;
         if (!posisjonPrikk) {
           const prikk = document.createElement('div');
           prikk.className = 'maplibregl-user-location-dot';
@@ -2077,10 +2075,9 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     tegnListe(iVisning());
   }
 
-  /* Er du i byen, åpner kartet der du er, med prikken som følger deg (som knappen for egen posisjon).
-     Bare når siden har lov til å bruke posisjonen, eller posisjonen har virket her før — ellers ingen
-     spørsmål ved oppstart. «I byen» er
-     innenfor utsnittet med alle stedene (også «utenfor: ja»), med litt slingringsmonn. */
+  /* Ved oppstart: er du i byen, åpner kartet der du er (når flytt er sann), med prikken som følger deg
+     (som knappen for egen posisjon); er du utenfor, skjules «Nær meg». Bare når siden har lov til å bruke
+     posisjonen, eller posisjonen har virket her før — ellers ingen spørsmål ved oppstart. */
   /* Safari på iPhone avviser ofte spørringen etter tillatelse, eller svarer «prompt» selv om man har sagt ja
      (Safari spør på nytt per økt). Derfor huskes det i nettleseren at posisjonen har virket her før. */
   const POSISJON_NOKKEL = 'byguider-posisjon';
@@ -2088,17 +2085,13 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
   function glemPosisjon() { try { localStorage.removeItem(POSISJON_NOKKEL); } catch (e) {} }
   function posisjonVirketFor() { try { return localStorage.getItem(POSISJON_NOKKEL) === '1'; } catch (e) { return false; } }
 
-  function aapneHer(oppslag) {
-    if (!posisjonKtrl || !oppslag.length) return;
-    const [x0, y0, x1, y1] = bbox(oppslag.flatMap(o => [o.bbox.slice(0, 2), o.bbox.slice(2)]));
-    const slark = 0.02;
+  function sjekkPosisjon(flytt) {
+    if (!posisjonKtrl || !byRamme) return;
     // Har du selv flyttet kartet før posisjonen kom, blir det stående.
     let flyttet = false;
-    kart.on('movestart', e => { if (e.originalEvent) flyttet = true; });
+    if (flytt) kart.on('movestart', e => { if (e.originalEvent) flyttet = true; });
     const hent = () => navigator.geolocation.getCurrentPosition(pos => {
-      huskPosisjon();
-      const { longitude: lng, latitude: lat } = pos.coords;
-      if (lng < x0 - slark || lng > x1 + slark || lat < y0 - slark || lat > y1 + slark) return;
+      if (posisjonFunnet(pos.coords.longitude, pos.coords.latitude) || !flytt) return;
       // Knappen er klar først når MapLibre har sjekket støtten for posisjon; prøv igjen til den er det.
       let forsok = 0;
       const trykk = () => {
@@ -2299,7 +2292,12 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
         kart.once('idle', forhandslastOffline);
       });
 
-      if (!aapneStedFraAdresse()) aapneHer(alleMedBbox);
+      if (alleMedBbox.length) {
+        const [x0, y0, x1, y1] = bbox(alleMedBbox.flatMap(o => [o.bbox.slice(0, 2), o.bbox.slice(2)]));
+        const slark = 0.02;
+        byRamme = [x0 - slark, y0 - slark, x1 + slark, y1 + slark];
+      }
+      sjekkPosisjon(!aapneStedFraAdresse());
 
       fot = () => t('fot', '<code>' + esc(DATA_NAVN) + '</code>', esc(meta.oppdatert || ''));
       el.fotTekst.innerHTML = fot();
