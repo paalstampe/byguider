@@ -106,24 +106,10 @@ Playwright med `colorScheme: 'light'` og `'dark'`. Ta bildene fra stam.pe etter 
 ## Data
 - Én md-fil per by i data/. Format står som kommentar øverst i hver fil.
 - ★ etter navnet = favoritt.
-- Nye steder: hent alltid Google Place ID og koordinater fra Google Maps (nettleserpanelet:
-  google.com/maps/search/<navn+adresse>; avvis informasjonskapsler). Plass-URL-en har 1s0x<a>:0x<b> og
-  !3d<bredde>!4d<lengde>; Place ID = base64url(0a 12 09 + a som 8 byte little-endian + 11 + b som 8 byte LE),
-  uten «=». Gir søket en liste, har lenkene ChIJ… direkte i «!19s». Bruk OpenStreetMap bare som reserve,
-  og si fra hvis du er usikker på plasseringen.
-- Mange steder samtidig (ny by, lang liste fra Pål): bruk `.claude/skills/ny-by/slaopp.js` i nettleserpanelet på google.com/maps.
-  Ett kall per sted gir navn, område, koordinater, Place ID, vurdering, nettside og om stedet er stengt.
-- Status og åpningstider for mange steder uten nettleser (også i skyøkter): `python3 .claude/googlesjekk.py` slår opp alle
-  steder med Place ID og melder dem Google viser som stengt for godt; `--tider` melder steder med `åpent:` der Google har
-  endret tidene siden øyeblikksbildet i `.claude/google-tider.json` (`--lagre` oppdaterer det; skyjobben committer det rett til main). Se toppen av skriptet.
-- Kortlenker (maps.app.goo.gl) løses uten nettleser: curl -sI gir plass-URL-en i Location. Nettside og adresse:
-  åpne google.com/maps/place/?q=place_id:<id>&hl=en i nettleserpanelet, vent 3 s, ta et lite skjermbilde
-  (ellers tegnes ikke panelet), og bruk find «Website:» / «Address:» / «ermanently» (stengt).
-- Lagrede lister i Google Maps: be Pål om delt liste-lenke. Fra lista (åpnet i nettleserpanelet) gir
-  fetch('/maps/preview/entitylist/getlist?authuser=0&hl=en&pb=!1m4!1s<liste-id>!2e1!3m1!1e1!2e2!3e2!4i500!16b1')
-  navn, koordinater og 0x<a>:0x<b> for alle stedene. Sjekk at stedene ikke er permanent stengt.
-- Nettside hentes samme sted: lenken «Website» på stedets side i Google Maps (a[data-item-id="authority"]).
-  Ta bare med stedets egen side (ev. Instagram) — ikke bookingtjenester eller tredjepartsguider.
+- Nye steder: hent alltid Google Place ID og koordinater fra Google Maps; bruk OpenStreetMap bare som reserve, og si fra
+  hvis du er usikker på plasseringen. Ta bare med stedets egen nettside (ev. Instagram), ikke bookingtjenester eller guider.
+  Oppskriftene (Place ID fra plass-URL, `slaopp.js`, kortlenker, nettside og adresse, delte lister) står i ny-by-skillen,
+  «Google Maps-oppskrifter». `python3 .claude/googlesjekk.py` (`--tider`, `--lagre`) melder stengte steder og endrede tider.
 - Restauranter, kaféer, butikker o.l.: første linje i notatet (og i en:) er området/nabolaget stedet ligger i
   (f.eks. «Marylebone»), som i New York. Slå det opp per sted; adressen kommer i teksten under.
 - Nabolag får alltid omriss i data/<by>-geometri.geojson, i alle byer (også nye): et «område»-polygon
