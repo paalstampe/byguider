@@ -19,6 +19,8 @@ Sist oppdatert: 12. november 2026. Historikk per dato står i ARKIV.md.
 - Skyjobber: månedlig sjekk (1. hver måned kl. 06; stengte steder og nettsider, https://claude.ai/code/routines/trig_01DvX7PTCcLcRy2QmYL2Jrcj)
   og halvårlig tidssjekk (15.3. og 15.9.; `.claude/googlesjekk.py --tider`, https://claude.ai/code/routines/trig_012amhPG41tyfMW5ic5vLbG6).
 - Publiseringen er felles for alle tre repoene (publiser.yml i paalstampe.github.io), hopper over uendret innhold og publiserer ikke dokumentasjon.
+- 12.11.: CLAUDE.md kortet ned til 136 linjer. Google Maps-oppskriftene står nå i ny-by-skillen (PR #122), kildene for
+  nabolagsomriss per by i HANDOVER, punkt 4. Løsninger som deles med reisekartet står i reiseplanleggingens HANDOVER, «Felles med byguidene».
 - Ingen åpne grener utenom `main`.
 
 ## Neste steg
@@ -82,3 +84,5 @@ Hele loggen står i ARKIV.md. Nye beslutninger skrives her og flyttes dit ved ne
 - 2026-11-11: Kontekst spares ved oppstart: NOTES.md holdes under ca. 10 KB (/avslutt passer på det), eldre status og beslutninger ligger i ARKIV.md. Før lastet byguider ca. 57 KB (~15k tokens) i hver økt.
 - 2026-11-11: Ingen Read-sperre på geojson eller app.js, siden de redigeres og Edit krever Read. CLAUDE.md sier at de leses i utsnitt.
 - 2026-11-12: «Nå» fjernet fra Åpent-filteret (lite nyttig, sa Pål). «Nær meg» skjules når posisjonen er kjent og utenfor byen, der den ikke gjør noe nyttig (PR #119). Kommer tilbake først ved ny posisjon i byen, så posisjonen ikke følges hele tiden.
+- 2026-11-12: Løsninger som finnes i både byguidene og reisekartet (kartbevegelse, søk, infoboks, språk, offline m.m.), skal være like; lista står i reiseplanleggingens HANDOVER. Reisekartet manglet søkekrysset byguidene hadde.
+- 2026-11-12: CLAUDE.md holdes under 150 linjer: oppskrifter som bare trengs i bestemte oppgaver, står i skillen eller HANDOVER (Google Maps-oppskrifter i ny-by, nabolagskilder i HANDOVER), mens regelen står igjen i CLAUDE.md.
