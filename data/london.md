@@ -1594,6 +1594,19 @@ Cocktailbar under Hide, Piccadilly 85.
 
 Cocktail bar beneath Hide, 85 Piccadilly.
 
+### The Bloomsbury Club
+- sted: 51.51727, -0.12904
+- google: ChIJ1QYMxc4EdkgRAppTVYU8Vas
+- nettside: https://thebloomsburyclub.com/
+- status: onskeliste
+Bloomsbury
+
+Cocktailbar i kjelleren på The Bloomsbury Hotel, Great Russell Street 16–22.
+
+- en: Bloomsbury
+
+Cocktail bar in the basement of The Bloomsbury Hotel, 16–22 Great Russell Street.
+
 ### Dukes Bar
 - sted: 51.50554, -0.13969
 - google: ChIJLds3OEkFdkgRcYk3My6S59o
