@@ -57,8 +57,8 @@ Stubb og bilder er kode → egen gren `ny-by-<id>`. Data og tekst kan ligge på 
   `curl -A "byguider/1.0" "https://routing.openstreetmap.de/routed-foot/route/v1/foot/<lng,lat;lng,lat;…>?overview=full&geometries=geojson"`
   (gir også lengden i meter). Velg punktene langs gatene du vil gå, start og slutt ved en stasjon.
 - Nabolag: omriss for hvert nabolag i geometrifila, med presise grenser etter fremgangsmåten i CLAUDE.md
-  (offentlige grenser først, ellers spor gatene i OSM). Sett `kilde` og `notat`. Legg byens kilde til i CLAUDE.md-lista
-  over kilder hvis du fant en god en.
+  (offentlige grenser først, ellers spor gatene i OSM). Sett `kilde` og `notat`. Fant du en god kilde,
+  legg den til i HANDOVER, punkt 4, «Nabolagsomriss: kilder per by».
 - Geometrifila: én feature per linje (som de andre byene), ikke `indent=2` med én koordinat per linje.
 - Valideringshooken sjekker JSON/GeoJSON når du skriver filene; rett feil med en gang.
 
