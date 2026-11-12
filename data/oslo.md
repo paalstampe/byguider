@@ -7,7 +7,7 @@ kicker: En høyst subjektiv guide
 kicker-en: An opinionated guide
 senter: 59.9180, 10.7400
 zoom: 13
-oppdatert: 2026-11-11
+oppdatert: 2026-11-12
 tidssone: Europe/Oslo
 ---
 
@@ -1355,6 +1355,18 @@ Rodeløkka
 Oslos første mezcalbar, ofte DJ i helgene. Fra Aftenpostens dateguide. Helgesens gate 66.
 - en: Rodeløkka
 Oslo’s first mezcal bar, often a DJ at weekends. From Aftenposten’s date guide. Helgesens gate 66.
+
+### Bruun-Larsen
+- sted: 59.93317, 10.76704
+- google: ChIJy9zPz2puQUYRz-yStTCT5Pc
+- nettside: http://bruun-larsen.no/
+- status: onskeliste
+- åpent: ma–to 17–01, fr–lø 14–01, sø 17–01
+- åpent-kilde: Google, nov. 2026
+Torshov
+Bar. Torshovgata 15.
+- en: Torshov
+Bar. Torshovgata 15.
 
 ## Jazzklubber
 
