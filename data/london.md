@@ -407,6 +407,21 @@ Thai, Seymour Place 22–24.
 
 Thai, 22–24 Seymour Place.
 
+### SUMI Marylebone
+- sted: 51.52128, -0.15136
+- google: ChIJ1fXWWhAbdkgRl0VaWMH7vqs
+- nettside: https://www.sushisumi.com/marylebone
+- status: onskeliste
+- åpent: ma 17.30–21.30, ti–sø 12–14.30 + 17.30–21.30
+- åpent-kilde: Google, nov. 2026
+Marylebone
+
+Japansk og sushi, søsteren til SUMI i Notting Hill. Devonshire Street 26–27.
+
+- en: Marylebone
+
+Japanese and sushi, sister to SUMI in Notting Hill. 26–27 Devonshire Street.
+
 ### Hoppers
 - sted: 51.51591, -0.15085
 - google: ChIJCX3Qw9IadkgR6UOl3O-yvdg

@@ -663,17 +663,6 @@ Frogner
 - en: Frogner
 Organic and seasonal. Frognerveien 33.
 
-### 200
-- sted: 59.92223, 10.76141
-- google: ChIJc0hmnglvQUYR8w_qj9a52R4
-- nettside: https://200oslo.com/
-- åpent: ma–ti 16–23.30, on–fr 16–00.30, lø 13–00.30, sø 16–23.30
-- åpent-kilde: Google, nov. 2026
-Sofienberg
-Gastrobar i store lokaler, liten men variert meny. Schnitzelen er favoritten (Aftenposten). Hunder er velkomne. Sofienberggata 17.
-- en: Sofienberg
-Gastro bar in large premises, small but varied menu. The schnitzel is the favourite (Aftenposten). Dogs welcome. Sofienberggata 17.
-
 <!-- Ønskeliste: restauranter vi ikke har besøkt ennå (- status: onskeliste).
      ★ = de vi helst vil til først. Fjern «status»-linja når vi har vært der. -->
 
@@ -1124,6 +1113,17 @@ Smørbrød. Torggata 21B.
 Sandwiches. Torggata 21B.
 
 ## Barer
+
+### 200
+- sted: 59.92223, 10.76141
+- google: ChIJc0hmnglvQUYR8w_qj9a52R4
+- nettside: https://200oslo.com/
+- åpent: ma–ti 16–23.30, on–fr 16–00.30, lø 13–00.30, sø 16–23.30
+- åpent-kilde: Google, nov. 2026
+Sofienberg
+Gastrobar i store lokaler, liten men variert meny. Schnitzelen er favoritten (Aftenposten). Hunder er velkomne. Sofienberggata 17.
+- en: Sofienberg
+Gastro bar in large premises, small but varied menu. The schnitzel is the favourite (Aftenposten). Dogs welcome. Sofienberggata 17.
 
 ### Café Rouleur
 - sted: 59.92389, 10.74048
