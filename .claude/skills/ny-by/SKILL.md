@@ -1,11 +1,11 @@
 ---
 name: ny-by
-description: Lag en ny by i byguiden – byer.json, data-md, geometri, stubbmappe, delingsbilder, ikoner, miniatyrer og lansering. Bruk automatisk når Pål ber om en ny by eller guide (f.eks. «lag en guide for Paris», «legg til Lisboa»), eller skriver /ny-by <by>. Også når en skjult by skal gjøres synlig (lansering).
+description: Lag en ny by i byguiden – byer.json, data-md, geometri, stubbmappe, delingsbilder, ikoner, miniatyrer og lansering. Bruk automatisk når Pål ber om en ny by eller guide (f.eks. «lag en guide for Paris», «legg til Lisboa»), eller skriver /ny-by <by>. Også når en skjult by skal gjøres synlig (lansering). Har også oppskriftene for å slå opp steder i Google Maps (Place ID, koordinater, nettside, delte lister) – bruk dem også når steder legges til i en by som finnes.
 ---
 
 # Ny by i byguiden
 
-Fast oppskrift for å legge til en by. Detaljene står i CLAUDE.md (Data, Miniatyrer) og HANDOVER.md («Ny by», punkt 3–4).
+Fast oppskrift for å legge til en by. Google Maps-oppskriftene står under «Google Maps-oppskrifter» før steg 4. Detaljene ellers står i CLAUDE.md (Data, Miniatyrer) og HANDOVER.md («Ny by», punkt 3–4).
 Les dem når et steg er uklart – denne skillen er sjekklisten, ikke fasiten.
 
 ## 0. Avklar (spør bare om det som mangler)
@@ -61,6 +61,23 @@ Stubb og bilder er kode → egen gren `ny-by-<id>`. Data og tekst kan ligge på 
   legg den til i HANDOVER, punkt 4, «Nabolagsomriss: kilder per by».
 - Geometrifila: én feature per linje (som de andre byene), ikke `indent=2` med én koordinat per linje.
 - Valideringshooken sjekker JSON/GeoJSON når du skriver filene; rett feil med en gang.
+
+## Google Maps-oppskrifter (også for steder i byer som finnes)
+- Ett sted: åpne google.com/maps/search/<navn+adresse> i nettleserpanelet (avvis informasjonskapsler). Plass-URL-en har
+  1s0x<a>:0x<b> og !3d<bredde>!4d<lengde>; Place ID = base64url(0a 12 09 + a som 8 byte little-endian + 11 + b som 8 byte LE),
+  uten «=». Gir søket en liste, har lenkene ChIJ… direkte i «!19s».
+- Mange steder: `slaopp.js` i denne mappa (se steg 3). Ett kall per sted gir navn, område, koordinater, Place ID, vurdering,
+  nettside og om stedet er stengt.
+- Kortlenker (maps.app.goo.gl) løses uten nettleser: `curl -sI` gir plass-URL-en i Location.
+- Nettside og adresse: åpne google.com/maps/place/?q=place_id:<id>&hl=en i nettleserpanelet, vent 3 s, ta et lite skjermbilde
+  (ellers tegnes ikke panelet), og bruk find «Website:» / «Address:» / «ermanently» (stengt). Nettsiden er lenken «Website»
+  (a[data-item-id="authority"]).
+- Lagrede lister i Google Maps: be Pål om delt liste-lenke. Fra lista (åpnet i nettleserpanelet) gir
+  fetch('/maps/preview/entitylist/getlist?authuser=0&hl=en&pb=!1m4!1s<liste-id>!2e1!3m1!1e1!2e2!3e2!4i500!16b1')
+  navn, koordinater og 0x<a>:0x<b> for alle stedene. Sjekk at stedene ikke er permanent stengt.
+- Status og åpningstider for mange steder uten nettleser (også i skyøkter): `python3 .claude/googlesjekk.py` melder steder
+  Google viser som stengt for godt; `--tider` melder steder med `åpent:` der Google har endret tidene siden øyeblikksbildet i
+  `.claude/google-tider.json` (`--lagre` oppdaterer det; skyjobben committer det rett til main). Se toppen av skriptet.
 
 ## 4. Bilder
 - `.claude/delingsbilder.sh` lager `bilder/deling-<id>.png` og `bilder/ikon-<id>.png` (og forsidebildet på nytt).

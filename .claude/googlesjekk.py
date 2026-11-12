@@ -2,7 +2,7 @@
 """Sjekker stedene i data/*.md mot Google Maps uten nettleser, så det virker i skyøkter.
 
 Slår opp hvert sted på Place ID (`- google:`) med google.com/maps/preview/place, som svarer med data
-også til urllib/curl. Place ID-en dekodes til 0x<a>:0x<b> (se «Data» i CLAUDE.md), så navnet spiller
+også til urllib/curl. Place ID-en dekodes til 0x<a>:0x<b> (se «Google Maps-oppskrifter» i .claude/skills/ny-by/SKILL.md), så navnet spiller
 ingen rolle.
 
   python3 .claude/googlesjekk.py              status for alle steder: stengt for godt / annen status
@@ -134,7 +134,7 @@ def like_tider(vaare, googles):
 # ---------- Google ----------
 
 def hex_id(pid):
-    """Place ID (ChIJ…) -> 0x<a>:0x<b>, det omvendte av oppskriften i CLAUDE.md."""
+    """Place ID (ChIJ…) -> 0x<a>:0x<b>, det omvendte av oppskriften i ny-by-skillen."""
     b = base64.urlsafe_b64decode(pid + '=' * (-len(pid) % 4))
     return f"0x{struct.unpack('<Q', b[3:11])[0]:x}:0x{struct.unpack('<Q', b[12:20])[0]:x}"
 
