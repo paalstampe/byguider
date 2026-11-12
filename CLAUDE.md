@@ -52,22 +52,14 @@ Store filer (app.js ~100 KB, data/london.md ~90 KB, data/*-geometri.geojson): fi
 - Fletting: Kan du selv verifisere at alt er i orden (skjermbilder mobil + desktop, ingen JS-feil),
   åpne PR og flett uten å spørre. Er det noe Pål bør se på (designvalg, smak, usikkerhet), vis ham det
   (lokalt: localhost; sky: push grenen og oppgi forhåndsvisningen) og vent — flett når han sier ok.
-- Lokal økt på Påls Mac: skal Pål se på noe, start serveren selv om den ikke kjører
-  (.claude/server.sh, i bakgrunnen; stopp med pkill -f .claude/server.sh) og åpne siden for ham med
-  open http://localhost:8000/<by>/. Stopp serveren når han er ferdig. I skyøkter: bruk forhåndsvisningen.
-- Desktop-appen: .claude/launch.json starter serveren på port 8000 i appens innebygde nettleser
-  (preview_start), der du kan se, klikke og lese konsollen selv. Portene er 8000 byguider, 8001 reiseplanlegging,
-  8002 stam.pe, så alle tre kan kjøre samtidig.
-- Hooks i .claude/settings.json: ved oppstart sjekker .claude/oppstart.sh om grenen ligger bak eller foran origin
-  (henter selv med pull --ff-only når det er trygt) og om felles filer avviker fra claude-oppsett — følg det den sier. oppstart.sh, valider.sh, sky-push.sh og /avslutt
-  er kopier: endre originalen i claude-oppsett og kjør synk-repoer.sh der.
-  .claude/valider.sh sjekker JSON/GeoJSON/YAML/Python (også dupliserte nøkler) etter hver Write/Edit, og etter Bash-kommandoer filene git ser som endret.
-  I skyøkter stopper .claude/sky-push.sh ikke før committede endringer er pushet.
-- Lokal eller sky velges når Pål starter økta. Kode- og designarbeid går raskest lokalt på Macen;
-  data og dokumentasjon går like bra i sky. Får du en kode- eller designoppgave i en skyøkt,
-  si fra tidlig at den egner seg bedre lokalt (fortsett hvis Pål vil).
-- GitHub sletter grenen automatisk ved fletting. Sjekk bare at den er borte (git ls-remote --heads origin);
-  slett den selv bare hvis den likevel ligger igjen.
+- Lokalt: start serveren (preview_start i desktop-appen via .claude/launch.json, ellers .claude/server.sh i bakgrunnen og
+  open http://localhost:8000/<by>/; stopp med pkill -f .claude/server.sh når Pål er ferdig).
+  Portene er 8000 byguider, 8001 reiseplanlegging, 8002 stam.pe. I skyøkter: bruk forhåndsvisningen.
+- Hooks (.claude/settings.json): oppstart.sh sjekker grenen mot origin og felles filer mot claude-oppsett — følg det den sier.
+  valider.sh sjekker JSON/GeoJSON/YAML/Python etter endringer; sky-push.sh krever push i skyøkter. Hookene og /avslutt er kopier:
+  endre originalen i claude-oppsett og kjør synk-repoer.sh der.
+- Kode- og designoppgaver i en skyøkt: si fra tidlig at de egner seg bedre lokalt (fortsett hvis Pål vil).
+- GitHub sletter grenen ved fletting; slett den selv bare hvis den ligger igjen (git ls-remote --heads origin).
 - Én endring per gren. Små, selvstendige commits.
 
 ## Teknikk (kort — detaljer i HANDOVER.md)
@@ -141,16 +133,7 @@ Playwright med `colorScheme: 'light'` og `'dark'`. Ta bildene fra stam.pe etter 
   Gater Pål ber om å markere legges inn som «gate»: én enkel strek (ikke begge kjørebaner), innenfor nabolaget.
 - Avgrensningen skal være presis, ikke en skisse med rette streker. Fremgangsmåte for nye nabolag:
   1. Finn definisjonen: søk bredt og dypt (byleksikon, Wikipedia, lokale kilder) og se etter offentlige grenser.
-     London: bydelenes conservation areas (planning.data.gov.uk, API med geometry=<WKT>). New York: byplankontorets
-     Neighborhood Tabulation Areas 2020 og Landmarks-kommisjonens historiske distrikter (NYC Open Data; distriktene
-     ligger i EPSG:2263 og må regnes om). Oslo: oslobyleksikon.no, lokalhistoriewiki.no, kommunen.
-     Tokyo: chōme-grensene fra folketellingen 2020 (e-Stat, statmap-search, shapefil per bydel, JGD2011 ≈ WGS84),
-     slått sammen per nabolag.
-     Bangkok: kvartalene (khwaeng) og distriktene (khet) som administrative grenser i OpenStreetMap (Overpass).
-     Mexico City: coloniene som administrative grenser i OSM (admin_level 10); Centro Histórico som «Perímetro A»
-     (protected_area). Mangler en colonia, kan postnummer-relasjonene i OSM brukes (de følger coloniene). datos.cdmx.gob.mx svarte ikke.
-     Kairo og Luxor: shiakhaene (minste administrative enhet) ligger i OSM som `place=neighbourhood`-flater, ikke som
-     admin-grenser; slå dem sammen per nabolag. De kan ta med Nilen, så klipp mot elveflaten (relasjon water=river).
+     Kildene per by (London, New York, Oslo, Tokyo, Bangkok, Mexico City, Kairo/Luxor) står i HANDOVER, punkt 4, «Nabolagsomriss: kilder per by».
   2. Passer en offentlig grense med nabolaget, bruk den (gjerne som kjerne hvis den er smalere enn nabolaget).
   3. Ellers: velg grensegatene og spor dem i OSM (Overpass) fra kryss til kryss, så omrisset følger gatene og
      kystlinjen. Hovedgaten skal ligge inni, ikke være kanten, når butikkene ligger på begge sider.

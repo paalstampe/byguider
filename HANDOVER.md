@@ -184,6 +184,19 @@ per nabolag; kjernene i Tomigaya og Yanaka følger gatene i OSM. Bangkok — kva
 som administrative grenser i OSM (Rattanakosin, Talat Noi, Charoen Krung, Silom, Sathorn, Pathum Wan); Song Wat-stripa
 i Talat Noi, Ari og Thonglor er sporet langs gatene i OSM.
 
+#### Nabolagsomriss: kilder per by
+Fremgangsmåten står i CLAUDE.md, Data. Kilder og fallgruver per by:
+- London: bydelenes conservation areas (planning.data.gov.uk, API med geometry=<WKT>).
+- New York: byplankontorets Neighborhood Tabulation Areas 2020 og Landmarks-kommisjonens historiske distrikter
+  (NYC Open Data; distriktene ligger i EPSG:2263 og må regnes om).
+- Oslo: oslobyleksikon.no, lokalhistoriewiki.no, kommunen.
+- Tokyo: chōme-grensene fra folketellingen 2020 (e-Stat, statmap-search, shapefil per bydel, JGD2011 ≈ WGS84), slått sammen per nabolag.
+- Bangkok: kvartalene (khwaeng) og distriktene (khet) som administrative grenser i OpenStreetMap (Overpass).
+- Mexico City: coloniene som administrative grenser i OSM (admin_level 10); Centro Histórico som «Perímetro A» (protected_area).
+  Mangler en colonia, kan postnummer-relasjonene i OSM brukes (de følger coloniene). datos.cdmx.gob.mx svarte ikke.
+- Kairo og Luxor: shiakhaene (minste administrative enhet) ligger i OSM som `place=neighbourhood`-flater, ikke som
+  admin-grenser; slå dem sammen per nabolag. De kan ta med Nilen, så klipp mot elveflaten (relasjon water=river).
+
 Koordinatrekkefølge: **md-fila bruker breddegrad, lengdegrad** (Google-rekkefølge);
 GeoJSON-fila bruker lengdegrad, breddegrad. Parseren snur md-koordinatene.
 
