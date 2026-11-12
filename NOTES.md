@@ -6,7 +6,7 @@ Eldre status per dato og hele beslutningsloggen ligger i ARKIV.md (lastes ikke a
 
 ## Status nå
 
-Sist oppdatert: 11. november 2026. Historikk per dato står i ARKIV.md.
+Sist oppdatert: 12. november 2026. Historikk per dato står i ARKIV.md.
 
 - Live på https://stam.pe/byguider/ med seks byer: London (275 oppføringer, 114 på ønskelista), Oslo (131, 22), New York (94, 2),
   Nice (74, 3), Tokyo (86, 7), Bangkok (40, 4). Skjulte byer (`"skjult": true`): Berlin, Mexico City, Kairo og Luxor.
@@ -81,3 +81,4 @@ Hele loggen står i ARKIV.md. Nye beslutninger skrives her og flyttes dit ved ne
 
 - 2026-11-11: Kontekst spares ved oppstart: NOTES.md holdes under ca. 10 KB (/avslutt passer på det), eldre status og beslutninger ligger i ARKIV.md. Før lastet byguider ca. 57 KB (~15k tokens) i hver økt.
 - 2026-11-11: Ingen Read-sperre på geojson eller app.js, siden de redigeres og Edit krever Read. CLAUDE.md sier at de leses i utsnitt.
+- 2026-11-12: «Nå» fjernet fra Åpent-filteret (lite nyttig, sa Pål). «Nær meg» skjules når posisjonen er kjent og utenfor byen, der den ikke gjør noe nyttig (PR #119). Kommer tilbake først ved ny posisjon i byen, så posisjonen ikke følges hele tiden.
