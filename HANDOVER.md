@@ -282,6 +282,12 @@ lokalt med egen CARTO-nøkkel (se punkt 9).
 
 ---
 
+Felles med reisekartet: kartbevegelse, dra-bar infoboks, «Liste ↓ / Kart ↑», søkekryss, språk, mørk modus, offline og
+publisering skal oppføre seg likt i begge appene. Lista står i reiseplanleggingens HANDOVER.md, «Felles med byguidene».
+Endres en av dem her, endre den der også.
+
+---
+
 ## 7. Publisering — GitHub Pages
 
 Repoet `paalstampe/byguider` publiseres med Settings → Pages → Deploy from a branch →
