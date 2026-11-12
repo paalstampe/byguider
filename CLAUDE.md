@@ -71,6 +71,8 @@ Store filer (app.js ~100 KB, data/london.md ~90 KB, data/*-geometri.geojson): fi
 - Én endring per gren. Små, selvstendige commits.
 
 ## Teknikk (kort — detaljer i HANDOVER.md)
+- Løsninger som deles med reisekartet (kartbevegelse, søk, infoboks, språk, offline m.m.) skal være like:
+  se «Felles med byguidene» i reiseplanleggingens HANDOVER.md, og endre begge.
 - Ingen byggesteg, ingen rammeverk, ingen npm. Statiske filer: index.html, app.js, style.css, byer.json.
 - MapLibre GL JS v5 fra unpkg, CARTO Voyager vektorstil omfarget til papirpaletten (KARTPALETT/STILREGLER).
 - CARTO_KEY i app.js velges etter vertsnavn: én nøkkel for stam.pe, *.stam.pe og paalstampe.github.io,
