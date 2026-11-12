@@ -539,20 +539,21 @@ Hvert trinn skal kunne committes for seg og fungere alene.
 - I felt (PR #79–#81, 31.10.): «Veibeskrivelse» i infoboksen (`veiLenke`: Google Maps dir-URL med
   `destination_place_id`, walking eller transit for `utenfor`, startpunktet for gåturer). «Nær meg» i
   `filter-status` (`settNaerMeg`): watchPosition, sortering etter `avstandTil` (haversine; linjer: nærmeste
-  rutepunkt), `avstandTekst` med gangtid (luftlinje × 1,25, 80 m/min), egen prikk. `aapneHer`: har siden
-  allerede tillatelse og du er innenfor utsnittet med alle stedene (± 0,02°), trykkes knappen for egen posisjon.
+  rutepunkt), `avstandTekst` med gangtid (luftlinje × 1,25, 80 m/min), egen prikk. `sjekkPosisjon`: har siden
+  allerede tillatelse og du er innenfor utsnittet med alle stedene (`byRamme`, ± 0,02°), trykkes knappen for egen posisjon.
+  Alle posisjoner (oppstart, posisjonsknappen, «Nær meg») går gjennom `posisjonFunnet`: er du utenfor byen,
+  settes `state.utenforByen`, og «Nær meg» slås av og skjules (nov. 2026). Uten kjent posisjon vises den.
   Safari på iPhone avviser `permissions.query` eller svarer «prompt» selv etter ja, så `localStorage`-nøkkelen
   `byguider-posisjon` husker at posisjonen har virket (PR #82). Oppslaget har ingen tidsfrist: Chrome teller tiden
   spørsmålet om tillatelse står fremme; har du flyttet kartet selv før posisjonen kommer, blir det stående (PR #91). Lenke til ett sted (PR #83): `?sted=<stedSlug(navn)>`
   (`aapneStedFraAdresse`, zoomer som «Zoom inn»); «Del» i infoboksen bruker `navigator.share` på berøringsskjerm,
   ellers utklippstavlen.
 - Åpningstider (grenen `apningstider`, nov. 2026): `lesAapent` gjør `åpent:` om til sju dager med intervaller i
-  minutter. Filterblokken «Åpent: Nå · Søndag · Mandag» (`state.aapent`: null, 'naa', 6 eller 0; da er mange stengt) vises bare når én kategori er valgt
+  minutter. Filterblokken «Åpent: Søndag · Mandag» (`state.aapent`: null, 6 eller 0; da er mange stengt; «Nå» ble fjernet nov. 2026) vises bare når én kategori er valgt
   og minst 80 % av stedene i den har åpningstider (`aapentMulig`); byttes kategorien til en uten, slås filteret av. «Kun favoritter» og «Nær meg» står i egen blokk «Vis» under. Den skjuler ingenting: steder vi vet er stengt (`erStengt`), får `stengt: true` på stedet, regnet ut én gang
   per opptegning (`oppdaterStengte`; kartlagene bruker `TONET` = `icon-opacity` 0,3 og `SORTERING`), tones ned i lista (`.oppslag--stengt`, «Stengt søndag»
-  i metalinjen) og legges sist i hver sone. Steder uten åpningstider vises som vanlig. «Nå» regner i byens tid
-  (`tidssone: Europe/Oslo` i frontmatter, ellers enhetens klokke; `byTid`), tar med gårsdagens intervaller som går
-  over midnatt og tegnes på nytt hvert minutt. Med Søndag/Mandag viser infoboksen den dagen i stedet for i dag. Klynger der alle stedene er stengt,
+  i metalinjen) og legges sist i hver sone. Steder uten åpningstider vises som vanlig. «I dag» i infoboksen regner i byens tid
+  (`tidssone: Europe/Oslo` i frontmatter, ellers enhetens klokke; `byTid`). Med Søndag/Mandag viser infoboksen den dagen i stedet for i dag. Klynger der alle stedene er stengt,
   tones ned (`clusterProperties.aapne`, `KLYNGE_TONET`). Infoboksen viser «I dag 17–23» og uka slått sammen (`ukeTekst`).
 - Neste: data. Pål kommer med navneendringer (som Marylebone High Street → Marylebone Village)
   og nye steder. Områdeskisser: alle nabolag i London og New York er tegnet (London 5.10.,

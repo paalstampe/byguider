@@ -14,7 +14,7 @@ Sist oppdatert: 11. november 2026. Historikk per dato står i ARKIV.md.
   flyttbar infoboks, gåturer, ønskeliste, «Nær meg», «Veibeskrivelse», «Del» med delingsside per sted, offline-lagring,
   norsk og engelsk. Mobil, liggende og nettbrett er testet (også i iOS-simulatoren).
 - Arbeidet nå er data: nye steder, favoritter, notater, nabolagsomriss og åpningstider.
-- Åpningstider: alle restauranter i Oslo, London og Nice har `åpent:` og `åpent-kilde:` (filteret «Åpent: Nå · Søndag · Mandag»,
+- Åpningstider: alle restauranter i Oslo, London og Nice har `åpent:` og `åpent-kilde:` (filteret «Åpent: Søndag · Mandag»,
   vises bare når valgt kategori har tider). `tidssone:` i frontmatter.
 - Skyjobber: månedlig sjekk (1. hver måned kl. 06; stengte steder og nettsider, https://claude.ai/code/routines/trig_01DvX7PTCcLcRy2QmYL2Jrcj)
   og halvårlig tidssjekk (15.3. og 15.9.; `.claude/googlesjekk.py --tider`, https://claude.ai/code/routines/trig_012amhPG41tyfMW5ic5vLbG6).
