@@ -13,6 +13,8 @@ Avslutt arbeidsøkten:
      gjeldende tilstand, ikke en dagbok. Er filen større, flytt datert historikk, ferdige punkter og eldre beslutninger
      (eldst først) til ARKIV.md (lag den ved behov, merk den `export-ignore` i `.gitattributes` hvis repoet har den fila).
 2. Hvis noe varig er endret (struktur, konvensjoner, kommandoer, viktige beslutninger), oppdater CLAUDE.md. Hold den konsis (maks rundt 150 linjer).
-3. Se tilbake på økten: var noe tungvint, gjentatt manuelt eller uklart i reglene? Foreslå i så fall en konkret forbedring (i prosjektets CLAUDE.md eller i claude-oppsett). Gjør endringen bare hvis brukeren sier ja.
+3. Se tilbake på økten: var noe tungvint, gjentatt manuelt eller uklart i reglene? Følg regelen om forbedringer i den globale CLAUDE.md:
+   er forbedringen opplagt og liten, gjennomfør den selv (i prosjektets CLAUDE.md eller i claude-oppsett) og nevn den i én linje;
+   er den usikker, omfattende eller et spørsmål om smak, foreslå den i én linje i stedet.
 4. Commit med en beskrivende melding og push.
 5. Oppsummer kort hva som ble endret i NOTES.md og CLAUDE.md, og eventuelle forbedringsforslag.
