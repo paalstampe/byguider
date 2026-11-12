@@ -45,8 +45,8 @@ Store filer (app.js ~100 KB, data/london.md ~90 KB, data/*-geometri.geojson): fi
 - iOS-simulatoren (Xcode er installert på Macen) brukes bare når det trengs, dvs. for ting bare ekte iOS Safari viser:
   notch/Dynamic Island, safe area, Safaris verktøylinje, selve rotasjonen, tekstforstørrelse og «Legg til på Hjem-skjerm».
   Åpne URL i Safari via simulatorverktøyet. Ikke i skyøkter.
-- UI-endringer: kjør axe-core i nettleserpanelet før fletting (last https://cdnjs.cloudflare.com/ajax/libs/axe-core/4.10.2/axe.min.js
-  med javascript_tool, så `axe.run()`), i lys og mørk modus. Rett brudd; kontrast som krever nye farger tas med Pål.
+- UI-endringer: kjør `.claude/axe.sh <url> [bredde høyde]` før fletting (axe-core via Playwright, lys og mørk modus;
+  f.eks. http://localhost:8000/ i 1300 900 og 390 844). Rett brudd; kontrast som krever nye farger tas med Pål.
 - Før fletting av kodeendringer: kjør /code-review (standardnivå) og /simplify på grenen selv, uten at Pål ber om det.
   Rett funnene som holder, nevn kort i PR-beskrivelsen hva som ble funnet og rettet. Gjelder ikke rene data- og tekstendringer.
 - Fletting: Kan du selv verifisere at alt er i orden (skjermbilder mobil + desktop, ingen JS-feil),
