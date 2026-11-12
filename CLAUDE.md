@@ -39,6 +39,9 @@ Store filer (app.js ~100 KB, data/london.md ~90 KB, data/*-geometri.geojson): fi
   på Macen kreves Node og Playwright (installasjon øverst i skriptet).
 - Layout, kartutsnitt og zoom på mobil (stående og liggende): sjekk i nettleserpanelet med resize_window
   (390×844 og 844×390) eller med Playwright. Det er raskere og holder for det meste.
+- Posisjon («Nær meg», posisjonsknappen) testes i nettleserpanelet med falsk posisjon: last siden på nytt, og kjør så
+  `Object.defineProperty(navigator, 'geolocation', { value: { watchPosition: ok => (setTimeout(() => ok({ coords: { latitude, longitude } }), 50), 1), getCurrentPosition: ok => ok({ coords: { latitude, longitude } }), clearWatch() {} } })`
+  før du trykker. Går bare én gang per lasting; ikke vent på ekte getCurrentPosition (panelet svarer ikke). Fjern `byguider-posisjon` fra localStorage etterpå.
 - iOS-simulatoren (Xcode er installert på Macen) brukes bare når det trengs, dvs. for ting bare ekte iOS Safari viser:
   notch/Dynamic Island, safe area, Safaris verktøylinje, selve rotasjonen, tekstforstørrelse og «Legg til på Hjem-skjerm».
   Åpne URL i Safari via simulatorverktøyet. Ikke i skyøkter.
