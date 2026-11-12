@@ -6,8 +6,10 @@ Eldre status per dato og hele beslutningsloggen ligger i ARKIV.md (lastes ikke a
 
 ## Status nå
 
-Sist oppdatert: 12. november 2026. Historikk per dato står i ARKIV.md.
+Sist oppdatert: 13. november 2026. Historikk per dato står i ARKIV.md.
 
+- 13.11.: `.claude/axe.sh <url> [bredde høyde] [js=<kode>]` kjører axe-core via Playwright i lys og mørk modus (felles fil fra
+  claude-oppsett, synkes som hookene). Erstatter axe i nettleserpanelet, som auto-modus avviste. Ingen brudd ved første kjøring.
 - Live på https://stam.pe/byguider/ med seks byer: London (276 oppføringer, 115 på ønskelista), Oslo (132, 23), New York (94, 2),
   Nice (74, 3), Tokyo (86, 7), Bangkok (40, 4). Skjulte byer (`"skjult": true`): Berlin, Mexico City, Kairo og Luxor.
 - Appen er i hovedsak ferdig: MapLibre med papirpalett og mørk modus, nabolag med presise omriss, kjerne og gater,
