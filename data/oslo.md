@@ -945,9 +945,9 @@ New. Bygdøy allé 9A.
 - åpent: ti–to 14–23, fr 14–01, lø 12–01
 - åpent-kilde: Google, nov. 2026
 Grünerløkka
-Ansjostoast er et must, lang vinliste, trangt. Fra Aftenpostens dateguide. Thorvald Meyers gate 30.
+Ansjostoast er et must, lang vinliste, trangt. Thorvald Meyers gate 30.
 - en: Grünerløkka
-Anchovy toast is a must, long wine list, cramped. From Aftenposten’s date guide. Thorvald Meyers gate 30.
+Anchovy toast is a must, long wine list, cramped. Thorvald Meyers gate 30.
 
 ### Happy Ending
 - sted: 59.91931, 10.75121
@@ -957,9 +957,9 @@ Anchovy toast is a must, long wine list, cramped. From Aftenposten’s date guid
 - åpent: ti 17–23, on–to 17–01, fr–lø 17–02
 - åpent-kilde: Google, nov. 2026
 Fredensborg
-Kebab og deleretter, shawarma med lam eller hallomø. Fra Aftenpostens dateguide. Rosteds gate 1.
+Kebab og deleretter, shawarma med lam eller hallomø. Rosteds gate 1.
 - en: Fredensborg
-Kebab and sharing plates, shawarma with lamb or hallomø. From Aftenposten’s date guide. Rosteds gate 1.
+Kebab and sharing plates, shawarma with lamb or hallomø. Rosteds gate 1.
 
 ### Bar Lupo
 - sted: 59.92215, 10.75748
@@ -969,9 +969,9 @@ Kebab and sharing plates, shawarma with lamb or hallomø. From Aftenposten’s d
 - åpent: ti–to 16–23, fr 16–00, lø 14–00, sø 16–22
 - åpent-kilde: Google, nov. 2026
 Grünerløkka
-Små- og hovedretter og gode drinker. Begynn med focacciaen og stracciatellaen. Fra Aftenpostens dateguide. Olaf Ryes plass 3.
+Små- og hovedretter og gode drinker. Begynn med focacciaen og stracciatellaen. Olaf Ryes plass 3.
 - en: Grünerløkka
-Small and main plates and good drinks. Start with the focaccia and the stracciatella. From Aftenposten’s date guide. Olaf Ryes plass 3.
+Small and main plates and good drinks. Start with the focaccia and the stracciatella. Olaf Ryes plass 3.
 
 ## Kaféer
 
@@ -1281,9 +1281,9 @@ Wine bar. Sinsenveien 6.
 - åpent: on–to 18–23, fr–lø 18–00
 - åpent-kilde: Google, nov. 2026
 St. Hanshaugen
-Vinbar med småretter og rødt lys, vegg i vegg med Tranen. Fra Aftenpostens dateguide. Waldemar Thranes gate 70.
+Vinbar med småretter og rødt lys, vegg i vegg med Tranen. Waldemar Thranes gate 70.
 - en: St. Hanshaugen
-Wine bar with small plates and red lighting, next door to Tranen. From Aftenposten’s date guide. Waldemar Thranes gate 70.
+Wine bar with small plates and red lighting, next door to Tranen. Waldemar Thranes gate 70.
 
 ### Radegast
 - sted: 59.92210, 10.75393
@@ -1293,9 +1293,9 @@ Wine bar with small plates and red lighting, next door to Tranen. From Aftenpost
 - åpent: ti–to 17–00, fr 16–01, lø 13–01
 - åpent-kilde: Google, nov. 2026
 Grünerløkka
-Vinbar i Nedre Foss Gård, med ost og spekemat. Fra Aftenpostens dateguide. Nordre gate 2.
+Vinbar i Nedre Foss Gård, med ost og spekemat. Nordre gate 2.
 - en: Grünerløkka
-Wine bar in Nedre Foss Gård, with cheese and charcuterie. From Aftenposten’s date guide. Nordre gate 2.
+Wine bar in Nedre Foss Gård, with cheese and charcuterie. Nordre gate 2.
 
 ### Becco
 - sted: 59.91713, 10.73820
@@ -1305,21 +1305,20 @@ Wine bar in Nedre Foss Gård, with cheese and charcuterie. From Aftenposten’s 
 - åpent: ma 16–22, ti–to 16–01, fr–lø 16–03
 - åpent-kilde: Google, nov. 2026
 Tullinløkka
-Vinbar med snacks og DJ om kvelden. Fra Aftenpostens dateguide. Kristian Augusts gate 11.
+Vinbar med snacks og DJ om kvelden. Kristian Augusts gate 11.
 - en: Tullinløkka
-Wine bar with snacks and a DJ in the evenings. From Aftenposten’s date guide. Kristian Augusts gate 11.
+Wine bar with snacks and a DJ in the evenings. Kristian Augusts gate 11.
 
 ### Frances
 - sted: 59.91512, 10.72325
 - google: ChIJbztDhN9tQUYRLR-XMgaSe1s
 - nettside: https://www.frances.no/
-- status: onskeliste
 - åpent: ma 07.30–15, ti–fr 07.30–00, lø 12–00
 - åpent-kilde: Google, nov. 2026
 Solli plass
-Musserende vin og Midtøsten-inspirert mat. Fra Aftenpostens dateguide. Henrik Ibsens gate 48.
+Musserende vin og Midtøsten-inspirert mat. Henrik Ibsens gate 48.
 - en: Solli plass
-Sparkling wine and Middle Eastern–inspired food. From Aftenposten’s date guide. Henrik Ibsens gate 48.
+Sparkling wine and Middle Eastern–inspired food. Henrik Ibsens gate 48.
 
 ### Makulator
 - sted: 59.91619, 10.73971
@@ -1328,9 +1327,9 @@ Sparkling wine and Middle Eastern–inspired food. From Aftenposten’s date gui
 - åpent: ma–lø 15–03.30
 - åpent-kilde: Google, nov. 2026
 Tullinløkka
-Dempet belysning og stor bakgård. Fra Aftenpostens dateguide. Kristian Augusts gate 7A.
+Dempet belysning og stor bakgård. Kristian Augusts gate 7A.
 - en: Tullinløkka
-Dim lighting and a big back courtyard. From Aftenposten’s date guide. Kristian Augusts gate 7A.
+Dim lighting and a big back courtyard. Kristian Augusts gate 7A.
 
 ### Meyers
 - sted: 59.92694, 10.75897
@@ -1340,9 +1339,9 @@ Dim lighting and a big back courtyard. From Aftenposten’s date guide. Kristian
 - åpent: ma–ti 15–01, on–to 15–02, fr 14–03, lø 13–03, sø 14–01
 - åpent-kilde: Google, nov. 2026
 Grünerløkka
-Cocktails, vinyl og Bloody Meyers. Fra Aftenpostens dateguide. Thorvald Meyers gate 25.
+Cocktails, vinyl og Bloody Meyers. Thorvald Meyers gate 25.
 - en: Grünerløkka
-Cocktails, vinyl and the Bloody Meyers. From Aftenposten’s date guide. Thorvald Meyers gate 25.
+Cocktails, vinyl and the Bloody Meyers. Thorvald Meyers gate 25.
 
 ### Perla
 - sted: 59.92261, 10.76952
@@ -1352,9 +1351,9 @@ Cocktails, vinyl and the Bloody Meyers. From Aftenposten’s date guide. Thorval
 - åpent: ma–to 17–00.30, fr–lø 15–00.30, sø 17–00.30
 - åpent-kilde: Google, nov. 2026
 Rodeløkka
-Oslos første mezcalbar, ofte DJ i helgene. Fra Aftenpostens dateguide. Helgesens gate 66.
+Oslos første mezcalbar, ofte DJ i helgene. Helgesens gate 66.
 - en: Rodeløkka
-Oslo’s first mezcal bar, often a DJ at weekends. From Aftenposten’s date guide. Helgesens gate 66.
+Oslo’s first mezcal bar, often a DJ at weekends. Helgesens gate 66.
 
 ### Bruun-Larsen
 - sted: 59.93317, 10.76704
