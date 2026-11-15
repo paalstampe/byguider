@@ -25,6 +25,7 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
   - google: <Place ID eller lenke fra Google Maps>   gjør at «Google Maps» i infoboksen viser stedets side
                                 (uten: søk på navnet ved koordinaten). Claude kan hente Place ID-er.
   - nettside: https://…          stedets egen side — gir lenken «Nettside» i infoboksen
+  - booking: https://…           bookingsiden (bordbestilling) — gir lenken «Bestill bord» etter «Nettside»
   - les: Financial Times | Tittel | https://…   artikkel: «Artikkel fra Financial Times: Tittel» sist i infoboksen. Kan gjentas.
   - status: onskeliste          ønskeliste: ikke besøkt ennå. Vises nederst i lista og som eget
                                 kartlag (av til man slår det på). ★ = førstevalg.
@@ -80,6 +81,7 @@ Tidligere hesteveddeløpsbane, nå en oval allé (Ámsterdam) rundt Parque Méxi
 - sted: 19.41958, -99.16715
 - google: ChIJez8vvy__0YURP0rx5WhEig4
 - nettside: https://www.contramar.com.mx/
+- booking: https://www.opentable.com.mx/booking/restref/availability?rid=1013491
 Roma Norte
 
 Gabriela Cámaras sjømatinstitusjon, åpent fra lunsj til tidlig kveld: tunfisktostadas og pescado a la talla (rød og grønn). Lang lunsj er poenget. Fra Påls liste. Durango 200.
@@ -92,6 +94,7 @@ Gabriela Cámara’s seafood institution, open from lunch until early evening: t
 - sted: 19.41971, -99.15989
 - google: ChIJiyiWezr_0YURETdOKp2oBrc
 - nettside: https://www.blancocolimamx.com/es
+- booking: https://www.opentable.com.mx/booking/restref/availability?rid=190744
 Roma Norte
 
 Restaurant i en hvit herskapsvilla fra tidlig 1900-tall, med høye rom og gårdsrom. Fra Påls liste. Colima 168.
@@ -104,6 +107,7 @@ Restaurant in a white early-20th-century mansion, with high-ceilinged rooms and 
 - sted: 19.41978, -99.15980
 - google: ChIJdSGAWgP_0YURwNtY7rftf2E
 - nettside: https://rosetta.com.mx/
+- booking: https://rosetta.com.mx/reservaciones
 Roma Norte
 
 Elena Reygadas’ restaurant i en gammel villa, med planter og høyt under taket; meksikanske råvarer og italiensk teknikk. Kokkeeid. Colima 166.
@@ -116,6 +120,7 @@ Elena Reygadas’ restaurant in an old villa, with plants and high ceilings; Mex
 - sted: 19.41895, -99.15808
 - google: ChIJdw0B4zv_0YURK8xSHYwyp2E
 - nettside: https://www.maximobistrot.com.mx/
+- booking: https://www.maximobistrot.com.mx/reservaciones
 Roma Norte
 
 Eduardo Garcías bistro, kokkeeid, med meny som skifter etter dagens råvarer. Álvaro Obregón 65 Bis.
@@ -128,6 +133,7 @@ Eduardo García’s bistro, chef-owned, with a menu that changes with the day’
 - sted: 19.42188, -99.16036
 - google: ChIJeaR76zD_0YURdkIaawq5AaQ
 - nettside: https://www.sartoria.mx/
+- booking: https://www.opentable.com.mx/booking/restref/availability?rid=733087
 Roma Norte
 
 Italiensk med håndlaget pasta. Orizaba 42.
@@ -187,6 +193,7 @@ Sinaloa-style seafood on the pavement, with queues at weekends. Zacatecas 172.
 - sted: 19.41229, -99.16027
 - google: ChIJL3DmDL__0YURybFJVjK2_Wc
 - nettside: https://www.lina.mx/
+- booking: https://www.opentable.com.mx/r/lina-reservations-ciudad-de-mexico?restref=1294087&lang=es-MX
 Roma Norte
 
 Fra Påls liste (booket forrige gang). Yucatán 147.
@@ -199,6 +206,7 @@ From Pål’s list (booked last time). Yucatán 147.
 - sted: 19.41471, -99.16352
 - google: ChIJczuYuEr_0YUR-7w2T6p0MKc
 - nettside: https://www.santohabanero.com/
+- booking: https://www.santohabanero.com/reservar
 Roma Norte
 
 Mat fra Yucatán. Fra Påls liste. Yucatán 169.
@@ -224,6 +232,7 @@ No menu: the kitchen cooks whatever suits the day’s corn and produce, served a
 - sted: 19.41867, -99.17519
 - google: ChIJQ0Jj9Nr_0YURFpdrL-X3hdE
 - nettside: http://www.hugoelwinebar.com/
+- booking: https://www.opentable.com.mx/booking/restref/availability?rid=1179901
 Roma Norte
 
 Vinbar med mat. Fra Påls liste. Veracruz 38.
@@ -236,6 +245,7 @@ Wine bar with food. From Pål’s list. Veracruz 38.
 - sted: 19.41796, -99.17523
 - google: ChIJc_5HvUX_0YURuNKrxLPQKEU
 - nettside: https://www.lardo.com.mx/
+- booking: https://www.lardo.com.mx/reservaciones.html
 Condesa
 
 Elena Reygadas’ middelhavsbistro på hjørnet, fra frokost til kveld. Agustín Melgar 6.
@@ -260,6 +270,7 @@ Restaurant and wine bar. From Pål’s list. Antonio Sola 26.
 - sted: 19.41486, -99.17820
 - google: ChIJXbwmJ2b40YURmtGpCDJwN9Q
 - nettside: http://www.maizajo.com/
+- booking: http://www.maizajo.com/pages/reserva-restaurante
 Condesa
 
 Tortillería med egen kvern, taqueria i første etasje og terrasse over. Fra Påls liste (booket forrige gang). Fernando Montes de Oca 113.
@@ -272,6 +283,7 @@ Tortillería with its own mill, a taquería on the ground floor and a terrace ab
 - sted: 19.40932, -99.17959
 - google: ChIJ1WZ53iX_0YURMkdgcdGY2kw
 - nettside: https://gabarestaurante.com/
+- booking: https://gabarestaurante.com/reserva
 Condesa
 
 Fra Påls liste (booket forrige gang). Mazatlán 190.
@@ -284,6 +296,7 @@ From Pål’s list (booked last time). Mazatlán 190.
 - sted: 19.40966, -99.16985
 - google: ChIJzdbHQUD_0YUR1Vqx8mGkQsk
 - nettside: http://www.merotoro.mx/
+- booking: https://merotoro.meitre.com/
 Condesa
 
 Jair Téllez’ restaurant med mat fra Baja California, ved Parque México. Fra Påls liste. Ámsterdam 204.
@@ -308,6 +321,7 @@ Small taquería with tacos árabes and doner. From Pål’s list. Campeche 440.
 - sted: 19.40875, -99.16541
 - google: ChIJEcBouVr_0YURj4yco-UwNco
 - nettside: http://www.voraz.com/
+- booking: https://www.voraz.com/booking/
 Roma Sur
 
 Meksikansk restaurant og bar. Fra Påls liste (booket forrige gang). Aguascalientes 93.
@@ -599,6 +613,7 @@ Classic Mexican since 1969, best at breakfast: hot chocolate, conchas with nata 
 - sted: 19.43589, -99.13759
 - google: ChIJ___D_iz50YURnlo8sopE6ss
 - nettside: http://cafedetacuba.mx/
+- booking: https://www.covermanager.com/reservation/module_restaurant/cafe-de-tacuba/spanish
 Centro Histórico
 
 Siden 1912, i en kolonibygning med fliser, malerier og hvelvede tak. Mer for rommet enn maten. Tacuba 28.
@@ -611,6 +626,7 @@ Since 1912, in a colonial building with tiles, paintings and vaulted ceilings. M
 - sted: 19.43302, -99.14896
 - google: ChIJmWtRD1z_0YURSJiNhdfktTY
 - nettside: https://www.masalaymaiz.com/
+- booking: https://www.exploretock.com/masala-y-maiz-mexico-city/
 Centro Histórico
 
 Kokkeeid restaurant som blander meksikansk, indisk og østafrikansk kjøkken. Artículo 123 116.
@@ -931,6 +947,7 @@ Lite, stille boligstrøk sør for Chapultepec-parken, med gallerier som Kurimanz
 - sted: 19.43238, -99.19481
 - google: ChIJWZ2zdav40YURFvsU_rU3uaE
 - nettside: https://pujol.com.mx/
+- booking: https://www.opentable.com.mx/r/pujol-reservations-ciudad-de-mexico?restref=1545187
 Polanco
 
 Enrique Olveras restaurant, Mexicos mest kjente: mole madre og taco-omakase ved disken. Bestill lenge før. Tennyson 133.
@@ -943,6 +960,7 @@ Enrique Olvera’s restaurant, Mexico’s best known: mole madre and the taco om
 - sted: 19.43084, -99.19171
 - google: ChIJbS8EZf8B0oURwwD8B0MpqK0
 - nettside: http://www.quintonil.com/
+- booking: https://www.exploretock.com/quintonil
 Polanco
 
 Jorge Vallejo og Alejandra Floress restaurant, kokkeeid, med grønnsaker og urter fra egne leverandører. Isaac Newton 55.
@@ -966,6 +984,7 @@ Tiny spot for cochinita pibil (Yucatán pork), in tacos and panuchos. Emilio Cas
 - sted: 19.43741, -99.18416
 - google: ChIJYds7cuD50YURyD2wYfNGCDs
 - nettside: https://siempresiembra.com.mx/
+- booking: https://www.covermanager.com/reservation/module_restaurant/siembracomedor-cdmx/spanish
 Polanco
 
 Restauranten til Siembra Tortillería, med mais i sentrum. Fra Påls liste (booket forrige gang). Ejército Nacional 314.
@@ -978,6 +997,7 @@ The restaurant from Siembra Tortillería, with corn at its heart. From Pål’s 
 - sted: 19.42551, -99.17730
 - google: ChIJyfmf303_0YURtWylvB170Bg
 - nettside: http://lospanchos.mx/
+- booking: https://www.opentable.com/r/los-panchos-restaurant-ciudad-de-mexico
 Anzures
 
 Gammel familierestaurant og klassiker for carnitas. Fra Påls liste. Tolstoi 9.

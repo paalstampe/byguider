@@ -27,6 +27,7 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
   - google: <Place ID eller lenke fra Google Maps>   gjør at «Google Maps» i infoboksen viser stedets side
                                 (uten: søk på navnet ved koordinaten). Claude kan hente Place ID-er.
   - nettside: https://…          stedets egen side — gir lenken «Nettside» i infoboksen
+  - booking: https://…           bookingsiden (bordbestilling) — gir lenken «Bestill bord» etter «Nettside»
   - les: Financial Times | Tittel | https://…   artikkel: «Artikkel fra Financial Times: Tittel» sist i infoboksen. Kan gjentas.
   - status: onskeliste          ønskeliste: ikke besøkt ennå. Vises nederst i lista og som eget
                                 kartlag (av til man slår det på). ★ = førstevalg.
@@ -129,6 +130,7 @@ Small 18th-century enclave of narrow lanes, pubs and small restaurants.
 - sted: 51.52081, -0.15269
 - google: ChIJpyhiLAAbdkgRGUaeAOxxRLc
 - nettside: https://litamarylebone.com/
+- booking: https://www.sevenrooms.com/explore/litamarylebone/reservations/create/search/
 - åpent: ma 12–14.30 + 18–21.30, ti–lø 12–14.30 + 18–22, sø 12.30–15 + 18–21.30
 - åpent-kilde: nettside, nov. 2026
 Marylebone
@@ -143,6 +145,7 @@ Mediterranean, 7–9 Paddington Street.
 - sted: 51.51759, -0.14323
 - google: ChIJMZ-GUpAbdkgRFXrN8dsAPUM
 - nettside: https://www.saleepepe.co.uk/sale-e-pepe-mare-the-langham-london
+- booking: https://www.opentable.co.uk/r/sale-e-pepe-mare-reservations-london?restref=423816&lang=en-GB
 - åpent: ma–lø 12–15 + 17–01, sø 12–15 + 17–00
 - åpent-kilde: nettside, nov. 2026
 Marylebone
@@ -157,6 +160,7 @@ Italian seafood at The Langham, 1c Portland Place.
 - sted: 51.51842, -0.15479
 - google: ChIJORrfka8bdkgRKELOG6g3k0Q
 - nettside: https://www.thehartw1.com/
+- booking: https://www.sevenrooms.com/explore/thehartuk/reservations/create/search/
 - åpent: ma–to 12–23.30, fr–lø 12–00, sø 12–22.30
 - åpent-kilde: nettside, nov. 2026
 Marylebone
@@ -171,6 +175,7 @@ Pub and restaurant, 56 Blandford Street.
 - sted: 51.51715, -0.15153
 - google: ChIJVVVpjNIadkgR3hUrqE-jxDA
 - nettside: https://www.nina.london/
+- booking: https://www.nina.london/reservations
 - åpent: ma–lø 12–15.30 + 18–22.30, sø 12–15.30 + 18–21.30
 - åpent-kilde: Google, nov. 2026
 Marylebone
@@ -185,6 +190,7 @@ Italian in a basement, 18 Thayer Street.
 - sted: 51.51830, -0.15307
 - google: ChIJ8fHhiM0adkgR5dxGPhTVlvA
 - nettside: https://trishnalondon.com/
+- booking: https://www.sevenrooms.com/explore/trishna/reservations/create/search/
 - åpent: ma 17–22.15, ti–lø 12–14.30 + 17–22.15, sø 12–14.30 + 17–21.45
 - åpent-kilde: nettside, nov. 2026
 Marylebone
@@ -199,6 +205,7 @@ Indian seafood, 15–17 Blandford Street.
 - sted: 51.51845, -0.15199
 - google: ChIJb46nPwAbdkgRe8rg5yiLYsA
 - nettside: https://josephinebistro.com/
+- booking: https://www.sevenrooms.com/explore/josephinebistro/reservations/create/search/
 - åpent: ma–fr 12–14.30 + 17.30–21.30, lø–sø 12–21.30
 - åpent-kilde: nettside, nov. 2026
 Marylebone
@@ -213,6 +220,7 @@ Claude Bosi’s French bistro, 6–8 Blandford Street.
 - sted: 51.51476, -0.15752
 - google: ChIJvfnOCgUbdkgR3FvbixhS2cw
 - nettside: https://kolrestaurant.com/
+- booking: https://kolrestaurant.com/reservations/
 - åpent: ti 17.30–00, on–lø 12–00
 - åpent-kilde: Google, nov. 2026
 Marylebone
@@ -241,6 +249,7 @@ Indian, 42 Albemarle Street.
 - sted: 51.51048, -0.14457
 - google: ChIJT9u6kt0FdkgR4bjKKXEeIbg
 - nettside: https://www.lilibetsrestaurant.com/
+- booking: https://www.sevenrooms.com/reservations/lilibets
 - åpent: ma–ti 12–15 + 17.30–21.30, on–fr 12–15 + 17.30–22, lø 12–15.30 + 17.30–22, sø 12–15.30 + 17.30–21.30
 - åpent-kilde: nettside, nov. 2026
 Mayfair
@@ -255,6 +264,7 @@ Seafood, 17 Bruton Street.
 - sted: 51.50990, -0.15083
 - google: ChIJcf7z3i0FdkgRp8viwzBRRn8
 - nettside: https://scotts-mayfair.com/
+- booking: https://www.opentable.co.uk/booking/restref/availability?rid=124548
 - åpent: ma–on 12–21.15, to–lø 12–22, sø 12–21
 - åpent-kilde: nettside, nov. 2026
 Mayfair
@@ -269,6 +279,7 @@ Seafood, 20–22 Mount Street.
 - sted: 51.50971, -0.15159
 - google: ChIJd8Vf0-UFdkgRbSaCIpLtUXo
 - nettside: https://mountstrestaurant.com/
+- booking: https://www.sevenrooms.com/reservations/mountstrestaurant
 - åpent: ma–fr 07.30–10.30 + 12–15.30 + 17.30–22, lø 09–10.45 + 12.30–15.30 + 17.30–22, sø 09–10.45 + 12.30–16
 - åpent-kilde: nettside, nov. 2026
 Mayfair
@@ -297,6 +308,7 @@ Wine bar and restaurant in Shepherd Market, 5 Trebeck Street.
 - sted: 51.51012, -0.15507
 - google: ChIJtVfNANQFdkgRIpzEN8Ww9Jw
 - nettside: https://manarestaurants.com/
+- booking: https://www.opentable.co.uk/booking/restref/availability?rid=458865
 - åpent: ma–fr 18–01.30, lø 12–01.30, sø 12–00.30
 - åpent-kilde: nettside, nov. 2026
 Mayfair
@@ -311,6 +323,7 @@ Japanese, 30 Upper Grosvenor Street.
 - sted: 51.50889, -0.14300
 - google: ChIJxdsYFy0FdkgRho04Glik8uI
 - nettside: https://thedoverrestaurant.com/
+- booking: https://www.sevenrooms.com/reservations/thedoverrestaurant
 - åpent: ma 17.30–, ti–lø 12–16 + 17.30–
 - åpent-kilde: nettside, nov. 2026
 Mayfair
@@ -325,6 +338,7 @@ Italian-American, 33 Dover Street.
 - sted: 51.50652, -0.14052
 - google: ChIJjXwvJ10FdkgRTMUyHZ9BZIo
 - nettside: https://www.arlington.london/
+- booking: https://www.sevenrooms.com/reservations/arlingtonrestaurant
 - åpent: ma–lø 11.30–15 + 17–23, sø 11.30–15 + 17–22
 - åpent-kilde: nettside, nov. 2026
 St James's
@@ -339,6 +353,7 @@ A classic at 20 Arlington Street (the old Le Caprice).
 - sted: 51.50801, -0.13829
 - google: ChIJgyJHWdYEdkgRX_4TkG1PT9o
 - nettside: https://45jermynst.com/
+- booking: https://www.sevenrooms.com/explore/45jermynst/reservations/create/search/
 - åpent: ma–fr 07.30–21.45, lø 08–21.45, sø 08–15.45
 - åpent-kilde: nettside, nov. 2026
 St James's
@@ -353,6 +368,7 @@ Next to Fortnum & Mason, 45 Jermyn Street.
 - sted: 51.51177, -0.12513
 - google: ChIJn0cIykwFdkgRkJL_xSjcqYI
 - nettside: https://trattoriaburro.com/
+- booking: https://www.sevenrooms.com/explore/burro/reservations/create/search/
 - åpent: ma–lø 12.30–15 + 17.30–22.30, sø 12.30–15 + 17.30–21.30
 - åpent-kilde: nettside, nov. 2026
 Covent Garden
@@ -381,6 +397,7 @@ Italian, 22–24 Great Portland Street.
 - sted: 51.51972, -0.15229
 - google: ChIJWTIkDggDdkgRwo3fbxXdVkc
 - nettside: https://www.kuducollective.com/
+- booking: https://www.sevenrooms.com/explore/kudumarylebone/reservations/create/search/
 - status: onskeliste
 - åpent: ma–fr 12–15 + 18–22, lø 12–22, sø 12–21
 - åpent-kilde: nettside, nov. 2026
@@ -396,6 +413,7 @@ South African, 7 Moxon Street.
 - sted: 51.51513, -0.16110
 - google: ChIJf1zYBOYbdkgRpisa6lDN5es
 - nettside: https://anglothai.co.uk/
+- booking: https://book.anglothai.co.uk/
 - status: onskeliste
 - åpent: ti 17.30–00, on–lø 12–00
 - åpent-kilde: nettside, nov. 2026
@@ -411,6 +429,7 @@ Thai, 22–24 Seymour Place.
 - sted: 51.52128, -0.15136
 - google: ChIJ1fXWWhAbdkgRl0VaWMH7vqs
 - nettside: https://www.sushisumi.com/marylebone
+- booking: https://www.sevenrooms.com/reservations/sumimarylebone
 - status: onskeliste
 - åpent: ma 17.30–21.30, ti–sø 12–14.30 + 17.30–21.30
 - åpent-kilde: Google, nov. 2026
@@ -426,6 +445,7 @@ Japanese and sushi, sister to SUMI in Notting Hill. 26–27 Devonshire Street.
 - sted: 51.51591, -0.15085
 - google: ChIJCX3Qw9IadkgR6UOl3O-yvdg
 - nettside: https://www.hopperslondon.com/
+- booking: https://www.sevenrooms.com/explore/hopperstchristopher/reservations/create/search/
 - status: onskeliste
 - åpent: ma 12–15.30 + 17.30–22, ti–on 12–15 + 17.30–22, to 12–15 + 17.30–22.45, fr 12–15 + 17–22.45, lø 12–22.45, sø 12–22
 - åpent-kilde: Google, nov. 2026
@@ -441,6 +461,7 @@ Sri Lankan, 77 Wigmore Street.
 - sted: 51.52063, -0.15662
 - google: ChIJCfnKpkcbdkgRyMV_n8aHLQA
 - nettside: https://rosasthai.com/locations/baker-street-restaurant
+- booking: https://www.sevenrooms.com/explore/rosasthaibakerstreet/reservations/create/search/
 - status: onskeliste
 - åpent: ma–to 12–22.30, fr–lø 12–23, sø 12–22
 - åpent-kilde: nettside, nov. 2026
@@ -456,6 +477,7 @@ Thai, 100 Baker Street.
 - sted: 51.51759, -0.15058
 - google: ChIJHUUaWNIadkgRWnUcXiCAYYk
 - nettside: https://stjohnrestaurant.com/restaurants/marylebone/
+- booking: https://www.opentable.co.uk/booking/restref/availability?rid=284994
 - status: onskeliste
 - åpent: ma–sø 09–21.45
 - åpent-kilde: nettside, nov. 2026
@@ -471,6 +493,7 @@ British, 98 Marylebone Lane.
 - sted: 51.51834, -0.15316
 - google: ChIJCwzfjs0adkgRM1UKFINVRzg
 - nettside: https://jikonilondon.com/
+- booking: https://www.sevenrooms.com/reservations/jikoni
 - status: onskeliste
 - åpent: ti 17.30–22, on–fr 12–15 + 17.30–22, lø 10–15 + 17.30–22, sø 10–15 + 17.30–21
 - åpent-kilde: Google, nov. 2026
@@ -486,6 +509,7 @@ Asian fusion, 19–21 Blandford Street.
 - sted: 51.51562, -0.15070
 - google: ChIJ_RaaxdIadkgRrV9WYjuuLxI
 - nettside: https://www.bonedaddies.com/restaurant/bond-st/
+- booking: https://web.dojo.app/create_booking/vendor/hoveDAmpApJHFnvkhpt-FFa4GiWiHVvuJIOp38nsnpw_restaurant
 - status: onskeliste
 - åpent: ma–on 10–22, to–lø 10–23, sø 10–22
 - åpent-kilde: Google, nov. 2026
@@ -501,6 +525,7 @@ Ramen, 46–48 James Street.
 - sted: 51.51442, -0.16116
 - google: ChIJK_Si0DQFdkgR8gKoxhjBDu0
 - nettside: https://theitaliangreyhound.co.uk/
+- booking: https://www.sevenrooms.com/explore/theitaliangreyhound/reservations/create/search/
 - status: onskeliste
 - åpent: ma–lø 12–23, sø 12–22.30
 - åpent-kilde: nettside, nov. 2026
@@ -516,6 +541,7 @@ Italian, 62 Seymour Street.
 - sted: 51.51895, -0.15182
 - google: ChIJY5DvzC4bdkgRbS0zBTvgwWk
 - nettside: https://takalondon.com/
+- booking: https://www.sevenrooms.com/reservations/takamarylebone
 - status: onskeliste
 - åpent: ti–to 17.30–22, fr 12–15 + 17.30–22, lø 12.30–15.30 + 17.30–22
 - åpent-kilde: nettside, nov. 2026
@@ -531,6 +557,7 @@ Japanese, 109 Marylebone High Street.
 - sted: 51.52031, -0.15531
 - google: ChIJ0ydGUwAbdkgRrZlMwfaVjOA
 - nettside: https://www.cliorestaurant.co.uk/
+- booking: https://www.opentable.co.uk/r/clio-restaurant-reservations-london?restref=470940&lang=en-GB
 - status: onskeliste
 - åpent: ma–sø 12–15 + 18–22
 - åpent-kilde: Google, nov. 2026
@@ -546,6 +573,7 @@ Greek, 66 Chiltern Street.
 - sted: 51.51919, -0.15486
 - google: ChIJR_r0XgAbdkgRwrYykKTR7E8
 - nettside: https://maset.london/
+- booking: https://www.sevenrooms.com/explore/maset/reservations/create/search/
 - status: onskeliste
 - åpent: ma–fr 11–23, lø–sø 10–23
 - åpent-kilde: nettside, nov. 2026
@@ -561,6 +589,7 @@ Spanish and French, 40 Chiltern Street.
 - sted: 51.51263, -0.14623
 - google: ChIJgeGDeSsFdkgRdmrFtEogVbI
 - nettside: https://www.lpmrestaurants.com/london
+- booking: https://www.sevenrooms.com/explore/lpmlondon/reservations/create/search
 - status: onskeliste
 - åpent: ma–sø 12–00
 - åpent-kilde: Google, nov. 2026
@@ -576,6 +605,7 @@ French Mediterranean, sister of LPM in Nice. 53–54 Brook's Mews.
 - sted: 51.50729, -0.14541
 - google: ChIJl77szvwFdkgRakYuSU8ESds
 - nettside: https://mimimeifair.com/london/
+- booking: https://www.opentable.com/r/mimi-mei-fair-london
 - status: onskeliste
 - åpent: ma–lø 12–14.30 + 17.30–22.30, sø 12–15 + 17.30–22
 - åpent-kilde: nettside, nov. 2026
@@ -591,6 +621,7 @@ Chinese, 55 Curzon Street.
 - sted: 51.50955, -0.13767
 - google: ChIJr-SGMSqm2EcRJzf-wRsCj6E
 - nettside: https://www.bentleys.org/
+- booking: https://www.sevenrooms.com/explore/bentleys/reservations/create/search/
 - status: onskeliste
 - åpent: ma–to 12–23, fr–lø 12–00, sø 12–22
 - åpent-kilde: Google, nov. 2026
@@ -606,6 +637,7 @@ Oysters and seafood, 11–15 Swallow Street.
 - sted: 51.50672, -0.14678
 - google: ChIJPQJ-AzcFdkgRc9e4UZBgQsY
 - nettside: https://www.pinnamayfair.com/
+- booking: https://www.pinnamayfair.com/reservations
 - status: onskeliste
 - åpent: ma–lø 12–15 + 17.30–22.30
 - åpent-kilde: nettside, nov. 2026
@@ -621,6 +653,7 @@ Italian, 43 Curzon Street.
 - sted: 51.51140, -0.13970
 - google: ChIJoXHzltUEdkgRc7QLGWRren0
 - nettside: https://www.saborrestaurants.co.uk/
+- booking: https://www.sevenrooms.com/explore/saborrestaurant/reservations/create/search/
 - status: onskeliste
 - åpent: ma 17.30–22.30, ti–lø 12–14.30 + 17.30–22.30
 - åpent-kilde: nettside, nov. 2026
@@ -636,6 +669,7 @@ Spanish, 35–37 Heddon Street.
 - sted: 51.51244, -0.15335
 - google: ChIJYWoeDNwFdkgRO0iJcsoOUQM
 - nettside: http://bibirestaurants.com/
+- booking: https://www.sevenrooms.com/reservations/bibi
 - status: onskeliste
 - åpent: ma–lø 12–14 + 17–22
 - åpent-kilde: nettside, nov. 2026
@@ -651,6 +685,7 @@ Indian, 42 North Audley Street.
 - sted: 51.50939, -0.13797
 - google: ChIJKWNSh9YEdkgRgKNUB4oXuyQ
 - nettside: https://murgerhan.com/
+- booking: https://murgerhan.com/reservations/
 - status: onskeliste
 - åpent: ma–sø 11.30–22
 - åpent-kilde: nettside, nov. 2026
@@ -666,6 +701,7 @@ Xi'an noodles, 8A Sackville Street.
 - sted: 51.50929, -0.14433
 - google: ChIJYVq92CsFdkgRVOTD3hS1L2Y
 - nettside: https://sexyfish.com/
+- booking: https://sexyfish.capricebookings.com/
 - status: onskeliste
 - åpent: ma–lø 12–01, sø 12–00
 - åpent-kilde: Google, nov. 2026
@@ -681,6 +717,7 @@ Asian, Berkeley Square.
 - sted: 51.50646, -0.15169
 - google: ChIJz6Z6V5wFdkgRQ9AZGAlIpzU
 - nettside: https://www.dorchestercollection.com/london/45-park-lane/dining/sushi-kanesaka
+- booking: https://www.sevenrooms.com/reservations/sushikanesaka
 - status: onskeliste
 - åpent: ti–lø 18–23
 - åpent-kilde: nettside, nov. 2026
@@ -711,6 +748,7 @@ Mediterranean, 1–3 Mount Street.
 - sted: 51.51166, -0.14059
 - google: ChIJ0Q-0idUEdkgRVzBD-YzIXBk
 - nettside: https://www.sartoria-restaurant.co.uk/
+- booking: https://www.sartoria-restaurant.co.uk/#book
 - status: onskeliste
 - åpent: ma–fr 08.30–22, lø 12–22
 - åpent-kilde: nettside, nov. 2026
@@ -726,6 +764,7 @@ Italian, 20 Savile Row.
 - sted: 51.51383, -0.13179
 - google: ChIJj2LUnbgFdkgRs__gtpjkPRg
 - nettside: https://www.humblechickenuk.com/
+- booking: https://www.humblechickenuk.com/reservations
 - status: onskeliste
 - åpent: on–fr 17.30–21, lø 13–21
 - åpent-kilde: Google, nov. 2026
@@ -741,6 +780,7 @@ Japanese, 54 Frith Street.
 - sted: 51.51313, -0.13646
 - google: ChIJoddM1nEFdkgRsNOAoG3mIhA
 - nettside: https://www.ritasdining.com/
+- booking: https://www.ritasdining.com/reservations
 - status: onskeliste
 - åpent: ma 17.30–00, ti–lø 12–15.30 + 17.30–00
 - åpent-kilde: nettside, nov. 2026
@@ -756,6 +796,7 @@ Bistro, 49 Lexington Street.
 - sted: 51.51222, -0.13448
 - google: ChIJDeETgk8FdkgRGrj8GedCjnE
 - nettside: https://www.khaobird.com/
+- booking: https://widget.formitable.com/page/3380bf7e
 - status: onskeliste
 - åpent: ma–lø 12–23, sø 12–21
 - åpent-kilde: nettside, nov. 2026
@@ -771,6 +812,7 @@ Thai, 24 Brewer Street.
 - sted: 51.51411, -0.13265
 - google: ChIJQdL1JNMEdkgRxbWzk_RxYHI
 - nettside: https://www.quovadissoho.co.uk/
+- booking: https://www.quovadissoho.co.uk/restaurant/
 - status: onskeliste
 - åpent: ma–lø 12–14.30 + 17–22
 - åpent-kilde: nettside, nov. 2026
@@ -786,6 +828,7 @@ British, 26–29 Dean Street.
 - sted: 51.51436, -0.13573
 - google: ChIJo3Ddx78FdkgRVRBegomu_4w
 - nettside: https://www.fattpundit.co.uk/soho/
+- booking: https://www.fattpundit.co.uk/soho/reserve-a-table/
 - status: onskeliste
 - åpent: ma–fr 12–14.30 + 17–22.30, lø 12–22.30
 - åpent-kilde: Google, nov. 2026
@@ -801,6 +844,7 @@ Indo-Chinese, 77 Berwick Street.
 - sted: 51.51391, -0.13903
 - google: ChIJzYjnMVIFdkgR8TaqhDz5Dso
 - nettside: https://heardburger.co.uk/
+- booking: https://heardburger.co.uk/bookings
 - status: onskeliste
 - åpent: ma–on 12–22, to–lø 12–23, sø 12–22
 - åpent-kilde: nettside, nov. 2026
@@ -816,6 +860,7 @@ Burgers, 31 Foubert's Place.
 - sted: 51.51391, -0.13900
 - google: ChIJbYrFVAAFdkgRTqNwv3SP3CY
 - nettside: https://www.rias.world/
+- booking: https://www.sevenrooms.com/explore/riassoho/reservations/create/search/
 - status: onskeliste
 - åpent: ma–lø 12–23, sø 12–22
 - åpent-kilde: nettside, nov. 2026
@@ -831,6 +876,7 @@ Detroit-style pizza, 29 Foubert's Place.
 - sted: 51.51555, -0.12991
 - google: ChIJHdd94hwbdkgRihDCyn0FD1Y
 - nettside: https://tattu.co.uk/locations/soho/
+- booking: https://www.sevenrooms.com/explore/tattulondon/reservations/create/search/
 - status: onskeliste
 - åpent: ma–to 12–23, fr–lø 12–01, sø 12–23
 - åpent-kilde: Google, nov. 2026
@@ -846,6 +892,7 @@ Chinese, on the Outernet rooftop. Denmark Street.
 - sted: 51.51333, -0.13366
 - google: ChIJoyJt6lgFdkgRdrFS60ScRGQ
 - nettside: https://moirestaurant.com/
+- booking: https://www.sevenrooms.com/explore/moirestaurant/reservations/create/search/
 - status: onskeliste
 - åpent: ti 17.30–00, on–fr 12–14.30 + 17.30–00, lø 17.30–00
 - åpent-kilde: nettside, nov. 2026
@@ -861,6 +908,7 @@ Wardour Street 84.
 - sted: 51.51202, -0.13823
 - google: ChIJGXGPYsEFdkgRAIIfSSET698
 - nettside: https://mountainbeakstreet.com/
+- booking: https://www.sevenrooms.com/reservations/mountain
 - status: onskeliste
 - åpent: ma–lø 12–22.30, sø 12–21.30
 - åpent-kilde: nettside, nov. 2026
@@ -876,6 +924,7 @@ Spanish and British, from Tomos Parry. 16–18 Beak Street.
 - sted: 51.51475, -0.13312
 - google: ChIJ7-ZZXQAFdkgRSTL7vNlRbzs
 - nettside: https://impalasoho.com/
+- booking: https://www.sevenrooms.com/explore/impala/reservations/create/search
 - status: onskeliste
 - åpent: ma–lø 12–14.30 + 17–22.30, sø 12–14.30 + 17–21
 - åpent-kilde: nettside, nov. 2026
@@ -921,6 +970,7 @@ At the NoMad hotel, 28 Bow Street.
 - sted: 51.51148, -0.12100
 - google: ChIJnd4G6-YFdkgRlb589_lLHM0
 - nettside: https://vasinikopizza.co.uk/
+- booking: https://www.opentable.co.uk/r/vasiniko-pizzeria-reservations-london?restref=285297&lang=en-GB
 - status: onskeliste
 - åpent: ma 12–22.30, ti–lø 12–23, sø 12–22.30
 - åpent-kilde: Google, nov. 2026
@@ -936,6 +986,7 @@ Pizza, 7–9 Burleigh Street.
 - sted: 51.50566, -0.13824
 - google: ChIJmassdVQFdkgRPolCveU-KGU
 - nettside: https://www.saintjacquesrestaurant.com/
+- booking: https://www.saintjacquesrestaurant.com/reservations/
 - status: onskeliste
 - åpent: ma–fr 12–14.30 + 18–21.30, lø 18–21.30
 - åpent-kilde: Google, nov. 2026
@@ -951,6 +1002,7 @@ French, 5 St James's Street.
 - sted: 51.51642, -0.14016
 - google: ChIJranpa4wbdkgRWWYPbm6nFAc
 - nettside: https://lokalrestaurant.co.uk/
+- booking: https://lokalrestaurant.co.uk/book
 - status: onskeliste
 - åpent: ma–sø 12–23
 - åpent-kilde: Google, nov. 2026
@@ -966,6 +1018,7 @@ Turkish, 7–8 Market Place.
 - sted: 51.52045, -0.10143
 - google: ChIJFzO5YVEbdkgR1zdv5_hzZwg
 - nettside: https://www.stjohnrestaurant.com/
+- booking: https://www.opentable.co.uk/booking/restref/availability?rid=4850
 - status: onskeliste
 - åpent: ma–lø 12–22.15, sø 12–15.30
 - åpent-kilde: Google, nov. 2026
@@ -981,6 +1034,7 @@ British, nose to tail. 26 St John Street.
 - sted: 51.52614, -0.10881
 - google: ChIJj7EL2IEbdkgRk_38P335pWA
 - nettside: https://www.quitegood.uk/
+- booking: https://www.sevenrooms.com/reservations/51exmouth
 - status: onskeliste
 - åpent: ti–fr 17–23, lø 16–23
 - åpent-kilde: nettside, nov. 2026
@@ -996,6 +1050,7 @@ Modern European, 51 Exmouth Market.
 - sted: 51.51667, -0.13705
 - google: ChIJVbcVEIkbdkgRjq2c232Mjjk
 - nettside: https://www.arrosqd.com/
+- booking: https://www.sevenrooms.com/reservations/arrosqd
 - status: onskeliste
 - åpent: ma–on 12–22.30, to–lø 12–23, sø 12.30–17
 - åpent-kilde: nettside, nov. 2026
@@ -1011,6 +1066,7 @@ Spanish rice dishes, 64 Eastcastle Street.
 - sted: 51.51934, -0.14031
 - google: ChIJXymuDyobdkgRaLhsMYzvisk
 - nettside: https://kinlondon.com/cafe
+- booking: https://www.opentable.co.uk/booking/restref/availability?rid=334923
 - status: onskeliste
 - åpent: ma–fr 08.30–16.30, lø–sø 09.30–16.30
 - åpent-kilde: nettside, nov. 2026
@@ -1041,6 +1097,7 @@ Spanish, 24–25 Foley Street.
 - sted: 51.52204, -0.10167
 - google: ChIJpyQHEFEbdkgR1KctxC2Recc
 - nettside: https://luca.restaurant/
+- booking: https://www.sevenrooms.com/reservations/luca
 - status: onskeliste
 - åpent: ma–lø 12–14 + 17.30–22
 - åpent-kilde: nettside, nov. 2026
@@ -1056,6 +1113,7 @@ Italian, 88 St John Street.
 - sted: 51.49614, -0.16439
 - google: ChIJ__9Lhz8FdkgRdyenFjfQu5c
 - nettside: https://diningssw3.co.uk/
+- booking: https://www.sevenrooms.com/reservations/diningssw3
 - status: onskeliste
 - åpent: ma–ti 16.45–22, on 12–15.30 + 16.45–22, to–lø 12–15.30 + 16.45–22.15, sø 12–15.30 + 16.45–22
 - åpent-kilde: nettside, nov. 2026
@@ -1071,6 +1129,7 @@ Japanese, Walton Street.
 - sted: 51.50537, -0.12607
 - google: ChIJHZzCDhMFdkgRJgvv7LnnSTU
 - nettside: https://kiokubyendo.com/restaurant/
+- booking: https://www.sevenrooms.com/explore/kiokurestaurant/reservations/create/search/
 - status: onskeliste
 - åpent: ti–lø 12–15 + 18–00, sø 12–14.45 + 17.30–23.30
 - åpent-kilde: Google, nov. 2026
@@ -1086,6 +1145,7 @@ Japanese, on the sixth floor of The OWO. 57 Whitehall.
 - sted: 51.50669, -0.12433
 - google: ChIJ5615TRIFdkgRYFD2AzN0eYc
 - nettside: https://www.corinthia.com/en-gb/london/mezzogiorno/
+- booking: https://www.sevenrooms.com/explore/mezzogiornobyfrancescomazzei/reservations/create/search/
 - status: onskeliste
 - åpent: ma 17–23.30, ti–fr 12–15 + 17–23.30, lø–sø 12.30–15.30 + 17–23.30
 - åpent-kilde: nettside, nov. 2026
@@ -1101,6 +1161,7 @@ Italian, from Francesco Mazzei, at the Corinthia. 10a Northumberland Avenue.
 - sted: 51.51067, -0.12064
 - google: ChIJCyGjxMsEdkgR56s8-gFqDnU
 - nettside: https://www.simpsonsinthestrand.co.uk/
+- booking: https://www.simpsonsinthestrand.co.uk/reservations/
 - status: onskeliste
 - åpent: ma–fr 07–22.45, lø 08–22.45, sø 08–21.45
 - åpent-kilde: Google, nov. 2026
@@ -1116,6 +1177,7 @@ Classic British, 100 Strand.
 - sted: 51.50144, -0.16247
 - google: ChIJU6ZLJ5QFdkgRYD9koPKExGg
 - nettside: https://www.nanyangblossom.co.uk/
+- booking: https://www.sevenrooms.com/explore/nanyangblossom/reservations/create/search/
 - status: onskeliste
 - åpent: ma–lø 12–23, sø 12–22.30
 - åpent-kilde: nettside, nov. 2026
@@ -1131,6 +1193,7 @@ Southeast Asian Chinese, 12 Knightsbridge Green.
 - sted: 51.51433, -0.09095
 - google: ChIJNfO0YgADdkgR9kvoQoghKhY
 - nettside: https://www.wildizakaya.co.uk/
+- booking: https://www.wildizakaya.co.uk/reservations
 - status: onskeliste
 - åpent: ma–fr 12–22
 - åpent-kilde: Google, nov. 2026
@@ -1161,6 +1224,7 @@ Chinese, 14 Lisle Street.
 - sted: 51.51444, -0.12618
 - google: ChIJFQE6KM0EdkgRlUwerzMDqR8
 - nettside: https://www.thebarbary.co.uk/neals-yard
+- booking: https://www.sevenrooms.com/explore/thebarbary/reservations/create/search/
 - status: onskeliste
 - åpent: ma–fr 12–14.30 + 17–22, lø 12–22, sø 12–21
 - åpent-kilde: Google, nov. 2026
@@ -1176,6 +1240,7 @@ North African, 16 Neal's Yard.
 - sted: 51.50088, -0.16067
 - google: ChIJI-9dFc8FdkgRD1WJck1l-iE
 - nettside: https://claprestaurant.com/london/
+- booking: https://www.sevenrooms.com/reservations/claplondon
 - status: onskeliste
 - åpent: sø–on 12–23.30, to–lø 12–01
 - åpent-kilde: nettside, nov. 2026
@@ -1191,6 +1256,7 @@ Japanese, 12–14 Basil Street.
 - sted: 51.51023, -0.07808
 - google: ChIJmWG2I0wDdkgR5QFMkdoNxEU
 - nettside: https://www.fourseasons.com/towerbridge/dining/restaurants/mei-ume/
+- booking: https://www.opentable.co.uk/r/mei-ume-london
 - status: onskeliste
 - åpent: ma–fr 12–14 + 18–21.30, lø 18–21.30
 - åpent-kilde: Google, nov. 2026
@@ -1206,6 +1272,7 @@ Chinese and Japanese, at the Four Seasons. 10 Trinity Square.
 - sted: 51.50230, -0.15552
 - google: ChIJ8cpyGwAFdkgRujrVQOthldY
 - nettside: https://www.maybourne.com/en/hotels/the-emory/restaurants-bars/abc-kitchens
+- booking: https://www.maybourne.com/en/hotels/the-emory/booking/restaurants-bars?venue=abckitchens
 - status: onskeliste
 - åpent: ma–on 07–22, to–fr 07–22.15, lø 07–22.15, sø 07–21.30
 - åpent-kilde: nettside, nov. 2026
@@ -1221,6 +1288,7 @@ Jean-Georges' restaurant at The Emory, Old Barrack Yard.
 - sted: 51.49046, -0.15278
 - google: ChIJAz_ZYhcFdkgRvs31bOm2Omc
 - nettside: https://www.hunanlondon.com/
+- booking: https://www.sevenrooms.com/explore/hunan/reservations/create/search/
 - status: onskeliste
 - åpent: ma–lø 12.30–14.30 + 18–23
 - åpent-kilde: nettside, nov. 2026
@@ -1236,6 +1304,7 @@ Chinese, 51 Pimlico Road.
 - sted: 51.52519, -0.11009
 - google: ChIJq3ARoBUbdkgR0_u1JdBgh2Y
 - nettside: https://vesper.restaurant/
+- booking: https://www.sevenrooms.com/explore/vesperrestaurant/reservations/create/search/
 - status: onskeliste
 - åpent: ti 17.30–22, on–lø 12–14.30 + 17.30–22
 - åpent-kilde: nettside, nov. 2026
@@ -1251,6 +1320,7 @@ Modern European, 8–10 Exmouth Market.
 - sted: 51.51972, -0.13213
 - google: ChIJRzC4eJYbdkgRxL8U8sXMgak
 - nettside: https://honeyandco.co.uk/
+- booking: https://honeyandco.co.uk/places/honey-co-daily/#resdiary_widget
 - status: onskeliste
 - åpent: ma–fr 08–21.30, lø 09–17
 - åpent-kilde: Google, nov. 2026
@@ -1281,6 +1351,7 @@ The restaurant at the Belmond Cadogan hotel, 75 Sloane Street.
 - sted: 51.49385, -0.15827
 - google: ChIJTyiKcoMFdkgR1TVIAGDlxJk
 - nettside: https://azzurrarestaurant.co.uk/
+- booking: https://www.sevenrooms.com/explore/azzurra/reservations/create/search/
 - status: onskeliste
 - åpent: ma–sø 12–00
 - åpent-kilde: Google, nov. 2026
@@ -1296,6 +1367,7 @@ Italian, 127–128 Sloane Street.
 - sted: 51.51238, -0.14104
 - google: ChIJcYnlfyoFdkgRONDVNY-kV4M
 - nettside: https://www.frescobaldi.london/
+- booking: https://www.frescobaldi.london/book-a-table
 - status: onskeliste
 - åpent: ma–to 12–00, fr–lø 12.30–01
 - åpent-kilde: nettside, nov. 2026
@@ -1311,6 +1383,7 @@ Tuscan, from the Frescobaldi wine family, 15 New Burlington Place.
 - sted: 51.51303, -0.13640
 - google: ChIJsclcktQEdkgRixfvZ2ewghM
 - nettside: https://www.mildreds.com/soho/
+- booking: https://www.sevenrooms.com/explore/mildredssoho/reservations/create/search/
 - åpent: ma–lø 09–23, sø 09–22
 - åpent-kilde: Google, nov. 2026
 Soho
@@ -1325,6 +1398,7 @@ Vegetarian, 45 Lexington Street.
 - sted: 51.51428, -0.12716
 - google: ChIJXUqUJM0EdkgRd4rzBIse6zg
 - nettside: https://www.monmouthkitchen.com/
+- booking: https://www.opentable.co.uk/r/monmouth-kitchen-reservations-london?restref=70213&lang=en-GB
 - åpent: ma–fr 12–21.30, lø–sø 12.30–21.30
 - åpent-kilde: Google, nov. 2026
 Seven Dials
@@ -1339,6 +1413,7 @@ Italian and Peruvian, 20 Mercer Street.
 - sted: 51.51104, -0.12260
 - google: ChIJ_7aaZQAFdkgRtnICtsOqDtg
 - nettside: https://cassettelondon.co.uk/
+- booking: https://www.sevenrooms.com/explore/cassette/reservations/create/search/
 - status: onskeliste
 - åpent: ma–lø 12–14.30 + 17.30–21.30, sø 12–14.30 + 17.30–20
 - åpent-kilde: Google, nov. 2026
@@ -1354,6 +1429,7 @@ Restaurant, 42 Maiden Lane.
 - sted: 51.49201, -0.15979
 - google: ChIJZQ9fhLcFdkgRbvYkeombe5I
 - nettside: https://www.chelseacounter.com/
+- booking: https://www.sevenrooms.com/explore/chelseacounter/reservations/create/search/
 - status: onskeliste
 - åpent: ma 12–00, ti 12–00.30, on–lø 12–00, sø 12–22
 - åpent-kilde: Google, nov. 2026
@@ -1369,6 +1445,7 @@ Restaurant, 39 Cadogan Gardens.
 - sted: 51.51857, -0.15375
 - google: ChIJkz73i80adkgR0nKOUXm-lJU
 - nettside: https://www.clarettelondon.com/
+- booking: https://www.sevenrooms.com/reservations/clarette
 - åpent: ma 17–23, ti–lø 12–23
 - åpent-kilde: nettside og Google, nov. 2026
 Marylebone
@@ -1383,6 +1460,7 @@ Sit at the bar on the ground floor. Excellent bar snacks, cocktails and wine (tr
 - sted: 51.49278, -0.15657
 - google: ChIJGZHDPhYFdkgRys_AGmXvKsk
 - nettside: https://colbertrestaurant.com/
+- booking: https://www.sevenrooms.com/explore/colbertlondon/reservations/create/search/
 - åpent: ma–fr 08–22.30, lø 08–22, sø 08.30–21.30
 - åpent-kilde: Google, nov. 2026
 Chelsea
@@ -1397,6 +1475,7 @@ Jeremy King’s brasserie, now an institution on Sloane Square. Better for the a
 - sted: 51.49226, -0.15692
 - google: ChIJVQn-fwAFdkgR0qDB87PXgRk
 - nettside: https://www.martinoslondon.com/
+- booking: https://www.sevenrooms.com/reservations/martinoslondon
 - åpent: ma–fr 08–00.30, lø 09–00.30, sø 09–00
 - åpent-kilde: Google, nov. 2026
 Chelsea
@@ -2240,6 +2319,7 @@ Den gamle landsbykjernen i Walthamstow, rundt Orford Road og St Mary’s Church,
 - sted: 51.54626, -0.10157
 - google: ChIJjVaytWQbdkgRKi6VkI5G4fM
 - nettside: https://www.trullorestaurant.com/
+- booking: https://www.sevenrooms.com/explore/trullo/reservations/create/search/
 - åpent: ma–to 12.30–15 + 18–22.30, fr–lø 12.30–15 + 17.30–22.30, sø 12.30–15 + 17.30–21.30
 - åpent-kilde: nettside, nov. 2026
 Islington
@@ -2254,6 +2334,7 @@ Italian at Highbury Corner, 300–302 St Paul's Road.
 - sted: 51.54875, -0.19127
 - google: ChIJkRuzVHgQdkgReA3tN_wHZZY
 - nettside: http://www.tooktooklondon.co.uk/
+- booking: https://web.dojo.app/create_booking/vendor/pvGvW9Cdb4MMa9eC16g8HW2IrN1I_NHcXFRTFKsTVLg_restaurant
 - status: onskeliste
 - åpent: sø–to 12–22.45, fr–lø 12–23
 - åpent-kilde: nettside, nov. 2026
@@ -2521,6 +2602,7 @@ Tooting Broadway, med de overbygde markedene Tooting Market og Broadway Market o
 - sted: 51.48453, -0.12798
 - google: ChIJsTwC4BYFdkgRAEB4vuFESdo
 - nettside: https://www.hyattrestaurants.com/en/london/restaurant/cantonese-restaurant
+- booking: https://www.opentable.co.uk/r/asian-restaurant-at-park-hyatt-london-reservations-london?restref=367635
 - status: onskeliste
 - åpent: on–sø 12–15 + 17–21.30
 - åpent-kilde: Google, nov. 2026
@@ -2536,6 +2618,7 @@ Cantonese, 7 Nine Elms Lane.
 - sted: 51.50535, -0.09002
 - google: ChIJ4co2k5kDdkgROKjVBk6wD8k
 - nettside: https://oma.london/
+- booking: https://www.sevenrooms.com/reservations/oma
 - status: onskeliste
 - åpent: ma–fr 12–15 + 17.30–23, lø 12–23, sø 12–22
 - åpent-kilde: Google, nov. 2026
@@ -2551,6 +2634,7 @@ Greek, 2–4 Bedale Street.
 - sted: 51.50443, -0.09474
 - google: ChIJvzUkv6EEdkgR-DJoPcr_tfI
 - nettside: https://www.springstpizza.com/
+- booking: https://www.opentable.co.uk/r/spring-street-pizza-southwark
 - status: onskeliste
 - åpent: ti–lø 12–00, sø 12–21
 - åpent-kilde: Google, nov. 2026
@@ -2566,6 +2650,7 @@ Pizza, Arch 32, Southwark Street.
 - sted: 51.50504, -0.09081
 - google: ChIJM8wydFcDdkgR1VMuBfgCMjo
 - nettside: https://www.camillerestaurant.co.uk/
+- booking: https://www.camillerestaurant.co.uk/reservations
 - status: onskeliste
 - åpent: ma 17.30–22, ti–lø 12–15 + 17.30–22, sø 12–17
 - åpent-kilde: nettside, nov. 2026
@@ -2581,6 +2666,7 @@ French, 2–3 Stoney Street.
 - sted: 51.46952, -0.06993
 - google: ChIJneqXI9MDdkgR2IDZjE910rs
 - nettside: https://krukthai.com/
+- booking: https://krukthai.com/bookings
 - status: onskeliste
 - åpent: on 17–23.30, to 12–23.30, fr–lø 12–00.30, sø 12–17
 - åpent-kilde: nettside, nov. 2026
@@ -2611,6 +2697,7 @@ Gastropub, 36 The Cut.
 - sted: 51.50436, -0.08682
 - google: ChIJE1j0oVADdkgRDVQQ49MtNE4
 - nettside: https://www.hutong.co.uk/
+- booking: https://www.sevenrooms.com/reservations/hutonglondon
 - status: onskeliste
 - åpent: ma–fr 12–16.30 + 17–22.30, lø–sø 11.30–15.30 + 17–22.30
 - åpent-kilde: nettside, nov. 2026
@@ -2626,6 +2713,7 @@ Chinese, on the 33rd floor of The Shard. 31 St Thomas Street.
 - sted: 51.50225, -0.08470
 - google: ChIJhZkSsNQDdkgRwGJZ7Z2rMjg
 - nettside: https://trivetrestaurant.co.uk/
+- booking: https://resy.com/cities/ldn/trivet
 - status: onskeliste
 - åpent: ti 18–21, on–lø 12–14 + 18–21
 - åpent-kilde: nettside, nov. 2026
@@ -2896,6 +2984,7 @@ Gamle lagerbygninger langs Themsen i Wapping High Street og Wapping Wall, med Sh
 - sted: 51.52450, -0.07660
 - google: ChIJxYs1ArocdkgR-G13PLmofec
 - nettside: https://www.dishoom.com/shoreditch/
+- booking: https://www.sevenrooms.com/explore/dishoomshoreditch/reservations/create/search/
 - åpent: ma–on 08–23, to–fr 08–00, lø 09–00, sø 09–23
 - åpent-kilde: nettside, nov. 2026
 Shoreditch
@@ -2940,6 +3029,7 @@ Basque grill, 4 Redchurch Street.
 - sted: 51.53092, -0.06951
 - google: ChIJo74Bs8AcdkgRg7RlvkGVKrM
 - nettside: https://www.marksmanpublichouse.com/
+- booking: https://www.opentable.co.uk/r/the-marksman-hackney-reservations-london?lang=en-GB&restref=208518
 - status: onskeliste
 - åpent: ti–on 16–00, to–lø 12–00, sø 12–23
 - åpent-kilde: nettside, nov. 2026
@@ -2955,6 +3045,7 @@ Pub and dining room, 254 Hackney Road.
 - sted: 51.53776, -0.05755
 - google: ChIJkeKwnZ8ddkgRkhurX9XGyms
 - nettside: https://www.bambi-bar.com/
+- booking: https://www.sevenrooms.com/explore/bambi/reservations/create/search
 - status: onskeliste
 - åpent: ti–to 18–23, fr 18–01, lø 12–01, sø 13–22.30
 - åpent-kilde: nettside, nov. 2026
@@ -2970,6 +3061,7 @@ Westgate Street 1.
 - sted: 51.52400, -0.07422
 - google: ChIJLTPl7JIddkgR76bZYSpbA2A
 - nettside: https://www.oneclubrow.com/
+- booking: https://www.sevenrooms.com/reservations/oneclubrow
 - status: onskeliste
 - åpent: ti–lø 12–14 + 17.30–21.45, sø 12–15 + 17.30–21
 - åpent-kilde: Google, nov. 2026
@@ -2985,6 +3077,7 @@ Club Row 1.
 - sted: 51.55284, -0.05277
 - google: ChIJyZEVG4YddkgRhZtMxBaAFAw
 - nettside: https://www.mambow.co.uk/
+- booking: https://www.opentable.co.uk/r/mambow-reservations-london?restref=277602&lang=en-GB
 - status: onskeliste
 - åpent: on–fr 17.30–22.30, lø 12–15 + 17.30–22.30
 - åpent-kilde: nettside, nov. 2026
@@ -3000,6 +3093,7 @@ Malaysian, 78 Lower Clapton Road.
 - sted: 51.52402, -0.08057
 - google: ChIJG9ssOq8FdkgRGTu5-ErLMaI
 - nettside: https://www.mantecarestaurant.co.uk/
+- booking: https://www.mantecarestaurant.co.uk/book
 - status: onskeliste
 - åpent: ma 12–15 + 17.30–22, ti–on 12–15 + 17.30–22.30, to–fr 12–15 + 17.30–23, lø 12–15 + 17–23, sø 12–15 + 17–22
 - åpent-kilde: nettside, nov. 2026
@@ -3015,6 +3109,7 @@ Italian, 49–51 Curtain Road.
 - sted: 51.52523, -0.08232
 - google: ChIJV7BMkBQddkgR2PD6H-N5XCI
 - nettside: https://lagana.london/
+- booking: https://lagana.london/reservations
 - status: onskeliste
 - åpent: ma–lø 12–15.45 + 17.30–22.30, sø 12–15.45 + 17.30–21.30
 - åpent-kilde: Google, nov. 2026
@@ -3279,6 +3374,7 @@ Elveby med Richmond Green, Richmond Park og Themsen. Utsikten fra Richmond Hill 
 - sted: 51.48400, -0.22423
 - google: ChIJxxa_ELAPdkgRF2wx7RLroiY
 - nettside: https://rivercafe.co.uk/
+- booking: https://www.sevenrooms.com/explore/rivercafelondon/reservations/create/search/
 - utenfor: ja
 - åpent: ma–lø 12–15 + 18–23.30, sø 12–15
 - åpent-kilde: nettside, nov. 2026
@@ -3294,6 +3390,7 @@ Italian by the Thames, Rainville Road.
 - sted: 51.52432, -0.18876
 - google: ChIJbZyeMwARdkgRVwNMuMakX74
 - nettside: https://theherow9.com/
+- booking: https://www.sevenrooms.com/explore/thehero/reservations/create/search/
 - åpent: ma–to 12–23.30, fr–lø 12–00, sø 12–22
 - åpent-kilde: nettside, nov. 2026
 Maida Vale
@@ -3308,6 +3405,7 @@ Pub and dining room, 55 Shirland Road.
 - sted: 51.48335, -0.16941
 - google: ChIJ7dsWCHIFdkgR0l78z0NcBrs
 - nettside: https://www.fiftycheyne.com/
+- booking: https://www.fiftycheyne.com/reservations
 - status: onskeliste
 - åpent: ma–ti 17.30–00, on–fr 12–14.30 + 17.30–00, lø 12–15.30 + 17.30–00, sø 12–20
 - åpent-kilde: Google, nov. 2026
@@ -3338,6 +3436,7 @@ Café, 4 Cromwell Place.
 - sted: 51.50190, -0.20422
 - google: ChIJNf1BzugPdkgR9VO3kGFJiAo
 - nettside: https://www.belvedererestaurant.co.uk/
+- booking: https://www.belvedererestaurant.co.uk/reservations
 - status: onskeliste
 - åpent: ti–to 17.30–23.30, fr 17.30–00, lø 12–00, sø 12–22
 - åpent-kilde: nettside, nov. 2026
@@ -3368,6 +3467,7 @@ Italian, 310 Portobello Road.
 - sted: 51.48588, -0.17326
 - google: ChIJjYJZKwAFdkgRugTB8iv1GX0
 - nettside: https://www.chelseagrill.co.uk/
+- booking: https://www.chelseagrill.co.uk/reservations
 - status: onskeliste
 - åpent: ma–to 18–22.30, fr 17–22.30, lø 12–15 + 17–22.30, sø 12–16 + 17–21.30
 - åpent-kilde: nettside, nov. 2026
@@ -3383,6 +3483,7 @@ Restaurant and bar, 300 King's Road.
 - sted: 51.52100, -0.20933
 - google: ChIJTRZ5KwARdkgRy1KsVdL-fqI
 - nettside: https://thefatbadgerw10.com/
+- booking: https://www.sevenrooms.com/explore/thefatbadger/reservations/create/search/
 - status: onskeliste
 - åpent: ma 17–00.30, ti–lø 12–01, sø 12–00
 - åpent-kilde: nettside, nov. 2026
@@ -3398,6 +3499,7 @@ Pub, 310 Portobello Road.
 - sted: 51.52266, -0.20761
 - google: ChIJ_fpMZjIRdkgRiac_zdVgpBE
 - nettside: https://www.caia.london/
+- booking: https://www.sevenrooms.com/reservations/caia
 - status: onskeliste
 - åpent: ma–to 17.30–00, fr–lø 12–01
 - åpent-kilde: nettside, nov. 2026
@@ -3413,6 +3515,7 @@ Restaurant and bar, 46 Golborne Road.
 - sted: 51.49072, -0.16582
 - google: ChIJWxa4PlEFdkgRIULkrd0GUv0
 - nettside: https://www.wildtavern.co.uk/
+- booking: https://www.wildtavern.co.uk/reservations
 - status: onskeliste
 - åpent: ma–lø 12–15 + 17–22, sø 12–15 + 17–21
 - åpent-kilde: nettside, nov. 2026
@@ -3428,6 +3531,7 @@ Mediterranean, 2 Elystan Street.
 - sted: 51.51048, -0.18672
 - google: ChIJOxvAaJAFdkgRyTxvwB8xP3Y
 - nettside: https://theparkrestaurant.com/
+- booking: https://theparkrestaurant.com/reservations/
 - status: onskeliste
 - åpent: ma–fr 07–22, lø 08–22, sø 08–21.30
 - åpent-kilde: nettside, nov. 2026
@@ -3458,6 +3562,7 @@ Italian, 257 King's Road.
 - sted: 51.50169, -0.19201
 - google: ChIJpciweucPdkgRX65rI7oJ2IY
 - nettside: https://www.bigmammagroup.com/italian-restaurants/jacuzzi
+- booking: https://www.sevenrooms.com/explore/jacuzzi/reservations/create/search/
 - status: onskeliste
 - åpent: ma–to 12–22.15, fr 12–22.30, lø 11.30–22.30, sø 11.30–22.15
 - åpent-kilde: nettside, nov. 2026
@@ -3473,6 +3578,7 @@ Italian, 94 Kensington High Street.
 - sted: 51.51538, -0.20546
 - google: ChIJGdhJt1ERdkgRlH5kvNLZr88
 - nettside: https://chezluibistrot.com/
+- booking: https://www.sevenrooms.com/explore/chezlui/reservations/create/search/
 - status: onskeliste
 - åpent: ti–to 17–23, fr–lø 12–23, sø 12–19.30
 - åpent-kilde: Google, nov. 2026

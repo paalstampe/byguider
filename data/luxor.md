@@ -25,6 +25,7 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
   - google: <Place ID eller lenke fra Google Maps>   gjør at «Google Maps» i infoboksen viser stedets side
                                 (uten: søk på navnet ved koordinaten). Claude kan hente Place ID-er.
   - nettside: https://…          stedets egen side — gir lenken «Nettside» i infoboksen
+  - booking: https://…           bookingsiden (bordbestilling) — gir lenken «Bestill bord» etter «Nettside»
   - les: Financial Times | Tittel | https://…   artikkel: «Artikkel fra Financial Times: Tittel» sist i infoboksen. Kan gjentas.
   - status: onskeliste          ønskeliste: ikke besøkt ennå. Vises nederst i lista og som eget
                                 kartlag (av til man slår det på). ★ = førstevalg.

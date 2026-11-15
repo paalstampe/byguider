@@ -24,6 +24,7 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
   - google: <Place ID eller lenke fra Google Maps>   gjør at «Google Maps» i infoboksen viser stedets side
                                 (uten: søk på navnet ved koordinaten). Claude kan hente Place ID-er.
   - nettside: https://…          stedets egen side — gir lenken «Nettside» i infoboksen
+  - booking: https://…           bookingsiden (bordbestilling) — gir lenken «Bestill bord» etter «Nettside»
   - les: Financial Times | Tittel | https://…   artikkel: «Artikkel fra Financial Times: Tittel» sist i infoboksen. Kan gjentas.
   - status: onskeliste          ønskeliste: ikke besøkt ennå. Vises nederst i lista og som eget
                                 kartlag (av til man slår det på). ★ = førstevalg.
@@ -89,6 +90,7 @@ Utelivsområde, med noen moderne boligområder rundt Roppongi Hills og Tokyo Mid
 - sted: 35.66816, 139.76073
 - google: ChIJEf3MNlaLGGAR4VoP4GjAfGk
 - nettside: https://www.sushi-sugawara.com/
+- booking: https://pocket-concierge.jp/en/restaurants/244662
 Ginza
 
 Sushi.
@@ -101,6 +103,7 @@ Sushi.
 - sted: 35.67279, 139.76389
 - google: ChIJVby9v-WLGGARQv0iDzabeGo
 - nettside: https://ginza-birdland.sakura.ne.jp/
+- booking: https://yoyaku.toreta.in/toranomon-birdland/
 Ginza
 
 Yakitori. Ginza 4-2-15, i kjelleren.
@@ -124,6 +127,7 @@ Robatayaki – grilled over open charcoal – in Roppongi. A classic.
 - sted: 35.66017, 139.72358
 - google: ChIJEwlemnqLGGARhwMuRpwpkBI
 - nettside: https://gonpachi.jp/nishi-azabu/
+- booking: https://yoyaku.toreta.in/gonpachi-nishiazabu/
 Nishi-Azabu
 
 Izakaya i et stort trehus. Restauranten var modellen for restauranten i scenen «Bride vs. the Crazy 88» i Kill Bill.
@@ -136,6 +140,7 @@ An izakaya in a large wooden house. The restaurant was the model for the restaur
 - sted: 35.67324, 139.76670
 - google: ChIJ4wnkFeSLGGARliQwUPoODeY
 - nettside: https://www.billsjapan.com/jp/locations/ginza
+- booking: https://www.tablecheck.com/shops/bills-ginza/reserve
 - status: onskeliste
 Ginza
 
@@ -412,6 +417,7 @@ Nesten like quintessentially Tokyo som Shibuya. Skyskrapere i vest, smug som Gol
 - sted: 35.67191, 139.71390
 - google: ChIJFdxl_5iMGGARfivbysGqglw
 - nettside: http://andivietnamese.com/
+- booking: https://www.tablecheck.com/shops/andivietnamese/reserve
 Harajuku
 
 Moderne vietnamesisk.
@@ -447,6 +453,7 @@ At the top of the Park Hyatt, known from Lost in Translation. The New York Bar i
 - sted: 35.66383, 139.71068
 - google: ChIJLcQt9l-LGGARmEwh2ybCuv0
 - nettside: https://tworooms.jp/
+- booking: https://www.tablecheck.com/shops/tworooms/reserve
 - status: onskeliste
 Aoyama
 

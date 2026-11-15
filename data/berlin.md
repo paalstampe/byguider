@@ -24,6 +24,7 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
   - google: <Place ID eller lenke fra Google Maps>   gjør at «Google Maps» i infoboksen viser stedets side
                                 (uten: søk på navnet ved koordinaten). Claude kan hente Place ID-er.
   - nettside: https://…          stedets egen side — gir lenken «Nettside» i infoboksen
+  - booking: https://…           bookingsiden (bordbestilling) — gir lenken «Bestill bord» etter «Nettside»
   - les: Financial Times | Tittel | https://…   artikkel: «Artikkel fra Financial Times: Tittel» sist i infoboksen. Kan gjentas.
   - status: onskeliste          ønskeliste: ikke besøkt ennå. Vises nederst i lista og som eget
                                 kartlag (av til man slår det på). ★ = førstevalg.
@@ -87,6 +88,7 @@ Kastanienallee og Oderberger Straße med kaféer, små butikker og Prater, Berli
 - sted: 52.53144, 13.39462
 - google: ChIJQ2g8mO9RqEcRpOSC8NXG7io
 - nettside: https://katzorange.com/
+- booking: https://www.opentable.de/booking/restref/availability?rid=92154
 Mitte
 
 Restaurant og bar i et teglsteinsbygg fra 1800-tallet, med gårdsplass. Bergstraße 22.
@@ -98,6 +100,7 @@ Restaurant and bar in a 19th-century brick building, with a courtyard. 22 Bergst
 - sted: 52.53821, 13.41737
 - google: ChIJB9cvwi9PqEcRhxxkPEIBI7I
 - nettside: https://november-brasserie.com/
+- booking: https://bookings.zenchef.com/results?rid=384534
 - status: onskeliste
 Kollwitzkiez
 
@@ -587,6 +590,7 @@ Burgers from a former public toilet under the U-Bahn viaduct at Schlesisches Tor
 - sted: 52.50136, 13.41592
 - google: ChIJCwbEVjJOqEcRlFGm69_dBJk
 - nettside: https://www.ora.berlin/
+- booking: https://ora.berlin/book/
 Oranienstraße
 
 Restaurant og vinbar i et apotek fra 1800-tallet ved Oranienplatz, med det gamle inventaret bevart. Sesongbaserte småretter og lang vinliste. Rett over plassen fra Orania. Oranienplatz 14.
@@ -598,6 +602,7 @@ Restaurant and wine bar in a 19th-century pharmacy on Oranienplatz, with the old
 - sted: 52.50260, 13.41399
 - google: ChIJbUbbajJOqEcRawilLsv27Wk
 - nettside: https://maxundmoritzberlin.de/
+- booking: https://maxundmoritzberlin.de/reservierung/
 Kreuzberg
 
 Gammel Berlin-gaststätte fra 1902 med klassisk Berlin-mat som Königsberger Klopse og Eisbein. Old school og ujålete. Oranienstraße 162.
@@ -609,6 +614,7 @@ Old Berlin Gaststätte from 1902, serving classic Berlin food such as Königsber
 - sted: 52.49646, 13.42088
 - google: ChIJ74LRF8tPqEcRNeBJAS2qxaQ
 - nettside: https://www.restaurant-horvath.de/
+- booking: https://www.opentable.de/booking/restref/availability?rid=14250
 - status: onskeliste
 Kreuzberg
 
@@ -621,6 +627,7 @@ Sebastian Frank’s restaurant on the Landwehrkanal, with two Michelin stars and
 - sted: 52.50073, 13.43400
 - google: ChIJkUK660tOqEcRuCui4omy28c
 - nettside: https://jolesch.de/
+- booking: https://bookings.zenchef.com/results?rid=376100
 - status: onskeliste
 Oranienstraße
 
@@ -645,6 +652,7 @@ Ramen, and nothing else. Graefestraße 11.
 - sted: 52.50659, 13.39144
 - google: ChIJCYBSVNFRqEcR6x9hA_gZsQc
 - nettside: https://sale-e-tabacchi.de/
+- booking: https://sale-e-tabacchi.de/en/home/#reservation
 Kreuzberg
 
 Italiensk klassiker der journalister og avisfolk fra strøket spiser, med hage om sommeren. Rudi-Dutschke-Straße 25.
@@ -656,6 +664,7 @@ Italian classic where the area’s journalists and newspaper people eat, with a 
 - sted: 52.48968, 13.41360
 - google: ChIJ95zYL89PqEcRlyKANk7ORQQ
 - nettside: https://www.tuluslotrek.de/
+- booking: https://widget.formitable.com/side/en/ee5850e2/book
 - status: onskeliste
 Graefekiez
 
@@ -1035,6 +1044,7 @@ Stille plass med trær rundt St. Ludwig-kirken, med kaféer og restauranter, og 
 - sted: 52.50348, 13.32409
 - google: ChIJ_au8f_tQqEcRikAGBGRhutc
 - nettside: https://cassambalis.de/
+- booking: https://cassambalis.de/reservierung/
 - status: onskeliste
 Savignyplatz
 
@@ -1047,6 +1057,7 @@ Greek-Mediterranean restaurant with art on the walls. Grolmanstraße 35.
 - sted: 52.50310, 13.31999
 - google: ChIJxU0HPxdRqEcRCW0jD8AnWbg
 - nettside: https://thecatch.berlin/
+- booking: https://bookings.zenchef.com/results?rid=384535
 - status: onskeliste
 Savignyplatz
 

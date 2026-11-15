@@ -24,6 +24,7 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
   - google: <Place ID eller lenke fra Google Maps>   gjør at «Google Maps» i infoboksen viser stedets side
                                 (uten: søk på navnet ved koordinaten). Claude kan hente Place ID-er.
   - nettside: https://…          stedets egen side — gir lenken «Nettside» i infoboksen
+  - booking: https://…           bookingsiden (bordbestilling) — gir lenken «Bestill bord» etter «Nettside»
   - les: Financial Times | Tittel | https://…   artikkel: «Artikkel fra Financial Times: Tittel» sist i infoboksen. Kan gjentas.
   - status: onskeliste          ønskeliste: ikke besøkt ennå. Vises nederst i lista og som eget
                                 kartlag (av til man slår det på). ★ = førstevalg.
@@ -88,6 +89,7 @@ Thai, curries.
 - sted: 13.73915, 100.50849
 - google: ChIJd7grWxeZ4jAR8KwClMpGmHo
 - nettside: http://www.restaurantpotong.com/
+- booking: http://www.restaurantpotong.com/reservation
 - status: onskeliste
 Chinatown
 
@@ -306,6 +308,7 @@ Sentrum, med Siam, Ratchaprasong og Ploenchit, kunstsenteret BACC og Lumphini-pa
 - sted: 13.72690, 100.53746
 - google: ChIJP-vfELmZ4jARGlXpoG1esoU
 - nettside: https://samrubsamrubthai.com/
+- booking: https://www.tablecheck.com/en/samrub-samrub-thai/reserve
 - status: onskeliste
 Silom
 

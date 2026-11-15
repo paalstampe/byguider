@@ -25,6 +25,7 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
   - google: <Place ID eller lenke fra Google Maps>   gjør at «Google Maps» i infoboksen viser stedets side
                                 (uten: søk på navnet ved koordinaten). Claude kan hente Place ID-er.
   - nettside: https://…          stedets egen side — gir lenken «Nettside» i infoboksen
+  - booking: https://…           bookingsiden (bordbestilling) — gir lenken «Bestill bord» etter «Nettside»
   - les: Financial Times | Tittel | https://…   artikkel: «Artikkel fra Financial Times: Tittel» sist i infoboksen. Kan gjentas.
   - status: onskeliste          ønskeliste: ikke besøkt ennå. Vises nederst i lista og som eget
                                 kartlag (av til man slår det på). ★ = førstevalg.
@@ -138,6 +139,7 @@ Small Italian restaurant run by chef Carlo Adib, who had his own restaurant in P
 - sted: 30.05290, 31.22739
 - google: ChIJqxTyxNxAWBQRUrfEbfzz-BY
 - nettside: http://pier88group.com/
+- booking: https://pier88group.com/reservations/
 Zamalek
 
 Italiensk på en båt ved Zamalek-bredden, med bord rett over Nilen. Best om kvelden. Saray El Gezira.
@@ -1007,6 +1009,7 @@ Fra Bab al-Futuh til Sultan Hassan-moskeen, gjennom hele den gamle byen.
 - sted: 29.97833, 31.12427
 - google: ChIJES6Cx_hPWBQR0pU4NDzaCDg
 - nettside: https://khufus.com/
+- booking: https://khufus.com/reservations
 Pyramidene
 
 Mostafa Seifs moderne egyptiske restaurant på selve pyramideplatået, med terrasse mot pyramidene. Kokkeeid, og på MENA’s 50 Best. Bestill bord til lunsj etter besøket.
