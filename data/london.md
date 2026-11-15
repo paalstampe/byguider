@@ -235,6 +235,7 @@ Mexican with British produce, 9 Seymour Street.
 - sted: 51.50849, -0.14147
 - google: ChIJtwn55ikFdkgRAvOuPIWeLM0
 - nettside: https://gymkhanalondon.com/
+- booking: https://www.sevenrooms.com/explore/gymkhana/reservations/create/search/
 - åpent: ma–sø 12–14.30 + 17.30–22.15
 - åpent-kilde: Google, nov. 2026
 Mayfair
@@ -294,6 +295,7 @@ Above The Audley pub, 41–43 Mount Street.
 - sted: 51.50652, -0.14720
 - google: ChIJAzNI_8sFdkgRbRvnLqAvUJY
 - nettside: https://noblerot.co.uk/
+- booking: https://www.sevenrooms.com/explore/noblerotmayfair/reservations/create/search/
 - åpent: ma–lø 12–23
 - åpent-kilde: Google, nov. 2026
 Mayfair

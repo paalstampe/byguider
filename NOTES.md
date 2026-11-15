@@ -23,8 +23,8 @@ Sist oppdatert: 13. november 2026. Historikk per dato står i ARKIV.md.
 - Publiseringen er felles for alle tre repoene (publiser.yml i paalstampe.github.io), hopper over uendret innhold og publiserer ikke dokumentasjon.
 - 12.11.: CLAUDE.md kortet ned til 136 linjer. Google Maps-oppskriftene står nå i ny-by-skillen (PR #122), kildene for
   nabolagsomriss per by i HANDOVER, punkt 4. Løsninger som deles med reisekartet står i reiseplanleggingens HANDOVER, «Felles med byguidene».
-- 15.11.: Restauranter har fått `booking:` (bookingsiden; lenken «Bestill bord» på egen linje under «Nettside»), 257 av 331.
-  Uten: steder som bare tar walk-in, bare har Instagram/Facebook, eller der lenken ikke kunne finnes (bl.a. Gymkhana, Noble Rot, Faros
+- 15.11.: Restauranter har fått `booking:` (bookingsiden; lenken «Bestill bord» på egen linje under «Nettside»), 260 av 331.
+  Uten: steder som bare tar walk-in, bare har Instagram/Facebook, eller der lenken ikke kunne finnes (bl.a. Faros
   med utløpt sertifikat, Sachi med nedlagt bookingside). Campobaja (Mexico City): domenet er parkert, nettsiden bør byttes.
 - Ingen åpne grener utenom `main`.
 

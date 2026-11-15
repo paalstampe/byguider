@@ -310,6 +310,7 @@ Small plates. Universitetsgata 9.
 - sted: 59.90954, 10.74026
 - google: ChIJoYdyGlVvQUYRQiTpfSvhOQs
 - nettside: https://www.restaurantsavage.no/
+- booking: https://savage.superbexperience.com/
 - åpent: ti–lø 18–00
 - åpent-kilde: nettside og Google, nov. 2026
 Kvadraturen
