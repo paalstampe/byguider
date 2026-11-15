@@ -35,6 +35,7 @@ Stubb og bilder er kode → egen gren `ny-by-<id>`. Data og tekst kan ligge på 
 - Steder: slå dem opp i bolker med `slaopp.js` i denne mappa (les kommentaren øverst): ett kall per sted gir navn, område,
   koordinater, Place ID, vurdering, nettside, adresse og om stedet er stengt, uten å åpne hvert sted. 80–100 steder tar
   noen minutter. Sjekk at navn og område stemmer, og ta bare med stedets egen nettside (ev. Instagram) – fjern utm-parametre.
+  Restauranter: legg også inn `booking:` med bookingsiden (se CLAUDE.md, Data).
   Steder fra Pål som ikke finnes i byen, legges ikke inn: spør Pål og skriv dem under Åpne spørsmål i NOTES.md.
 - Åpningstider for restauranter (og gjerne kaféer og barer): `- åpent:` og `- åpent-kilde:` (format i Oslo-fila og HANDOVER).
   Stedets egen nettside går foran Google, som ofte er utdatert; Google brukes når nettsiden mangler tider.

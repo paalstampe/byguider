@@ -108,6 +108,8 @@ Playwright med `colorScheme: 'light'` og `'dark'`. Ta bildene fra stam.pe etter 
 - ★ etter navnet = favoritt.
 - Nye steder: hent alltid Google Place ID og koordinater fra Google Maps; bruk OpenStreetMap bare som reserve, og si fra
   hvis du er usikker på plasseringen. Ta bare med stedets egen nettside (ev. Instagram), ikke bookingtjenester eller guider.
+  Restauranter får i tillegg `booking:` med selve bookingsiden (SevenRooms, OpenTable, Resy, Zenchef o.l., eller stedets egen side
+  for bordbestilling) når de tar imot bestillinger; finn den på nettsiden (curl, ellers nettleserpanelet) og velg riktig filial.
   Oppskriftene (Place ID fra plass-URL, `slaopp.js`, kortlenker, nettside og adresse, delte lister) står i ny-by-skillen,
   «Google Maps-oppskrifter». `python3 .claude/googlesjekk.py` (`--tider`, `--lagre`) melder stengte steder og endrede tider.
 - Restauranter, kaféer, butikker o.l.: første linje i notatet (og i en:) er området/nabolaget stedet ligger i
