@@ -19,7 +19,7 @@ Sist oppdatert: 15. november 2026. Historikk per dato står i ARKIV.md.
 - Skyjobber: månedlig sjekk (1. hver måned kl. 06; stengte steder, nettsider og bookinglenker, https://claude.ai/code/routines/trig_01DvX7PTCcLcRy2QmYL2Jrcj)
   og halvårlig tidssjekk (15.3. og 15.9.; `.claude/googlesjekk.py --tider`, https://claude.ai/code/routines/trig_012amhPG41tyfMW5ic5vLbG6).
 - Publiseringen er felles for alle tre repoene (publiser.yml i paalstampe.github.io), hopper over uendret innhold og publiserer ikke dokumentasjon.
-- 15.11.: Restauranter har fått `booking:` (bookingsiden; lenken «Bestill bord» på egen linje under «Nettside»), 260 av 331.
+- 15.11.: Restauranter har fått `booking:` (bookingsiden; lenken «Bestill bord» mellom «Nettside» og «Del» i infoboksen), 260 av 331.
   Uten: steder som bare tar walk-in, bare har Instagram/Facebook, eller der lenken ikke kunne finnes (bl.a. Faros
   med utløpt sertifikat, Sachi med nedlagt bookingside). Campobaja (Mexico City): domenet er parkert, nettsiden bør byttes.
 - Ingen åpne grener utenom `main`.
@@ -88,5 +88,6 @@ Hele loggen står i ARKIV.md. Nye beslutninger skrives her og flyttes dit ved ne
 - 2026-11-12: «Nå» fjernet fra Åpent-filteret (lite nyttig, sa Pål). «Nær meg» skjules når posisjonen er kjent og utenfor byen, der den ikke gjør noe nyttig (PR #119). Kommer tilbake først ved ny posisjon i byen, så posisjonen ikke følges hele tiden.
 - 2026-11-12: Løsninger som finnes i både byguidene og reisekartet (kartbevegelse, søk, infoboks, språk, offline m.m.), skal være like; lista står i reiseplanleggingens HANDOVER. Reisekartet manglet søkekrysset byguidene hadde.
 - 2026-11-12: CLAUDE.md holdes under 150 linjer: oppskrifter som bare trengs i bestemte oppgaver, står i skillen eller HANDOVER (Google Maps-oppskrifter i ny-by, nabolagskilder i HANDOVER), mens regelen står igjen i CLAUDE.md.
-- 2026-11-15: Restauranter får `booking:` med selve bookingsiden (også bookingtjenester), så man slipper å lete på nettsiden. «Bestill bord» står på egen linje i infoboksen, fordi fire lenker ikke får plass på én linje (~65 px for bredt). Den månedlige skyjobben sjekker også bookinglenkene, men regner bare tydelige feil som brudd, siden bookingtjenestene ofte svarer 200 eller blokkerer curl.
+- 2026-11-15: Restauranter får `booking:` med selve bookingsiden (også bookingtjenester), så man slipper å lete på nettsiden. Den månedlige skyjobben sjekker også bookinglenkene, men regner bare tydelige feil som brudd, siden bookingtjenestene ofte svarer 200 eller blokkerer curl.
+- 2026-11-15: Infoboksens lenker står på to linjer med tre hver: kartet (Veibeskrivelse · Google Maps · Zoom inn), så stedet selv (Nettside · Bestill bord · Del). Før ble det tre linjer når et sted hadde bordbestilling.
 - 2026-11-15: `.claude/finnbooking.py` foreslår bookinglenker ut fra nettsiden (PR #127). Treffer samme lenke som håndplukket i 167 av 307; JavaScript-sider (ca. 30 %) må fortsatt sjekkes i nettleserpanelet.
