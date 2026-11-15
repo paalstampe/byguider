@@ -1112,6 +1112,17 @@ Smørbrød. Torggata 21B.
 - en: Sentrum
 Sandwiches. Torggata 21B.
 
+### Pust
+- sted: 59.93045, 10.71541
+- google: ChIJNzwWDtttQUYRVGZzbCiLa6Q
+- nettside: https://pustkaffebar.no/
+- åpent: ma–fr 08–18, lø–sø 10–17
+- åpent-kilde: nettside og Google, nov. 2026
+Majorstuen
+Kaffebar. Slemdalsveien 1.
+- en: Majorstuen
+Coffee bar. Slemdalsveien 1.
+
 ## Barer
 
 ### 200

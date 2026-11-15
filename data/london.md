@@ -1335,6 +1335,78 @@ Italiensk og peruansk, Mercer Street 20.
 
 Italian and Peruvian, 20 Mercer Street.
 
+### Cassette
+- sted: 51.51104, -0.12260
+- google: ChIJ_7aaZQAFdkgRtnICtsOqDtg
+- nettside: https://cassettelondon.co.uk/
+- status: onskeliste
+- åpent: ma–lø 12–14.30 + 17.30–21.30, sø 12–14.30 + 17.30–20
+- åpent-kilde: Google, nov. 2026
+Covent Garden
+
+Restaurant, Maiden Lane 42.
+
+- en: Covent Garden
+
+Restaurant, 42 Maiden Lane.
+
+### Chelsea Counter
+- sted: 51.49201, -0.15979
+- google: ChIJZQ9fhLcFdkgRbvYkeombe5I
+- nettside: https://www.chelseacounter.com/
+- status: onskeliste
+- åpent: ma 12–00, ti 12–00.30, on–lø 12–00, sø 12–22
+- åpent-kilde: Google, nov. 2026
+Chelsea
+
+Restaurant, Cadogan Gardens 39.
+
+- en: Chelsea
+
+Restaurant, 39 Cadogan Gardens.
+
+### Clarette ★
+- sted: 51.51857, -0.15375
+- google: ChIJkz73i80adkgR0nKOUXm-lJU
+- nettside: https://www.clarettelondon.com/
+- åpent: ma 17–23, ti–lø 12–23
+- åpent-kilde: nettside og Google, nov. 2026
+Marylebone
+
+Sitt i baren i første etasje. Veldig gode barsnacks, cocktails og vin (f.eks. en Château Margaux-flight). Blandford Street 44.
+
+- en: Marylebone
+
+Sit at the bar on the ground floor. Excellent bar snacks, cocktails and wine (try a Château Margaux flight). 44 Blandford Street.
+
+### Colbert
+- sted: 51.49278, -0.15657
+- google: ChIJGZHDPhYFdkgRys_AGmXvKsk
+- nettside: https://colbertrestaurant.com/
+- åpent: ma–fr 08–22.30, lø 08–22, sø 08.30–21.30
+- åpent-kilde: Google, nov. 2026
+Chelsea
+
+Jeremy Kings brasserie, blitt en institusjon på Sloane Square. Bedre for atmosfæren enn maten. Topp til lunsj. Sloane Square 50–52.
+
+- en: Chelsea
+
+Jeremy King’s brasserie, now an institution on Sloane Square. Better for the atmosphere than the food. Great for lunch. 50–52 Sloane Square.
+
+### Martino’s
+- sted: 51.49226, -0.15692
+- google: ChIJVQn-fwAFdkgR0qDB87PXgRk
+- nettside: https://www.martinoslondon.com/
+- åpent: ma–fr 08–00.30, lø 09–00.30, sø 09–00
+- åpent-kilde: Google, nov. 2026
+Chelsea
+
+Halvjålete italiener på Sloane Square. Ta gjerne lunsj i baren. Sloane Square 37.
+
+- en: Chelsea
+
+Slightly flashy Italian on Sloane Square. Have lunch at the bar. 37 Sloane Square.
+
 ## Kaféer
 
 ### Gail's
@@ -3184,6 +3256,15 @@ Den trekantede plenen med puben The White Horse, og butikker og kaféer langs Ne
 - en: Fulham
 
 The triangular green with the White Horse pub, and shops and cafés along New King's Road.
+
+### Amersham
+- sted: 51.6668, -0.6175
+- google: ChIJK4lC5l1ddkgRiv7zkNJku1M
+- gater: High Street, Broadway, Whielden Street
+- status: onskeliste
+- utenfor: ja
+Markedsby i Buckinghamshire ved endestasjonen på Metropolitan line, ca. 40 km nordvest for sentrum. Old Town har en bred High Street med gamle hus, puber og Market Hall fra 1682.
+- en: Market town in Buckinghamshire at the end of the Metropolitan line, about 40 km north-west of the centre. The Old Town has a broad High Street with old houses, pubs and a Market Hall from 1682.
 
 ### Richmond
 - sted: 51.4673, -0.2995
