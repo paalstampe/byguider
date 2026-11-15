@@ -6,10 +6,8 @@ Eldre status per dato og hele beslutningsloggen ligger i ARKIV.md (lastes ikke a
 
 ## Status nå
 
-Sist oppdatert: 13. november 2026. Historikk per dato står i ARKIV.md.
+Sist oppdatert: 15. november 2026. Historikk per dato står i ARKIV.md.
 
-- 13.11.: `.claude/axe.sh <url> [bredde høyde] [js=<kode>]` kjører axe-core via Playwright i lys og mørk modus (felles fil fra
-  claude-oppsett, synkes som hookene). Erstatter axe i nettleserpanelet, som auto-modus avviste. Ingen brudd ved første kjøring.
 - Live på https://stam.pe/byguider/ med seks byer: London (282 oppføringer, 118 på ønskelista), Oslo (133, 23), New York (94, 2),
   Nice (74, 3), Tokyo (86, 7), Bangkok (40, 4). Skjulte byer (`"skjult": true`): Berlin, Mexico City, Kairo og Luxor.
 - Appen er i hovedsak ferdig: MapLibre med papirpalett og mørk modus, nabolag med presise omriss, kjerne og gater,
@@ -18,11 +16,9 @@ Sist oppdatert: 13. november 2026. Historikk per dato står i ARKIV.md.
 - Arbeidet nå er data: nye steder, favoritter, notater, nabolagsomriss og åpningstider.
 - Åpningstider: alle restauranter i Oslo, London og Nice har `åpent:` og `åpent-kilde:` (filteret «Åpent: Søndag · Mandag»,
   vises bare når valgt kategori har tider). `tidssone:` i frontmatter.
-- Skyjobber: månedlig sjekk (1. hver måned kl. 06; stengte steder og nettsider, https://claude.ai/code/routines/trig_01DvX7PTCcLcRy2QmYL2Jrcj)
+- Skyjobber: månedlig sjekk (1. hver måned kl. 06; stengte steder, nettsider og bookinglenker, https://claude.ai/code/routines/trig_01DvX7PTCcLcRy2QmYL2Jrcj)
   og halvårlig tidssjekk (15.3. og 15.9.; `.claude/googlesjekk.py --tider`, https://claude.ai/code/routines/trig_012amhPG41tyfMW5ic5vLbG6).
 - Publiseringen er felles for alle tre repoene (publiser.yml i paalstampe.github.io), hopper over uendret innhold og publiserer ikke dokumentasjon.
-- 12.11.: CLAUDE.md kortet ned til 136 linjer. Google Maps-oppskriftene står nå i ny-by-skillen (PR #122), kildene for
-  nabolagsomriss per by i HANDOVER, punkt 4. Løsninger som deles med reisekartet står i reiseplanleggingens HANDOVER, «Felles med byguidene».
 - 15.11.: Restauranter har fått `booking:` (bookingsiden; lenken «Bestill bord» på egen linje under «Nettside»), 260 av 331.
   Uten: steder som bare tar walk-in, bare har Instagram/Facebook, eller der lenken ikke kunne finnes (bl.a. Faros
   med utløpt sertifikat, Sachi med nedlagt bookingside). Campobaja (Mexico City): domenet er parkert, nettsiden bør byttes.
@@ -30,6 +26,8 @@ Sist oppdatert: 13. november 2026. Historikk per dato står i ARKIV.md.
 
 ## Neste steg
 
+- Bookinglenker: Campobaja (Mexico City) har parkert domene som nettside; finn ny side eller Instagram. Faros (London) har utløpt
+  sertifikat. Nye restauranter skal ha `booking:` (CLAUDE.md, Data).
 - Åpningstider: kaféer og barer i Oslo, deretter New York, Tokyo, Bangkok og de skjulte byene (sett `tidssone:` i frontmatter). Tidene bør sjekkes et par ganger
   i året (sommerstengt, nye tider); den halvårlige tidssjekken (15.3. og 15.9.) gjør det.
 - Gjøremål (Pål sa ja 5.11.): endre `oppstart.sh` i claude-oppsett så den i skyøkter tilbakestiller lokal `main` til
@@ -91,3 +89,4 @@ Hele loggen står i ARKIV.md. Nye beslutninger skrives her og flyttes dit ved ne
 - 2026-11-12: «Nå» fjernet fra Åpent-filteret (lite nyttig, sa Pål). «Nær meg» skjules når posisjonen er kjent og utenfor byen, der den ikke gjør noe nyttig (PR #119). Kommer tilbake først ved ny posisjon i byen, så posisjonen ikke følges hele tiden.
 - 2026-11-12: Løsninger som finnes i både byguidene og reisekartet (kartbevegelse, søk, infoboks, språk, offline m.m.), skal være like; lista står i reiseplanleggingens HANDOVER. Reisekartet manglet søkekrysset byguidene hadde.
 - 2026-11-12: CLAUDE.md holdes under 150 linjer: oppskrifter som bare trengs i bestemte oppgaver, står i skillen eller HANDOVER (Google Maps-oppskrifter i ny-by, nabolagskilder i HANDOVER), mens regelen står igjen i CLAUDE.md.
+- 2026-11-15: Restauranter får `booking:` med selve bookingsiden (også bookingtjenester), så man slipper å lete på nettsiden. «Bestill bord» står på egen linje i infoboksen, fordi fire lenker ikke får plass på én linje (~65 px for bredt). Den månedlige skyjobben sjekker også bookinglenkene, men regner bare tydelige feil som brudd, siden bookingtjenestene ofte svarer 200 eller blokkerer curl.

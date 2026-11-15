@@ -191,6 +191,12 @@ Flyttet ut av NOTES.md 11.11.2026 så den holder seg kort (den lastes inn i hver
   Museum der Stille og Absinthdepot til ønskelista; Firmament og COOP Anti-War Café fjernet.
 - Ingen åpne grener utenom `main` (sjekket 4.11.).
 
+Fra Status nå (flyttet 15.11.):
+- 13.11.: `.claude/axe.sh <url> [bredde høyde] [js=<kode>]` kjører axe-core via Playwright i lys og mørk modus (felles fil fra
+  claude-oppsett, synkes som hookene). Erstatter axe i nettleserpanelet, som auto-modus avviste. Ingen brudd ved første kjøring.
+- 12.11.: CLAUDE.md kortet ned til 136 linjer. Google Maps-oppskriftene står nå i ny-by-skillen (PR #122), kildene for
+  nabolagsomriss per by i HANDOVER, punkt 4. Løsninger som deles med reisekartet står i reiseplanleggingens HANDOVER, «Felles med byguidene».
+
 ## Publisering (fra Neste steg, 5.11.)
 
 - Publiseringen er felles for alle tre: `pages.yml` kaller `paalstampe/paalstampe.github.io/.github/workflows/publiser.yml@main`
