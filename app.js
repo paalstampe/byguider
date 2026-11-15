@@ -1551,18 +1551,20 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     const o = id && oppslagFraId(id);
     const start = o && o.erLinje && o.f.geometry ? o.f.geometry.coordinates[0] : null;
     const vei = start ? veiLenke(p, { lng: start[0], lat: start[1] }, true) : veiLenke(p, latlng);
-    // Linjer som hver får plass i boksen: lenkene ut av guiden (og ev. bordbestilling), så lenkene i kartet.
-    const ut = [
-      vei ? '<a class="pop-lenke" href="' + vei + '" target="_blank" rel="noopener">' + t('veibeskrivelse') + '</a>' : '',
-      lenke ? '<a class="pop-lenke" href="' + lenke + '" target="_blank" rel="noopener">' + t('aapneMaps') + '</a>' : '',
-      p.nettside ? '<a class="pop-lenke" href="' + esc(p.nettside) + '" target="_blank" rel="noopener">' + t('nettside') + '</a>' : ''
+    // To linjer som hver får plass i boksen: kartet (veibeskrivelse, Google Maps, zoom), så stedet selv
+    // (nettside, bordbestilling, deling).
+    const lenkeUt = (href, tekst) => '<a class="pop-lenke" href="' + href + '" target="_blank" rel="noopener">' + t(tekst) + '</a>';
+    const knapp = (klasse, tekst) => '<button type="button" class="pop-lenke ' + klasse + '" data-id="' + esc(id) + '">' + t(tekst) + '</button>';
+    const kart = [
+      vei && lenkeUt(vei, 'veibeskrivelse'),
+      lenke && lenkeUt(lenke, 'aapneMaps'),
+      id && knapp('pop-zoom', 'zoomInn')
     ].filter(Boolean);
-    // «Bestill bord» får egen linje: fire lenker får ikke plass på den første.
-    const bestill = p.booking ? ['<a class="pop-lenke" href="' + esc(p.booking) + '" target="_blank" rel="noopener">' + t('booking') + '</a>'] : [];
-    const inne = id ? [
-      '<button type="button" class="pop-lenke pop-zoom" data-id="' + esc(id) + '">' + t('zoomInn') + '</button>',
-      '<button type="button" class="pop-lenke pop-del" data-id="' + esc(id) + '">' + t('del') + '</button>'
-    ] : [];
+    const stedet = [
+      p.nettside && lenkeUt(esc(p.nettside), 'nettside'),
+      p.booking && lenkeUt(esc(p.booking), 'booking'),
+      id && knapp('pop-del', 'del')
+    ].filter(Boolean);
     const linje = l => l.length ? '<p class="pop-lenker">' + l.join('<span class="pop-skille">·</span>') + '</p>' : '';
     // «Artikkel fra Financial Times: Tittel» — tittelen er lenken
     const les = (p.les || []).map(l =>
@@ -1581,7 +1583,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       (notat ? '<p class="pop-notat">' + notatHtml(notat) + '</p>' : '') +
       aapentHtml(p) +
       les +
-      linje(ut) + linje(bestill) + linje(inne);
+      linje(kart) + linje(stedet);
   }
 
   /* ---------- oppslag fra data ---------- */
