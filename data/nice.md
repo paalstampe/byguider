@@ -25,6 +25,7 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
   - google: <Place ID eller lenke fra Google Maps>   gjør at «Google Maps» i infoboksen viser stedets side
                                 (uten: søk på navnet ved koordinaten). Claude kan hente Place ID-er.
   - nettside: https://…          stedets egen side — gir lenken «Nettside» i infoboksen
+  - booking: https://…           bookingsiden (bordbestilling) — gir lenken «Bestill bord» etter «Nettside»
   - les: Financial Times | Tittel | https://…   artikkel: «Artikkel fra Financial Times: Tittel» sist i infoboksen. Kan gjentas.
   - status: onskeliste          ønskeliste: ikke besøkt ennå. Vises nederst i lista og som eget
                                 kartlag (av til man slår det på). ★ = førstevalg.
@@ -68,6 +69,7 @@ Small plates to share. 11 Rue du Pont-Vieux.
 - sted: 43.69562, 7.27049
 - google: ChIJv78aqqrbzRIRv43Z2SPIznE
 - nettside: https://noto-nice.com/
+- booking: https://eu.sevenrooms.com/explore/notonice/reservations/create/search/
 - åpent: ma–sø 12–15 + 19.30–02
 - åpent-kilde: Google, nov. 2026
 Vieux-Nice
@@ -82,6 +84,7 @@ Sicilian. 20 Rue Saint-François de Paule.
 - sted: 43.69605, 7.27188
 - google: ChIJEzRKyqPazRIRJGVgSPuxt5g
 - nettside: https://www.finegueule.fr/
+- booking: https://finegueule.fr/reservation/
 - åpent: ti–lø 12–14 + 19.30–22
 - åpent-kilde: nettside, nov. 2026
 Vieux-Nice
@@ -110,6 +113,7 @@ Niçoise and Mediterranean. 11 Rue Saint-François de Paule.
 - sted: 43.69746, 7.27838
 - google: ChIJje0pesTbzRIR2yKcPzPf1cM
 - nettside: https://www.marriott.com/en-us/hotels/ncehc-hotel-du-couvent-a-luxury-collection-hotel-nice-france/dining/
+- booking: https://www.sevenrooms.com/reservations/lebistrotdesserruriersncehc
 - åpent: ma–sø 12–14.30 + 18.30–22
 - åpent-kilde: Google, nov. 2026
 Vieux-Nice
@@ -301,6 +305,7 @@ Kvarteret mellom Place Garibaldi og havnen, kalt Le Petit Marais. Smale gater me
 - sted: 43.69980, 7.28484
 - google: ChIJ4z-TInPbzRIRTk5V0X5EZ8k
 - nettside: https://janonline.com/le-bistrot-de-jan/
+- booking: https://janonline.com/reservations/
 - åpent: ma–sø 12–15 + 19–00.30
 - åpent-kilde: Google, nov. 2026
 Le Petit Marais
@@ -327,6 +332,7 @@ Open every day.
 - sted: 43.70042, 7.28501
 - google: ChIJB7NnzyHbzRIRtO8fkFwdBl0
 - nettside: https://lesagitateurs.com/pirouette
+- booking: https://bookings.zenchef.com/results?rid=363313&pid=1001
 - åpent: ma 18.30–23.30, to–fr 18.30–23.30, lø–sø 12–15 + 18.30–23.30
 - åpent-kilde: nettside, nov. 2026
 Le Petit Marais
@@ -341,6 +347,7 @@ Bistro from Les Agitateurs. 34 Rue Bonaparte.
 - sted: 43.69986, 7.28490
 - google: ChIJ7cguWLjazRIR0sVOtnZhvUM
 - nettside: https://janonline.com/restaurantjan/
+- booking: https://bookings.zenchef.com/results?rid=370546
 - åpent: ti–lø 19–22
 - åpent-kilde: Google, nov. 2026
 Le Petit Marais
@@ -351,6 +358,7 @@ Fine dining.
 - sted: 43.70052, 7.28435
 - google: ChIJk76xaCnbzRIRZRqji8u5qxc
 - nettside: https://www.lesagitateurs.com/
+- booking: https://bookings.zenchef.com/results?rid=356570
 - åpent: ma 19–21.30, to–fr 19–21.30, lø–sø 12–14 + 19–21.30
 - åpent-kilde: Google, nov. 2026
 Le Petit Marais
@@ -361,6 +369,7 @@ Fine dining.
 - sted: 43.69904, 7.28570
 - google: ChIJC-GpTdnbzRIRyzHwhjXfYuU
 - nettside: https://restaurant-epicentre.com/
+- booking: https://bookings.zenchef.com/results?rid=376303
 - åpent: ma 19.30–22.30, to–sø 19.30–22.30
 - åpent-kilde: Google, nov. 2026
 Le Petit Marais
@@ -371,6 +380,7 @@ Fine dining.
 - sted: 43.69979, 7.28439
 - google: ChIJRfplVQjbzRIRpBldOM3IXjE
 - nettside: https://tinatrattoria.com/tina-trattoria
+- booking: https://bookings.zenchef.com/results?rid=386201
 - åpent: on–sø 12–14.30 + 19–22.30
 - åpent-kilde: nettside, nov. 2026
 Le Petit Marais
@@ -385,6 +395,7 @@ Italian trattoria. 16 Rue Lascaris.
 - sted: 43.70151, 7.27940
 - google: ChIJj0UwwrXbzRIR-tCPIbLPlYY
 - nettside: https://www.zenirorestaurants.com/
+- booking: https://www.sevenrooms.com/explore/restaurantzeniro/reservations/create/search/
 - åpent: ma–sø 19–22.30
 - åpent-kilde: nettside, nov. 2026
 Le Port
@@ -399,6 +410,7 @@ Japanese restaurant and bar. 64 Boulevard Risso.
 - sted: 43.70008, 7.28428
 - google: ChIJ6W_m91HbzRIRKRypInZwg5k
 - nettside: https://lesagitateurs.com/cagnard
+- booking: https://bookings.zenchef.com/results?rid=381896
 - åpent: ma 10–14 + 18.30–21.30, to–sø 10–14 + 18.30–21.30
 - åpent-kilde: nettside, nov. 2026
 Le Petit Marais
@@ -413,6 +425,7 @@ Seasonal sharing plates, from Les Agitateurs. 11 Rue François Guisol.
 - sted: 43.70068, 7.28469
 - google: ChIJn3fG3QDbzRIR_18otd8PNn4
 - nettside: https://www.salette-restaurant.fr/
+- booking: https://bookings.zenchef.com/results?rid=370140&pid=1001
 - åpent: ti 19.15–21.30, on 12–13.30 + 19.15–21.30, to–fr 19.15–21.30, lø 12–13.30 + 19.15–21.30
 - åpent-kilde: Google, nov. 2026
 Le Port
@@ -441,6 +454,7 @@ Wine bar from Peixes. 8 Rue Catherine Ségurane.
 - sted: 43.70168, 7.27569
 - google: ChIJ8V2bSaXazRIRQW52wdexwdY
 - nettside: https://restaurant-eau-de-vie-nice.fr/
+- booking: https://restaurant-eau-de-vie-nice.fr/fr/booking
 - åpent: ma–to 12–13.30 + 19–21.30, fr 12–13.30 + 19–22, lø 19–22
 - åpent-kilde: nettside, nov. 2026
 Garibaldi
@@ -455,6 +469,7 @@ Modern French. 11 Rue Delille.
 - sted: 43.70071, 7.28409
 - google: ChIJi8Q6NtnbzRIRU8p6NkexOrk
 - nettside: https://lesagitateurs.com/magma
+- booking: https://bookings.zenchef.com/results?rid=381895
 - åpent: ti–to 18.30–21.30, fr–lø 12–14 + 18.30–21.30
 - åpent-kilde: nettside, nov. 2026
 Le Port
@@ -469,6 +484,7 @@ Asian fusion from Les Agitateurs. 31 Rue Bonaparte.
 - sted: 43.70456, 7.29241
 - google: ChIJyYrGk3DbzRIRp3gf_oEuNvk
 - nettside: https://www.restaurantpialha.fr/
+- booking: https://bookings.zenchef.com/results?rid=379511&pid=1001
 - status: onskeliste
 - åpent: ma 11.45–13.30, ti–fr 11.45–13.30 + 19–21
 - åpent-kilde: nettside, nov. 2026
@@ -613,6 +629,7 @@ Flott område med butikker, restauranter og kaféer mellom Boulevard Victor Hugo
 - sted: 43.69865, 7.26037
 - google: ChIJh0j648HRzRIR2O7JLHWH22g
 - nettside: https://www.nespo-restaurant.com/
+- booking: https://bookings.zenchef.com/results?rid=356142
 - åpent: ti–lø 12–15 + 19.30–00.30
 - åpent-kilde: nettside, nov. 2026
 Musiciens
@@ -639,6 +656,7 @@ Closed Sunday and Monday.
 - sted: 43.69908, 7.26488
 - google: ChIJjW6jy23RzRIR4RXJ6suyNmI
 - nettside: https://www.apopinorestaurant.com/
+- booking: https://bookings.zenchef.com/results?rid=367940
 - åpent: ma–fr 12–14 + 18.30–22
 - åpent-kilde: Google, nov. 2026
 Carré d'Or
@@ -653,6 +671,7 @@ Mediterranean. 11 bis Rue Grimaldi.
 - sted: 43.69895, 7.26495
 - google: ChIJOWwC_AnQzRIRIC5eAiqAv3k
 - nettside: https://www.sejourcafe.fr/
+- booking: https://bookings.zenchef.com/results?rid=364206&pid=1001
 - åpent: ti–lø 12–13.30 + 19.30–21.30
 - åpent-kilde: nettside, nov. 2026
 Carré d'Or
@@ -667,6 +686,7 @@ Modern French. 11 Rue Grimaldi.
 - sted: 43.69649, 7.26166
 - google: ChIJPUu6AgDRzRIROxpWab1RRxM
 - nettside: https://lantidotenice.fr/
+- booking: https://www.opentable.fr/r/lantidote-reservations-nice?restref=440652&lang=fr-FR
 - åpent: ma–sø 18–22
 - åpent-kilde: Google, nov. 2026
 Carré d'Or
@@ -681,6 +701,7 @@ French. 3 Rue Dalpozzo.
 - sted: 43.69643, 7.26413
 - google: ChIJE51pigrQzRIR_x_PzrQ_He0
 - nettside: https://www.franchin.net/
+- booking: https://bookings.zenchef.com/results?rid=356843&pid=1001
 - åpent: on–sø 12–13.30 + 19–21.30
 - åpent-kilde: nettside, nov. 2026
 Carré d'Or
@@ -695,6 +716,7 @@ French classics in an art deco room. 10 Rue Massenet.
 - sted: 43.69905, 7.26483
 - google: ChIJqTIC_AnQzRIR96POL-9UfMc
 - nettside: https://www.chezdavia.com/
+- booking: https://bookings.zenchef.com/results?rid=360315
 - åpent: ti 19–21.30, on–sø 12–13.30 + 19–21.30
 - åpent-kilde: nettside, nov. 2026
 Carré d'Or
