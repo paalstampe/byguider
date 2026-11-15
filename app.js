@@ -108,6 +108,7 @@ const TEKST = {
     del: 'Del',
     lenkeKopiert: 'Lenke kopiert',
     nettside: 'Nettside',
+    booking: 'Bestill bord',
     artikkelFra: 'Artikkel fra',
     artikkel: 'Artikkel',
     visHeleByen: 'Vis hele byen',
@@ -168,6 +169,7 @@ const TEKST = {
     del: 'Share',
     lenkeKopiert: 'Link copied',
     nettside: 'Website',
+    booking: 'Book a table',
     artikkelFra: 'Article from',
     artikkel: 'Article',
     visHeleByen: 'Show the whole city',
@@ -459,7 +461,7 @@ function lesKoordinat(tekst) {
   return m ? [parseFloat(m[2]), parseFloat(m[1])] : null;
 }
 
-const FELT = ['sted', 'besokt', 'status', 'google', 'nettside', 'gater', 'lengde', 'varighet', 'utenfor', 'en', 'navn-en', 'les', 'apent', 'apent-kilde'];  // besokt leses, men vises ikke
+const FELT = ['sted', 'besokt', 'status', 'google', 'nettside', 'booking', 'gater', 'lengde', 'varighet', 'utenfor', 'en', 'navn-en', 'les', 'apent', 'apent-kilde'];  // besokt leses, men vises ikke
 
 function lesMarkdown(tekst) {
   const linjer = String(tekst).replace(/\r/g, '').replace(/<!--[\s\S]*?-->/g, '').split('\n');
@@ -544,6 +546,7 @@ function byggFeatures(md, geo) {
       place_id: /^https?:/.test(google) ? '' : google,
       google_url: /^https?:/.test(google) ? google : '',
       nettside: /^https?:\/\//.test(st.felt.nettside || '') ? st.felt.nettside : '',
+      booking: /^https?:\/\//.test(st.felt.booking || '') ? st.felt.booking : '',
       gater: (st.felt.gater || '').split(',').map(x => x.trim()).filter(Boolean),
       lengde: st.felt.lengde || '',
       varighet: st.felt.varighet || '',
@@ -1548,12 +1551,14 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     const o = id && oppslagFraId(id);
     const start = o && o.erLinje && o.f.geometry ? o.f.geometry.coordinates[0] : null;
     const vei = start ? veiLenke(p, { lng: start[0], lat: start[1] }, true) : veiLenke(p, latlng);
-    // To linjer som hver får plass i boksen: lenkene ut av guiden, så lenkene i kartet.
+    // Linjer som hver får plass i boksen: lenkene ut av guiden (og ev. bordbestilling), så lenkene i kartet.
     const ut = [
       vei ? '<a class="pop-lenke" href="' + vei + '" target="_blank" rel="noopener">' + t('veibeskrivelse') + '</a>' : '',
       lenke ? '<a class="pop-lenke" href="' + lenke + '" target="_blank" rel="noopener">' + t('aapneMaps') + '</a>' : '',
       p.nettside ? '<a class="pop-lenke" href="' + esc(p.nettside) + '" target="_blank" rel="noopener">' + t('nettside') + '</a>' : ''
     ].filter(Boolean);
+    // «Bestill bord» får egen linje: fire lenker får ikke plass på den første.
+    const bestill = p.booking ? ['<a class="pop-lenke" href="' + esc(p.booking) + '" target="_blank" rel="noopener">' + t('booking') + '</a>'] : [];
     const inne = id ? [
       '<button type="button" class="pop-lenke pop-zoom" data-id="' + esc(id) + '">' + t('zoomInn') + '</button>',
       '<button type="button" class="pop-lenke pop-del" data-id="' + esc(id) + '">' + t('del') + '</button>'
@@ -1576,7 +1581,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       (notat ? '<p class="pop-notat">' + notatHtml(notat) + '</p>' : '') +
       aapentHtml(p) +
       les +
-      linje(ut) + linje(inne);
+      linje(ut) + linje(bestill) + linje(inne);
   }
 
   /* ---------- oppslag fra data ---------- */
