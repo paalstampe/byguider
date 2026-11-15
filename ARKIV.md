@@ -328,3 +328,4 @@ Fra Status nå (flyttet 15.11.):
 - 2026-10-24: Offline-lagring tilbys både på stam.pe («Lagre alt») og på byguide-forsiden («Lagre alle byene»), hver med sin Slett. Byguide-forsiden kan være egen hjemskjerm-app med eget lager på iPhone, og delte lenker går dit. Slett der sletter bare byguidene og viser ikke MB, siden nettleseren bare oppgir tallet for hele stam.pe.
 - 2026-10-28: Ved bytte mellom lys og mørk modus lastes siden på nytt. Å farge kartet om direkte ville kreve
   at stil, lag og ikoner tegnes på nytt. Omlasting er enklere, men kartutsnitt, infoboks og filtre nullstilles.
+- 2026-11-11: Kontekst spares ved oppstart: NOTES.md holdes under ca. 10 KB (/avslutt passer på det), eldre status og beslutninger ligger i ARKIV.md. Før lastet byguider ca. 57 KB (~15k tokens) i hver økt.
