@@ -37,10 +37,10 @@ TJENESTE = re.compile(
 KNAPP = re.compile(r'reserv|book|bestill|réserv|reserva|予約|\bbord\b|\btable\b', re.I)
 BORT = re.compile(
     r'gift|voucher|gavekort|shop\.|subscription|private|group|gruppe|policy|cookbook|/books|waitlist|event|experience'
-    r'|richtlinie|christmas|/pdr|\.pdf|%3c|%5c|careers|jobs|newsletter|facebook|instagram|google|\.(css|js|png|jpe?g|svg|woff2?)(\?|$)', re.I)
+    r'|richtlinie|lookbook|guestbook|tour|christmas|/pdr|\.pdf|%3c|%5c|careers|jobs|newsletter|facebook|instagram|google|\.(css|js|png|jpe?g|svg|woff2?)(\?|$)', re.I)
 STØY = re.compile(r'^(_gl.*|utm_.*|button_.*|hide.*|correlationId|corrid|date|default_date|r3uid|color|dark|font|ot_logo|ot_source|otSource'
                   r'|primary|tracking|client_id|lang|logoPid|backgroundPid|searchTab|halo|start_time'
-                  r'|venues|seats|partySize|gclid|gclsrc|avt|p|sd|pid|fullscreen|includeJquery|ot_campaign)$'
+                  r'|venues|seats|partySize|gclid|gclsrc|avt|sd|fullscreen|includeJquery|ot_campaign)$'
                   r'|^restRef$')
 
 
@@ -103,9 +103,13 @@ def kandidater(side, kilde):
     return unik(tj), unik(egne)
 
 
+VANLIGE = {'the', 'and', 'restaurant', 'restaurante', 'bar', 'cafe', 'kitchen', 'dining', 'grill', 'bistro', 'trattoria'}
+
+
 def navnetreff(navn):
     """Sorteringsnøkkel: lenker som inneholder ord fra stedsnavnet (f.eks. filialen i en kjede) først."""
-    ord_ = [o for o in re.findall(r'[a-z0-9]{3,}', unicodedata.normalize('NFKD', navn.lower())) if o != 'the']
+    ascii_ = ''.join(c for c in unicodedata.normalize('NFKD', navn.lower()) if not unicodedata.combining(c))
+    ord_ = [o for o in re.findall(r'[a-z0-9]{3,}', ascii_) if o not in VANLIGE]
     return lambda u: -sum(o in u.lower() for o in ord_)
 
 
@@ -137,10 +141,13 @@ def restauranter(byer, alle=False):
 def skriv(sted, url):
     """Setter inn `- booking:` rett etter `- nettside:` hos stedet. True hvis det gikk."""
     linjer = open(sted['fil'], encoding='utf-8').read().split('\n')
-    inne = False
+    kategori, inne = '', False
     for i, l in enumerate(linjer):
+        if l.startswith('## '):
+            kategori = l[3:].strip()
         if l.startswith('#'):
-            inne = l.startswith('### ') and l[4:].replace('★', '').strip() == sted['navn']
+            inne = l.startswith('### ') and kategori.startswith('Restaurant') \
+                and l[4:].replace('★', '').strip() == sted['navn']
         elif inne and l.startswith('- nettside:'):
             linjer.insert(i + 1, '- booking: ' + url)
             open(sted['fil'], 'w', encoding='utf-8').write('\n'.join(linjer))
@@ -162,12 +169,12 @@ def main():
         return
     with ThreadPoolExecutor(8) as ex:
         svar = sorted(ex.map(finn, steder), key=lambda x: (x[0]['by'], x[0]['navn']))
-    funnet = 0
+    funnet = like = 0
     for sted, forslag, merknad in svar:
         hode = f"{sted['by']} | {sted['navn']}"
         if sted['booking']:
             if forslag and lik(sted['booking'], forslag[0]):
-                funnet += 1
+                like += 1
                 continue
             hode += f"\n  = {sted['booking']} (nå)"
         if not forslag:
@@ -180,7 +187,10 @@ def main():
             print(f'    {u}')
         if a.skriv and not skriv(sted, forslag[0]):
             print('  ! fant ikke stedet i fila, ikke skrevet')
-    print(f'\n{funnet} av {len(svar)} ' + ('med samme førstevalg som booking: (eller nytt forslag)' if a.alle else 'med forslag') + (' (skrevet inn – sjekk diffen)' if a.skriv and funnet else ''))
+    if a.alle:
+        print(f'\n{like} av {len(svar)} med samme førstevalg som booking:, {funnet} med annet forslag')
+    else:
+        print(f'\n{funnet} av {len(svar)} med forslag' + (' (skrevet inn – sjekk diffen)' if a.skriv and funnet else ''))
 
 
 if __name__ == '__main__':
