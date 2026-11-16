@@ -8,7 +8,7 @@ Eldre status per dato og hele beslutningsloggen ligger i ARKIV.md (lastes ikke a
 
 Sist oppdatert: 16. november 2026. Historikk per dato står i ARKIV.md.
 
-- Live på https://stam.pe/byguider/ med seks byer: London (300 oppføringer, 136 på ønskelista), Oslo (133, 23), New York (94, 2),
+- Live på https://stam.pe/byguider/ med seks byer: London (304 oppføringer, 140 på ønskelista), Oslo (133, 23), New York (94, 2),
   Nice (74, 3), Tokyo (86, 7), Bangkok (40, 4). Skjulte byer (`"skjult": true`): Berlin, Mexico City, Kairo og Luxor.
 - Appen er i hovedsak ferdig: MapLibre med papirpalett og mørk modus, nabolag med presise omriss, kjerne og gater,
   flyttbar infoboks, gåturer, ønskeliste, «Nær meg», «Veibeskrivelse», «Del» med delingsside per sted, offline-lagring,

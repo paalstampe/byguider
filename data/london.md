@@ -1536,6 +1536,22 @@ Thai i Bangkok-Chinatown-stil, med mat til sent. Tips fra Anas. Rupert Street 30
 
 Bangkok Chinatown-style Thai, serving late. Tip from Anas. 30 Rupert Street.
 
+### Dinner by Heston Blumenthal
+- sted: 51.50216, -0.15996
+- google: ChIJRzX0mDkFdkgR-qAx8kL982A
+- nettside: https://www.mandarinoriental.com/en/london/hyde-park/dine/dinner-by-heston-blumenthal
+- booking: https://www.sevenrooms.com/reservations/dinnerbyhestonmolon
+- status: onskeliste
+- åpent: ma 12–14 + 17.30–20.30, to 12–14 + 17.30–20.30, fr–sø 12–14.30 + 17.30–21
+- åpent-kilde: Google, nov. 2026
+Knightsbridge
+
+Heston Blumenthals britiske restaurant med historiske retter, på Mandarin Oriental Hyde Park. Knightsbridge 66.
+
+- en: Knightsbridge
+
+Heston Blumenthal’s British restaurant serving historic dishes, at the Mandarin Oriental Hyde Park. 66 Knightsbridge.
+
 ## Kaféer
 
 ### Gail's
@@ -1840,6 +1856,19 @@ Kaffebrenneriets kafé og akademi, med vekt på filterkaffe. Tips fra Anas. Eccl
 
 The roaster’s café and academy, filter first. Tip from Anas. 22 Eccleston Street.
 
+### Lalï
+- sted: 51.51069, -0.14553
+- google: ChIJ7-ElLeAFdkgRvzFSOMFaR2U
+- nettside: https://www.lalilifestyle.com/
+- status: onskeliste
+Mayfair
+
+Kafé, Bruton Place 33A. Også i Covent Garden, Long Acre 90.
+
+- en: Mayfair
+
+Café, 33A Bruton Place. Also in Covent Garden, 90 Long Acre.
+
 ## Barer
 
 ### Below
@@ -1880,6 +1909,19 @@ Hotellbar kjent for martiniene, St James's Place 35.
 - en: St James's
 
 Hotel bar famous for its martinis, 35 St James's Place.
+
+### Space Talk
+- sted: 51.52024, -0.10161
+- google: ChIJG-Xd464bdkgRSaZ3BJ42pA4
+- nettside: https://www.spacetalklondon.com/
+- status: onskeliste
+Clerkenwell
+
+Lyttebar med vinyl og eget lydanlegg, St John Street 18–20.
+
+- en: Clerkenwell
+
+Listening bar with vinyl and a bespoke sound system, 18–20 St John Street.
 
 ## Jazzklubber
 
@@ -2512,6 +2554,21 @@ Kafé, Perrin's Court 4a–5a.
 - en: Hampstead
 
 Café, 4a–5a Perrin's Court.
+
+## Barer
+
+### Spiritland
+- sted: 51.53653, -0.12539
+- google: ChIJ2Z0BJRYbdkgRLg6gh-bL9Xg
+- nettside: https://spiritland.com/
+- status: onskeliste
+King's Cross
+
+Lyttebar med vinyl og eget lydanlegg, kafé om dagen. Stable Street 9–10, ved Coal Drops Yard.
+
+- en: King's Cross
+
+Listening bar with vinyl and a bespoke sound system, café by day. 9–10 Stable Street, by Coal Drops Yard.
 
 ## Butikker
 
