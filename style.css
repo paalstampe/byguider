@@ -759,7 +759,11 @@ button.pop-lenke {
 /* ---------- Mobil ---------- */
 
 @media (max-width: 699px) {
-  .app { flex-direction: column; height: auto; min-height: 100vh; overflow: visible; }
+  .app { flex-direction: column; height: auto; min-height: 100vh; overflow: visible;
+    /* Kartet starter under statuslinja: iOS 26 Safari demper det som ligger under den (også +-knappen). */
+    padding-top: env(safe-area-inset-top); }
+  html { scroll-padding-top: env(safe-area-inset-top); }   /* hopp til kartet stopper under statuslinja */
+
   .sidebar { width: 100%; flex: none; border-right: 0; border-bottom: 1px solid var(--kant); order: 2; overflow: visible; }
   .liste { overflow: visible; }
   .kartflate { order: 1; flex: none; height: 58vh; min-height: 340px; }
