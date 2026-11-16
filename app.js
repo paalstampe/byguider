@@ -645,6 +645,8 @@ function byggMeta(md) {
     zoom: m.zoom ? parseFloat(m.zoom) : undefined,
     senterMobil: lesKoordinat(m['senter-mobil']) || undefined,
     zoomMobil: m['zoom-mobil'] ? parseFloat(m['zoom-mobil']) : undefined,
+    // utsnitt: «Sted A | Sted B» — stedene som er ytterpunktene vest og øst i startutsnittet
+    utsnitt: (m.utsnitt || '').split('|').map(x => x.trim()).filter(Boolean),
     oppdatert: m.oppdatert || '',
     tidssone: m.tidssone || '',   // f.eks. Europe/Oslo — «Åpent nå» regner i byens tid
     soner: md.soner
@@ -2276,6 +2278,14 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       const medBbox = innenfor.length ? innenfor : alleMedBbox;
       if (medBbox.length) {
         startutsnitt = bbox(medBbox.flatMap(o => [o.bbox.slice(0, 2), o.bbox.slice(2)]));
+        /* «utsnitt:» i frontmatter: bredden går fra den vestligste til den østligste av de navngitte
+           stedene, midt i høyden på alle stedene. Det som stikker ut i nord og sør, kan havne utenfor kanten. */
+        const ytter = sideMeta.utsnitt.map(n => alleMedBbox.find(o => stedSlug(o.p.navn) === stedSlug(n))).filter(Boolean);
+        if (ytter.length) {
+          const y = bbox(ytter.flatMap(o => [o.bbox.slice(0, 2), o.bbox.slice(2)]));
+          const midt = (startutsnitt[1] + startutsnitt[3]) / 2;
+          startutsnitt = [y[0], midt, y[2], midt];
+        }
         /* På mobil er kartet smalt, og utsnittet med alle stedene blir for vidt. Har byen
            senter-mobil og zoom-mobil, åpner kartet der (og «Vis hele byen» går dit). */
         const mobil = mobilvisning();

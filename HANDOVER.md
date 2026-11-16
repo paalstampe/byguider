@@ -120,6 +120,10 @@ senter: 51.5105, -0.1235            senter (breddegrad, lengdegrad), zoom, oppda
 senter-mobil: 51.5230, -0.1060     valgfritt: startutsnitt på mobil (< 700 px) med zoom-mobil,
                                     i stedet for utsnittet med alle stedene (for vidt på smal skjerm);
                                     «Vis hele byen» går også dit på mobil
+utsnitt: Clarendon Cross | London Fields → Spitalfields
+                                    valgfritt: stedene som er ytterpunktene vest og øst i startutsnittet
+                                    (ellers alle stedene uten «utenfor: ja»); høyden midt på alle stedene,
+                                    nord og sør kan havne utenfor kanten
 ---
 # Central                           sone — rekkefølgen her er rekkefølgen i appen
 ## Nabolag og gater                 kategori
