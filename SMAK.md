@@ -51,7 +51,7 @@ Favorittene er små og avgrensede — én gate eller noen kvartaler — ikke hel
 - **Sjømat** er overrepresentert blant favorittene: Scott's, Lilibet's, Sale e Pepe Mare, Trishna.
 - **Fransk bistro og brasserie**, gjerne liten: Josephine, Le Benjamin, Chez Colin, Le Bistrot de Jan,
   Pirouette, Le Bilboquet, Match 65.
-- **Italiensk, autentisk og halvjålete**: Sant Ambroeus, Babbo, Nespo, Nina, Antonietta.
+- **Italiensk, autentisk og halvjålete**: Sant Ambroeus, Babbo, Nespo, Nina, Antonietta, Pinna (Masseto på glass).
 - **Indisk på høyt nivå**: Gymkhana, Trishna, Aura, GupShup.
 - **Pub med spisesal** (London): The Hart, The Hero, Mount St Restaurant over The Audley.
 - **Vinbar med mat**: Noble Rot, Nektar, Sparta Matbar, Lavomatique, Vintage Kitchen.

@@ -636,21 +636,20 @@ Mayfair
 
 Oysters and seafood, 11–15 Swallow Street.
 
-### Pinna
+### Pinna ★
 - sted: 51.50672, -0.14678
 - google: ChIJPQJ-AzcFdkgRc9e4UZBgQsY
 - nettside: https://www.pinnamayfair.com/
 - booking: https://www.pinnamayfair.com/reservations
-- status: onskeliste
 - åpent: ma–lø 12–15 + 17.30–22.30
 - åpent-kilde: nettside, nov. 2026
 Shepherd Market
 
-Italiensk, Curzon Street 43.
+Italiensk, Curzon Street 43. Har Masseto på glass.
 
 - en: Shepherd Market
 
-Italian, 43 Curzon Street.
+Italian, 43 Curzon Street. Serves Masseto by the glass.
 
 ### Sabor
 - sted: 51.51140, -0.13970
