@@ -9,6 +9,7 @@ senter: 51.5105, -0.1235
 zoom: 11
 senter-mobil: 51.5200, -0.1350
 zoom-mobil: 10.7
+utsnitt: Clarendon Cross | London Fields → Spitalfields
 oppdatert: 2026-11-16
 tidssone: Europe/London
 ---
