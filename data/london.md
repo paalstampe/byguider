@@ -1508,7 +1508,7 @@ Lyonnais bouchon cooking from Henry Harris, upstairs from a pub. Tip from Anas. 
 - sted: 51.51063, -0.13534
 - google: ChIJsc95TQcFdkgRDgDjFkIJCz8
 - nettside: https://devonshiresoho.co.uk/
-- booking: https://onsass.designmynight.com/
+- booking: https://bookings.designmynight.com/book?venue_id=64ba4dc01a788a0a0523a9fa
 - status: onskeliste
 - åpent: ma–lø 11–23, sø 11–22
 - åpent-kilde: Google, nov. 2026
@@ -2239,16 +2239,15 @@ Stationery and office curiosities, 12 Bury Place.
 - sted: 51.52169, -0.11817
 - google: ChIJX0ycY3sbdkgRDESE2N2K6iw
 - nettside: https://shrinetothevine.co.uk/
-- status: onskeliste
 - åpent: ma–on 12–20, to–lø 11–20
 - åpent-kilde: Google, nov. 2026
 Bloomsbury
 
-Vinhandelen til Noble Rot. Tips fra Anas. Lamb’s Conduit Street 48.
+Vinhandelen til Noble Rot. Lamb’s Conduit Street 48.
 
 - en: Bloomsbury
 
-Noble Rot’s wine shop. Tip from Anas. 48 Lamb’s Conduit Street.
+Noble Rot’s wine shop. 48 Lamb’s Conduit Street.
 
 ## Hoteller
 
