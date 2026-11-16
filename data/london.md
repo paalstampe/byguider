@@ -9,7 +9,7 @@ senter: 51.5105, -0.1235
 zoom: 11
 senter-mobil: 51.5200, -0.1350
 zoom-mobil: 10.7
-oppdatert: 2026-10-24
+oppdatert: 2026-11-16
 tidssone: Europe/London
 ---
 
@@ -1488,6 +1488,54 @@ Halvjålete italiener på Sloane Square. Ta gjerne lunsj i baren. Sloane Square 
 
 Slightly flashy Italian on Sloane Square. Have lunch at the bar. 37 Sloane Square.
 
+### Bouchon Racine
+- sted: 51.52003, -0.10389
+- google: ChIJyUtvKA0bdkgRSlDGC0DA5VM
+- nettside: https://www.bouchonracine.com/
+- booking: https://www.opentable.co.uk/booking/restref/availability?rid=288510
+- status: onskeliste
+- åpent: ti–lø 12–15 + 18–22
+- åpent-kilde: Google, nov. 2026
+Farringdon
+
+Lyonsk bouchon-mat fra Henry Harris, i etasjen over en pub. Tips fra Anas. Cowcross Street 66.
+
+- en: Farringdon
+
+Lyonnais bouchon cooking from Henry Harris, upstairs from a pub. Tip from Anas. 66 Cowcross Street.
+
+### The Devonshire
+- sted: 51.51063, -0.13534
+- google: ChIJsc95TQcFdkgRDgDjFkIJCz8
+- nettside: https://devonshiresoho.co.uk/
+- booking: https://onsass.designmynight.com/
+- status: onskeliste
+- åpent: ma–lø 11–23, sø 11–22
+- åpent-kilde: Google, nov. 2026
+Soho
+
+Pub med grillrestaurant i etasjen over. Tips fra Anas. Denman Street 17.
+
+- en: Soho
+
+Pub with a grill restaurant upstairs. Tip from Anas. 17 Denman Street.
+
+### Speedboat Bar
+- sted: 51.51118, -0.13265
+- google: ChIJbX_Fhx8FdkgRbTfFDICmOhQ
+- nettside: https://speedboatbar.co.uk/
+- booking: https://www.sevenrooms.com/explore/speedboat/reservations/create/search/
+- status: onskeliste
+- åpent: ma–to 12–00, fr–lø 12–01, sø 12–23
+- åpent-kilde: Google, nov. 2026
+Soho
+
+Thai i Bangkok-Chinatown-stil, med mat til sent. Tips fra Anas. Rupert Street 30.
+
+- en: Soho
+
+Bangkok Chinatown-style Thai, serving late. Tip from Anas. 30 Rupert Street.
+
 ## Kaféer
 
 ### Gail's
@@ -1731,6 +1779,66 @@ Kafé og konditori fra Joël Robuchon, Piccadilly 82.
 - en: Mayfair
 
 Joël Robuchon's café and pâtisserie, 82 Piccadilly.
+
+### Prufrock Coffee
+- sted: 51.51993, -0.10947
+- google: ChIJac2MJkwbdkgREaRKCWzWrHc
+- nettside: https://www.prufrockcoffee.com/
+- status: onskeliste
+- åpent: ma–fr 07.30–16.30, lø 08–17, sø 09–17
+- åpent-kilde: Google, nov. 2026
+Holborn
+
+Kaffebar og opplæringssenter for baristaer, med gjestebrennerier. Tips fra Anas. Leather Lane 23–25.
+
+- en: Holborn
+
+Coffee bar and barista training centre, with guest roasters. Tip from Anas. 23–25 Leather Lane.
+
+### Special Guests Coffee
+- sted: 51.51913, -0.15289
+- google: ChIJNTRGKAAbdkgR7xL7If_TBLQ
+- nettside: https://specialguestscoffee.com/
+- status: onskeliste
+- åpent: ma–fr 07.30–17, lø–sø 08–16
+- åpent-kilde: Google, nov. 2026
+Marylebone
+
+Espresso og filterkaffe fra britiske baristamestere. Tips fra Anas. Aybrook Street 8.
+
+- en: Marylebone
+
+Espresso and filter coffee from UK barista champions. Tip from Anas. 8 Aybrook Street.
+
+### Formative Coffee
+- sted: 51.49791, -0.13544
+- google: ChIJp2tasVoFdkgRH-742bZvno8
+- nettside: https://formative.coffee/
+- status: onskeliste
+- åpent: ma–fr 07.30–17, lø–sø 09–16
+- åpent-kilde: Google, nov. 2026
+Westminster
+
+Espressobar med to espressoer på menyen. Tips fra Anas. Butler Place 4.
+
+- en: Westminster
+
+Espresso bar with two espressos on the menu. Tip from Anas. 4 Butler Place.
+
+### Workshop Coffee
+- sted: 51.49475, -0.14828
+- google: ChIJB4XG6x8FdkgRYgd8lvPLV4E
+- nettside: https://www.workshopcoffee.com/
+- status: onskeliste
+- åpent: ma–fr 07–19, lø–sø 09–19
+- åpent-kilde: Google, nov. 2026
+Belgravia
+
+Kaffebrenneriets kafé og akademi, med vekt på filterkaffe. Tips fra Anas. Eccleston Street 22.
+
+- en: Belgravia
+
+The roaster’s café and academy, filter first. Tip from Anas. 22 Eccleston Street.
 
 ## Barer
 
@@ -2127,6 +2235,21 @@ Skrivesaker og kontorting, Bury Place 12.
 
 Stationery and office curiosities, 12 Bury Place.
 
+### Shrine to the Vine
+- sted: 51.52169, -0.11817
+- google: ChIJX0ycY3sbdkgRDESE2N2K6iw
+- nettside: https://shrinetothevine.co.uk/
+- status: onskeliste
+- åpent: ma–on 12–20, to–lø 11–20
+- åpent-kilde: Google, nov. 2026
+Bloomsbury
+
+Vinhandelen til Noble Rot. Tips fra Anas. Lamb’s Conduit Street 48.
+
+- en: Bloomsbury
+
+Noble Rot’s wine shop. Tip from Anas. 48 Lamb’s Conduit Street.
+
 ## Hoteller
 
 ### Charlotte Street Hotel ★
@@ -2347,6 +2470,22 @@ Panasiatisk, West End Lane 221.
 - en: West Hampstead
 
 Pan-Asian, 221 West End Lane.
+
+### Cadet
+- sted: 51.55134, -0.08604
+- google: ChIJ6QTbOHcddkgRnzvnEL-Y-mU
+- nettside: https://cadetlondon.com/
+- booking: https://www.sevenrooms.com/explore/cadet/reservations/create/search/
+- status: onskeliste
+- åpent: ti–on 17–22.30, to–fr 17–23, lø 12–23, sø 14–22.30
+- åpent-kilde: Google, nov. 2026
+Newington Green
+
+Liten vinbar med egen charcuteri. Tips fra Anas. Newington Green 57.
+
+- en: Newington Green
+
+Small wine bar with its own charcuterie. Tip from Anas. 57 Newington Green.
 
 ## Kaféer
 
@@ -2727,6 +2866,21 @@ Restaurant og vinbar, Snowsfields 36.
 
 Restaurant and wine bar, 36 Snowsfields.
 
+### 40 Maltby Street
+- sted: 51.49980, -0.07639
+- google: ChIJc1ZrWkEDdkgRtT-fxsp5e9M
+- nettside: https://www.40maltbystreet.com/
+- status: onskeliste
+- åpent: on 17.30–21.30, to–lø 12–15 + 17.30–21.30
+- åpent-kilde: Google, nov. 2026
+Bermondsey
+
+Vinbar under jernbanebuene, med tavlemeny. Tar ikke imot bestillinger. Tips fra Anas. Maltby Street 40.
+
+- en: Bermondsey
+
+Railway-arch wine bar with a blackboard menu. No reservations. Tip from Anas. 40 Maltby Street.
+
 ## Kaféer
 
 ### Blue Brick Cafe
@@ -2740,6 +2894,66 @@ Vegetarisk kafé, Fellbrigg Road 14.
 - en: East Dulwich
 
 Vegetarian café, 14 Fellbrigg Road.
+
+### Moonstruck Cafe
+- sted: 51.47806, -0.12322
+- google: ChIJ0_qjNkAFdkgRc_46Y0c1vmA
+- nettside: https://www.moonstruck.cafe/
+- status: onskeliste
+- åpent: ma–sø 08–16
+- åpent-kilde: Google, nov. 2026
+Stockwell
+
+Nabolagskafé med kaffe fra Plot Roasting. Tips fra Anas. South Lambeth Road 153.
+
+- en: Stockwell
+
+Neighbourhood café pouring Plot Roasting. Tip from Anas. 153 South Lambeth Road.
+
+### Toad Bakery
+- sted: 51.47351, -0.08109
+- google: ChIJ8Wy2dvADdkgRr4cikvURs_0
+- nettside: https://www.toadbakery.com/
+- status: onskeliste
+- åpent: ti–lø 08–15, sø 09–15
+- åpent-kilde: Google, nov. 2026
+Camberwell
+
+Bakeri med croissanter og danish; utsolgt tidlig i helgene. Tips fra Anas. Peckham Road 44.
+
+- en: Camberwell
+
+Bakery for croissants and danishes; sells out early at weekends. Tip from Anas. 44 Peckham Road.
+
+### Eric’s
+- sted: 51.45712, -0.06920
+- google: ChIJ-6CoCFYDdkgRq5vZjwjrNMA
+- nettside: https://www.ericslondon.com/
+- status: onskeliste
+- åpent: to 08–17, fr 08–15, lø 09–15
+- åpent-kilde: Google, nov. 2026
+East Dulwich
+
+Croissantbakeri; kom før kl. 10. Tips fra Anas. Upland Road 20.
+
+- en: East Dulwich
+
+Croissant bakery; go before 10am. Tip from Anas. 20 Upland Road.
+
+### August Bakery
+- sted: 51.46112, -0.16284
+- google: ChIJ1wGLh_oFdkgRwq_-G4Bkv4U
+- nettside: https://www.august-bakery.com/
+- status: onskeliste
+- åpent: ti–fr 07.30–16, lø–sø 08–16
+- åpent-kilde: Google, nov. 2026
+Battersea
+
+Lite bakeri med kouign amann og surdeigsbrød. Tips fra Anas. Battersea Rise 4–6a.
+
+- en: Battersea
+
+Small bakery for kouign amann and sourdough. Tip from Anas. 4–6a Battersea Rise.
 
 ## Muséer og gallerier
 
@@ -2792,6 +3006,23 @@ Samtidskunst i brutalistisk bygg i Southbank Centre.
 - en: South Bank
 
 Contemporary art in a brutalist building at the Southbank Centre.
+
+## Butikker
+
+### Neal’s Yard Dairy
+- sted: 51.50543, -0.09170
+- google: ChIJiQYkmlcDdkgRxOZhEzghAyA
+- nettside: https://www.nealsyarddairy.co.uk/
+- status: onskeliste
+- åpent: ma–fr 09–17, lø 08–17, sø 10–17
+- åpent-kilde: Google, nov. 2026
+Borough Market
+
+Ostehandel med britisk og irsk gårdsost; smak før du kjøper. Tips fra Anas. Park Street 8.
+
+- en: Borough Market
+
+Cheesemonger for British and Irish farmhouse cheese; taste before you buy. Tip from Anas. 8 Park Street.
 
 ## Verdt en omvei
 
@@ -3123,6 +3354,37 @@ Gresk, Great Eastern Street 73.
 
 Greek, 73 Great Eastern Street.
 
+### Singburi
+- sted: 51.52432, -0.07835
+- google: ChIJMVmTd3mn2EcRp_LpiaZaM_Q
+- nettside: https://singburi.london/
+- booking: https://www.opentable.co.uk/r/singburi-reservations-london-2?restref=342303
+- status: onskeliste
+- åpent: ti–lø 12–15 + 17–22.30, sø 12–15 + 17–22
+- åpent-kilde: Google, nov. 2026
+Shoreditch
+
+Thai «shophouse», flyttet fra Leytonstone. Bestill fra tavla. Tips fra Anas. Montacute Yards, Shoreditch High Street 185–186.
+
+- en: Shoreditch
+
+Thai shophouse, moved from Leytonstone. Order from the specials board. Tip from Anas. Montacute Yards, 185–186 Shoreditch High Street.
+
+### Dilpasand
+- sted: 51.51494, -0.06360
+- google: ChIJVyDkgCQDdkgRFhj8Id1ryLc
+- nettside: http://www.dilpasandrestaurant.com/
+- status: onskeliste
+- åpent: ma–lø 11.30–23.30, sø 11.30–22.30
+- åpent-kilde: Google, nov. 2026
+Whitechapel
+
+Pakistansk (memoni) hjemmemat: nihari og hjernemasala. Tips fra Anas. Commercial Road 111–113.
+
+- en: Whitechapel
+
+Pakistani (Memoni) home cooking: nihari and brain masala. Tip from Anas. 111–113 Commercial Road.
+
 ## Kaféer
 
 ### Pophams
@@ -3150,6 +3412,21 @@ Bakeri og kafé, Abbot Street.
 - en: Dalston
 
 Bakery and café, Abbot Street.
+
+### E5 Bakehouse
+- sted: 51.54119, -0.05772
+- google: ChIJs0RsDuYcdkgRZtmvLKMG934
+- nettside: https://e5bakehouse.com/
+- status: onskeliste
+- åpent: ma–fr 07.30–17, lø–sø 08–16.30
+- åpent-kilde: Google, nov. 2026
+London Fields
+
+Surdeigsbakeri under jernbanebuene som maler sitt eget korn. Tips fra Anas. Mentmore Terrace 396.
+
+- en: London Fields
+
+Railway-arch sourdough bakery milling its own grain. Tip from Anas. 396 Mentmore Terrace.
 
 ## Barer
 
