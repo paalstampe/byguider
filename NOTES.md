@@ -6,7 +6,7 @@ Eldre status per dato og hele beslutningsloggen ligger i ARKIV.md (lastes ikke a
 
 ## Status nå
 
-Sist oppdatert: 15. november 2026. Historikk per dato står i ARKIV.md.
+Sist oppdatert: 16. november 2026. Historikk per dato står i ARKIV.md.
 
 - Live på https://stam.pe/byguider/ med seks byer: London (282 oppføringer, 118 på ønskelista), Oslo (133, 23), New York (94, 2),
   Nice (74, 3), Tokyo (86, 7), Bangkok (40, 4). Skjulte byer (`"skjult": true`): Berlin, Mexico City, Kairo og Luxor.
@@ -84,10 +84,8 @@ Sist oppdatert: 15. november 2026. Historikk per dato står i ARKIV.md.
 
 Hele loggen står i ARKIV.md. Nye beslutninger skrives her og flyttes dit ved neste opprydding.
 
-- 2026-11-11: Ingen Read-sperre på geojson eller app.js, siden de redigeres og Edit krever Read. CLAUDE.md sier at de leses i utsnitt.
-- 2026-11-12: «Nå» fjernet fra Åpent-filteret (lite nyttig, sa Pål). «Nær meg» skjules når posisjonen er kjent og utenfor byen, der den ikke gjør noe nyttig (PR #119). Kommer tilbake først ved ny posisjon i byen, så posisjonen ikke følges hele tiden.
-- 2026-11-12: Løsninger som finnes i både byguidene og reisekartet (kartbevegelse, søk, infoboks, språk, offline m.m.), skal være like; lista står i reiseplanleggingens HANDOVER. Reisekartet manglet søkekrysset byguidene hadde.
 - 2026-11-12: CLAUDE.md holdes under 150 linjer: oppskrifter som bare trengs i bestemte oppgaver, står i skillen eller HANDOVER (Google Maps-oppskrifter i ny-by, nabolagskilder i HANDOVER), mens regelen står igjen i CLAUDE.md.
 - 2026-11-15: Restauranter får `booking:` med selve bookingsiden (også bookingtjenester), så man slipper å lete på nettsiden. Den månedlige skyjobben sjekker også bookinglenkene, men regner bare tydelige feil som brudd, siden bookingtjenestene ofte svarer 200 eller blokkerer curl.
 - 2026-11-15: Infoboksens lenker står på to linjer med tre hver: kartet (Veibeskrivelse · Google Maps · Zoom inn), så stedet selv (Nettside · Bestill bord · Del). Før ble det tre linjer når et sted hadde bordbestilling.
 - 2026-11-15: `.claude/finnbooking.py` foreslår bookinglenker ut fra nettsiden (PR #127). Treffer samme lenke som håndplukket i 167 av 307; JavaScript-sider (ca. 30 %) må fortsatt sjekkes i nettleserpanelet.
+- 2026-11-16: På mobil (stående) starter kartet under statuslinja (`.app` padding-top = safe-area-inset-top, `html` scroll-padding-top). Med viewport-fit=cover lå kartet under klokka, og iOS 26 Safari demper det området, inkludert +-knappen. Gjort likt i byguidene og reiseplanleggingen.
