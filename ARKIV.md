@@ -332,3 +332,4 @@ Fra Status nå (flyttet 15.11.):
 - 2026-11-11: Ingen Read-sperre på geojson eller app.js, siden de redigeres og Edit krever Read. CLAUDE.md sier at de leses i utsnitt.
 - 2026-11-12: «Nå» fjernet fra Åpent-filteret (lite nyttig, sa Pål). «Nær meg» skjules når posisjonen er kjent og utenfor byen, der den ikke gjør noe nyttig (PR #119). Kommer tilbake først ved ny posisjon i byen, så posisjonen ikke følges hele tiden.
 - 2026-11-12: Løsninger som finnes i både byguidene og reisekartet (kartbevegelse, søk, infoboks, språk, offline m.m.), skal være like; lista står i reiseplanleggingens HANDOVER. Reisekartet manglet søkekrysset byguidene hadde.
+- 2026-11-12: CLAUDE.md holdes under 150 linjer: oppskrifter som bare trengs i bestemte oppgaver, står i skillen eller HANDOVER (Google Maps-oppskrifter i ny-by, nabolagskilder i HANDOVER), mens regelen står igjen i CLAUDE.md.

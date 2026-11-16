@@ -84,8 +84,8 @@ Sist oppdatert: 16. november 2026. Historikk per dato står i ARKIV.md.
 
 Hele loggen står i ARKIV.md. Nye beslutninger skrives her og flyttes dit ved neste opprydding.
 
-- 2026-11-12: CLAUDE.md holdes under 150 linjer: oppskrifter som bare trengs i bestemte oppgaver, står i skillen eller HANDOVER (Google Maps-oppskrifter i ny-by, nabolagskilder i HANDOVER), mens regelen står igjen i CLAUDE.md.
 - 2026-11-15: Restauranter får `booking:` med selve bookingsiden (også bookingtjenester), så man slipper å lete på nettsiden. Den månedlige skyjobben sjekker også bookinglenkene, men regner bare tydelige feil som brudd, siden bookingtjenestene ofte svarer 200 eller blokkerer curl.
 - 2026-11-15: Infoboksens lenker står på to linjer med tre hver: kartet (Veibeskrivelse · Google Maps · Zoom inn), så stedet selv (Nettside · Bestill bord · Del). Før ble det tre linjer når et sted hadde bordbestilling.
 - 2026-11-15: `.claude/finnbooking.py` foreslår bookinglenker ut fra nettsiden (PR #127). Treffer samme lenke som håndplukket i 167 av 307; JavaScript-sider (ca. 30 %) må fortsatt sjekkes i nettleserpanelet.
 - 2026-11-16: På mobil (stående) starter kartet under statuslinja (`.app` padding-top = safe-area-inset-top, `html` scroll-padding-top). Med viewport-fit=cover lå kartet under klokka, og iOS 26 Safari demper det området, inkludert +-knappen. Gjort likt i byguidene og reiseplanleggingen.
+- 2026-11-16: Londons startutsnitt på desktop går fra Clarendon Cross til gåturen fra London Fields (`utsnitt:` i frontmatter, PR #131). Utsnittet med alle stedene ble for vidt; nord og sør (Highbury, Brixton) får heller havne litt utenfor kanten.
