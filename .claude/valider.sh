@@ -5,6 +5,7 @@
 # Write/Edit: filen som ble skrevet. Bash: filer git ser som endret eller nye, og som er endret siden forrige
 # Bash-sjekk (tilstand i .git/), så sed og skript i Bash også sjekkes. En fil som feiler, meldes igjen til den er rettet.
 # Feil gis tilbake til Claude (exit 2), så filen rettes før commit.
+# Ikke kjør skriptet for hånd: det leser hook-JSON fra stdin og blir hengende uten. Hooken kjører det selv etter hver endring.
 IFS='
 '  # filnavn skilles bare på linjeskift
 inndata=$(cat)
