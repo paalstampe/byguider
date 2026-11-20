@@ -244,6 +244,21 @@ function byttSprak(ny) {
   sprakLyttere.forEach(f => f());
 }
 
+/* Tilbakeknappen (Android, sveip tilbake på iPhone, nettleserens ←) lukker infoboksen i stedet for å forlate siden:
+   et åpent kort får sitt eget steg i historikken (`kort` i history.state). Lukkes kortet på annen måte, går vi
+   ett steg tilbake så steget forsvinner. Tilstanden sjekkes etter en tur i hendelseskøen, fordi bytte til et annet
+   sted lukker og åpner kortet i samme slag. Kall den returnerte funksjonen hver gang kortet kan ha åpnet eller lukket.
+   Samme løsning som detaljkortet i reiseplanleggingen. */
+function tilbakeLukker(erApent, lukk) {
+  const harSteg = () => !!(history.state && history.state.kort);
+  if (harSteg()) history.replaceState(Object.assign({}, history.state, { kort: false }), '');   // etter omlasting
+  window.addEventListener('popstate', () => { if (!harSteg() && erApent()) lukk(); });
+  return () => setTimeout(() => {
+    if (erApent() && !harSteg()) history.pushState(Object.assign({}, history.state, { kort: true }), '');
+    else if (!erApent() && harSteg()) history.back();
+  }, 0);
+}
+
 document.addEventListener('click', e => {
   const b = e.target.closest && e.target.closest('.sprakvalg [data-sprak]');
   if (b) byttSprak(b.dataset.sprak);
@@ -924,6 +939,9 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
   // Liggende mobil har menyen ved siden av kartet, som på Mac (samme spørring som i style.css).
   const liggendeMobil = window.matchMedia('(orientation: landscape) and (max-height: 500px)');   // samme som i style.css
   popup.on('open', () => tips.remove());   // aldri navnelapp og popup oppå hverandre
+  const kortEndret = tilbakeLukker(() => popup.isOpen(), () => { popup.remove(); nullstillValg(); });
+  popup.on('open', kortEndret);
+  popup.on('close', kortEndret);
 
   /* Farger defineres étt sted — KATEGORIER — og oversettes til et match-uttrykk. */
   const FARGE = ['match', ['get', 'kategori']]
