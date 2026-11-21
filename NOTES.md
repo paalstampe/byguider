@@ -6,7 +6,7 @@ Eldre status per dato og hele beslutningsloggen ligger i ARKIV.md (lastes ikke a
 
 ## Status nå
 
-Sist oppdatert: 20. november 2026. Historikk per dato står i ARKIV.md.
+Sist oppdatert: 21. november 2026. Historikk per dato står i ARKIV.md.
 
 - Live på https://stam.pe/byguider/ med seks byer: London (304 oppføringer, 140 på ønskelista), Oslo (133, 23), New York (94, 2),
   Nice (74, 3), Tokyo (86, 7), Bangkok (40, 4). Skjulte byer (`"skjult": true`): Berlin, Mexico City, Kairo og Luxor.
@@ -15,7 +15,7 @@ Sist oppdatert: 20. november 2026. Historikk per dato står i ARKIV.md.
   norsk og engelsk. Mobil, liggende og nettbrett er testet (også i iOS-simulatoren).
 - Arbeidet nå er data: nye steder, favoritter, notater, nabolagsomriss og åpningstider.
 - Åpningstider: alle restauranter i Oslo, London og Nice har `åpent:` og `åpent-kilde:` (filteret «Åpent: Søndag · Mandag»,
-  vises bare når valgt kategori har tider). `tidssone:` i frontmatter.
+  vises bare når valgt kategori har tider; skjuler steder som er stengt den dagen, PR #134). `tidssone:` i frontmatter.
 - Skyjobber: månedlig sjekk (1. hver måned kl. 06; stengte steder, nettsider og bookinglenker, https://claude.ai/code/routines/trig_01DvX7PTCcLcRy2QmYL2Jrcj)
   og halvårlig tidssjekk (15.3. og 15.9.; `.claude/googlesjekk.py --tider`, https://claude.ai/code/routines/trig_012amhPG41tyfMW5ic5vLbG6).
 - Publiseringen er felles for alle tre repoene (publiser.yml i paalstampe.github.io), hopper over uendret innhold og publiserer ikke dokumentasjon.
@@ -25,6 +25,7 @@ Sist oppdatert: 20. november 2026. Historikk per dato står i ARKIV.md.
 - 20.11.: tilbakeknappen (Android, sveip tilbake, nettleserens ←) lukker infoboksen i stedet for å forlate siden (PR #133);
   likt i reiseplanleggingen (`tilbakeLukker`). Android og Windows er simulert med Playwright/Chromium mot stam.pe: layout,
   infoboks, tilbakeknapp og JS-feil OK, også med faste rullefelt (panelet blir 18 px smalere, ingenting kuttes). Ikke sett på ekte enheter.
+- 21.11.: Åpent-filteret skjuler stengte steder i stedet for å gråe dem ut (PR #134). Ingen andre steder gråes innhold ut.
 - Ingen åpne grener utenom `main`.
 
 ## Neste steg
@@ -88,6 +89,5 @@ Sist oppdatert: 20. november 2026. Historikk per dato står i ARKIV.md.
 
 Hele loggen står i ARKIV.md. Nye beslutninger skrives her og flyttes dit ved neste opprydding.
 
-- 2026-11-16: På mobil (stående) starter kartet under statuslinja (`.app` padding-top = safe-area-inset-top, `html` scroll-padding-top). Med viewport-fit=cover lå kartet under klokka, og iOS 26 Safari demper det området, inkludert +-knappen. Gjort likt i byguidene og reiseplanleggingen.
-- 2026-11-16: Londons startutsnitt på desktop går fra Clarendon Cross til gåturen fra London Fields (`utsnitt:` i frontmatter, PR #131). Utsnittet med alle stedene ble for vidt; nord og sør (Highbury, Brixton) får heller havne litt utenfor kanten.
 - 2026-11-20: Et åpent kort er et eget steg i nettleserhistorikken (`kort` i history.state), så tilbakeknappen på Android lukker infoboksen i stedet for å forlate siden. Lukkes den på annen måte, går siden ett steg tilbake så historikken ikke fylles opp. Samme løsning i reiseplanleggingen.
+- 2026-11-21: Åpent-filteret (Søndag/Mandag) skjuler steder som er stengt den dagen, i stedet for å tone dem ned (Pål ville ikke se dem). Steder uten åpningstider vises fortsatt.
