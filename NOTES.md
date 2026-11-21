@@ -6,7 +6,7 @@ Eldre status per dato og hele beslutningsloggen ligger i ARKIV.md (lastes ikke a
 
 ## Status nå
 
-Sist oppdatert: 16. november 2026. Historikk per dato står i ARKIV.md.
+Sist oppdatert: 20. november 2026. Historikk per dato står i ARKIV.md.
 
 - Live på https://stam.pe/byguider/ med seks byer: London (304 oppføringer, 140 på ønskelista), Oslo (133, 23), New York (94, 2),
   Nice (74, 3), Tokyo (86, 7), Bangkok (40, 4). Skjulte byer (`"skjult": true`): Berlin, Mexico City, Kairo og Luxor.
@@ -22,6 +22,9 @@ Sist oppdatert: 16. november 2026. Historikk per dato står i ARKIV.md.
 - 15.11.: Restauranter har fått `booking:` (bookingsiden; lenken «Bestill bord» mellom «Nettside» og «Del» i infoboksen), 260 av 331.
   Uten: steder som bare tar walk-in, bare har Instagram/Facebook, eller der lenken ikke kunne finnes (bl.a. Faros
   med utløpt sertifikat, Sachi med nedlagt bookingside). Campobaja (Mexico City): domenet er parkert, nettsiden bør byttes.
+- 20.11.: tilbakeknappen (Android, sveip tilbake, nettleserens ←) lukker infoboksen i stedet for å forlate siden (PR #133);
+  likt i reiseplanleggingen (`tilbakeLukker`). Android og Windows er simulert med Playwright/Chromium mot stam.pe: layout,
+  infoboks, tilbakeknapp og JS-feil OK, også med faste rullefelt (panelet blir 18 px smalere, ingenting kuttes). Ikke sett på ekte enheter.
 - Ingen åpne grener utenom `main`.
 
 ## Neste steg
@@ -66,6 +69,8 @@ Sist oppdatert: 16. november 2026. Historikk per dato står i ARKIV.md.
 - Kart: på mobil ligger nabolagsfirkantene tett på laveste zoom i London. Se om det trengs noe (f.eks. mindre
   firkanter ved lav zoom) når Pål har brukt det en stund. Å skjule steder under nabolagene er prøvd og forkastet.
 
+- Firefox er aldri testet: Playwrights Firefox (v155) starter ikke på denne Macen («Could not find profile folder»). Prøv igjen senere.
+
 ## Åpne spørsmål
 
 - Kairo/Luxor: Winter Palace (Luxor) står på ønskelista, stengt for restaurering til Mandarin Oriental åpner (ventet 2027).
@@ -84,8 +89,6 @@ Sist oppdatert: 16. november 2026. Historikk per dato står i ARKIV.md.
 
 Hele loggen står i ARKIV.md. Nye beslutninger skrives her og flyttes dit ved neste opprydding.
 
-- 2026-11-15: Restauranter får `booking:` med selve bookingsiden (også bookingtjenester), så man slipper å lete på nettsiden. Den månedlige skyjobben sjekker også bookinglenkene, men regner bare tydelige feil som brudd, siden bookingtjenestene ofte svarer 200 eller blokkerer curl.
-- 2026-11-15: Infoboksens lenker står på to linjer med tre hver: kartet (Veibeskrivelse · Google Maps · Zoom inn), så stedet selv (Nettside · Bestill bord · Del). Før ble det tre linjer når et sted hadde bordbestilling.
-- 2026-11-15: `.claude/finnbooking.py` foreslår bookinglenker ut fra nettsiden (PR #127). Treffer samme lenke som håndplukket i 167 av 307; JavaScript-sider (ca. 30 %) må fortsatt sjekkes i nettleserpanelet.
 - 2026-11-16: På mobil (stående) starter kartet under statuslinja (`.app` padding-top = safe-area-inset-top, `html` scroll-padding-top). Med viewport-fit=cover lå kartet under klokka, og iOS 26 Safari demper det området, inkludert +-knappen. Gjort likt i byguidene og reiseplanleggingen.
 - 2026-11-16: Londons startutsnitt på desktop går fra Clarendon Cross til gåturen fra London Fields (`utsnitt:` i frontmatter, PR #131). Utsnittet med alle stedene ble for vidt; nord og sør (Highbury, Brixton) får heller havne litt utenfor kanten.
+- 2026-11-20: Et åpent kort er et eget steg i nettleserhistorikken (`kort` i history.state), så tilbakeknappen på Android lukker infoboksen i stedet for å forlate siden. Lukkes den på annen måte, går siden ett steg tilbake så historikken ikke fylles opp. Samme løsning i reiseplanleggingen.

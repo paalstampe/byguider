@@ -214,6 +214,10 @@ Fra Status nå (flyttet 15.11.):
 
 ## Beslutningslogg
 
+- 2026-11-15: Restauranter får `booking:` med selve bookingsiden (også bookingtjenester), så man slipper å lete på nettsiden. Den månedlige skyjobben sjekker også bookinglenkene, men regner bare tydelige feil som brudd, siden bookingtjenestene ofte svarer 200 eller blokkerer curl.
+- 2026-11-15: Infoboksens lenker står på to linjer med tre hver: kartet (Veibeskrivelse · Google Maps · Zoom inn), så stedet selv (Nettside · Bestill bord · Del). Før ble det tre linjer når et sted hadde bordbestilling.
+- 2026-11-15: `.claude/finnbooking.py` foreslår bookinglenker ut fra nettsiden (PR #127). Treffer samme lenke som håndplukket i 167 av 307; JavaScript-sider (ca. 30 %) må fortsatt sjekkes i nettleserpanelet.
+
 - 2026-11-08: Ingen ekte iPhone-app nå. Nettsidene dekker offline, hjem-skjerm og deling. En app lønner seg først
   for varsler når vi er nær et sted, eller «Legg til i byguiden» fra delingsmenyen. Blir det aktuelt: liten app
   for bare det, som leser de samme md-filene, og nettsidene beholdes. Xcode 27.2 har MCP-verktøy (mcpbridge) for det.
