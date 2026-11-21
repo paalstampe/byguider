@@ -816,7 +816,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     soner: new Set(),            // tom = alle
     kategorier: new Set(),       // tom = alle
     kunFavoritter: false,
-    aapent: null,                // null | 6 (søndag) | 0 (mandag): stengte steder tones ned
+    aapent: null,                // null | 6 (søndag) | 0 (mandag): stengte steder skjules
     naerMeg: false,              // lista sortert etter avstand fra egen posisjon
     minPosisjon: null,           // { lng, lat } mens «Nær meg» er på
     utenforByen: false,          // siste kjente posisjon er utenfor byen: «Nær meg» skjules
@@ -949,10 +949,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     .concat([UKJENT_FARGE]);
 
   const FAV = ['==', ['get', 'favoritt'], true];
-  const STENGT = ['==', ['get', 'stengt'], true];
-  const SORTERING = ['case', STENGT, -1, FAV, 1, 0];          // stengte nederst, favoritter øverst
-  const TONET = { 'icon-opacity': ['case', STENGT, 0.3, 1] };   // stengte tones ned (filteret «Åpent»)
-  const KLYNGE_TONET = ['case', ['==', ['get', 'aapne'], 0], 0.35, 1];   // klynger der alle er stengt
+  const SORTERING = ['case', FAV, 1, 0];   // favoritter øverst
 
   const KARTLAG = {
     /* Usynlig, bred strek under gater og gåturer: gjør dem lette å treffe, særlig med fingeren. */
@@ -985,9 +982,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
         'circle-color': KARTPALETT.bakgrunn,
         'circle-radius': ['step', ['get', 'point_count'], 14, 10, 17, 25, 20],
         'circle-stroke-color': AKSENT,
-        'circle-stroke-width': 1.5,
-        'circle-opacity': KLYNGE_TONET,
-        'circle-stroke-opacity': KLYNGE_TONET
+        'circle-stroke-width': 1.5
       }
     },
     klyngetall: {
@@ -1000,7 +995,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
         'text-size': 12,
         'text-allow-overlap': true
       },
-      paint: { 'text-color': TEKSTFARGE, 'text-opacity': KLYNGE_TONET }
+      paint: { 'text-color': TEKSTFARGE }
     },
     punkter: {
       source: 'steder',
@@ -1014,8 +1009,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
         'icon-allow-overlap': true,
         'icon-ignore-placement': true,
         'symbol-sort-key': SORTERING
-      },
-      paint: TONET
+      }
     }
   };
   /* Nabolag har egen kilde uten klynging, så knappene alltid vises, og ligger øverst. */
@@ -1057,8 +1051,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
         'icon-allow-overlap': true,
         'icon-ignore-placement': true,
         visibility: 'none'
-      },
-      paint: TONET
+      }
     }
   };
 
@@ -1226,8 +1219,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       data: tomSamling(),
       cluster: true,
       clusterMaxZoom: 12,
-      clusterRadius: 14,     // klynger bare der ikonene ellers ville overlappe
-      clusterProperties: { aapne: ['+', ['case', STENGT, 0, 1]] }   // klynger med bare stengte steder tones ned
+      clusterRadius: 14      // klynger bare der ikonene ellers ville overlappe
     });
     kart.addSource('nabolag', { type: 'geojson', data: tomSamling() });
 
@@ -1695,8 +1687,8 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
 
   /* ---------- åpningstider ----------
 
-     «Åpent» søndag/mandag skjuler ingenting: steder vi vet er stengt, tones ned i kartet og lista
-     og legges sist. Steder uten åpningstider vises som vanlig. */
+     «Åpent» søndag/mandag skjuler steder vi vet er stengt den dagen, i kartet og lista.
+     Steder uten åpningstider vises som vanlig. */
 
   /* Ukedag (0 = mandag) og minutter etter midnatt i byens tidssone (frontmatter tidssone:), ellers enhetens. */
   function byTid() {
@@ -1723,26 +1715,8 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     return steder.length > 0 && steder.filter(o => o.p.aapent).length >= 0.8 * steder.length;
   }
 
-  /* Regner ut én gang per opptegning om hvert sted er stengt, og lagrer det som stengt på stedet
-     (properties, så kartlagene leser det direkte). Svarer om noe endret seg. */
-  function oppdaterStengte() {
-    let endret = false;
-    state.oppslag.concat(state.onskeliste).forEach(o => {
-      const a = o.p.aapent;
-      const stengt = !!a && state.aapent != null && !a.dager[state.aapent].length;
-      if (!!o.p.stengt !== stengt) { o.p.stengt = stengt; endret = true; }
-    });
-    return endret;
-  }
-
-  const erStengt = p => !!p.stengt;
-  const stengtSist = (a, b) => erStengt(a.p) - erStengt(b.p);
-
-  function stengtTekst(p) {
-    if (!erStengt(p)) return '';
-    if (p.aapent.midlertidig) return t('midlertidigStengt');
-    return t('stengtDag', state.aapent);
-  }
+  /* Stengt den dagen «Åpent» står på. Midlertidig stengte har ingen åpne dager og skjules også. */
+  const erStengt = p => state.aapent != null && !!p.aapent && !p.aapent.dager[state.aapent].length;
 
   const klokke = m => {
     m = m % 1440;
@@ -1799,6 +1773,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       if (state.soner.size && !state.soner.has(p.sone)) return false;
       if (state.kategorier.size && !state.kategorier.has(p.kategori)) return false;
       if (state.kunFavoritter && !p.favoritt) return false;
+      if (erStengt(p)) return false;
       if (q) {
         const kat = KATEGORIER[p.kategori] || {};
         const hay = [p.navn, p.navn_en, utenLenker(p.notat), utenLenker(p.notat_en), p.sone, katInfo(p.kategori).navn, kat.navn, kat.en]
@@ -1812,7 +1787,6 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
   /* ---------- tegning ---------- */
 
   function tegn() {
-    oppdaterStengte();
     const vis = iVisning();
 
     filtrerKart(vis);
@@ -1851,10 +1825,9 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     const medSoner = state.brukteSoner.size > 0 && !naer;
     vis.slice()
       .sort((a, b) => {
-        if (naer) return stengtSist(a, b) || avstandTil(a) - avstandTil(b);
+        if (naer) return avstandTil(a) - avstandTil(b);
         const sa = rekkefolge.indexOf(a.p.sone), sb = rekkefolge.indexOf(b.p.sone);
         if (sa !== sb) return (sa < 0 ? 99 : sa) - (sb < 0 ? 99 : sb);
-        if (erStengt(a.p) !== erStengt(b.p)) return stengtSist(a, b);
         if (!!b.p.favoritt !== !!a.p.favoritt) return b.p.favoritt ? 1 : -1;
         return visNavn(a.p).localeCompare(visNavn(b.p), SPRAK === 'en' ? 'en' : 'nb');
       })
@@ -1896,8 +1869,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
     const notat = onske ? visNotat(p).split('\n')[0].trim() : visNotat(p);
 
     const div = document.createElement('div');
-    const stengt = stengtTekst(p);
-    div.className = 'oppslag' + (stengt ? ' oppslag--stengt' : '') + (state.valgtId === o.id ? ' er-valgt' : '');
+    div.className = 'oppslag' + (state.valgtId === o.id ? ' er-valgt' : '');
     div.setAttribute('role', 'listitem');
     div.tabIndex = 0;
 
@@ -1908,7 +1880,7 @@ function start(DATA_NAVN, DATA_URL, GEO_URL) {
       '</div>' +
       '<p class="oppslag-meta">' +
         '<span class="prikk" style="background:' + info.farge + '"></span>' +
-        esc([metaLinje(p) || ruteMeta(p), avstandTekst(o), stengt].filter(Boolean).join(' · ')) +
+        esc([metaLinje(p) || ruteMeta(p), avstandTekst(o)].filter(Boolean).join(' · ')) +
       '</p>' +
       (notat ? '<p class="oppslag-notat">' + esc(kortNotat(notat)) + '</p>' : '');
 
