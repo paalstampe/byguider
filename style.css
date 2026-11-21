@@ -376,8 +376,6 @@ html, body {
 
 /* Ønskeliste (bare med ?onskeliste): sammenslått seksjon nederst, dempede oppslag. */
 /* Stengt den valgte dagen (filteret «Åpent»): tonet ned og lagt sist. */
-.oppslag--stengt { opacity: 0.45; }
-.oppslag--stengt.er-valgt { opacity: 0.75; }
 
 .merke-ikke-besokt {
   display: inline-block;

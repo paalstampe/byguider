@@ -573,11 +573,9 @@ Hvert trinn skal kunne committes for seg og fungere alene.
   ellers utklippstavlen.
 - Åpningstider (grenen `apningstider`, nov. 2026): `lesAapent` gjør `åpent:` om til sju dager med intervaller i
   minutter. Filterblokken «Åpent: Søndag · Mandag» (`state.aapent`: null, 6 eller 0; da er mange stengt; «Nå» ble fjernet nov. 2026) vises bare når én kategori er valgt
-  og minst 80 % av stedene i den har åpningstider (`aapentMulig`); byttes kategorien til en uten, slås filteret av. «Kun favoritter» og «Nær meg» står i egen blokk «Vis» under. Den skjuler ingenting: steder vi vet er stengt (`erStengt`), får `stengt: true` på stedet, regnet ut én gang
-  per opptegning (`oppdaterStengte`; kartlagene bruker `TONET` = `icon-opacity` 0,3 og `SORTERING`), tones ned i lista (`.oppslag--stengt`, «Stengt søndag»
-  i metalinjen) og legges sist i hver sone. Steder uten åpningstider vises som vanlig. «I dag» i infoboksen regner i byens tid
-  (`tidssone: Europe/Oslo` i frontmatter, ellers enhetens klokke; `byTid`). Med Søndag/Mandag viser infoboksen den dagen i stedet for i dag. Klynger der alle stedene er stengt,
-  tones ned (`clusterProperties.aapne`, `KLYNGE_TONET`). Infoboksen viser «I dag 17–23» og uka slått sammen (`ukeTekst`).
+  og minst 80 % av stedene i den har åpningstider (`aapentMulig`); byttes kategorien til en uten, slås filteret av. «Kun favoritter» og «Nær meg» står i egen blokk «Vis» under. Steder vi vet er stengt den dagen (`erStengt`, også midlertidig stengte), skjules i kartet og lista
+  (`filtrer`; nov. 2026, før ble de tonet ned). Steder uten åpningstider vises som vanlig. «I dag» i infoboksen regner i byens tid
+  (`tidssone: Europe/Oslo` i frontmatter, ellers enhetens klokke; `byTid`). Med Søndag/Mandag viser infoboksen den dagen i stedet for i dag. Infoboksen viser «I dag 17–23» og uka slått sammen (`ukeTekst`).
 - Neste: data. Pål kommer med navneendringer (som Marylebone High Street → Marylebone Village)
   og nye steder. Områdeskisser: alle nabolag i London og New York er tegnet (London 5.10.,
   langs gatene i OpenStreetMap); nye nabolag trenger skisse. Eksempelstedene er merket EKSEMPEL.
