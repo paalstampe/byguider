@@ -68,7 +68,6 @@ Sist oppdatert: 20. november 2026. Historikk per dato står i ARKIV.md.
 - Et sted som bytter navn får ny lenke; delte lenker til det gamle navnet gir 404-siden.
 - Kart: på mobil ligger nabolagsfirkantene tett på laveste zoom i London. Se om det trengs noe (f.eks. mindre
   firkanter ved lav zoom) når Pål har brukt det en stund. Å skjule steder under nabolagene er prøvd og forkastet.
-
 - Firefox er aldri testet: Playwrights Firefox (v155) starter ikke på denne Macen («Could not find profile folder»). Prøv igjen senere.
 
 ## Åpne spørsmål

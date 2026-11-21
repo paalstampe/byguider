@@ -47,6 +47,9 @@ Store filer (app.js ~100 KB, data/london.md ~90 KB, data/*-geometri.geojson): fi
   Starter du simulatoren selv: `xcrun simctl boot` utenfor sandkassen; ser ikke simulatorverktøyet enheten, bruk `xcrun simctl openurl` og `xcrun simctl io <id> screenshot`.
 - UI-endringer: kjør `.claude/axe.sh <url> [bredde høyde]` før fletting (axe-core via Playwright, lys og mørk modus;
   f.eks. http://localhost:8000/ i 1300 900 og 390 844). Rett brudd; kontrast som krever nye farger tas med Pål.
+- Android/Windows: `.claude/plattformtest.sh <url> kort=.oppslag 'apent=!!document.querySelector(".maplibregl-popup.pop")' kart=.maplibregl-canvas`
+  simulerer Android-telefoner og -nettbrett, Windows (faste rullefelt, musehjul) og PC med berøringsskjerm (Chromium). Kjør ved endringer
+  i layout, kartbevegelse eller infoboks. Ekte enheter og Firefox dekkes ikke.
 - Før fletting av kodeendringer: kjør /code-review (standardnivå) og /simplify på grenen selv, uten at Pål ber om det.
   Rett funnene som holder, nevn kort i PR-beskrivelsen hva som ble funnet og rettet. Gjelder ikke rene data- og tekstendringer.
 - Fletting: Kan du selv verifisere at alt er i orden (skjermbilder mobil + desktop, ingen JS-feil),
