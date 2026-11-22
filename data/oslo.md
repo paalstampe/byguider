@@ -7,7 +7,7 @@ kicker: En høyst subjektiv guide
 kicker-en: An opinionated guide
 senter: 59.9180, 10.7400
 zoom: 13
-oppdatert: 2026-11-12
+oppdatert: 2026-11-22
 tidssone: Europe/Oslo
 ---
 
@@ -1043,6 +1043,19 @@ Små- og hovedretter og gode drinker. Begynn med focacciaen og stracciatellaen. 
 - en: Grünerløkka
 Small and main plates and good drinks. Start with the focaccia and the stracciatella. Olaf Ryes plass 3.
 
+### Arno
+- sted: 59.91634, 10.71594
+- google: ChIJUa4h7mRuQUYRyWc7k-YEywM
+- nettside: https://www.arnoristorante.no/
+- booking: https://www.arnoristorante.no/onlinebooking
+- status: onskeliste
+- åpent: ti–lø 17–23, sø 17–21
+- åpent-kilde: nettside, nov. 2026
+Frogner
+Italiensk. Frognerveien 9.
+- en: Frogner
+Italian. Frognerveien 9.
+
 ## Kaféer
 
 ### Fuglen – Universitetsgata
@@ -1192,6 +1205,17 @@ Majorstuen
 Kaffebar. Slemdalsveien 1.
 - en: Majorstuen
 Coffee bar. Slemdalsveien 1.
+
+### Håndbakt Tøyen
+- sted: 59.91149, 10.77809
+- google: ChIJ4afMdjtvQUYR7pwn7gzrQWI
+- nettside: https://www.handbakt.no/
+- åpent: ma–sø 09–17
+- åpent-kilde: Google, nov. 2026
+Tøyen
+Bakeri og kafé. Kjølberggata 21.
+- en: Tøyen
+Bakery and café. Kjølberggata 21.
 
 ## Barer
 
@@ -1448,6 +1472,29 @@ Bar. Torshovgata 15.
 - en: Torshov
 Bar. Torshovgata 15.
 
+### Rivertz
+- sted: 59.93744, 10.75051
+- google: ChIJ3WtHwkNvQUYRyocLiYRhXp0
+- nettside: https://www.rivertz.no/
+- status: onskeliste
+- åpent: ti–lø 16–23
+- åpent-kilde: Google, nov. 2026
+Sagene
+Galleri og vinbar. Kierschows gate 7D.
+- en: Sagene
+Gallery and wine bar. Kierschows gate 7D.
+
+### Teddy's Softbar
+- sted: 59.91432, 10.75418
+- google: ChIJn16BoWFuQUYR9LdVQqkrXcc
+- nettside: https://www.instagram.com/teddyssoftbar/
+- åpent: ma–to 14–01, fr–lø 14–03
+- åpent-kilde: Google, nov. 2026
+Sentrum
+Klassisk bar fra 1950-tallet. Brugata 3A.
+- en: Sentrum
+Classic bar from the 1950s. Brugata 3A.
+
 ## Jazzklubber
 
 ### Herr Nilsen
@@ -1632,6 +1679,24 @@ Torshov
 Kjøtt og delikatesser. Vogts gate 53A.
 - en: Torshov
 Butcher and delicatessen. Vogts gate 53A.
+
+### Kampen Vinyl
+- sted: 59.91192, 10.78068
+- google: ChIJPTNjVwBvQUYRgSQPDiLTvKE
+- nettside: https://kampenvinyl.com/
+Kampen
+Platebutikk med jazz. Nannestadgata 10C, inngang fra Bøgata.
+- en: Kampen
+Jazz record shop. Nannestadgata 10C, entrance from Bøgata.
+
+### Fransk Bazar
+- sted: 59.91107, 10.77835
+- google: ChIJLR7P4mZuQUYRdw5r-jGbdWI
+- nettside: http://www.franskbazar.no/
+Tøyen
+Interiør, vintage og fransk brukt. Kjølberggata 21.
+- en: Tøyen
+Interiors, vintage and French second-hand finds. Kjølberggata 21.
 
 ## Verdt en omvei
 
