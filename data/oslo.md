@@ -708,21 +708,20 @@ Frogner
 - en: Frogner
 Organic and seasonal. Frognerveien 33.
 
-<!-- Ønskeliste: restauranter vi ikke har besøkt ennå (- status: onskeliste).
-     ★ = de vi helst vil til først. Fjern «status»-linja når vi har vært der. -->
-
 ### Lasarett Matbar ★
 - sted: 59.93317, 10.76704
 - google: ChIJzwYbgMlvQUYR7Z2-SeCYje4
 - nettside: https://www.lasarett.no/
 - booking: https://app.bokabord.se/reservation/?hash=296e720200894fcb9fc6deca21165c54&version=new
-- status: onskeliste
 - åpent: ma–fr 16.30–23, lø 10–23, sø 14.30–19.30
 - åpent-kilde: nettside, nov. 2026
 Torshov
 Liten matbar med mye vin. Torshovgata 15.
 - en: Torshov
 Small food bar with plenty of wine. Torshovgata 15.
+
+<!-- Ønskeliste: restauranter vi ikke har besøkt ennå (- status: onskeliste).
+     ★ = de vi helst vil til først. Fjern «status»-linja når vi har vært der. -->
 
 ### The Little Pickle ★
 - sted: 59.91909, 10.76404
