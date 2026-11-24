@@ -32,7 +32,7 @@ Slik er fila bygd opp — kartet leser den direkte, så en commit her oppdaterer
   - les: Financial Times | Tittel | https://…   artikkel: «Artikkel fra Financial Times: Tittel» sist i infoboksen. Kan gjentas.
   - status: onskeliste          ønskeliste: ikke besøkt ennå. Vises nederst i lista og som eget
                                 kartlag (av til man slår det på). ★ = førstevalg.
-                                Fjern linja når vi har vært der.
+                                Fjern linja når vi har vært der, og ★ med mindre Pål sier noe annet.
   - gater: Gate 1, Gate 2       nabolag: de viktigste gatene
   - lengde: 2,5 km              gåturer
   - varighet: ca. 1 t           gåturer

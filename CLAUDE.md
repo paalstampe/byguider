@@ -109,6 +109,8 @@ Playwright med `colorScheme: 'light'` og `'dark'`. Ta bildene fra stam.pe etter 
 ## Data
 - Én md-fil per by i data/. Format står som kommentar øverst i hver fil.
 - ★ etter navnet = favoritt.
+- Flyttes et sted fra ønskelista til hovedlista (fjern `status: onskeliste`), fjernes også ★ med mindre Pål sier noe annet
+  (★ betyr «førstevalg» på ønskelista, men «favoritt» i hovedlista).
 - Nye steder: hent alltid Google Place ID og koordinater fra Google Maps; bruk OpenStreetMap bare som reserve, og si fra
   hvis du er usikker på plasseringen. Ta bare med stedets egen nettside (ev. Instagram), ikke bookingtjenester eller guider.
   Restauranter får i tillegg `booking:` med selve bookingsiden (SevenRooms, OpenTable, Resy, Zenchef o.l., eller stedets egen side
