@@ -343,6 +343,11 @@ git pusher med samme innlogging. Claude kan dermed pushe, åpne PR og flette lok
   lagrede kopi. Ved installasjon lagres alle byenes sider, data og miniatyrer.
 - Kart og biblioteker (CARTO-fliser, stil, glyfer, sprite, MapLibre fra unpkg, Google Fonts) tas
   **fra lageret først**; fliser eldre enn 30 døgn fornyes når det er nett.
+  Bare svar som kan leses (CORS, status 200) lagres for kartet. Opake svar (`no-cors`) brukes bare til
+  `no-cors`-forespørsler som Google Fonts-`<link>`, og hentes ellers på nytt. Før 24.11.2026 falt `lagre()`
+  tilbake til `no-cors` når CARTO svarte 403 uten CORS-header (nøkkelen), og det lagrede opake svaret ga et blankt kart i Safari.
+  Kartstilen fornyes ikke, fordi de lagrede flisene hører til flisversjonen i den (`/v/<dato>/`).
+  Sprite-adressen har `?key=`; endelsen (`@2x.json` osv.) settes inn før nøkkelen.
 - Lagring: `sw.js` får meldingen `{ type: 'lagre', stil, adresser, byer: [{ id, side, data, geometri }] }` og
   regner ut alt selv (`lagreByer`): stil, tiles.json, sprite, latinske glyfer og CARTO-fliser zoom 0–14 over
   alle koordinatene i byens md-fil og geometrifil (15 % marg, maks 1500 fliser). Kartet trenger ikke tegnes.

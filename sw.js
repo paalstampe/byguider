@@ -6,7 +6,8 @@
 
    Kartet og bibliotekene (CARTO-fliser, stil, fonter, MapLibre, Google Fonts) tas fra
    lageret når de finnes der, og fliser eldre enn FLIS_MAKSALDER hentes på nytt når det
-   er nett. Når en by åpnes med nett (forhandslastOffline i app.js), eller man trykker
+   er nett. Opake svar (no-cors) lagres og brukes bare for no-cors-forespørsler (<link>);
+   kartet kan ikke lese dem. Når en by åpnes med nett (forhandslastOffline i app.js), eller man trykker
    «Lagre alle byene» på forsiden, hentes alt byen trenger i bakgrunnen — også fliser for
    hele byens område, zoom 0–14 (se lagreByer nederst). Etter det virker byen uten nett.
 
@@ -81,33 +82,39 @@ async function nettForst(req) {
   return nett;   // gir den opprinnelige feilen
 }
 
-/* Kart og biblioteker: lageret først; gamle fliser og unpkg-adresser uten fast versjon fornyes. */
+/* Kart og biblioteker: lageret først; gamle fliser og opake kopier fornyes. */
 async function lagerForst(req) {
   const lager = await caches.open(KART);
   const n = nokkel(req.url);
   const kopi = await lager.match(n, SOK) || (n !== req.url && await lager.match(req.url, SOK));
-  if (kopi && !foreldet(kopi, req.url)) return kopi;
+  // Et opakt svar kan bare brukes av en no-cors-forespørsel (<link> uten crossorigin), aldri av kartet.
+  const noCors = req.mode === 'no-cors';
+  if (kopi && (noCors && kopi.type === 'opaque' || !foreldet(kopi, req.url))) return kopi;
   try {
     const r = await fetch(req);
-    if (r.ok || r.type === 'opaque') lager.put(n, r.clone());
-    return r;
+    if (r.ok || noCors && r.type === 'opaque') lager.put(n, r.clone());
+    return r.ok || r.type === 'opaque' || !kopi ? r : kopi;
   } catch (err) {
     if (kopi) return kopi;
     throw err;
   }
 }
 
+/* Opake svar (lagret med no-cors før 24.11.2026) kan ikke leses av kartet og hentes alltid på nytt.
+   Kartstilen fornyes ikke: de lagrede flisene hører til flisversjonen (/v/<dato>/) i den lagrede stilen. */
 function foreldet(svar, url) {
+  if (svar.type === 'opaque') return true;
   if (!erFlis(url)) return false;
   const dato = Date.parse(svar.headers.get('date') || '');
   return !isNaN(dato) && Date.now() - dato > FLIS_MAKSALDER;
 }
 
 async function lagre(lager, url) {
-  let r;
-  try { r = await fetch(url, url.startsWith(OMFANG) ? { cache: 'no-store' } : { mode: 'cors' }); }
-  catch (err) { r = await fetch(url, { mode: 'no-cors' }); }
-  if (r.ok || r.type === 'opaque') await lager.put(nokkel(url), r);
+  /* Aldri no-cors: CARTO svarer 403 uten CORS-header når nøkkelen ikke godtas, og et opakt svar
+     ville blitt lagret og gitt blankt kart (Safari, 24.11.2026). */
+  const r = await fetch(url, url.startsWith(OMFANG) ? { cache: 'no-store' } : { mode: 'cors' });
+  if (!r.ok) throw new Error(r.status);
+  await lager.put(nokkel(url), r);
 }
 
 /* Lagring for bruk uten nett. Melding fra app.js (byen som er åpen) eller forsiden («Lagre alle byene»):
@@ -165,7 +172,8 @@ async function kartRessurser(stilUrl) {
   const ut = [stilUrl];
   Object.values(stil.sources || {}).forEach(k => { if (k.url) ut.push(k.url); });
   const sprites = Array.isArray(stil.sprite) ? stil.sprite.map(s => s.url) : stil.sprite ? [stil.sprite] : [];
-  sprites.forEach(s => ['', '@2x'].forEach(f => ut.push(s + f + '.json', s + f + '.png')));
+  // Endelsen før ?key=…: sprite?key=x blir sprite@2x.json?key=x
+  sprites.forEach(s => ['', '@2x'].forEach(f => ['.json', '.png'].forEach(e => ut.push(s.replace(/(\?|$)/, f + e + '$1')))));
   if (stil.glyphs) {
     const fonter = new Set();
     (stil.layers || []).forEach(l => {
@@ -183,7 +191,7 @@ async function kartRessurser(stilUrl) {
 async function hentKopi(url) {
   const lager = await caches.open(url.startsWith(OMFANG) ? EGNE : KART);
   const kopi = await lager.match(nokkel(url), SOK);
-  if (kopi) return kopi.clone();
+  if (kopi && !foreldet(kopi, url)) return kopi.clone();
   const r = await fetch(url, { mode: 'cors' });
   if (r.ok) await lager.put(nokkel(url), r.clone());
   return r;
