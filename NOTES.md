@@ -27,6 +27,9 @@ Sist oppdatert: 24. november 2026. Historikk per dato står i ARKIV.md.
   infoboks, tilbakeknapp og JS-feil OK, også med faste rullefelt (panelet blir 18 px smalere, ingenting kuttes). Ikke sett på ekte enheter.
 - 21.11.: Åpent-filteret skjuler stengte steder i stedet for å gråe dem ut (PR #134). Ingen andre steder gråes innhold ut.
 - 24.11.: Lasarett Matbar (Oslo) flyttet fra ønskelista til restaurantene, uten ★.
+- 24.11.: blankt kart i Safari på Vibekes Mac (kom tilbake etter «Slett»). Årsak: `sw.js` lagret opake no-cors-svar fra CARTO for godt.
+  Rettet i PR #136: bare lesbare svar lagres, opake kopier hentes på nytt, og sprite-adressen med `?key=` er rettet. Selve feilen
+  lot seg ikke gjenskape i Playwright-WebKit. CARTO bruker nå versjonerte flisadresser (`/v/<dato>/`, «Voyager (Protomaps)» fra 18.11.).
 - Ingen åpne grener utenom `main`.
 
 ## Neste steg
