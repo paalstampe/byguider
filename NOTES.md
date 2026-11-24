@@ -6,7 +6,7 @@ Eldre status per dato og hele beslutningsloggen ligger i ARKIV.md (lastes ikke a
 
 ## Status nå
 
-Sist oppdatert: 21. november 2026. Historikk per dato står i ARKIV.md.
+Sist oppdatert: 24. november 2026. Historikk per dato står i ARKIV.md.
 
 - Live på https://stam.pe/byguider/ med seks byer: London (304 oppføringer, 140 på ønskelista), Oslo (133, 23), New York (94, 2),
   Nice (74, 3), Tokyo (86, 7), Bangkok (40, 4). Skjulte byer (`"skjult": true`): Berlin, Mexico City, Kairo og Luxor.
@@ -26,6 +26,7 @@ Sist oppdatert: 21. november 2026. Historikk per dato står i ARKIV.md.
   likt i reiseplanleggingen (`tilbakeLukker`). Android og Windows er simulert med Playwright/Chromium mot stam.pe: layout,
   infoboks, tilbakeknapp og JS-feil OK, også med faste rullefelt (panelet blir 18 px smalere, ingenting kuttes). Ikke sett på ekte enheter.
 - 21.11.: Åpent-filteret skjuler stengte steder i stedet for å gråe dem ut (PR #134). Ingen andre steder gråes innhold ut.
+- 24.11.: Lasarett Matbar (Oslo) flyttet fra ønskelista til restaurantene, uten ★.
 - Ingen åpne grener utenom `main`.
 
 ## Neste steg
@@ -92,3 +93,4 @@ Hele loggen står i ARKIV.md. Nye beslutninger skrives her og flyttes dit ved ne
 
 - 2026-11-20: Et åpent kort er et eget steg i nettleserhistorikken (`kort` i history.state), så tilbakeknappen på Android lukker infoboksen i stedet for å forlate siden. Lukkes den på annen måte, går siden ett steg tilbake så historikken ikke fylles opp. Samme løsning i reiseplanleggingen.
 - 2026-11-21: Åpent-filteret (Søndag/Mandag) skjuler steder som er stengt den dagen, i stedet for å tone dem ned (Pål ville ikke se dem). Steder uten åpningstider vises fortsatt.
+- 2026-11-24: ★ fjernes når et sted flyttes fra ønskelista til hovedlista, med mindre Pål sier noe annet (★ betyr førstevalg på ønskelista, favoritt i hovedlista). Står i CLAUDE.md og i formatkommentaren i alle byfilene.
