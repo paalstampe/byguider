@@ -1,8 +1,9 @@
 #!/bin/bash
 # Skjermbilde av en side på stam.pe eller en lokal kopi. Virker både i Claude Code-containeren
 # i skyen og lokalt (Mac).
-# Bruk: .claude/skjermbilde.sh <url> <fil.png> [bredde] [høyde] [hel] [mork]
+# Bruk: .claude/skjermbilde.sh <url> <fil.png> [bredde] [høyde] [hel] [mork] [webkit]
 #   hel = hele siden, mork = mørk modus (prefers-color-scheme: dark); i valgfri rekkefølge.
+#   webkit = Playwrights WebKit i stedet for Chromium (nærmest Safari på Mac; ikke identisk).
 #   f.eks. .claude/skjermbilde.sh https://stam.pe/byguider/oslo/ oslo.png 390 844        (mobil)
 #          .claude/skjermbilde.sh https://stam.pe/byguider/oslo/ oslo.png 1300 900 hel  (hele siden)
 #          .claude/skjermbilde.sh https://stam.pe/byguider/oslo/ oslo-mork.png 390 844 mork  (mørk modus)
@@ -13,7 +14,7 @@
 # Krever Node og Playwright med Chromium. I skyen er det ferdig installert. På Macen, én gang:
 #   brew install node            (hvis node mangler)
 #   npm install -g playwright
-#   npx playwright install chromium
+#   npx playwright install chromium webkit
 #
 # Skyen: containeren går via en proxy som bytter ut TLS-sertifikatene med egne (Anthropic-CA-er i
 # /root/.ccr/ca-bundle.crt). Chromium kjenner dem ikke, og med bare «ignorer sertifikatfeil»
@@ -30,11 +31,13 @@ bredde="${3:-1300}"
 hoyde="${4:-900}"
 hel=""
 mork=""
+motor=chromium
 for valg in "${@:5}"; do
   case "$valg" in
     hel) hel=hel ;;
     mork) mork=mork ;;
-    *) echo "Ukjent valg «$valg» (bruk hel og/eller mork)" >&2; exit 1 ;;
+    webkit) motor=webkit ;;
+    *) echo "Ukjent valg «$valg» (bruk hel, mork, webkit)" >&2; exit 1 ;;
   esac
 done
 
@@ -64,9 +67,9 @@ if [ -n "${HTTPS_PROXY:-}" ] && [ -f "$ca" ]; then
   done | sort -u | paste -sd, -)
 fi
 
-URL="$url" FIL="$fil" BREDDE="$bredde" HOYDE="$hoyde" HEL="$hel" MORK="$mork" PROXY="$proxy" SPKI="$spki" \
+URL="$url" FIL="$fil" BREDDE="$bredde" HOYDE="$hoyde" HEL="$hel" MORK="$mork" MOTOR="$motor" PROXY="$proxy" SPKI="$spki" \
 NODE_PATH="$(npm root -g)" node - <<'JS'
-const { chromium } = require('playwright');
+const playwright = require('playwright');
 (async () => {
   const e = process.env;
   // Skyen: proxy via Chromium-flagg, ikke Playwrights proxy-valg — det sender også localhost
@@ -76,9 +79,13 @@ const { chromium } = require('playwright');
        '--ignore-certificate-errors-spki-list=' + e.SPKI,
        '--use-gl=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist']
     : [];
-  const nettleser = await chromium.launch({ args });
+  // WebKit kjenner ikke Chromium-flaggene: Playwrights proxy-valg og ignoreHTTPSErrors i skyen (ikke testet der).
+  const webkit = e.MOTOR === 'webkit';
+  const nettleser = webkit
+    ? await playwright.webkit.launch(e.PROXY ? { proxy: { server: e.PROXY, bypass: 'localhost,127.0.0.1' } } : {})
+    : await playwright.chromium.launch({ args });
   const side = await nettleser.newPage({ viewport: { width: +e.BREDDE, height: +e.HOYDE },
-    colorScheme: e.MORK ? 'dark' : 'light' });
+    colorScheme: e.MORK ? 'dark' : 'light', ignoreHTTPSErrors: webkit && !!e.PROXY });
   const feil = [];
   side.on('requestfailed', r => feil.push(r.url() + ' ' + r.failure()?.errorText));
   side.on('pageerror', f => feil.push('JS: ' + f.message));
