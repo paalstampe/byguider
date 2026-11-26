@@ -22,9 +22,6 @@ Sist oppdatert: 24. november 2026. Historikk per dato står i ARKIV.md.
 - 15.11.: Restauranter har fått `booking:` (bookingsiden; lenken «Bestill bord» mellom «Nettside» og «Del» i infoboksen), 260 av 331.
   Uten: steder som bare tar walk-in, bare har Instagram/Facebook, eller der lenken ikke kunne finnes (bl.a. Faros
   med utløpt sertifikat, Sachi med nedlagt bookingside). Campobaja (Mexico City): domenet er parkert, nettsiden bør byttes.
-- 20.11.: tilbakeknappen (Android, sveip tilbake, nettleserens ←) lukker infoboksen i stedet for å forlate siden (PR #133);
-  likt i reiseplanleggingen (`tilbakeLukker`). Android og Windows er simulert med Playwright/Chromium mot stam.pe: layout,
-  infoboks, tilbakeknapp og JS-feil OK, også med faste rullefelt (panelet blir 18 px smalere, ingenting kuttes). Ikke sett på ekte enheter.
 - 21.11.: Åpent-filteret skjuler stengte steder i stedet for å gråe dem ut (PR #134). Ingen andre steder gråes innhold ut.
 - 24.11.: Lasarett Matbar (Oslo) flyttet fra ønskelista til restaurantene, uten ★.
 - 24.11.: blankt kart i Safari på Vibekes Mac (kom tilbake etter «Slett»). Årsak: `sw.js` lagret opake no-cors-svar fra CARTO for godt.
@@ -94,6 +91,6 @@ Sist oppdatert: 24. november 2026. Historikk per dato står i ARKIV.md.
 
 Hele loggen står i ARKIV.md. Nye beslutninger skrives her og flyttes dit ved neste opprydding.
 
-- 2026-11-20: Et åpent kort er et eget steg i nettleserhistorikken (`kort` i history.state), så tilbakeknappen på Android lukker infoboksen i stedet for å forlate siden. Lukkes den på annen måte, går siden ett steg tilbake så historikken ikke fylles opp. Samme løsning i reiseplanleggingen.
 - 2026-11-21: Åpent-filteret (Søndag/Mandag) skjuler steder som er stengt den dagen, i stedet for å tone dem ned (Pål ville ikke se dem). Steder uten åpningstider vises fortsatt.
 - 2026-11-24: ★ fjernes når et sted flyttes fra ønskelista til hovedlista, med mindre Pål sier noe annet (★ betyr førstevalg på ønskelista, favoritt i hovedlista). Står i CLAUDE.md og i formatkommentaren i alle byfilene.
+- 2026-11-24: `sw.js` lagrer aldri opake (no-cors) svar for kartet, og kartstilen fornyes ikke på alder: de lagrede offline-flisene hører til flisversjonen i den lagrede stilen, og CARTO svarer fortsatt på eldre versjoner.

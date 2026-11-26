@@ -44,6 +44,8 @@ Store filer (app.js ~100 KB, data/london.md ~90 KB, data/*-geometri.geojson): fi
 - iOS-simulatoren (Xcode er installert på Macen) brukes bare når det trengs, dvs. for ting bare ekte iOS Safari viser:
   notch/Dynamic Island, safe area, Safaris verktøylinje, selve rotasjonen, tekstforstørrelse og «Legg til på Hjem-skjerm».
   Åpne URL i Safari via simulatorverktøyet. Ikke i skyøkter.
+- Safari på Mac: `.claude/skjermbilde.sh` bruker Chromium; Playwrights WebKit (installert) gir nærmeste sjekk. Den gjenskaper
+  ikke alt med service worker og lager, så ved feil som bare én Safari viser: be om «Slett» på byguide-forsiden og konsollen først.
   Starter du simulatoren selv: `xcrun simctl boot` utenfor sandkassen; ser ikke simulatorverktøyet enheten, bruk `xcrun simctl openurl` og `xcrun simctl io <id> screenshot`.
 - UI-endringer: kjør `.claude/axe.sh <url> [bredde høyde]` før fletting (axe-core via Playwright, lys og mørk modus;
   f.eks. http://localhost:8000/ i 1300 900 og 390 844). Rett brudd; kontrast som krever nye farger tas med Pål.

@@ -2,7 +2,7 @@
 
 Flyttet ut av NOTES.md 11.11.2026 så den holder seg kort (den lastes inn i hver økt). Les ved behov, gjerne med grep.
 
-## Status per dato (til 11.11.2026)
+## Status per dato (til 20.11.2026)
 
 - 9.11.: åpningstider i Oslo (PR #112). Alle 72 restauranter har `åpent:` og `åpent-kilde:`: tidene er fra egen nettside der de finnes
   (curl, eller Playwright for Wix/Squarespace), ellers Google (13 steder). Filteret «Åpent: Nå · Søndag · Mandag» toner ned stengte steder
@@ -197,6 +197,12 @@ Fra Status nå (flyttet 15.11.):
 - 12.11.: CLAUDE.md kortet ned til 136 linjer. Google Maps-oppskriftene står nå i ny-by-skillen (PR #122), kildene for
   nabolagsomriss per by i HANDOVER, punkt 4. Løsninger som deles med reisekartet står i reiseplanleggingens HANDOVER, «Felles med byguidene».
 
+### Status 20.11.2026 (flyttet fra NOTES)
+
+- 20.11.: tilbakeknappen (Android, sveip tilbake, nettleserens ←) lukker infoboksen i stedet for å forlate siden (PR #133);
+  likt i reiseplanleggingen (`tilbakeLukker`). Android og Windows er simulert med Playwright/Chromium mot stam.pe: layout,
+  infoboks, tilbakeknapp og JS-feil OK, også med faste rullefelt (panelet blir 18 px smalere, ingenting kuttes). Ikke sett på ekte enheter.
+
 ## Publisering (fra Neste steg, 5.11.)
 
 - Publiseringen er felles for alle tre: `pages.yml` kaller `paalstampe/paalstampe.github.io/.github/workflows/publiser.yml@main`
@@ -214,6 +220,7 @@ Fra Status nå (flyttet 15.11.):
 
 ## Beslutningslogg
 
+- 2026-11-20: Et åpent kort er et eget steg i nettleserhistorikken (`kort` i history.state), så tilbakeknappen på Android lukker infoboksen i stedet for å forlate siden. Lukkes den på annen måte, går siden ett steg tilbake så historikken ikke fylles opp. Samme løsning i reiseplanleggingen.
 - 2026-11-15: Restauranter får `booking:` med selve bookingsiden (også bookingtjenester), så man slipper å lete på nettsiden. Den månedlige skyjobben sjekker også bookinglenkene, men regner bare tydelige feil som brudd, siden bookingtjenestene ofte svarer 200 eller blokkerer curl.
 - 2026-11-15: Infoboksens lenker står på to linjer med tre hver: kartet (Veibeskrivelse · Google Maps · Zoom inn), så stedet selv (Nettside · Bestill bord · Del). Før ble det tre linjer når et sted hadde bordbestilling.
 - 2026-11-15: `.claude/finnbooking.py` foreslår bookinglenker ut fra nettsiden (PR #127). Treffer samme lenke som håndplukket i 167 av 307; JavaScript-sider (ca. 30 %) må fortsatt sjekkes i nettleserpanelet.
