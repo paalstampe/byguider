@@ -7,7 +7,7 @@ kicker: En høyst subjektiv guide
 kicker-en: An opinionated guide
 senter: 59.9180, 10.7400
 zoom: 13
-oppdatert: 2026-11-22
+oppdatert: 2026-11-26
 tidssone: Europe/Oslo
 ---
 
@@ -1193,6 +1193,16 @@ Sentrum
 Smørbrød. Torggata 21B.
 - en: Sentrum
 Sandwiches. Torggata 21B.
+
+### Ritz
+- sted: 59.92422, 10.73969
+- google: ChIJPwGdcABvQUYRLbf_tjKJkcQ
+- nettside: https://www.ritz.info/
+- status: onskeliste
+St. Hanshaugen
+Nytt nabolagssted med bakst, mat, kaffe og alle rettigheter, åpent fra morgen til kveld. I lokalet som har solgt kaker og brød over disk i over 120 år. Åpner snart. Ullevålsveien 45.
+- en: St. Hanshaugen
+New neighbourhood place with baking, food, coffee and a full licence, open from morning to evening. In premises that have sold cakes and bread over the counter for more than 120 years. Opening soon. Ullevålsveien 45.
 
 ### Pust
 - sted: 59.93045, 10.71541
